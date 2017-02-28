@@ -1,5 +1,4 @@
 <?php
-
 // This file is part of Moodle - http://moodle.org/
 //
 // Moodle is free software: you can redistribute it and/or modify
@@ -27,4 +26,20 @@ defined('MOODLE_INTERNAL') || die();
 
 $string['pluginname'] = 'Boost Campus';
 $string['choosereadme'] = 'Theme Boost Campus is a child theme to be used on university campuses.';
+
+/* Settings */
 $string['configtitle'] = 'Boost Campus settings';
+$string['layoutsettings'] = 'Layout Settings';
+
+$string['footerblocksheading'] = 'Footer blocks';
+$string['footerblocks0columnssetting'] = 'No blocks in footer';
+$string['footerblocks1columnssetting'] = 'One block columns in footer';
+$string['footerblocks2columnssetting'] = 'Two block columns in footer';
+$string['footerblocks3columnssetting'] = 'Three block columns in footer';
+$string['footerblockssetting'] = 'Footer layout';
+$string['footerblockssetting_desc'] = 'You can chose if you want to enable the possibility to place blocks into the footer. If enabled, you can choose between one, two or three block columns. These columns are only displayed on large screens. On small screens the columns will be automatically reduced to one column for better readability and layout.';
+
+$string['region-footer-left'] = 'Footer (left)';
+$string['region-footer-middle'] = 'Footer (middle)';
+$string['region-footer-right'] = 'Footer (right)';
+$string['region-side-pre'] = 'Right';

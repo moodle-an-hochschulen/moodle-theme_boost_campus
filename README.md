@@ -57,6 +57,12 @@ This setting is already available in the Moodle core theme Boost. For more infor
 
 This setting is already available in the Moodle core theme Boost. For more information how to use it, please have a look at the official Moodle documentation: http://docs.moodle.org/en/Boost_theme
 
+### 3. Tab "Layout Settings"
+
+#### Footer Layout
+
+With this setting you can add block regions to the footer to be able to place blocks within the footer. You can choose between no blocks (default value) or one up to three block columns in the footer. The two and three columns layouts are only displayed on large screens. On small screens the columns will be automatically reduced to one column for better readability and layout.
+
 
 Further improvements to Boost core theme
 ---------------------------------------

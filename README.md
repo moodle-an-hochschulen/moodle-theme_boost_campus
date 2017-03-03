@@ -65,7 +65,11 @@ With this setting you can add block regions to the footer to be able to place bl
 
 
 Further improvements to Boost core theme
----------------------------------------
+----------------------------------------
+
+### Font Awesome
+
+To be able to use icons provided by Font Awesome it is added to theme_boost_campus.
 
 
 Further information

@@ -1,0 +1,13 @@
+{{!
+    @template theme_boost_campus/nav-drawer
+
+
+    Example context (json): {}
+}}
+{{! MODIFICATION:
+    * Add theme_boost_campus/flat_navigation template instead of theme_boost/flat_navigation template
+}}
+
+<div id="nav-drawer" data-region="drawer" class="hidden-print moodle-has-zindex {{^navdraweropen}}closed{{/navdraweropen}}" aria-hidden="{{#navdraweropen}}false{{/navdraweropen}}{{^navdraweropen}}true{{/navdraweropen}}" tabindex="-1">
+    {{> theme_boost_campus/flat_navigation }}
+</div>

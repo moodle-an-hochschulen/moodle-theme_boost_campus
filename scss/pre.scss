@@ -1,0 +1,12 @@
+/*-----------------------------
+  Left Menu
+  -----------------------------*/
+/* Mixins */
+@mixin navdrawer-node-separator($nodetype) {
+    @if $nodetype == child {
+        border-bottom: 1px dashed $gray-light;
+        padding-left: 10px;
+    } @else if $nodetype == parent {
+        border-bottom: 1px solid $gray-light;
+    }
+}

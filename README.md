@@ -71,6 +71,10 @@ Further improvements to Boost core theme
 
 To be able to use icons provided by Font Awesome it is added to theme_boost_campus.
 
+### Flat navigation (nav-drawer) menu
+
+We improved the code of the new flatnavigation nay-drawer menu items to be uniformly. Furthermore, we improved the layout of the menu by styling borders, icons and margins. Now a user can recognize faster what items belong together to a parent node.
+
 
 Further information
 -------------------

@@ -50,6 +50,23 @@ defined('MOODLE_INTERNAL') || die;
 
 class core_renderer extends \theme_boost\output\core_renderer {
 
+    /**
+     * Override to display an edit button again by calling the parent function
+     * in core/core_renderer because theme_boost's function returns an empty
+     * string and therefore displays nothing.
+     *
+     * We don't like these...
+     *
+     */
+    public function edit_button(moodle_url $url) {
+        /* MODIFICATION START */
+        return \core_renderer::edit_button($url);
+        /* MODIFICATION END */
+        /* ORIGINAL START
+        return '';
+        ORIGINAL END */
+    }
+
 /**
      * Override to display course settings on every course site for permanent access
      *

@@ -79,6 +79,10 @@ We improved the code of the new flatnavigation nay-drawer menu items to be unifo
 
 The course settings icon will now be displayed on all sites that renders the course header. This improves the accessibility to those settings as there is not a onmipresent block anymore.
 
+### Course edit button
+
+We added the course edit on / off button to the course header again like it was displayed before theme_boost for faster accessibility.
+
 
 Further information
 -------------------

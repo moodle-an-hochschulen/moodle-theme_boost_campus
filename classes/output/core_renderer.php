@@ -67,6 +67,30 @@ class core_renderer extends \theme_boost\output\core_renderer {
         ORIGINAL END */
     }
 
+
+    /**
+     * Override to be able to use uploaded images from admin_setting as well.
+     *
+     * Returns the URL for the favicon.
+     *
+     * @since Moodle 2.5.1 2.6
+     * @return string The favicon URL
+     */
+    public function favicon() {
+        global $PAGE;
+        /* MODIFICATION START */
+        if (!empty($PAGE->theme->settings->favicon)) {
+            return $PAGE->theme->setting_file_url('favicon', 'favicon');
+        }
+        else {
+            return $this->pix_url('favicon', 'theme');
+        }
+        /* MODIFICATION END */
+        /* ORIGINAL START
+        return $this->pix_url('favicon', 'theme');
+        ORIGINAL END */
+    }
+
 /**
      * Override to display course settings on every course site for permanent access
      *

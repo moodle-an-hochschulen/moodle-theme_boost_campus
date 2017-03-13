@@ -39,6 +39,9 @@ $string['footerblocks3columnssetting'] = 'Three block columns in footer';
 $string['footerblockssetting'] = 'Footer layout';
 $string['footerblockssetting_desc'] = 'You can chose if you want to enable the possibility to place blocks into the footer. If enabled, you can choose between one, two or three block columns. These columns are only displayed on large screens. On small screens the columns will be automatically reduced to one column for better readability and layout.';
 
+$string['faviconsetting'] = 'Favicon';
+$string['faviconsetting_desc'] = 'You can upload one image (.ico or .png format) that the browser will show as the favicon of your Moodle website.';
+
 $string['region-footer-left'] = 'Footer (left)';
 $string['region-footer-middle'] = 'Footer (middle)';
 $string['region-footer-right'] = 'Footer (right)';

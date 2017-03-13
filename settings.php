@@ -78,6 +78,15 @@ if ($ADMIN->fulltree) {
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
+
+    // Favicon upload.
+    $name = 'theme_boost_campus/favicon';
+    $title = get_string('faviconsetting', 'theme_boost_campus');
+    $description = get_string('faviconsetting_desc', 'theme_boost_campus');
+    $setting = new admin_setting_configstoredfile($name, $title, $description, 'favicon', 0, array('maxfiles' => 1, 'accepted_types' => array('.ico','.png')));
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
     // Add tab to settings page.
     $settings->add($page);
 

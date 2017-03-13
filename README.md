@@ -44,6 +44,10 @@ This setting is already available in the Moodle core theme Boost. For more infor
 
 This setting is already available in the Moodle core theme Boost. For more information how to use it, please have a look at the official Moodle documentation: http://docs.moodle.org/en/Boost_theme
 
+#### Favicon
+
+This setting allows you to upload an image (.ico or .png format) that your browser will display as a favicon.
+
 
 ### 2. Tab "Advanced Settings"
 

@@ -63,6 +63,10 @@ This setting is already available in the Moodle core theme Boost. For more infor
 
 With this setting you can add block regions to the footer to be able to place blocks within the footer. You can choose between no blocks (default value) or one up to three block columns in the footer. The two and three columns layouts are only displayed on large screens. On small screens the columns will be automatically reduced to one column for better readability and layout.
 
+#### Section 0: Title
+
+This setting can change the behaviour Moodle displays the title for the first course section. Moodle does not display it as long as the default title for this section is set. As soon as a user changes the title, it will appear. With this setting (option is checked), you can achieve a consistent behaviour by always showing the title for section 0.
+
 
 Further improvements to Boost core theme
 ----------------------------------------

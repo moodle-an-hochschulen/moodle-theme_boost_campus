@@ -119,6 +119,15 @@ if ($ADMIN->fulltree) {
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
+    // Setting for displaying section-0 title in courses
+    $setting = new admin_setting_configcheckbox('theme_boost_campus/section0title',
+        get_string('section0titlesetting', 'theme_boost_campus', null, true),
+        get_string('section0titlesetting_desc', 'theme_boost_campus', null, true), 'no', 'yes', 'no'); // Overriding default values
+        // yes = 1 and no = 0 because of the use of empty() in theme_boost_campus_get_pre_scss() (lib.php). Default 0 value would
+        // not write the variable to scss that could cause the scss to crash if used in that file.
+        $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
     // Add tab to settings page.
     $settings->add($page);
 }

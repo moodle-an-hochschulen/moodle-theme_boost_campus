@@ -43,3 +43,6 @@ $string['region-footer-left'] = 'Footer (left)';
 $string['region-footer-middle'] = 'Footer (middle)';
 $string['region-footer-right'] = 'Footer (right)';
 $string['region-side-pre'] = 'Right';
+
+$string['section0titlesetting'] = 'Section 0: Title';
+$string['section0titlesetting_desc'] = 'This setting can change the behaviour Moodle displays the title for the first course section. Moodle does not display it as long as the default title for this section is set. As soon as a user changes the title, it will appear. With this setting (option is checked), you can achieve a consistent behaviour by always showing the title for section 0.';

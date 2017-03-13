@@ -135,3 +135,22 @@
         vertical-align: sub;
     }
 }
+
+/*------------------------------------
+  Course content
+  -------------------------------------*/
+
+/*
+ * Sections
+ */
+
+/* Check if setting theme_boost_campus|section0title is set.
+   If set, then revert the styles from .accesshide and set the style to be the same as other section titles. */
+body.path-course-view #section-0 h3.accesshide {
+    @if $section0title == 'yes' {
+        position: inherit;
+        left: inherit;
+        font-weight: $headings-font-weight;
+        font-size: $font-size-h3;
+    }
+}

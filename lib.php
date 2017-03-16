@@ -73,6 +73,7 @@ function theme_boost_campus_get_pre_scss($theme) {
         'brandcolor' => ['brand-primary'],
         /* MODIFICATION START */
         'section0title' => ['section0title'],
+        'showswitchedroleincourse' => ['showswitchedroleincourse'],
         /* MODIFICATION END */
     ];
 

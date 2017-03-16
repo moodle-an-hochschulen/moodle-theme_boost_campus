@@ -91,6 +91,76 @@ class core_renderer extends \theme_boost\output\core_renderer {
         ORIGINAL END */
     }
 
+
+    /**
+     * Override to dispaly switched role information beneath the course header instead of the user menu.
+     * We change this because the switch role function is course related and therefore it should be placed in the course context.
+     *
+     * Wrapper for header elements.
+     *
+     * @return string HTML to display the main header.
+     */
+    public function full_header() {
+        /* MODIFICATION START */
+        global $PAGE, $USER, $COURSE;
+        /* MODIFICATION END */
+        /* ORIGINAL START
+        global $PAGE;
+        ORIGINAL END */
+
+        $html = html_writer::start_tag('header', array('id' => 'page-header', 'class' => 'row'));
+        $html .= html_writer::start_div('col-xs-12 p-a-1');
+        $html .= html_writer::start_div('card');
+        $html .= html_writer::start_div('card-block');
+        $html .= html_writer::div($this->context_header_settings_menu(), 'pull-xs-right context-header-settings-menu');
+        $html .= $this->context_header();
+        $pageheadingbutton = $this->page_heading_button();
+        if (empty($PAGE->layout_options['nonavbar'])) {
+            $html .= html_writer::start_div('clearfix', array('id' => 'page-navbar'));
+            $html .= html_writer::tag('div', $this->navbar(), array('class' => 'breadcrumb-nav'));
+            $html .= html_writer::div($pageheadingbutton, 'breadcrumb-button');
+            $html .= html_writer::end_div();
+        } else if ($pageheadingbutton) {
+            $html .= html_writer::div($pageheadingbutton, 'breadcrumb-button nonavbar');
+        }
+        $html .= html_writer::tag('div', $this->course_header(), array('id' => 'course-header'));
+        $html .= html_writer::end_div();
+        $html .= html_writer::end_div();
+        $html .= html_writer::end_div();
+        $html .= html_writer::end_tag('header');
+
+        /* MODIFICATION START */
+        /* Only use this if setting 'showswitchedroleincourse' is active. */
+        if (get_config('theme_boost_campus', 'showswitchedroleincourse') === 'yes') {
+            $opts = \user_get_user_navigation_info($USER, $this->page);
+            // Role is switched.
+            if (!empty($opts->metadata['asotherrole'])) {
+                // Get the role name switched to.
+                $role = $opts->metadata['rolename'];
+                // Get the URL to switch back (normal role).
+                $url = new moodle_url('/course/switchrole.php', array('id' => $COURSE->id, 'sesskey' => sesskey(), 'switchrole' => 0,
+                       'returnurl' => $this->page->url->out_as_local_url(false)));
+
+                $html .= html_writer::start_tag('div', array('class' => 'switched-role-infobox alert alert-info'));
+                $html .= html_writer::start_tag('div', array());
+                $html .= get_string('switchedroleto', 'theme_boost_campus');
+                // Give this a span to be able to address via CSS
+                $html .= html_writer::tag('span', $role, array('class' => 'switched-role'));
+                $html .= html_writer::end_tag('div');
+                // Return to normal role link
+                $html .= html_writer::start_tag('div', array('class' => 'switched-role-back col-6'));
+                $html .= html_writer::empty_tag('img', array('src' => $this->pix_url('a/logout', 'moodle')));
+                $html .= html_writer::tag('a', get_string('switchrolereturn', 'core'), array('class' => 'switched-role-backlink', 'href' => $url));
+                $html .= html_writer::end_tag('div'); // Return to normal role link end
+                $html .= html_writer::end_tag('div');
+            }
+        }
+        /* MODIFICATION END */
+
+        return $html;
+    }
+
+
 /**
      * Override to display course settings on every course site for permanent access
      *

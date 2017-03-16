@@ -49,3 +49,7 @@ $string['region-side-pre'] = 'Right';
 
 $string['section0titlesetting'] = 'Section 0: Title';
 $string['section0titlesetting_desc'] = 'This setting can change the behaviour Moodle displays the title for the first course section. Moodle does not display it as long as the default title for this section is set. As soon as a user changes the title, it will appear. With this setting (option is checked), you can achieve a consistent behaviour by always showing the title for section 0.';
+
+$string['showswitchedroleincoursesetting'] = 'Position of switch role information';
+$string['showswitchedroleincoursesetting_desc'] = 'With this setting you can choose the place where the information to which role a user has switched is being displayed. If not checked (default value), the role information will be displayed right beneath the user\'s name in the user menu (like in theme Boost). If checked, this information - together with a link to switch back - will be displayed beneath the course, as this functionality is course related.';
+$string['switchedroleto'] = 'You are viewing this course currently with the role:';

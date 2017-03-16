@@ -8,6 +8,31 @@
 }
 
 /*------------------------------------
+  User menu
+  -------------------------------------*/
+
+/* Don't display switched role information in the user menu
+ * if setting 'showswitchedroleincourse' is active */
+@if $showswitchedroleincourse == 'yes' {
+    .userswitchedrole .usermenu {
+        .usertext {
+            float: inherit;
+            text-align: inherit;
+            margin-right: inherit;
+            height: inherit;
+        }
+        span.meta.role {
+            display: none;
+        }
+        .avatar img {
+            margin-left: 1rem;
+            margin-right: .5rem;
+        }
+    }
+}
+
+
+/*------------------------------------
   Nav drawer menu
   -------------------------------------*/
 
@@ -135,6 +160,34 @@
         vertical-align: sub;
     }
 }
+
+
+/*------------------------------------
+  Course header
+  -------------------------------------*/
+
+/*
+ * If set in showswitchedroleincourse, the switched role information will be displayed
+ * in the course header instead of ben the user name.
+ */
+
+.switched-role-infobox {
+
+    span.switched-role {
+        font-weight: bold;
+        padding-left: 0.5em;
+    }
+
+    .switched-role-back {
+        padding-top: 10px;
+    }
+
+    .switched-role-backlink {
+        padding-left: 0.5em;
+        vertical-align: middle;
+    }
+}
+
 
 /*------------------------------------
   Course content

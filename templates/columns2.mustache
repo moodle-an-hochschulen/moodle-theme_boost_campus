@@ -51,6 +51,7 @@
 {{! MODIFICATION:
     * Remove section for footer blocks with own mustache template
     * Add theme_boost_campus/nav-drawer template instead of theme_boost/nav-drawer template
+    * Require own javascript module for back to top button functionality
 }}
 {{{ output.doctype }}}
 <html {{{ output.htmlattributes }}}>
@@ -107,4 +108,5 @@ require(['theme_boost/loader']);
 require(['theme_boost/drawer'], function(mod) {
     mod.init();
 });
+require(['theme_boost_campus/backtotop']);
 {{/js}}

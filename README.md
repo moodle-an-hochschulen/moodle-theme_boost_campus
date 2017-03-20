@@ -95,6 +95,10 @@ The course settings icon will now be displayed on all sites that renders the cou
 
 We added the course edit on / off button to the course header again like it was displayed before theme_boost for faster accessibility.
 
+### Back to top button
+
+We added a back to top button that appears in the right bottom corner when the user scrolls down the page. With a click on it the page scrolls back to top smoothly and the button will disappear again.
+
 
 Further information
 -------------------

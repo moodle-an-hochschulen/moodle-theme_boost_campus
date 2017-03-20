@@ -6,6 +6,7 @@ Changes
 
 ### Unreleased
 
+* 2017-03-17 - Added back to top button with smooth scrolling.
 * 2017-03-15 - Setting to choose if switched role information should be displayed beneath course header.
 * 2017-03-13 - Setting to be able to upload a favicon.
 * 2017-03-10 - Setting to be able to display the title for the first course section (section 0) again.

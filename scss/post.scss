@@ -8,6 +8,72 @@
 }
 
 /*------------------------------------
+  Login page
+  -------------------------------------*/
+
+body.loginbackgroundimage {
+    background-size: cover;
+    background-position: center;
+}
+
+/* Add media breakpoint to only load images on screens with a medium size and up.
+ * Check if variable exists to only add code to images that were uploaded.
+ * Note: Building this code with a @for loop did not work. */
+@include media-breakpoint-up(md) {
+    @if variable-exists(loginbackgroundimage1){
+        body.loginbackgroundimage1 {
+            background-image: url($loginbackgroundimage1);
+        }
+    }
+    @if variable-exists(loginbackgroundimage2){
+        body.loginbackgroundimage2 {
+            background-image: url($loginbackgroundimage2);
+        }
+    }
+    @if variable-exists(loginbackgroundimage3){
+        body.loginbackgroundimage3 {
+            background-image: url($loginbackgroundimage3);
+        }
+    }
+    @if variable-exists(loginbackgroundimage4){
+        body.loginbackgroundimage4 {
+            background-image: url($loginbackgroundimage4);
+        }
+    }
+    @if variable-exists(loginbackgroundimage5){
+        body.loginbackgroundimage5 {
+            background-image: url($loginbackgroundimage5);
+        }
+    }
+    @if variable-exists(loginbackgroundimage6){
+        body.loginbackgroundimage6 {
+            background-image: url($loginbackgroundimage6);
+        }
+    }
+    @if variable-exists(loginbackgroundimage7){
+        body.loginbackgroundimage7 {
+            background-image: url($loginbackgroundimage7);
+        }
+    }
+    @if variable-exists(loginbackgroundimage8){
+        body.loginbackgroundimage8 {
+            background-image: url($loginbackgroundimage8);
+        }
+    }
+    @if variable-exists(loginbackgroundimage9){
+        body.loginbackgroundimage9 {
+            background-image: url($loginbackgroundimage9);
+        }
+    }
+    @if variable-exists(loginbackgroundimage10){
+        body.loginbackgroundimage10 {
+            background-image: url($loginbackgroundimage10);
+        }
+    }
+}
+
+
+/*------------------------------------
   User menu
   -------------------------------------*/
 

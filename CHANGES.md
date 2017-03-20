@@ -8,6 +8,7 @@ Changes
 
 * 2017-03-17 - Added back to top button with smooth scrolling.
 * 2017-03-15 - Setting to choose if switched role information should be displayed beneath course header.
+* 2017-03-14 - Setting to add multiple background images for the login page that will be picked randomly and delivered when the user visits the login page.
 * 2017-03-13 - Setting to be able to upload a favicon.
 * 2017-03-10 - Setting to be able to display the title for the first course section (section 0) again.
 * 2017-03-09 - Placed course edit on / off button in the course header again like it was displayed before theme_boost.

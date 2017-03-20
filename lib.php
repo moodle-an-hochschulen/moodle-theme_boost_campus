@@ -66,6 +66,9 @@ function theme_boost_campus_get_main_scss_content($theme) {
  */
 function theme_boost_campus_get_pre_scss($theme) {
     global $CFG;
+    /* MODIFICATION START */
+    require_once($CFG->dirroot . '/theme/boost_campus/locallib.php');
+    /* MODIFICATION END */
 
     $scss = '';
     $configurable = [
@@ -87,6 +90,10 @@ function theme_boost_campus_get_pre_scss($theme) {
             $scss .= '$' . $target . ': ' . $value . ";\n";
         }, (array) $targets);
     }
+
+    /* MODIFICATION START: Add login background images that are uploaded to the setting 'loginbackgroundimage' to CSS */
+    $scss .= theme_boost_campus_get_loginbackgroundimage_scss();
+    /* MODIFICATION END */
 
     // Prepend pre-scss.
     if (!empty($theme->settings->scsspre)) {
@@ -113,7 +120,9 @@ function theme_boost_campus_pluginfile($course, $cm, $context, $filearea, $args,
         $theme = theme_config::load('boost_campus');
         if ($filearea === 'favicon') {
             return $theme->setting_file_serve('favicon', $args, $forcedownload, $options);
-        } else {
+        } else if ($filearea === 'loginbackgroundimage') {
+            return $theme->setting_file_serve('loginbackgroundimage', $args, $forcedownload, $options);
+         } else {
             send_file_not_found();
         }
     } else {

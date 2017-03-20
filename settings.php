@@ -148,4 +148,19 @@ if ($ADMIN->fulltree) {
 
     // Add tab to settings page.
     $settings->add($page);
+
+
+     // Create design settings tab.
+    $page = new admin_settingpage('theme_boost_campus_design', get_string('designsettings', 'theme_boost_campus'));
+
+    // Login page background setting.
+    $name = 'theme_boost_campus/loginbackgroundimage';
+    $title = get_string('loginbackgroundimagesetting', 'theme_boost_campus');
+    $description = get_string('loginbackgroundimagesetting_desc', 'theme_boost_campus');
+    $setting = new admin_setting_configstoredfile($name, $title, $description, 'loginbackgroundimage', 0, array('maxfiles' => 10, 'accepted_types' => 'web_image'));
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+    // Add tab to settings page.
+    $settings->add($page);
 }

@@ -75,6 +75,10 @@ With this setting you can add block regions to the footer to be able to place bl
 
 This setting can change the behaviour Moodle displays the title for the first course section. Moodle does not display it as long as the default title for this section is set. As soon as a user changes the title, it will appear. With this setting (option is checked), you can achieve a consistent behaviour by always showing the title for section 0.
 
+#### Background images for login page
+
+In this setting you can add up to 10 files as a background image for the login page. One of these images will be picked randomly and delivered when the user visits the login page.
+
 
 Further improvements to Boost core theme
 ----------------------------------------

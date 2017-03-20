@@ -30,6 +30,10 @@ $string['choosereadme'] = 'Theme Boost Campus is a child theme to be used on uni
 /* Settings */
 $string['configtitle'] = 'Boost Campus settings';
 $string['layoutsettings'] = 'Layout Settings';
+$string['designsettings'] = 'Design Settings';
+
+$string['loginbackgroundimagesetting'] = 'Login page background images';
+$string['loginbackgroundimagesetting_desc'] = 'Images uploaded in this setting will be randomly displayed on the login page as background images.';
 
 $string['footerblocksheading'] = 'Footer blocks';
 $string['footerblocks0columnssetting'] = 'No blocks in footer';

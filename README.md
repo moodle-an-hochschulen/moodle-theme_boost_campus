@@ -79,6 +79,10 @@ This setting can change the behaviour Moodle displays the title for the first co
 
 In this setting you can add up to 10 files as a background image for the login page. One of these images will be picked randomly and delivered when the user visits the login page.
 
+### Course edit button
+
+With this setting you can add an additional course edit on / off button to the course header for faster accessibility. This the same way as it was displayed before theme_boost.
+
 
 Further improvements to Boost core theme
 ----------------------------------------
@@ -94,10 +98,6 @@ We improved the code of the new flatnavigation nay-drawer menu items to be unifo
 ### Course settings icon
 
 The course settings icon will now be displayed on all sites that renders the course header. This improves the accessibility to those settings as there is not a onmipresent block anymore.
-
-### Course edit button
-
-We added the course edit on / off button to the course header again like it was displayed before theme_boost for faster accessibility.
 
 ### Back to top button
 

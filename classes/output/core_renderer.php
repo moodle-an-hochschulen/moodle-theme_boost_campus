@@ -60,7 +60,10 @@ class core_renderer extends \theme_boost\output\core_renderer {
      */
     public function edit_button(moodle_url $url) {
         /* MODIFICATION START */
-        return \core_renderer::edit_button($url);
+        // If setting editbuttonincourseheader ist checked give out the edit on / off button in course header
+        if (get_config('theme_boost_campus', 'courseeditbutton') == '1') {
+            return \core_renderer::edit_button($url);
+        }
         /* MODIFICATION END */
         /* ORIGINAL START
         return '';

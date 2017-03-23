@@ -307,6 +307,41 @@ class core_renderer extends \theme_boost\output\core_renderer {
         return $this->render($menu);
     }
 
+    /**
+     * Override to use theme_boost_campus login template
+     * Renders the login form.
+     *
+     * @param \core_auth\output\login $form The renderable.
+     * @return string
+     */
+    public function render_login(\core_auth\output\login $form) {
+        global $SITE;
+
+        $context = $form->export_for_template($this);
+
+        // Override because rendering is not supported in template yet.
+        $context->cookieshelpiconformatted = $this->help_icon('cookiesenabled');
+        $context->errorformatted = $this->error_text($context->error);
+        $url = $this->get_logo_url();
+        if ($url) {
+            $url = $url->out(false);
+        }
+        $context->logourl = $url;
+        $context->sitename = format_string($SITE->fullname, true, ['context' => context_course::instance(SITEID), "escape" => false]);
+        /* MODIFICATION START */
+        /* Only if setting "loginform" is checked, then call own login.mustache.*/
+        if (get_config('theme_boost_campus', 'loginform') == 'yes') {
+            return $this->render_from_template('theme_boost_campus/login', $context);
+        } else {
+            return $this->render_from_template('core/login', $context);
+        }
+        /* MODIFICATION END */
+        /* ORIGINAL START
+        return $this->render_from_template('core/login', $context);
+        ORIGINAL END */
+    }
+
+
     /* --------------------------------------------------------------
      * TODO: Delete function build_action_menu_from_navigation when
      * MDL-58174 is solved.

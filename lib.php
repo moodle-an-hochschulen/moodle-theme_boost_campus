@@ -77,6 +77,7 @@ function theme_boost_campus_get_pre_scss($theme) {
         /* MODIFICATION START */
         'section0title' => ['section0title'],
         'showswitchedroleincourse' => ['showswitchedroleincourse'],
+        'loginform' => ['loginform'],
         /* MODIFICATION END */
     ];
 

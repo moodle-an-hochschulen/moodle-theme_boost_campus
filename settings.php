@@ -168,6 +168,15 @@ if ($ADMIN->fulltree) {
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
+    // Setting to display information of a switched role in the course header.
+    $setting = new admin_setting_configcheckbox('theme_boost_campus/loginform',
+        get_string('loginform', 'theme_boost_campus', null, true),
+        get_string('loginform_desc', 'theme_boost_campus', null, true), 'no', 'yes', 'no'); // Overriding default values
+        // yes = 1 and no = 0 because of the use of empty() in theme_boost_campus_get_pre_scss() (lib.php). Default 0 value would
+        // not write the variable to scss that could cause the scss to crash if used in that file.
+        $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
     // Add tab to settings page.
     $settings->add($page);
 }

@@ -35,6 +35,9 @@ $string['designsettings'] = 'Design Settings';
 $string['loginbackgroundimagesetting'] = 'Login page background images';
 $string['loginbackgroundimagesetting_desc'] = 'Images uploaded in this setting will be randomly displayed on the login page as background images.';
 
+$string['loginform'] = 'Login Form';
+$string['loginform_desc'] = 'With this setting you can optimize the login form to fit to a greater variety background images (if checked). This means that the login form will be moved to the left of the login page, will get smaller in width and will get a background that let the background image shine through. The login form will be placed on the left because many images have their main content rather in the center and so we keep this content visible. Note: You can also activate this setting if no background images are uploaded, of course.';
+
 $string['footerblocksheading'] = 'Footer blocks';
 $string['footerblocks0columnssetting'] = 'No blocks in footer';
 $string['footerblocks1columnssetting'] = 'One block columns in footer';

@@ -72,6 +72,21 @@ body.loginbackgroundimage {
     }
 }
 
+/* This will only be needed if the setting "loginform" is checked */
+@if $loginform == 'yes' {
+    /* Make background of login panel slightly transparent */
+    #page-login-index #region-main-box {
+        div.card {
+        background-color: rgba(255, 255, 255, 0.8);
+        border-radius: 3px;
+        }
+    }
+
+    #page-login-index #page {
+        margin-top: 0;
+    }
+}
+
 
 /*------------------------------------
   User menu

@@ -6,6 +6,7 @@ Changes
 
 ### Unreleased
 
+* 2017-03-21 - Setting to change position and style of the login form to work out with a greater variety of background images.
 * 2017-03-21 - Update to change 2017-03-09: Added setting to be able to decide if  the additional edit on / off button should be placed.
 * 2017-03-17 - Added back to top button with smooth scrolling.
 * 2017-03-15 - Setting to choose if switched role information should be displayed beneath course header.

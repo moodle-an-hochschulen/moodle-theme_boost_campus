@@ -109,6 +109,10 @@ The course settings icon will now be displayed on all sites that renders the cou
 
 We added a back to top button that appears in the right bottom corner when the user scrolls down the page. With a click on it the page scrolls back to top smoothly and the button will disappear again.
 
+### Design
+
+* Added Font Awesome icons to mailto and broken links. Furthermore, colored broken link in red for fast recognizability.
+
 
 Further information
 -------------------

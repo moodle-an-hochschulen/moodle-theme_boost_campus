@@ -291,6 +291,30 @@ body.path-course-view #section-0 h3.accesshide {
 
 
 /*------------------------------------
+  General improvements
+  -------------------------------------*/
+
+/* Mark broken links with red color. */
+a[href*="/brokenfile.php"] {
+    color: $brand-danger;
+}
+
+/* Add Font Awesome "broken chain" icon in front of broken link. */
+a[href*="/brokenfile.php"]::before {
+    font-family: FontAwesome;
+    content: "\f127" !important;
+    padding-right: 10px;
+}
+
+/* Add Font Awesome "email" icon in front of mailto links. */
+a[href^="mailto"]::before {
+    font-family: FontAwesome;
+    content: "\f003";
+    padding-right: 5px;
+}
+
+
+/*------------------------------------
   Additional Elements
   -------------------------------------*/
 

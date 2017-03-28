@@ -291,6 +291,23 @@ body.path-course-view #section-0 h3.accesshide {
 
 
 /*------------------------------------
+  Course categories
+  -------------------------------------*/
+
+/* Reduce the size and the font-weight of the headings */
+.course_category_tree {
+    h3 {
+        font-size: 1.45rem;
+        font-weight: normal;
+    }
+    h4 {
+        font-size: 1.2rem;
+        font-weight: normal;
+    }
+}
+
+
+/*------------------------------------
   General improvements
   -------------------------------------*/
 

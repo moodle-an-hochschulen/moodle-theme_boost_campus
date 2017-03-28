@@ -113,6 +113,10 @@ We added a back to top button that appears in the right bottom corner when the u
 
 * Added Font Awesome icons to mailto and broken links. Furthermore, colored broken link in red for fast recognizability.
 
+### Categories overview page
+
+Improved font sizes and weights on category overview page for better readability.
+
 
 Further information
 -------------------

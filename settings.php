@@ -240,6 +240,7 @@ if ($ADMIN->fulltree) {
     $setting = new admin_setting_configstoredfile($name, $title, $description, 'fontfiles', 0,
             array('maxfiles' => 100, 'accepted_types' => array('.ttf', '.eot', '.woff', '.woff2')));
     $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
 
     // Settings title to group block related settings together with a common heading. We don't want a description here.
     $setting = new admin_setting_heading('theme_boost_campus/blockdesignheading',

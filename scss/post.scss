@@ -1,13 +1,4 @@
 /*------------------------------------
-  Page Footer
-  -------------------------------------*/
-
-/* Set footer blocks text color from white to brandcolor. */
-#page-footer .block {
-    color: $gray-dark;
-}
-
-/*------------------------------------
   Login page
   -------------------------------------*/
 
@@ -303,6 +294,42 @@ body.path-course-view #section-0 h3.accesshide {
     h4 {
         font-size: 1.2rem;
         font-weight: normal;
+    }
+}
+
+
+/*------------------------------------
+  Page Footer
+  -------------------------------------*/
+
+#page-footer {
+    /* Set footer blocks text color from white to dark gray. */
+    .block {
+        color: $gray-dark;
+    }
+
+    @if variable-exists(footerhidehelplink){
+        @if $footerhidehelplink == 'yes' {
+            .helplink {
+                display: none;
+            }
+        }
+    }
+
+    @if variable-exists(footerhidelogininfo){
+        @if $footerhidelogininfo == 'yes' {
+            .logininfo {
+                display: none;
+            }
+        }
+    }
+
+    @if variable-exists(footerhidehomelink){
+        @if $footerhidehomelink == 'yes' {
+            .homelink {
+                display: none;
+            }
+        }
     }
 }
 

@@ -6,6 +6,7 @@ Changes
 
 ### Unreleased
 
+* 2017-03-29 - Setting to be able to hide Moodle's default links in the footer.
 * 2017-03-27 - Setting to be able to upload own font files.
 * 2017-03-23 - Improved fonts on category overview page.
 * 2017-03-21 - Improved design of mailto and broken links.

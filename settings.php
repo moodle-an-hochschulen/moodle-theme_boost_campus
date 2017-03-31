@@ -83,7 +83,8 @@ if ($ADMIN->fulltree) {
     $name = 'theme_boost_campus/favicon';
     $title = get_string('faviconsetting', 'theme_boost_campus');
     $description = get_string('faviconsetting_desc', 'theme_boost_campus');
-    $setting = new admin_setting_configstoredfile($name, $title, $description, 'favicon', 0, array('maxfiles' => 1, 'accepted_types' => array('.ico','.png')));
+    $setting = new admin_setting_configstoredfile($name, $title, $description, 'favicon', 0,
+        array('maxfiles' => 1, 'accepted_types' => array('.ico', '.png')));
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
@@ -113,6 +114,42 @@ if ($ADMIN->fulltree) {
     // Create layout settings tab.
     $page = new admin_settingpage('theme_boost_campus_layout', get_string('layoutsettings', 'theme_boost_campus'));
 
+    // Settings title to group course related settings together with a common heading. We don't want a description here.
+    $setting = new admin_setting_heading('theme_boost_campus/courselayoutheading',
+        get_string('courselayoutheadingsetting', 'theme_boost_campus', null, true), null);
+    $page->add($setting);
+
+    // Setting for displaying section-0 title in courses.
+    $setting = new admin_setting_configcheckbox('theme_boost_campus/section0title',
+        get_string('section0titlesetting', 'theme_boost_campus', null, true),
+        get_string('section0titlesetting_desc', 'theme_boost_campus', null, true), 'no', 'yes', 'no'); // Overriding default values
+        // yes = 1 and no = 0 because of the use of empty() in theme_boost_campus_get_pre_scss() (lib.php). Default 0 value would
+        // not write the variable to scss that could cause the scss to crash if used in that file.
+        $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+    // Setting for displaying edit on / off button addionally in course header.
+    $setting = new admin_setting_configcheckbox('theme_boost_campus/courseeditbutton',
+        get_string('courseeditbuttonsetting', 'theme_boost_campus', null, true),
+        get_string('courseeditbuttonsetting_desc', 'theme_boost_campus', null, true), 0);
+        $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+    // Setting to display information of a switched role in the course header.
+    $setting = new admin_setting_configcheckbox('theme_boost_campus/showswitchedroleincourse',
+        get_string('showswitchedroleincoursesetting', 'theme_boost_campus', null, true),
+        get_string('showswitchedroleincoursesetting_desc', 'theme_boost_campus', null, true), 'no', 'yes', 'no'); // Overriding
+        // default values yes = 1 and no = 0 because of the use of empty() in theme_boost_campus_get_pre_scss() (lib.php). #
+        // Default 0 value would not write the variable to scss that could cause the scss to crash if used in that file.
+        $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+    // Settings title to group footer related settings together with a common heading. We don't want a description here.
+    $setting = new admin_setting_heading('theme_boost_campus/footerlayoutheading',
+        get_string('footerlayoutheadingsetting', 'theme_boost_campus', null, true), null);
+    $page->add($setting);
+
+    // Setting for enabling blocks with different layouts in the footer.
     $footerlayoutoptions = [
      // Don't use string lazy loading (= false) because the string will be directly used and would produce a PHP warning otherwise.
     '0columns' => get_string('footerblocks0columnssetting', 'theme_boost_campus', null, false),
@@ -128,28 +165,36 @@ if ($ADMIN->fulltree) {
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
-    // Setting for displaying section-0 title in courses
-    $setting = new admin_setting_configcheckbox('theme_boost_campus/section0title',
-        get_string('section0titlesetting', 'theme_boost_campus', null, true),
-        get_string('section0titlesetting_desc', 'theme_boost_campus', null, true), 'no', 'yes', 'no'); // Overriding default values
+    // Settings title to group the settings footerhelplink, footerlogininfo and footerhomelink together with a common description.
+    // We don't need another heading here, only the description text.
+    $setting = new admin_setting_heading('theme_boost_campus/footerlinksheading',
+        null, get_string('footerlinksheadingsetting_desc', 'theme_boost_campus', null, true));
+    $page->add($setting);
+
+    // Helplink.
+    $setting = new admin_setting_configcheckbox('theme_boost_campus/footerhidehelplink',
+        get_string('footerhidehelplinksetting', 'theme_boost_campus', null, true),
+        get_string('footerlinks_desc', 'theme_boost_campus', null, true), 'no', 'yes', 'no' ); // Overriding default values
         // yes = 1 and no = 0 because of the use of empty() in theme_boost_campus_get_pre_scss() (lib.php). Default 0 value would
         // not write the variable to scss that could cause the scss to crash if used in that file.
         $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
-    // Setting to display information of a switched role in the course header.
-    $setting = new admin_setting_configcheckbox('theme_boost_campus/showswitchedroleincourse',
-        get_string('showswitchedroleincoursesetting', 'theme_boost_campus', null, true),
-        get_string('showswitchedroleincoursesetting_desc', 'theme_boost_campus', null, true), 'no', 'yes', 'no'); // Overriding default values
+    // Logininfo.
+    $setting = new admin_setting_configcheckbox('theme_boost_campus/footerhidelogininfo',
+        get_string('footerhidelogininfosetting', 'theme_boost_campus', null, true),
+        get_string('footerlinks_desc', 'theme_boost_campus', null, true), 'no', 'yes', 'no' ); // Overriding default values
         // yes = 1 and no = 0 because of the use of empty() in theme_boost_campus_get_pre_scss() (lib.php). Default 0 value would
         // not write the variable to scss that could cause the scss to crash if used in that file.
         $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
-    // Setting for displaying edit on / off button addionally in course header
-    $setting = new admin_setting_configcheckbox('theme_boost_campus/courseeditbutton',
-        get_string('courseeditbuttonsetting', 'theme_boost_campus', null, true),
-        get_string('courseeditbuttonsetting_desc', 'theme_boost_campus', null, true), 0);
+    // Homelink.
+    $setting = new admin_setting_configcheckbox('theme_boost_campus/footerhidehomelink',
+        get_string('footerhidehomelinksetting', 'theme_boost_campus', null, true),
+        get_string('footerlinks_desc', 'theme_boost_campus', null, true), 'no', 'yes', 'no' ); // Overriding default values
+        // yes = 1 and no = 0 because of the use of empty() in theme_boost_campus_get_pre_scss() (lib.php). Default 0 value would
+        // not write the variable to scss that could cause the scss to crash if used in that file.
         $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
@@ -169,7 +214,8 @@ if ($ADMIN->fulltree) {
     $name = 'theme_boost_campus/loginbackgroundimage';
     $title = get_string('loginbackgroundimagesetting', 'theme_boost_campus');
     $description = get_string('loginbackgroundimagesetting_desc', 'theme_boost_campus');
-    $setting = new admin_setting_configstoredfile($name, $title, $description, 'loginbackgroundimage', 0, array('maxfiles' => 10, 'accepted_types' => 'web_image'));
+    $setting = new admin_setting_configstoredfile($name, $title, $description, 'loginbackgroundimage', 0,
+        array('maxfiles' => 10, 'accepted_types' => 'web_image'));
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 

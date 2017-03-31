@@ -79,6 +79,10 @@ This setting can change the behaviour Moodle displays the title for the first co
 
 With this setting you can add an additional course edit on / off button to the course header for faster accessibility. This the same way as it was displayed before theme_boost.
 
+### Default footer links
+
+Moodle provides some default links in the footer: Link to the Moodle docs, login information, and a link to the webpage start. With these three settings you can decide if you want to hide specific links because you think that your users won't need them in your instance. If checked, the link will not be displayed in the footer. If not checked (default), it will be shown.
+
 ### 4. Tab "Design Settings"
 
 #### Background images for login page

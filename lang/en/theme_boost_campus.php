@@ -38,12 +38,11 @@ $string['loginbackgroundimagesetting_desc'] = 'Images uploaded in this setting w
 $string['loginform'] = 'Login form';
 $string['loginform_desc'] = 'With this setting you can optimize the login form to fit to a greater variety background images (if checked). This means that the login form will be moved to the left of the login page, will get smaller in width and will get a background that let the background image shine through. The login form will be placed on the left because many images have their main content rather in the center and so we keep this content visible. Note: You can also activate this setting if no background images are uploaded, of course.';
 
-$string['footerblocksheading'] = 'Footer blocks';
 $string['footerblocks0columnssetting'] = 'No blocks in footer';
 $string['footerblocks1columnssetting'] = 'One block columns in footer';
 $string['footerblocks2columnssetting'] = 'Two block columns in footer';
 $string['footerblocks3columnssetting'] = 'Three block columns in footer';
-$string['footerblockssetting'] = 'Footer layout';
+$string['footerblockssetting'] = 'Footer blocks';
 $string['footerblockssetting_desc'] = 'You can chose if you want to enable the possibility to place blocks into the footer. If enabled, you can choose between one, two or three block columns. These columns are only displayed on large screens. On small screens the columns will be automatically reduced to one column for better readability and layout.';
 
 $string['faviconsetting'] = 'Favicon';
@@ -70,3 +69,15 @@ Important: To be able to use the uploaded fonts within this theme, you have to a
 
 $string['loginpagedesignheadingsetting'] = 'Login page';
 $string['fontdesignheadingsetting'] = 'Fonts';
+
+$string['footerlinksheadingsetting'] = 'Default footer links';
+$string['footerlinksheadingsetting_desc'] = 'Moodle provides some default links in the footer: Link to the Moodle docs, login information, and a link to the webpage start. <br/> With the following three settings you can decide if you want to hide specific links because you think that your users won\'t need them in your instance.';
+
+$string['footerlinks_desc'] = 'If checked, the link will not be displayed in the footer. If not checked (default), it will be shown.';
+
+$string['footerhidehelplinksetting'] = 'Hide link to the Moodle docs';
+$string['footerhidelogininfosetting'] = 'Hide login information';
+$string['footerhidehomelinksetting'] = 'Hide link to the webpage start';
+
+$string['courselayoutheadingsetting'] = 'Course layout';
+$string['footerlayoutheadingsetting'] = 'Footer layout';

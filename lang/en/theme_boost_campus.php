@@ -35,7 +35,7 @@ $string['designsettings'] = 'Design Settings';
 $string['loginbackgroundimagesetting'] = 'Login page background images';
 $string['loginbackgroundimagesetting_desc'] = 'Images uploaded in this setting will be randomly displayed on the login page as background images.';
 
-$string['loginform'] = 'Login Form';
+$string['loginform'] = 'Login form';
 $string['loginform_desc'] = 'With this setting you can optimize the login form to fit to a greater variety background images (if checked). This means that the login form will be moved to the left of the login page, will get smaller in width and will get a background that let the background image shine through. The login form will be placed on the left because many images have their main content rather in the center and so we keep this content visible. Note: You can also activate this setting if no background images are uploaded, of course.';
 
 $string['footerblocksheading'] = 'Footer blocks';
@@ -63,3 +63,10 @@ $string['section0titlesetting_desc'] = 'This setting can change the behaviour Mo
 $string['showswitchedroleincoursesetting'] = 'Position of switch role information';
 $string['showswitchedroleincoursesetting_desc'] = 'With this setting you can choose the place where the information to which role a user has switched is being displayed. If not checked (default value), the role information will be displayed right beneath the user\'s name in the user menu (like in theme Boost). If checked, this information - together with a link to switch back - will be displayed beneath the course, as this functionality is course related.';
 $string['switchedroleto'] = 'You are viewing this course currently with the role:';
+
+$string['fontfilessetting'] = 'Font files';
+$string['fontfilessetting_desc'] = 'With this dialogue you can upload own font files. The uplaod is resricted to the font files of type .eot, .woff, .woff2, .ttf and .svg. <br/>
+Important: To be able to use the uploaded fonts within this theme, you have to add related code to your "Raw SCSS" area in the tab "Advanced Settings". A full example for this can be found in the README.md file.';
+
+$string['loginpagedesignheadingsetting'] = 'Login page';
+$string['fontdesignheadingsetting'] = 'Fonts';

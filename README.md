@@ -89,6 +89,82 @@ In this setting you can add up to 10 files as a background image for the login p
 
 With this setting you can optimize the login form to fit to a greater variety background images (if checked). This means that the login form will be moved to the left of the login page, will get smaller in width and will get a background that let the background image shine through. The login form will be placed on the left because many images have their main content rather in the center and so we keep this content visible. Note: You can also activate this setting if no background images are uploaded, of course.
 
+#### Font files
+
+With this dialogue you can upload own font files. The upload is resricted to the font files of type .eot, .woff, .woff2, .ttf and .svg.
+
+Important: To be able to use the uploaded fonts within this theme, you have to add related code to your "Raw SCSS" area in the tab "Advanced Settings"!
+First you have to add all font-faces correctly and then you can set the font as font-family to any tag. Set it for the body tag to use it all over the instance. With the following expamle you can see how the SCSS code should look like. Of course you have to adapt it for your individual font and the number and type of uploaded files.
+
+```css
+
+/* your-font-regular - latin */
+@font-face {
+        font-family: "Your Font";
+        font-style: normal;
+        font-weight: 400;
+        /* IE9 Compat Modes */
+        src: url("/pluginfile.php/1/theme_boost_campus/fontfiles/0/your-font-latin-regular.eot");
+        src: local("Your Font"), local("YourFont-Regular"),
+               /* IE6-IE8 */
+                url("/pluginfile.php/1/theme_boost_campus/fontfiles/0/your-font-latin-regular.eot?#iefix") format("embedded-opentype"),
+                /* Super Modern Browsers */
+                url("/pluginfile.php/1/theme_boost_campus/fontfiles/0/your-font-latin-regular.woff2") format("woff2"),
+                /* Modern Browsers */
+                url("/pluginfile.php/1/theme_boost_campus/fontfiles/0/your-font-latin-regular.woff") format("woff"),
+                /* Safari, Android, iOS */
+                url("/pluginfile.php/1/theme_boost_campus/fontfiles/0/your-font-latin-regular.ttf") format("truetype"),
+                /* Legacy iOS */
+                url("/pluginfile.php/1/theme_boost_campus/fontfiles/0/your-font-latin-regular.svg#YourFont") format("svg");
+\}
+/* your-font-italic - latin */
+@font-face {
+        font-family: "Your Font";
+        font-style: italic;
+        font-weight: 400;
+        src: url("/pluginfile.php/1/theme_boost_campus/fontfiles/0/your-font-latin-italic.eot");
+        src: local("Your Font Italic"), local("YourFont-Italic"),
+                url("/pluginfile.php/1/theme_boost_campus/fontfiles/0/your-font-latin-italic.eot?#iefix") format("embedded-opentype"),
+                url("/pluginfile.php/1/theme_boost_campus/fontfiles/0/your-font-latin-italic.woff2") format("woff2"),
+                url("/pluginfile.php/1/theme_boost_campus/fontfiles/0/your-font-latin-italic.woff") format("woff"),
+                url("/pluginfile.php/1/theme_boost_campus/fontfiles/0/your-font-latin-italic.ttf") format("truetype"),
+                url("/pluginfile.php/1/theme_boost_campus/fontfiles/0/your-font-latin-italic.svg#YourFont") format("svg");
+}
+/* your-font-700 - latin */
+@font-face {
+        font-family: "Your Font";
+        font-style: normal;
+        font-weight: 700;
+        src: url("/pluginfile.php/1/theme_boost_campus/fontfiles/0/your-font-latin-700.eot");
+        src: local("Your Font Bold"), local("YourFont-Bold"),
+                url("/pluginfile.php/1/theme_boost_campus/fontfiles/0/your-font-latin-700.eot?#iefix") format("embedded-opentype"),
+                url("/pluginfile.php/1/theme_boost_campus/fontfiles/0/your-font-latin-700.woff2") format("woff2"),
+                url("/pluginfile.php/1/theme_boost_campus/fontfiles/0/your-font-latin-700.woff") format("woff"),
+                url("/pluginfile.php/1/theme_boost_campus/fontfiles/0/your-font-latin-700.ttf") format("truetype"),
+                url("/pluginfile.php/1/theme_boost_campus/fontfiles/0/your-font-latin-700.svg#YourFont") format("svg");
+}
+/* your-font-700italic - latin */
+@font-face {
+        font-family: "Your Font";
+        font-style: italic;
+        font-weight: 700;
+        src: url("/pluginfile.php/1/theme_boost_campus/fontfiles/0/your-font-latin-700italic.eot");
+        src: local("Your Font Bold Italic"), local("YourFont-BoldItalic"),
+                url("/pluginfile.php/1/theme_boost_campus/fontfiles/0/your-font-latin-700-italic.eot?#iefix") format("embedded-opentype"),
+                url("/pluginfile.php/1/theme_boost_campus/fontfiles/0/your-font-latin-700-italic.woff2") format("woff2"),
+                url("/pluginfile.php/1/theme_boost_campus/fontfiles/0/your-font-latin-700-italic.woff") format("woff"),
+                url("/pluginfile.php/1/theme_boost_campus/fontfiles/0/your-font-latin-700-italic.ttf") format("truetype"),
+                url("/pluginfile.php/1/theme_boost_campus/fontfiles/0/your-font-latin-700-italic.svg#YourFont") format("svg");
+}
+
+body {
+        font-family: "Your Font";
+}
+
+```
+
+Please note: The code itself and the URLs have to fit exactly to your uploaded files, unless the fonts cannot be loaded! As the font files will be delivered with an expires header to the client but currently without a timestamp in the URL, emptying the Moodle cache unfortunately will not force a reload of the font files on the client side.
+
 
 Further improvements to Boost core theme
 ----------------------------------------

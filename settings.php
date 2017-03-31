@@ -160,6 +160,11 @@ if ($ADMIN->fulltree) {
      // Create design settings tab.
     $page = new admin_settingpage('theme_boost_campus_design', get_string('designsettings', 'theme_boost_campus'));
 
+    // Settings title to group login page related settings together with a common heading. We don't want a description here.
+    $setting = new admin_setting_heading('theme_boost_campus/loginpagedesignheading',
+        get_string('loginpagedesignheadingsetting', 'theme_boost_campus', null, true), null);
+    $page->add($setting);
+
     // Login page background setting.
     $name = 'theme_boost_campus/loginbackgroundimage';
     $title = get_string('loginbackgroundimagesetting', 'theme_boost_campus');
@@ -168,13 +173,27 @@ if ($ADMIN->fulltree) {
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
-    // Setting to display information of a switched role in the course header.
+    // Setting to change the position and design of the login form.
     $setting = new admin_setting_configcheckbox('theme_boost_campus/loginform',
         get_string('loginform', 'theme_boost_campus', null, true),
         get_string('loginform_desc', 'theme_boost_campus', null, true), 'no', 'yes', 'no'); // Overriding default values
         // yes = 1 and no = 0 because of the use of empty() in theme_boost_campus_get_pre_scss() (lib.php). Default 0 value would
         // not write the variable to scss that could cause the scss to crash if used in that file.
         $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+    // Settings title to group font related settings together with a common heading. We don't want a description here.
+    $setting = new admin_setting_heading('theme_boost_campus/fontdesignheading',
+        get_string('fontdesignheadingsetting', 'theme_boost_campus', null, true), null);
+    $page->add($setting);
+
+    // Font files upload.
+    $name = 'theme_boost_campus/fontfiles';
+    $title = get_string('fontfilessetting', 'theme_boost_campus');
+    $description = get_string('fontfilessetting_desc', 'theme_boost_campus');
+    $setting = new admin_setting_configstoredfile($name, $title, $description, 'fontfiles', 0,
+            array('maxfiles' => 100, 'accepted_types' => array('.ttf', '.eot', '.woff', '.woff2')));
+    $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
     // Add tab to settings page.

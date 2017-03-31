@@ -123,6 +123,8 @@ function theme_boost_campus_pluginfile($course, $cm, $context, $filearea, $args,
             return $theme->setting_file_serve('favicon', $args, $forcedownload, $options);
         } else if ($filearea === 'loginbackgroundimage') {
             return $theme->setting_file_serve('loginbackgroundimage', $args, $forcedownload, $options);
+         } else if ($filearea === 'fontfiles') {
+            return $theme->setting_file_serve('fontfiles', $args, $forcedownload, $options);
          } else {
             send_file_not_found();
         }

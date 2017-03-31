@@ -6,6 +6,7 @@ Changes
 
 ### Unreleased
 
+* 2017-03-30 - Setting to be able to add a default Font Awesome icon in front of the block title.
 * 2017-03-29 - Setting to be able to hide Moodle's default links in the footer.
 * 2017-03-27 - Setting to be able to upload own font files.
 * 2017-03-23 - Improved fonts on category overview page.

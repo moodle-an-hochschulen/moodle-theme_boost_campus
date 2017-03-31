@@ -240,6 +240,20 @@ if ($ADMIN->fulltree) {
     $setting = new admin_setting_configstoredfile($name, $title, $description, 'fontfiles', 0,
             array('maxfiles' => 100, 'accepted_types' => array('.ttf', '.eot', '.woff', '.woff2')));
     $setting->set_updatedcallback('theme_reset_all_caches');
+
+    // Settings title to group block related settings together with a common heading. We don't want a description here.
+    $setting = new admin_setting_heading('theme_boost_campus/blockdesignheading',
+        get_string('blockdesignheadingsetting', 'theme_boost_campus', null, true), null);
+    $page->add($setting);
+
+    // Setting for displaying a standard Font Awesome icon in front of the block title
+    $setting = new admin_setting_configcheckbox('theme_boost_campus/blockicon',
+        get_string('blockiconsetting', 'theme_boost_campus', null, true),
+        get_string('blockiconsetting_desc', 'theme_boost_campus', null, true) .
+        get_string('blockiconsetting_desc_code', 'theme_boost_campus', null, true),'no', 'yes', 'no'); // Overriding default values
+        // yes = 1 and no = 0 because of the use of empty() in theme_boost_campus_get_pre_scss() (lib.php). Default 0 value would
+        // not write the variable to scss that could cause the scss to crash if used in that file.
+        $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
     // Add tab to settings page.

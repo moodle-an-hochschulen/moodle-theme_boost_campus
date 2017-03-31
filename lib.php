@@ -81,6 +81,7 @@ function theme_boost_campus_get_pre_scss($theme) {
         'footerhidehelplink' => ['footerhidehelplink'],
         'footerhidelogininfo' => ['footerhidelogininfo'],
         'footerhidehomelink' => ['footerhidehomelink'],
+        'blockicon' => ['blockicon'],
         /* MODIFICATION END */
     ];
 

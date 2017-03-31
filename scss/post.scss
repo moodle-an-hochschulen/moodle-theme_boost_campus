@@ -135,11 +135,6 @@ body.loginbackgroundimage {
         padding-right: 2px;
     }
 
-    /* Hide icons of items that don't need one.*/
-    a.list-group-item span.media-left > img {
-        display: none;
-    }
-
     /*
      * General left menu.
      */
@@ -149,6 +144,16 @@ body.loginbackgroundimage {
     a.list-group-item[data-key|=home],
     a.list-group-item[data-key|=calendar] {
         @include navdrawer-node-separator(parent);
+    }
+
+    /* Remove icon from elements that does not need any. */
+    a.list-group-item[data-key|=coursehome] span.media-left > img,
+    a.list-group-item[data-key|=myhome] span.media-left > img,
+    a.list-group-item[data-key|=home] span.media-left > img ,
+    a.list-group-item[data-key|=calendar] span.media-left > img,
+    a.list-group-item[href*="files"] span.media-left > img,
+    a.list-group-item[data-key|=sitesettings] span.media-left > img{
+        display: none;
     }
 
     /* Menu item: my files. */
@@ -179,9 +184,8 @@ body.loginbackgroundimage {
         margin-left: 0px !important;
     }
 
-    /* Add course icon to each course menu items. */
+    /* Set course icon to each course menu items. */
     div.list-group-item[data-key|=mycourses] ~ a.list-group-item[href*="course/view.php?id="] span.media-left > img {
-        display: inherit;
         content: url([[pix:i/course]]);
     }
 
@@ -195,36 +199,30 @@ body.loginbackgroundimage {
         padding: .75rem 1.25rem;
     }
 
-    /* Menu items participants, badges and grades need dashed bottom border. */
+    /* Menu items participants, badges, grades and competencies need dashed bottom border. */
     a.list-group-item[data-key|=participants],
     a.list-group-item[data-key|=badgesview],
-    a.list-group-item[data-key|=grades] {
+    a.list-group-item[data-key|=grades],
+    a.list-group-item[href*="coursecompetencies"] {
         @include navdrawer-node-separator(child);
     }
 
-    /* Add icons to menu items participants, badges and grades. */
+    /* Set icons to menu items participants, badges, grades and competencies. */
     a.list-group-item[data-key|=participants] span.media-left > img {
-        display: inherit;
         content: url([[pix:i/users]]);
     }
     a.list-group-item[data-key|=badgesview] span.media-left > img {
-        display: inherit;
         content: url([[pix:i/badge]]);
     }
     a.list-group-item[data-key|=grades] span.media-left > img {
-        display: inherit;
         content: url([[pix:i/grades]]);
     }
-
-    /* Menu items: course sections. */
-    a.list-group-item[href*="section-"] {
-        padding-left: 0.7rem;
-        border: none;
+    a.list-group-item[href*="coursecompetencies"] span.media-left > img {
+        content: url([[pix:i/user]]);
     }
 
-    /* Add and align icons before course section links */
-    a.list-group-item[href*="section-"] span.media-left > img {
-        display: inherit;
+    /* Set and align icons before course section links */
+    a.list-group-item[href*="section-"] span.media-left > img.icon {
         content: url([[pix:i/folder]]);
      }
 

@@ -278,6 +278,152 @@ body.path-course-view #section-0 h3.accesshide {
     }
 }
 
+.course-content {
+    /* Selectors for course format "Topics", "Weeks" and "Periods" */
+    ul.topics, ul.weeks, ul.periods {
+        /* We need this to prevent bullet points are cut on the left side of the course content. */
+        .contentwithoutlink ul {
+            padding-left: 0;
+        }
+        .contentwithoutlink ul li {
+            list-style-position: inside;
+        }
+        /* Set section dividing border-color to brand-primary. */
+        li.section.main {
+            border: none;
+            border-bottom: 1px solid $brand-primary;
+            padding-top: 3rem;
+            padding-bottom: 1rem;
+        }
+        /* Reduce indent of hidden sections as this is not aligned with visible ones. */
+        li.section.main.hidden {
+            h3.sectionname > span {
+                margin-left: 0;
+            }
+            .section {
+                padding: 0;
+            }
+            .activity .activityinstance {
+                margin-left: 14px;
+            }
+        }
+        /* Change style of highlighted section to highlight more. */
+        li.section.main.current {
+            border-bottom: $brand-primary 4px solid;
+            border-top: $brand-primary 3px solid; /*1px less because of section dividing border. */
+            background: $gray-lightest;
+        }
+        /* Remove highlighting from Theme Boost. */
+        li.section.main.current::before {
+            display: none;
+        }
+        /* Remove padding => section move button is center-aligned in front of section title and sections are aligned equal to
+           section elements. */
+        li.section .left {
+            padding: 0;
+            padding-right: 5px; /* Align section title equal to beginning of icons within section. */
+        }
+         /* Remove spacer from regular sections. */
+        img.icon.spacer {
+            display: none;
+        }
+        /* Increase space from section title (edit mode off) to left border. */
+        h3.sectionname {
+            padding-left: 15px;
+            padding-bottom: 10px
+        }
+        /* Display icon of hidden activity or resource in grayscale.*/
+        .activity .contentwithoutlink .dimmed .activityicon,
+        .activity .activityinstance .dimmed .activityicon {
+            filter: grayscale(100%);
+        }
+        /* Make availability info more eye catching. */
+        .availabilityinfo {
+            color: $brand-info;
+            font-style: italic;
+            font-size: .9rem;
+        }
+        /* Add border to descripion text to differ it from module content. */
+        .section .contentafterlink {
+            border-left: 2px solid $gray-light;
+            padding-left: 10px;
+            font-size: .9rem;
+        }
+        /* Place meta information in a new line. */
+        .resourcelinkdetails {
+            display: block;
+            margin-left: 30px;
+        }
+    }
+    /* Increase padding from last section to section number control buttons. */
+    #changenumsections {
+        padding-top: 1rem;
+    }
+    /* Special styles for single section view. */
+    .single-section {
+        /* Align section title in single view left. */
+        h3.sectionname {
+        text-align: left;
+        padding-left: 40px;
+        padding-top: 1.5rem;
+        }
+        /* Reduce padding top of first and only section in this view. */
+        ul li.section.main {
+            padding-top: 1rem;
+        }
+        .section-navigation .mdl-left:not(:empty),
+        .section-navigation .mdl-right:not(:empty) {
+            background-color: $brand-primary;
+            padding: 2px 8px;
+            border-radius: 2px;
+            a {
+                color: #fff !important; /*Important to prevent link color of hidden section getting gray in the button. */
+            }
+        }
+    }
+}
+
+/* Special rule for hidden sections in editing mode as indents are different in this view. */
+.editing .course-content li.section.main.hidden {
+    .section-handle {
+        padding-left: 0;
+    }
+    li.activity .mod-indent-outer {
+        padding-left: 1rem;
+    }
+    ul.section {
+        padding-left: 1rem;
+    }
+}
+
+/*
+ * Activities and resources
+ */
+/* Add a decent background to intro text */
+#intro {
+    background-color: $gray-lightest;
+    margin-bottom: 1em;
+    border-left: 3px solid $brand-primary;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/*
+ * Misc
+ * /
+/* Design blockquotes. */
+blockquote {
+    padding-left: 30px;
+}
+
+blockquote::before {
+    font-family: FontAwesome;
+    content: '\f10e';
+    font-size: 1.5em;
+    padding-right: 10px;
+    margin-left: -30px;
+}
+
 
 /*------------------------------------
   Course categories

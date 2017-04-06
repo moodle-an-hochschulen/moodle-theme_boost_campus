@@ -193,6 +193,15 @@ We added a back to top button that appears in the right bottom corner when the u
 
 * Added Font Awesome icons to mailto and broken links. Furthermore, colored broken link in red for fast recognizability.
 
+Course Design:
+
+* Used the brand color as border color.
+* Improved highlighting of a highlighted section.
+* Improved recognisability of hidden activities by gray scaling the icon.
+* Improved paddings and margins for better alignment and better delineation of sections.
+* Designed description and intro boxes.
+* Designed blockquotes.
+
 ### Categories overview page
 
 Improved font sizes and weights on category overview page for better readability.

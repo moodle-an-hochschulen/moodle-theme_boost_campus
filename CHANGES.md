@@ -6,6 +6,7 @@ Changes
 
 ### Unreleased
 
+* 2017-04-06 - Improved course design for better optical experience.
 * 2017-03-31 - Improved SCSS code for fixing flat navigation displaying bug when using different course formats.
 * 2017-03-30 - Setting to be able to add a default Font Awesome icon in front of the block title.
 * 2017-03-29 - Setting to be able to hide Moodle's default links in the footer.

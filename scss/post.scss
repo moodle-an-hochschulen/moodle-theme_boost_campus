@@ -64,17 +64,18 @@ body.loginbackgroundimage {
 }
 
 /* This will only be needed if the setting "loginform" is checked */
-@if $loginform == 'yes' {
-    /* Make background of login panel slightly transparent */
-    #page-login-index #region-main-box {
-        div.card {
-        background-color: rgba(255, 255, 255, 0.8);
-        border-radius: 3px;
+@if variable-exists(loginform) {
+    @if $loginform == 'yes' {
+        /* Make background of login panel slightly transparent */
+        #page-login-index #region-main-box {
+            div.card {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 3px;
+            }
         }
-    }
-
-    #page-login-index #page {
-        margin-top: 0;
+        #page-login-index #page {
+            margin-top: 0;
+        }
     }
 }
 
@@ -85,20 +86,22 @@ body.loginbackgroundimage {
 
 /* Don't display switched role information in the user menu
  * if setting 'showswitchedroleincourse' is active */
-@if $showswitchedroleincourse == 'yes' {
-    .userswitchedrole .usermenu {
-        .usertext {
-            float: inherit;
-            text-align: inherit;
-            margin-right: inherit;
-            height: inherit;
-        }
-        span.meta.role {
-            display: none;
-        }
-        .avatar img {
-            margin-left: 1rem;
-            margin-right: .5rem;
+@if variable-exists(showswitchedroleincourse) {
+    @if $showswitchedroleincourse == 'yes' {
+        .userswitchedrole .usermenu {
+            .usertext {
+                float: inherit;
+                text-align: inherit;
+                margin-right: inherit;
+                height: inherit;
+            }
+            span.meta.role {
+                display: none;
+            }
+            .avatar img {
+                margin-left: 1rem;
+                margin-right: .5rem;
+            }
         }
     }
 }
@@ -269,12 +272,14 @@ body.loginbackgroundimage {
 
 /* Check if setting theme_boost_campus|section0title is set.
    If set, then revert the styles from .accesshide and set the style to be the same as other section titles. */
-body.path-course-view #section-0 h3.accesshide {
+@if variable-exists(section0title) {
     @if $section0title == 'yes' {
-        position: inherit;
-        left: inherit;
-        font-weight: $headings-font-weight;
-        font-size: $font-size-h3;
+        body.path-course-view #section-0 h3.accesshide {
+            position: inherit;
+            left: inherit;
+            font-weight: $headings-font-weight;
+            font-size: $font-size-h3;
+        }
     }
 }
 

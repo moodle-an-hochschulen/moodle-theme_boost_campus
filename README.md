@@ -44,6 +44,22 @@ This setting is already available in the Moodle core theme Boost. For more infor
 
 This setting is already available in the Moodle core theme Boost. For more information how to use it, please have a look at the official Moodle documentation: http://docs.moodle.org/en/Boost_theme
 
+### Brand success color
+
+This color is used for example in regards to form valiations.
+
+### Brand info color
+
+This color is used for example for availabiity information of course activities or resources.
+
+### Brand warning color
+
+This color is used for example for warning texts.
+
+### Brand danger color
+
+This color is used for example in regards to form valiations.
+
 #### Favicon
 
 This setting allows you to upload an image (.ico or .png format) that your browser will display as a favicon.

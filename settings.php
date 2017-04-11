@@ -34,6 +34,11 @@ if ($ADMIN->fulltree) {
     // Create general tab.
     $page = new admin_settingpage('theme_boost_campus_general', get_string('generalsettings', 'theme_boost'));
 
+    // Settings title to group preset related settings together with a common heading. We don't want a description here.
+    $setting = new admin_setting_heading('theme_boost_campus/presetheading',
+        get_string('presetheadingsetting', 'theme_boost_campus', null, true), null);
+    $page->add($setting);
+
     // Replicate the preset setting from theme_boost.
     $name = 'theme_boost_campus/preset';
     $title = get_string('preset', 'theme_boost');
@@ -68,6 +73,10 @@ if ($ADMIN->fulltree) {
         array('maxfiles' => 20, 'accepted_types' => array('.scss')));
     $page->add($setting);
 
+    // Settings title to group brand color related settings together with a common heading. We don't want a description here.
+    $setting = new admin_setting_heading('theme_boost_campus/brandcolorheading',
+        get_string('brandcolorheadingsetting', 'theme_boost_campus', null, true), null);
+    $page->add($setting);
 
     // Variable $brand-color.
     // We use an empty default value because the default colour should come from the preset.
@@ -78,6 +87,42 @@ if ($ADMIN->fulltree) {
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
+    // Variable $brand-succes-color.
+    $name = 'theme_boost_campus/brandsuccesscolor';
+    $title = get_string('brandsuccesscolorsetting', 'theme_boost_campus');
+    $description = get_string('brandsuccesscolorsetting_desc', 'theme_boost_campus');
+    $setting = new admin_setting_configcolourpicker($name, $title, $description, '');
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+    // Variable $brand-info-color.
+    $name = 'theme_boost_campus/brandinfocolor';
+    $title = get_string('brandinfocolorsetting', 'theme_boost_campus');
+    $description = get_string('brandinfocolorsetting_desc', 'theme_boost_campus');
+    $setting = new admin_setting_configcolourpicker($name, $title, $description, '');
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+    // Variable $brand-warning-color.
+    $name = 'theme_boost_campus/brandwarningcolor';
+    $title = get_string('brandwarningcolorsetting', 'theme_boost_campus');
+    $description = get_string('brandwarningcolorsetting_desc', 'theme_boost_campus');
+    $setting = new admin_setting_configcolourpicker($name, $title, $description, '');
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+    // Variable $brand-warning-color.
+    $name = 'theme_boost_campus/branddangercolor';
+    $title = get_string('branddangercolorsetting', 'theme_boost_campus');
+    $description = get_string('branddangercolorsetting_desc', 'theme_boost_campus');
+    $setting = new admin_setting_configcolourpicker($name, $title, $description, '');
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+    // Settings title to group favicon related settings together with a common heading. We don't want a description here.
+    $setting = new admin_setting_heading('theme_boost_campus/faviconheading',
+        get_string('faviconheadingsetting', 'theme_boost_campus', null, true), null);
+    $page->add($setting);
 
     // Favicon upload.
     $name = 'theme_boost_campus/favicon';

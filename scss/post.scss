@@ -298,7 +298,7 @@ body.loginbackgroundimage {
             border: none;
             border-bottom: 1px solid $brand-primary;
             padding-top: 3rem;
-            padding-bottom: 1rem;
+            padding-bottom: 2rem;
         }
         /* Remove the border from last section in non editing mode. */
         li.section.main:last-child {
@@ -325,6 +325,10 @@ body.loginbackgroundimage {
         /* Remove highlighting from Theme Boost. */
         li.section.main.current::before {
             display: none;
+        }
+        /* Section 0 needs no extra top padding. */
+        li#section-0 {
+            padding-top: 0;
         }
         /* Remove padding => section move button is center-aligned in front of section title and sections are aligned equal to
            section elements. */
@@ -539,6 +543,9 @@ blockquote::before {
   -------------------------------------*/
 
 #page-footer {
+    /* Increase padding. */
+    padding-top: 30px !important;
+
     /* Set footer blocks text color from white to dark gray. */
     .block {
         color: $gray-dark;

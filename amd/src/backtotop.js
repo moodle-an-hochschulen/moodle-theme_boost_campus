@@ -31,9 +31,9 @@ define(['jquery'], function($) {
         // This function fades the button in when the page is scrolled down or fades it out if the user is at the top of the page.
         $(window).scroll(function() {
             if ($(this).scrollTop() > 220) {
-                $('#back-to-top').fadeIn(500);
+                $('#back-to-top').fadeIn(300);
             } else {
-                $('#back-to-top').fadeOut(500);
+                $('#back-to-top').fadeOut(100);
             }
         });
 

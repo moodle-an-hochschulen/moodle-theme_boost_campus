@@ -217,6 +217,7 @@ Course Design:
 * Improved paddings and margins for better alignment and better delineation of sections.
 * Designed description and intro boxes.
 * Designed blockquotes.
+* Improved design of maintenance warning to be more visible.
 
 ### Categories overview page
 

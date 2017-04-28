@@ -602,6 +602,21 @@ a[href^="mailto"]::before {
 
 
 /*------------------------------------
+  Maintenance Info
+  -------------------------------------*/
+/* Improve the maintenance warning to be full width and to be displayed above the navdrawer navigation. */
+.maintenancewarning {
+    z-index: 1000;
+    width: 100%;
+    text-align: center;
+    margin: 0 !important;
+    border-radius: 0;
+    border-width: 1px 0 1px 0;
+    bottom: 15px;
+}
+
+
+/*------------------------------------
   Additional Elements
   -------------------------------------*/
 

@@ -300,6 +300,10 @@ body.loginbackgroundimage {
             padding-top: 3rem;
             padding-bottom: 1rem;
         }
+        /* Remove the border from last section in non editing mode. */
+        li.section.main:last-child {
+            border-bottom: none;
+        }
         /* Reduce indent of hidden sections as this is not aligned with visible ones. */
         li.section.main.hidden {
             h3.sectionname > span {
@@ -387,17 +391,25 @@ body.loginbackgroundimage {
         }
     }
 }
-
-/* Special rule for hidden sections in editing mode as indents are different in this view. */
-.editing .course-content li.section.main.hidden {
-    .section-handle {
-        padding-left: 0;
-    }
-    li.activity .mod-indent-outer {
-        padding-left: 1rem;
-    }
-    ul.section {
-        padding-left: 1rem;
+/* Special styles for the editing mode. */
+.editing .course-content {
+    ul.topics, ul.weeks, ul.periods {
+        /* Add bottom border to last section in editing mode. */
+        li.section.main:last-child {
+            border-bottom: 1px solid $brand-primary;
+        }
+        /* Special rule for hidden sections in editing mode as indents are different in this view. */
+        li.section.main.hidden {
+            .section-handle {
+                padding-left: 0;
+            }
+            li.activity .mod-indent-outer {
+                padding-left: 1rem;
+            }
+            ul.section {
+                padding-left: 1rem;
+            }
+        }
     }
 }
 

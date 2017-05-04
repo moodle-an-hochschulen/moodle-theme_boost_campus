@@ -6,6 +6,7 @@ Changes
 
 ### Unreleased
 
+* 2017-05-04 - Setting to select dark page navigation bar design.
 * 2017-04-25 - Improved design of maintenance warning to be more visible.
 * 2017-04-10 - Settings to choose own colors for the variables brand-info, brand-warning, brand-success and brand-danger.
 * 2017-04-07 - Added statement "@if variable-exists" to all setting variables processed to SCSS. See MDL-58376.

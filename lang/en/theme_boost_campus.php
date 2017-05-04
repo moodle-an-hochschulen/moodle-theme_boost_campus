@@ -98,3 +98,7 @@ $string['brandwarningcolorsetting'] = 'Brand warning color';
 $string['brandwarningcolorsetting_desc'] = 'This color is used for example for warning texts.';
 $string['branddangercolorsetting'] = 'Brand danger color';
 $string['branddangercolorsetting_desc'] = 'This color is used for example in regards to form validations.';
+
+$string['navbardesignheadingsetting'] = 'Navbar';
+$string['darknavbarsetting'] = 'Dark navbar';
+$string['darknavbarsetting_desc'] = 'By checking this setting you can invert the default light navbar to a dark one with white links.';

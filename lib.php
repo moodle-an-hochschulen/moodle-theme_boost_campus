@@ -86,6 +86,7 @@ function theme_boost_campus_get_pre_scss($theme) {
         'brandinfocolor' => ['brand-info'],
         'brandwarningcolor' => ['brand-warning'],
         'branddangercolor' => ['brand-danger'],
+        'darknavbar' => ['darknavbar'],
         /* MODIFICATION END */
     ];
 

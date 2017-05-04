@@ -185,6 +185,10 @@ body {
 
 Please note: The code itself and the URLs have to fit exactly to your uploaded files, unless the fonts cannot be loaded! As the font files will be delivered with an expires header to the client but currently without a timestamp in the URL, emptying the Moodle cache unfortunately will not force a reload of the font files on the client side.
 
+#### Dark navbar
+
+By enabling this setting you can invert the default light navbar to a dark one with white links.
+
 
 Further improvements to Boost core theme
 ----------------------------------------

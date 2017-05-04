@@ -79,6 +79,38 @@ body.loginbackgroundimage {
     }
 }
 
+/*------------------------------------
+  Page header
+  -------------------------------------*/
+
+/*
+ * Navbar
+ */
+/* Make page navbar dark if setting "darknavabr" is set to yes. */
+@if variable-exists(darknavbar) {
+    @if $darknavbar == 'yes' {
+        header.navbar {
+            background-color: $gray-dark;
+
+            .navbar-nav a.nav-link,
+            .nav-link,
+            .usertext,
+            .dropdown-toggle {
+                color: #fff;
+            }
+            .nav-link:hover,
+            .usertext:hover,
+            .dropdown-toggle:hover {
+                color: $brand-primary;
+            }
+            .popover-region-notifications .icon,
+            .popover-region-messages .icon {
+                filter: brightness(9);
+            }
+        }
+    }
+}
+
 
 /*------------------------------------
   User menu

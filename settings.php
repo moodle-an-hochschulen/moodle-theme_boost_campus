@@ -303,6 +303,19 @@ if ($ADMIN->fulltree) {
         $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
+     // Settings title to group navbar related settings together with a common heading. We don't want a description here.
+    $setting = new admin_setting_heading('theme_boost_campus/navbardesignheading',
+        get_string('navbardesignheadingsetting', 'theme_boost_campus', null, true), null);
+    $page->add($setting);
+
+    $setting = new admin_setting_configcheckbox('theme_boost_campus/darknavbar',
+        get_string('darknavbarsetting', 'theme_boost_campus', null, true),
+        get_string('darknavbarsetting_desc', 'theme_boost_campus', null, true), 'no', 'yes', 'no' ); // Overriding default values
+        // yes = 1 and no = 0 because of the use of empty() in theme_boost_campus_get_pre_scss() (lib.php). Default 0 value would
+        // not write the variable to scss that could cause the scss to crash if used in that file. See MDL-58376.
+        $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
     // Add tab to settings page.
     $settings->add($page);
 }

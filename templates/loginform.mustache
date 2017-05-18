@@ -15,7 +15,7 @@
     along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 }}
 {{!
-    @template theme_boost_campus/login
+    @template theme_boost_campus/loginform
 
     Moodle template for the login page.
 
@@ -91,6 +91,11 @@
         "logourl": false,
         "sitename": "Beer & Chips"
     }
+}}
+{{! NOTICE:
+    Original file: templates/core/login.mustache.
+    We renamed the file because there is another login.mustache file (templates/login.mustache) that renders the whole login page.
+    This will lead to a conflict in child themes as there no sub directories are allowed for the templates folder.
 }}
 {{! MODIFICATION:
     * Changed col- definitions for login form container

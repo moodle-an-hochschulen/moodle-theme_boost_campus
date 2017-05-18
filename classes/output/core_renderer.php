@@ -331,7 +331,7 @@ class core_renderer extends \theme_boost\output\core_renderer {
         /* MODIFICATION START */
         /* Only if setting "loginform" is checked, then call own login.mustache.*/
         if (get_config('theme_boost_campus', 'loginform') == 'yes') {
-            return $this->render_from_template('theme_boost_campus/login', $context);
+            return $this->render_from_template('theme_boost_campus/loginform', $context);
         } else {
             return $this->render_from_template('core/login', $context);
         }

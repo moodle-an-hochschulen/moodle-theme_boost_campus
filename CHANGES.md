@@ -6,6 +6,7 @@ Changes
 
 ### Unreleased
 
+* 2017-05-22 - Adding the possibility to give additional classes to the list group items of the flat navigation.
 * 2017-05-16 - Changed naming and reference of mustache template that renders the login form.
 * 2017-05-05 - Improve README.md
 * 2017-05-04 - Setting to select dark page navigation bar design.

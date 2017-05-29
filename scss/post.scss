@@ -583,6 +583,12 @@ blockquote::before {
         color: $gray-dark;
     }
 
+    /* Add bottom padding to the Moodle default footer links. */
+    .helplink, .logininfo, .homelink {
+        padding-bottom: 1rem;
+    }
+
+    /* If the setting footerhidehelplink is enabled, then hide the helplink. */
     @if variable-exists(footerhidehelplink){
         @if $footerhidehelplink == 'yes' {
             .helplink {
@@ -591,6 +597,7 @@ blockquote::before {
         }
     }
 
+    /* If the setting footerhidelogininfo is enabled, then hide the logininfo. */
     @if variable-exists(footerhidelogininfo){
         @if $footerhidelogininfo == 'yes' {
             .logininfo {
@@ -599,10 +606,37 @@ blockquote::before {
         }
     }
 
+    /* If the setting footerhidehomelink is enabled, then hide the homelink. */
     @if variable-exists(footerhidehomelink){
         @if $footerhidehomelink == 'yes' {
             .homelink {
                 display: none;
+            }
+        }
+    }
+
+    /* Insert some separator lines for different contents in the footer. */
+    .performanceinfo, .purgecaches, .nav.navbar-nav {
+        border-top: 1px solid #fff;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    /* We need a top border only if there are footer block columns. */
+    @if variable-exists(footerblocks) {
+        @if $footerblocks != '0columns' {
+            .container-fluid:nth-of-type(2) > .row-fluid {
+                border-top: 1px solid #fff;
+                padding-top:1rem;
+            }
+        }
+    }
+
+    /* If all Moodle links are hidden in the footer, we don't need a top line for the performance info.*/
+    @if variable-exists(footerhidehelplink) and variable-exists(footerhidelogininfo) and variable-exists(footerhidehomelink) {
+        @if $footerhidehelplink == 'yes' and $footerhidelogininfo == 'yes' and $footerhidehomelink == 'yes' {
+            .performanceinfo {
+                border-top: none;
             }
         }
     }

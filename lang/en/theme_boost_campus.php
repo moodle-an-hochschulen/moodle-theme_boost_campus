@@ -102,3 +102,19 @@ $string['branddangercolorsetting_desc'] = 'This color is used for example in reg
 $string['navbardesignheadingsetting'] = 'Navbar';
 $string['darknavbarsetting'] = 'Dark navbar';
 $string['darknavbarsetting_desc'] = 'By checking this setting you can invert the default light navbar to a dark one with white links.';
+
+$string['addionalregionslayoutheadingsetting'] = 'Addional regions';
+$string['badgeareaheadingsetting'] = 'The following settings allow to add an additional region for displaying images like badges or logos. This region will be added beneath the standard footer and above the optional footnote region. If images are uploaded this are will be displayed on all sites that use the columns2 layout.';
+$string['badgeareaitemssetting'] = 'Badge area items';
+$string['badgeareaitemssetting_desc'] = 'With this widget you can upload your images that will be displayed in the additional badge area region. The images will be sorted and displayed alphabetically by the filename. To remove this region, simply delete all uploaded images.';
+$string['badgeareaitemslinksetting'] = 'Badge area item links';
+$string['badgeareaitemslinksetting_desc'] = 'With this optional setting you can add links to your uplaoded images.<br/>
+Each line consists of the file identifier (the file name) the a link URL, separated by pipe characters. Each link declaration needs to be written in a new line. <br/>
+For example:<br/>
+moodle.jpg|http://moodle.org<br/>
+You can declare links for a abitrary amount of your uplaoded images. The links will be added only to those badges that match their filename with the identifier declared in this setting.';
+$string['badgeareaitemsmaxheightsetting'] = 'Badge area items maximal height';
+$string['badgeareaitemsmaxheightsetting_desc'] = 'With this setting you can change the height in pixels for your uploaded badges. All images will have the same maximum height and their width will be resized proportionally. The default value is set to 100 pixels.';
+$string['footnoteheadingsetting'] = 'The following setting allows to add an additional region for displaying a footnote.';
+$string['footnotesetting'] = 'Footnote';
+$string['footnotesetting_desc'] = 'Whatever you add to this textarea will be displayed at the end of the footer on every page that renders the theme standard footer (for the layouts "columns2" and "login"). Content in this area could be for example the copyright, the terms of use and the name of your organisation. <br/> If you want to remove the footnote again, just empty the text area.';

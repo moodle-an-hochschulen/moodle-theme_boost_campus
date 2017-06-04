@@ -15,18 +15,21 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Theme Boost Campus - Version file
+ * Theme Boost Campus - Layout file for badgearea.
  *
- * @package    theme_boost_campus
- * @copyright  2017 Kathrin Osswald, Ulm University <kathrin.osswald@uni-ulm.de>
- * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ * @package   theme_boost_campus
+ * @copyright 2017 Kathrin Osswald, Ulm University kathrin.osswald@uni-ulm.de
+ * @copyright based on code from theme_boost by Damyon Wiese
+ * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 defined('MOODLE_INTERNAL') || die();
+require_once($CFG->dirroot . '/theme/boost_campus/locallib.php');
 
-$plugin->component = 'theme_boost_campus';
-$plugin->version = 2017060400;
-$plugin->release = 'v3.2-r1';
-$plugin->requires = 2016070700;
-$plugin->maturity = MATURITY_STABLE;
-$plugin->dependencies = array('theme_boost' => 2016102100);
+$badgeareafiles = theme_boost_campus_get_badgeareacontent();
+
+// Only proceed with sorting if received array is not empty.
+if (!empty($badgeareafiles)) {
+    $templatecontext['badgeareafiles'] = $badgeareafiles;
+    echo $OUTPUT->render_from_template('theme_boost_campus/badgearea', $templatecontext);
+}

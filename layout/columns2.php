@@ -54,7 +54,10 @@ $templatecontext = [
 
 $templatecontext['flatnavigation'] = $PAGE->flatnav;
 echo $OUTPUT->render_from_template('theme_boost_campus/columns2', $templatecontext);
-
-/* Add own layouted footer. */
+// Add footer blocks and standard footer.
 require_once(dirname(__FILE__).'/includes/footer.php');
+// Add badgearea.
+require_once(dirname(__FILE__).'/includes/badgearea.php');
+// Add footnote.
+require_once(dirname(__FILE__).'/includes/footnote.php');
 

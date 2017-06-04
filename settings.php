@@ -244,6 +244,50 @@ if ($ADMIN->fulltree) {
         $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
+    // Settings title to group additional regions settings for the footer together with a common heading.
+    // We don't want a description here.
+    $setting = new admin_setting_heading('theme_boost_campus/addionalregionslayoutheading',
+        get_string('addionalregionslayoutheadingsetting', 'theme_boost_campus', null, true), null);
+    $page->add($setting);
+
+    // We want to divide the badgearea setting from the footnote setting. Use a description without a title.
+    $setting = new admin_setting_heading('theme_boost_campus/badgeareaheading',
+        null, get_string('badgeareaheadingsetting', 'theme_boost_campus', null, true));
+    $page->add($setting);
+
+    // Badgearea setting.
+    $name = 'theme_boost_campus/badgeareaitems';
+    $title = get_string('badgeareaitemssetting', 'theme_boost_campus');
+    $description = get_string('badgeareaitemssetting_desc', 'theme_boost_campus');
+    $setting = new admin_setting_configstoredfile($name, $title, $description, 'badgeareaitems', 0, array('maxfiles' => 100,
+        'accepted_types' => array('web_image'), 'subdirs' => 0));
+    $setting->set_updatedcallback('theme_boost_campus_reset_app_cache');
+    $page->add($setting);
+
+    $setting = new admin_setting_configtextarea('theme_boost_campus/badgeareaitemslink',
+        get_string('badgeareaitemslinksetting', 'theme_boost_campus'),
+        get_string('badgeareaitemslinksetting_desc', 'theme_boost_campus'), null, PARAM_TEXT);
+    $setting->set_updatedcallback('theme_boost_campus_reset_app_cache');
+    $page->add($setting);
+
+    $setting = new admin_setting_configtext_with_maxlength('theme_boost_campus/badgeareaitemsmaxheight',
+        get_string('badgeareaitemsmaxheightsetting', 'theme_boost_campus'),
+        get_string('badgeareaitemsmaxheightsetting_desc', 'theme_boost_campus'), 100, PARAM_INT, null, 3);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+     // We want to divide the badgearea seeting from the footnote setting. Use a description without a title.
+    $setting = new admin_setting_heading('theme_boost_campus/footnoteheading',
+        null, get_string('footnoteheadingsetting', 'theme_boost_campus', null, true));
+    $page->add($setting);
+
+    // Footnote setting.
+    $setting = new admin_setting_confightmleditor('theme_boost_campus/footnote',
+        get_string('footnotesetting', 'theme_boost_campus', null, true),
+        get_string('footnotesetting_desc', 'theme_boost_campus', null, true), '');
+        $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
     // Add tab to settings page.
     $settings->add($page);
 

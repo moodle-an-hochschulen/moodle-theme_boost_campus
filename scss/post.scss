@@ -681,6 +681,39 @@ a[href^="mailto"]::before {
     bottom: 15px;
 }
 
+/*------------------------------------
+  Additional Regions
+  -------------------------------------*/
+/*
+ * Badgearea.
+ */
+.badgearea {
+    text-align: center;
+    background-color: $gray-dark;
+    border-top: 1px solid #fff;
+
+    img {
+        /* If setting badgeareaitemsmaxheight is not empty. */
+        @if variable-exists(badgeareaitemsmaxheight) {
+            /* set the value. */
+            max-height: #{$badgeareaitemsmaxheight}px;
+        }
+        width: auto;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+/*
+ * Footnote.
+ */
+.footnote {
+    min-height: 40px;
+    color: #fff;
+    border-top: 1px solid #fff;
+    background-color: $gray-dark;
+}
+
 
 /*------------------------------------
   Additional Elements

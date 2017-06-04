@@ -107,6 +107,26 @@ With this setting you can add an additional course edit on / off button to the c
 
 Moodle provides some default links in the footer: Link to the Moodle docs, login information, and a link to the webpage start. With these three settings you can decide if you want to hide specific links because you think that your users won't need them in your instance. If checked, the link will not be displayed in the footer. If not checked (default), it will be shown.
 
+### Badge area items
+
+With this widget you can upload your images that will be displayed in the additional badge area region. The images will be sorted and displayed alphabetically by the filename. To remove this region, simply delete all uploaded images.
+
+### Badge area item links
+
+With this optional setting you can add links to your uploaded images.
+Each line consists of the file identifier (the file name) the a link URL, separated by pipe characters. Each link declaration needs to be written in a new line.
+For example:
+``moodle.jpg|http://moodle.org``
+You can declare links for a abitrary amount of your uploaded images. The links will be added only to those badges that match their filename with the identifier declared in this setting.
+
+### Badge area items maximal height
+
+With this setting you can change the height in pixels for your uploaded badges. All images will have the same maximum height and their width will be resized proportionally. The default value is set to 100 pixels.
+
+### Footnote
+
+Whatever you add to this textarea will be displayed beneath the footer on every page that renders the theme standard footer (for layouts "columns2", "login" and "maintenance"). Content in this area could be for example the copyright, the terms of use and the name of your organisation.
+
 ### 4. Tab "Design Settings"
 
 #### Background images for login page

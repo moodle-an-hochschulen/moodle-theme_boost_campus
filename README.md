@@ -52,19 +52,19 @@ This setting is already available in the Moodle core theme Boost. For more infor
 
 This setting is already available in the Moodle core theme Boost. For more information how to use it, please have a look at the official Moodle documentation: http://docs.moodle.org/en/Boost_theme
 
-### Brand success color
+#### Brand success color
 
 This color is used for example in regards to form valiations.
 
-### Brand info color
+#### Brand info color
 
 This color is used for example for availabiity information of course activities or resources.
 
-### Brand warning color
+#### Brand warning color
 
 This color is used for example for warning texts.
 
-### Brand danger color
+#### Brand danger color
 
 This color is used for example in regards to form valiations.
 
@@ -99,19 +99,19 @@ With this setting you can add block regions to the footer to be able to place bl
 
 This setting can change the behaviour Moodle displays the title for the first course section. Moodle does not display it as long as the default title for this section is set. As soon as a user changes the title, it will appear. With this setting (option is checked), you can achieve a consistent behaviour by always showing the title for section 0.
 
-### Course edit button
+#### Course edit button
 
 With this setting you can add an additional course edit on / off button to the course header for faster accessibility. This the same way as it was displayed before theme_boost.
 
-### Default footer links
+#### Default footer links
 
 Moodle provides some default links in the footer: Link to the Moodle docs, login information, and a link to the webpage start. With these three settings you can decide if you want to hide specific links because you think that your users won't need them in your instance. If checked, the link will not be displayed in the footer. If not checked (default), it will be shown.
 
-### Badge area items
+#### Badge area items
 
 With this widget you can upload your images that will be displayed in the additional badge area region. The images will be sorted and displayed alphabetically by the filename. To remove this region, simply delete all uploaded images.
 
-### Badge area item links
+#### Badge area item links
 
 With this optional setting you can add links to your uploaded images.
 Each line consists of the file identifier (the file name) the a link URL, separated by pipe characters. Each link declaration needs to be written in a new line.
@@ -119,11 +119,11 @@ For example:
 ``moodle.jpg|http://moodle.org``
 You can declare links for a abitrary amount of your uploaded images. The links will be added only to those badges that match their filename with the identifier declared in this setting.
 
-### Badge area items maximal height
+#### Badge area items maximal height
 
 With this setting you can change the height in pixels for your uploaded badges. All images will have the same maximum height and their width will be resized proportionally. The default value is set to 100 pixels.
 
-### Footnote
+#### Footnote
 
 Whatever you add to this textarea will be displayed beneath the footer on every page that renders the theme standard footer (for layouts "columns2", "login" and "maintenance"). Content in this area could be for example the copyright, the terms of use and the name of your organisation.
 

@@ -6,6 +6,7 @@ Changes
 
 ### Unreleased
 
+* 2017-06-14 - Improved settings pages and language file and adjusted README.md.
 * 2017-06-13 - Changed the repeat attribute to the background images of the login page.
 * 2017-06-08 - Corrected some wrong sub heading weighting in the README.md.
 * 2017-06-04 - Settings to be able to add additional regions beneath the page footer.

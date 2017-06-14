@@ -40,31 +40,35 @@ There, you find multiple settings tabs:
 
 In this tab there are the following settings:
 
-#### Theme preset
+#### Theme presets
+
+##### Theme preset
 
 This setting is already available in the Moodle core theme Boost. For more information how to use it, please have a look at the official Moodle documentation: http://docs.moodle.org/en/Boost_theme
 
-#### Additional theme preset files
+##### Additional theme preset files
 
 This setting is already available in the Moodle core theme Boost. For more information how to use it, please have a look at the official Moodle documentation: http://docs.moodle.org/en/Boost_theme
 
-#### Brand colour
+#### Brand colors
+
+##### Brand color
 
 This setting is already available in the Moodle core theme Boost. For more information how to use it, please have a look at the official Moodle documentation: http://docs.moodle.org/en/Boost_theme
 
-#### Brand success color
+##### Brand success color
 
 This color is used for example in regards to form valiations.
 
-#### Brand info color
+##### Brand info color
 
 This color is used for example for availabiity information of course activities or resources.
 
-#### Brand warning color
+##### Brand warning color
 
 This color is used for example for warning texts.
 
-#### Brand danger color
+##### Brand danger color
 
 This color is used for example in regards to form valiations.
 
@@ -85,15 +89,8 @@ This setting is already available in the Moodle core theme Boost. For more infor
 
 This setting is already available in the Moodle core theme Boost. For more information how to use it, please have a look at the official Moodle documentation: http://docs.moodle.org/en/Boost_theme
 
-#### Position of switch role information
 
-With this setting you can choose the place where the information to which role a user has switched is being displayed. If not checked (default value), the role information will be displayed right beneath the user\'s name in the user menu (like in theme Boost). If checked, this information - together with a link to switch back - will be displayed beneath the course, as this functionality is course related.
-
-### 3. Tab "Layout Settings"
-
-#### Footer Layout
-
-With this setting you can add block regions to the footer to be able to place blocks within the footer. You can choose between no blocks (default value) or one up to three block columns in the footer. The two and three columns layouts are only displayed on large screens. On small screens the columns will be automatically reduced to one column for better readability and layout.
+### 3. Tab "Course Layout Settings"
 
 #### Section 0: Title
 
@@ -103,15 +100,31 @@ This setting can change the behaviour Moodle displays the title for the first co
 
 With this setting you can add an additional course edit on / off button to the course header for faster accessibility. This the same way as it was displayed before theme_boost.
 
+#### Position of switch role information
+
+With this setting you can choose the place where the information to which role a user has switched is being displayed. If not checked (default value), the role information will be displayed right beneath the user\'s name in the user menu (like in theme Boost). If checked, this information - together with a link to switch back - will be displayed beneath the course, as this functionality is course related.
+
+
+### 4. Tab "Footer Layout Settings"
+
+#### Footer blocks
+
+You can chose if you want to enable the possibility to place blocks into the footer. If enabled, you can choose between one, two or three block columns. These columns are only displayed on large screens. On small screens the columns will be automatically reduced to one column for better readability and layout.
+
 #### Default footer links
 
 Moodle provides some default links in the footer: Link to the Moodle docs, login information, and a link to the webpage start. With these three settings you can decide if you want to hide specific links because you think that your users won't need them in your instance. If checked, the link will not be displayed in the footer. If not checked (default), it will be shown.
 
-#### Badge area items
+
+### 5. Tab "Additional Layout Settings"
+
+#### Badgearea
+
+##### Badge area items
 
 With this widget you can upload your images that will be displayed in the additional badge area region. The images will be sorted and displayed alphabetically by the filename. To remove this region, simply delete all uploaded images.
 
-#### Badge area item links
+##### Badge area item links
 
 With this optional setting you can add links to your uploaded images.
 Each line consists of the file identifier (the file name) the a link URL, separated by pipe characters. Each link declaration needs to be written in a new line.
@@ -119,7 +132,7 @@ For example:
 ``moodle.jpg|http://moodle.org``
 You can declare links for a abitrary amount of your uploaded images. The links will be added only to those badges that match their filename with the identifier declared in this setting.
 
-#### Badge area items maximal height
+##### Badge area items maximal height
 
 With this setting you can change the height in pixels for your uploaded badges. All images will have the same maximum height and their width will be resized proportionally. The default value is set to 100 pixels.
 
@@ -127,17 +140,22 @@ With this setting you can change the height in pixels for your uploaded badges. 
 
 Whatever you add to this textarea will be displayed beneath the footer on every page that renders the theme standard footer (for layouts "columns2", "login" and "maintenance"). Content in this area could be for example the copyright, the terms of use and the name of your organisation.
 
-### 4. Tab "Design Settings"
 
-#### Background images for login page
+### 6. Tab "Design Settings"
+
+#### Login Page
+
+##### Login page background images
 
 In this setting you can add up to 10 files as a background image for the login page. One of these images will be picked randomly and delivered when the user visits the login page.
 
-#### Login form
+##### Login form
 
 With this setting you can optimize the login form to fit to a greater variety background images (if checked). This means that the login form will be moved to the left of the login page, will get smaller in width and will get a background that let the background image shine through. The login form will be placed on the left because many images have their main content rather in the center and so we keep this content visible. Note: You can also activate this setting if no background images are uploaded, of course.
 
-#### Font files
+#### Fonts
+
+##### Font files
 
 With this dialogue you can upload own font files. The upload is resricted to the font files of type .eot, .woff, .woff2, .ttf and .svg.
 
@@ -213,7 +231,15 @@ body {
 
 Please note: The code itself and the URLs have to fit exactly to your uploaded files, unless the fonts cannot be loaded! As the font files will be delivered with an expires header to the client but currently without a timestamp in the URL, emptying the Moodle cache unfortunately will not force a reload of the font files on the client side.
 
-#### Dark navbar
+#### Blocks
+
+##### Block icon
+
+With this setting you can add a default Font Awesome icon in front of the block title. If checked, we additionally provide individual icon replacements for many Moodle core blocks and also some widely used blocks. You also can change the icons easily for each block individually in your raw SCSS via the change of the Font Awesome content. For all available icons please visit http://fontawesome.io/icons/ and use the Unicode value of the icon to replace the default one. The code to change the icon looks like this example change for the block "People": ``.block_people .card-block .card-title::before { content: '\f0c0' ; }``.
+
+#### Navbar
+
+##### Dark navbar
 
 By enabling this setting you can invert the default light navbar to a dark one with white links.
 
@@ -256,10 +282,6 @@ Course Design:
 ### Categories overview page
 
 Improved font sizes and weights on category overview page for better readability.
-
-### Block icon
-
-With this setting you can add a default Font Awesome icon in front of the block title. If checked, we additionally provide individual icon replacements for many Moodle core blocks and also some widely used blocks. You also can change the icons easily for each block individually in your raw SCSS via the change of the Font Awesome content. For all available icons please visit http://fontawesome.io/icons/ and use the Unicode value of the icon to replace the default one. The code to change the icon looks like this example change for the block "People": ``.block_people .card-block .card-title::before { content: '\f0c0' ; }``.
 
 
 How this theme works

@@ -54,20 +54,19 @@ class core_renderer extends \theme_boost\output\core_renderer {
      * Override to display an edit button again by calling the parent function
      * in core/core_renderer because theme_boost's function returns an empty
      * string and therefore displays nothing.
-     *
-     * We don't like these...
-     *
+     * @param moodle_url $url The current course url.
+     * @return \core_renderer::edit_button Moodle edit button.
      */
     public function edit_button(moodle_url $url) {
-        /* MODIFICATION START */
-        // If setting editbuttonincourseheader ist checked give out the edit on / off button in course header
+        // MODIFICATION START.
+        // If setting editbuttonincourseheader ist checked give out the edit on / off button in course header.
         if (get_config('theme_boost_campus', 'courseeditbutton') == '1') {
             return \core_renderer::edit_button($url);
         }
-        /* MODIFICATION END */
-        /* ORIGINAL START
+        // MODIFICATION END.
+        /* ORIGINAL START.
         return '';
-        ORIGINAL END */
+        ORIGINAL END. */
     }
 
     /**
@@ -87,14 +86,14 @@ class core_renderer extends \theme_boost\output\core_renderer {
             $additionalclasses = explode(' ', $additionalclasses);
         }
 
-        /* MODIFICATION START */
+        // MODIFICATION START.
         // Only add classes for the login page.
         if ($PAGE->bodyid == 'page-login-index') {
             $additionalclasses[] = 'loginbackgroundimage';
             // Generating a random class for displaying a random image for the login page.
             $additionalclasses[] = theme_boost_campus_get_random_loginbackgroundimage_class();
         }
-        /* MODIFICATION END */
+        // MODIFICATION END.
 
         return ' id="'. $this->body_id().'" class="'.$this->body_css_classes($additionalclasses).'"';
     }
@@ -109,17 +108,16 @@ class core_renderer extends \theme_boost\output\core_renderer {
      */
     public function favicon() {
         global $PAGE;
-        /* MODIFICATION START */
+        // MODIFICATION START.
         if (!empty($PAGE->theme->settings->favicon)) {
             return $PAGE->theme->setting_file_url('favicon', 'favicon');
-        }
-        else {
+        } else {
             return $this->pix_url('favicon', 'theme');
         }
-        /* MODIFICATION END */
-        /* ORIGINAL START
+        // MODIFICATION END.
+        /* ORIGINAL START.
         return $this->pix_url('favicon', 'theme');
-        ORIGINAL END */
+        ORIGINAL END. */
     }
 
 
@@ -135,9 +133,9 @@ class core_renderer extends \theme_boost\output\core_renderer {
         /* MODIFICATION START */
         global $PAGE, $USER, $COURSE;
         /* MODIFICATION END */
-        /* ORIGINAL START
+        /* ORIGINAL START.
         global $PAGE;
-        ORIGINAL END */
+        ORIGINAL END. */
 
         $html = html_writer::start_tag('header', array('id' => 'page-header', 'class' => 'row'));
         $html .= html_writer::start_div('col-xs-12 p-a-1');
@@ -162,8 +160,8 @@ class core_renderer extends \theme_boost\output\core_renderer {
         $html .= html_writer::end_div();
         $html .= html_writer::end_tag('header');
 
-        /* MODIFICATION START */
-        /* Only use this if setting 'showswitchedroleincourse' is active. */
+        // MODIFICATION START.
+        // Only use this if setting 'showswitchedroleincourse' is active.
         if (get_config('theme_boost_campus', 'showswitchedroleincourse') === 'yes') {
             $opts = \user_get_user_navigation_info($USER, $this->page);
             // Role is switched.
@@ -171,30 +169,30 @@ class core_renderer extends \theme_boost\output\core_renderer {
                 // Get the role name switched to.
                 $role = $opts->metadata['rolename'];
                 // Get the URL to switch back (normal role).
-                $url = new moodle_url('/course/switchrole.php', array('id' => $COURSE->id, 'sesskey' => sesskey(), 'switchrole' => 0,
-                       'returnurl' => $this->page->url->out_as_local_url(false)));
-
+                $url = new moodle_url('/course/switchrole.php', array('id' => $COURSE->id, 'sesskey' => sesskey(),
+                        'switchrole' => 0, 'returnurl' => $this->page->url->out_as_local_url(false)));
                 $html .= html_writer::start_tag('div', array('class' => 'switched-role-infobox alert alert-info'));
                 $html .= html_writer::start_tag('div', array());
                 $html .= get_string('switchedroleto', 'theme_boost_campus');
-                // Give this a span to be able to address via CSS
+                // Give this a span to be able to address via CSS.
                 $html .= html_writer::tag('span', $role, array('class' => 'switched-role'));
                 $html .= html_writer::end_tag('div');
-                // Return to normal role link
+                // Return to normal role link.
                 $html .= html_writer::start_tag('div', array('class' => 'switched-role-back col-6'));
                 $html .= html_writer::empty_tag('img', array('src' => $this->pix_url('a/logout', 'moodle')));
-                $html .= html_writer::tag('a', get_string('switchrolereturn', 'core'), array('class' => 'switched-role-backlink', 'href' => $url));
-                $html .= html_writer::end_tag('div'); // Return to normal role link end
+                $html .= html_writer::tag('a', get_string('switchrolereturn', 'core'), array('class' => 'switched-role-backlink',
+                        'href' => $url));
+                $html .= html_writer::end_tag('div'); // Return to normal role link: end div.
                 $html .= html_writer::end_tag('div');
             }
         }
-        /* MODIFICATION END */
+        // MODIFICATION END.
 
         return $html;
     }
 
 
-/**
+    /**
      * Override to display course settings on every course site for permanent access
      *
      * This is an optional menu that can be added to a layout by a theme. It contains the
@@ -213,23 +211,23 @@ class core_renderer extends \theme_boost\output\core_renderer {
         $showfrontpagemenu = false;
         $showusermenu = false;
 
-        /* MODIFICATION START
-           REASON: With the original code, the course settings icon will only appear on the course main page.
-                   Therefore the access to the course settings and related functions is not possible on other
-                   course pages as there is no omnipresent block anymore. We want these to be accessible
-                   on each course page.*/
+        // MODIFICATION START.
+        // REASON: With the original code, the course settings icon will only appear on the course main page.
+        // Therefore the access to the course settings and related functions is not possible on other
+        // course pages as there is no omnipresent block anymore. We want these to be accessible
+        // on each course page.
         if (($context->contextlevel == CONTEXT_COURSE || $context->contextlevel == CONTEXT_MODULE
                 || $context->contextlevel == CONTEXT_BLOCK) && !empty($currentnode)) {
             $showcoursemenu = true;
         }
-        /* MODIFICATION END */
-        /* ORIGINAL START
+        // MODIFICATION END.
+        /* ORIGINAL START.
         if (($context->contextlevel == CONTEXT_COURSE) &&
                 !empty($currentnode) &&
                 ($currentnode->type == navigation_node::TYPE_COURSE || $currentnode->type == navigation_node::TYPE_SECTION)) {
             $showcoursemenu = true;
         }
-        ORIGINAL END */
+        ORIGINAL END. */
 
         $courseformat = course_get_format($this->page->course);
         // This is a single activity course format, always show the course menu on the activity main page.
@@ -265,7 +263,6 @@ class core_renderer extends \theme_boost\output\core_renderer {
                 ($currentnode->key === 'myprofile')) {
             $showusermenu = true;
         }
-
 
         if ($showfrontpagemenu) {
             $settingsnode = $this->page->settingsnav->find('frontpage', navigation_node::TYPE_SETTING);
@@ -327,25 +324,23 @@ class core_renderer extends \theme_boost\output\core_renderer {
             $url = $url->out(false);
         }
         $context->logourl = $url;
-        $context->sitename = format_string($SITE->fullname, true, ['context' => context_course::instance(SITEID), "escape" => false]);
-        /* MODIFICATION START */
-        /* Only if setting "loginform" is checked, then call own login.mustache.*/
+        $context->sitename = format_string($SITE->fullname, true, ['context' => context_course::instance(SITEID),
+                "escape" => false]);
+        // MODIFICATION START.
+        // Only if setting "loginform" is checked, then call own login.mustache.
         if (get_config('theme_boost_campus', 'loginform') == 'yes') {
             return $this->render_from_template('theme_boost_campus/loginform', $context);
         } else {
             return $this->render_from_template('core/login', $context);
         }
-        /* MODIFICATION END */
-        /* ORIGINAL START
+        // MODIFICATION END.
+        /* ORIGINAL START.
         return $this->render_from_template('core/login', $context);
-        ORIGINAL END */
+        ORIGINAL END. */
     }
 
 
-    /* --------------------------------------------------------------
-     * TODO: Delete function build_action_menu_from_navigation when
-     * MDL-58174 is solved.
-     * --------------------------------------------------------------/*
+     // TODO Delete function build_action_menu_from_navigation when MDL-58174 is solved.
 
     /**
      * Take a node in the nav tree and make an action menu out of it.

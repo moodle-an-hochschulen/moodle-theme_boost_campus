@@ -14,7 +14,7 @@
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 /**
-* Theme Boost Campus - Locallib file
+ * Theme Boost Campus - Locallib file
  *
  * @package   theme_boost_campus
  * @copyright 2017 Kathrin Osswald, Ulm University kathrin.osswald@uni-ulm.de
@@ -25,12 +25,12 @@
 
 
 /**
-  * Get a random class for body tag for the background image of the login page.
-  * This function always loads the files from the filearea that is not really performant.
-  * However, we accept this at the moment as it is only invoked on the login page.
-  *
-  * @return string
-  */
+ * Get a random class for body tag for the background image of the login page.
+ * This function always loads the files from the filearea that is not really performant.
+ * However, we accept this at the moment as it is only invoked on the login page.
+ *
+ * @return string
+ */
 function theme_boost_campus_get_random_loginbackgroundimage_class() {
 
     // Fetch context.
@@ -48,8 +48,8 @@ function theme_boost_campus_get_random_loginbackgroundimage_class() {
     /* We only add this class to the body background of the login page if images are uploaded at all (filearea contains images). */
     if ($filecount > 0) {
         // Generate random number.
-        $random_index = rand(1, $filecount);
-        return "loginbackgroundimage" . $random_index;
+        $randomindex = rand(1, $filecount);
+        return "loginbackgroundimage" . $randomindex;
     } else {
         return "";
     }
@@ -57,10 +57,10 @@ function theme_boost_campus_get_random_loginbackgroundimage_class() {
 
 
 /**
-  * Add background images from setting 'loginbackgroundimage' to SCSS.
-  *
-  * @return string
-  */
+ * Add background images from setting 'loginbackgroundimage' to SCSS.
+ *
+ * @return string
+ */
 function theme_boost_campus_get_loginbackgroundimage_scss() {
     $count = 0;
     $scss = "";
@@ -74,7 +74,7 @@ function theme_boost_campus_get_loginbackgroundimage_scss() {
     // Get all files from filearea.
     $files = $fs->get_area_files($systemcontext->id, 'theme_boost_campus', 'loginbackgroundimage', false, 'itemid', false);
 
-    // Add URL of uploaded images to eviqualent class
+    // Add URL of uploaded images to eviqualent class.
     foreach ($files as $file) {
         $count++;
         // Get url from file.

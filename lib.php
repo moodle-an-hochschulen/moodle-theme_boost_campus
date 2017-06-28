@@ -24,6 +24,12 @@
 
 defined('MOODLE_INTERNAL') || die();
 
+/**
+ * Returns the main SCSS content.
+ *
+ * @param theme_config $theme The theme config object.
+ * @return string
+ */
 function theme_boost_campus_get_main_scss_content($theme) {
     global $CFG;
 

@@ -8,14 +8,14 @@
     <licenseversion></licenseversion>
   </library>
   <library>
-    <location>font/fontawesome-*</location>
+    <location>fonts/fontawesome-*</location>
     <name>Font Awesome (Fonts)</name>
     <license>SIL OFL</license>
     <version>4.7.0</version>
     <licenseversion>1.1</licenseversion>
   </library>
   <library>
-    <location>font/FontAwesome.*</location>
+    <location>fonts/FontAwesome.*</location>
     <name>Font Awesome (Fonts)</name>
     <license>SIL OFL</license>
     <version>4.7.0</version>

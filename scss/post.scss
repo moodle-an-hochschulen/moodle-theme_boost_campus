@@ -1,3 +1,5 @@
+/* stylelint-disable declaration-no-important */
+
 /*------------------------------------
   Login page
   -------------------------------------*/
@@ -12,52 +14,52 @@ body.loginbackgroundimage {
  * Check if variable exists to only add code to images that were uploaded.
  * Note: Building this code with a @for loop did not work. */
 @include media-breakpoint-up(md) {
-    @if variable-exists(loginbackgroundimage1){
+    @if variable-exists(loginbackgroundimage1) {
         body.loginbackgroundimage1 {
             background-image: url($loginbackgroundimage1);
         }
     }
-    @if variable-exists(loginbackgroundimage2){
+    @if variable-exists(loginbackgroundimage2) {
         body.loginbackgroundimage2 {
             background-image: url($loginbackgroundimage2);
         }
     }
-    @if variable-exists(loginbackgroundimage3){
+    @if variable-exists(loginbackgroundimage3) {
         body.loginbackgroundimage3 {
             background-image: url($loginbackgroundimage3);
         }
     }
-    @if variable-exists(loginbackgroundimage4){
+    @if variable-exists(loginbackgroundimage4) {
         body.loginbackgroundimage4 {
             background-image: url($loginbackgroundimage4);
         }
     }
-    @if variable-exists(loginbackgroundimage5){
+    @if variable-exists(loginbackgroundimage5) {
         body.loginbackgroundimage5 {
             background-image: url($loginbackgroundimage5);
         }
     }
-    @if variable-exists(loginbackgroundimage6){
+    @if variable-exists(loginbackgroundimage6) {
         body.loginbackgroundimage6 {
             background-image: url($loginbackgroundimage6);
         }
     }
-    @if variable-exists(loginbackgroundimage7){
+    @if variable-exists(loginbackgroundimage7) {
         body.loginbackgroundimage7 {
             background-image: url($loginbackgroundimage7);
         }
     }
-    @if variable-exists(loginbackgroundimage8){
+    @if variable-exists(loginbackgroundimage8) {
         body.loginbackgroundimage8 {
             background-image: url($loginbackgroundimage8);
         }
     }
-    @if variable-exists(loginbackgroundimage9){
+    @if variable-exists(loginbackgroundimage9) {
         body.loginbackgroundimage9 {
             background-image: url($loginbackgroundimage9);
         }
     }
-    @if variable-exists(loginbackgroundimage10){
+    @if variable-exists(loginbackgroundimage10) {
         body.loginbackgroundimage10 {
             background-image: url($loginbackgroundimage10);
         }
@@ -70,8 +72,8 @@ body.loginbackgroundimage {
         /* Make background of login panel slightly transparent */
         #page-login-index #region-main-box {
             div.card {
-            background-color: rgba(255, 255, 255, 0.8);
-            border-radius: 3px;
+                background-color: rgba(255, 255, 255, 0.8);
+                border-radius: 3px;
             }
         }
         #page-login-index #page {
@@ -166,7 +168,7 @@ body.loginbackgroundimage {
         margin-bottom: 0;
     }
 
-     /* Reduce space between pix icons and text as this is too much*/
+    /* Reduce space between pix icons and text as this is too much*/
     .media-left {
         padding-right: 2px;
     }
@@ -185,10 +187,10 @@ body.loginbackgroundimage {
     /* Remove icon from elements that does not need any. */
     a.list-group-item[data-key|=coursehome] span.media-left > img,
     a.list-group-item[data-key|=myhome] span.media-left > img,
-    a.list-group-item[data-key|=home] span.media-left > img ,
+    a.list-group-item[data-key|=home] span.media-left > img,
     a.list-group-item[data-key|=calendar] span.media-left > img,
     a.list-group-item[href*="files"] span.media-left > img,
-    a.list-group-item[data-key|=sitesettings] span.media-left > img{
+    a.list-group-item[data-key|=sitesettings] span.media-left > img {
         display: none;
     }
 
@@ -217,7 +219,7 @@ body.loginbackgroundimage {
 
     /* Reduce the indent. */
     div.list-group-item[data-key|=mycourses] ~ a.list-group-item[href*="course/view.php?id="] > div {
-        margin-left: 0px !important;
+        margin-left: 0 !important;
     }
 
     /* Set course icon to each course menu items. */
@@ -260,9 +262,9 @@ body.loginbackgroundimage {
     /* Set and align icons before course section links */
     a.list-group-item[href*="section-"] span.media-left > img.icon {
         content: url([[pix:i/folder]]);
-     }
+    }
 
-    a.list-group-item[href*="section-"] .icon{
+    a.list-group-item[href*="section-"] .icon {
         vertical-align: sub;
     }
 }
@@ -318,7 +320,9 @@ body.loginbackgroundimage {
 
 .course-content {
     /* Selectors for course format "Topics", "Weeks" and "Periods" */
-    ul.topics, ul.weeks, ul.periods {
+    ul.topics,
+    ul.weeks,
+    ul.periods {
         /* We need this to prevent bullet points are cut on the left side of the course content. */
         .contentwithoutlink ul {
             padding-left: 0;
@@ -369,14 +373,14 @@ body.loginbackgroundimage {
             padding: 0;
             padding-right: 5px; /* Align section title equal to beginning of icons within section. */
         }
-         /* Remove spacer from regular sections. */
+        /* Remove spacer from regular sections. */
         img.icon.spacer {
             display: none;
         }
         /* Increase space from section title (edit mode off) to left border. */
         h3.sectionname {
             padding-left: 15px;
-            padding-bottom: 10px
+            padding-bottom: 10px;
         }
         /* Display icon of hidden activity or resource in grayscale.*/
         .activity .contentwithoutlink .dimmed .activityicon,
@@ -409,9 +413,9 @@ body.loginbackgroundimage {
     .single-section {
         /* Align section title in single view left. */
         h3.sectionname {
-        text-align: left;
-        padding-left: 40px;
-        padding-top: 1.5rem;
+            text-align: left;
+            padding-left: 40px;
+            padding-top: 1.5rem;
         }
         /* Reduce padding top of first and only section in this view. */
         ul li.section.main {
@@ -423,14 +427,17 @@ body.loginbackgroundimage {
             padding: 2px 8px;
             border-radius: 2px;
             a {
-                color: #fff !important; /*Important to prevent link color of hidden section getting gray in the button. */
+                /*Important to prevent link color of hidden section getting gray in the button. */
+                color: #fff !important;
             }
         }
     }
 }
 /* Special styles for the editing mode. */
 .editing .course-content {
-    ul.topics, ul.weeks, ul.periods {
+    ul.topics,
+    ul.weeks,
+    ul.periods {
         /* Add bottom border to last section in editing mode. */
         li.section.main:last-child {
             border-bottom: 1px solid $brand-primary;
@@ -499,8 +506,8 @@ blockquote::before {
 /*------------------------------------
   Blocks
   -------------------------------------*/
- @if variable-exists(blockicon){
-    @if $blockicon == 'yes'{
+@if variable-exists(blockicon) {
+    @if $blockicon == 'yes' {
         /* If setting blockicon is checked, add a default Font Awesome icon
          * before the block title. */
         .block .card-block .card-title::before {
@@ -510,62 +517,61 @@ blockquote::before {
             padding-right: 7px;
             color: $gray-dark;
         }
-
         /* Provide different, suitable Font Awesome icons for different Moodle blocks. */
         .block_recent_activity .card-block .card-title::before {
-             content: '\f017';
+            content: '\f017';
         }
         .block_calendar_month .card-block .card-title::before,
         .block_calendar_upcoming .card-block .card-title::before {
-             content: '\f133';
+            content: '\f133';
         }
         .block_people .card-block .card-title::before {
-             content: '\f0c0';
+            content: '\f0c0';
         }
         .block_quickmail .card-block .card-title::before {
-             content: '\f003';
+            content: '\f003';
         }
         .block_activity_module .card-block .card-title::before {
-             content: '\f12e';
+            content: '\f12e';
         }
         .block_news_items .card-block .card-title::before {
-             content: '\f0a1';
+            content: '\f0a1';
         }
         .block_progress .card-block .card-title::before {
-             content: '\f0ae';
+            content: '\f0ae';
         }
         .block_private_files .card-block .card-title::before {
-             content: '\f114';
+            content: '\f114';
         }
         .block_comments .card-block .card-title::before {
-             content: '\f075';
+            content: '\f075';
         }
         .block_completion_status .card-block .card-title::before {
-             content: '\f0e4';
+            content: '\f0e4';
         }
         .block_search_forums .card-block .card-title::before {
-             content: '\f0e6';
+            content: '\f0e6';
         }
         .block_admin_bookmarks .card-block .card-title::before {
-             content: '\f097';
+            content: '\f097';
         }
         .block_adminblock .card-block .card-title::before {
-             content: '\f0fe';
+            content: '\f0fe';
         }
         .block_attendance .card-block .card-title::before {
-             content: '\f046';
+            content: '\f046';
         }
         .block_sharing_cart .card-block .card-title::before {
-             content: '\f07a';
+            content: '\f07a';
         }
         .block_glossary_random .card-block .card-title::before {
-             content: '\f14b';
+            content: '\f14b';
         }
         .block_selfcompletion .card-block .card-title::before {
-             content: '\f14a';
+            content: '\f14a';
         }
         .block_badges .card-block .card-title::before {
-             content: '\f0a3';
+            content: '\f0a3';
         }
     }
 }
@@ -585,12 +591,14 @@ blockquote::before {
     }
 
     /* Add bottom padding to the Moodle default footer links. */
-    .helplink, .logininfo, .homelink {
+    .helplink,
+    .logininfo,
+    .homelink {
         padding-bottom: 1rem;
     }
 
     /* If the setting footerhidehelplink is enabled, then hide the helplink. */
-    @if variable-exists(footerhidehelplink){
+    @if variable-exists(footerhidehelplink) {
         @if $footerhidehelplink == 'yes' {
             .helplink {
                 display: none;
@@ -599,7 +607,7 @@ blockquote::before {
     }
 
     /* If the setting footerhidelogininfo is enabled, then hide the logininfo. */
-    @if variable-exists(footerhidelogininfo){
+    @if variable-exists(footerhidelogininfo) {
         @if $footerhidelogininfo == 'yes' {
             .logininfo {
                 display: none;
@@ -608,7 +616,7 @@ blockquote::before {
     }
 
     /* If the setting footerhidehomelink is enabled, then hide the homelink. */
-    @if variable-exists(footerhidehomelink){
+    @if variable-exists(footerhidehomelink) {
         @if $footerhidehomelink == 'yes' {
             .homelink {
                 display: none;
@@ -617,7 +625,9 @@ blockquote::before {
     }
 
     /* Insert some separator lines for different contents in the footer. */
-    .performanceinfo, .purgecaches, .nav.navbar-nav {
+    .performanceinfo,
+    .purgecaches,
+    .nav.navbar-nav {
         border-top: 1px solid #fff;
         padding-top: 1rem;
         padding-bottom: 1rem;
@@ -628,7 +638,7 @@ blockquote::before {
         @if $footerblocks != '0columns' {
             .container-fluid:nth-of-type(2) > .row-fluid {
                 border-top: 1px solid #fff;
-                padding-top:1rem;
+                padding-top: 1rem;
             }
         }
     }

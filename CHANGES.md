@@ -6,6 +6,7 @@ Changes
 
 ### Unreleased
 
+* 2017-07-03 - Minor improvements to the availability info for activities and resources.
 * 2017-06-28 - Add Travis CI support
 * 2017-06-14 - Improved settings pages and language file and adjusted README.md.
 * 2017-06-13 - Changed the repeat attribute to the background images of the login page.

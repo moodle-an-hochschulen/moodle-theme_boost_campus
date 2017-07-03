@@ -392,6 +392,11 @@ body.loginbackgroundimage {
             @extend .label;
             font-weight: 400;
             font-size: .9rem;
+            display: block;
+            /* Change the color of links within the availability to the same color of the text. */
+            a {
+                color: #fff;
+            }
         }
         /* Add border to descripion text to differ it from module content. */
         .section .contentafterlink {

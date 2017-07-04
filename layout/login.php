@@ -35,10 +35,10 @@ $templatecontext = [
 
 echo $OUTPUT->render_from_template('theme_boost/login', $templatecontext);
 
-/* MOFIFICATION START:
- * Include own layout file for the footnote region.
- * The theme_boost/login template already renders the standard footer.
- * The footer blocks and the badge area are currently not shown on the login page.
- * Here, we add the footnote only. */
+// MOFIFICATION START.
+// Include own layout file for the footnote region.
+// The theme_boost/login template already renders the standard footer.
+// The footer blocks and the badge area are currently not shown on the login page.
+// Here, we add the footnote only.
 require_once(dirname(__FILE__).'/includes/footnote.php');
-/* MODIFICATION END. */
+// MODIFICATION END.

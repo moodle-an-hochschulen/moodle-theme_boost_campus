@@ -53,11 +53,19 @@ $templatecontext = [
 ];
 
 $templatecontext['flatnavigation'] = $PAGE->flatnav;
+// MODIDFICATION START.
+// Render colums2.mustache from boost_campus.
 echo $OUTPUT->render_from_template('theme_boost_campus/columns2', $templatecontext);
+// MODIFICATION END.
+/* ORIGINAL START.
+echo $OUTPUT->render_from_template('theme_boost/columns2', $templatecontext);
+ORIGINAL END. */
+
+// MODIFICATION START.
 // Add footer blocks and standard footer.
 require_once(dirname(__FILE__).'/includes/footer.php');
 // Add badgearea.
 require_once(dirname(__FILE__).'/includes/badgearea.php');
 // Add footnote.
 require_once(dirname(__FILE__).'/includes/footnote.php');
-
+// MODIFICATION END.

@@ -6,6 +6,7 @@ Changes
 
 ### Unreleased
 
+* 2017-07-04 - Added modification hints to overridden layout files.
 * 2017-07-04 - Fix CSS selector for the footer separator lines.
 * 2017-07-03 - Minor improvements to the availability info for activities and resources.
 * 2017-06-28 - Add Travis CI support

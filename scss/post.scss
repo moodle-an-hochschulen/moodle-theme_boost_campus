@@ -651,7 +651,7 @@ blockquote::before {
     /* If all Moodle links are hidden in the footer, we don't need a top line for the performance info.*/
     @if variable-exists(footerhidehelplink) and variable-exists(footerhidelogininfo) and variable-exists(footerhidehomelink) {
         @if $footerhidehelplink == 'yes' and $footerhidelogininfo == 'yes' and $footerhidehomelink == 'yes' {
-            .performanceinfo {
+            .container-fluid:nth-of-type(2) > .row-fluid {
                 border-top: none;
             }
         }

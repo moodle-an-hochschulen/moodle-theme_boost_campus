@@ -41,6 +41,19 @@ $bodyattributes = $OUTPUT->body_attributes($extraclasses);
 $blockshtml = $OUTPUT->blocks('side-pre');
 $hasblocks = strpos($blockshtml, 'data-block=') !== false;
 $regionmainsettingsmenu = $OUTPUT->region_main_settings_menu();
+$catchshortcuts = array();
+$catchendkey = get_config('theme_boost_campus', 'catchendkey');
+if (isset($catchendkey) && $catchendkey == true) {
+    $catchshortcuts[] = 'end';
+}
+$catchcmdarrowdown = get_config('theme_boost_campus', 'catchcmdarrowdown');
+if (isset($catchcmdarrowdown) && $catchcmdarrowdown == true) {
+    $catchshortcuts[] = 'cmdarrowdown';
+}
+$catchctrlarrowdown = get_config('theme_boost_campus', 'catchctrlarrowdown');
+if (isset($catchctrlarrowdown) && $catchctrlarrowdown == true) {
+    $catchshortcuts[] = 'ctrlarrowdown';
+}
 $templatecontext = [
     'sitename' => format_string($SITE->shortname, true, ['context' => context_course::instance(SITEID), "escape" => false]),
     'output' => $OUTPUT,
@@ -49,7 +62,8 @@ $templatecontext = [
     'bodyattributes' => $bodyattributes,
     'navdraweropen' => $navdraweropen,
     'regionmainsettingsmenu' => $regionmainsettingsmenu,
-    'hasregionmainsettingsmenu' => !empty($regionmainsettingsmenu)
+    'hasregionmainsettingsmenu' => !empty($regionmainsettingsmenu),
+    'catchshortcuts' => json_encode($catchshortcuts)
 ];
 
 $templatecontext['flatnavigation'] = $PAGE->flatnav;

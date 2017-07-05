@@ -48,6 +48,18 @@ $string['faviconheadingsetting'] = 'Favicon';
 $string['faviconsetting'] = 'Favicon';
 $string['faviconsetting_desc'] = 'You can upload one image (.ico or .png format) that the browser will show as the favicon of your Moodle website.';
 
+// Advanced settings.
+// ... Catch keyboard commands.
+$string['catchkeyboardcommandsheadingsetting'] = 'Catch keyboard commands';
+$string['catchkeyboardcommandsheadingsetting_desc'] = 'The following settings are intended to serve the needs for advanced users, especially if your Moodle instance has a large footer. Advanced users are likely to use keyboard shortcuts to navigate through the sites. They may use this for reaching the end of the page in the intention to get fast to the most recent topic in the course (for adding content or grading latest activities). If the footer is not quite small, they would need to scroll up again. With these settings you can enable that the following shortcuts are caught and would only scroll to the bottom of the main course content.';
+$string['catchendkeysetting'] = 'End key';
+$string['catchendkeysetting_desc'] = 'This setting will catch the "End" key (should work on all main browsers and operating systems), ';
+$string['catchcmdarrowdownsetting'] = 'Cmd + Arrow down shortcut';
+$string['catchcmdarrowdownsetting_desc'] = 'This setting will catch the "Cmd + Arrow down" shortcut (MAC),';
+$string['catchctrlarrowdownsetting'] = 'Ctrl + Arrow down shortcut';
+$string['catchctrlarrowdownsetting_desc'] = 'This setting will catch the "Ctrl + Arrow down" shortcut (Windows),';
+$string['catchkeys_desc_addition'] = 'prevent the default scrolling to the bottom of the web page and changes the behavior to scroll only to the bottom of the main course content.';
+
 // Course layout settings.
 $string['courselayoutsettings'] = 'Course Layout Settings';
 // ...Section 0.

@@ -91,6 +91,21 @@ This setting is already available in the Moodle core theme Boost. For more infor
 
 This setting is already available in the Moodle core theme Boost. For more information how to use it, please have a look at the official Moodle documentation: http://docs.moodle.org/en/Boost_theme
 
+#### Catch keyboard commands
+The following settings are intended to serve the needs for advanced users, especially if your Moodle instance has a large footer. Advanced users are likely to use keyboard shortcuts to navigate through the sites. They may use this for reaching the end of the page in the intention to get fast to the most recent topic in the course (for adding content or grading latest activities). If the footer is not quite small, they would need to scroll up again. With these settings you can enable that the following shortcuts are caught and would only scroll to the bottom of the main course content.
+
+##### End key
+
+This setting will catch the "End" key (should work on all main browsers and operating systems), prevent the default scrolling to the bottom of the web page and changes the behavior to scroll only to the bottom of the main course content.
+
+##### Cmd + Arrow down shortcut
+
+This setting will catch the "Cmd + Arrow down" shortcut (MAC), prevent the default scrolling to the bottom of the web page and changes the behavior to scroll only to the bottom of the main course content.
+
+##### Ctrl + Arrow down shortcut
+
+This setting will catch the "Ctrl + Arrow down" shortcut (Windows), prevent the default scrolling to the bottom of the web page and changes the behavior to scroll only to the bottom of the main course content.
+
 
 ### 3. Tab "Course Layout Settings"
 

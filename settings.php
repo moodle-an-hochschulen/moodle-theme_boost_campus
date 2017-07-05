@@ -159,6 +159,40 @@ if ($ADMIN->fulltree) {
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
+    // Settings title for the catching keybaord commands.
+    $name = 'theme_boost_campus/catchkeyboardcommandsheading';
+    $title = get_string('catchkeyboardcommandsheadingsetting', 'theme_boost_campus', null, true);
+    $description = get_string('catchkeyboardcommandsheadingsetting_desc', 'theme_boost_campus', null, true);
+    $setting = new admin_setting_heading($name, $title, $description);
+    $page->add($setting);
+
+    // Setting for catching the end key.
+    $name = 'theme_boost_campus/catchendkey';
+    $title = get_string('catchendkeysetting', 'theme_boost_campus', null, true);
+    $description = get_string('catchendkeysetting_desc', 'theme_boost_campus', null, true) . ' ' .
+        get_string('catchkeys_desc_addition', 'theme_boost_campus', null, true);
+    $setting = new admin_setting_configcheckbox($name, $title, $description, 0);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+    // Setting for catching the cmd + arrow down keys.
+    $name = 'theme_boost_campus/catchcmdarrowdown';
+    $title = get_string('catchcmdarrowdownsetting', 'theme_boost_campus', null, true);
+    $description = get_string('catchcmdarrowdownsetting_desc', 'theme_boost_campus', null, true) . ' ' .
+        get_string('catchkeys_desc_addition', 'theme_boost_campus', null, true);
+    $setting = new admin_setting_configcheckbox($name, $title, $description, 0);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+    // Setting for catching the strg + arrow down keys.
+    $name = 'theme_boost_campus/catchctrlarrowdown';
+    $title = get_string('catchctrlarrowdownsetting', 'theme_boost_campus', null, true);
+    $description = get_string('catchctrlarrowdownsetting_desc', 'theme_boost_campus', null, true) . ' ' .
+        get_string('catchkeys_desc_addition', 'theme_boost_campus', null, true);
+    $setting = new admin_setting_configcheckbox($name, $title, $description, 0);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
     // Add tab to settings page.
     $settings->add($page);
 

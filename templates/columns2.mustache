@@ -108,7 +108,9 @@ require(['theme_boost/loader']);
 require(['theme_boost/drawer'], function(mod) {
     mod.init();
 });
-require(['theme_boost_campus/backtotop']);
+require(['theme_boost_campus/backtotop'], function(mod) {
+    mod.init();
+});
 require(['theme_boost_campus/catchshortcuts'], function(mod) {
     mod.init({{{catchshortcuts}}});
 });

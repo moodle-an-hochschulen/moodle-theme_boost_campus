@@ -22,15 +22,16 @@
  */
 
 define(['jquery'], function($) {
+    "use strict";
 
-    $(document).ready(function() {
-
+    function initBackToTop() {
         // Add a fontawesome icon after the footer as the back to top button.
-        $('#page-footer').after('<i class="fa fa-chevron-circle-up fa-3x" id="back-to-top"></i>');
+        $('#page-footer').after('<i class="fa fa-chevron-up fa-2x" id="back-to-top"></i>');
 
-        // This function fades the button in when the page is scrolled down or fades it out if the user is at the top of the page.
+        // This function fades the button in when the page is scrolled down or fades it out
+        // if the user is at the top of the page.
         $(window).scroll(function() {
-            if ($(this).scrollTop() > 220) {
+            if ($(document).scrollTop() > 220) {
                 $('#back-to-top').fadeIn(300);
             } else {
                 $('#back-to-top').fadeOut(100);
@@ -41,10 +42,12 @@ define(['jquery'], function($) {
         $('#back-to-top').click(function(event) {
             event.preventDefault();
             $('html, body').animate({scrollTop: 0}, 500);
-            return false;
         });
-    });
+    }
 
-    return {};
-
+    return {
+        init: function() {
+            initBackToTop();
+        }
+    };
 });

@@ -739,8 +739,16 @@ a[href^="mailto"]::before {
 #back-to-top {
     display: none;
     position: fixed;
+    padding: 0.5rem;
     bottom: 0.5em;
     right: 0.5em;
-    color: $brand-primary;
+    line-height: 1.7rem;
+    color: #fff;
+    background-color: $brand-primary;
+    border-radius: 100px;
     cursor: pointer;
+    box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.3);
+}
+#back-to-top::before {
+    vertical-align: 0.3rem;
 }

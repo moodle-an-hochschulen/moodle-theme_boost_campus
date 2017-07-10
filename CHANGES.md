@@ -6,6 +6,7 @@ Changes
 
 ### Unreleased
 
+* 2017-07-06 - Improved "Back to top": Javascript and icon.
 * 2017-07-04 - Settings to be able to catch specific shortcuts to redefine the scrolling to bottom event.
 * 2017-07-04 - Added modification hints to overridden layout files.
 * 2017-07-04 - Fix CSS selector for the footer separator lines.

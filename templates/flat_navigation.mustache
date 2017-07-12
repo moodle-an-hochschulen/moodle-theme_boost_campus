@@ -57,7 +57,6 @@
 }}
 {{! MODIFICATION:
     * Add additional spans to menu items to harmonize the menu items' HTML code.
-    * Add additional classes to the list group items !! REMOVE if MDL-58964 is integrated into Moodle core.
 }}
 
 <nav class="list-group">
@@ -67,7 +66,7 @@
 <nav class="list-group m-t-1">
     {{/showdivider}}
     {{#action}}
-    <a class="list-group-item list-group-item-action {{#isactive}}font-weight-bold{{/isactive}} {{#classes}}{{.}} {{/classes}}" href="{{{action}}}" data-key="{{key}}">
+    <a class="list-group-item list-group-item-action {{#isactive}}font-weight-bold{{/isactive}}" href="{{{action}}}" data-key="{{key}}">
         <div class="m-l-{{get_indent}}">
             {{#is_section}}
                 <div class="media">
@@ -87,7 +86,7 @@
     </a>
     {{/action}}
     {{^action}}
-    <div class="list-group-item {{#classes}}{{.}} {{/classes}}" data-key="{{key}}">
+    <div class="list-group-item" data-key="{{key}}">
         <div class="m-l-{{get_indent}}">
             {{#is_section}}
                 {{#pix}}i/folder{{/pix}}

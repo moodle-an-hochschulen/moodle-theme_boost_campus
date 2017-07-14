@@ -6,6 +6,7 @@ Changes
 
 ### Unreleased
 
+* 2017-07-14 - Minor change to use bootstrap z-index variable for the maintenance warning.
 * 2017-07-12 - Made changes from 2017-22-05 'Adding additional classes to list group items' undone because it won't be integrated 
 into Moodle core.
 * 2017-07-06 - Improved "Back to top": Javascript and icon.

@@ -162,3 +162,73 @@ function theme_boost_campus_get_badgeareacontent() {
         }
     }
 }
+
+
+/**
+ * Returns a modified flat_navigation object.
+ *
+ * @param flat_navigation $flatnav The flat navigation object.
+ * @return flat_navigation.
+ */
+function theme_boost_campus_process_flatnav(flat_navigation $flatnav) {
+    global $USER;
+    // If the setting defaulthomepageontop is enabled.
+    if (get_config('theme_boost_campus', 'defaulthomepageontop') == 'yes') {
+        // Only proceed processing if we are in a course context.
+        if ($flatnav->find('coursehome', global_navigation::TYPE_CUSTOM) != false) {
+            // If the site home is set as the deafult homepage by the admin.
+            if (get_config('core', 'defaulthomepage') == HOMEPAGE_SITE) {
+                // Return the modified flat_navigtation.
+                $flatnavreturn = theme_boost_campus_set_node_on_top($flatnav, 'home');
+            } else if (get_config('core', 'defaulthomepage') == HOMEPAGE_MY) { // If the dashboard is set as the default homepage
+                // by the admin.
+                // Return the modified flat_navigtation.
+                $flatnavreturn = theme_boost_campus_set_node_on_top($flatnav, 'myhome');
+            } else if (get_config('core', 'defaulthomepage') == HOMEPAGE_USER) { // If the admin defined that the user can set
+                // the default homepage for himself.
+                // Site home.
+                if (get_user_preferences('user_home_page_preference', $USER) == 0) {
+                    // Return the modified flat_navigtation.
+                    $flatnavreturn = theme_boost_campus_set_node_on_top($flatnav, 'home');
+                } else if (get_user_preferences('user_home_page_preference', $USER) == 1 || // Dashboard.
+                    get_user_preferences('user_home_page_preference', $USER) == false) { // If no user preference is set,
+                    // use the default value of core setting default homepage (Dashboard).
+                    // Return the modified flat_navigtation.
+                    $flatnavreturn = theme_boost_campus_set_node_on_top($flatnav, 'myhome');
+                } else { // Should not happen.
+                    // Return the passed flat navigation without changes.
+                    $flatnavreturn = $flatnav;
+                }
+            } else { // Should not happen.
+                // Return the passed flat navigation without changes.
+                $flatnavreturn = $flatnav;
+            }
+        } else { // Not in course context.
+            // Return the passed flat navigation without changes.
+            $flatnavreturn = $flatnav;
+        }
+    } else { // Defaulthomepageontop not enabled.
+        // Return the passed flat navigation without changes.
+        $flatnavreturn = $flatnav;
+    }
+    return $flatnavreturn;
+}
+
+/**
+ * Modifies the flat_navigation to add the node on top.
+ *
+ * @param flat_navigation $flatnav The flat navigation object.
+ * @param string $nodename The name of the node that is to modify.
+ * @return flat_navigation.
+ */
+function theme_boost_campus_set_node_on_top(flat_navigation $flatnav, $nodename) {
+    $pageflatnav = $flatnav->find($nodename, global_navigation::TYPE_SYSTEM);
+    // Add the showdivider to the coursehome node as this is the next one and this will add a margin top to it.
+    $flatnav->find('coursehome', global_navigation::TYPE_CUSTOM)->set_showdivider(true);
+    // Remove the site home navigation node that it does not appear twice in the menu.
+    $flatnav->remove($nodename);
+    // Add the saved site home node as the before node of the course home node.
+    $flatnav->add($pageflatnav, 'coursehome');
+    // Return the modified changes.
+    return $flatnav;
+}

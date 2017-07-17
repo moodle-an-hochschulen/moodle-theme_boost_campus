@@ -157,6 +157,12 @@ With this setting you can change the height in pixels for your uploaded badges. 
 
 Whatever you add to this textarea will be displayed beneath the footer on every page that renders the theme standard footer (for layouts "columns2", "login" and "maintenance"). Content in this area could be for example the copyright, the terms of use and the name of your organisation.
 
+#### Nav drawer menu
+
+##### Default homepage on top
+
+By checking this setting the default homepage link (Dashboard or Site home) will always be located at the top of the nav drawer. By default, this is already the case on every Moodle page except for course pages. There, the current course and its contents are placed on top. This might break user's expectations for the placement of the default homepage link.
+
 
 ### 6. Tab "Design Settings"
 

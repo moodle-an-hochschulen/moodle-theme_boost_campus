@@ -213,6 +213,7 @@ body.loginbackgroundimage {
     a.list-group-item[href*="course/view.php?id="] {
         @include navdrawer-node-separator(child);
     }
+
     a.list-group-item[href*="course/view.php?id="]:last-child {
         border-bottom: none;
     }

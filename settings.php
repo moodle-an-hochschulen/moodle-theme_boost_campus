@@ -352,6 +352,42 @@ if ($ADMIN->fulltree) {
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
+    // Settings title to group navdrawer related settings together with a common heading. We don't want a description here.
+    $setting = new admin_setting_heading('theme_boost_campus/navdrawerheading',
+        get_string('navdrawerheadingsetting', 'theme_boost_campus', null, true), null);
+    $page->add($setting);
+
+    // Create default homepage on top control widget (switch label and description depending on what will really happen on the site).
+    if (get_config('core', 'defaulthomepage') == HOMEPAGE_SITE) {
+        $page->add(new admin_setting_configcheckbox('theme_boost_campus/defaulthomepageontop',
+            get_string('sitehomeontopsetting', 'theme_boost_campus', null, true),
+            get_string('sitehomeontopsetting_desc', 'theme_boost_campus', null, true), 'no', 'yes', 'no'));
+            // Overriding default values yes = 1 and no = 0 because of the use of empty() in theme_boost_campus_get_pre_scss()
+            // (lib.php). Default 0 value would not write the variable to scss that could cause the scss to crash if used in
+            // that file. See MDL-58376.
+    } else if (get_config('core', 'defaulthomepage') == HOMEPAGE_MY) {
+        $page->add(new admin_setting_configcheckbox('theme_boost_campus/defaulthomepageontop',
+            get_string('dashboardontopsetting', 'theme_boost_campus', null, true),
+            get_string('dashboardontopsetting_desc', 'theme_boost_campus', null, true), 'no', 'yes', 'no'));
+            // Overriding default values yes = 1 and no = 0 because of the use of empty() in theme_boost_campus_get_pre_scss()
+            // (lib.php). Default 0 value would not write the variable to scss that could cause the scss to crash if used in
+            // that file. See MDL-58376.
+    } else if (get_config('core', 'defaulthomepage') == HOMEPAGE_USER) {
+        $page->add(new admin_setting_configcheckbox('theme_boost_campus/defaulthomepageontop',
+            get_string('userdefinedontopsetting', 'theme_boost_campus', null, true),
+            get_string('userdefinedontopsetting_desc', 'theme_boost_campus', null, true), 'no', 'yes', 'no'));
+            // Overriding default values yes = 1 and no = 0 because of the use of empty() in theme_boost_campus_get_pre_scss()
+            // (lib.php). Default 0 value would not write the variable to scss that could cause the scss to crash if used in
+            // that file. See MDL-58376.
+    } else { // This should not happen.
+        $page->add(new admin_setting_configcheckbox('theme_boost_campus/defaulthomepageontop',
+            get_string('defaulthomepageontopsetting', 'theme_boost_campus', null, true),
+            get_string('defaulthomepageontopsetting_desc', 'theme_boost_campus', null, true), 'no', 'yes', 'no'));
+            // Overriding default values yes = 1 and no = 0 because of the use of empty() in theme_boost_campus_get_pre_scss()
+            // (lib.php). Default 0 value would not write the variable to scss that could cause the scss to crash if used in
+            // that file. See MDL-58376.
+    }
+
     // Add tab to settings page.
     $settings->add($page);
 

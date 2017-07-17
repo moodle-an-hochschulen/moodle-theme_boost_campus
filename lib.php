@@ -94,7 +94,7 @@ function theme_boost_campus_get_pre_scss($theme) {
         'branddangercolor' => ['brand-danger'],
         'darknavbar' => ['darknavbar'],
         'footerblocks' => ['footerblocks'],
-        'badgeareaitemsmaxheight' => ['badgeareaitemsmaxheight'],
+        'badgeareaitemsmaxheight' => ['badgeareaitemsmaxheight']
         /* MODIFICATION END */
     ];
 

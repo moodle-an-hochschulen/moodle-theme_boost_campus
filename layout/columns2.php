@@ -27,6 +27,7 @@ defined('MOODLE_INTERNAL') || die();
 
 user_preference_allow_ajax_update('drawer-open-nav', PARAM_ALPHA);
 require_once($CFG->libdir . '/behat/lib.php');
+require_once($CFG->dirroot . '/theme/boost_campus/locallib.php');
 
 if (isloggedin()) {
     $navdraweropen = (get_user_preferences('drawer-open-nav', 'true') == 'true');
@@ -66,8 +67,9 @@ $templatecontext = [
     'catchshortcuts' => json_encode($catchshortcuts)
 ];
 
-$templatecontext['flatnavigation'] = $PAGE->flatnav;
 // MODIDFICATION START.
+// Use the returned value from theme_boost_campus_get_modified_flatnav_defaulthomepageontop as the template context.
+$templatecontext['flatnavigation'] = theme_boost_campus_process_flatnav($PAGE->flatnav);
 // Render colums2.mustache from boost_campus.
 echo $OUTPUT->render_from_template('theme_boost_campus/columns2', $templatecontext);
 // MODIFICATION END.

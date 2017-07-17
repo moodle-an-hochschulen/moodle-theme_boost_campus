@@ -115,6 +115,16 @@ $string['footnoteheadingsetting'] = 'Footnote';
 $string['footnoteheadingsetting_desc'] = 'The following setting allows to add an additional region for displaying a footnote.';
 $string['footnotesetting'] = 'Footnote';
 $string['footnotesetting_desc'] = 'Whatever you add to this textarea will be displayed at the end of the footer on every page that renders the theme standard footer (for the layouts "columns2" and "login"). Content in this area could be for example the copyright, the terms of use and the name of your organisation. <br/> If you want to remove the footnote again, just empty the text area.';
+// ...Nav drawer menu.
+$string['navdrawerheadingsetting'] = 'Nav drawer menu';
+$string['dashboardontopsetting'] = 'Dashboard menu item on top';
+$string['dashboardontopsetting_desc'] = 'By checking this setting the Dashboard menu item will always be located at the top of the nav drawer. By default, this is already the case on every Moodle page except for course pages. There, the current course and its contents are placed on top. This might break user\'s expectations for the placement of the default homepage link.';
+$string['sitehomeontopsetting'] = 'Site home menu item on top';
+$string['sitehomeontopsetting_desc'] = 'By checking this setting the Site home menu item will always be located at the top of the nav drawer. By default, this is already the case on every Moodle page except for course pages. There, the current course and its contents are placed on top. This might break user\'s expectations for the placement of the default homepage link.';
+$string['userdefinedontopsetting'] = 'User defined homepage on top';
+$string['userdefinedontopsetting_desc'] = 'By checking this setting the Dashboard or Site home menu item (depends on the user\'s preferences) will always be located at the top of the nav drawer. By default, this is already the case on every Moodle page except for course pages. There, the current course and its contents are placed on top. This might break user\'s expectations for the placement of the default homepage link.';
+$string['defaulthomepageontopsetting'] = 'Default homepage on top';
+$string['defaulthomepageontopsetting_desc'] = 'By checking this setting the default homepage link (Dashboard or Site home) will always be located at the top of the nav drawer. By default, this is already the case on every Moodle page except for course pages. There, the current course and its contents are placed on top. This might break user\'s expectations for the placement of the default homepage link.';
 
 // Design settings.
 $string['designsettings'] = 'Design Settings';
@@ -138,4 +148,3 @@ $string['blockiconsetting_desc_code'] = '.block_people .card-block .card-title::
 $string['navbardesignheadingsetting'] = 'Navbar';
 $string['darknavbarsetting'] = 'Dark navbar';
 $string['darknavbarsetting_desc'] = 'By checking this setting you can invert the default light navbar to a dark one with white links.';
-

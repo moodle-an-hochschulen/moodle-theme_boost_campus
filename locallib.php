@@ -175,26 +175,26 @@ function theme_boost_campus_process_flatnav(flat_navigation $flatnav) {
     // If the setting defaulthomepageontop is enabled.
     if (get_config('theme_boost_campus', 'defaulthomepageontop') == 'yes') {
         // Only proceed processing if we are in a course context.
-        if ($flatnav->find('coursehome', global_navigation::TYPE_CUSTOM) != false) {
+        if (($coursehomenode = $flatnav->find('coursehome', global_navigation::TYPE_CUSTOM)) != false) {
             // If the site home is set as the deafult homepage by the admin.
             if (get_config('core', 'defaulthomepage') == HOMEPAGE_SITE) {
                 // Return the modified flat_navigtation.
-                $flatnavreturn = theme_boost_campus_set_node_on_top($flatnav, 'home');
+                $flatnavreturn = theme_boost_campus_set_node_on_top($flatnav, 'home', $coursehomenode);
             } else if (get_config('core', 'defaulthomepage') == HOMEPAGE_MY) { // If the dashboard is set as the default homepage
                 // by the admin.
                 // Return the modified flat_navigtation.
-                $flatnavreturn = theme_boost_campus_set_node_on_top($flatnav, 'myhome');
+                $flatnavreturn = theme_boost_campus_set_node_on_top($flatnav, 'myhome', $coursehomenode);
             } else if (get_config('core', 'defaulthomepage') == HOMEPAGE_USER) { // If the admin defined that the user can set
                 // the default homepage for himself.
                 // Site home.
                 if (get_user_preferences('user_home_page_preference', $USER) == 0) {
                     // Return the modified flat_navigtation.
-                    $flatnavreturn = theme_boost_campus_set_node_on_top($flatnav, 'home');
+                    $flatnavreturn = theme_boost_campus_set_node_on_top($flatnav, 'home', $coursehomenode);
                 } else if (get_user_preferences('user_home_page_preference', $USER) == 1 || // Dashboard.
                     get_user_preferences('user_home_page_preference', $USER) == false) { // If no user preference is set,
                     // use the default value of core setting default homepage (Dashboard).
                     // Return the modified flat_navigtation.
-                    $flatnavreturn = theme_boost_campus_set_node_on_top($flatnav, 'myhome');
+                    $flatnavreturn = theme_boost_campus_set_node_on_top($flatnav, 'myhome', $coursehomenode);
                 } else { // Should not happen.
                     // Return the passed flat navigation without changes.
                     $flatnavreturn = $flatnav;
@@ -219,16 +219,21 @@ function theme_boost_campus_process_flatnav(flat_navigation $flatnav) {
  *
  * @param flat_navigation $flatnav The flat navigation object.
  * @param string $nodename The name of the node that is to modify.
+ * @param navigation_node $beforenode The node before which the to be modified node shall be added.
  * @return flat_navigation.
  */
-function theme_boost_campus_set_node_on_top(flat_navigation $flatnav, $nodename) {
+function theme_boost_campus_set_node_on_top(flat_navigation $flatnav, $nodename, $beforenode) {
+    // Get the node for which the sorting shall be changed.
     $pageflatnav = $flatnav->find($nodename, global_navigation::TYPE_SYSTEM);
+    // Set the showdivider of the new top node to false that no empty nav-element will be created.
+    $pageflatnav->set_showdivider(false);
     // Add the showdivider to the coursehome node as this is the next one and this will add a margin top to it.
-    $flatnav->find('coursehome', global_navigation::TYPE_CUSTOM)->set_showdivider(true);
+    $beforenode->set_showdivider(true);
     // Remove the site home navigation node that it does not appear twice in the menu.
     $flatnav->remove($nodename);
-    // Add the saved site home node as the before node of the course home node.
-    $flatnav->add($pageflatnav, 'coursehome');
+    // Add the saved site home node before the $beforenode.
+    $flatnav->add($pageflatnav, $beforenode->key);
+
     // Return the modified changes.
     return $flatnav;
 }

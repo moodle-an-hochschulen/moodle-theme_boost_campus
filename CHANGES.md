@@ -6,6 +6,7 @@ Changes
 
 ### Unreleased
 
+* 2017-07-18 - Setting to be able to place the course context menu within the course benath the page header.
 * 2017-07-14 - Setting to place the link to the homepage always on top of the nav drawer.
 * 2017-07-14 - Minor change to use bootstrap z-index variable for the maintenance warning.
 * 2017-07-12 - Made changes from 2017-22-05 'Adding additional classes to list group items' undone because it won't be integrated into Moodle core.

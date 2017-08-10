@@ -72,15 +72,15 @@ function theme_boost_campus_get_main_scss_content($theme) {
  */
 function theme_boost_campus_get_pre_scss($theme) {
     global $CFG;
-    /* MODIFICATION START */
+    // MODIFICATION START.
     require_once($CFG->dirroot . '/theme/boost_campus/locallib.php');
-    /* MODIFICATION END */
+    // MODIFICATION END.
 
     $scss = '';
     $configurable = [
         // Config key => [variableName, ...].
         'brandcolor' => ['brand-primary'],
-        /* MODIFICATION START */
+        // MODIFICATION START.
         'section0title' => ['section0title'],
         'showswitchedroleincourse' => ['showswitchedroleincourse'],
         'loginform' => ['loginform'],
@@ -94,8 +94,9 @@ function theme_boost_campus_get_pre_scss($theme) {
         'branddangercolor' => ['brand-danger'],
         'darknavbar' => ['darknavbar'],
         'footerblocks' => ['footerblocks'],
-        'badgeareaitemsmaxheight' => ['badgeareaitemsmaxheight']
-        /* MODIFICATION END */
+        'badgeareaitemsmaxheight' => ['badgeareaitemsmaxheight'],
+        'showsettingsincourse' => ['showsettingsincourse']
+        // MODIFICATION END.
     ];
 
     // Prepend variables first.
@@ -109,9 +110,9 @@ function theme_boost_campus_get_pre_scss($theme) {
         }, (array) $targets);
     }
 
-    /* MODIFICATION START: Add login background images that are uploaded to the setting 'loginbackgroundimage' to CSS */
+    // MODIFICATION START: Add login background images that are uploaded to the setting 'loginbackgroundimage' to CSS.
     $scss .= theme_boost_campus_get_loginbackgroundimage_scss();
-    /* MODIFICATION END */
+    // MODIFICATION END.
 
     // Prepend pre-scss.
     if (!empty($theme->settings->scsspre)) {

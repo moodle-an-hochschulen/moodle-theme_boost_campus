@@ -297,6 +297,22 @@ body.loginbackgroundimage {
     }
 }
 
+/* If showsettingsincourse is enabled, we have to style the cog icon a bit different. */
+@if variable-exists(showsettingsincourse) {
+    @if $showsettingsincourse == 'yes' {
+        #page-navbar {
+            .breadcrumb-button {
+                margin-top: 0;
+            }
+            /* If the setting is enabled we do not need the triangle icon, because there is no menu
+             * popping up next to the cog icon. */
+            .context-header-settings-menu .dropdown-toggle::after {
+                display: none;
+            }
+        }
+    }
+}
+
 
 /*------------------------------------
   Course content
@@ -752,4 +768,18 @@ a[href^="mailto"]::before {
 }
 #back-to-top::before {
     vertical-align: 0.3rem;
+}
+
+/* In-course course settings. */
+#boost-campus-course-settings {
+    /* Initially do not display the settings. Visibility will be changed on click with incoursesettings.js. */
+    display: none;
+    /* Improve color of tab content so it looks more like a real tab. */
+    .tab-content .card {
+        background-color: #f4f4f4;
+        border-left: 1px solid #ddd;
+        border-right: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+        margin-bottom: 2rem;
+    }
 }

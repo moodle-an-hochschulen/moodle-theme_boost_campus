@@ -52,6 +52,8 @@
     * Remove section for footer blocks with own mustache template
     * Add theme_boost_campus/nav-drawer template instead of theme_boost/nav-drawer template
     * Require own javascript module for back to top button functionality
+    * If setting "showsettingsincourse" is enabled, then render course context menu from theme_boost_campus/settings_link_page template
+      and use the equivalent own javascript "incoursesettings".
 }}
 {{{ output.doctype }}}
 <html {{{ output.htmlattributes }}}>
@@ -75,6 +77,9 @@
 
         <div id="page-content" class="row">
             <div id="region-main-box" class="col-xs-12">
+                {{#node}}
+                    {{> theme_boost_campus/settings_link_page }}
+                {{/node}}
                 {{#hasregionmainsettingsmenu}}
                 <div id="region-main-settings-menu" class="hidden-print {{#hasblocks}}has-blocks{{/hasblocks}}">
                     <div> {{{ output.region_main_settings_menu }}} </div>
@@ -114,4 +119,9 @@ require(['theme_boost_campus/backtotop'], function(mod) {
 require(['theme_boost_campus/catchshortcuts'], function(mod) {
     mod.init({{{catchshortcuts}}});
 });
+{{#node}}
+    require(['theme_boost_campus/incoursesettings'], function(mod) {
+    mod.init();
+    });
+{{/node}}
 {{/js}}

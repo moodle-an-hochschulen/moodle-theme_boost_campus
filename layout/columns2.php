@@ -24,6 +24,9 @@
  */
 
 defined('MOODLE_INTERNAL') || die();
+// MODIFICATION START.
+global $PAGE;
+// MODIFICATION END.
 
 user_preference_allow_ajax_update('drawer-open-nav', PARAM_ALPHA);
 require_once($CFG->libdir . '/behat/lib.php');
@@ -55,6 +58,19 @@ $catchctrlarrowdown = get_config('theme_boost_campus', 'catchctrlarrowdown');
 if (isset($catchctrlarrowdown) && $catchctrlarrowdown == true) {
     $catchshortcuts[] = 'ctrlarrowdown';
 }
+// MODIFICATION START.
+// If the setting 'showsettingsincourse' is enabled.
+if (get_config('theme_boost_campus', 'showsettingsincourse') == 'yes') {
+    // Only search for the courseadmin node if we are within a course context.
+    if ($PAGE->context->contextlevel == CONTEXT_COURSE) {
+        // Get the course context menu.
+        $node = $PAGE->settingsnav->find('courseadmin', navigation_node::TYPE_COURSE);
+    }
+} else {
+    $node = false;
+}
+// MODIFICATION END.
+
 $templatecontext = [
     'sitename' => format_string($SITE->shortname, true, ['context' => context_course::instance(SITEID), "escape" => false]),
     'output' => $OUTPUT,
@@ -64,7 +80,10 @@ $templatecontext = [
     'navdraweropen' => $navdraweropen,
     'regionmainsettingsmenu' => $regionmainsettingsmenu,
     'hasregionmainsettingsmenu' => !empty($regionmainsettingsmenu),
-    'catchshortcuts' => json_encode($catchshortcuts)
+    // MODIFICATION START.
+    'catchshortcuts' => json_encode($catchshortcuts),
+    'node' => $node
+    // MODIFICATION END.
 ];
 
 // MODIDFICATION START.

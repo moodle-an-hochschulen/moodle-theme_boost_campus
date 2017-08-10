@@ -72,6 +72,10 @@ $string['courseeditbuttonsetting_desc'] = 'With this setting you can add an addi
 $string['showswitchedroleincoursesetting'] = 'Position of switch role information';
 $string['showswitchedroleincoursesetting_desc'] = 'With this setting you can choose the place where the information to which role a user has switched is being displayed. If not checked (default value), the role information will be displayed right beneath the user\'s name in the user menu (like in theme Boost). If checked, this information - together with a link to switch back - will be displayed beneath the course, as this functionality is course related.';
 $string['switchedroleto'] = 'You are viewing this course currently with the role:';
+// ...Show course settings within the course.
+$string['showsettingsincoursesetting'] = 'In course settings menu';
+$string['showsettingsincoursesetting_desc'] = 'With this setting you can change the displaying of the course context menu. In Boost, there is a popup context menu right next to the cog icon and clicking on the "More..." menu item will lead the user to another page with all course settings. By enabling this setting the settings will occur directly beneath the course header.<br/>
+Please note that this change does not affect users who have switched off javascript in their browsers - they will still get the behaviour from Moodle core with a popup course context menu.';
 
 // Footer layout settings.
 $string['footerlayoutsettings'] = 'Footer Layout Settings';

@@ -130,9 +130,9 @@ class core_renderer extends \theme_boost\output\core_renderer {
      * @return string HTML to display the main header.
      */
     public function full_header() {
-        /* MODIFICATION START */
+        // MODIFICATION START.
         global $PAGE, $USER, $COURSE;
-        /* MODIFICATION END */
+        // MODIFICATION END.
         /* ORIGINAL START.
         global $PAGE;
         ORIGINAL END. */
@@ -141,14 +141,30 @@ class core_renderer extends \theme_boost\output\core_renderer {
         $html .= html_writer::start_div('col-xs-12 p-a-1');
         $html .= html_writer::start_div('card');
         $html .= html_writer::start_div('card-block');
+        // MODIFICATION START:
+        // Only display the core context header menu if the setting "showsettingsincourse" is disabled
+        // or we are viewing the frontpage.
+        if (get_config('theme_boost_campus', 'showsettingsincourse') == 'no' || $PAGE->pagelayout == 'frontpage') {
+            $html .= html_writer::div($this->context_header_settings_menu(), 'pull-xs-right context-header-settings-menu');
+        }
+        // MODIFICATION END.
+        /* ORIGINAL START.
         $html .= html_writer::div($this->context_header_settings_menu(), 'pull-xs-right context-header-settings-menu');
+        ORIGINAL END. */
         $html .= html_writer::start_div('pull-xs-left');
         $html .= $this->context_header();
         $html .= html_writer::end_div();
+        /** @noinspection SpellCheckingInspection */
         $pageheadingbutton = $this->page_heading_button();
         if (empty($PAGE->layout_options['nonavbar'])) {
             $html .= html_writer::start_div('clearfix w-100 pull-xs-left', array('id' => 'page-navbar'));
             $html .= html_writer::tag('div', $this->navbar(), array('class' => 'breadcrumb-nav'));
+            // MODIFICATION START: Add the course context menu to the course page.
+            if (get_config('theme_boost_campus', 'showsettingsincourse') == 'yes') {
+                $html .= html_writer::div($this->context_header_settings_menu(),
+                    'pull-xs-right context-header-settings-menu m-l-1');
+            }
+            // MODIFICATION END.
             $html .= html_writer::div($pageheadingbutton, 'breadcrumb-button pull-xs-right');
             $html .= html_writer::end_div();
         } else if ($pageheadingbutton) {

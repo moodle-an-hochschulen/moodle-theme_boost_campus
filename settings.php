@@ -368,7 +368,8 @@ if ($ADMIN->fulltree) {
         get_string('navdrawerheadingsetting', 'theme_boost_campus', null, true), null);
     $page->add($setting);
 
-    // Create default homepage on top control widget (switch label and description depending on what will really happen on the site).
+    // Create default homepage on top control widget
+    // (switch label and description depending on what will really happens on the site).
     if (get_config('core', 'defaulthomepage') == HOMEPAGE_SITE) {
         $page->add(new admin_setting_configcheckbox('theme_boost_campus/defaulthomepageontop',
             get_string('sitehomeontopsetting', 'theme_boost_campus', null, true),

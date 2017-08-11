@@ -154,7 +154,6 @@ class core_renderer extends \theme_boost\output\core_renderer {
         $html .= html_writer::start_div('pull-xs-left');
         $html .= $this->context_header();
         $html .= html_writer::end_div();
-        /** @noinspection SpellCheckingInspection */
         $pageheadingbutton = $this->page_heading_button();
         if (empty($PAGE->layout_options['nonavbar'])) {
             $html .= html_writer::start_div('clearfix w-100 pull-xs-left', array('id' => 'page-navbar'));

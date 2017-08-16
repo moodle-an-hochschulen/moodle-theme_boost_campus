@@ -59,6 +59,8 @@ if (isset($catchctrlarrowdown) && $catchctrlarrowdown == true) {
     $catchshortcuts[] = 'ctrlarrowdown';
 }
 // MODIFICATION START.
+// Initialize node variable.
+$node = false;
 // If the setting 'showsettingsincourse' is enabled.
 if (get_config('theme_boost_campus', 'showsettingsincourse') == 'yes') {
     // Only search for the courseadmin node if we are within a course context.
@@ -66,8 +68,6 @@ if (get_config('theme_boost_campus', 'showsettingsincourse') == 'yes') {
         // Get the course context menu.
         $node = $PAGE->settingsnav->find('courseadmin', navigation_node::TYPE_COURSE);
     }
-} else {
-    $node = false;
 }
 // MODIFICATION END.
 

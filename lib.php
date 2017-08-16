@@ -80,7 +80,7 @@ function theme_boost_campus_get_pre_scss($theme) {
     $configurable = [
         // Config key => [variableName, ...].
         'brandcolor' => ['brand-primary'],
-        // MODIFICATION START.
+        // MODIFICATION START: Add own variables.
         'section0title' => ['section0title'],
         'showswitchedroleincourse' => ['showswitchedroleincourse'],
         'loginform' => ['loginform'],

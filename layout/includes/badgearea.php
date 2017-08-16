@@ -28,7 +28,7 @@ require_once($CFG->dirroot . '/theme/boost_campus/locallib.php');
 
 $badgeareafiles = theme_boost_campus_get_badgeareacontent();
 
-// Only proceed with sorting if received array is not empty.
+// Only proceed if received array is not empty.
 if (!empty($badgeareafiles)) {
     $templatecontext['badgeareafiles'] = $badgeareafiles;
     echo $OUTPUT->render_from_template('theme_boost_campus/badgearea', $templatecontext);

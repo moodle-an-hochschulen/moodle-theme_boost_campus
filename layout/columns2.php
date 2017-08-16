@@ -30,7 +30,9 @@ global $PAGE;
 
 user_preference_allow_ajax_update('drawer-open-nav', PARAM_ALPHA);
 require_once($CFG->libdir . '/behat/lib.php');
+// MODIFICATION Start: Require own locallib.php.
 require_once($CFG->dirroot . '/theme/boost_campus/locallib.php');
+// MODIFICATION END.
 
 if (isloggedin()) {
     $navdraweropen = (get_user_preferences('drawer-open-nav', 'true') == 'true');
@@ -45,20 +47,26 @@ $bodyattributes = $OUTPUT->body_attributes($extraclasses);
 $blockshtml = $OUTPUT->blocks('side-pre');
 $hasblocks = strpos($blockshtml, 'data-block=') !== false;
 $regionmainsettingsmenu = $OUTPUT->region_main_settings_menu();
+// MODIFICATION START: Setting 'catchshortcuts'.
+// Initialize array.
 $catchshortcuts = array();
+// If setting is enabled then add the parameter to the array.
 $catchendkey = get_config('theme_boost_campus', 'catchendkey');
 if (isset($catchendkey) && $catchendkey == true) {
     $catchshortcuts[] = 'end';
 }
+// If setting is enabled then add the parameter to the array.
 $catchcmdarrowdown = get_config('theme_boost_campus', 'catchcmdarrowdown');
 if (isset($catchcmdarrowdown) && $catchcmdarrowdown == true) {
     $catchshortcuts[] = 'cmdarrowdown';
 }
+// If setting is enabled then add the parameter to the array.
 $catchctrlarrowdown = get_config('theme_boost_campus', 'catchctrlarrowdown');
 if (isset($catchctrlarrowdown) && $catchctrlarrowdown == true) {
     $catchshortcuts[] = 'ctrlarrowdown';
 }
-// MODIFICATION START.
+// MODIFICATION END.
+// MODIFICATION START: Setting 'showsettingsincourse'.
 // Initialize node variable.
 $node = false;
 // If the setting 'showsettingsincourse' is enabled.
@@ -80,7 +88,7 @@ $templatecontext = [
     'navdraweropen' => $navdraweropen,
     'regionmainsettingsmenu' => $regionmainsettingsmenu,
     'hasregionmainsettingsmenu' => !empty($regionmainsettingsmenu),
-    // MODIFICATION START.
+    // MODIFICATION START: Add Boost Campus realated values to the template context.
     'catchshortcuts' => json_encode($catchshortcuts),
     'node' => $node
     // MODIFICATION END.
@@ -96,11 +104,11 @@ echo $OUTPUT->render_from_template('theme_boost_campus/columns2', $templateconte
 echo $OUTPUT->render_from_template('theme_boost/columns2', $templatecontext);
 ORIGINAL END. */
 
-// MODIFICATION START.
+// MODIFICATION START: Require additional layout files.
 // Add footer blocks and standard footer.
 require_once(dirname(__FILE__).'/includes/footer.php');
-// Add badgearea.
+// Add badgearea layout file.
 require_once(dirname(__FILE__).'/includes/badgearea.php');
-// Add footnote.
+// Add footnote layout file.
 require_once(dirname(__FILE__).'/includes/footnote.php');
 // MODIFICATION END.

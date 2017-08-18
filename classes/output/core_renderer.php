@@ -231,8 +231,7 @@ class core_renderer extends \theme_boost\output\core_renderer {
         // Therefore the access to the course settings and related functions is not possible on other
         // course pages as there is no omnipresent block anymore. We want these to be accessible
         // on each course page.
-        if (($context->contextlevel == CONTEXT_COURSE || $context->contextlevel == CONTEXT_MODULE
-                || $context->contextlevel == CONTEXT_BLOCK) && !empty($currentnode)) {
+        if (($context->contextlevel == CONTEXT_COURSE || $context->contextlevel == CONTEXT_MODULE) && !empty($currentnode)) {
             $showcoursemenu = true;
         }
         // MODIFICATION END.

@@ -71,8 +71,8 @@ if (isset($catchctrlarrowdown) && $catchctrlarrowdown == true) {
 $node = false;
 // If the setting 'showsettingsincourse' is enabled.
 if (get_config('theme_boost_campus', 'showsettingsincourse') == 'yes') {
-    // Only search for the courseadmin node if we are within a course context.
-    if ($PAGE->context->contextlevel == CONTEXT_COURSE) {
+    // Only search for the courseadmin node if we are within a course or a module context.
+    if ($PAGE->context->contextlevel == CONTEXT_COURSE || $PAGE->context->contextlevel == CONTEXT_MODULE) {
         // Get the course context menu.
         $node = $PAGE->settingsnav->find('courseadmin', navigation_node::TYPE_COURSE);
     }

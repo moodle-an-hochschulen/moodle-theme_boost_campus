@@ -354,7 +354,8 @@ class core_renderer extends \theme_boost\output\core_renderer {
     }
 
 
-     // TODO Delete function build_action_menu_from_navigation when MDL-58174 is solved.
+    // TODO Remove the copied function build_action_menu_from_navigation in version 3.4 of the theme.
+    // This will be the first Moodle major version having MDL-58174 integrated from version x.0 on.
 
     /**
      * Take a node in the nav tree and make an action menu out of it.
@@ -366,7 +367,7 @@ class core_renderer extends \theme_boost\output\core_renderer {
      * @param boolean $onlytopleafnodes
      * @return boolean nodesskipped - True if nodes were skipped in building the menu
      */
-    private function build_action_menu_from_navigation(action_menu $menu,
+    protected function build_action_menu_from_navigation(action_menu $menu,
                                                        navigation_node $node,
                                                        $indent = false,
                                                        $onlytopleafnodes = false) {

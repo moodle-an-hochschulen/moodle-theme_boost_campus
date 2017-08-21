@@ -51,18 +51,15 @@ $regionmainsettingsmenu = $OUTPUT->region_main_settings_menu();
 // Initialize array.
 $catchshortcuts = array();
 // If setting is enabled then add the parameter to the array.
-$catchendkey = get_config('theme_boost_campus', 'catchendkey');
-if (isset($catchendkey) && $catchendkey == true) {
+if (get_config('theme_boost_campus', 'catchendkey') == true) {
     $catchshortcuts[] = 'end';
 }
 // If setting is enabled then add the parameter to the array.
-$catchcmdarrowdown = get_config('theme_boost_campus', 'catchcmdarrowdown');
-if (isset($catchcmdarrowdown) && $catchcmdarrowdown == true) {
+if (get_config('theme_boost_campus', 'catchcmdarrowdown') == true) {
     $catchshortcuts[] = 'cmdarrowdown';
 }
 // If setting is enabled then add the parameter to the array.
-$catchctrlarrowdown = get_config('theme_boost_campus', 'catchctrlarrowdown');
-if (isset($catchctrlarrowdown) && $catchctrlarrowdown == true) {
+if (get_config('theme_boost_campus', 'catchctrlarrowdown') == true) {
     $catchshortcuts[] = 'ctrlarrowdown';
 }
 // MODIFICATION END.

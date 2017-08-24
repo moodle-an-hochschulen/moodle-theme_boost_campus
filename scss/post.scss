@@ -106,8 +106,8 @@ body.loginbackgroundimage {
             .dropdown-toggle:hover {
                 color: $brand-primary;
             }
-            .popover-region-notifications .icon,
-            .popover-region-messages .icon {
+            .popover-region-notifications .popover-region-toggle .icon,
+            .popover-region-messages .popover-region-toggle .icon {
                 filter: brightness(9);
             }
         }

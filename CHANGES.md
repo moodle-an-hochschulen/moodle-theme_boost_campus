@@ -6,6 +6,7 @@ Changes
 
 ### Unreleased
 
+* 2017-08-28 - Expose navigation node properties in the boost flat navigation (Backport of MDL-59425).
 * 2017-08-10 - Setting to be able to place the course context menu within the course beneath the page header.
 * 2017-07-14 - Setting to place the link to the homepage always on top of the nav drawer.
 * 2017-07-14 - Minor change to use bootstrap z-index variable for the maintenance warning.

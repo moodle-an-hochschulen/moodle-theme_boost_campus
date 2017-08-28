@@ -189,13 +189,13 @@ body.loginbackgroundimage {
     a.list-group-item[data-key|=myhome] span.media-left > img,
     a.list-group-item[data-key|=home] span.media-left > img,
     a.list-group-item[data-key|=calendar] span.media-left > img,
-    a.list-group-item[href*="files"] span.media-left > img,
+    a.list-group-item[data-key|=privatefiles] span.media-left > img,
     a.list-group-item[data-key|=sitesettings] span.media-left > img {
         display: none;
     }
 
     /* Menu item: my files. */
-    a.list-group-item[href*="files"] {
+    a.list-group-item[data-key|=privatefiles] {
         border-bottom-right-radius: .25rem;
         border-bottom-left-radius: .25rem;
     }

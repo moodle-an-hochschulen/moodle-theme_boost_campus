@@ -152,3 +152,6 @@ $string['blockiconsetting_desc_code'] = '.block_people .card-block .card-title::
 $string['navbardesignheadingsetting'] = 'Navbar';
 $string['darknavbarsetting'] = 'Dark navbar';
 $string['darknavbarsetting_desc'] = 'By checking this setting you can invert the default light navbar to a dark one with white links.';
+
+// ADDITIONAL STRINGS (IN ALPHABETICAL ORDER).
+$string['cachedef_badgearea'] = 'Cache for badgearea items';

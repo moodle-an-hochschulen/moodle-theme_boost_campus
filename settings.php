@@ -231,10 +231,27 @@ if ($ADMIN->fulltree) {
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
-    // Setting to display information of a switched role in the course header.
+    // Settings title for grouping course settings related aspects together. We don't need a description here.
+    $name = 'theme_boost_campus/coursesettingsheading';
+    $title = get_string('coursesettingsheadingsetting', 'theme_boost_campus', null, true);
+    $setting = new admin_setting_heading($name, $title, null);
+    $page->add($setting);
+
+    // Setting to display the course settings page as a panel within the course.
     $name = 'theme_boost_campus/showsettingsincourse';
     $title = get_string('showsettingsincoursesetting', 'theme_boost_campus', null, true);
     $description = get_string('showsettingsincoursesetting_desc', 'theme_boost_campus', null, true);
+    $setting = new admin_setting_configcheckbox($name, $title, $description, 'no', 'yes', 'no'); // Overriding default values
+    // yes = 1 and no = 0 because of the use of empty() in theme_boost_campus_get_pre_scss() (lib.php).
+    // Default 0 value would not write the variable to scss that could cause the scss to crash if used in that file.
+    // See MDL-58376.
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+    // Setting to display the switch role to link as a separate tab within the in-course settings panel.
+    $name = 'theme_boost_campus/incoursesettingsswitchtorole';
+    $title = get_string('incoursesettingsswitchtorolesetting', 'theme_boost_campus', null, true);
+    $description = get_string('incoursesettingsswitchtorolesetting_desc', 'theme_boost_campus', null, true);
     $setting = new admin_setting_configcheckbox($name, $title, $description, 'no', 'yes', 'no'); // Overriding default values
     // yes = 1 and no = 0 because of the use of empty() in theme_boost_campus_get_pre_scss() (lib.php).
     // Default 0 value would not write the variable to scss that could cause the scss to crash if used in that file.

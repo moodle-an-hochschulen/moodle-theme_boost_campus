@@ -6,6 +6,7 @@ Changes
 
 ### Unreleased
 
+* 2017-09-01 - Setting to move the 'Switch role to...' menu item to the course settings.
 * 2017-08-28 - Expose navigation node properties in the boost flat navigation (Backport of MDL-59425).
 * 2017-08-10 - Setting to be able to place the course context menu within the course beneath the page header.
 * 2017-07-14 - Setting to place the link to the homepage always on top of the nav drawer.

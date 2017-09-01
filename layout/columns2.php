@@ -63,18 +63,6 @@ if (get_config('theme_boost_campus', 'catchctrlarrowdown') == true) {
     $catchshortcuts[] = 'ctrlarrowdown';
 }
 // MODIFICATION END.
-// MODIFICATION START: Setting 'showsettingsincourse'.
-// Initialize node variable.
-$node = false;
-// If the setting 'showsettingsincourse' is enabled.
-if (get_config('theme_boost_campus', 'showsettingsincourse') == 'yes') {
-    // Only search for the courseadmin node if we are within a course or a module context.
-    if ($PAGE->context->contextlevel == CONTEXT_COURSE || $PAGE->context->contextlevel == CONTEXT_MODULE) {
-        // Get the course context menu.
-        $node = $PAGE->settingsnav->find('courseadmin', navigation_node::TYPE_COURSE);
-    }
-}
-// MODIFICATION END.
 
 $templatecontext = [
     'sitename' => format_string($SITE->shortname, true, ['context' => context_course::instance(SITEID), "escape" => false]),
@@ -87,13 +75,15 @@ $templatecontext = [
     'hasregionmainsettingsmenu' => !empty($regionmainsettingsmenu),
     // MODIFICATION START: Add Boost Campus realated values to the template context.
     'catchshortcuts' => json_encode($catchshortcuts),
-    'node' => $node
     // MODIFICATION END.
 ];
 
 // MODIDFICATION START.
 // Use the returned value from theme_boost_campus_get_modified_flatnav_defaulthomepageontop as the template context.
 $templatecontext['flatnavigation'] = theme_boost_campus_process_flatnav($PAGE->flatnav);
+// Add the returned value from theme_boost_campus_get_incourse_settings to the template context.
+$templatecontext['node'] = theme_boost_campus_get_incourse_settings();
+
 // Render colums2.mustache from boost_campus.
 echo $OUTPUT->render_from_template('theme_boost_campus/columns2', $templatecontext);
 // MODIFICATION END.

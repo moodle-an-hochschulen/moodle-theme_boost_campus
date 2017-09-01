@@ -121,10 +121,17 @@ With this setting you can add an additional course edit on / off button to the c
 
 With this setting you can choose the place where the information to which role a user has switched is being displayed. If not checked (default value), the role information will be displayed right beneath the user\'s name in the user menu (like in theme Boost). If checked, this information - together with a link to switch back - will be displayed beneath the course, as this functionality is course related.
 
-#### In course settings menu
+#### Course settings
+
+##### In course settings menu
 
 With this setting you can change the displaying of the course context menu. In Boost, there is a popup context menu right next to the cog icon and clicking on the "More..." menu item will lead the user to another page with all course settings. By enabling this setting the settings will occur directly beneath the course header.
 Please note that this change does not affect users who have switched off javascript in their browsers - they will still get the behaviour from Moodle core with a popup course context menu.
+
+##### Move "Switch role to..." to the course settings
+
+With this setting you can move the "Switch role to..." link as a new tab from the user menu to the in-course course menu. The role switching is a feature which is used in course context and thus it is better to place it in the course settings menu than in the user menu.
+Please note that this setting won't have any effect if you do not activate the "In course settings menu" above.
 
 ### 4. Tab "Footer Layout Settings"
 

@@ -95,7 +95,8 @@ function theme_boost_campus_get_pre_scss($theme) {
         'darknavbar' => ['darknavbar'],
         'footerblocks' => ['footerblocks'],
         'badgeareaitemsmaxheight' => ['badgeareaitemsmaxheight'],
-        'showsettingsincourse' => ['showsettingsincourse']
+        'showsettingsincourse' => ['showsettingsincourse'],
+        'incoursesettingsswitchtorole' => ['incoursesettingsswitchtorole']
         // MODIFICATION END.
     ];
 

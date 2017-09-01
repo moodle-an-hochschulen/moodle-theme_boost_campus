@@ -792,3 +792,71 @@ a[href^="mailto"]::before {
         margin-bottom: 2rem;
     }
 }
+
+/*------------------------------------
+  Special: Local Plugins
+  -------------------------------------*/
+
+/* Special styles for plugin local_boostnavigation. */
+#nav-drawer {
+    /* Remove the arrow icon provieded by the plugin because we changed the HTML structure of the menu items. */
+    .list-group-item[data-key='localboostnavigationcoursesections'],
+    .list-group-item[data-key='localboostnavigationactivities'] {
+        div::after {
+            display: none;
+        }
+        .media-left {
+            display: none;
+        }
+        .media-body {
+            padding-left: 0.5rem;
+        }
+    }
+    /* Add the icon at the needed place within this theme. */
+    .list-group-item[data-key='localboostnavigationcoursesections'][data-collapse='0'] .media-body::after,
+    .list-group-item[data-key='localboostnavigationactivities'][data-collapse='0'] .media-body::after {
+        content: url([[pix:i/dropdown]]);
+        float: right;
+    }
+    .list-group-item[data-key='localboostnavigationcoursesections'][data-collapse='1'] .media-body::after,
+    .list-group-item[data-key='localboostnavigationactivities'][data-collapse='1'] .media-body::after {
+        content: url([[pix:t/collapsed]]);
+        float: right;
+    }
+    .list-group-item[data-parent-key='localboostnavigationactivities'] > div::before {
+        margin-left: 0;
+        margin-right: 0.3rem;
+    }
+    .list-group-item[data-parent-key='localboostnavigationactivities'] {
+        .media-left {
+            display: none;
+        }
+        .media-body {
+            display: inline;
+        }
+    }
+    /* Delete the borders for the sub items to group them together. */
+    .list-group-item[data-key='localboostnavigationactivities'][data-collapse='1'],
+    .list-group-item[data-key='localboostnavigationactivities'][data-collapse='0'],
+    .list-group-item[data-key='localboostnavigationcoursesections'][data-collapse='0'],
+    .list-group-item[data-key='localboostnavigationcoursesections'][data-collapse='1'],
+    .list-group-item[data-key="mycourses"][data-collapse="1"],
+    .list-group-item[data-parent-key='localboostnavigationcoursesections'] {
+        border-bottom: none;
+    }
+    /* Special styles for the node resources. */
+    .list-group-item[data-key='localboostnavigationresources'] {
+        @include navdrawer-node-separator(child);
+        border-top: 1px dashed $gray-light;
+        .media-left {
+            content: url([[pix:e/copy]]);
+            display: inline;
+            padding-left: 0.5rem;
+        }
+        .media-body {
+            display: inline;
+            padding-left: 0.3rem;
+        }
+    }
+}
+

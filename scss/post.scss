@@ -178,31 +178,31 @@ body.loginbackgroundimage {
      */
 
     /* Add solid border: myhome, website start and calendar. */
-    a.list-group-item[data-key|=myhome],
-    a.list-group-item[data-key|=home],
-    a.list-group-item[data-key|=calendar] {
+    .list-group-item[data-key|=myhome],
+    .list-group-item[data-key|=home],
+    .list-group-item[data-key|=calendar] {
         @include navdrawer-node-separator(parent);
     }
 
     /* Remove icon from elements that does not need any. */
-    a.list-group-item[data-key|=coursehome] span.media-left > img,
-    a.list-group-item[data-key|=myhome] span.media-left > img,
-    a.list-group-item[data-key|=home] span.media-left > img,
-    a.list-group-item[data-key|=calendar] span.media-left > img,
-    a.list-group-item[data-key|=privatefiles] span.media-left > img,
-    a.list-group-item[data-key|=sitesettings] span.media-left > img {
+    .list-group-item[data-key|=coursehome] span.media-left > img,
+    .list-group-item[data-key|=myhome] span.media-left > img,
+    .list-group-item[data-key|=home] span.media-left > img,
+    .list-group-item[data-key|=calendar] span.media-left > img,
+    .list-group-item[data-key|=privatefiles] span.media-left > img,
+    .list-group-item[data-key|=sitesettings] span.media-left > img {
         display: none;
     }
 
     /* Menu item: my files. */
-    a.list-group-item[data-key|=privatefiles] {
+    .list-group-item[data-key|=privatefiles] {
         border-bottom-right-radius: .25rem;
         border-bottom-left-radius: .25rem;
     }
 
     /* Menu item: my courses. */
     /* Separate the courses menu items from the other ones and add a bottom border*/
-    div.list-group-item[data-key|=mycourses] {
+    .list-group-item[data-key|=mycourses] {
         @include navdrawer-node-separator(parent);
         margin-top: 15px;
         border-top-right-radius: .25rem;
@@ -210,21 +210,21 @@ body.loginbackgroundimage {
     }
 
     /* Dashed border for all courses I'm enrolled in except the last one. */
-    a.list-group-item[href*="course/view.php?id="] {
+    .list-group-item[href*="course/view.php?id="] {
         @include navdrawer-node-separator(child);
     }
 
-    a.list-group-item[href*="course/view.php?id="]:last-child {
+    .list-group-item[href*="course/view.php?id="]:last-child {
         border-bottom: none;
     }
 
     /* Reduce the indent. */
-    div.list-group-item[data-key|=mycourses] ~ a.list-group-item[href*="course/view.php?id="] > div {
+    .list-group-item[data-key|=mycourses] ~ a.list-group-item[href*="course/view.php?id="] > div {
         margin-left: 0 !important;
     }
 
     /* Set course icon to each course menu items. */
-    div.list-group-item[data-key|=mycourses] ~ a.list-group-item[href*="course/view.php?id="] span.media-left > img {
+    .list-group-item[data-key|=mycourses] ~ a.list-group-item[href*="course/view.php?id="] span.media-left > img {
         content: url([[pix:i/course]]);
     }
 
@@ -233,39 +233,39 @@ body.loginbackgroundimage {
      */
 
     /* Add solid border and realign the node with the other ones. */
-    a.list-group-item[data-key|=coursehome] {
+    .list-group-item[data-key|=coursehome] {
         @include navdrawer-node-separator(parent);
         padding: .75rem 1.25rem;
     }
 
     /* Menu items participants, badges, grades and competencies need dashed bottom border. */
-    a.list-group-item[data-key|=participants],
-    a.list-group-item[data-key|=badgesview],
-    a.list-group-item[data-key|=grades],
-    a.list-group-item[href*="coursecompetencies"] {
+    .list-group-item[data-key|=participants],
+    .list-group-item[data-key|=badgesview],
+    .list-group-item[data-key|=grades],
+    .list-group-item[href*="coursecompetencies"] {
         @include navdrawer-node-separator(child);
     }
 
     /* Set icons to menu items participants, badges, grades and competencies. */
-    a.list-group-item[data-key|=participants] span.media-left > img {
+    .list-group-item[data-key|=participants] span.media-left > img {
         content: url([[pix:i/users]]);
     }
-    a.list-group-item[data-key|=badgesview] span.media-left > img {
+    .list-group-item[data-key|=badgesview] span.media-left > img {
         content: url([[pix:i/badge]]);
     }
-    a.list-group-item[data-key|=grades] span.media-left > img {
+    .list-group-item[data-key|=grades] span.media-left > img {
         content: url([[pix:i/grades]]);
     }
-    a.list-group-item[href*="coursecompetencies"] span.media-left > img {
+    .list-group-item[href*="coursecompetencies"] span.media-left > img {
         content: url([[pix:i/user]]);
     }
 
     /* Set and align icons before course section links */
-    a.list-group-item[href*="section-"] span.media-left > img.icon {
+    .list-group-item[href*="section-"] span.media-left > img.icon {
         content: url([[pix:i/folder]]);
     }
 
-    a.list-group-item[href*="section-"] .icon {
+    .list-group-item[href*="section-"] .icon {
         vertical-align: sub;
     }
 }

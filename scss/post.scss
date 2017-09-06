@@ -797,21 +797,24 @@ a[href^="mailto"]::before {
 @if variable-exists(incoursesettingsswitchtorole) {
     @if $incoursesettingsswitchtorole == 'yes' {
         /* Hide the switch role to menu item within the user menu */
-        .usermenu .dropdown-menu a[data-title*="switchroleto"],
-        .usermenu .dropdown-menu a[data-title*="switchrolereturn"] {
-            display: none;
-        }
-        /* As the last menu item is missing, we have to modify the dropdown menu container. */
-        .dropdown-menu.dropdown-menu-right {
-            padding-bottom: 0;
-            border-bottom: none;
-        }
-        /* We have to add a border for the users who do not have a switch role menu item due to their capabilities. */
-        .dropdown-menu.dropdown-menu-right a:last-child {
-            border-bottom: 1px solid $gray-lighter;
+        .usermenu {
+            .dropdown-menu a[data-title*="switchroleto"],
+            .dropdown-menu a[data-title*="switchrolereturn"] {
+                display: none;
+            }
+            /* As the last menu item is missing, we have to modify the dropdown menu container. */
+            .dropdown-menu.dropdown-menu-right {
+                padding-bottom: 0;
+                border-bottom: none;
+            }
+            /* We have to add a border for the users who do not have a switch role menu item due to their capabilities. */
+            .dropdown-menu.dropdown-menu-right a:last-child {
+                border-bottom: 1px solid $gray-lighter;
+            }
         }
     }
 }
+
 
 
 /*------------------------------------

@@ -490,6 +490,10 @@ body.loginbackgroundimage {
     padding-left: 15px;
     padding-right: 15px;
 }
+/* Do not display the intro box if it do not contain any content. */
+#intro:empty {
+    display: none;
+}
 
 /*
  * Misc

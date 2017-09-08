@@ -24,11 +24,16 @@
 define(['jquery'], function($) {
     "use strict";
 
+    /**
+     * Initialising.
+     *
+     * @param value
+     */
     function initcatchshortcuts(value) {
         if (value == 'end') {
             // Catch the end key to be able to change the behavior.
             $(document).keydown(function(e) {
-                if(e.keyCode == 35) {
+                if (e.keyCode == 35) {
                     // Scroll only to the bottom of the course content.
                     scrollToBottomOfCourse(e);
                 }
@@ -38,7 +43,7 @@ define(['jquery'], function($) {
         if (navigator.appVersion.indexOf("Mac") != -1 && value == 'cmdarrowdown') {
             // Bind the cmd + arrow down shortcut to be able to change the behavior.
             $(document).keydown(function(e) {
-                if(e.keyCode == 40 && e.metaKey) {
+                if (e.keyCode == 40 && e.metaKey) {
                     // Scroll only to the bottom of the course content.
                     scrollToBottomOfCourse(e);
                 }
@@ -48,7 +53,7 @@ define(['jquery'], function($) {
         if (navigator.appVersion.indexOf("Win") != -1 && value == 'ctrlarrowdown') {
             // Bind the ctrl + arrow down shortcut to be able to change the behavior.
             $(document).keydown(function(e) {
-                if(e.keyCode == 40 && e.ctrlKey) {
+                if (e.keyCode == 40 && e.ctrlKey) {
                     // Scroll only to the bottom of the course content.
                     scrollToBottomOfCourse(e);
                 }
@@ -56,6 +61,11 @@ define(['jquery'], function($) {
         }
     }
 
+    /**
+     * Function to scroll only to the bottom of the course and not the bottom of the whole page.
+     *
+     * @param event
+     */
     function scrollToBottomOfCourse(event) {
         // Prevent default behavior.
         event.preventDefault();

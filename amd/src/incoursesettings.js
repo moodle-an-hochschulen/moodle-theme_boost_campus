@@ -24,9 +24,12 @@
 define(['jquery'], function($) {
     "use strict";
 
+    /**
+     * Initialising.
+     */
     function initInCourseSettings() {
-        $('#page-header .context-header-settings-menu').on('click', function (e) {
-            e.stopPropagation();
+        $('#page-header .context-header-settings-menu').on('click', function(event) {
+            event.stopPropagation();
             if ($('#boost-campus-course-settings').is(":visible")) {
                 $('#boost-campus-course-settings').hide(400);
             } else {

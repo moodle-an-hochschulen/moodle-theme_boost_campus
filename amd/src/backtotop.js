@@ -24,6 +24,9 @@
 define(['jquery'], function($) {
     "use strict";
 
+    /**
+     * Initialising.
+     */
     function initBackToTop() {
         // Add a fontawesome icon after the footer as the back to top button.
         $('#page-footer').after('<i class="fa fa-chevron-up fa-2x" id="back-to-top"></i>');

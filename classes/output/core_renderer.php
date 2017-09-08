@@ -14,6 +14,15 @@
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
+/**
+ * Renderers to align Moodle's HTML with that expected by Bootstrap
+ *
+ * @package   theme_boost_campus
+ * @copyright 2017 Kathrin Osswald, Ulm University kathrin.osswald@uni-ulm.de
+ *            copyright based on code from theme_boost by Bas Brands
+ * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
+
 namespace theme_boost_campus\output;
 
 use coding_exception;
@@ -39,15 +48,15 @@ use pix_icon;
 
 defined('MOODLE_INTERNAL') || die;
 
-/**
- * Renderers to align Moodle's HTML with that expected by Bootstrap
- *
- * @package   theme_boost_campus
- * @copyright 2017 Kathrin Osswald, Ulm University kathrin.osswald@uni-ulm.de
-   @copyright based on code from theme_boost by Bas Brands
- * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
- */
 
+/**
+ * Extending the core_renderer interface.
+ *
+ * @copyright 2017 Kathrin Osswald, Ulm University kathrin.osswald@uni-ulm.de
+ * @license http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ * @package theme_boost_campus
+ * @category output
+ */
 class core_renderer extends \theme_boost\output\core_renderer {
 
     /**
@@ -184,8 +193,9 @@ class core_renderer extends \theme_boost\output\core_renderer {
                 // Get the role name switched to.
                 $role = $opts->metadata['rolename'];
                 // Get the URL to switch back (normal role).
-                $url = new moodle_url('/course/switchrole.php', array('id' => $COURSE->id, 'sesskey' => sesskey(),
-                        'switchrole' => 0, 'returnurl' => $this->page->url->out_as_local_url(false)));
+                $url = new moodle_url('/course/switchrole.php',
+                    array('id' => $COURSE->id, 'sesskey' => sesskey(), 'switchrole' => 0,
+                          'returnurl' => $this->page->url->out_as_local_url(false)));
                 $html .= html_writer::start_tag('div', array('class' => 'switched-role-infobox alert alert-info'));
                 $html .= html_writer::start_tag('div', array());
                 $html .= get_string('switchedroleto', 'theme_boost_campus');
@@ -195,8 +205,8 @@ class core_renderer extends \theme_boost\output\core_renderer {
                 // Return to normal role link.
                 $html .= html_writer::start_tag('div', array('class' => 'switched-role-back col-6'));
                 $html .= html_writer::empty_tag('img', array('src' => $this->pix_url('a/logout', 'moodle')));
-                $html .= html_writer::tag('a', get_string('switchrolereturn', 'core'), array('class' => 'switched-role-backlink',
-                        'href' => $url));
+                $html .= html_writer::tag('a', get_string('switchrolereturn', 'core'),
+                    array('class' => 'switched-role-backlink', 'href' => $url));
                 $html .= html_writer::end_tag('div'); // Return to normal role link: end div.
                 $html .= html_writer::end_tag('div');
             }
@@ -235,6 +245,7 @@ class core_renderer extends \theme_boost\output\core_renderer {
             $showcoursemenu = true;
         }
         // MODIFICATION END.
+        // @codingStandardsIgnoreStart
         /* ORIGINAL START.
         if (($context->contextlevel == CONTEXT_COURSE) &&
                 !empty($currentnode) &&
@@ -242,11 +253,12 @@ class core_renderer extends \theme_boost\output\core_renderer {
             $showcoursemenu = true;
         }
         ORIGINAL END. */
+        // @codingStandardsIgnoreEnd
 
         $courseformat = course_get_format($this->page->course);
         // This is a single activity course format, always show the course menu on the activity main page.
         if ($context->contextlevel == CONTEXT_MODULE &&
-                !$courseformat->has_view_page()) {
+            !$courseformat->has_view_page()) {
 
             $this->page->navigation->initialise();
             $activenode = $this->page->navigation->find_active_node();
@@ -266,15 +278,15 @@ class core_renderer extends \theme_boost\output\core_renderer {
 
         // This is the site front page.
         if ($context->contextlevel == CONTEXT_COURSE &&
-                !empty($currentnode) &&
-                $currentnode->key === 'home') {
+            !empty($currentnode) &&
+            $currentnode->key === 'home') {
             $showfrontpagemenu = true;
         }
 
         // This is the user profile page.
         if ($context->contextlevel == CONTEXT_USER &&
-                !empty($currentnode) &&
-                ($currentnode->key === 'myprofile')) {
+            !empty($currentnode) &&
+            ($currentnode->key === 'myprofile')) {
             $showusermenu = true;
         }
 
@@ -338,8 +350,8 @@ class core_renderer extends \theme_boost\output\core_renderer {
             $url = $url->out(false);
         }
         $context->logourl = $url;
-        $context->sitename = format_string($SITE->fullname, true, ['context' => context_course::instance(SITEID),
-                "escape" => false]);
+        $context->sitename = format_string($SITE->fullname, true,
+            ['context' => context_course::instance(SITEID), "escape" => false]);
         // MODIFICATION START.
         // Only if setting "loginform" is checked, then call own login.mustache.
         if (get_config('theme_boost_campus', 'loginform') == 'yes') {
@@ -368,9 +380,9 @@ class core_renderer extends \theme_boost\output\core_renderer {
      * @return boolean nodesskipped - True if nodes were skipped in building the menu
      */
     protected function build_action_menu_from_navigation(action_menu $menu,
-                                                       navigation_node $node,
-                                                       $indent = false,
-                                                       $onlytopleafnodes = false) {
+                                                         navigation_node $node,
+                                                         $indent = false,
+                                                         $onlytopleafnodes = false) {
         $skipped = false;
         // Build an action menu based on the visible nodes from this navigation tree.
         foreach ($node->children as $menuitem) {
@@ -409,5 +421,4 @@ class core_renderer extends \theme_boost\output\core_renderer {
         }
         return $skipped;
     }
-
 }

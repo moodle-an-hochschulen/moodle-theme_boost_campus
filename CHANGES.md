@@ -4,6 +4,10 @@ moodle-theme_boost_campus
 Changes
 -------
 
+### Release v.3.2-r2
+
+* 2017-09-12 - Making code checkers happy.
+
 ### Release v3.2-r1
 
 * 2017-09-01 - Setting to move the 'Switch role to...' menu item to the course settings.

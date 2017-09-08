@@ -4,7 +4,7 @@ moodle-theme_boost_campus
 Changes
 -------
 
-### Unreleased
+### Release v3.2-r1
 
 * 2017-09-01 - Setting to move the 'Switch role to...' menu item to the course settings.
 * 2017-08-28 - Expose navigation node properties in the boost flat navigation (Backport of MDL-59425).

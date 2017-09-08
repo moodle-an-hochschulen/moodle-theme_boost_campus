@@ -107,7 +107,8 @@ body.loginbackgroundimage {
                 color: $brand-primary;
             }
             .popover-region-notifications .popover-region-toggle .icon,
-            .popover-region-messages .popover-region-toggle .icon {
+            .popover-region-messages .popover-region-toggle .icon,
+            .search-input-wrapper .icon {
                 filter: brightness(9);
             }
         }

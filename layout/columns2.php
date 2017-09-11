@@ -93,17 +93,17 @@ ORIGINAL END. */
 
 // MODIFICATION START: Require additional layout files.
 // Add footer blocks and standard footer.
-require_once(dirname(__FILE__).'/includes/footer.php');
+require_once(__DIR__ . '/includes/footer.php');
 // Get badgeareaitems config.
 $badgeareaitems = get_config('theme_boost_campus', 'badgeareaitems');
 if (!empty($badgeareaitems)) {
     // Add badgearea layout file.
-    require_once(dirname(__FILE__) . '/includes/badgearea.php');
+    require_once(__DIR__ . '/includes/badgearea.php');
 }
 // Get footnote config.
 $footnote = get_config('theme_boost_campus', 'footnote');
 if (!empty($footnote)) {
     // Add footnote layout file.
-    require_once(dirname(__FILE__) . '/includes/footnote.php');
+    require_once(__DIR__ . '/includes/footnote.php');
 }
 // MODIFICATION END.

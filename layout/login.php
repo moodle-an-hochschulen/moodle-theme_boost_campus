@@ -44,6 +44,6 @@ echo $OUTPUT->render_from_template('theme_boost/login', $templatecontext);
 $footnote = get_config('theme_boost_campus', 'footnote');
 if (!empty($footnote)) {
     // Add footnote layout file.
-    require_once(dirname(__FILE__) . '/includes/footnote.php');
+    require_once(__DIR__ . '/includes/footnote.php');
 }
 // MODIFICATION END.

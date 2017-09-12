@@ -4,7 +4,7 @@ moodle-theme_boost_campus
 Changes
 -------
 
-### Release v.3.2-r2
+### Release v3.2-r2
 
 * 2017-09-12 - Making code checkers happy.
 

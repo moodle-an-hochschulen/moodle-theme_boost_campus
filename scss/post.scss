@@ -106,9 +106,7 @@ body.loginbackgroundimage {
             .dropdown-toggle:hover {
                 color: $brand-primary;
             }
-            .popover-region-notifications .popover-region-toggle .icon,
-            .popover-region-messages .popover-region-toggle .icon,
-            .search-input-wrapper .icon {
+            .nav-link .icon {
                 filter: brightness(9);
             }
         }

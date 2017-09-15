@@ -4,6 +4,10 @@ moodle-theme_boost_campus
 Changes
 -------
 
+### Unreleased
+
+* 2017-09-15 - Improving displaying of calendar block events popup panel.
+
 ### Release v3.2-r2
 
 * 2017-09-12 - Making code checkers happy.

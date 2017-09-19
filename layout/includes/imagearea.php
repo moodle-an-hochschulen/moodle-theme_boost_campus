@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Theme Boost Campus - Layout file for badgearea.
+ * Theme Boost Campus - Layout file for Image area.
  *
  * @package   theme_boost_campus
  * @copyright 2017 Kathrin Osswald, Ulm University kathrin.osswald@uni-ulm.de
@@ -26,10 +26,10 @@
 defined('MOODLE_INTERNAL') || die();
 require_once($CFG->dirroot . '/theme/boost_campus/locallib.php');
 
-$badgeareafiles = theme_boost_campus_get_badgeareacontent();
+$imageareafiles = theme_boost_campus_get_imageareacontent();
 
 // Only proceed if received array is not empty.
-if (!empty($badgeareafiles)) {
-    $templatecontext['badgeareafiles'] = $badgeareafiles;
-    echo $OUTPUT->render_from_template('theme_boost_campus/badgearea', $templatecontext);
+if (!empty($imageareafiles)) {
+    $templatecontext['imageareafiles'] = $imageareafiles;
+    echo $OUTPUT->render_from_template('theme_boost_campus/imagearea', $templatecontext);
 }

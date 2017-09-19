@@ -89,15 +89,15 @@ function theme_boost_campus_get_loginbackgroundimage_scss() {
 
 
 /**
- * Create information needed for the badgearea.mustache file.
+ * Create information needed for the imagearea.mustache file.
  *
  * @return array
  */
-function theme_boost_campus_get_badgeareacontent() {
+function theme_boost_campus_get_imageareacontent() {
     // Get cache.
-    $themeboostcampuscache = cache::make('theme_boost_campus', 'badgearea');
+    $themeboostcampuscache = cache::make('theme_boost_campus', 'imagearea');
     // If cache is filled, return the cache.
-    $cachecontent = $themeboostcampuscache->get('badgeareadata');
+    $cachecontent = $themeboostcampuscache->get('imageareadata');
     if (!empty($cachecontent)) {
         return $cachecontent;
     } else { // Create cache.
@@ -106,13 +106,13 @@ function theme_boost_campus_get_badgeareacontent() {
         // Get filearea.
         $fs = get_file_storage();
         // Get all files from filearea.
-        $files = $fs->get_area_files($systemcontext->id, 'theme_boost_campus', 'badgeareaitems', false, 'itemid', false);
+        $files = $fs->get_area_files($systemcontext->id, 'theme_boost_campus', 'imageareaitems', false, 'itemid', false);
 
         // Only continue processing if there are files in the filearea.
         if (!empty($files)) {
-            // Get the content from the setting badgeareaitemslink and explode it to an array by the delimiter "new line".
+            // Get the content from the setting imageareaitemslink and explode it to an array by the delimiter "new line".
             // The string contains: the image identifier (uploaded file name) and the corresponding link URL.
-            $lines = explode("\n", get_config('theme_boost_campus', 'badgeareaitemslink'));
+            $lines = explode("\n", get_config('theme_boost_campus', 'imageareaitemslink'));
             // Parse item settings.
             foreach ($lines as $line) {
                 $line = trim($line);
@@ -140,25 +140,25 @@ function theme_boost_campus_get_badgeareacontent() {
                 $filepath = $url->get_path();
                 // Get the filename.
                 $filename = $file->get_filename();
-                // If filename and key value from the badgeareaitemslink setting entry match.
+                // If filename and key value from the imageareaitemslink setting entry match.
                 if (array_key_exists($filename, $links)) {
                     // Set the file and the corresponding link.
-                    $badgeareacache[] = array('filepath' => $filepath, 'linkpath' => $links[$filename]);
+                    $imageareacache[] = array('filepath' => $filepath, 'linkpath' => $links[$filename]);
                     // Fill the cache.
-                    $themeboostcampuscache->set('badgeareadata', $badgeareacache);
+                    $themeboostcampuscache->set('imageareadata', $imageareacache);
                 } else { // Just add the file without a link.
-                    $badgeareacache[] = array('filepath' => $filepath);
+                    $imageareacache[] = array('filepath' => $filepath);
                     // Fill the cache.
-                    $themeboostcampuscache->set('badgeareadata', $badgeareacache);
+                    $themeboostcampuscache->set('imageareadata', $imageareacache);
                 }
             }
             // Sort array alphabetically ascending to the key "filepath".
-            usort($badgeareacache, function($a, $b) {
+            usort($imageareacache, function($a, $b) {
                 return strcmp($a["filepath"], $b["filepath"]);
             });
-            return $badgeareacache;
+            return $imageareacache;
         } else { // If no images are uploaded, then cache an empty array.
-            return $themeboostcampuscache->set('badgeareadata', array());
+            return $themeboostcampuscache->set('imageareadata', array());
         }
     }
 }

@@ -335,32 +335,32 @@ if ($ADMIN->fulltree) {
     $title = get_string('additionallayoutsettings', 'theme_boost_campus', null, true);
     $page = new admin_settingpage($name, $title);
 
-    // Settings title to group badgearea settings together with a common heading and description.
-    $name = 'theme_boost_campus/badgeareaheading';
-    $title = get_string('badgeareaheadingsetting', 'theme_boost_campus', null, true);
-    $description = get_string('badgeareaheadingsetting_desc', 'theme_boost_campus', null, true);
+    // Settings title to group image area settings together with a common heading and description.
+    $name = 'theme_boost_campus/imageareaheading';
+    $title = get_string('imageareaheadingsetting', 'theme_boost_campus', null, true);
+    $description = get_string('imageareaheadingsetting_desc', 'theme_boost_campus', null, true);
     $setting = new admin_setting_heading($name, $title, $description);
     $page->add($setting);
 
-    // Badgearea setting.
-    $name = 'theme_boost_campus/badgeareaitems';
-    $title = get_string('badgeareaitemssetting', 'theme_boost_campus', null, true);
-    $description = get_string('badgeareaitemssetting_desc', 'theme_boost_campus', null, true);
-    $setting = new admin_setting_configstoredfile($name, $title, $description, 'badgeareaitems', 0, array('maxfiles' => 100,
+    // Image area setting.
+    $name = 'theme_boost_campus/imageareaitems';
+    $title = get_string('imageareaitemssetting', 'theme_boost_campus', null, true);
+    $description = get_string('imageareaitemssetting_desc', 'theme_boost_campus', null, true);
+    $setting = new admin_setting_configstoredfile($name, $title, $description, 'imageareaitems', 0, array('maxfiles' => 100,
         'accepted_types' => array('web_image'), 'subdirs' => 0));
     $setting->set_updatedcallback('theme_boost_campus_reset_app_cache');
     $page->add($setting);
 
-    $name = 'theme_boost_campus/badgeareaitemslink';
-    $title = get_string('badgeareaitemslinksetting', 'theme_boost_campus', null, true);
-    $description = get_string('badgeareaitemslinksetting_desc', 'theme_boost_campus', null, true);
+    $name = 'theme_boost_campus/imageareaitemslink';
+    $title = get_string('imageareaitemslinksetting', 'theme_boost_campus', null, true);
+    $description = get_string('imageareaitemslinksetting_desc', 'theme_boost_campus', null, true);
     $setting = new admin_setting_configtextarea($name, $title, $description, null, PARAM_TEXT);
     $setting->set_updatedcallback('theme_boost_campus_reset_app_cache');
     $page->add($setting);
 
-    $name = 'theme_boost_campus/badgeareaitemsmaxheight';
-    $title = get_string('badgeareaitemsmaxheightsetting', 'theme_boost_campus', null, true);
-    $description = get_string('badgeareaitemsmaxheightsetting_desc', 'theme_boost_campus', null, true);
+    $name = 'theme_boost_campus/imageareaitemsmaxheight';
+    $title = get_string('imageareaitemsmaxheightsetting', 'theme_boost_campus', null, true);
+    $description = get_string('imageareaitemsmaxheightsetting_desc', 'theme_boost_campus', null, true);
     $setting = new admin_setting_configtext_with_maxlength($name, $title, $description, 100, PARAM_INT, null, 3);
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);

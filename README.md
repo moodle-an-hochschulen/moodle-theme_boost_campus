@@ -146,23 +146,23 @@ Moodle provides some default links in the footer: Link to the Moodle docs, login
 
 ### 5. Tab "Additional Layout Settings"
 
-#### Badgearea
+#### Image area
 
-##### Badge area items
+##### Image area items
 
-With this widget you can upload your images that will be displayed in the additional badge area region. The images will be sorted and displayed alphabetically by the filename. To remove this region, simply delete all uploaded images.
+With this widget you can upload your images that will be displayed in the additional image area region. The images will be sorted and displayed alphabetically by the filename. To remove this region, simply delete all uploaded images.
 
-##### Badge area item links
+##### Image area item links
 
 With this optional setting you can add links to your uploaded images.
 Each line consists of the file identifier (the file name) the a link URL, separated by pipe characters. Each link declaration needs to be written in a new line.
 For example:
 ``moodle.jpg|http://moodle.org``
-You can declare links for a abitrary amount of your uploaded images. The links will be added only to those badges that match their filename with the identifier declared in this setting.
+You can declare links for a abitrary amount of your uploaded images. The links will be added only to those images that match their filename with the identifier declared in this setting.
 
-##### Badge area items maximal height
+##### Image area items maximal height
 
-With this setting you can change the height in pixels for your uploaded badges. All images will have the same maximum height and their width will be resized proportionally. The default value is set to 100 pixels.
+With this setting you can change the height in pixels for your uploaded images. All images will have the same maximum height and their width will be resized proportionally. The default value is set to 100 pixels.
 
 #### Footnote
 

@@ -94,11 +94,11 @@ ORIGINAL END. */
 // MODIFICATION START: Require additional layout files.
 // Add footer blocks and standard footer.
 require_once(__DIR__ . '/includes/footer.php');
-// Get badgeareaitems config.
-$badgeareaitems = get_config('theme_boost_campus', 'badgeareaitems');
-if (!empty($badgeareaitems)) {
-    // Add badgearea layout file.
-    require_once(__DIR__ . '/includes/badgearea.php');
+// Get imageareaitems config.
+$imageareaitems = get_config('theme_boost_campus', 'imageareaitems');
+if (!empty($imageareaitems)) {
+    // Add imagearea layout file.
+    require_once(__DIR__ . '/includes/imagearea.php');
 }
 // Get footnote config.
 $footnote = get_config('theme_boost_campus', 'footnote');

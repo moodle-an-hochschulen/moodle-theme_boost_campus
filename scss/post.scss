@@ -748,18 +748,18 @@ a[href^="mailto"]::before {
   Additional Regions
   -------------------------------------*/
 /*
- * Badgearea.
+ * Image area.
  */
-.badgearea {
+.imagearea {
     text-align: center;
     background-color: $gray-dark;
     border-top: 1px solid #fff;
 
     img {
-        /* If setting badgeareaitemsmaxheight is not empty. */
-        @if variable-exists(badgeareaitemsmaxheight) {
+        /* If setting imageareaitemsmaxheight is not empty. */
+        @if variable-exists(imageareaitemsmaxheight) {
             /* set the value. */
-            max-height: #{$badgeareaitemsmaxheight}px;
+            max-height: #{$imageareaitemsmaxheight}px;
         }
         width: auto;
         padding-left: 1rem;

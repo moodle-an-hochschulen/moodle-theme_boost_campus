@@ -6,6 +6,7 @@ Changes
 
 ### Unreleased
 
+* 2017-09-19 - Changed naming of the former badgearea setting to imagearea to prevent mixing up with Moodle badges.
 * 2017-09-15 - Improving displaying of calendar block events popup panel.
 
 ### Release v3.2-r2

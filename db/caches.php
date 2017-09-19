@@ -25,7 +25,7 @@
 defined('MOODLE_INTERNAL') || die();
 
 $definitions = array(
-    'badgearea' => array(
+    'imagearea' => array(
         'mode' => cache_store::MODE_APPLICATION,
         'staticacceleration' => true,
     )

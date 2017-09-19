@@ -94,7 +94,7 @@ function theme_boost_campus_get_pre_scss($theme) {
         'branddangercolor' => ['brand-danger'],
         'darknavbar' => ['darknavbar'],
         'footerblocks' => ['footerblocks'],
-        'badgeareaitemsmaxheight' => ['badgeareaitemsmaxheight'],
+        'imageareaitemsmaxheight' => ['imageareaitemsmaxheight'],
         'showsettingsincourse' => ['showsettingsincourse'],
         'incoursesettingsswitchtorole' => ['incoursesettingsswitchtorole']
         // MODIFICATION END.
@@ -144,8 +144,8 @@ function theme_boost_campus_pluginfile($course, $cm, $context, $filearea, $args,
             return $theme->setting_file_serve('loginbackgroundimage', $args, $forcedownload, $options);
         } else if ($filearea === 'fontfiles') {
             return $theme->setting_file_serve('fontfiles', $args, $forcedownload, $options);
-        } else if ($filearea === 'badgeareaitems') {
-            return $theme->setting_file_serve('badgeareaitems', $args, $forcedownload, $options);
+        } else if ($filearea === 'imageareaitems') {
+            return $theme->setting_file_serve('imageareaitems', $args, $forcedownload, $options);
         } else {
             send_file_not_found();
         }
@@ -159,9 +159,9 @@ function theme_boost_campus_pluginfile($course, $cm, $context, $filearea, $args,
  */
 function theme_boost_campus_reset_app_cache() {
     // Get the cache from area.
-    $themeboostcampuscache = cache::make('theme_boost_campus', 'badgearea');
-    // Delete the cache for the badgearea.
-    $themeboostcampuscache->delete('badgeareadata');
+    $themeboostcampuscache = cache::make('theme_boost_campus', 'imagearea');
+    // Delete the cache for the imagearea.
+    $themeboostcampuscache->delete('imageareadata');
     // To be safe and because there can only be one callback function added to a plugin setting,
     // we also delete the complete theme cache here.
     theme_reset_all_caches();

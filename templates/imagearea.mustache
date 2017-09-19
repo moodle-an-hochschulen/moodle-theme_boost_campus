@@ -15,18 +15,18 @@
     along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 }}
 {{!
-    @template theme_boost_campus/badgearea
+    @template theme_boost_campus/imagearea
 
-    Boost_campus badgearea layout template.
+    Boost_campus imagearea layout template.
 
     Context variables required for this template:
-    * badgeareafiles - array of uploaded images.
-    * linkpath - true if image has a link defined in setting badgeareaitemslink.
+    * imageareafiles - array of uploaded images.
+    * linkpath - true if image has a link defined in setting imageareaitemslink.
     * filepath - the path where the uploaded image is stored.
 
      Example context (json):
     {
-        "badgeareafiles": {
+        "imageareafiles": {
             "filepath": "/pix/moodlelogo.png",
             "linkpath": "http://moodle.org"
          }
@@ -34,14 +34,14 @@
 
 }}
 
-    <div class="badgearea p-y-1">
+    <div class="imagearea p-y-1">
         <div class="container-fluid">
             <div class="row-fluid">
-                {{#badgeareafiles}}
+                {{#imageareafiles}}
                     {{#linkpath}}<a href="{{linkpath}}">{{/linkpath}}
                         <img src="{{filepath}}">
                     {{#linkpath}}</a>{{/linkpath}}
-                {{/badgeareafiles}}
+                {{/imageareafiles}}
             </div>
         </div>
     </div>

@@ -187,28 +187,33 @@ class core_renderer extends \theme_boost\output\core_renderer {
         // MODIFICATION START.
         // Only use this if setting 'showswitchedroleincourse' is active.
         if (get_config('theme_boost_campus', 'showswitchedroleincourse') === 'yes') {
-            $opts = \user_get_user_navigation_info($USER, $this->page);
-            // Role is switched.
-            if (!empty($opts->metadata['asotherrole'])) {
-                // Get the role name switched to.
-                $role = $opts->metadata['rolename'];
-                // Get the URL to switch back (normal role).
-                $url = new moodle_url('/course/switchrole.php',
-                    array('id' => $COURSE->id, 'sesskey' => sesskey(), 'switchrole' => 0,
-                          'returnurl' => $this->page->url->out_as_local_url(false)));
-                $html .= html_writer::start_tag('div', array('class' => 'switched-role-infobox alert alert-info'));
-                $html .= html_writer::start_tag('div', array());
-                $html .= get_string('switchedroleto', 'theme_boost_campus');
-                // Give this a span to be able to address via CSS.
-                $html .= html_writer::tag('span', $role, array('class' => 'switched-role'));
-                $html .= html_writer::end_tag('div');
-                // Return to normal role link.
-                $html .= html_writer::start_tag('div', array('class' => 'switched-role-back col-6'));
-                $html .= html_writer::empty_tag('img', array('src' => $this->pix_url('a/logout', 'moodle')));
-                $html .= html_writer::tag('a', get_string('switchrolereturn', 'core'),
-                    array('class' => 'switched-role-backlink', 'href' => $url));
-                $html .= html_writer::end_tag('div'); // Return to normal role link: end div.
-                $html .= html_writer::end_tag('div');
+            // Check if user is logged in.
+            // If not, adding this section would make no sense and, even worse,
+            // user_get_user_navigation_info() will throw an exception due to the missing user object.
+            if (isloggedin()) {
+                $opts = \user_get_user_navigation_info($USER, $this->page);
+                // Role is switched.
+                if (!empty($opts->metadata['asotherrole'])) {
+                    // Get the role name switched to.
+                    $role = $opts->metadata['rolename'];
+                    // Get the URL to switch back (normal role).
+                    $url = new moodle_url('/course/switchrole.php',
+                                          array('id'        => $COURSE->id, 'sesskey' => sesskey(), 'switchrole' => 0,
+                                                'returnurl' => $this->page->url->out_as_local_url(false)));
+                    $html .= html_writer::start_tag('div', array('class' => 'switched-role-infobox alert alert-info'));
+                    $html .= html_writer::start_tag('div', array());
+                    $html .= get_string('switchedroleto', 'theme_boost_campus');
+                    // Give this a span to be able to address via CSS.
+                    $html .= html_writer::tag('span', $role, array('class' => 'switched-role'));
+                    $html .= html_writer::end_tag('div');
+                    // Return to normal role link.
+                    $html .= html_writer::start_tag('div', array('class' => 'switched-role-back col-6'));
+                    $html .= html_writer::empty_tag('img', array('src' => $this->pix_url('a/logout', 'moodle')));
+                    $html .= html_writer::tag('a', get_string('switchrolereturn', 'core'),
+                                               array('class' => 'switched-role-backlink', 'href' => $url));
+                    $html .= html_writer::end_tag('div'); // Return to normal role link: end div.
+                    $html .= html_writer::end_tag('div');
+                }
             }
         }
         // MODIFICATION END.

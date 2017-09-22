@@ -4,6 +4,10 @@ moodle-theme_boost_campus
 Changes
 -------
 
+### Unreleased
+
+* 2017-09-22 - Check if user is logged in before showing the switched role information box.
+
 ### Release v3.2-r3
 
 * 2017-09-19 - Changed naming of the former badgearea setting to imagearea to prevent mixing up with Moodle badges.

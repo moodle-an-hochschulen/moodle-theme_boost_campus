@@ -6,6 +6,7 @@ Changes
 
 ### Unreleased
 
+* 2017-09-25 - Improved catching shortcuts feature to prevent the catching when form elements are focused.
 * 2017-09-22 - Check if user is logged in before showing the switched role information box.
 
 ### Release v3.2-r3

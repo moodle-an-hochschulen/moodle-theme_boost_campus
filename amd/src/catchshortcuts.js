@@ -34,8 +34,11 @@ define(['jquery'], function($) {
             // Catch the end key to be able to change the behavior.
             $(document).keydown(function(e) {
                 if (e.keyCode == 35) {
-                    // Scroll only to the bottom of the course content.
-                    scrollToBottomOfCourse(e);
+                    // Additionally check no active focus in form elements.
+                    if (checkForActiveFormElement() != true) {
+                        // Scroll only to the bottom of the course content.
+                        scrollToBottomOfCourse(e);
+                    }
                 }
             });
         }
@@ -44,8 +47,11 @@ define(['jquery'], function($) {
             // Bind the cmd + arrow down shortcut to be able to change the behavior.
             $(document).keydown(function(e) {
                 if (e.keyCode == 40 && e.metaKey) {
-                    // Scroll only to the bottom of the course content.
-                    scrollToBottomOfCourse(e);
+                    // Additionally check no active focus in form elements.
+                    if (checkForActiveFormElement() != true) {
+                        // Scroll only to the bottom of the course content.
+                        scrollToBottomOfCourse(e);
+                    }
                 }
             });
         }
@@ -54,8 +60,11 @@ define(['jquery'], function($) {
             // Bind the ctrl + arrow down shortcut to be able to change the behavior.
             $(document).keydown(function(e) {
                 if (e.keyCode == 40 && e.ctrlKey) {
-                    // Scroll only to the bottom of the course content.
-                    scrollToBottomOfCourse(e);
+                    // Additionally check no active focus in form elements.
+                    if (checkForActiveFormElement() != true) {
+                        // Scroll only to the bottom of the course content.
+                        scrollToBottomOfCourse(e);
+                    }
                 }
             });
         }
@@ -73,6 +82,22 @@ define(['jquery'], function($) {
         $('html, body').animate({
             scrollTop: $('#page-footer').offset().top - $(window).height() + 50
         }, 500);
+    }
+
+    /**
+     * Function to check for an active form element.
+     *
+     * @return boolean
+     */
+    function checkForActiveFormElement() {
+        // Get the active Element for the current page.
+        var activeElement = document.activeElement.tagName;
+        var returnvalue = false;
+        // Check if the given active element is an input field or a textarea.
+        if (activeElement == 'INPUT' || activeElement == 'TEXTAREA') {
+            returnvalue = true;
+        }
+        return returnvalue;
     }
 
     return {

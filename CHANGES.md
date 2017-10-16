@@ -4,7 +4,7 @@ moodle-theme_boost_campus
 Changes
 -------
 
-### Unreleased
+### Release v3.2-r5
 
 * 2017-10-16 - Improved catching shortcuts feature again to prevent catching when editable content is focused.
 

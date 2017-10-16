@@ -91,10 +91,10 @@ define(['jquery'], function($) {
      */
     function checkForActiveFormElement() {
         // Get the active Element for the current page.
-        var activeElement = document.activeElement.tagName;
+        var activeElement = document.activeElement;
         var returnvalue = false;
-        // Check if the given active element is an input field or a textarea.
-        if (activeElement == 'INPUT' || activeElement == 'TEXTAREA') {
+        // Check if the given active element is type of input field, textarea or editable content.
+        if (activeElement.tagName == 'INPUT' || activeElement.tagName == 'TEXTAREA' || activeElement.isContentEditable == true) {
             returnvalue = true;
         }
         return returnvalue;

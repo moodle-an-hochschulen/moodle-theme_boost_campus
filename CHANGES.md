@@ -6,6 +6,7 @@ Changes
 
 ### Unreleased
 
+* 2017-11-07 - Updated travis.yml to use newer node version for fixing TravisCI error.
 * 2017-10-17 - Minor change in SCSS to fit the borders of the current section in the periods format into the section.
 
 ### Release v3.2-r5

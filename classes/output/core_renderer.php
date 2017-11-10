@@ -160,6 +160,12 @@ class core_renderer extends \theme_boost\output\core_renderer {
         /* ORIGINAL START.
         $html .= html_writer::div($this->context_header_settings_menu(), 'pull-xs-right context-header-settings-menu');
         ORIGINAL END. */
+        // MODIFICATION START:
+        // To get the same structure as on the Dashboard, we need to add the page heading buttons here for the profile page.
+        if ($PAGE->pagelayout == 'mypublic') {
+            $html .= html_writer::div($this->page_heading_button(), 'breadcrumb-button pull-xs-right');
+        }
+        // MODIFICATION END.
         $html .= html_writer::start_div('pull-xs-left');
         $html .= $this->context_header();
         $html .= html_writer::end_div();
@@ -167,13 +173,27 @@ class core_renderer extends \theme_boost\output\core_renderer {
         if (empty($PAGE->layout_options['nonavbar'])) {
             $html .= html_writer::start_div('clearfix w-100 pull-xs-left', array('id' => 'page-navbar'));
             $html .= html_writer::tag('div', $this->navbar(), array('class' => 'breadcrumb-nav'));
-            // MODIFICATION START: Add the course context menu to the course page.
-            if (get_config('theme_boost_campus', 'showsettingsincourse') == 'yes') {
+            // MODIFICATION START: Add the course context menu to the course page, but not on the profile page.
+            if (get_config('theme_boost_campus', 'showsettingsincourse') == 'yes'
+                && $PAGE->pagelayout != 'mypublic') {
                 $html .= html_writer::div($this->context_header_settings_menu(),
                     'pull-xs-right context-header-settings-menu m-l-1');
             }
             // MODIFICATION END.
-            $html .= html_writer::div($pageheadingbutton, 'breadcrumb-button pull-xs-right');
+            // MODIFICATION START: Instead of the settings icon, add a button to edit the profile.
+            if ($PAGE->pagelayout == 'mypublic') {
+                $html .= html_writer::start_div('breadcrumb-button breadcrumb-button pull-xs-right');
+                $url = new moodle_url('/user/editadvanced.php', array('id' => $USER->id, 'course' => $COURSE->id,
+                                                                      'returnto' => 'profile'));
+                $html .= $this->single_button($url, get_string('editmyprofile', 'core'));
+                $html .= html_writer::end_div();
+            }
+            // Do not show the page heading buttons on the profile page at this place.
+            // Display them only on other pages.
+            if ($PAGE->pagelayout != 'mypublic') {
+                $html .= html_writer::div($pageheadingbutton, 'breadcrumb-button pull-xs-right');
+            }
+            // MODIFICATION END.
             $html .= html_writer::end_div();
         } else if ($pageheadingbutton) {
             $html .= html_writer::div($pageheadingbutton, 'breadcrumb-button nonavbar pull-xs-right');

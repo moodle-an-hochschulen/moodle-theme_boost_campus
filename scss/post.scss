@@ -631,6 +631,26 @@ blockquote::before {
 
 
 /*------------------------------------
+  Profile Page
+  -------------------------------------*/
+
+#page-user-profile {
+    /* Hide the "Edit profile" link, because we added a breadcrumb button in the page header. */
+    .editprofile {
+        display: none;
+    }
+}
+/* Hide the "Reset page to default" button in non editing mode. */
+#page-user-profile .breadcrumb-button:first-of-type .singlebutton:first-of-type {
+    display: none;
+}
+/* Only show the "Reset page to default" button in editing mode. */
+#page-user-profile.editing .breadcrumb-button:first-of-type .singlebutton:first-of-type {
+    display: initial;
+}
+
+
+/*------------------------------------
   Page Footer
   -------------------------------------*/
 

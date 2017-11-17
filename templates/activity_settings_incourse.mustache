@@ -15,13 +15,13 @@
     along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 }}
 {{!
-    @template theme_boost_campus/settings_link_page
+    @template theme_boost_campus/activity_settings_incourse
 
     Displays the admin tree as a list of grouped links.
 
     Example context (json):
     {
-        "node": {
+        "activitynode": {
             "text": "Root of menu",
             "key": "test0",
             "display": true,
@@ -43,28 +43,28 @@
     * Removed check for !is_short_branch to display all children of the course settings within an own tab.
 }}
 
-<div id="boost-campus-course-settings" class="card" >
-    <h2>{{incourse_node_heading}}</h2>
-    <div class="m-x-2 p-t-2">
+<div id="boost-campus-activity-settings" class="card" >
+    <h2>{{incourse_activitynode_heading}}</h2>
+    <div class="p-t-2">
         <ul class="nav nav-tabs" role="tablist">
-        <!-- First the top most node and immediate children -->
+        <!-- First the top most activitynode and immediate children -->
             <li class="nav-item">
-                <a class="nav-link active" href="#course-settings-{{node.key}}" data-toggle="tab" role="tab">{{node.text}}</a>
+                <a class="nav-link active" href="#activity-settings-{{key}}" data-toggle="tab" role="tab">{{activitynode.text}}</a>
             </li>
-        <!-- Now the first level children with sub nodes -->
-        {{#node.children}}
+        <!-- Now the first level children with sub activitynodes -->
+        {{#activitynode.children}}
             {{#children.count}}
                 {{#display}}
                     <li class="nav-item">
-                        <a class="nav-link" href="#course-settings-{{key}}" data-toggle="tab" role="tab">{{text}}</a>
+                        <a class="nav-link" href="#activity-settings-{{key}}" data-toggle="tab" role="tab">{{text}}</a>
                     </li>
                 {{/display}}
             {{/children.count}}
-        {{/node.children}}
+        {{/activitynode.children}}
         </ul>
 
         <div class="tab-content">
-            <div class="tab-pane active" id="course-settings-{{node.key}}" role="tabpanel">
+            <div class="tab-pane active" id="activity-settings-{{key}}" role="tabpanel">
                 <div class="card">
                     <div class="card-block">
                         <div class="container">
@@ -75,13 +75,13 @@
                                 </div>
                                 <div class="col-sm-8">
                                     <ul class="list-unstyled">
-                                        {{#node.children}}
+                                        {{#activitynode.children}}
                                             {{^children.count}}
                                                 {{#display}}
                                                     <li><a href="{{{action}}}">{{text}}</a></li>
                                                 {{/display}}
                                             {{/children.count}}
-                                        {{/node.children}}
+                                        {{/activitynode.children}}
                                     </ul>
                                 </div>
                             </div>
@@ -89,9 +89,9 @@
                     </div>
                 </div>
             </div>
-            {{#node.children}}
+            {{#activitynode.children}}
                 {{#children.count}}
-                    <div class="tab-pane" id="course-settings-{{key}}" role="tabpanel">
+                    <div class="tab-pane" id="activity-settings-{{key}}" role="tabpanel">
                         <div class="card">
                             <div class="card-block">
                                 <div class="container">
@@ -137,7 +137,7 @@
                         </div>
                     </div>
                 {{/children.count}}
-            {{/node.children}}
+            {{/activitynode.children}}
         </div>
     </div>
 </div>

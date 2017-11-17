@@ -76,7 +76,7 @@ $string['switchedroleto'] = 'You are viewing this course currently with the role
 $string['coursesettingsheadingsetting'] = 'Course settings';
 // ...Show course settings within the course.
 $string['showsettingsincoursesetting'] = 'In course settings menu';
-$string['showsettingsincoursesetting_desc'] = 'With this setting you can change the displaying of the course context menu. In Boost, there is a popup context menu right next to the cog icon and clicking on the "More..." menu item will lead the user to another page with all course settings. By enabling this setting the settings will occur directly beneath the course header.<br/>
+$string['showsettingsincoursesetting_desc'] = 'With this setting you can change the displaying of the context menus. In Boost, there is a popup context menu right next to the cog icon. By enabling this setting the settings will occur directly beneath the course header. The settings are arranged in tabs, so it is easier for the user to get to the desired setting instead of scanning a long list of menu items. With this setting we also hide the settings icon on the participants page as the entries on this page are duplicated with the in-course course menu and therefore not necessary.<br/>
 Please note that this change does not affect users who have switched off javascript in their browsers - they will still get the behaviour from Moodle core with a popup course context menu.';
 // ...Show switch role to link within the in-course course settings.
 $string['incoursesettingsswitchtorolesetting'] = 'Move "Switch role to..." to the course settings';

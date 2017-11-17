@@ -495,6 +495,21 @@ body.loginbackgroundimage {
     display: none;
 }
 
+/* If showsettingsincourse is enabled */
+@if variable-exists(showsettingsincourse) {
+    @if $showsettingsincourse == 'yes' {
+        /* We do not show the cog icon on the participants page as the settings on this page are
+         * duplicated with the in-course course menu. */
+        .path-user #region-main-settings-menu {
+            display: none;
+        }
+        /* Hide the triangle down icon. */
+        #region-main-settings-menu .dropdown-toggle::after {
+            display: none;
+        }
+    }
+}
+
 /*
  * Misc
  * /
@@ -821,10 +836,13 @@ a[href^="mailto"]::before {
     vertical-align: 0.3rem;
 }
 
-/* In-course course settings. */
-#boost-campus-course-settings {
+/* In-course settings. */
+#boost-campus-course-settings,
+#boost-campus-activity-settings {
     /* Initially do not display the settings. Visibility will be changed on click with incoursesettings.js. */
     display: none;
+    border-bottom: 2px solid $brand-primary;
+    margin-bottom: 3rem;
     /* Improve color of tab content so it looks more like a real tab. */
     .tab-content .card {
         background-color: #f4f4f4;

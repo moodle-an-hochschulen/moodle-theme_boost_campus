@@ -81,8 +81,15 @@ $templatecontext = [
 // MODIDFICATION START.
 // Use the returned value from theme_boost_campus_get_modified_flatnav_defaulthomepageontop as the template context.
 $templatecontext['flatnavigation'] = theme_boost_campus_process_flatnav($PAGE->flatnav);
-// Add the returned value from theme_boost_campus_get_incourse_settings to the template context.
-$templatecontext['node'] = theme_boost_campus_get_incourse_settings();
+// If setting showsettingsincourse is enabled.
+if (get_config('theme_boost_campus', 'showsettingsincourse') == 'yes') {
+    // Context value for requiring incoursesettings.js.
+    $templatecontext['incoursesettings'] = true;
+    // Add the returned value from theme_boost_campus_get_incourse_settings to the template context.
+    $templatecontext['node'] = theme_boost_campus_get_incourse_settings();
+    // Add the returned value from theme_boost_campus_get_incourse_activity_settings to the template context.
+    $templatecontext['activitynode'] = theme_boost_campus_get_incourse_activity_settings();
+}
 
 // Render colums2.mustache from boost_campus.
 echo $OUTPUT->render_from_template('theme_boost_campus/columns2', $templatecontext);

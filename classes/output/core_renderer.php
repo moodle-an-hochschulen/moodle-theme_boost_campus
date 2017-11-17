@@ -390,7 +390,6 @@ class core_renderer extends \theme_boost\output\core_renderer {
         ORIGINAL END. */
     }
 
-
     // TODO Remove the copied function build_action_menu_from_navigation in version 3.4 of the theme.
     // This will be the first Moodle major version having MDL-58174 integrated from version x.0 on.
 

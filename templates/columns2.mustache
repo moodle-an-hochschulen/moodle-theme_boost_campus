@@ -91,6 +91,9 @@
                         <div class="region_main_settings_menu_proxy"></div>
                     {{/hasregionmainsettingsmenu}}
                     {{{ output.course_content_header }}}
+                        {{#activitynode}}
+                            {{> theme_boost_campus/activity_settings_incourse }}
+                        {{/activitynode}}
                     {{{ output.main_content }}}
                     {{{ output.course_content_footer }}}
                     </div>
@@ -119,9 +122,9 @@ require(['theme_boost_campus/backtotop'], function(mod) {
 require(['theme_boost_campus/catchshortcuts'], function(mod) {
     mod.init({{{catchshortcuts}}});
 });
-{{#node}}
+{{#incoursesettings}}
     require(['theme_boost_campus/incoursesettings'], function(mod) {
     mod.init();
     });
-{{/node}}
+{{/incoursesettings}}
 {{/js}}

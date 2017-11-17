@@ -126,7 +126,7 @@ function theme_boost_campus_get_imageareacontent() {
                     $settings = explode("|", $line);
                     // Check if both parameters are set.
                     if (!empty($settings[1])) {
-                         // The name of the image is the key for the URL that will be set.
+                        // The name of the image is the key for the URL that will be set.
                         $links[$settings[0]] = $settings[1];
                     }
                 }
@@ -240,7 +240,7 @@ function theme_boost_campus_set_node_on_top(flat_navigation $flatnav, $nodename,
 
 
 /**
- * Provides the node for the in-course course settings.
+ * Provides the node for the in-course course or activity settings.
  *
  * @return navigation_node.
  */
@@ -285,6 +285,32 @@ function theme_boost_campus_get_incourse_settings() {
                     }
                 }
             }
+        }
+        return $node;
+    }
+}
+
+/**
+ * Provides the node for the in-course settings for other contexts.
+ *
+ * @return navigation_node.
+ */
+function theme_boost_campus_get_incourse_activity_settings() {
+    global $PAGE;
+    $context = $PAGE->context;
+    $node = false;
+    // If setting showsettingsincourse is enabled.
+    if (get_config('theme_boost_campus', 'showsettingsincourse') == 'yes') {
+        // Settings belonging to activity or resources.
+        if ($context->contextlevel == CONTEXT_MODULE) {
+            $node = $PAGE->settingsnav->find('modulesettings', navigation_node::TYPE_SETTING);
+        } else if ($context->contextlevel == CONTEXT_COURSECAT) {
+            // For course category context, show category settings menu, if we're on the course category page.
+            if ($PAGE->pagetype === 'course-index-category') {
+                $node = $PAGE->settingsnav->find('categorysettings', navigation_node::TYPE_CONTAINER);
+            }
+        } else {
+            $node = false;
         }
     }
     return $node;

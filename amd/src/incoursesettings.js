@@ -28,12 +28,31 @@ define(['jquery'], function($) {
      * Initialising.
      */
     function initInCourseSettings() {
+        var courseSettings = $('#boost-campus-course-settings');
+        var activitySettings = $('#boost-campus-activity-settings');
+
         $('#page-header .context-header-settings-menu').on('click', function(event) {
             event.stopPropagation();
-            if ($('#boost-campus-course-settings').is(":visible")) {
-                $('#boost-campus-course-settings').hide(400);
+            if (courseSettings.is(":visible")) {
+                courseSettings.hide(400);
             } else {
-                $('#boost-campus-course-settings').show(400);
+                courseSettings.show(400);
+                // Additionally close activity settings if they are currently open.
+                if (activitySettings.is(":visible")) {
+                    activitySettings.hide(400);
+                }
+            }
+        });
+        $('#region-main-settings-menu .action-menu .dropdown-toggle').on('click', function(event) {
+            event.stopPropagation();
+            if (activitySettings.is(":visible")) {
+                activitySettings.hide(400);
+            } else {
+                activitySettings.show(400);
+                // Additionally close course settings if they are currently open.
+                if (courseSettings.is(":visible")) {
+                    courseSettings.hide(400);
+                }
             }
         });
     }

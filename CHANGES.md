@@ -6,6 +6,7 @@ Changes
 
 ### Unreleased
 
+* 2017-11-17 - Extended the behaviour of the setting "showsettingsincourse" to respect activities and resources menus, too. Please check this setting due to the new scope.
 * 2017-11-09 - Replaced the settings icon with a edit profile button on the profile page.
 * 2017-11-07 - Updated travis.yml to use newer node version for fixing TravisCI error.
 * 2017-10-17 - Minor change in SCSS to fit the borders of the current section in the periods format into the section.

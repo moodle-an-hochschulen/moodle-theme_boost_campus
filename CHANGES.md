@@ -4,7 +4,7 @@ moodle-theme_boost_campus
 Changes
 -------
 
-### Unreleased
+### Release v3.2-r6
 
 * 2017-11-17 - Extended the behaviour of the setting "showsettingsincourse" to respect activities and resources menus, too. Please check this setting due to the new scope.
 * 2017-11-09 - Replaced the settings icon with a edit profile button on the profile page.

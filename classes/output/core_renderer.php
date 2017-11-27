@@ -121,11 +121,11 @@ class core_renderer extends \theme_boost\output\core_renderer {
         if (!empty($PAGE->theme->settings->favicon)) {
             return $PAGE->theme->setting_file_url('favicon', 'favicon');
         } else {
-            return $this->pix_url('favicon', 'theme');
+            return $this->image_url('favicon', 'theme');
         }
         // MODIFICATION END.
         /* ORIGINAL START.
-        return $this->pix_url('favicon', 'theme');
+        return $this->image_url('favicon', 'theme');
         ORIGINAL END. */
     }
 

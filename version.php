@@ -29,4 +29,4 @@ $plugin->version = 2018011600;
 $plugin->release = 'v3.2-r7';
 $plugin->requires = 2016120503.05;
 $plugin->maturity = MATURITY_STABLE;
-$plugin->dependencies = array('theme_boost' => 2016102100);
+$plugin->dependencies = array('theme_boost' => 2017051500);

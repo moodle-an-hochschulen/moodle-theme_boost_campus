@@ -4,6 +4,10 @@ moodle-theme_boost_campus
 Changes
 -------
 
+### Unreleased
+
+* 2018-01-16 - Prepare compatibility for Moodle 3.3, no functionality change.
+
 ### v3.2-r7
 
 * 2018-01-15 - Setting to be able to remove the footer on the login page.

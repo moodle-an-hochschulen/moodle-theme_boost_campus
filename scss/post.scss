@@ -838,7 +838,8 @@ a[href^="mailto"]::before {
 #boost-campus-activity-settings {
     /* Initially do not display the settings. Visibility will be changed on click with incoursesettings.js. */
     display: none;
-    border-bottom: 2px solid $brand-primary;
+    border: none;
+    padding-bottom: 0.1rem;
     margin-bottom: 3rem;
     /* Improve color of tab content so it looks more like a real tab. */
     .tab-content .card {

@@ -6,6 +6,7 @@ Changes
 
 ### Unreleased
 
+* 2017-12-05 - Improved design of in course settings slightly.
 * 2018-01-16 - Prepare compatibility for Moodle 3.3, no functionality change.
 
 ### v3.2-r7

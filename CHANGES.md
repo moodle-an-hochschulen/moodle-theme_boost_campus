@@ -6,6 +6,7 @@ Changes
 
 ### Unreleased
 
+* 2017-12-05 - Synchronized loginform.mustache with core changes.
 * 2017-12-05 - Synchronized overwritten core_renderer function favicon() with core changes.
 * 2017-12-05 - Improved design of in course settings slightly.
 * 2018-01-16 - Prepare compatibility for Moodle 3.3, no functionality change.

@@ -34,7 +34,6 @@
     * instructionsformat - Format of instructions,
     * loginurl - Login url,
     * rememberusername - Remeber username?,
-    * passwordautocomplete - Allow password autocomplete?,
     * signupurl - Signup url,
     * cookieshelpiconformatted - Formatted html of cookies help icon,
     * errorformatted - Formatted error,
@@ -84,7 +83,6 @@
         "instructionsformat": "1",
         "loginurl": "http://localhost/stable_master/login/index.php",
         "rememberusername": true,
-        "passwordautocomplete": false,
         "signupurl": "http://localhost/stable_master/login/signup.php",
         "cookieshelpiconformatted": "",
         "errorformatted": "",
@@ -151,7 +149,6 @@
                     <input type="password" name="password" id="password" value=""
                         class="form-control"
                         placeholder={{#quote}}{{#str}}password{{/str}}{{/quote}}
-                        {{^passwordautocomplete}}autocomplete="off"{{/passwordautocomplete}}>
 
                     {{#rememberusername}}
                         <div class="rememberpass m-t-1">
@@ -165,16 +162,16 @@
             </div>
 
             <div class="row">
-                <div class="forgetpass m-t-1">
+                <div class="forgetpass m-a-1">
                     <p><a href="{{forgotpasswordurl}}">{{#str}}forgotten{{/str}}</a></p>
                 </div>
 
-                <div class="m-t-1">
+                <div class="m-a-1">
                     {{#str}} cookiesenabled {{/str}}
                     {{{cookieshelpiconformatted}}}
                 </div>
             {{#canloginasguest}}
-                <div class="m-t-2">
+                <div class="m-a-1">
                     <p>{{#str}}someallowguest{{/str}}</p>
                     <form action="{{loginurl}}" method="post" id="guestlogin">
                         <input type="hidden" name="username" value="guest" />
@@ -189,7 +186,12 @@
                 <div class="potentialidplist" class="m-t-1">
                     {{#identityproviders}}
                         <div class="potentialidp">
-                            <a href="{{url}}" title={{#quote}}{{name}}{{/quote}}>{{#icon}}{{>core/pix_icon}}{{/icon}}{{name}}</a>
+                            <a href="{{url}}" title={{#quote}}{{name}}{{/quote}} class="btn btn-secondary btn-block">
+                                {{#iconurl}}
+                                    <img src="{{iconurl}}" alt="" width="24" height="24"/>
+                                {{/iconurl}}
+                                {{name}}
+                            </a>
                         </div>
                     {{/identityproviders}}
                 </div>
@@ -224,20 +226,21 @@
 </div>
 {{/hasinstructions}}
 
-
 {{#js}}
-    require(['jquery', 'core/yui'], function($, Y) {
     {{#error}}
-        $(function() {
-            M.util.focus_login_error(Y);
+        require(['jquery'], function($) {
+        $('#loginerrormessage').focus();
         });
     {{/error}}
     {{^error}}
         {{#autofocusform}}
-            $(function() {
-                M.util.focus_login_form(Y);
+            require(['jquery'], function($) {
+            if ($('#username').val()) {
+            $('#password').focus();
+            } else {
+            $('#username').focus();
+            }
             });
         {{/autofocusform}}
     {{/error}}
-    })
 {{/js}}

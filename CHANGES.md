@@ -6,6 +6,7 @@ Changes
 
 ### Unreleased
 
+* 2017-12-05 - Removed Font Awesome integration because it is now provided by core.
 * 2017-12-05 - Replaced the settings_link_page.mustache.original with the updated core version.
 * 2017-12-05 - Synchronized loginform.mustache with core changes.
 * 2017-12-05 - Synchronized overwritten core_renderer function favicon() with core changes.

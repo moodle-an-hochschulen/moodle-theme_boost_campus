@@ -4,7 +4,7 @@ moodle-theme_boost_campus
 Changes
 -------
 
-### Unreleased
+### v3.3-r1
 
 * 2017-12-05 - Deleted availability improvements because Boost uses labels now.
 * 2017-12-05 - Changed SCSS rules due to changed navbar icon structure.

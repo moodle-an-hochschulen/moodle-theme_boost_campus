@@ -95,19 +95,15 @@ body.loginbackgroundimage {
         header.navbar {
             background-color: $gray-dark;
 
-            .navbar-nav a.nav-link,
-            .nav-link,
+            .navbar-nav .nav-link .icon,
             .usertext,
             .dropdown-toggle {
                 color: #fff;
             }
-            .nav-link:hover,
+            .navbar-nav .nav-link .icon:hover,
             .usertext:hover,
             .dropdown-toggle:hover {
                 color: $brand-primary;
-            }
-            .nav-link .icon {
-                filter: brightness(9);
             }
         }
     }

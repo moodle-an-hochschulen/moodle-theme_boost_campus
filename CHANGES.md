@@ -4,6 +4,10 @@ moodle-theme_boost_campus
 Changes
 -------
 
+### Unreleased
+
+* 2017-12-05 - Added Workaround to travis.yml for fixing Behat tests with TravisCI.
+
 ### Release v3.2-r6
 
 * 2017-11-17 - Extended the behaviour of the setting "showsettingsincourse" to respect activities and resources menus, too. Please check this setting due to the new scope.

@@ -882,27 +882,34 @@ a[href^="mailto"]::before {
 
 /* Special styles for plugin local_boostnavigation. */
 #nav-drawer {
-    /* Remove the arrow icon provieded by the plugin because we changed the HTML structure of the menu items. */
+    /* Remove the arrow icon provided by the plugin because we changed the HTML structure of the menu items. */
     .list-group-item[data-key='localboostnavigationcoursesections'],
-    .list-group-item[data-key='localboostnavigationactivities'] {
+    .list-group-item[data-key='localboostnavigationactivities'],
+    .list-group-item[data-key^='localboostnavigationcustom'] {
         div::after {
             display: none;
         }
         .media-left {
             display: none;
         }
+    }
+    .list-group-item[data-key='localboostnavigationcoursesections'],
+    .list-group-item[data-key='localboostnavigationactivities'] {
         .media-body {
             padding-left: 0.5rem;
         }
     }
+
     /* Add the icon at the needed place within this theme. */
     .list-group-item[data-key='localboostnavigationcoursesections'][data-collapse='0'] .media-body::after,
-    .list-group-item[data-key='localboostnavigationactivities'][data-collapse='0'] .media-body::after {
+    .list-group-item[data-key='localboostnavigationactivities'][data-collapse='0'] .media-body::after,
+    .list-group-item[data-key^='localboostnavigationcustom'][data-isexpandable="1"][data-collapse='0'] .media-body::after {
         content: url([[pix:i/dropdown]]);
         float: right;
     }
     .list-group-item[data-key='localboostnavigationcoursesections'][data-collapse='1'] .media-body::after,
-    .list-group-item[data-key='localboostnavigationactivities'][data-collapse='1'] .media-body::after {
+    .list-group-item[data-key='localboostnavigationactivities'][data-collapse='1'] .media-body::after,
+    .list-group-item[data-key^='localboostnavigationcustom'][data-isexpandable="1"][data-collapse='1'] .media-body::after {
         content: url([[pix:t/collapsed]]);
         float: right;
     }

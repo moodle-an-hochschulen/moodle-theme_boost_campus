@@ -184,12 +184,12 @@ body.loginbackgroundimage {
     }
 
     /* Remove icon from elements that does not need any. */
-    .list-group-item[data-key|=coursehome] span.media-left > img,
-    .list-group-item[data-key|=myhome] span.media-left > img,
-    .list-group-item[data-key|=home] span.media-left > img,
-    .list-group-item[data-key|=calendar] span.media-left > img,
-    .list-group-item[data-key|=privatefiles] span.media-left > img,
-    .list-group-item[data-key|=sitesettings] span.media-left > img {
+    .list-group-item[data-key|=coursehome] span.media-left,
+    .list-group-item[data-key|=myhome] span.media-left,
+    .list-group-item[data-key|=home] span.media-left,
+    .list-group-item[data-key|=calendar] span.media-left,
+    .list-group-item[data-key|=privatefiles] span.media-left,
+    .list-group-item[data-key|=sitesettings] span.media-left {
         display: none;
     }
 

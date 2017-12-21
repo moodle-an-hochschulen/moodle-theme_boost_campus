@@ -6,6 +6,7 @@ Changes
 
 ### Unreleased
 
+* 2018-01-11 - Fixed bug in the hierarchical displaying of lists within the course.
 * 2017-12-05 - Added Workaround to travis.yml for fixing Behat tests with TravisCI.
 
 ### Release v3.2-r6

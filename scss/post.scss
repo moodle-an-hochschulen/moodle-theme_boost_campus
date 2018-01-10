@@ -899,13 +899,17 @@ a[href^="mailto"]::before {
     .list-group-item[data-key='localboostnavigationactivities'][data-collapse='0'] .media-body::after,
     .list-group-item[data-key^='localboostnavigationcustom'][data-isexpandable="1"][data-collapse='0'] .media-body::after {
         content: url([[pix:i/dropdown]]);
-        float: right;
+        position: absolute;
+        top: 0.75rem;
+        right: 0.75rem;
     }
     .list-group-item[data-key='localboostnavigationcoursesections'][data-collapse='1'] .media-body::after,
     .list-group-item[data-key='localboostnavigationactivities'][data-collapse='1'] .media-body::after,
     .list-group-item[data-key^='localboostnavigationcustom'][data-isexpandable="1"][data-collapse='1'] .media-body::after {
         content: url([[pix:t/collapsed]]);
-        float: right;
+        position: absolute;
+        top: 0.75rem;
+        right: 0.75rem;
     }
     .list-group-item[data-parent-key='localboostnavigationactivities'] > div::before {
         margin-left: 0;

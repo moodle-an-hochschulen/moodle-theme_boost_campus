@@ -209,21 +209,21 @@ body.loginbackgroundimage {
     }
 
     /* Dashed border for all courses I'm enrolled in except the last one. */
-    .list-group-item[href*="course/view.php?id="] {
+    .list-group-item[data-parent-key|=mycourses] {
         @include navdrawer-node-separator(child);
     }
 
-    .list-group-item[href*="course/view.php?id="]:last-child {
+    .list-group-item[data-parent-key|=mycourses]:last-child {
         border-bottom: none;
     }
 
     /* Reduce the indent. */
-    .list-group-item[data-key|=mycourses] ~ a.list-group-item[href*="course/view.php?id="] > div {
+    .list-group-item[data-parent-key|=mycourses] > div {
         margin-left: 0 !important;
     }
 
     /* Set course icon to each course menu items. */
-    .list-group-item[data-key|=mycourses] ~ a.list-group-item[href*="course/view.php?id="] span.media-left > img {
+    .list-group-item[data-parent-key|=mycourses] span.media-left > img {
         content: url([[pix:i/course]]);
     }
 
@@ -891,12 +891,6 @@ a[href^="mailto"]::before {
         }
         .media-left {
             display: none;
-        }
-    }
-    .list-group-item[data-key='localboostnavigationcoursesections'],
-    .list-group-item[data-key='localboostnavigationactivities'] {
-        .media-body {
-            padding-left: 0.5rem;
         }
     }
 

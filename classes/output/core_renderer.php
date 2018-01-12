@@ -183,8 +183,21 @@ class core_renderer extends \theme_boost\output\core_renderer {
             // MODIFICATION START: Instead of the settings icon, add a button to edit the profile.
             if ($PAGE->pagelayout == 'mypublic') {
                 $html .= html_writer::start_div('breadcrumb-button breadcrumb-button pull-xs-right');
-                $url = new moodle_url('/user/editadvanced.php', array('id' => $USER->id, 'course' => $COURSE->id,
-                                                                      'returnto' => 'profile'));
+                $url = '';
+                // Get the id of the user for whom the profile page is shown.
+                $userid = optional_param('id', $USER->id, PARAM_INT);
+                // Check if the shown and the operating user are identical.
+                $currentuser = $USER->id == $userid;
+                if (($currentuser || is_siteadmin($USER)) &&
+                        has_capability('moodle/user:update', \context_system::instance())) {
+                    $url = new moodle_url('/user/editadvanced.php', array('id' => $userid, 'course' => $COURSE->id,
+                                                                          'returnto' => 'profile'));
+                } else if ((has_capability('moodle/user:editprofile', \context_user::instance($userid)) &&
+                                !is_siteadmin($USER)) || ($currentuser &&
+                                has_capability('moodle/user:editownprofile', \context_system::instance()))) {
+                    $url = new moodle_url('/user/edit.php', array('id' => $userid, 'course' => $COURSE->id,
+                                                                  'returnto' => 'profile'));
+                }
                 $html .= $this->single_button($url, get_string('editmyprofile', 'core'));
                 $html .= html_writer::end_div();
             }

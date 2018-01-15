@@ -6,6 +6,7 @@ Changes
 
 ### Unreleased
 
+* 2018-01-15 - Fixed bug for setting incoursesettingsswitchedrole without showsettingsincourse enabled.
 * 2018-01-12 - Fixed bug for the frontpage settings.
 * 2018-01-12 - Fixed bug for the profile editing button in admin view.
 * 2018-01-11 - Fixed bug in the hierarchical displaying of lists within the course.

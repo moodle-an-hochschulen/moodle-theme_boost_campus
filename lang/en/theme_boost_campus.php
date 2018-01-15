@@ -105,6 +105,11 @@ $string['footerlinks_desc'] = 'If checked, the link will not be displayed in the
 $string['footerhidehelplinksetting'] = 'Hide link to the Moodle docs';
 $string['footerhidelogininfosetting'] = 'Hide login information';
 $string['footerhidehomelinksetting'] = 'Hide link to the webpage start';
+// ... Hide the footer.
+$string['hidefooterheadingsetting'] = 'Hiding the footer';
+$string['hidefooteronloginpagesetting'] = 'Hiding the footer on the login page';
+$string['hidefooteronloginpagesetting_desc'] = 'By enabling this setting you can hide the footer on the login page. Please note, that this will only hide the footer section, not the footnote section (if used).';
+
 
 // Additional layout setting.
 $string['additionallayoutsettings'] = 'Additional Layout Settings';

@@ -6,6 +6,7 @@ Changes
 
 ### Unreleased
 
+* 2018-01-15 - Setting to be able to remove the footer on the login page.
 * 2018-01-15 - Fixed bug for setting incoursesettingsswitchedrole without showsettingsincourse enabled.
 * 2018-01-12 - Fixed bug for the frontpage settings.
 * 2018-01-12 - Fixed bug for the profile editing button in admin view.

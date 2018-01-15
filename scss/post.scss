@@ -873,6 +873,27 @@ a[href^="mailto"]::before {
     }
 }
 
+/*------------------------------------
+  Special Settings
+  -------------------------------------*/
+
+/* If the setting "hidefooteronloginpage" is enabled, hide the footer on the login page. */
+@if variable-exists(hidefooteronloginpage) {
+    @if $hidefooteronloginpage == 'yes' {
+        #page-login-index {
+            #page-footer {
+                display: none;
+            }
+            /* Because the footnote is not hidden, but moves up with no footer, we have to handle this and move the
+               footnote back to the bottom of the page. */
+            .footnote {
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+            }
+        }
+    }
+}
 
 /*------------------------------------
   Special: Local Plugins

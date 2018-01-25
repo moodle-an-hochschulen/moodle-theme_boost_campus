@@ -33,6 +33,8 @@ $string['configtitle'] = 'Boost Campus settings';
 
 // General settings.
 $string['presetheadingsetting'] = 'Theme presets';
+// ...Background image.
+$string['backgroundimage_desc_note'] = '<br/> Please note: This will not override the setting "theme_boost_campus | loginbackgroundimage" which means that the pictures uploaded to the login page background will be displayed anyway.';
 // ...Brand colors.
 $string['brandcolorheadingsetting'] = 'Brand colors';
 $string['brandsuccesscolorsetting'] = 'Brand success color';

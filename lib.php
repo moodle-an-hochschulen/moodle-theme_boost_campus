@@ -140,8 +140,15 @@ function theme_boost_campus_get_pre_scss($theme) {
 function theme_boost_campus_pluginfile($course, $cm, $context, $filearea, $args, $forcedownload, array $options = array()) {
     if ($context->contextlevel == CONTEXT_SYSTEM) {
         $theme = theme_config::load('boost_campus');
+        // By default, theme files must be cache-able by both browsers and proxies.
+        // TODO: For new file areas: Check if the cacheability needs to be restricted.
+        if (!array_key_exists('cacheability', $options)) {
+            $options['cacheability'] = 'public';
+        }
         if ($filearea === 'favicon') {
             return $theme->setting_file_serve('favicon', $args, $forcedownload, $options);
+        } else if (s($filearea === 'logo' || $filearea === 'backgroundimage')) {
+            return $theme->setting_file_serve($filearea, $args, $forcedownload, $options);
         } else if ($filearea === 'loginbackgroundimage') {
             return $theme->setting_file_serve('loginbackgroundimage', $args, $forcedownload, $options);
         } else if ($filearea === 'fontfiles') {

@@ -74,6 +74,21 @@ if ($ADMIN->fulltree) {
         array('maxfiles' => 20, 'accepted_types' => array('.scss')));
     $page->add($setting);
 
+    // Settings title to group core background image related settings together with a common heading. We don't want a description here.
+    $name = 'theme_boost_campus/backgroundimageheading';
+    $title = get_string('backgroundimage', 'theme_boost', null, true);
+    $setting = new admin_setting_heading($name, $title, null);
+    $page->add($setting);
+
+    // Background image setting.
+    $name = 'theme_boost_campus/backgroundimage';
+    $title = get_string('backgroundimage', 'theme_boost', null, true);
+    $description = get_string('backgroundimage_desc', 'theme_boost', null, true);
+    $description .= get_string('backgroundimage_desc_note', 'theme_boost_campus', null, true);
+    $setting = new admin_setting_configstoredfile($name, $title, $description, 'backgroundimage');
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
     // Settings title to group brand color related settings together with a common heading. We don't want a description here.
     $name = 'theme_boost_campus/brandcolorheading';
     $title = get_string('brandcolorheadingsetting', 'theme_boost_campus', null, true);

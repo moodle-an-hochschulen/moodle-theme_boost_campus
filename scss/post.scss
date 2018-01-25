@@ -607,24 +607,6 @@ blockquote::before {
 }
 
 
-/* Block calendar:
- * Improve the displaying of the calendar events popup list. */
-.minicalendar.calendartable {
-    .calendar-event-panel {
-        background-color: #fff;
-        border: 1px solid $gray-light;
-        /* border-width: 1px; */
-        padding-left: 1rem;
-        padding-top: 1rem;
-        box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.5);
-    }
-    /* Increase z-index of popup panel to be displayed above other following blocks. */
-    .calendar-event-panel.yui3-overlay-focused {
-        z-index: $zindex-dropdown !important;
-    }
-}
-
-
 /*------------------------------------
   Profile Page
   -------------------------------------*/

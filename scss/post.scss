@@ -466,6 +466,14 @@ body.loginbackgroundimage {
 #intro:empty {
     display: none;
 }
+/* Adjust the activity navigation buttons to suit to the topics navigation buttons. */
+#next-activity-link,
+#prev-activity-link {
+    background-color: $brand-primary;
+    padding: 4px 8px;
+    border-radius: 2px;
+    color: #fff;
+}
 
 /* If showsettingsincourse is enabled */
 @if variable-exists(showsettingsincourse) {

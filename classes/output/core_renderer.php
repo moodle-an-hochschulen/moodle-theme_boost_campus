@@ -412,11 +412,11 @@ class core_renderer extends \theme_boost\output\core_renderer {
         if (get_config('theme_boost_campus', 'loginform') == 'yes') {
             return $this->render_from_template('theme_boost_campus/loginform', $context);
         } else {
-            return $this->render_from_template('core/login', $context);
+            return $this->render_from_template('core/loginform', $context);
         }
         // MODIFICATION END.
         /* ORIGINAL START.
-        return $this->render_from_template('core/login', $context);
+        return $this->render_from_template('core/loginform', $context);
         ORIGINAL END. */
     }
 

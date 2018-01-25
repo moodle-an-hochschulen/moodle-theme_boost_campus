@@ -4,6 +4,10 @@ moodle-theme_boost_campus
 Changes
 -------
 
+### Unreleased
+
+* 2018-02-08 - Prepare compatibility for Moodle 3.4, no functionality change.
+
 ### Release v3.3-r3
 
 * 2018-02-07 - Fixed structure of image area to prevent applying the link hover style.

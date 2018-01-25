@@ -6,6 +6,7 @@ Changes
 
 ### Unreleased
 
+* 2018-02-08 - Synchronized columns2.mustache with core changes.
 * 2018-02-08 - Necessary changes because of renaming core/login.mustache to core/loginform.mustache.
 * 2018-02-08 - Prepare compatibility for Moodle 3.4, no functionality change.
 

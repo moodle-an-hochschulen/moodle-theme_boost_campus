@@ -97,7 +97,8 @@ function theme_boost_campus_get_pre_scss($theme) {
         'imageareaitemsmaxheight' => ['imageareaitemsmaxheight'],
         'showsettingsincourse' => ['showsettingsincourse'],
         'incoursesettingsswitchtorole' => ['incoursesettingsswitchtorole'],
-        'hidefooteronloginpage' => ['hidefooteronloginpage']
+        'hidefooteronloginpage' => ['hidefooteronloginpage'],
+        'footerhideusertourslink' => ['footerhideusertourslink']
         // MODIFICATION END.
     ];
 

@@ -6,6 +6,7 @@ Changes
 
 ### Unreleased
 
+* 2018-02-08 - Setting to be able to hide the link to reset the user tour in the footer.
 * 2018-02-08 - Improved activity navigation design.
 * 2018-02-08 - Synchronized columns2.mustache with core changes.
 * 2018-02-08 - Necessary changes because of renaming core/login.mustache to core/loginform.mustache.

@@ -658,10 +658,11 @@ blockquote::before {
         color: $gray-dark;
     }
 
-    /* Add bottom padding to the Moodle default footer links. */
+    /* Add bottom padding to the Moodle default footer links, reset usertour only if not empty.*/
     .helplink,
     .logininfo,
-    .homelink {
+    .homelink,
+    .tool_usertours-resettourcontainer:not(:empty) {
         padding-bottom: 1rem;
     }
 
@@ -687,6 +688,15 @@ blockquote::before {
     @if variable-exists(footerhidehomelink) {
         @if $footerhidehomelink == 'yes' {
             .homelink {
+                display: none;
+            }
+        }
+    }
+
+    /* If the setting footerhideusertourslink is enabled, then hide the link to reset the user tour. */
+    @if variable-exists(footerhideusertourslink) {
+        @if $footerhideusertourslink == 'yes' {
+            .tool_usertours-resettourcontainer {
                 display: none;
             }
         }

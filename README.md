@@ -146,7 +146,7 @@ You can chose if you want to enable the possibility to place blocks into the foo
 
 #### Default footer links
 
-Moodle provides some default links in the footer: Link to the Moodle docs, login information, and a link to the webpage start. With these three settings you can decide if you want to hide specific links because you think that your users won't need them in your instance. If checked, the link will not be displayed in the footer. If not checked (default), it will be shown.
+Moodle provides some default links in the footer: Link to the Moodle docs, login information, a link to the webpage start and a link to reset the user tour for the current page. With these three settings you can decide if you want to hide specific links because you think that your users won't need them in your instance. If checked, the link will not be displayed in the footer. If not checked (default), it will be shown.
 
 #### Hiding the footer
 

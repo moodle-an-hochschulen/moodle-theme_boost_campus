@@ -239,7 +239,7 @@ body.loginbackgroundimage {
     .list-group-item[data-key|=participants],
     .list-group-item[data-key|=badgesview],
     .list-group-item[data-key|=grades],
-    .list-group-item[href*="coursecompetencies"] {
+    .list-group-item[data-key|=competencies] {
         @include navdrawer-node-separator(child);
     }
 
@@ -253,7 +253,7 @@ body.loginbackgroundimage {
     .list-group-item[data-key|=grades] span.media-left > img {
         content: url([[pix:i/grades]]);
     }
-    .list-group-item[href*="coursecompetencies"] span.media-left > img {
+    .list-group-item[data-key|=competencies] span.media-left > img {
         content: url([[pix:i/user]]);
     }
 

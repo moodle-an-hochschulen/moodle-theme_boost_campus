@@ -6,6 +6,7 @@ Changes
 
 ### Unreleased
 
+* 2018-02-08 - Removed backport of MDL-59425 because this code is integrated into core.
 * 2018-02-08 - Added newly introduced Boost core setting to upload a background image.
 * 2018-02-08 - Removed design improvements for calendar block popups as this is fixed in core.
 * 2018-02-08 - Setting to be able to hide the link to reset the user tour in the footer.

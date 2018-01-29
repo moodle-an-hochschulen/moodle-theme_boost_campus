@@ -72,6 +72,9 @@ $string['courseeditbuttonsetting_desc'] = 'With this setting you can add an addi
 $string['showswitchedroleincoursesetting'] = 'Position of switch role information';
 $string['showswitchedroleincoursesetting_desc'] = 'With this setting you can choose the place where the information to which role a user has switched is being displayed. If not checked (default value), the role information will be displayed right beneath the user\'s name in the user menu (like in theme Boost). If checked, this information - together with a link to switch back - will be displayed beneath the course, as this functionality is course related.';
 $string['switchedroleto'] = 'You are viewing this course currently with the role:';
+// ... Show hint for hidden course.
+$string['showhintcoursehiddensetting'] = 'Show hint in hidden courses';
+$string['showhintcoursehiddensetting_desc'] = 'With this setting a hint will appear in the course header as long as the visibility of the course is hidden. This helps to identify the visibility state of a course at a glance without the need for looking at the course settings.';
 // ...Course settings.
 $string['coursesettingsheadingsetting'] = 'Course settings';
 // ...Show course settings within the course.
@@ -167,4 +170,6 @@ $string['darknavbarsetting_desc'] = 'By checking this setting you can invert the
 
 // ADDITIONAL STRINGS (IN ALPHABETICAL ORDER).
 $string['cachedef_imagearea'] = 'Cache for imagearea items';
+$string['showhintcoursehiddengeneral'] = 'This course is currently <strong>hidden</strong>. Only enrolled teachers can access this course when hidden.';
+$string['showhintcoursehiddensettingslink'] = 'You can change the visibility in the <a href="/course/edit.php?id={$a}">course settings</a>.';
 $string['switchroleto'] = 'Switch role to';

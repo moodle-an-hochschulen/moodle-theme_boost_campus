@@ -4,6 +4,10 @@ moodle-theme_boost_campus
 Changes
 -------
 
+### Unreleased
+
+* 2018-01-29 - Setting to show a hint in hidden courses.
+
 ### v3.3-r1
 
 * 2017-12-05 - Deleted availability improvements because Boost uses labels now.

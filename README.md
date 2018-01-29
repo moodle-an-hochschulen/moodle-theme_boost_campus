@@ -121,6 +121,10 @@ With this setting you can add an additional course edit on / off button to the c
 
 With this setting you can choose the place where the information to which role a user has switched is being displayed. If not checked (default value), the role information will be displayed right beneath the user\'s name in the user menu (like in theme Boost). If checked, this information - together with a link to switch back - will be displayed beneath the course, as this functionality is course related.
 
+#### Show hint in hidden courses
+
+With this setting a hint will appear in the course header as long as the visibility of the course is hidden. This helps to identify the visibility state of a course at a glance without the need for looking at the course settings.
+
 #### Course settings
 
 ##### In course settings menu

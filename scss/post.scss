@@ -888,6 +888,15 @@ a[href^="mailto"]::before {
     }
 }
 
+/* TODO: Remove when MDL-61319 is fixed */
+/* This is needed because a bug leads to a mess with fa.fa-pull-left/right rules. */
+.fa-pull-left {
+    margin-right: 0.3em;
+}
+.fa-pull-right {
+    margin-left: 0.3em;
+}
+
 /*------------------------------------
   Special: Local Plugins
   -------------------------------------*/

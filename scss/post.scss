@@ -272,24 +272,12 @@ body.loginbackgroundimage {
 
 /*
  * If set in showswitchedroleincourse, the switched role information will be displayed
- * in the course header instead of ben the user name.
+ * in the course header instead of next to the user name.
  */
 
-.switched-role-infobox {
-
-    span.switched-role {
-        font-weight: bold;
-        padding-left: 0.5em;
-    }
-
-    .switched-role-back {
-        padding-top: 10px;
-    }
-
-    .switched-role-backlink {
-        padding-left: 0.5em;
-        vertical-align: middle;
-    }
+.switched-role-infobox span.switched-role {
+    font-weight: bold;
+    padding-left: 0.5em;
 }
 
 /* If showsettingsincourse is enabled, we have to style the cog icon a bit different. */
@@ -861,7 +849,8 @@ a[href^="mailto"]::before {
 
 /* Setting to show a hint for hidden courses. */
 /* Because the Font Awesome icon is set to fa-3x, we need a minimum size for the container. */
-.course-hidden-infobox {
+.course-hidden-infobox,
+.switched-role-infobox {
     min-height: 5rem;
 }
 

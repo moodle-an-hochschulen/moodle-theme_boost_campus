@@ -250,14 +250,14 @@ class core_renderer extends \theme_boost\output\core_renderer {
                                           array('id'        => $COURSE->id, 'sesskey' => sesskey(), 'switchrole' => 0,
                                                 'returnurl' => $this->page->url->out_as_local_url(false)));
                     $html .= html_writer::start_tag('div', array('class' => 'switched-role-infobox alert alert-info'));
-                    $html .= html_writer::start_tag('div', array());
+                    $html .= html_writer::tag('i', null, array('class' => 'fa fa-user-circle fa-3x fa-pull-left'));
+                    $html .= html_writer::start_tag('div');
                     $html .= get_string('switchedroleto', 'theme_boost_campus');
                     // Give this a span to be able to address via CSS.
                     $html .= html_writer::tag('span', $role, array('class' => 'switched-role'));
                     $html .= html_writer::end_tag('div');
                     // Return to normal role link.
-                    $html .= html_writer::start_tag('div', array('class' => 'switched-role-back col-6'));
-                    $html .= html_writer::empty_tag('img', array('src' => $this->pix_url('a/logout', 'moodle')));
+                    $html .= html_writer::start_tag('div');
                     $html .= html_writer::tag('a', get_string('switchrolereturn', 'core'),
                                                array('class' => 'switched-role-backlink', 'href' => $url));
                     $html .= html_writer::end_tag('div'); // Return to normal role link: end div.

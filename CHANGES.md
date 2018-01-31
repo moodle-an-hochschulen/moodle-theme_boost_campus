@@ -6,6 +6,7 @@ Changes
 
 ### Unreleased
 
+* 2018-01-31 - Improved design of "Switched role to" infobox.
 * 2018-01-30 - Added CSS rules for .fa-pull-left/right because of a core bug (MDL-xxxxxx)
 * 2018-01-29 - Setting to show a hint in hidden courses.
 

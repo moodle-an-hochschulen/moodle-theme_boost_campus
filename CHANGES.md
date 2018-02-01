@@ -4,7 +4,7 @@ moodle-theme_boost_campus
 Changes
 -------
 
-### Unreleased
+### Release v3.3-r2
 
 * 2018-01-31 - Improved design of "Switched role to" infobox.
 * 2018-01-30 - Added CSS rules for .fa-pull-left/right because of a core bug (MDL-61319)

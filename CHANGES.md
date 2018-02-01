@@ -10,7 +10,7 @@ Changes
 * 2018-01-30 - Added CSS rules for .fa-pull-left/right because of a core bug (MDL-xxxxxx)
 * 2018-01-29 - Setting to show a hint in hidden courses.
 
-### v3.3-r1
+### Release v3.3-r1
 
 * 2017-12-05 - Deleted availability improvements because Boost uses labels now.
 * 2017-12-05 - Changed SCSS rules due to changed navbar icon structure.
@@ -21,7 +21,7 @@ Changes
 * 2017-12-05 - Improved design of in course settings slightly.
 * 2018-01-16 - Prepare compatibility for Moodle 3.3, no functionality change.
 
-### v3.2-r7
+### Release v3.2-r7
 
 * 2018-01-15 - Setting to be able to remove the footer on the login page.
 * 2018-01-15 - Fixed bug for setting incoursesettingsswitchedrole without showsettingsincourse enabled.

@@ -140,7 +140,7 @@ class core_renderer extends \theme_boost\output\core_renderer {
      */
     public function full_header() {
         // MODIFICATION START.
-        global $PAGE, $USER, $COURSE;
+        global $PAGE, $USER, $COURSE, $CFG;
         // MODIFICATION END.
         /* ORIGINAL START.
         global $PAGE;
@@ -220,14 +220,15 @@ class core_renderer extends \theme_boost\output\core_renderer {
         // MODIFICATION START:
         // If the setting showhintcoursehidden is set, the visibility of the course is hidden and
         // a hint for the visibility will be shown.
-        if (get_config('theme_boost_campus', 'showhintcoursehidden') == 'yes' && $COURSE->visible == false) {
+        if (get_config('theme_boost_campus', 'showhintcoursehidden') == 'yes' && $COURSE->visible == false &&
+            $PAGE->has_set_url() && $PAGE->url->compare(new moodle_url('/course/view.php'), URL_MATCH_BASE)) {
             $html .= html_writer::start_tag('div', array('class' => 'course-hidden-infobox alert alert-warning'));
             $html .= html_writer::tag('i', null, array('class' => 'fa fa-exclamation-circle fa-3x fa-pull-left'));
             $html .= get_string('showhintcoursehiddengeneral', 'theme_boost_campus', $COURSE->id);
             // If the user has the capability to change the course settings, an additional link to the course settings is shown.
             if (has_capability('moodle/course:update', context_course::instance($COURSE->id))) {
                 $html .= html_writer::tag('div', get_string('showhintcoursehiddensettingslink',
-                    'theme_boost_campus', $COURSE->id));
+                    'theme_boost_campus', array('url' => $CFG->wwwroot.'/course/edit.php?id='. $COURSE->id)));
             }
             $html .= html_writer::end_tag('div');
         }

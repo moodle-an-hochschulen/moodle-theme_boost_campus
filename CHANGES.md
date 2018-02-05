@@ -6,6 +6,7 @@ Changes
 
 ### Unreleased
 
+* 2018-02-05 - Improvements to feature 'Show hint in hidden courses'.
 * 2018-02-05 - Improvement site name color in dark navbar style with uploaded logo.
 
 ### Release v3.3-r2

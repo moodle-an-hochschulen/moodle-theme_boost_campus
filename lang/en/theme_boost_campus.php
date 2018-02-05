@@ -171,5 +171,5 @@ $string['darknavbarsetting_desc'] = 'By checking this setting you can invert the
 // ADDITIONAL STRINGS (IN ALPHABETICAL ORDER).
 $string['cachedef_imagearea'] = 'Cache for imagearea items';
 $string['showhintcoursehiddengeneral'] = 'This course is currently <strong>hidden</strong>. Only enrolled teachers can access this course when hidden.';
-$string['showhintcoursehiddensettingslink'] = 'You can change the visibility in the <a href="/course/edit.php?id={$a}">course settings</a>.';
+$string['showhintcoursehiddensettingslink'] = 'You can change the visibility in the <a href="{$a->url}">course settings</a>.';
 $string['switchroleto'] = 'Switch role to';

@@ -4,6 +4,10 @@ moodle-theme_boost_campus
 Changes
 -------
 
+### Unreleased
+
+* 2018-02-05 - Improvement site name color in dark navbar style with uploaded logo.
+
 ### Release v3.3-r2
 
 * 2018-01-31 - Improved design of "Switched role to" infobox.

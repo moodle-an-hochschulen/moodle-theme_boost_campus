@@ -97,12 +97,14 @@ body.loginbackgroundimage {
 
             .navbar-nav .nav-link .icon,
             .usertext,
-            .dropdown-toggle {
+            .dropdown-toggle,
+            .site-name {
                 color: #fff;
             }
             .navbar-nav .nav-link .icon:hover,
             .usertext:hover,
-            .dropdown-toggle:hover {
+            .dropdown-toggle:hover,
+            .site-name:hover {
                 color: $brand-primary;
             }
         }

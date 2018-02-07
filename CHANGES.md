@@ -4,7 +4,7 @@ moodle-theme_boost_campus
 Changes
 -------
 
-### Unreleased
+### Release v3.3-r3
 
 * 2018-02-07 - Fixed structure of image area to prevent applying the link hover style.
 * 2018-02-05 - Improvements to feature 'Show hint in hidden courses'.

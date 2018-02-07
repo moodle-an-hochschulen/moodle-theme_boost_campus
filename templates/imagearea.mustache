@@ -38,9 +38,7 @@
         <div class="container-fluid">
             <div class="row-fluid">
                 {{#imageareafiles}}
-                    {{#linkpath}}<a href="{{linkpath}}">{{/linkpath}}
-                        <img src="{{filepath}}">
-                    {{#linkpath}}</a>{{/linkpath}}
+                    {{#linkpath}}<a href="{{linkpath}}">{{/linkpath}}<img src="{{filepath}}">{{#linkpath}}</a>{{/linkpath}}
                 {{/imageareafiles}}
             </div>
         </div>

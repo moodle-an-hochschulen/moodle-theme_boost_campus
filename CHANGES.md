@@ -6,6 +6,7 @@ Changes
 
 ### Unreleased
 
+* 2018-02-08 - Fixed bug for the profile editing button in non admin view.
 * 2018-02-08 - Improved SCSS search for competencies node in the nav drawer.
 * 2018-02-08 - Harmonise HTML structure of the nav drawer regarding to media spans.
 * 2018-02-08 - Removed backport of MDL-59425 because this code is integrated into core.

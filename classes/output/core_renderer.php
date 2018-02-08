@@ -192,13 +192,14 @@ class core_renderer extends \theme_boost\output\core_renderer {
                         has_capability('moodle/user:update', \context_system::instance())) {
                     $url = new moodle_url('/user/editadvanced.php', array('id' => $userid, 'course' => $COURSE->id,
                                                                           'returnto' => 'profile'));
+                    $html .= $this->single_button($url, get_string('editmyprofile', 'core'));
                 } else if ((has_capability('moodle/user:editprofile', \context_user::instance($userid)) &&
                                 !is_siteadmin($USER)) || ($currentuser &&
                                 has_capability('moodle/user:editownprofile', \context_system::instance()))) {
                     $url = new moodle_url('/user/edit.php', array('id' => $userid, 'course' => $COURSE->id,
                                                                   'returnto' => 'profile'));
+                    $html .= $this->single_button($url, get_string('editmyprofile', 'core'));
                 }
-                $html .= $this->single_button($url, get_string('editmyprofile', 'core'));
                 $html .= html_writer::end_div();
             }
             // Do not show the page heading buttons on the profile page at this place.

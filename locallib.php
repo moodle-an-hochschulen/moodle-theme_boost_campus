@@ -211,6 +211,49 @@ function theme_boost_campus_process_flatnav(flat_navigation $flatnav) {
         // Return the passed flat navigation without changes.
         $flatnavreturn = $flatnav;
     }
+
+    // If the setting 'navdrawericonssetting' is enabled.
+    if (get_config('theme_boost_campus', 'navdrawericons') == 'yes') {
+        // Adding icons to flatnav nodes.
+        // Dashboard node.
+        if ($myhomenode = $flatnav->find('myhome', global_navigation::TYPE_SYSTEM)) {
+            $myhomenode->icon = new pix_icon('i/dashboard', '');
+        }
+        // Site home node.
+        if ($homenode = $flatnav->find('home', global_navigation::TYPE_SETTING)) {
+            $homenode->icon = new pix_icon('i/home', '');
+        }
+        // Site administration node.
+        if (($sitesettingsnode = $flatnav->find('sitesettings', global_navigation::TYPE_SITE_ADMIN))) {
+            $sitesettingsnode->icon = new pix_icon('t/preferences', '');
+        }
+        // Participants node.
+        if ($participantsnode = $flatnav->find('participants', global_navigation::TYPE_CONTAINER)) {
+            $participantsnode->icon = new pix_icon('i/users', '');
+        }
+        // Course section nodes.
+        if ($allsectionnodes = $flatnav->type(global_navigation::TYPE_SECTION)) {
+            foreach ($allsectionnodes as $n) {
+                $n->icon = new pix_icon('i/folder', '');
+            }
+        }
+        // Calendar node.
+        if ($calendarnode = $flatnav->find('calendar', global_navigation::TYPE_CUSTOM)) {
+            $calendarnode->icon = new pix_icon('i/calendar', '');
+        }
+        // Private files node.
+        if ($privatefilesnode = $flatnav->find('privatefiles', global_navigation::TYPE_SETTING)) {
+            $privatefilesnode->icon = new pix_icon('i/files', '');
+        }
+        // My courses nodes.
+        if ($mycourses = $flatnav->type(global_navigation::TYPE_COURSE)) {
+            foreach ($mycourses as $n) {
+                $n->icon = new pix_icon('i/course', '');
+                $n->set_indent(false);
+            }
+        }
+    }
+
     return $flatnavreturn;
 }
 

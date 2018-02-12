@@ -78,6 +78,7 @@ $templatecontext = [
     // MODIFICATION END.
 ];
 
+
 // MODIDFICATION START.
 // Use the returned value from theme_boost_campus_get_modified_flatnav_defaulthomepageontop as the template context.
 $templatecontext['flatnavigation'] = theme_boost_campus_process_flatnav($PAGE->flatnav);

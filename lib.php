@@ -98,7 +98,8 @@ function theme_boost_campus_get_pre_scss($theme) {
         'showsettingsincourse' => ['showsettingsincourse'],
         'incoursesettingsswitchtorole' => ['incoursesettingsswitchtorole'],
         'hidefooteronloginpage' => ['hidefooteronloginpage'],
-        'footerhideusertourslink' => ['footerhideusertourslink']
+        'footerhideusertourslink' => ['footerhideusertourslink'],
+        'navdrawericons' => ['navdrawericons']
         // MODIFICATION END.
     ];
 
@@ -174,4 +175,14 @@ function theme_boost_campus_reset_app_cache() {
     // To be safe and because there can only be one callback function added to a plugin setting,
     // we also delete the complete theme cache here.
     theme_reset_all_caches();
+}
+
+/**
+ * Get icon mapping for font-awesome.
+ */
+function theme_boost_campus_get_fontawesome_icon_map() {
+    return [
+        'core:i/course' => 'fa-graduation-cap',
+        'core:i/home' => 'fa-home',
+    ];
 }

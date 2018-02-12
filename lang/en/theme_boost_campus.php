@@ -170,6 +170,11 @@ $string['blockiconsetting_desc_code'] = '.block_people .card-block .card-title::
 $string['navbardesignheadingsetting'] = 'Navbar';
 $string['darknavbarsetting'] = 'Dark navbar';
 $string['darknavbarsetting_desc'] = 'By checking this setting you can invert the default light navbar to a dark one with white links.';
+// ...Nav drawer.
+$string['navdrawerheadingsetting'] = 'Navigation menu';
+$string['navdrawericonssetting'] = 'Navigation menu item icons';
+$string['navdrawericonssetting_desc'] = 'If this setting is enabled (default), icons will be added to corresponding navigation items of the sliding side menu. Root nodes, that group other items together won\'t get an icon to underline their heading character. <br/>If disabled, no icons in front of the items will be shown. <br/>
+Please note: This is an all or nothing setting. It is only possible to display or hide icons for <strong>all suitable</strong> menu items at once.';
 
 // ADDITIONAL STRINGS (IN ALPHABETICAL ORDER).
 $string['cachedef_imagearea'] = 'Cache for imagearea items';

@@ -54,6 +54,8 @@
     * Require own javascript module for back to top button functionality
     * If setting "showsettingsincourse" is enabled, then render course context menu from theme_boost_campus/settings_link_page template
       and use the equivalent own javascript "incoursesettings".
+    * Use additional JavaScript functionality if the setting nawdrawerfullwidth is enabled. We write this here, so we do not
+      have to override the drawer.js file for this small addition.
 }}
 {{{ output.doctype }}}
 <html {{{ output.htmlattributes }}}>
@@ -128,4 +130,30 @@ require(['theme_boost_campus/catchshortcuts'], function(mod) {
     mod.init();
     });
 {{/incoursesettings}}
+// This is needed because sections are just anchor calls and won't reload the page.
+// So the nav drawer won't close then.
+{{#nawdrawerfullwidth}}
+    require(['jquery'], function($) {
+        // If a course section menu item is clicked.
+            $('.list-group-item[href*="#section"]').click(function() {
+            // Only process if we are on small screens
+            if ($(document).width() < 768) {
+                // Then close the nav drawer and set all corresponding values correctly.
+                // This code is taken from drawer.js as we cannot call the function closeAll() here.
+                var body = $('body');
+                var trigger = body.find("[data-action='toggle-drawer']");
+                var side = trigger.attr('data-side');
+                var drawerid = trigger.attr('aria-controls');
+                var drawer = $(document.getElementById(drawerid));
+                var preference = trigger.attr('data-preference');
+
+                trigger.attr('aria-expanded', 'false');
+                body.removeClass('drawer-open-' + side);
+                drawer.attr('aria-hidden', 'true');
+                drawer.addClass('closed');
+                M.util.set_user_preference(preference, 'false');
+            }
+        });
+    });
+{{/nawdrawerfullwidth}}
 {{/js}}

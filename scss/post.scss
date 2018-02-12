@@ -259,6 +259,20 @@ body.loginbackgroundimage {
     }
 }
 
+/* If the setting navdrawerfullwidth is enabled, we want the nav drawer menu to be displayed full size on small screens. */
+@if variable-exists(nawdrawerfullwidth) {
+    @if $nawdrawerfullwidth == 'yes' {
+        @include media-breakpoint-down(sm) {
+            #nav-drawer {
+                width: 100%;
+            }
+            #nav-drawer.closed {
+                left: -100%;
+            }
+        }
+    }
+}
+
 
 /*------------------------------------
   Course header

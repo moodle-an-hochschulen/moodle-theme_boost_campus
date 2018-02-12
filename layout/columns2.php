@@ -64,6 +64,10 @@ if (get_config('theme_boost_campus', 'catchctrlarrowdown') == true) {
 }
 // MODIFICATION END.
 
+// MODIFICATION START: Setting 'nawdrawerfullwidth'.
+$navdrawerfullwidth = get_config('theme_boost_campus', 'nawdrawerfullwidth');
+// MODIFICATION END.
+
 $templatecontext = [
     'sitename' => format_string($SITE->shortname, true, ['context' => context_course::instance(SITEID), "escape" => false]),
     'output' => $OUTPUT,
@@ -75,6 +79,7 @@ $templatecontext = [
     'hasregionmainsettingsmenu' => !empty($regionmainsettingsmenu),
     // MODIFICATION START: Add Boost Campus realated values to the template context.
     'catchshortcuts' => json_encode($catchshortcuts),
+    'nawdrawerfullwidth' => $navdrawerfullwidth
     // MODIFICATION END.
 ];
 

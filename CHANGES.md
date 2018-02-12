@@ -6,6 +6,7 @@ Changes
 
 ### Unreleased
 
+* 2018-02-12 - Setting to expand nav drawer menu to full page width on small screens.
 * 2018-02-12 - Setting to show / hide icons for navigation menu items.
 * 2018-02-08 - Fixed bug for the profile editing button in non admin view.
 * 2018-02-08 - Improved SCSS search for competencies node in the nav drawer.

@@ -147,6 +147,9 @@ $string['userdefinedontopsetting'] = 'User defined homepage on top';
 $string['userdefinedontopsetting_desc'] = 'By checking this setting the Dashboard or Site home menu item (depends on the user\'s preferences) will always be located at the top of the nav drawer. By default, this is already the case on every Moodle page except for course pages. There, the current course and its contents are placed on top. This might break user\'s expectations for the placement of the default homepage link.';
 $string['defaulthomepageontopsetting'] = 'Default homepage on top';
 $string['defaulthomepageontopsetting_desc'] = 'By checking this setting the default homepage link (Dashboard or Site home) will always be located at the top of the nav drawer. By default, this is already the case on every Moodle page except for course pages. There, the current course and its contents are placed on top. This might break user\'s expectations for the placement of the default homepage link.';
+// ...Navdrawer full width on small screens.
+$string['nawdrawerfullwidthsetting'] = 'Nav drawer full width on small screens';
+$string['nawdrawerfullwidthsettings_desc'] = 'By checking this setting you can enlarge the opened nav drawer menu to the full page width on small screens. This may be wanted because on small screens only very few of the main content area in the background is visible. And a full width menu might serve the users\' expectations how menus are displayed on small screens.';
 
 // Design settings.
 $string['designsettings'] = 'Design Settings';

@@ -190,6 +190,9 @@ Whatever you add to this textarea will be displayed beneath the footer on every 
 
 By checking this setting the default homepage link (Dashboard or Site home) will always be located at the top of the nav drawer. By default, this is already the case on every Moodle page except for course pages. There, the current course and its contents are placed on top. This might break user's expectations for the placement of the default homepage link.
 
+##### Nav drawer width on small screens
+
+By checking this setting you can enlarge the opened nav drawer menu to the full page width on small screens. This may be wanted because on small screens only very few of the main content area in the background is visible. And a full width menu might serve the users' expectations how menus are displayed on small screens.
 
 ### 6. Tab "Design Settings"
 

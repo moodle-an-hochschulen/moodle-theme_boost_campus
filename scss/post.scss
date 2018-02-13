@@ -98,7 +98,9 @@ body.loginbackgroundimage {
             .navbar-nav .nav-link .icon,
             .usertext,
             .dropdown-toggle,
-            .site-name {
+            .site-name,
+            .login,
+            .login a {
                 color: #fff;
             }
             .navbar-nav .nav-link .icon:hover,
@@ -106,6 +108,9 @@ body.loginbackgroundimage {
             .dropdown-toggle:hover,
             .site-name:hover {
                 color: $brand-primary;
+            }
+            .navbar-brand:not(.has-logo) .site-name:hover{
+                color:#fff;
             }
         }
     }
@@ -148,16 +153,9 @@ body.loginbackgroundimage {
  * them either by a solid or a dotted line. For the course
  * sections, we display no borders to make clear they are a
  * separate unit.
- * Icons will be added to menu items that are children of a
- * root item and the ident has to be adjusted for consistency
- * throuout the improved menu layout.
  */
 
 #nav-drawer {
-
-    /*
-     * General preparation.
-     */
 
     /* First remove all existing borders from the menu items + reset the bottom margin. */
     .list-group-item {
@@ -165,11 +163,10 @@ body.loginbackgroundimage {
         margin-bottom: 0;
     }
 
-    /* Reduce space between pix icons and text as this is too much*/
+    /* Reduce space between pix icons and text as this is too much. */
     .media-left {
         padding-right: 2px;
     }
-
 
     /*
      * General left menu.
@@ -200,12 +197,6 @@ body.loginbackgroundimage {
         @include navdrawer-node-separator(parent);
     }
 
-    /* Menu item: my files. */
-    .list-group-item[data-key|=privatefiles] {
-        border-bottom-right-radius: .25rem;
-        border-bottom-left-radius: .25rem;
-    }
-
     /* Menu item: my courses. */
     .list-group-item[data-key|=mycourses] {
         /* Separate the courses menu items from the other ones and add a bottom border*/
@@ -223,7 +214,6 @@ body.loginbackgroundimage {
     .list-group-item[data-parent-key|=mycourses] {
         @include navdrawer-node-separator(child);
     }
-
     .list-group-item[data-parent-key|=mycourses]:last-child {
         border-bottom: none;
     }
@@ -349,9 +339,6 @@ body.loginbackgroundimage {
         }
         /* Reduce indent of hidden sections as this is not aligned with visible ones. */
         li.section.main.hidden {
-            h3.sectionname > span {
-                margin-left: 0;
-            }
             .section {
                 padding: 0;
             }
@@ -468,7 +455,7 @@ body.loginbackgroundimage {
     padding-left: 15px;
     padding-right: 15px;
 }
-/* Do not display the intro box if it do not contain any content. */
+/* Do not display the intro box if it does not contain any content. */
 #intro:empty {
     display: none;
 }
@@ -542,7 +529,6 @@ blockquote::before {
             content: '\f009';
             font-size: 1.3rem;
             padding-right: 7px;
-            color: $gray-dark;
         }
         /* Provide different, suitable Font Awesome icons for different Moodle blocks. */
         .block_recent_activity .card-block .card-title::before {

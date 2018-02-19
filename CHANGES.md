@@ -4,7 +4,7 @@ moodle-theme_boost_campus
 Changes
 -------
 
-### Unreleased
+### Release v3.4-r1
 
 * 2018-02-19 - Setting to show a hint when a user is guest accessing a course.
 * 2018-02-14 - Improved icon positions in the course category tree.

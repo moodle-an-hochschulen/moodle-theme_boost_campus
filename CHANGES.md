@@ -6,6 +6,7 @@ Changes
 
 ### Unreleased
 
+* 2018-02-19 - Setting to show a hint when a user is guest accessing a course.
 * 2018-02-14 - Improved icon positions in the course category tree.
 * 2018-02-13 - Cleaned up post.scss.
 * 2018-02-12 - Setting to expand nav drawer menu to full page width on small screens.

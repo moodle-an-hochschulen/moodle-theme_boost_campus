@@ -235,6 +235,12 @@ if ($ADMIN->fulltree) {
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
+    // Settings title for grouping course settings related aspects together. We don't need a description here.
+    $name = 'theme_boost_campus/coursehintsheading';
+    $title = get_string('coursehintsheadingsetting', 'theme_boost_campus', null, true);
+    $setting = new admin_setting_heading($name, $title, null);
+    $page->add($setting);
+
     // Setting to display information of a switched role in the course header.
     $name = 'theme_boost_campus/showswitchedroleincourse';
     $title = get_string('showswitchedroleincoursesetting', 'theme_boost_campus', null, true);
@@ -250,6 +256,17 @@ if ($ADMIN->fulltree) {
     $name = 'theme_boost_campus/showhintcoursehidden';
     $title = get_string('showhintcoursehiddensetting', 'theme_boost_campus', null, true);
     $description = get_string('showhintcoursehiddensetting_desc', 'theme_boost_campus', null, true);
+    $setting = new admin_setting_configcheckbox($name, $title, $description, 'no', 'yes', 'no'); // Overriding default values
+    // yes = 1 and no = 0 because of the use of empty() in theme_boost_campus_get_pre_scss() (lib.php).
+    // Default 0 value would not write the variable to scss that could cause the scss to crash if used in that file.
+    // See MDL-58376.
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+    // Setting to display a hint to the guest accessing of a course.
+    $name = 'theme_boost_campus/showhintcourseguestaccess';
+    $title = get_string('showhintcoursguestaccesssetting', 'theme_boost_campus', null, true);
+    $description = get_string('showhintcourseguestaccesssetting_desc', 'theme_boost_campus', null, true);
     $setting = new admin_setting_configcheckbox($name, $title, $description, 'no', 'yes', 'no'); // Overriding default values
     // yes = 1 and no = 0 because of the use of empty() in theme_boost_campus_get_pre_scss() (lib.php).
     // Default 0 value would not write the variable to scss that could cause the scss to crash if used in that file.

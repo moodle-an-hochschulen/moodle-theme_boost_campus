@@ -122,13 +122,19 @@ This setting can change the behaviour Moodle displays the title for the first co
 
 With this setting you can add an additional course edit on / off button to the course header for faster accessibility. This the same way as it was displayed before theme_boost.
 
-#### Position of switch role information
+#### Course related hints
+
+##### Position of switch role information
 
 With this setting you can choose the place where the information to which role a user has switched is being displayed. If not checked (default value), the role information will be displayed right beneath the user\'s name in the user menu (like in theme Boost). If checked, this information - together with a link to switch back - will be displayed beneath the course, as this functionality is course related.
 
-#### Show hint in hidden courses
+##### Show hint in hidden courses
 
 With this setting a hint will appear in the course header as long as the visibility of the course is hidden. This helps to identify the visibility state of a course at a glance without the need for looking at the course settings.
+
+##### Show hint guest for access
+
+With this setting a hint will appear in the course header when a user is accessing it with the guest access feature. If the course provides an active self enrolment, a link to that page is also presented to the user.
 
 #### Course settings
 

@@ -222,7 +222,7 @@ class core_renderer extends \theme_boost\output\core_renderer {
         // If the setting showhintcoursehidden is set, the visibility of the course is hidden and
         // a hint for the visibility will be shown.
         if (get_config('theme_boost_campus', 'showhintcoursehidden') == 'yes' && $COURSE->visible == false &&
-            $PAGE->has_set_url() && $PAGE->url->compare(new moodle_url('/course/view.php'), URL_MATCH_BASE)) {
+                $PAGE->has_set_url() && $PAGE->url->compare(new moodle_url('/course/view.php'), URL_MATCH_BASE)) {
             $html .= html_writer::start_tag('div', array('class' => 'course-hidden-infobox alert alert-warning'));
             $html .= html_writer::tag('i', null, array('class' => 'fa fa-exclamation-circle fa-3x fa-pull-left'));
             $html .= get_string('showhintcoursehiddengeneral', 'theme_boost_campus', $COURSE->id);
@@ -231,6 +231,21 @@ class core_renderer extends \theme_boost\output\core_renderer {
                 $html .= html_writer::tag('div', get_string('showhintcoursehiddensettingslink',
                     'theme_boost_campus', array('url' => $CFG->wwwroot.'/course/edit.php?id='. $COURSE->id)));
             }
+            $html .= html_writer::end_tag('div');
+        }
+        // MODIFICATION END.
+
+        // MODIFICATION START:
+        // If the setting showhintcourseguestaccess is set, a hint for users that view the course with guest access is shown.
+        if (get_config('theme_boost_campus', 'showhintcourseguestaccess') == 'yes'
+                && is_guest(\context_course::instance($COURSE->id), $USER->id)
+                && $PAGE->has_set_url()
+                && $PAGE->url->compare(new moodle_url('/course/view.php'), URL_MATCH_BASE)) {
+            $html .= html_writer::start_tag('div', array('class' => 'course-guestaccess-infobox alert alert-warning'));
+            $html .= html_writer::tag('i', null, array('class' => 'fa fa-exclamation-circle fa-3x fa-pull-left'));
+            $html .= get_string('showhintcourseguestaccessgeneral', 'theme_boost_campus',
+                array('role' => role_get_name(get_guest_role())));
+            $html .= theme_boost_campus_get_course_guest_access_hint($COURSE->id);
             $html .= html_writer::end_tag('div');
         }
         // MODIFICATION END.

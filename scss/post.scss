@@ -862,7 +862,8 @@ a[href^="mailto"]::before {
 /* Setting to show a hint for hidden courses. */
 /* Because the Font Awesome icon is set to fa-3x, we need a minimum size for the container. */
 .course-hidden-infobox,
-.switched-role-infobox {
+.switched-role-infobox,
+.course-guestaccess-infobox {
     min-height: 5rem;
 }
 

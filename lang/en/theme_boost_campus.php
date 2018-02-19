@@ -70,13 +70,18 @@ $string['section0titlesetting_desc'] = 'This setting can change the behaviour Mo
 // ...Course edit button.
 $string['courseeditbuttonsetting'] = 'Course edit button';
 $string['courseeditbuttonsetting_desc'] = 'With this setting you can add an additional course edit on / off button to the course header for faster accessibility of this often used function.';
+// ...Course related hints.
+$string['coursehintsheadingsetting'] = 'Course related hints.';
 // ...Switch role information.
 $string['showswitchedroleincoursesetting'] = 'Position of switch role information';
 $string['showswitchedroleincoursesetting_desc'] = 'With this setting you can choose the place where the information to which role a user has switched is being displayed. If not checked (default value), the role information will be displayed right beneath the user\'s name in the user menu (like in theme Boost). If checked, this information - together with a link to switch back - will be displayed beneath the course, as this functionality is course related.';
 $string['switchedroleto'] = 'You are viewing this course currently with the role:';
-// ... Show hint for hidden course.
+// ...Show hint for hidden course.
 $string['showhintcoursehiddensetting'] = 'Show hint in hidden courses';
 $string['showhintcoursehiddensetting_desc'] = 'With this setting a hint will appear in the course header as long as the visibility of the course is hidden. This helps to identify the visibility state of a course at a glance without the need for looking at the course settings.';
+// ... Show hint for guest access.
+$string['showhintcoursguestaccesssetting'] = 'Show hint guest for access';
+$string['showhintcourseguestaccesssetting_desc'] = 'With this setting a hint will appear in the course header when a user is accessing it with the guest access feature. If the course provides an active self enrolment, a link to that page is also presented to the user.';
 // ...Course settings.
 $string['coursesettingsheadingsetting'] = 'Course settings';
 // ...Show course settings within the course.
@@ -181,6 +186,8 @@ Please note: This is an all or nothing setting. It is only possible to display o
 
 // ADDITIONAL STRINGS (IN ALPHABETICAL ORDER).
 $string['cachedef_imagearea'] = 'Cache for imagearea items';
+$string['showhintcourseguestaccessgeneral'] = 'You are currently viewing this course as <strong>{$a->role}</strong>.';
+$string['showhintcourseguestaccesslink'] = 'To have full access to the course, you can <a href="{$a->url}">self enrol into this course</a>.';
 $string['showhintcoursehiddengeneral'] = 'This course is currently <strong>hidden</strong>. Only enrolled teachers can access this course when hidden.';
 $string['showhintcoursehiddensettingslink'] = 'You can change the visibility in the <a href="{$a->url}">course settings</a>.';
 $string['switchroleto'] = 'Switch role to';

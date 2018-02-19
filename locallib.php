@@ -358,3 +358,25 @@ function theme_boost_campus_get_incourse_activity_settings() {
     }
     return $node;
 }
+
+function theme_boost_campus_get_course_guest_access_hint($courseid) {
+    global $CFG;
+    require_once($CFG->dirroot . '/enrol/self/lib.php');
+
+    $html = '';
+    $instances = enrol_get_instances($courseid, true);
+    $plugins = enrol_get_plugins(true);
+    foreach ($instances as $instance) {
+        if (!isset($plugins[$instance->enrol])) {
+            continue;
+        }
+        $plugin = $plugins[$instance->enrol];
+        if ($plugin->show_enrolme_link($instance)) {
+            $html = html_writer::tag('div', get_string('showhintcourseguestaccesslink',
+                'theme_boost_campus', array('url' => $CFG->wwwroot . '/enrol/index.php?id=' . $courseid)));
+            break;
+        }
+    }
+
+    return $html;
+}

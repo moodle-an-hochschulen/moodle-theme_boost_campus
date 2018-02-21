@@ -80,7 +80,7 @@ $string['switchedroleto'] = 'You are viewing this course currently with the role
 $string['showhintcoursehiddensetting'] = 'Show hint in hidden courses';
 $string['showhintcoursehiddensetting_desc'] = 'With this setting a hint will appear in the course header as long as the visibility of the course is hidden. This helps to identify the visibility state of a course at a glance without the need for looking at the course settings.';
 // ... Show hint for guest access.
-$string['showhintcoursguestaccesssetting'] = 'Show hint guest for access';
+$string['showhintcoursguestaccesssetting'] = 'Show hint for guest access';
 $string['showhintcourseguestaccesssetting_desc'] = 'With this setting a hint will appear in the course header when a user is accessing it with the guest access feature. If the course provides an active self enrolment, a link to that page is also presented to the user.';
 // ...Course settings.
 $string['coursesettingsheadingsetting'] = 'Course settings';

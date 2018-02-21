@@ -172,7 +172,7 @@ body.loginbackgroundimage {
      * General left menu.
      */
     /* Course home menu. */
-    .list-group-item[data-key|=coursehome] {
+    .list-group-item[data-key=coursehome] {
         /* Add solid border and realign the node with the other ones. */
         @include navdrawer-node-separator(parent);
         padding: .75rem 1.25rem;
@@ -183,22 +183,22 @@ body.loginbackgroundimage {
     }
 
     /* Menu items participants, badges, grades and competencies need dashed bottom border. */
-    .list-group-item[data-key|=participants],
-    .list-group-item[data-key|=badgesview],
-    .list-group-item[data-key|=grades],
-    .list-group-item[data-key|=competencies] {
+    .list-group-item[data-key=participants],
+    .list-group-item[data-key=badgesview],
+    .list-group-item[data-key=grades],
+    .list-group-item[data-key=competencies] {
         @include navdrawer-node-separator(child);
     }
 
     /* Add solid border: myhome, website start and calendar. */
-    .list-group-item[data-key|=myhome],
-    .list-group-item[data-key|=home],
-    .list-group-item[data-key|=calendar] {
+    .list-group-item[data-key=myhome],
+    .list-group-item[data-key=home],
+    .list-group-item[data-key=calendar] {
         @include navdrawer-node-separator(parent);
     }
 
     /* Menu item: my courses. */
-    .list-group-item[data-key|=mycourses] {
+    .list-group-item[data-key=mycourses] {
         /* Separate the courses menu items from the other ones and add a bottom border*/
         @include navdrawer-node-separator(parent);
         margin-top: 15px;
@@ -211,32 +211,11 @@ body.loginbackgroundimage {
     }
 
     /* Dashed border for all courses I'm enrolled in except the last one. */
-    .list-group-item[data-parent-key|=mycourses] {
+    .list-group-item[data-parent-key=mycourses] {
         @include navdrawer-node-separator(child);
     }
-    .list-group-item[data-parent-key|=mycourses]:last-child {
+    .list-group-item[data-parent-key=mycourses]:last-child {
         border-bottom: none;
-    }
-
-    /*
-     * Course home menu
-     */
-    .list-group-item[data-key|=coursehome] {
-        /* Add solid border and realign the node with the other ones. */
-        @include navdrawer-node-separator(parent);
-        padding: .75rem 1.25rem;
-        /* As this node is a topic node, no icon is needed and the media span can be hidden. */
-        .media-left {
-            display: none;
-        }
-    }
-
-    /* Menu items participants, badges, grades and competencies need dashed bottom border. */
-    .list-group-item[data-key|=participants],
-    .list-group-item[data-key|=badgesview],
-    .list-group-item[data-key|=grades],
-    .list-group-item[data-key|=competencies] {
-        @include navdrawer-node-separator(child);
     }
 
     /* If setting 'navdrawericons' is disabled, do not show any icons by hiding the whole media-left span. */

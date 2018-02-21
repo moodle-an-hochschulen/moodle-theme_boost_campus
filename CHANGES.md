@@ -5,6 +5,7 @@ Changes
 -------
 ### Unreleased
 
+* 2018-02-21 - Further improvement of nav drawer SCSS section.
 * 2018-02-21 - Implemented get_extra_scss function.
 
 ### Release v3.4-r1

@@ -145,6 +145,7 @@ $THEME->layouts = [
 ];
 
 $THEME->enable_dock = false;
+$THEME->extrascsscallback = 'theme_boost_campus_get_extra_scss';
 $THEME->prescsscallback = 'theme_boost_campus_get_pre_scss';
 $THEME->yuicssmodules = array();
 $THEME->rendererfactory = 'theme_overridden_renderer_factory';

@@ -1,4 +1,5 @@
 /* stylelint-disable declaration-no-important */
+/* stylelint-disable max-line-length */
 
 /*------------------------------------
   Login page
@@ -158,12 +159,6 @@ body.loginbackgroundimage {
 
 #nav-drawer {
 
-    /* First remove all existing borders from the menu items + reset the bottom margin. */
-    .list-group-item {
-        border: 0;
-        margin-bottom: 0;
-    }
-
     /* Reduce space between pix icons and text as this is too much. */
     .media-left {
         padding-right: 2px;
@@ -173,9 +168,7 @@ body.loginbackgroundimage {
      * General left menu.
      */
     /* Course home menu. */
-    .list-group-item[data-key=coursehome] {
-        /* Add solid border and realign the node with the other ones. */
-        @include navdrawer-node-separator(parent);
+    .list-group-item[data-key="coursehome"] {
         padding: .75rem 1.25rem;
         /* As this node is a heading node, no icon is needed and the media span can be hidden. */
         .media-left {
@@ -183,40 +176,20 @@ body.loginbackgroundimage {
         }
     }
 
-    /* Menu items participants, badges, grades and competencies need dashed bottom border. */
-    .list-group-item[data-key=participants],
-    .list-group-item[data-key=badgesview],
-    .list-group-item[data-key=grades],
-    .list-group-item[data-key=competencies] {
-        @include navdrawer-node-separator(child);
-    }
-
-    /* Add solid border: myhome, website start and calendar. */
-    .list-group-item[data-key=myhome],
-    .list-group-item[data-key=home],
-    .list-group-item[data-key=calendar] {
-        @include navdrawer-node-separator(parent);
-    }
 
     /* Menu item: my courses. */
-    .list-group-item[data-key=mycourses] {
-        /* Separate the courses menu items from the other ones and add a bottom border*/
-        @include navdrawer-node-separator(parent);
+    .list-group-item[data-key="mycourses"] {
         margin-top: 15px;
-        border-top-right-radius: .25rem;
-        border-top-left-radius: .25rem;
         /* As this node is a heading node, no icon is needed and the media span can be hidden. */
         .media-left {
             display: none;
         }
     }
 
-    /* Dashed border for all courses I'm enrolled in except the last one. */
-    .list-group-item[data-parent-key=mycourses] {
-        @include navdrawer-node-separator(child);
-    }
-    .list-group-item[data-parent-key=mycourses]:last-child {
-        border-bottom: none;
+    /* Remove border of child nodes which should appear as one block. */
+    .list-group-item[data-parent-key="mycourses"],
+    .list-group-item[href*="#section-"]:not([href*="#section-0"]) {
+        border-top: none;
     }
 
     /* If setting 'navdrawericons' is disabled, do not show any icons by hiding the whole media-left span. */
@@ -882,75 +855,49 @@ a[href^="mailto"]::before {
     margin-left: 0.3em;
 }
 
+
 /*------------------------------------
   Special: Local Plugins
   -------------------------------------*/
 
 /* Special styles for plugin local_boostnavigation. */
 #nav-drawer {
-    /* Remove the arrow icon provided by the plugin because we changed the HTML structure of the menu items. */
-    .list-group-item[data-key='localboostnavigationcoursesections'],
-    .list-group-item[data-key='localboostnavigationactivities'],
-    .list-group-item[data-key^='localboostnavigationcustom'] {
-        div::after {
-            display: none;
-        }
-        .media-left {
-            display: none;
+    /* Remove border of child nodes which should appear as one block. */
+    .list-group-item[data-key^="localboostnavigationactivity"],
+    .list-group-item[data-parent-key^="localboostnavigationcustom"] {
+        border-top: none;
+    }
+
+    /* Remove (empty) icons from the heading nodes. */
+    .list-group-item[data-key="localboostnavigationactivities"] .media-left,
+    .list-group-item[data-key="localboostnavigationcoursesections"] .media-left,
+    .list-group-item[data-key^="localboostnavigationcustom"][data-isexpandable="1"] .media-left {
+        display: none;
+    }
+
+    /* If setting 'navdrawericons' is enabled, revert the indent to the collapsed custom child nodes which was
+       added by local_boostnavigation. Unfortunately, this has to be done for each custom node block individually because the child
+       node does not know (with a CSS-selectable attribute) if its parent node is collapsed or node. */
+    @if variable-exists(navdrawericons) {
+        @if $navdrawericons == 'yes' {
+            .list-group-item[data-key^="localboostnavigationcustomcourseusers"][data-isexpandable="1"]:not([data-parent-key^="localboostnavigationcustomcourseusers"]) ~ .list-group-item[data-parent-key^="localboostnavigationcustomcourseusers"] > div,
+            .list-group-item[data-key^="localboostnavigationcustomcourseadmins"][data-isexpandable="1"]:not([data-parent-key^="localboostnavigationcustomcourseadmins"]) ~ .list-group-item[data-parent-key^="localboostnavigationcustomcourseadmins"] > div,
+            .list-group-item[data-key^="localboostnavigationcustomrootusers"][data-isexpandable="1"]:not([data-parent-key^="localboostnavigationcustomrootusers"]) ~ .list-group-item[data-parent-key^="localboostnavigationcustomrootusers"] > div,
+            .list-group-item[data-key^="localboostnavigationcustomcrootadmins"][data-isexpandable="1"]:not([data-parent-key^="localboostnavigationcustomrootadmins"]) ~ .list-group-item[data-parent-key^="localboostnavigationcustomrooradmins"] > div,
+            .list-group-item[data-key^="localboostnavigationcustombottomusers"][data-isexpandable="1"]:not([data-parent-key^="localboostnavigationcustombottomusers"]) ~ .list-group-item[data-parent-key^="localboostnavigationcustombottomusers"] > div,
+            .list-group-item[data-key^="localboostnavigationcustombottomadmins"][data-isexpandable="1"]:not([data-parent-key^="localboostnavigationcustombottomadmins"]) ~ .list-group-item[data-parent-key^="localboostnavigationcustombottomadmins"] > div {
+                margin-left: inherit !important;
+            }
         }
     }
 
-    /* Add the icon at the needed place within this theme. */
-    .list-group-item[data-key='localboostnavigationcoursesections'][data-collapse='0'] .media-body::after,
-    .list-group-item[data-key='localboostnavigationactivities'][data-collapse='0'] .media-body::after,
-    .list-group-item[data-key^='localboostnavigationcustom'][data-isexpandable="1"][data-collapse='0'] .media-body::after {
-        content: url([[pix:i/dropdown]]);
-        position: absolute;
-        top: 0.75rem;
-        right: 0.75rem;
-    }
-    .list-group-item[data-key='localboostnavigationcoursesections'][data-collapse='1'] .media-body::after,
-    .list-group-item[data-key='localboostnavigationactivities'][data-collapse='1'] .media-body::after,
-    .list-group-item[data-key^='localboostnavigationcustom'][data-isexpandable="1"][data-collapse='1'] .media-body::after {
-        content: url([[pix:t/collapsed]]);
-        position: absolute;
-        top: 0.75rem;
-        right: 0.75rem;
-    }
-    .list-group-item[data-parent-key='localboostnavigationactivities'] > div::before {
-        margin-left: 0;
-        margin-right: 0.3rem;
-    }
-    .list-group-item[data-parent-key='localboostnavigationactivities'] {
-        .media-left {
-            display: none;
-        }
-        .media-body {
-            display: inline;
-        }
-    }
-    /* Delete the borders for the sub items to group them together. */
-    .list-group-item[data-key='localboostnavigationactivities'][data-collapse='1'],
-    .list-group-item[data-key='localboostnavigationactivities'][data-collapse='0'],
-    .list-group-item[data-key='localboostnavigationcoursesections'][data-collapse='0'],
-    .list-group-item[data-key='localboostnavigationcoursesections'][data-collapse='1'],
-    .list-group-item[data-key="mycourses"][data-collapse="1"],
-    .list-group-item[data-parent-key='localboostnavigationcoursesections'] {
-        border-bottom: none;
-    }
-    /* Special styles for the node resources. */
-    .list-group-item[data-key='localboostnavigationresources'] {
-        @include navdrawer-node-separator(child);
-        border-top: 1px dashed $gray-light;
-        .media-left {
-            content: url([[pix:e/copy]]);
-            display: inline;
-            padding-left: 0.5rem;
-        }
-        .media-body {
-            display: inline;
-            padding-left: 0.3rem;
+    /* If setting 'navdrawericons' is enabled, revert the indent to the activity nodes which was added by local_boostnavigation. */
+    /* TODO: Remove when MDL-61298 is integrated to Moodle core. */
+    @if variable-exists(navdrawericons) {
+        @if $navdrawericons == 'yes' {
+            .list-group-item[data-key^="localboostnavigationactivity"] > div {
+                margin-left: inherit !important;
+            }
         }
     }
 }
-

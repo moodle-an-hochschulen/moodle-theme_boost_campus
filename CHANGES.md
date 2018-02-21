@@ -3,8 +3,11 @@ moodle-theme_boost_campus
 
 Changes
 -------
+
 ### Unreleased
 
+* 2018-02-25 - Simplify the borders between the nav drawer nodes, all borders are now simply solid again. Thanks for understanding.
+* 2018-02-25 - Change the CSS workarounds which were introduced for local_boostnavigation.
 * 2018-02-23 - Changes to footer SCSS due to changes in Moodle core.
 * 2018-02-23 - Improved README.md for section login background images.
 * 2018-02-22 - Improvements to the nav drawer icons feature.

@@ -208,5 +208,7 @@ function theme_boost_campus_get_fontawesome_icon_map() {
     return [
         'core:i/course' => 'fa-graduation-cap',
         'core:i/home' => 'fa-home',
+        'core:i/privatefiles' => 'fa-file-o',
+        'core:i/section' => 'fa-folder-o'
     ];
 }

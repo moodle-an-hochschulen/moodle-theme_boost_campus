@@ -234,7 +234,7 @@ function theme_boost_campus_process_flatnav(flat_navigation $flatnav) {
         // Course section nodes.
         if ($allsectionnodes = $flatnav->type(global_navigation::TYPE_SECTION)) {
             foreach ($allsectionnodes as $n) {
-                $n->icon = new pix_icon('i/folder', '');
+                $n->icon = new pix_icon('i/section', '');
             }
         }
         // Calendar node.
@@ -243,7 +243,7 @@ function theme_boost_campus_process_flatnav(flat_navigation $flatnav) {
         }
         // Private files node.
         if ($privatefilesnode = $flatnav->find('privatefiles', global_navigation::TYPE_SETTING)) {
-            $privatefilesnode->icon = new pix_icon('i/files', '');
+            $privatefilesnode->icon = new pix_icon('i/privatefiles', '');
         }
         // My courses nodes.
         if ($mycourses = $flatnav->type(global_navigation::TYPE_COURSE)) {

@@ -628,6 +628,9 @@ blockquote::before {
     /* Set footer blocks text color from white to dark gray. */
     .block {
         color: $gray-dark;
+        a {
+            color: $gray-dark;
+        }
     }
 
     /* Add bottom padding to the Moodle default footer links, reset usertour only if not empty.*/

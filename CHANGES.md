@@ -5,6 +5,7 @@ Changes
 -------
 ### Unreleased
 
+* 2018-02-23 - Changes to footer SCSS due to changes in Moodle core.
 * 2018-02-22 - Improvements to the nav drawer icons feature.
 * 2018-02-21 - Fixed further color bugs in dark navbar.
 * 2018-02-21 - Further improvement of nav drawer SCSS section.

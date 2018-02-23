@@ -208,6 +208,10 @@ By checking this setting you can enlarge the opened nav drawer menu to the full 
 
 In this setting you can add up to 10 files as a background image for the login page. One of these images will be picked randomly and delivered when the user visits the login page.
 
+Please note: These images will *not* be rendered on small screens. We prevent the loading of the images for several reasons:
+* The login field takes most of the space on small screens, so the background image is hidden behind it and therefore it is not really needed there.
+* Smalls screens indicate that the user is visiting the page with a mobile device. Not loading the background image in this cases will also save data traffic for the user.
+
 ##### Login form
 
 With this setting you can optimize the login form to fit to a greater variety background images (if checked). This means that the login form will be moved to the left of the login page, will get smaller in width and will get a background that let the background image shine through. The login form will be placed on the left because many images have their main content rather in the center and so we keep this content visible. Note: You can also activate this setting if no background images are uploaded, of course.

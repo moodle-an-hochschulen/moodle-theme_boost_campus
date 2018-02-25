@@ -74,7 +74,8 @@ if ($ADMIN->fulltree) {
         array('maxfiles' => 20, 'accepted_types' => array('.scss')));
     $page->add($setting);
 
-    // Settings title to group core background image related settings together with a common heading. We don't want a description here.
+    // Settings title to group core background image related settings together with a common heading.
+    // We don't want a description here.
     $name = 'theme_boost_campus/backgroundimageheading';
     $title = get_string('backgroundimage', 'theme_boost', null, true);
     $setting = new admin_setting_heading($name, $title, null);

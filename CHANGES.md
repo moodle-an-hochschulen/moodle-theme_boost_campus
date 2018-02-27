@@ -4,6 +4,10 @@ moodle-theme_boost_campus
 Changes
 -------
 
+### Unreleased
+
+* 2018-02-27 - Fixed small bug in boostnavigation SCSS code.
+
 ### Release v3.4-r2
 
 * 2018-02-27 - Correction to README.md due to the changes for the nav drawer design changes.

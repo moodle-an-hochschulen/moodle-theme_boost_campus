@@ -864,7 +864,8 @@ a[href^="mailto"]::before {
 #nav-drawer {
     /* Remove border of child nodes which should appear as one block. */
     .list-group-item[data-key^="localboostnavigationactivity"],
-    .list-group-item[data-parent-key^="localboostnavigationcustom"] {
+    .list-group-item[data-parent-key^="localboostnavigationcustom"],
+    .list-group-item[data-key="localboostnavigationcoursesections"][data-collapse="0"] + .list-group-item[href$="#section-0"] {
         border-top: none;
     }
 

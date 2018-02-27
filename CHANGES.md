@@ -6,6 +6,7 @@ Changes
 
 ### Unreleased
 
+* 2018-02-27 - Fixed bug in improved flat_navigation.mustache.
 * 2018-02-27 - Fixed small bug in boostnavigation SCSS code.
 
 ### Release v3.4-r2

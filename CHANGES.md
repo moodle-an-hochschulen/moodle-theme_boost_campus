@@ -6,6 +6,7 @@ Changes
 
 ### Unreleased
 
+* 2018-02-27 - Correction to README.md due to the changes for the nav drawer design changes.
 * 2018-02-25 - Simplify the borders between the nav drawer nodes, all borders are now simply solid again. Thanks for understanding.
 * 2018-02-25 - Change the CSS workarounds which were introduced for local_boostnavigation.
 * 2018-02-23 - Changes to footer SCSS due to changes in Moodle core.

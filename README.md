@@ -323,7 +323,7 @@ Apart from the features which can be configured in the theme's settings, we have
 
 ### Flat navigation (nav-drawer) menu
 
-We improved the code of the new flatnavigation nay-drawer menu items to be uniformly. Furthermore, we improved the layout of the menu by styling borders, icons and margins. Now a user can recognize faster what items belong together to a parent node.
+We improved the code of the new flatnavigation nay-drawer menu items to be uniformly. Furthermore, we made slight improvements to the design by deleting borders to those nodes that are children of a parent node. So logical groups should be better recognisable.
 
 ### Course settings icon
 

@@ -4,6 +4,9 @@ moodle-theme_boost_campus
 Changes
 -------
 
+### Unreleased
+* 2018-03-01 - Further fixes to footer SCSS due to changes in Moodle core.
+
 ### Release v3.4-r3
 
 * 2018-02-27 - Fixed bug in improved flat_navigation.mustache.

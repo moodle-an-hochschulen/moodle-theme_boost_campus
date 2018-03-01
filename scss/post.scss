@@ -601,8 +601,14 @@ blockquote::before {
     /* Set footer blocks text color from white to dark gray. */
     .block {
         color: $gray-dark;
-        a {
+        /* Set link and icon color from white to gray. */
+        a,
+        .icon {
             color: $gray-dark;
+        }
+        /* Remove the underline decoration from footer blocks context menu items.*/
+        .dropdown-item.menu-action {
+            text-decoration: none;
         }
     }
 

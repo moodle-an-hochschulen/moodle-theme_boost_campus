@@ -5,6 +5,7 @@ Changes
 -------
 
 ### Unreleased
+* 2018-03-01 - Re-added (empty) pre.scss due to problems with child themes.
 * 2018-03-01 - Further fixes to footer SCSS due to changes in Moodle core.
 
 ### Release v3.4-r3

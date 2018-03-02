@@ -158,6 +158,10 @@ body.loginbackgroundimage {
  */
 
 #nav-drawer {
+    /* Remove border radius from the menu items. */
+    .list-group-item {
+        border-radius: 0;
+    }
 
     /* Reduce space between pix icons and text as this is too much. */
     .media-left {

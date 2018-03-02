@@ -5,6 +5,8 @@ Changes
 -------
 
 ### Unreleased
+
+* 2018-03-02 - Removed introduced get_extra_scss callbak again due to doubled CSS code.
 * 2018-03-02 - Removed border-radius for all nav-drawer items.
 * 2018-03-01 - Re-added (empty) pre.scss due to problems with child themes.
 * 2018-03-01 - Further fixes to footer SCSS due to changes in Moodle core.

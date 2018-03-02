@@ -128,29 +128,6 @@ function theme_boost_campus_get_pre_scss($theme) {
 }
 
 /**
- * Inject additional SCSS.
- * We implemented this function as a duplicate of theme_boost, because we need this
- * for the child theme boost_campus_child.
- *
- * @param theme_config $theme The theme config object.
- * @return string
- */
-function theme_boost_campus_get_extra_scss($theme) {
-    $content = '';
-    $imageurl = $theme->setting_file_url('backgroundimage', 'backgroundimage');
-
-    // Sets the background image, and its settings.
-    if (!empty($imageurl)) {
-        $content .= 'body { ';
-        $content .= "background-image: url('$imageurl');";
-        $content .= ' }';
-    }
-
-    // Always return the background image with the scss when we have it.
-    return !empty($theme->settings->scss) ? $theme->settings->scss . ' ' . $content : $content;
-}
-
-/**
  * Implement pluginfile function to deliver files which are uploaded in theme settings
  *
  * @param stdClass $course course object

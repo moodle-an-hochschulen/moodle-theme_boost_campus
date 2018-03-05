@@ -4,7 +4,7 @@ moodle-theme_boost_campus
 Changes
 -------
 
-### Unreleased
+### Release v3.4-r4
 
 * 2018-03-02 - Removed introduced get_extra_scss callbak again due to doubled CSS code.
 * 2018-03-02 - Removed border-radius for all nav-drawer items.

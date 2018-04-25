@@ -270,16 +270,16 @@ function theme_boost_campus_set_node_on_top(flat_navigation $flatnav, $nodename,
     // Get the node for which the sorting shall be changed.
     $pageflatnav = $flatnav->find($nodename, global_navigation::TYPE_SYSTEM);
 
-	if(is_null($pageflatnav)) {
-		// Set the showdivider of the new top node to false that no empty nav-element will be created.
-		$pageflatnav->set_showdivider(false);
-		// Add the showdivider to the coursehome node as this is the next one and this will add a margin top to it.
-		$beforenode->set_showdivider(true);
-		// Remove the site home navigation node that it does not appear twice in the menu.
-		$flatnav->remove($nodename);
-		// Add the saved site home node before the $beforenode.
-		$flatnav->add($pageflatnav, $beforenode->key);
-	}
+    if (is_null($pageflatnav)) {
+        // Set the showdivider of the new top node to false that no empty nav-element will be created.
+        $pageflatnav->set_showdivider(false);
+        // Add the showdivider to the coursehome node as this is the next one and this will add a margin top to it.
+        $beforenode->set_showdivider(true);
+        // Remove the site home navigation node that it does not appear twice in the menu.
+        $flatnav->remove($nodename);
+        // Add the saved site home node before the $beforenode.
+        $flatnav->add($pageflatnav, $beforenode->key);
+    }
 
     // Return the modified changes.
     return $flatnav;

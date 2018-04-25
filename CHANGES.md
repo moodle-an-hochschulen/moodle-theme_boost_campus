@@ -4,6 +4,10 @@ moodle-theme_boost_campus
 Changes
 -------
 
+### Unreleased
+
+* 2018-04-25 - Removed build_action_menu_from_navigation in core_renderer as MDL-58174 is integrated.
+
 ### Release v3.4-r4
 
 * 2018-03-02 - Removed introduced get_extra_scss callbak again due to doubled CSS code.

@@ -306,15 +306,6 @@ With this setting you can add a default Font Awesome icon in front of the block 
 
 By enabling this setting you can invert the default light navbar to a dark one with white links.
 
-#### Navigation menu
-
-##### Navigation menu item icons
-
-If this setting is enabled (default), icons will be added to corresponding navigation items of the sliding side menu. Root nodes, that group other items together won't get an icon to underline their heading character. 
-If disabled, no icons in front of the items will be shown. 
-
-Please note: This is an all or nothing setting. It is only possible to display or hide icons for all suitable menu items at once.
-
 
 Further improvements to Boost core theme
 ----------------------------------------

@@ -180,7 +180,6 @@ body.loginbackgroundimage {
         }
     }
 
-
     /* Menu item: my courses. */
     .list-group-item[data-key="mycourses"] {
         margin-top: 15px;
@@ -196,25 +195,16 @@ body.loginbackgroundimage {
         border-top: none;
     }
 
-    /* If setting 'navdrawericons' is disabled, do not show any icons by hiding the whole media-left span. */
-    @if variable-exists(navdrawericons) {
-        @if $navdrawericons == 'no' {
-            .list-group-item .media-left {
-                display: none;
-            }
-        }
-    }
-}
-
-/* If the setting navdrawerfullwidth is enabled, we want the nav drawer menu to be displayed full size on small screens. */
-@if variable-exists(nawdrawerfullwidth) {
-    @if $nawdrawerfullwidth == 'yes' {
-        @include media-breakpoint-down(sm) {
-            #nav-drawer {
-                width: 100%;
-            }
-            #nav-drawer.closed {
-                left: -100%;
+    /* If the setting navdrawerfullwidth is enabled, we want the nav drawer menu to be displayed full size on small screens. */
+    @if variable-exists(nawdrawerfullwidth) {
+        @if $nawdrawerfullwidth == 'yes' {
+            @include media-breakpoint-down(sm) {
+                #nav-drawer {
+                    width: 100%;
+                }
+                #nav-drawer.closed {
+                    left: -100%;
+                }
             }
         }
     }
@@ -886,29 +876,15 @@ a[href^="mailto"]::before {
         display: none;
     }
 
-    /* If setting 'navdrawericons' is enabled, revert the indent to the collapsed custom child nodes which was
+    /* Revert the indent to the collapsed custom child nodes which was
        added by local_boostnavigation. Unfortunately, this has to be done for each custom node block individually because the child
        node does not know (with a CSS-selectable attribute) if its parent node is collapsed or node. */
-    @if variable-exists(navdrawericons) {
-        @if $navdrawericons == 'yes' {
-            .list-group-item[data-key^="localboostnavigationcustomcourseusers"][data-isexpandable="1"]:not([data-parent-key^="localboostnavigationcustomcourseusers"]) ~ .list-group-item[data-parent-key^="localboostnavigationcustomcourseusers"] > div,
-            .list-group-item[data-key^="localboostnavigationcustomcourseadmins"][data-isexpandable="1"]:not([data-parent-key^="localboostnavigationcustomcourseadmins"]) ~ .list-group-item[data-parent-key^="localboostnavigationcustomcourseadmins"] > div,
-            .list-group-item[data-key^="localboostnavigationcustomrootusers"][data-isexpandable="1"]:not([data-parent-key^="localboostnavigationcustomrootusers"]) ~ .list-group-item[data-parent-key^="localboostnavigationcustomrootusers"] > div,
-            .list-group-item[data-key^="localboostnavigationcustomcrootadmins"][data-isexpandable="1"]:not([data-parent-key^="localboostnavigationcustomrootadmins"]) ~ .list-group-item[data-parent-key^="localboostnavigationcustomrooradmins"] > div,
-            .list-group-item[data-key^="localboostnavigationcustombottomusers"][data-isexpandable="1"]:not([data-parent-key^="localboostnavigationcustombottomusers"]) ~ .list-group-item[data-parent-key^="localboostnavigationcustombottomusers"] > div,
-            .list-group-item[data-key^="localboostnavigationcustombottomadmins"][data-isexpandable="1"]:not([data-parent-key^="localboostnavigationcustombottomadmins"]) ~ .list-group-item[data-parent-key^="localboostnavigationcustombottomadmins"] > div {
-                margin-left: inherit !important;
-            }
-        }
-    }
-
-    /* If setting 'navdrawericons' is enabled, revert the indent to the activity nodes which was added by local_boostnavigation. */
-    /* TODO: Remove when MDL-61298 is integrated to Moodle core. */
-    @if variable-exists(navdrawericons) {
-        @if $navdrawericons == 'yes' {
-            .list-group-item[data-key^="localboostnavigationactivity"] > div {
-                margin-left: inherit !important;
-            }
-        }
+    .list-group-item[data-key^="localboostnavigationcustomcourseusers"][data-isexpandable="1"]:not([data-parent-key^="localboostnavigationcustomcourseusers"]) ~ .list-group-item[data-parent-key^="localboostnavigationcustomcourseusers"] > div,
+    .list-group-item[data-key^="localboostnavigationcustomcourseadmins"][data-isexpandable="1"]:not([data-parent-key^="localboostnavigationcustomcourseadmins"]) ~ .list-group-item[data-parent-key^="localboostnavigationcustomcourseadmins"] > div,
+    .list-group-item[data-key^="localboostnavigationcustomrootusers"][data-isexpandable="1"]:not([data-parent-key^="localboostnavigationcustomrootusers"]) ~ .list-group-item[data-parent-key^="localboostnavigationcustomrootusers"] > div,
+    .list-group-item[data-key^="localboostnavigationcustomcrootadmins"][data-isexpandable="1"]:not([data-parent-key^="localboostnavigationcustomrootadmins"]) ~ .list-group-item[data-parent-key^="localboostnavigationcustomrooradmins"] > div,
+    .list-group-item[data-key^="localboostnavigationcustombottomusers"][data-isexpandable="1"]:not([data-parent-key^="localboostnavigationcustombottomusers"]) ~ .list-group-item[data-parent-key^="localboostnavigationcustombottomusers"] > div,
+    .list-group-item[data-key^="localboostnavigationcustombottomadmins"][data-isexpandable="1"]:not([data-parent-key^="localboostnavigationcustombottomadmins"]) ~ .list-group-item[data-parent-key^="localboostnavigationcustombottomadmins"] > div {
+        margin-left: inherit !important;
     }
 }

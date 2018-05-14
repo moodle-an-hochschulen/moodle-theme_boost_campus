@@ -6,6 +6,7 @@ Changes
 
 ### Unreleased
 
+* 2018-05-14 - Adjusted improved mustache templates due to changes in the original templates.
 * 2018-05-14 - Removed setting to show icons in the navdrawer due to integration of MDL-61298 into the core.
 * 2018-05-14 - Made changes to nav drawer HTML structure undone due to integration of MDL-61343 into the core.
 * 2018-05-14 - Changed used SCSS variable name due to renaming of variables by Moodle.

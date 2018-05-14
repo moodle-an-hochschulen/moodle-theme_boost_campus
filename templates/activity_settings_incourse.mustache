@@ -45,7 +45,7 @@
 
 <div id="boost-campus-activity-settings" class="card" >
     <h2>{{incourse_activitynode_heading}}</h2>
-    <div class="p-t-2">
+    <div class="mx-2 pt-2">
         <ul class="nav nav-tabs" role="tablist">
         <!-- First the top most activitynode and immediate children -->
             <li class="nav-item">
@@ -66,24 +66,22 @@
         <div class="tab-content">
             <div class="tab-pane active" id="activity-settings-{{key}}" role="tabpanel">
                 <div class="card">
-                    <div class="card-block">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-sm-4">
-                                    {{#action}}<h4><a href="{{action}}">{{text}}</a></h4>{{/action}}
-                                    {{^action}}<h4>{{text}}</h4>{{/action}}
-                                </div>
-                                <div class="col-sm-8">
-                                    <ul class="list-unstyled">
-                                        {{#activitynode.children}}
-                                            {{^children.count}}
-                                                {{#display}}
-                                                    <li><a href="{{{action}}}">{{text}}</a></li>
-                                                {{/display}}
-                                            {{/children.count}}
-                                        {{/activitynode.children}}
-                                    </ul>
-                                </div>
+                    <div class="card-body pb-0">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                {{#action}}<h4><a href="{{action}}">{{text}}</a></h4>{{/action}}
+                                {{^action}}<h4>{{text}}</h4>{{/action}}
+                            </div>
+                            <div class="col-sm-8">
+                                <ul class="list-unstyled">
+                                    {{#activitynode.children}}
+                                        {{^children.count}}
+                                            {{#display}}
+                                                <li><a href="{{{action}}}">{{text}}</a></li>
+                                            {{/display}}
+                                        {{/children.count}}
+                                    {{/activitynode.children}}
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -93,46 +91,44 @@
                 {{#children.count}}
                     <div class="tab-pane" id="activity-settings-{{key}}" role="tabpanel">
                         <div class="card">
-                            <div class="card-block">
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col-sm-4">
-                                            {{#action}}<h4><a href="{{action}}">{{text}}</a></h4>{{/action}}
-                                            {{^action}}<h4>{{text}}</h4>{{/action}}
-                                        </div>
-                                        <div class="col-sm-8">
-                                            <ul class="list-unstyled">
-                                                {{#children}}
-                                                    {{#display}}
-                                                        {{^children.count}}
-                                                            <li><a href="{{{action}}}">{{text}}</a></li>
-                                                        {{/children.count}}
-                                                    {{/display}}
-                                                {{/children}}
-                                            </ul>
-                                        </div>
+                            <div class="card-body pb-0">
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        {{#action}}<h4><a href="{{action}}">{{text}}</a></h4>{{/action}}
+                                        {{^action}}<h4>{{text}}</h4>{{/action}}
                                     </div>
-                                    {{#children}}
-                                        {{#display}}
-                                            {{#children.count}}
-                                                <hr>
-                                                <div class="row">
-                                                    <div class="col-sm-4">
-                                                        {{#action}}<h4><a href="{{action}}">{{text}}</a></h4>{{/action}}
-                                                        {{^action}}<h4>{{text}}</h4>{{/action}}
-                                                    </div>
-                                                    <div class="col-sm-8">
-                                                        <ul class="list-unstyled">
-                                                            {{#children}}
-                                                                {{> core/settings_link_page_single }}
-                                                            {{/children}}
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            {{/children.count}}
-                                        {{/display}}
-                                    {{/children}}
+                                    <div class="col-sm-8">
+                                        <ul class="list-unstyled">
+                                            {{#children}}
+                                                {{#display}}
+                                                    {{^children.count}}
+                                                        <li><a href="{{{action}}}">{{text}}</a></li>
+                                                    {{/children.count}}
+                                                {{/display}}
+                                            {{/children}}
+                                        </ul>
+                                    </div>
                                 </div>
+                                {{#children}}
+                                    {{#display}}
+                                        {{#children.count}}
+                                            <hr>
+                                            <div class="row">
+                                                <div class="col-sm-4">
+                                                    {{#action}}<h4><a href="{{action}}">{{text}}</a></h4>{{/action}}
+                                                    {{^action}}<h4>{{text}}</h4>{{/action}}
+                                                </div>
+                                                <div class="col-sm-8">
+                                                    <ul class="list-unstyled">
+                                                        {{#children}}
+                                                            {{> core/settings_link_page_single }}
+                                                        {{/children}}
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        {{/children.count}}
+                                    {{/display}}
+                                {{/children}}
                             </div>
                         </div>
                     </div>

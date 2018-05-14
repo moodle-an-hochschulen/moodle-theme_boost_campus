@@ -779,16 +779,23 @@ a[href^="mailto"]::before {
 #boost-campus-activity-settings {
     /* Initially do not display the settings. Visibility will be changed on click with incoursesettings.js. */
     display: none;
-    border: none;
-    padding-bottom: 0.1rem;
+    padding: 1rem;
+    padding-top: 0;
     margin-bottom: 3rem;
+    margin-top: 1rem;
+    border: none;
+
+    .nav-tabs {
+        border: none;
+        .active {
+            background-color: darken($body-bg, 5%);
+            border-color: darken($body-bg, 5%);
+        }
+    }
     /* Improve color of tab content so it looks more like a real tab. */
     .tab-content .card {
-        background-color: #f4f4f4;
-        border-left: 1px solid #ddd;
-        border-right: 1px solid #ddd;
-        border-bottom: 1px solid #ddd;
-        margin-bottom: 2rem;
+        background-color: darken($body-bg, 5%);
+        border: none;
     }
 }
 

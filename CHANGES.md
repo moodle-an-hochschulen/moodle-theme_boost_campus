@@ -6,6 +6,7 @@ Changes
 
 ### Unreleased
 
+* 2018-05-14 - Changed used SCSS variable name due to renaming of variables by Moodle.
 * 2018-05-14 - Check compatibility for Moodle 3.5, no functionality change.
 
 ### Release v3.4-r5

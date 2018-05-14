@@ -6,6 +6,7 @@ Changes
 
 ### Unreleased
 
+* 2018-05-14 - Made changes to nav drawer HTML structure undone due to integration of MDL-61343 into the core.
 * 2018-05-14 - Changed used SCSS variable name due to renaming of variables by Moodle.
 * 2018-05-14 - Check compatibility for Moodle 3.5, no functionality change.
 

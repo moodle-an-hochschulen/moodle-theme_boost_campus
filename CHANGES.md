@@ -4,6 +4,10 @@ moodle-theme_boost_campus
 Changes
 -------
 
+### Unreleased
+
+* 2018-05-14 - Check compatibility for Moodle 3.5, no functionality change.
+
 ### Release v3.4-r5
 
 * 2018-05-17 - Add missing PHPDoc to make codechecker happier.

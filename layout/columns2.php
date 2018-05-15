@@ -64,7 +64,15 @@ if (get_config('theme_boost_campus', 'catchctrlarrowdown') == true) {
 }
 // MODIFICATION END.
 
-// MODIFICATION START: Setting 'nawdrawerfullwidth'.
+// MODIFICATION START: Setting 'darknavbar'.
+if (get_config('theme_boost_campus', 'darknavbar') == 'yes') {
+    $darknavbar = true;
+} else {
+    $darknavbar = false;
+}
+// MODIFICATION END.
+
+// MODIFICATION START: Setting 'navdrawerfullwidth'.
 $navdrawerfullwidth = get_config('theme_boost_campus', 'nawdrawerfullwidth');
 // MODIFICATION END.
 
@@ -79,10 +87,10 @@ $templatecontext = [
     'hasregionmainsettingsmenu' => !empty($regionmainsettingsmenu),
     // MODIFICATION START: Add Boost Campus realated values to the template context.
     'catchshortcuts' => json_encode($catchshortcuts),
-    'nawdrawerfullwidth' => $navdrawerfullwidth
+    'nawdrawerfullwidth' => $navdrawerfullwidth,
+    'darknavbar' => $darknavbar
     // MODIFICATION END.
 ];
-
 
 // MODIDFICATION START.
 // Use the returned value from theme_boost_campus_get_modified_flatnav_defaulthomepageontop as the template context.

@@ -93,9 +93,7 @@ body.loginbackgroundimage {
 /* Make page navbar dark if setting "darknavabr" is set to yes. */
 @if variable-exists(darknavbar) {
     @if $darknavbar == 'yes' {
-        header.navbar {
-            background-color: $gray-dark;
-
+        .navbar {
             .navbar-nav .nav-link .icon,
             .navbar-nav .nav-link,
             .usertext,

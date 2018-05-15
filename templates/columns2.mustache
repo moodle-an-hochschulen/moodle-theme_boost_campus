@@ -55,6 +55,7 @@
       and use the equivalent own javascript "incoursesettings".
     * Use additional JavaScript functionality if the setting nawdrawerfullwidth is enabled. We write this here, so we do not
       have to override the drawer.js file for this small addition.
+    * Call to own navbar mustache template instead of boost/navbar.
 }}
 {{> theme_boost/head }}
 
@@ -64,7 +65,7 @@
 
     {{{ output.standard_top_of_body_html }}}
 
-    {{>theme_boost/navbar}}
+    {{>theme_boost_campus/navbar}}
 
     <div id="page" class="container-fluid">
         {{{ output.full_header }}}

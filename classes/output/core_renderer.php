@@ -131,7 +131,7 @@ class core_renderer extends \theme_boost\output\core_renderer {
 
 
     /**
-     * Override to dispaly switched role information beneath the course header instead of the user menu.
+     * Override to display switched role information beneath the course header instead of the user menu.
      * We change this because the switch role function is course related and therefore it should be placed in the course context.
      *
      * Wrapper for header elements.
@@ -142,87 +142,63 @@ class core_renderer extends \theme_boost\output\core_renderer {
         // MODIFICATION START.
         global $PAGE, $USER, $COURSE, $CFG;
         // MODIFICATION END.
-        /* ORIGINAL START.
-        global $PAGE;
-        ORIGINAL END. */
 
-        $html = html_writer::start_tag('header', array('id' => 'page-header', 'class' => 'row'));
-        $html .= html_writer::start_div('col-xs-12 p-a-1');
-        $html .= html_writer::start_div('card');
-        $html .= html_writer::start_div('card-block');
-        // MODIFICATION START:
-        // Only display the core context header menu if the setting "showsettingsincourse" is disabled
-        // or we are viewing the frontpage.
-        if (get_config('theme_boost_campus', 'showsettingsincourse') == 'no' || $PAGE->pagelayout == 'frontpage') {
-            $html .= html_writer::div($this->context_header_settings_menu(), 'pull-xs-right context-header-settings-menu');
+        $header = new stdClass();
+        // MODIFICATION START.
+        // Show the context header settings menu on all pages except for the profile page as we replace
+        // it with an edit button there.
+        if ($PAGE->pagelayout != 'mypublic') {
+            $header->settingsmenu = $this->context_header_settings_menu();
         }
         // MODIFICATION END.
-        /* ORIGINAL START.
-        $html .= html_writer::div($this->context_header_settings_menu(), 'pull-xs-right context-header-settings-menu');
+        /* ORIGINAL START
+        $header->settingsmenu = $this->context_header_settings_menu();
         ORIGINAL END. */
-        // MODIFICATION START:
-        // To get the same structure as on the Dashboard, we need to add the page heading buttons here for the profile page.
-        if ($PAGE->pagelayout == 'mypublic') {
-            $html .= html_writer::div($this->page_heading_button(), 'breadcrumb-button pull-xs-right');
+        $header->contextheader = $this->context_header();
+        $header->hasnavbar = empty($PAGE->layout_options['nonavbar']);
+        $header->navbar = $this->navbar();
+        // MODIFICATION START.
+        // Show the page heading button on all pages except for the profile page.
+        // There we replace it with an edit profile button.
+        if ($PAGE->pagelayout != 'mypublic') {
+            $header->pageheadingbutton = $this->page_heading_button();
+        } else {
+            // Get the id of the user for whom the profile page is shown.
+            $userid = optional_param('id', $USER->id, PARAM_INT);
+            // Check if the shown and the operating user are identical.
+            $currentuser = $USER->id == $userid;
+            if (($currentuser || is_siteadmin($USER)) &&
+                has_capability('moodle/user:update', \context_system::instance())) {
+                $url = new moodle_url('/user/editadvanced.php', array('id'       => $userid, 'course' => $COURSE->id,
+                                                                      'returnto' => 'profile'));
+                $header->pageheadingbutton .= $this->single_button($url, get_string('editmyprofile', 'core'));
+            } else if ((has_capability('moodle/user:editprofile', \context_user::instance($userid)) &&
+                    !is_siteadmin($USER)) || ($currentuser &&
+                    has_capability('moodle/user:editownprofile', \context_system::instance()))) {
+                $url = new moodle_url('/user/edit.php', array('id'       => $userid, 'course' => $COURSE->id,
+                                                              'returnto' => 'profile'));
+                $header->pageheadingbutton = $this->single_button($url, get_string('editmyprofile', 'core'));
+            }
         }
         // MODIFICATION END.
-        $html .= html_writer::start_div('pull-xs-left');
-        $html .= $this->context_header();
-        $html .= html_writer::end_div();
-        $pageheadingbutton = $this->page_heading_button();
-        if (empty($PAGE->layout_options['nonavbar'])) {
-            $html .= html_writer::start_div('clearfix w-100 pull-xs-left', array('id' => 'page-navbar'));
-            $html .= html_writer::tag('div', $this->navbar(), array('class' => 'breadcrumb-nav'));
-            // MODIFICATION START: Add the course context menu to the course page, but not on the profile page.
-            if (get_config('theme_boost_campus', 'showsettingsincourse') == 'yes'
-                && $PAGE->pagelayout != 'mypublic') {
-                $html .= html_writer::div($this->context_header_settings_menu(),
-                    'pull-xs-right context-header-settings-menu m-l-1');
-            }
-            // MODIFICATION END.
-            // MODIFICATION START: Instead of the settings icon, add a button to edit the profile.
-            if ($PAGE->pagelayout == 'mypublic') {
-                $html .= html_writer::start_div('breadcrumb-button breadcrumb-button pull-xs-right');
-                $url = '';
-                // Get the id of the user for whom the profile page is shown.
-                $userid = optional_param('id', $USER->id, PARAM_INT);
-                // Check if the shown and the operating user are identical.
-                $currentuser = $USER->id == $userid;
-                if (($currentuser || is_siteadmin($USER)) &&
-                        has_capability('moodle/user:update', \context_system::instance())) {
-                    $url = new moodle_url('/user/editadvanced.php', array('id' => $userid, 'course' => $COURSE->id,
-                                                                          'returnto' => 'profile'));
-                    $html .= $this->single_button($url, get_string('editmyprofile', 'core'));
-                } else if ((has_capability('moodle/user:editprofile', \context_user::instance($userid)) &&
-                                !is_siteadmin($USER)) || ($currentuser &&
-                                has_capability('moodle/user:editownprofile', \context_system::instance()))) {
-                    $url = new moodle_url('/user/edit.php', array('id' => $userid, 'course' => $COURSE->id,
-                                                                  'returnto' => 'profile'));
-                    $html .= $this->single_button($url, get_string('editmyprofile', 'core'));
-                }
-                $html .= html_writer::end_div();
-            }
-            // Do not show the page heading buttons on the profile page at this place.
-            // Display them only on other pages.
-            if ($PAGE->pagelayout != 'mypublic') {
-                $html .= html_writer::div($pageheadingbutton, 'breadcrumb-button pull-xs-right');
-            }
-            // MODIFICATION END.
-            $html .= html_writer::end_div();
-        } else if ($pageheadingbutton) {
-            $html .= html_writer::div($pageheadingbutton, 'breadcrumb-button nonavbar pull-xs-right');
-        }
-        $html .= html_writer::tag('div', $this->course_header(), array('id' => 'course-header'));
-        $html .= html_writer::end_div();
-        $html .= html_writer::end_div();
-        $html .= html_writer::end_div();
-        $html .= html_writer::end_tag('header');
+        /* ORIGINAL START
+        $header->pageheadingbutton = $this->page_heading_button();
+        ORIGINAL END. */
+        $header->courseheader = $this->course_header();
+        // MODIFICATION START:
+        // Change this to add the result in the html variable to be able to add further features below the header.
+        // Render from the own header template.
+        $html = $this->render_from_template('theme_boost_campus/header', $header);
+        // MODIFICATION END.
+        /* ORIGINAL START
+        return $this->render_from_template('theme_boost/header', $header);
+        ORIGINAL END. */
 
         // MODIFICATION START:
         // If the setting showhintcoursehidden is set, the visibility of the course is hidden and
         // a hint for the visibility will be shown.
         if (get_config('theme_boost_campus', 'showhintcoursehidden') == 'yes' && $COURSE->visible == false &&
-                $PAGE->has_set_url() && $PAGE->url->compare(new moodle_url('/course/view.php'), URL_MATCH_BASE)) {
+            $PAGE->has_set_url() && $PAGE->url->compare(new moodle_url('/course/view.php'), URL_MATCH_BASE)) {
             $html .= html_writer::start_tag('div', array('class' => 'course-hidden-infobox alert alert-warning'));
             $html .= html_writer::tag('i', null, array('class' => 'fa fa-exclamation-circle fa-3x fa-pull-left'));
             $html .= get_string('showhintcoursehiddengeneral', 'theme_boost_campus', $COURSE->id);
@@ -238,9 +214,9 @@ class core_renderer extends \theme_boost\output\core_renderer {
         // MODIFICATION START:
         // If the setting showhintcourseguestaccess is set, a hint for users that view the course with guest access is shown.
         if (get_config('theme_boost_campus', 'showhintcourseguestaccess') == 'yes'
-                && is_guest(\context_course::instance($COURSE->id), $USER->id)
-                && $PAGE->has_set_url()
-                && $PAGE->url->compare(new moodle_url('/course/view.php'), URL_MATCH_BASE)) {
+            && is_guest(\context_course::instance($COURSE->id), $USER->id)
+            && $PAGE->has_set_url()
+            && $PAGE->url->compare(new moodle_url('/course/view.php'), URL_MATCH_BASE)) {
             $html .= html_writer::start_tag('div', array('class' => 'course-guestaccess-infobox alert alert-warning'));
             $html .= html_writer::tag('i', null, array('class' => 'fa fa-exclamation-circle fa-3x fa-pull-left'));
             $html .= get_string('showhintcourseguestaccessgeneral', 'theme_boost_campus',
@@ -264,8 +240,8 @@ class core_renderer extends \theme_boost\output\core_renderer {
                     $role = $opts->metadata['rolename'];
                     // Get the URL to switch back (normal role).
                     $url = new moodle_url('/course/switchrole.php',
-                                          array('id'        => $COURSE->id, 'sesskey' => sesskey(), 'switchrole' => 0,
-                                                'returnurl' => $this->page->url->out_as_local_url(false)));
+                        array('id'        => $COURSE->id, 'sesskey' => sesskey(), 'switchrole' => 0,
+                              'returnurl' => $this->page->url->out_as_local_url(false)));
                     $html .= html_writer::start_tag('div', array('class' => 'switched-role-infobox alert alert-info'));
                     $html .= html_writer::tag('i', null, array('class' => 'fa fa-user-circle fa-3x fa-pull-left'));
                     $html .= html_writer::start_tag('div');
@@ -276,14 +252,13 @@ class core_renderer extends \theme_boost\output\core_renderer {
                     // Return to normal role link.
                     $html .= html_writer::start_tag('div');
                     $html .= html_writer::tag('a', get_string('switchrolereturn', 'core'),
-                                               array('class' => 'switched-role-backlink', 'href' => $url));
+                        array('class' => 'switched-role-backlink', 'href' => $url));
                     $html .= html_writer::end_tag('div'); // Return to normal role link: end div.
                     $html .= html_writer::end_tag('div');
                 }
             }
         }
         // MODIFICATION END.
-
         return $html;
     }
 

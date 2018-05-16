@@ -6,6 +6,7 @@ Changes
 
 ### Unreleased
 
+* 2018-05-16 - Fixed CSS rules for block icons due to changes in the classes in Moodle core.
 * 2018-05-15 - Fixed setting for footnote due to changes in Moodle core.
 * 2018-05-15 - Fixed setting for dark navbar due to changes in Moodle core.
 * 2018-05-15 - Adjusted core renderer method full_header due to changes in Boost and added own version of header mustache.

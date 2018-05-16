@@ -492,66 +492,66 @@ blockquote::before {
     @if $blockicon == 'yes' {
         /* If setting blockicon is checked, add a default Font Awesome icon
          * before the block title. */
-        .block .card-block .card-title::before {
+        .block .card-title::before {
             font-family: FontAwesome;
             content: '\f009';
             font-size: 1.3rem;
             padding-right: 7px;
         }
         /* Provide different, suitable Font Awesome icons for different Moodle blocks. */
-        .block_recent_activity .card-block .card-title::before {
+        .block_recent_activity .card-title::before {
             content: '\f017';
         }
-        .block_calendar_month .card-block .card-title::before,
-        .block_calendar_upcoming .card-block .card-title::before {
+        .block_calendar_month .card-title::before,
+        .block_calendar_upcoming .card-title::before {
             content: '\f133';
         }
-        .block_people .card-block .card-title::before {
+        .block_people .card-title::before {
             content: '\f0c0';
         }
-        .block_quickmail .card-block .card-title::before {
+        .block_quickmail .card-title::before {
             content: '\f003';
         }
-        .block_activity_module .card-block .card-title::before {
+        .block_activity_module .card-title::before {
             content: '\f12e';
         }
-        .block_news_items .card-block .card-title::before {
+        .block_news_items .card-title::before {
             content: '\f0a1';
         }
-        .block_progress .card-block .card-title::before {
+        .block_progress .card-title::before {
             content: '\f0ae';
         }
-        .block_private_files .card-block .card-title::before {
+        .block_private_files .card-title::before {
             content: '\f114';
         }
-        .block_comments .card-block .card-title::before {
+        .block_comments .card-title::before {
             content: '\f075';
         }
-        .block_completion_status .card-block .card-title::before {
+        .block_completion_status .card-title::before {
             content: '\f0e4';
         }
-        .block_search_forums .card-block .card-title::before {
+        .block_search_forums .card-title::before {
             content: '\f0e6';
         }
-        .block_admin_bookmarks .card-block .card-title::before {
+        .block_admin_bookmarks .card-title::before {
             content: '\f097';
         }
-        .block_adminblock .card-block .card-title::before {
+        .block_adminblock .card-title::before {
             content: '\f0fe';
         }
-        .block_attendance .card-block .card-title::before {
+        .block_attendance .card-title::before {
             content: '\f046';
         }
-        .block_sharing_cart .card-block .card-title::before {
+        .block_sharing_cart .card-title::before {
             content: '\f07a';
         }
-        .block_glossary_random .card-block .card-title::before {
+        .block_glossary_random .card-title::before {
             content: '\f14b';
         }
-        .block_selfcompletion .card-block .card-title::before {
+        .block_selfcompletion .card-title::before {
             content: '\f14a';
         }
-        .block_badges .card-block .card-title::before {
+        .block_badges .card-title::before {
             content: '\f0a3';
         }
     }

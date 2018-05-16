@@ -607,6 +607,12 @@ blockquote::before {
         .dropdown-item.menu-action {
             text-decoration: none;
         }
+        /* Set the text decoration for the block controls to none to prevent an underscore from being displayed
+         * for a white space.
+         */
+        .block-controls a {
+            text-decoration: none;
+        }
     }
 
     /* Add bottom padding to the Moodle default footer links, reset usertour only if not empty.*/

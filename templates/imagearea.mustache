@@ -34,13 +34,9 @@
 
 }}
 
-    <div class="imagearea p-y-1">
-        <div class="container-fluid">
-            <div class="row-fluid">
-                {{#imageareafiles}}
-                    {{#linkpath}}<a href="{{linkpath}}">{{/linkpath}}<img src="{{filepath}}">{{#linkpath}}</a>{{/linkpath}}
-                {{/imageareafiles}}
-            </div>
-        </div>
-    </div>
+<div class="imagearea d-flex justify-content-center align-self-center flex-wrap pb-3 bg-dark">
+    {{#imageareafiles}}
+        {{#linkpath}}<a href="{{linkpath}}">{{/linkpath}}<img src="{{filepath}}" class="mt-3">{{#linkpath}}</a>{{/linkpath}}
+    {{/imageareafiles}}
+</div>
 

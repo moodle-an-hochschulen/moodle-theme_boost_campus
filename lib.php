@@ -99,7 +99,7 @@ function theme_boost_campus_get_pre_scss($theme) {
         'incoursesettingsswitchtorole' => ['incoursesettingsswitchtorole'],
         'hidefooteronloginpage' => ['hidefooteronloginpage'],
         'footerhideusertourslink' => ['footerhideusertourslink'],
-        'nawdrawerfullwidth' => ['nawdrawerfullwidth']
+        'navdrawerfullwidth' => ['navdrawerfullwidth']
         // MODIFICATION END.
     ];
 

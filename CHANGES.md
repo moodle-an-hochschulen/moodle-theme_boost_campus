@@ -6,6 +6,7 @@ Changes
 
 ### Unreleased
 
+* 2018-05-15 - Changes to navdrawerfullwidth setting (corrections and removing code because MDL-61411 is integrated into core).
 * 2018-05-16 - Minor improvement to block controls for footer blocks.
 * 2018-05-16 - Fixed imagearea setting due to changes in Moodle core.
 * 2018-05-16 - Fixed CSS rules for block icons due to changes in the classes in Moodle core.

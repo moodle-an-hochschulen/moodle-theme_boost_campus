@@ -73,7 +73,7 @@ if (get_config('theme_boost_campus', 'darknavbar') == 'yes') {
 // MODIFICATION END.
 
 // MODIFICATION START: Setting 'navdrawerfullwidth'.
-$navdrawerfullwidth = get_config('theme_boost_campus', 'nawdrawerfullwidth');
+$navdrawerfullwidth = get_config('theme_boost_campus', 'navdrawerfullwidth');
 // MODIFICATION END.
 
 $templatecontext = [
@@ -87,7 +87,7 @@ $templatecontext = [
     'hasregionmainsettingsmenu' => !empty($regionmainsettingsmenu),
     // MODIFICATION START: Add Boost Campus realated values to the template context.
     'catchshortcuts' => json_encode($catchshortcuts),
-    'nawdrawerfullwidth' => $navdrawerfullwidth,
+    'navdrawerfullwidth' => $navdrawerfullwidth,
     'darknavbar' => $darknavbar
     // MODIFICATION END.
 ];

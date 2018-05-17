@@ -6,6 +6,7 @@ Changes
 
 ### Unreleased
 
+* 2018-05-17 - Add missing PHPDoc to make codechecker happier.
 * 2018-05-16 - Implement Privacy API.
 * 2018-04-25 - Removed build_action_menu_from_navigation in core_renderer as MDL-58174 is integrated.
 * 2018-04-25 - Fixed bug with accessing courses with guest login. Thanks to Benedikt Schneider for reporting and pointing to the solution.

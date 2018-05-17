@@ -364,6 +364,12 @@ function theme_boost_campus_get_incourse_activity_settings() {
     return $node;
 }
 
+/**
+ * Build the guest access hint HTML code.
+ *
+ * @param int $courseid The course ID.
+ * @return string.
+ */
 function theme_boost_campus_get_course_guest_access_hint($courseid) {
     global $CFG;
     require_once($CFG->dirroot . '/enrol/self/lib.php');

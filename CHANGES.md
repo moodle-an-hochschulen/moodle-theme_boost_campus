@@ -4,7 +4,7 @@ moodle-theme_boost_campus
 Changes
 -------
 
-### Unreleased
+### Release v3.4-r5
 
 * 2018-05-17 - Add missing PHPDoc to make codechecker happier.
 * 2018-05-16 - Implement Privacy API.

@@ -6,6 +6,7 @@ Changes
 
 ### Unreleased
 
+* 2018-05-17 - Fixed section0title setting.
 * 2018-05-17 - Added upgrade.php to handle all settings changes correctly.
 * 2018-05-15 - Changes to navdrawerfullwidth setting (corrections and removing code because MDL-61411 is integrated into core).
 * 2018-05-16 - Minor improvement to block controls for footer blocks.

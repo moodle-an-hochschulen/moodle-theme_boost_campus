@@ -262,6 +262,9 @@ body.loginbackgroundimage {
             left: inherit;
             font-weight: $headings-font-weight;
             font-size: $h3-font-size;
+            width: initial;
+            height: initial;
+            clip-path: none;
         }
     }
 }

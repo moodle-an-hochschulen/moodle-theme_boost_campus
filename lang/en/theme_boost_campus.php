@@ -191,3 +191,6 @@ $string['showhintcourseguestaccesslink'] = 'To have full access to the course, y
 $string['showhintcoursehiddengeneral'] = 'This course is currently <strong>hidden</strong>. Only enrolled teachers can access this course when hidden.';
 $string['showhintcoursehiddensettingslink'] = 'You can change the visibility in the <a href="{$a->url}">course settings</a>.';
 $string['switchroleto'] = 'Switch role to';
+
+// PRIVACY.
+$string['privacy:metadata'] = 'The Boost Campus theme does not store any personal data about any user.';

@@ -4,7 +4,7 @@ moodle-theme_boost_campus
 Changes
 -------
 
-### Unreleased
+### Release v3.5-r1
 
 * 2018-05-23 - Improved footer blocks feature to only use the chosen columns as the region in the config.
 * 2018-05-17 - Fixed section0title setting.

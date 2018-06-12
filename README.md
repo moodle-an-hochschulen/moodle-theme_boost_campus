@@ -327,6 +327,7 @@ We added a back to top button that appears in the right bottom corner when the u
 ### Design
 
 * Added Font Awesome icons to mailto and broken links. Furthermore, colored broken link in red for fast recognizability.
+* Added a Video JS skin that fits to the brand color and moves the player button back to the center.
 
 Course Design:
 

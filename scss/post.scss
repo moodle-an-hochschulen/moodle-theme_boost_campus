@@ -871,6 +871,147 @@ a[href^="mailto"]::before {
 }
 
 
+/* ----------------------------------------------------------
+ VIDEO JS SKIN
+ ---------------------------------------------------------- */
+.video-js {
+    .vjs-menu-button-inline {
+        &.vjs-slider-active,
+        &:focus,
+        &:hover {
+            width: 10em;
+        }
+    }
+    &.vjs-no-flex .vjs-menu-button-inline {
+        width: 10em;
+    }
+    .vjs-controls-disabled .vjs-big-play-button {
+        display: none !important;
+    }
+    .vjs-control {
+        width: 3em;
+    }
+    .vjs-menu-button-inline::before {
+        width: 1.5em;
+    }
+    .vjs-time-control {
+        padding-left: 0;
+    }
+}
+.vjs-menu-button-inline .vjs-menu {
+    left: 3em;
+}
+.vjs-paused.vjs-has-started.video-js .vjs-big-play-button {
+    display: block;
+}
+.video-js {
+    &.vjs-ended .vjs-big-play-button,
+    &.vjs-paused .vjs-big-play-button {
+        display: block;
+    }
+    .vjs-load-progress div {
+        display: none !important;
+    }
+}
+.vjs-seeking .vjs-big-play-button,
+.vjs-waiting .vjs-big-play-button {
+    display: none !important;
+}
+.video-js {
+    .vjs-mouse-display:after,
+    .vjs-play-progress::after {
+        padding: 0 0.4em 0.3em;
+    }
+    &.vjs-ended {
+        .vjs-loading-spinner {
+            display: none;
+        }
+        .vjs-big-play-button {
+            display: block !important;
+        }
+    }
+}
+.video-js.vjs-ended .vjs-big-play-button,
+.video-js.vjs-paused .vjs-big-play-button,
+.vjs-paused.vjs-has-started.video-js .vjs-big-play-button {
+    display: block;
+}
+.video-js {
+    .vjs-big-play-button {
+        top: 50%;
+        left: 50%;
+        margin-left: -1.5em;
+        background-color: $brand-primary;
+        border-radius: 2px;
+        margin-top: -1em !important;
+    }
+    &:hover .vjs-big-play-button {
+        background-color: $brand-primary;
+    }
+    .vjs-big-play-button {
+        &:focus,
+        &:active {
+            background-color: $gray-dark;
+        }
+    }
+    .vjs-loading-spinner {
+        border-color: $brand-primary;
+    }
+    .vjs-control-bar2 {
+        background-color: transparent;
+    }
+    .vjs-control-bar {
+        background-color: $gray-dark !important;
+        color: #fff;
+    }
+    .vjs-play-progress,
+    .vjs-volume-level {
+        background-color: $brand-primary;
+    }
+    .vjs-big-play-button {
+        width: 2em !important;
+        margin-left: -1em;
+        border-width: 2px;
+    }
+    .vjs-icon-play:before,
+    .vjs-big-play-button::before {
+        font-size: 1em;
+    }
+    .vjs-progress-holder {
+        font-size: 1.7em;
+        border-radius: 10px;
+        .vjs-play-progress {
+            border-radius: 10px;
+        }
+        .vjs-load-progress {
+            border-radius: 10px;
+            div {
+                border-radius: 10px;
+            }
+        }
+    }
+    .vjs-slider {
+        border-radius: 10px;
+    }
+}
+.vjs-volume-level {
+    border-radius: 10px;
+}
+.video-js {
+    .vjs-load-progress {
+        background: rgba(255, 255, 255, 0.5);
+    }
+    border-radius: 2px;
+    video {
+        border-radius: 2px;
+    }
+}
+.vjs-poster,
+.video-js .vjs-tech {
+    border-radius: 2px;
+}
+
+
 /*------------------------------------
   Special: Local Plugins
   -------------------------------------*/

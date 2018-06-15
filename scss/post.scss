@@ -826,6 +826,9 @@ a[href^="mailto"]::before {
             .dropdown-menu.dropdown-menu-right a:last-child {
                 border-bottom: 1px solid $gray-lighter;
             }
+            .dropdown-menu-right div:last-of-type {
+                margin-bottom: 0;
+            }
         }
     }
 }

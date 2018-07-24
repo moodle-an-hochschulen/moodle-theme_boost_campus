@@ -6,6 +6,7 @@ Changes
 
 ### Unreleased
 
+* 2018-07-24 - Fixed logo width when loginform is active.
 * 2018-07-24 - Fixed debugging output for admins on profile page.
 * 2018-07-24 - Removed rules for local_boostnavigation due to core integration.
 * 2018-06-15 - Minor fix to the user menu displaying if switch role is moved to course menu.

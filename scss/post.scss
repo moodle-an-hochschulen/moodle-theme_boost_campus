@@ -76,6 +76,10 @@ body.loginbackgroundimage {
                 background-color: rgba(255, 255, 255, 0.8);
                 border-radius: 3px;
             }
+            .card-header > img {
+                width: 100%;
+                height: auto;
+            }
         }
         #page-login-index #page {
             margin-top: 0;

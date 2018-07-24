@@ -171,7 +171,7 @@ class core_renderer extends \theme_boost\output\core_renderer {
                 has_capability('moodle/user:update', \context_system::instance())) {
                 $url = new moodle_url('/user/editadvanced.php', array('id'       => $userid, 'course' => $COURSE->id,
                                                                       'returnto' => 'profile'));
-                $header->pageheadingbutton .= $this->single_button($url, get_string('editmyprofile', 'core'));
+                $header->pageheadingbutton = $this->single_button($url, get_string('editmyprofile', 'core'));
             } else if ((has_capability('moodle/user:editprofile', \context_user::instance($userid)) &&
                     !is_siteadmin($USER)) || ($currentuser &&
                     has_capability('moodle/user:editownprofile', \context_system::instance()))) {

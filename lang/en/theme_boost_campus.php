@@ -178,6 +178,11 @@ $string['blockiconsetting_desc_code'] = '.block_people .card-block .card-title::
 $string['navbardesignheadingsetting'] = 'Navbar';
 $string['darknavbarsetting'] = 'Dark navbar';
 $string['darknavbarsetting_desc'] = 'By checking this setting you can invert the default light navbar to a dark one with white links.';
+// ...Help texts.
+$string['helptextheadingsetting'] = 'Help texts';
+$string['helptextmodalsetting'] = 'Show help texts in a modal dialogue';
+$string['helptextmodalsetting_desc'] = 'The default solution to display help texts in popover leads to different issues. For example popovers are not scrollable and they can reach over the viewport.<br/>
+For this reason, with this setting you can decide that the help texts should be displayed in a dedicated text box (modal dialogue) that appears in the middle of the page with enough space to hold even long helping texts.';
 
 // ADDITIONAL STRINGS (IN ALPHABETICAL ORDER).
 $string['cachedef_imagearea'] = 'Cache for imagearea items';

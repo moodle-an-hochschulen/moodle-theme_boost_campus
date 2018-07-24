@@ -410,4 +410,25 @@ class core_renderer extends \theme_boost\output\core_renderer {
         return $this->render_from_template('core/loginform', $context);
         ORIGINAL END. */
     }
+
+    /**
+     * Implementation of user image rendering.
+     *
+     * @param help_icon $helpicon A help icon instance
+     * @return string HTML fragment
+     */
+    protected function render_help_icon(help_icon $helpicon) {
+        $context = $helpicon->export_for_template($this);
+        // MODIFICATION START.
+        // ID needed for modal dialog.
+        $context->linkid = $helpicon->identifier;
+        // Fill body variable needed for modal mustache with text value.
+        $context->body = $context->text;
+        if (get_config('theme_boost_campus', 'helptextmodal') == 'yes') {
+            return $this->render_from_template('theme_boost_campus/help_icon', $context);
+        } else {
+            return $this->render_from_template('core/help_icon', $context);
+        }
+        // MODIFICATION END.
+    }
 }

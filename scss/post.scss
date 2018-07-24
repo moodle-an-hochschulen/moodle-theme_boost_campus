@@ -868,6 +868,21 @@ a[href^="mailto"]::before {
     }
 }
 
+@if variable-exists(helptextmodal) {
+    @if $helptextmodal == 'yes' {
+        .modal {
+            .modal-body {
+                /* This is needed to display the text within the modal window as the help button is placed in
+                in a span with the class text-nowrap. */
+                white-space: normal !important;
+                ul {
+                    padding-left: 1.5rem;
+                }
+            }
+        }
+    }
+}
+
 /* TODO: Remove when MDL-61319 is fixed */
 /* This is needed because a bug leads to a mess with fa.fa-pull-left/right rules. */
 .fa-pull-left {

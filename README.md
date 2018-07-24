@@ -306,6 +306,13 @@ With this setting you can add a default Font Awesome icon in front of the block 
 
 By enabling this setting you can invert the default light navbar to a dark one with white links.
 
+#### Help texts
+
+##### Show help texts in a modal dialogue
+
+The default solution to display help texts in popover leads to different issues. For example popovers are not scrollable and they can reach over the viewport.
+For this reason, with this setting you can decide that the help texts should be displayed in a dedicated text box (modal dialogue) that appears in the middle of the page with enough space to hold even long helping texts.
+
 
 Further improvements to Boost core theme
 ----------------------------------------

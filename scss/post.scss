@@ -1027,23 +1027,4 @@ a[href^="mailto"]::before {
     .list-group-item[data-key="localboostnavigationcoursesections"][data-collapse="0"] + .list-group-item[href$="#section-0"] {
         border-top: none;
     }
-
-    /* Remove (empty) icons from the heading nodes. */
-    .list-group-item[data-key="localboostnavigationactivities"] .media-left,
-    .list-group-item[data-key="localboostnavigationcoursesections"] .media-left,
-    .list-group-item[data-key^="localboostnavigationcustom"][data-isexpandable="1"] .media-left {
-        display: none;
-    }
-
-    /* Revert the indent to the collapsed custom child nodes which was
-       added by local_boostnavigation. Unfortunately, this has to be done for each custom node block individually because the child
-       node does not know (with a CSS-selectable attribute) if its parent node is collapsed or node. */
-    .list-group-item[data-key^="localboostnavigationcustomcourseusers"][data-isexpandable="1"]:not([data-parent-key^="localboostnavigationcustomcourseusers"]) ~ .list-group-item[data-parent-key^="localboostnavigationcustomcourseusers"] > div,
-    .list-group-item[data-key^="localboostnavigationcustomcourseadmins"][data-isexpandable="1"]:not([data-parent-key^="localboostnavigationcustomcourseadmins"]) ~ .list-group-item[data-parent-key^="localboostnavigationcustomcourseadmins"] > div,
-    .list-group-item[data-key^="localboostnavigationcustomrootusers"][data-isexpandable="1"]:not([data-parent-key^="localboostnavigationcustomrootusers"]) ~ .list-group-item[data-parent-key^="localboostnavigationcustomrootusers"] > div,
-    .list-group-item[data-key^="localboostnavigationcustomcrootadmins"][data-isexpandable="1"]:not([data-parent-key^="localboostnavigationcustomrootadmins"]) ~ .list-group-item[data-parent-key^="localboostnavigationcustomrooradmins"] > div,
-    .list-group-item[data-key^="localboostnavigationcustombottomusers"][data-isexpandable="1"]:not([data-parent-key^="localboostnavigationcustombottomusers"]) ~ .list-group-item[data-parent-key^="localboostnavigationcustombottomusers"] > div,
-    .list-group-item[data-key^="localboostnavigationcustombottomadmins"][data-isexpandable="1"]:not([data-parent-key^="localboostnavigationcustombottomadmins"]) ~ .list-group-item[data-parent-key^="localboostnavigationcustombottomadmins"] > div {
-        margin-left: inherit !important;
-    }
 }

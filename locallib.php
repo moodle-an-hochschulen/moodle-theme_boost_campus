@@ -176,22 +176,22 @@ function theme_boost_campus_process_flatnav(flat_navigation $flatnav) {
     if (get_config('theme_boost_campus', 'defaulthomepageontop') == 'yes') {
         // Only proceed processing if we are in a course context.
         if (($coursehomenode = $flatnav->find('coursehome', global_navigation::TYPE_CUSTOM)) != false) {
-            // If the site home is set as the deafult homepage by the admin.
+            // If the site home is set as the default homepage by the admin.
             if (get_config('core', 'defaulthomepage') == HOMEPAGE_SITE) {
-                // Return the modified flat_navigtation.
+                // Return the modified flat_navigation.
                 $flatnavreturn = theme_boost_campus_set_node_on_top($flatnav, 'home', $coursehomenode);
             } else if (get_config('core', 'defaulthomepage') == HOMEPAGE_MY) { // If the dashboard is set as the default homepage
                 // by the admin.
-                // Return the modified flat_navigtation.
+                // Return the modified flat_navigation.
                 $flatnavreturn = theme_boost_campus_set_node_on_top($flatnav, 'myhome', $coursehomenode);
             } else if (get_config('core', 'defaulthomepage') == HOMEPAGE_USER) { // If the admin defined that the user can set
                 // the default homepage for himself.
                 // Site home.
-                if (get_user_preferences('user_home_page_preference', $USER) == 0) {
+                if (get_user_preferences('user_home_page_preference') == 0) {
                     // Return the modified flat_navigtation.
                     $flatnavreturn = theme_boost_campus_set_node_on_top($flatnav, 'home', $coursehomenode);
-                } else if (get_user_preferences('user_home_page_preference', $USER) == 1 || // Dashboard.
-                    get_user_preferences('user_home_page_preference', $USER) == false) { // If no user preference is set,
+                } else if (get_user_preferences('user_home_page_preference') == 1 || // Dashboard.
+                    get_user_preferences('user_home_page_preference') === false) { // If no user preference is set,
                     // use the default value of core setting default homepage (Dashboard).
                     // Return the modified flat_navigtation.
                     $flatnavreturn = theme_boost_campus_set_node_on_top($flatnav, 'myhome', $coursehomenode);

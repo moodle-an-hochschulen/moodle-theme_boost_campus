@@ -4,7 +4,7 @@ moodle-theme_boost_campus
 Changes
 -------
 
-### Unreleased
+### Release v3.5-r2
 
 * 2018-07-31 - Fixed bug in function theme_boost_campus_process_flatnav.
 * 2018-07-31 - Removed deprecated.txt file because it is unnecessary.

@@ -1,5 +1,0 @@
-navdrawerheadingsetting, theme_boost_campus
-navdrawericonssetting, theme_boost_campus
-navdrawericonssetting_desc, theme_boost_campus
-nawdrawerfullwidthsetting, theme_boost_campus
-nawdrawerfullwidthsettings_desc, theme_boost_campus

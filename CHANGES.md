@@ -4,6 +4,9 @@ moodle-theme_boost_campus
 Changes
 -------
 
+### Release v3.5-r3
+* 2018-11-20 - Offers the possibility to present 'Switch to role...' option in both available places.
+
 ### Release v3.5-r2
 
 * 2018-07-31 - Fixed bug in function theme_boost_campus_process_flatnav.

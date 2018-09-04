@@ -262,7 +262,9 @@ function theme_boost_campus_get_incourse_settings() {
             // Check if $node is not empty for other pages like for example the langauge customization page.
             if (!empty($node)) {
                 // If the setting 'incoursesettingsswitchtorole' is enabled add these to the $node.
-                if (get_config('theme_boost_campus', 'incoursesettingsswitchtorole') == 'yes' && !is_role_switched($COURSE->id)) {
+                if (((get_config('theme_boost_campus', 'incoursesettingsswitchtorole') == 'yes') ||
+                    (get_config('theme_boost_campus', 'incoursesettingsswitchtorole') == 'both'))
+                    && !is_role_switched($COURSE->id)) {
                     // Build switch role link
                     // We could only access the existing menu item by creating the user menu and traversing it.
                     // So we decided to create this node from scratch with the values copied from Moodle core.

@@ -89,8 +89,12 @@ $string['showsettingsincoursesetting'] = 'In course settings menu';
 $string['showsettingsincoursesetting_desc'] = 'With this setting you can change the displaying of the context menus. In Boost, there is a popup context menu right next to the cog icon. By enabling this setting the settings will occur directly beneath the course header. The settings are arranged in tabs, so it is easier for the user to get to the desired setting instead of scanning a long list of menu items. With this setting we also hide the settings icon on the participants page as the entries on this page are duplicated with the in-course course menu and therefore not necessary.<br/>
 Please note that this change does not affect users who have switched off javascript in their browsers - they will still get the behaviour from Moodle core with a popup course context menu.';
 // ...Show switch role to link within the in-course course settings.
-$string['incoursesettingsswitchtorolesetting'] = 'Move "Switch role to..." to the course settings';
-$string['incoursesettingsswitchtorolesetting_desc'] = 'With this setting you can move the "Switch role to..." link as a new tab from the user menu to the in-course course menu. The role switching is a feature which is used in course context and thus it is better to place it in the course settings menu than in the user menu. <br/>
+$string['incoursesettingsswitchtorolesetting'] = '"Switch role to..." location(s)';
+$string['incoursesettingsswitchtorolesettingjustmenu'] = 'Just in the user menu';
+$string['incoursesettingsswitchtorolesettingjustcourse'] = 'Just in the course settings';
+$string['incoursesettingsswitchtorolesettingboth'] = 'Both in the user menu and in the course settings';
+$string['incoursesettingsswitchtorolesetting_desc'] = 'With this setting you can have the "Switch role to..." link displayed as a new tab in the in-course course menu, instead of showing it in the user menu. The role switching is a feature which is used in course context and thus it is better to place it in the course settings menu than in the user menu. <br/>
+There is the option to keep it showing up in the user menu, in addition to the in-course course menu, too. <br/>
 Please note that this setting won\'t have any effect if you do not activate the "In course settings menu" above.';
 
 

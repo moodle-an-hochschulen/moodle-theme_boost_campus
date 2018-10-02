@@ -127,4 +127,7 @@ if (!empty($footnote)) {
     // Add footnote layout file.
     require_once(__DIR__ . '/includes/footnote.php');
 }
+
+// Close the body and html and add JS.
+echo $OUTPUT->render_from_template('theme_boost_campus/closing', $templatecontext);
 // MODIFICATION END.

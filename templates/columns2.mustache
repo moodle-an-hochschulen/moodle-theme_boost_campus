@@ -104,23 +104,3 @@
     </div>
     {{> theme_boost/nav-drawer }}
 </div>
-
-</body>
-</html>
-{{#js}}
-require(['theme_boost/loader']);
-require(['theme_boost/drawer'], function(mod) {
-    mod.init();
-});
-require(['theme_boost_campus/backtotop'], function(mod) {
-    mod.init();
-});
-require(['theme_boost_campus/catchshortcuts'], function(mod) {
-    mod.init({{{catchshortcuts}}});
-});
-{{#incoursesettings}}
-    require(['theme_boost_campus/incoursesettings'], function(mod) {
-    mod.init();
-    });
-{{/incoursesettings}}
-{{/js}}

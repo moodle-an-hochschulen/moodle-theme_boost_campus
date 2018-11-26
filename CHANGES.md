@@ -4,6 +4,10 @@ moodle-theme_boost_campus
 Changes
 -------
 
+### Unreleased
+
+* 2018-11-26 - Fixed broken login functionality caused by Moodle security patch (see MDL-63183).
+
 ### Release v3.5-r2
 
 * 2018-07-31 - Fixed bug in function theme_boost_campus_process_flatnav.

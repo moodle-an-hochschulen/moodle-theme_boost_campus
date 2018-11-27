@@ -4,7 +4,7 @@ moodle-theme_boost_campus
 Changes
 -------
 
-### Unreleased
+### Release v3.5-r3
 
 * 2018-11-26 - Fixed broken login functionality caused by Moodle security patch (see MDL-63183).
 

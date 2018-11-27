@@ -6,6 +6,7 @@ Changes
 
 ### Unreleased
 
+* 2018-12-04 - Bugfix: body and html tags were closed before additional layout elements were added.
 * 2018-12-04 - Changed travis.yml due to upstream changes.
 
 ### Release v3.5-r3

@@ -30,6 +30,7 @@
     * navdraweropen - true if the nav drawer should be open on page load
     * regionmainsettingsmenu - HTML for the region main settings menu
     * hasregionmainsettingsmenu - There is a region main settings menu on this page.
+    * pagebottomelements - HTML for all additional layout elements below the main content, e.g. the footer.
 
     Example context (json):
     {
@@ -45,15 +46,17 @@
         "hasblocks":true,
         "navdraweropen":true,
         "regionmainsettingsmenu": "",
-        "hasregionmainsettingsmenu": false
+        "hasregionmainsettingsmenu": false,
+        "pagebottomelements": ""
     }
 }}
 {{! MODIFICATION:
     * Remove section for footer blocks with own mustache template
     * Require own javascript module for back to top button functionality
-    * If setting "showsettingsincourse" is enabled, then render course context menu from theme_boost_campus/settings_link_page template
-      and use the equivalent own javascript "incoursesettings".
+    * If setting "showsettingsincourse" is enabled, then render course context menu from theme_boost_campus/settings_link_page
+      template and use the equivalent own javascript "incoursesettings".
     * Call to own navbar mustache template instead of boost/navbar.
+    * Add own additional layout elements: the footer, footnote or image area.
 }}
 {{> theme_boost/head }}
 
@@ -104,6 +107,7 @@
     </div>
     {{> theme_boost/nav-drawer }}
 </div>
+{{{ pagebottomelements }}}
 
 </body>
 </html>

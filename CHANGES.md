@@ -4,6 +4,10 @@ moodle-theme_boost_campus
 Changes
 -------
 
+### Unreleased
+
+* 2018-12-04 - Changed travis.yml due to upstream changes.
+
 ### Release v3.5-r3
 
 * 2018-11-26 - Fixed broken login functionality caused by Moodle security patch (see MDL-63183).

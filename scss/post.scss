@@ -759,7 +759,7 @@ a[href^="mailto"]::before {
  * Footnote.
  */
 .footnote {
-    min-height: 40px;
+    min-height: 50px;
     border-top: 1px solid #fff;
 }
 
@@ -853,16 +853,19 @@ a[href^="mailto"]::before {
 /* If the setting "hidefooteronloginpage" is enabled, hide the footer on the login page. */
 @if variable-exists(hidefooteronloginpage) {
     @if $hidefooteronloginpage == 'yes' {
+        /* Because the footer will be hidden, but the footnote is visible, we have to adapt the position and size to
+           match the footnote dimensions. */
         #page-login-index {
+            #page-wrapper {
+                margin-bottom: -50px;
+                padding-bottom: 0;
+            }
+            #page-wrapper::after {
+                min-height: 50px;
+            }
+            /* Hide the footer. */
             #page-footer {
                 display: none;
-            }
-            /* Because the footnote is not hidden, but moves up with no footer, we have to handle this and move the
-               footnote back to the bottom of the page. */
-            .footnote {
-                position: absolute;
-                bottom: 0;
-                width: 100%;
             }
         }
     }

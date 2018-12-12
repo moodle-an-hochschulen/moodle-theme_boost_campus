@@ -874,6 +874,9 @@ a[href^="mailto"]::before {
 @if variable-exists(helptextmodal) {
     @if $helptextmodal == 'yes' {
         .modal {
+            /* Set font-size to normal size as the modals inherit the font size from the element they are placed in.
+             * This is not intended and so we force the font size to be the normal size. */
+            font-size: $font-size-base;
             .modal-body {
                 /* This is needed to display the text within the modal window as the help button is placed in
                 in a span with the class text-nowrap. */

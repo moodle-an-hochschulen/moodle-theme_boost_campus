@@ -22,7 +22,7 @@
     * Add class bg-white or bg-dark to the navbar dependent on the setting darknavbar.
 }}
 
-<nav class="fixed-top navbar navbar-light {{#darknavbar}}bg-dark{{/darknavbar}} {{^darknavbar}}bg-white{{/darknavbar}} navbar-expand moodle-has-zindex">
+<nav class="fixed-top navbar navbar-light {{#darknavbar}}bg-dark{{/darknavbar}} {{^darknavbar}}bg-white{{/darknavbar}} navbar-expand moodle-has-zindex" aria-label="{{#str}}sitemenubar, admin{{/str}}">
 
         <div data-region="drawer-toggle" class="d-inline-block mr-3">
             <button aria-expanded="{{#navdraweropen}}true{{/navdraweropen}}{{^navdraweropen}}false{{/navdraweropen}}" aria-controls="nav-drawer" type="button" class="btn nav-link float-sm-left mr-1 btn-secondary" data-action="toggle-drawer" data-side="left" data-preference="drawer-open-nav">{{#pix}}i/menubars{{/pix}}<span class="sr-only">{{#str}}sidepanel, core{{/str}}</span></button>

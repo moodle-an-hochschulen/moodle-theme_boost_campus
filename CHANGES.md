@@ -6,6 +6,7 @@ Changes
 
 ### Unreleased
 
+* 2018-12-12 - Adjusted navbar.mustache template due to upstream changes in MDL-62145.
 * 2018-12-06 - Bugfix: Improved placement of the footnote to prevent that it covers the login form on small mobile devices.
 * 2018-12-04 - Bugfix: body and html tags were closed before additional layout elements were added.
 * 2018-12-04 - Changed travis.yml due to upstream changes.

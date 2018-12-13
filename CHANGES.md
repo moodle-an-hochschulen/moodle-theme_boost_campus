@@ -4,7 +4,7 @@ moodle-theme_boost_campus
 Changes
 -------
 
-### Unreleased
+### Release v3.5-r4
 
 * 2018-12-12 - Bugfix: Improved font size for all modal help text dialogues.
 * 2018-12-12 - Adjusted navbar.mustache template due to upstream changes in MDL-62145.

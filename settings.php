@@ -592,6 +592,21 @@ if ($ADMIN->fulltree) {
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
+    // Settings title to group breakpoint related settings together with a common heading. We don't want a description here.
+    $name = 'theme_boost_campus/breakpointheading';
+    $title = get_string('breakpointheadingsetting', 'theme_boost_campus', null, true);
+    $setting = new admin_setting_heading($name, $title, null);
+    $page->add($setting);
+
+    $name = 'theme_boost_campus/breakpoint';
+    $title = get_string('breakpointsetting', 'theme_boost_campus', null, true);
+    $description = get_string('breakpointsetting_desc', 'theme_boost_campus', null, true);
+    $setting = new admin_setting_configcheckbox($name, $title, $description, 'no', 'yes', 'no' ); // Overriding default values
+    // yes = 1 and no = 0 because of the use of empty() in theme_boost_campus_get_pre_scss() (lib.php). Default 0 value would
+    // not write the variable to scss that could cause the scss to crash if used in that file. See MDL-58376.
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
     // Add tab to settings page.
     $settings->add($page);
 }

@@ -100,7 +100,8 @@ function theme_boost_campus_get_pre_scss($theme) {
         'hidefooteronloginpage' => ['hidefooteronloginpage'],
         'footerhideusertourslink' => ['footerhideusertourslink'],
         'navdrawerfullwidth' => ['navdrawerfullwidth'],
-        'helptextmodal' => ['helptextmodal']
+        'helptextmodal' => ['helptextmodal'],
+        'breakpoint' => ['breakpoint']
         // MODIFICATION END.
     ];
 

@@ -4,6 +4,10 @@ moodle-theme_boost_campus
 Changes
 -------
 
+### Unreleased
+
+* 2018-12-17 - Setting to change the breakpoint for smaller screens.
+
 ### Release v3.5-r4
 
 * 2018-12-12 - Bugfix: Improved font size for all modal help text dialogues.

@@ -2,6 +2,30 @@
 /* stylelint-disable max-line-length */
 
 /*------------------------------------
+  Page
+  -------------------------------------*/
+
+/* Change the breakpoint if setting 'breakpoint' is active. */
+@if variable-exists(breakpoint) {
+    @if $breakpoint == 'yes' {
+        #region-main-settings-menu.has-blocks,
+        #region-main.has-blocks {
+            width: calc(100% - #{$blocks-plus-gutter});
+            @include media-breakpoint-down(md) {
+                width: 100%;
+            }
+        }
+    }
+}
+[data-region="blocks-column"] {
+    width: 250px;
+    @include media-breakpoint-down(md) {
+        width: 100%;
+    }
+}
+
+
+/*------------------------------------
   Login page
   -------------------------------------*/
 

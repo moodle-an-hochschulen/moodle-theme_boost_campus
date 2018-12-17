@@ -293,13 +293,17 @@ if ($ADMIN->fulltree) {
     $page->add($setting);
 
     // Setting to display the switch role to link as a separate tab within the in-course settings panel.
-    $name = 'theme_boost_campus/incoursesettingsswitchtorole';
-    $title = get_string('incoursesettingsswitchtorolesetting', 'theme_boost_campus', null, true);
-    $description = get_string('incoursesettingsswitchtorolesetting_desc', 'theme_boost_campus', null, true);
-    $setting = new admin_setting_configcheckbox($name, $title, $description, 'no', 'yes', 'no'); // Overriding default values
-    // yes = 1 and no = 0 because of the use of empty() in theme_boost_campus_get_pre_scss() (lib.php).
-    // Default 0 value would not write the variable to scss that could cause the scss to crash if used in that file.
-    // See MDL-58376.
+    $name = 'theme_boost_campus/incoursesettingsswitchtoroleposition';
+    $title = get_string('incoursesettingsswitchtorolepositionsetting', 'theme_boost_campus', null, true);
+    $description = get_string('incoursesettingsswitchtorolepositionsetting_desc', 'theme_boost_campus', null, true);
+    $incoursesettingsswitchtorolesetting = [
+     // Don't use string lazy loading (= false) because the string will be directly used and would produce a PHP warning otherwise.
+    'no' => get_string('incoursesettingsswitchtorolesettingjustmenu', 'theme_boost_campus', null, false),
+    'yes' => get_string('incoursesettingsswitchtorolesettingjustcourse', 'theme_boost_campus', null, true),
+    'both' => get_string('incoursesettingsswitchtorolesettingboth', 'theme_boost_campus', null, true)
+    ];
+    $setting = new admin_setting_configselect($name, $title, $description, $incoursesettingsswitchtorolesetting['no'],
+        $incoursesettingsswitchtorolesetting);
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 

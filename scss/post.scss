@@ -837,8 +837,8 @@ a[href^="mailto"]::before {
 
 /* Setting to move 'Switch role to...' menu item to the course settings - but only if
    setting showsettingsincourse is also enabled. */
-@if (variable-exists(incoursesettingsswitchtorole) and variable-exists(showsettingsincourse)) {
-    @if ($incoursesettingsswitchtorole == 'yes' and $showsettingsincourse == 'yes') {
+@if (variable-exists(incoursesettingsswitchtoroleposition) and variable-exists(showsettingsincourse)) {
+    @if ($incoursesettingsswitchtoroleposition == 'yes' and $showsettingsincourse == 'yes') {
         /* Hide the switch role to menu item within the user menu */
         .usermenu {
             .dropdown-menu a[data-title*="switchroleto"],

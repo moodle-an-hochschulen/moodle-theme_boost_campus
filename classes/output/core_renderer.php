@@ -213,10 +213,14 @@ class core_renderer extends \theme_boost\output\core_renderer {
 
         // MODIFICATION START:
         // If the setting showhintcourseguestaccess is set, a hint for users that view the course with guest access is shown.
+        // We also check that the user did not switch the role. This is a special case for roles that can fully access the course
+        // without being enrolled. A role switch would show the guest access hint additionally in that case and this is not
+        // intended.
         if (get_config('theme_boost_campus', 'showhintcourseguestaccess') == 'yes'
             && is_guest(\context_course::instance($COURSE->id), $USER->id)
             && $PAGE->has_set_url()
-            && $PAGE->url->compare(new moodle_url('/course/view.php'), URL_MATCH_BASE)) {
+            && $PAGE->url->compare(new moodle_url('/course/view.php'), URL_MATCH_BASE)
+            && !is_role_switched($COURSE->id)) {
             $html .= html_writer::start_tag('div', array('class' => 'course-guestaccess-infobox alert alert-warning'));
             $html .= html_writer::tag('i', null, array('class' => 'fa fa-exclamation-circle fa-3x fa-pull-left'));
             $html .= get_string('showhintcourseguestaccessgeneral', 'theme_boost_campus',
@@ -229,33 +233,30 @@ class core_renderer extends \theme_boost\output\core_renderer {
         // MODIFICATION START.
         // Only use this if setting 'showswitchedroleincourse' is active.
         if (get_config('theme_boost_campus', 'showswitchedroleincourse') === 'yes') {
-            // Check if user is logged in.
+            // Check if the user did a role switch.
             // If not, adding this section would make no sense and, even worse,
             // user_get_user_navigation_info() will throw an exception due to the missing user object.
-            if (isloggedin()) {
+            if (is_role_switched($COURSE->id)) {
+                // Get the role name switched to.
                 $opts = \user_get_user_navigation_info($USER, $this->page);
-                // Role is switched.
-                if (!empty($opts->metadata['asotherrole'])) {
-                    // Get the role name switched to.
-                    $role = $opts->metadata['rolename'];
-                    // Get the URL to switch back (normal role).
-                    $url = new moodle_url('/course/switchrole.php',
-                        array('id'        => $COURSE->id, 'sesskey' => sesskey(), 'switchrole' => 0,
-                              'returnurl' => $this->page->url->out_as_local_url(false)));
-                    $html .= html_writer::start_tag('div', array('class' => 'switched-role-infobox alert alert-info'));
-                    $html .= html_writer::tag('i', null, array('class' => 'fa fa-user-circle fa-3x fa-pull-left'));
-                    $html .= html_writer::start_tag('div');
-                    $html .= get_string('switchedroleto', 'theme_boost_campus');
-                    // Give this a span to be able to address via CSS.
-                    $html .= html_writer::tag('span', $role, array('class' => 'switched-role'));
-                    $html .= html_writer::end_tag('div');
-                    // Return to normal role link.
-                    $html .= html_writer::start_tag('div');
-                    $html .= html_writer::tag('a', get_string('switchrolereturn', 'core'),
-                        array('class' => 'switched-role-backlink', 'href' => $url));
-                    $html .= html_writer::end_tag('div'); // Return to normal role link: end div.
-                    $html .= html_writer::end_tag('div');
-                }
+                $role = $opts->metadata['rolename'];
+                // Get the URL to switch back (normal role).
+                $url = new moodle_url('/course/switchrole.php',
+                    array('id'        => $COURSE->id, 'sesskey' => sesskey(), 'switchrole' => 0,
+                          'returnurl' => $this->page->url->out_as_local_url(false)));
+                $html .= html_writer::start_tag('div', array('class' => 'switched-role-infobox alert alert-info'));
+                $html .= html_writer::tag('i', null, array('class' => 'fa fa-user-circle fa-3x fa-pull-left'));
+                $html .= html_writer::start_tag('div');
+                $html .= get_string('switchedroleto', 'theme_boost_campus');
+                // Give this a span to be able to address via CSS.
+                $html .= html_writer::tag('span', $role, array('class' => 'switched-role'));
+                $html .= html_writer::end_tag('div');
+                // Return to normal role link.
+                $html .= html_writer::start_tag('div');
+                $html .= html_writer::tag('a', get_string('switchrolereturn', 'core'),
+                    array('class' => 'switched-role-backlink', 'href' => $url));
+                $html .= html_writer::end_tag('div'); // Return to normal role link: end div.
+                $html .= html_writer::end_tag('div');
             }
         }
         // MODIFICATION END.

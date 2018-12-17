@@ -6,6 +6,7 @@ Changes
 
 ### Unreleased
 
+* 2018-12-19 - Improved the feature showhintcourseguestaccess to not be shown in some edge cases.
 * 2018-12-18 - Adding 'both' option for 'Switch to role…' menu fixes - Many thanks to Luca Bösch (lucaboesch) for his proposal and main work on this!
 * 2018-12-17 - Setting to change the breakpoint for smaller screens.
 

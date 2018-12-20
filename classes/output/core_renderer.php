@@ -422,7 +422,7 @@ class core_renderer extends \theme_boost\output\core_renderer {
         $context = $helpicon->export_for_template($this);
         // MODIFICATION START.
         // ID needed for modal dialog.
-        $context->linkid = $helpicon->identifier;
+        $context->linkid = $helpicon->component.'-'.$helpicon->identifier;
         // Fill body variable needed for modal mustache with text value.
         $context->body = $context->text;
         if (get_config('theme_boost_campus', 'helptextmodal') == 'yes') {

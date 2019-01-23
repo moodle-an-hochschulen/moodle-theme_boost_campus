@@ -238,6 +238,19 @@ body.loginbackgroundimage {
 
 
 /*------------------------------------
+  Dashboard
+  -------------------------------------*/
+
+/* Remove unnecessary double border and padding around blocks in main column on Dashboard. */
+.path-my #region-main > .card {
+    border: 0;
+    > .card-body {
+        padding: 0;
+    }
+}
+
+
+/*------------------------------------
   Course page
   -------------------------------------*/
 

@@ -366,6 +366,7 @@ Improved font sizes and weights on category overview page for better readability
 ### Layout
 
 * Reduced paddings on small screens (max. 768px) to be able to show a little bit more content and less whitespace.
+* Removed unnecessary double border and padding around blocks in main column on Dashboard.
 
 
 How this theme works

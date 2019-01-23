@@ -238,6 +238,18 @@ body.loginbackgroundimage {
 
 
 /*------------------------------------
+  Course page
+  -------------------------------------*/
+
+/* Special style for small screens (768px and down) to show more course content because of reduced paddings. */
+@include media-breakpoint-down(sm) {
+    .path-course-view #region-main .card-body {
+        padding: 0.5rem 0;
+    }
+}
+
+
+/*------------------------------------
   Course header
   -------------------------------------*/
 

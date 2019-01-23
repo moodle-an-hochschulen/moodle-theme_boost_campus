@@ -363,6 +363,10 @@ Improved font sizes and weights on category overview page for better readability
 
 * Replaced the the user settings icon with a button to edit the profile. The menu items shown in this setting are not related to the user profile in the closer sense, they are related to the user's system preferences. So we decided to replace this with the only profile related function. Furthermore, the user preferences can be accessed any time over the user's menu in the fixed to top navigation bar.
 
+### Layout
+
+* Reduced paddings on small screens (max. 768px) to be able to show a little bit more content and less whitespace.
+
 
 How this theme works
 -------------------

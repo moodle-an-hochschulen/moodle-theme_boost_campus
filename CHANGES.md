@@ -6,6 +6,7 @@ Changes
 
 ### Unreleased
 
+* 2018-01-23 - Improved whitespaces on small screens to show more of the course content.
 * 2018-12-20 - Fixed loginform.mustache as a wrong bootstrap class sneaked in previously and as a modification comment was missing
 * 2018-12-20 - Fixed a bug with modal help text setting occuring in (sub)plugins that use only enabled / enabled_help for the help texts.
 * 2018-12-19 - Improved the feature showhintcourseguestaccess to not be shown in some edge cases.

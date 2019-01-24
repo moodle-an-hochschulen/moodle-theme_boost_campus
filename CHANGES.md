@@ -4,7 +4,7 @@ moodle-theme_boost_campus
 Changes
 -------
 
-### Unreleased
+### Release v3.5-r5
 
 * 2018-01-23 - Remove unnecessary double border and padding around blocks in main column on Dashboard.
 * 2018-01-23 - Improved whitespaces on small screens to show more of the course content.

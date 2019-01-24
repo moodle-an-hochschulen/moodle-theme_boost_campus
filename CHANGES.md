@@ -6,6 +6,7 @@ Changes
 
 ### Unreleased
 
+* 2019-01-24 - Adjusted function render_login due to upstream changes in theme Boost.
 * 2018-01-24 - Check compatibility for Moodle 3.6, no functionality change.
 
 ### Release v3.5-r5

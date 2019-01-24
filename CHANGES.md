@@ -4,6 +4,10 @@ moodle-theme_boost_campus
 Changes
 -------
 
+### Unreleased
+
+* 2018-01-24 - Check compatibility for Moodle 3.6, no functionality change.
+
 ### Release v3.5-r5
 
 * 2018-01-23 - Remove unnecessary double border and padding around blocks in main column on Dashboard.

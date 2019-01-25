@@ -66,12 +66,12 @@
 
     {{{ output.standard_top_of_body_html }}}
 
-    {{>theme_boost_campus/navbar}}
+    {{> theme_boost_campus/navbar }}
 
     <div id="page" class="container-fluid">
         {{{ output.full_header }}}
 
-        <div id="page-content" class="row">
+        <div id="page-content" class="row pb-3">
             <div id="region-main-box" class="col-12">
                 {{#node}}
                     {{> theme_boost_campus/settings_link_page }}
@@ -82,20 +82,18 @@
                 </div>
                 {{/hasregionmainsettingsmenu}}
                 <section id="region-main" {{#hasblocks}}class="has-blocks mb-3"{{/hasblocks}}>
-                    <div class="card">
-                        <div class="card-body">
-                            {{#hasregionmainsettingsmenu}}
-                                <div class="region_main_settings_menu_proxy"></div>
-                            {{/hasregionmainsettingsmenu}}
-                            {{{ output.course_content_header }}}
-                            {{#activitynode}}
-                                {{> theme_boost_campus/activity_settings_incourse }}
-                            {{/activitynode}}
-                            {{{ output.main_content }}}
-                            {{{ output.activity_navigation }}}
-                            {{{ output.course_content_footer }}}
-                        </div>
-                    </div>
+
+                    {{#hasregionmainsettingsmenu}}
+                        <div class="region_main_settings_menu_proxy"></div>
+                    {{/hasregionmainsettingsmenu}}
+                    {{{ output.course_content_header }}}
+                    {{#activitynode}}
+                        {{> theme_boost_campus/activity_settings_incourse }}
+                    {{/activitynode}}
+                    {{{ output.main_content }}}
+                    {{{ output.activity_navigation }}}
+                    {{{ output.course_content_footer }}}
+
                 </section>
                 {{#hasblocks}}
                 <section data-region="blocks-column" class="d-print-none">
@@ -105,9 +103,10 @@
             </div>
         </div>
     </div>
+    {{{ output.standard_after_main_region_html }}}
     {{> theme_boost/nav-drawer }}
+    {{{ pagebottomelements }}}
 </div>
-{{{ pagebottomelements }}}
 
 </body>
 </html>

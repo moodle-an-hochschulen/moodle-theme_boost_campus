@@ -6,6 +6,7 @@ Changes
 
 ### Unreleased
 
+* 2019-01-25 - Adjusted loginform.mustache template due to upstream changes in theme Boost.
 * 2019-01-25 - Adjusted columns2.mustache template due to upstream changes in theme Boost.
 * 2019-01-24 - Adjusted function render_login due to upstream changes in theme Boost.
 * 2018-01-24 - Check compatibility for Moodle 3.6, no functionality change.

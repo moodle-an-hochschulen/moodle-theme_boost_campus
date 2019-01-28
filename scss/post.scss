@@ -791,6 +791,7 @@ a[href^="mailto"]::before {
  */
 .imagearea {
     border-top: 1px solid #fff;
+    flex-shrink: 0;
 
     img {
         /* If setting imageareaitemsmaxheight is not empty. */

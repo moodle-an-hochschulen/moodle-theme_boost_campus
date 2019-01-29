@@ -811,6 +811,7 @@ a[href^="mailto"]::before {
 .footnote {
     min-height: 50px;
     border-top: 1px solid #fff;
+    flex-shrink: 0;
 }
 
 

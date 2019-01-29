@@ -6,6 +6,7 @@ Changes
 
 ### Unreleased
 
+* 2019-01-29 - Adjusted styles for the footnote due to upstream changes in Boost.
 * 2019-01-28 - Adjusted styles for the imagearea due to upstream changes in Boost.
 * 2019-01-25 - Adjusted login.mustache template due to upstream changes in theme Boost.
 * 2019-01-25 - Adjusted header.mustache template due to upstream changes in theme Boost.

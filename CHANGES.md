@@ -6,6 +6,7 @@ Changes
 
 ### Unreleased
 
+* 2019-01-31 - Deleted now non matching rule in post.scss.
 * 2019-01-31 - Adjusted styles due to upstream SCSS changes in Boost.
 * 2019-01-30 - Adjusted config.php due to upstream changes in theme Boost.
 * 2019-01-29 - Adjusted styles for the footnote due to upstream changes in Boost.

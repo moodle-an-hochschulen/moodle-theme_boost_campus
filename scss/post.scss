@@ -18,12 +18,16 @@
     }
 }
 [data-region="blocks-column"] {
-    width: 250px;
+    width: 280px;
     @include media-breakpoint-down(md) {
         width: 100%;
     }
 }
 
+
+.block_html .card-body .card-text .no-overflow {
+	overflow: visible;
+}
 
 /*------------------------------------
   Login page
@@ -101,7 +105,7 @@ body.loginbackgroundimage {
                 border-radius: 3px;
             }
             .card-header > img {
-                width: 100%;
+                width: auto;
                 height: auto;
             }
         }

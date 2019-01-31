@@ -4,7 +4,7 @@ moodle-theme_boost_campus
 Changes
 -------
 
-### Unreleased
+### Release v3.6-r1
 
 * 2019-01-31 - Deleted now non matching rule in post.scss.
 * 2019-01-31 - Adjusted styles due to upstream SCSS changes in Boost.

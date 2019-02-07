@@ -49,14 +49,13 @@ class course_renderer extends \theme_boost\output\core\course_renderer {
      * please use {@link core_course_renderer::course_info_box()}
      *
      * @param \coursecat_helper       $chelper           various display options
-     * @param \course_in_list|\stdClass $course
+     * @param \core_course_list_element|\stdClass $course
      * @param string                  $additionalclasses additional classes to add to the main <div> tag (usually
      *                                                   depend on the course position in list - first/last/even/odd)
      *
      * @return string
      */
     protected function coursecat_coursebox(\coursecat_helper $chelper, $course, $additionalclasses = '') {
-        global $CFG, $PAGE;
         if (!isset($this->strings->summary)) {
             $this->strings->summary = get_string('summary');
         }
@@ -64,8 +63,7 @@ class course_renderer extends \theme_boost\output\core\course_renderer {
             return '';
         }
         if ($course instanceof stdClass) {
-            require_once($CFG->libdir . '/coursecatlib.php');
-            $course = new \course_in_list($course);
+            $course = new \core_course_list_element($course);
         }
         $content = '';
         $classes = trim('coursebox clearfix ' . $additionalclasses);

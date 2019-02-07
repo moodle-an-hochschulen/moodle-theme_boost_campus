@@ -4,6 +4,10 @@ moodle-theme_boost_campus
 Changes
 -------
 
+### Unreleased
+
+* 2019-02-07 - Adjusted function coursecat_coursebox to upstream changes in Moodle core.
+
 ### Release v3.6-r1
 
 * 2019-01-31 - Deleted now non matching rule in post.scss.

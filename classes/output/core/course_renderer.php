@@ -48,6 +48,8 @@ class course_renderer extends \theme_boost\output\core\course_renderer {
      * This is an internal function, to display an information about just one course
      * please use {@link core_course_renderer::course_info_box()}
      *
+     * KIZ MODIFICATION: This renderer function is copied and modified from /course/renderer.php
+     *
      * @param \coursecat_helper       $chelper           various display options
      * @param \core_course_list_element|\stdClass $course
      * @param string                  $additionalclasses additional classes to add to the main <div> tag (usually

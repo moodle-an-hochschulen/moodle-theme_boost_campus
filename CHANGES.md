@@ -6,6 +6,7 @@ Changes
 
 ### Unreleased
 
+* 2019-02-13 - Added source information to renderers that are overridden from core directly.
 * 2019-02-07 - Adjusted function coursecat_coursebox to upstream changes in Moodle core.
 
 ### Release v3.6-r1

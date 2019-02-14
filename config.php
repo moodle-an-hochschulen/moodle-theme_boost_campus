@@ -164,4 +164,8 @@ $THEME->prescsscallback = 'theme_boost_campus_get_pre_scss';
 $THEME->yuicssmodules = array();
 $THEME->rendererfactory = 'theme_overridden_renderer_factory';
 $THEME->requiredblocks = ' ';
-$THEME->addblockposition = BLOCK_ADDBLOCK_POSITION_DEFAULT;
+if (get_config('theme_boost_campus', 'addablockposition') == 'positionnavdrawer') {
+    $THEME->addblockposition = BLOCK_ADDBLOCK_POSITION_FLATNAV;
+} else {
+    $THEME->addblockposition = BLOCK_ADDBLOCK_POSITION_DEFAULT;
+}

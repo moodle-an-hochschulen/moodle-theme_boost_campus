@@ -111,6 +111,9 @@ This setting will catch the "Cmd + Arrow down" shortcut (MAC), prevent the defau
 
 This setting will catch the "Ctrl + Arrow down" shortcut (Windows), prevent the default scrolling to the bottom of the web page and changes the behavior to scroll only to the bottom of the main course content.
 
+##### Position of "Add a block" widget
+
+With this setting you can manage where the "Add a block" widget should be displayed. "At the bottom of the nav drawer" means the widget to add new blocks is displayed in the left sliding navigation panel like in theme Boost. "At the bottom of the default block region" means the widget to add new blocks will be displayed in the default block region.
 
 ### 3. Tab "Course Layout Settings"
 

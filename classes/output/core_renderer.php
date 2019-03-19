@@ -83,6 +83,8 @@ class core_renderer extends \theme_boost\output\core_renderer {
      *
      * Returns HTML attributes to use within the body tag. This includes an ID and classes.
      *
+     * KIZ MODIFICATION: This renderer function is copied and modified from /lib/outputrenderers.php
+     *
      * @since Moodle 2.5.1 2.6
      * @param string|array $additionalclasses Any additional classes to give the body tag,
      * @return string
@@ -111,6 +113,8 @@ class core_renderer extends \theme_boost\output\core_renderer {
      * Override to be able to use uploaded images from admin_setting as well.
      *
      * Returns the URL for the favicon.
+     *
+     * KIZ MODIFICATION: This renderer function is copied and modified from /lib/outputrenderers.php
      *
      * @since Moodle 2.5.1 2.6
      * @return string The favicon URL
@@ -385,12 +389,16 @@ class core_renderer extends \theme_boost\output\core_renderer {
      * @return string
      */
     public function render_login(\core_auth\output\login $form) {
-        global $SITE;
+        global $CFG, $SITE;
 
         $context = $form->export_for_template($this);
 
         // Override because rendering is not supported in template yet.
-        $context->cookieshelpiconformatted = $this->help_icon('cookiesenabled');
+        if ($CFG->rememberusername == 0) {
+            $context->cookieshelpiconformatted = $this->help_icon('cookiesenabledonlysession');
+        } else {
+            $context->cookieshelpiconformatted = $this->help_icon('cookiesenabled');
+        }
         $context->errorformatted = $this->error_text($context->error);
         $url = $this->get_logo_url();
         if ($url) {

@@ -10,24 +10,24 @@
     @if $breakpoint == 'yes' {
         #region-main-settings-menu.has-blocks,
         #region-main.has-blocks {
+            display: inline-block;
             width: calc(100% - #{$blocks-plus-gutter});
             @include media-breakpoint-down(md) {
                 width: 100%;
+                /* MDL-63102 - Remove extra space at bottom.
+                If modifying make sure block-region is horizontally stacked when in full screen */
+                display: block;
             }
         }
     }
 }
 [data-region="blocks-column"] {
-    width: 280px;
+    width: $blocks-column-width;
     @include media-breakpoint-down(md) {
         width: 100%;
     }
 }
 
-
-.block_html .card-body .card-text .no-overflow {
-	overflow: visible;
-}
 
 /*------------------------------------
   Login page
@@ -237,19 +237,6 @@ body.loginbackgroundimage {
                 left: -100%;
             }
         }
-    }
-}
-
-
-/*------------------------------------
-  Dashboard
-  -------------------------------------*/
-
-/* Remove unnecessary double border and padding around blocks in main column on Dashboard. */
-.path-my #region-main > .card {
-    border: 0;
-    > .card-body {
-        padding: 0;
     }
 }
 
@@ -795,6 +782,7 @@ a[href^="mailto"]::before {
  */
 .imagearea {
     border-top: 1px solid #fff;
+    flex-shrink: 0;
 
     img {
         /* If setting imageareaitemsmaxheight is not empty. */
@@ -814,6 +802,7 @@ a[href^="mailto"]::before {
 .footnote {
     min-height: 50px;
     border-top: 1px solid #fff;
+    flex-shrink: 0;
 }
 
 

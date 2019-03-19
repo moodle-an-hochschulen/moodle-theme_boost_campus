@@ -96,7 +96,7 @@ $THEME->layouts = [
         'file' => 'columns2.php',
         'regions' => $regions,
         'defaultregion' => 'side-pre',
-        'options' => array('nonavbar' => true, 'langmenu' => true),
+        'options' => array('nonavbar' => true, 'langmenu' => true, 'nocontextheader' => true),
     ),
     // My public page.
     'mypublic' => array(

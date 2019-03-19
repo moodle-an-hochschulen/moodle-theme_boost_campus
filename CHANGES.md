@@ -4,6 +4,25 @@ moodle-theme_boost_campus
 Changes
 -------
 
+### Release v3.6-r2
+
+* 2019-02-13 - Added source information to renderers that are overridden from core directly.
+* 2019-02-07 - Adjusted function coursecat_coursebox to upstream changes in Moodle core.
+
+### Release v3.6-r1
+
+* 2019-01-31 - Deleted now non matching rule in post.scss.
+* 2019-01-31 - Adjusted styles due to upstream SCSS changes in Boost.
+* 2019-01-30 - Adjusted config.php due to upstream changes in theme Boost.
+* 2019-01-29 - Adjusted styles for the footnote due to upstream changes in Boost.
+* 2019-01-28 - Adjusted styles for the imagearea due to upstream changes in Boost.
+* 2019-01-25 - Adjusted login.mustache template due to upstream changes in theme Boost.
+* 2019-01-25 - Adjusted header.mustache template due to upstream changes in theme Boost.
+* 2019-01-25 - Adjusted loginform.mustache template due to upstream changes in theme Boost.
+* 2019-01-25 - Adjusted columns2.mustache template due to upstream changes in theme Boost.
+* 2019-01-24 - Adjusted function render_login due to upstream changes in theme Boost.
+* 2018-01-24 - Check compatibility for Moodle 3.6, no functionality change.
+
 ### Release v3.5-r5
 
 * 2018-01-23 - Remove unnecessary double border and padding around blocks in main column on Dashboard.

@@ -158,7 +158,7 @@ class core_renderer extends \theme_boost\output\core_renderer {
         /* ORIGINAL START
         $header->settingsmenu = $this->context_header_settings_menu();
         ORIGINAL END. */
-        $header->contextheader = $this->context_header();
+        $header->contextheader = '<a href="'.$CFG->wwwroot.'/course/view.php?id='.$COURSE->id.'">'.$this->context_header().'</a>';
         $header->hasnavbar = empty($PAGE->layout_options['nonavbar']);
         $header->navbar = $this->navbar();
         // MODIFICATION START.
@@ -189,6 +189,7 @@ class core_renderer extends \theme_boost\output\core_renderer {
         $header->pageheadingbutton = $this->page_heading_button();
         ORIGINAL END. */
         $header->courseheader = $this->course_header();
+        $header->instructors = $this->course_authornames();
         // MODIFICATION START:
         // Change this to add the result in the html variable to be able to add further features below the header.
         // Render from the own header template.
@@ -440,4 +441,74 @@ class core_renderer extends \theme_boost\output\core_renderer {
         }
         // MODIFICATION END.
     }
+	
+	public function activity_navigation() {
+	        return '';
+	    }
+	
+	public function course_authornames() {
+
+    global $CFG, $USER, $DB, $OUTPUT, $COURSE;
+
+	// expecting $course
+
+    //$context = get_context_instance(CONTEXT_COURSE, $COURSE->id);
+    $context = context_course::instance($COURSE->id);
+
+
+    /// first find all roles that are supposed to be displayed
+    if (!empty($CFG->coursecontact)) {
+        $managerroles = explode(',', $CFG->coursecontact);
+        $namesarray = array();
+        $rusers = array();
+
+        if (!isset($COURSE->managers)) {
+            $rusers = get_role_users($managerroles, $context, true,
+                'ra.id AS raid, u.id, u.username, u.firstname, u.lastname,
+                 r.name AS rolename, r.sortorder, r.id AS roleid',
+                'r.sortorder ASC, u.lastname ASC');
+        } else {
+            //  use the managers array if we have it for perf reasosn
+            //  populate the datastructure like output of get_role_users();
+            foreach ($COURSE->managers as $manager) {
+                $u = new stdClass();
+                $u = $manager->user;
+                $u->roleid = $manager->roleid;
+                $u->rolename = $manager->rolename;
+
+                $rusers[] = $u;
+            }
+        }
+
+        /// Rename some of the role names if needed
+        if (isset($context)) {
+            $aliasnames = $DB->get_records('role_names', array('contextid'=>$context->id), '', 'roleid,contextid,name');
+        }
+
+        $namesarray = array();
+        $canviewfullnames = has_capability('moodle/site:viewfullnames', $context);
+        foreach ($rusers as $ra) {
+            if (isset($namesarray[$ra->id])) {
+                //  only display a user once with the higest sortorder role
+                continue;
+            }
+
+            if (isset($aliasnames[$ra->roleid])) {
+                $ra->rolename = $aliasnames[$ra->roleid]->name;
+            }
+
+            $fullname = fullname($ra, $canviewfullnames);
+            $usr_img = '<img class="instr-avatar img-rounded" src="'.$CFG->wwwroot.'/user/pix.php/'.$ra->id.'/f2.jpg" height="24" width="24" title="Profile picture of '.$fullname.'" alt="Profile picture of '.$fullname.'" />';
+            $namesarray[$ra->id] = html_writer::link(new moodle_url('/user/view.php', array('id'=>$ra->id, 'course'=>$COURSE->id)), $usr_img.' '.$fullname);
+        }
+
+        if (!empty($namesarray)) {
+            $course_authornames = html_writer::start_tag('div', array('class'=>'teacherlist'));
+            $course_authornames .= implode(' &nbsp;&nbsp; ', $namesarray);
+            $course_authornames .= html_writer::end_tag('div');
+			
+			return $course_authornames;
+        } else return '';
+    }
+}
 }

@@ -147,7 +147,36 @@ body.loginbackgroundimage {
         }
     }
 }
+/*
+.site-name {
+	padding-left: 100px;
+	background: url(https://www.uregina.ca/external/communications/assets/identity1/Primary_Logo/Full%20Colour/UR_Logo_Primary_Full_COlour_RGB.png) 0 0 no-repeat;
+	background-size: contain;
+}
+*/
+.page-navbkg {
+	background-color: #ffc82e;
+	margin-top: 0.25em;
+}
 
+#page-header .card-body {
+	padding: 0;
+}
+#page-header .page-head {
+	padding: 1rem;
+}
+#page-header .page-navbkg {
+	padding: 0.25rem 1rem;
+	color: #fff;
+}
+
+.page-navbkg a {
+	color: #fff;
+}
+
+.page-navbkg .breadcrumb-item + .breadcrumb-item::before {
+	color: #fff;
+}
 
 /*------------------------------------
   User menu
@@ -613,6 +642,15 @@ blockquote::before {
     white-space: normal;
 }
 
+	.block .card-body {
+    border: 1px solid #ddd;
+    border-top: 0;
+}
+
+.block.card {
+       border: 0;
+       border-top: 0.5em solid #ffc82e;
+}
 
 /*------------------------------------
   Profile Page
@@ -1094,4 +1132,69 @@ a[href^="mailto"]::before {
     .list-group-item[data-key="localboostnavigationcoursesections"][data-collapse="0"] + .list-group-item[href$="#section-0"] {
         border-top: none;
     }
+}
+
+
+
+body.path-mod-book [data-region="blocks-column"] {
+
+    float: left;
+
+}
+
+body.path-mod-book #region-main {
+
+    float: right;
+
+}
+
+body.path-mod-book #region-main-settings-menu.has-blocks {
+    display: inline-block;
+    width: 100%;
+}
+
+
+/**
+ * Mod book.
+ */
+.path-mod-book {
+
+    .book_toc_numbered {
+        font-size: 1em;
+        ul {
+            list-style-type: none;
+            padding: 0;
+            ul {
+                padding-left: 4%;
+            }
+        }
+    }
+
+    // Hide next/previous image when not a link.
+    .navimages {
+        img {
+            visibility: hidden;
+        }
+        a img {
+            visibility: visible;
+        }
+        .bookprev:after,
+        .booknext:before {
+            content: attr(title);
+            font-family: $font-family-base;
+        }
+    }
+    // Style next and previous navigation.
+    .navtop {
+        display: none;
+    }
+    .bookprev,
+    .booknext {
+        display: inline-block;
+        width: 50%;
+    }
+    .bookprev {
+        text-align: left;
+    }
+
 }

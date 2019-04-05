@@ -190,6 +190,9 @@ class core_renderer extends \theme_boost\output\core_renderer {
         ORIGINAL END. */
         $header->courseheader = $this->course_header();
         $header->instructors = $this->course_authornames();
+		$hascoursecat = $this->ur_check_course_cat();
+		$coursecat = (!empty($hascoursecat)) ? $hascoursecat['name'] : 'Default';
+		$header->facultydep = $coursecat;
         // MODIFICATION START:
         // Change this to add the result in the html variable to be able to add further features below the header.
         // Render from the own header template.
@@ -465,6 +468,7 @@ class core_renderer extends \theme_boost\output\core_renderer {
         if (!isset($COURSE->managers)) {
             $rusers = get_role_users($managerroles, $context, true,
                 'ra.id AS raid, u.id, u.username, u.firstname, u.lastname,
+				 u.firstnamephonetic, u.lastnamephonetic, u.middlename, u.alternatename,
                  r.name AS rolename, r.sortorder, r.id AS roleid',
                 'r.sortorder ASC, u.lastname ASC');
         } else {
@@ -511,4 +515,22 @@ class core_renderer extends \theme_boost\output\core_renderer {
         } else return '';
     }
 }
+
+function ur_check_course_cat() {
+	global $CFG,$DB,$COURSE;
+
+	$ur_categories = array('','misc'=>'','khs'=>'Faculty of Kinesiology and Health Studies','edu'=>'Faculty of Education','sci'=>'Faculty of Science','grad'=>'Grad Studies','fa'=>'Faculty of Fine Arts','map'=>'Faculty of Media, Art, and Performance','engg'=>'Faculty of Engineering','bus'=>'Business Administration','arts'=>'Faculty of Arts','sw'=>'Faculty of Social Work','nur'=>'Faculty of Nursing','misc'=>'Custom Themes');
+	
+	
+	$sql = "SELECT a.name FROM {$CFG->prefix}course_categories a, {$CFG->prefix}course b WHERE a.id = b.category AND b.id = {$COURSE->id}";
+	$check_course_category = $DB->get_record_sql($sql);
+	if ($check_course_category) {
+		$key = array_search($check_course_category->name,$ur_categories);
+		return array('css'=>$key,'name'=>$check_course_category->name);
+	} else {
+		return array('css'=>'','name'=>'');
+	}
+}
+
+
 }

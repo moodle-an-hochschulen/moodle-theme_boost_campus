@@ -255,16 +255,22 @@ body.loginbackgroundimage {
     }
 }
 
-/* If the setting navdrawerfullwidth is enabled, we want the nav drawer menu to be displayed full size on small screens. */
+/* If the setting navdrawerfullwidth is enabled, we want the nav drawer menu to be displayed full size on small screens. 
+ We now assume the same for the messaging panel. */
 @if variable-exists(navdrawerfullwidth) {
     @if $navdrawerfullwidth == 'yes' {
         @include media-breakpoint-down(sm) {
-            #nav-drawer {
+            #nav-drawer,
+			.message-drawer {
                 width: 100%;
             }
             #nav-drawer.closed {
                 left: -100%;
             }
+			.message-drawer.hidden {
+				right: -100%;
+			}
+			
         }
     }
 }
@@ -1136,19 +1142,22 @@ a[href^="mailto"]::before {
 
 
 
-body.path-mod-book [data-region="blocks-column"] {
+body.path-mod-book [data-region="blocks-column"],
+body.path-mod-quiz [data-region="blocks-column"] {
 
     float: left;
 
 }
 
-body.path-mod-book #region-main {
+body.path-mod-book #region-main,
+body.path-mod-quiz #region-main  {
 
     float: right;
 
 }
 
-body.path-mod-book #region-main-settings-menu.has-blocks {
+body.path-mod-book #region-main-settings-menu.has-blocks,
+body.path-mod-quiz #region-main-settings-menu.has-blocks {
     display: inline-block;
     width: 100%;
 }

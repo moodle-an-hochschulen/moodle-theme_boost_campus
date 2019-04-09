@@ -32,6 +32,7 @@ use html_writer;
 global $CFG;
 
 require_once($CFG->dirroot . '/course/renderer.php');
+
 /**
  * Extending the course_renderer interface.
  *
@@ -58,6 +59,9 @@ class course_renderer extends \theme_boost\output\core\course_renderer {
      * @return string
      */
     protected function coursecat_coursebox(\coursecat_helper $chelper, $course, $additionalclasses = '') {
+		
+		global $CFG,$DB;
+		
         if (!isset($this->strings->summary)) {
             $this->strings->summary = get_string('summary');
         }
@@ -75,7 +79,19 @@ class course_renderer extends \theme_boost\output\core\course_renderer {
             $classes .= ' collapsed';
             $nametag = 'div';
         }
-
+		
+		
+		
+		$ur_categories = array('','misc'=>'','khs'=>'Faculty of Kinesiology and Health Studies','edu'=>'Faculty of Education','sci'=>'Faculty of Science','grad'=>'Grad Studies','fa'=>'Faculty of Fine Arts','map'=>'Faculty of Media, Art, and Performance','engg'=>'Faculty of Engineering','bus'=>'Business Administration','arts'=>'Faculty of Arts','sw'=>'Faculty of Social Work','nur'=>'Faculty of Nursing','misc'=>'Custom Themes');
+		
+		
+		$sql = "SELECT a.name FROM {$CFG->prefix}course_categories a, {$CFG->prefix}course b WHERE a.id = b.category AND b.id = {$course->id}";
+		$check_course_category = $DB->get_record_sql($sql);
+		if ($check_course_category) {
+			$key = array_search($check_course_category->name,$ur_categories);
+			$classes .= (!empty($key)) ? ' '.$key : '';
+		}
+		
         // .coursebox
         $content .= html_writer::start_tag('div', array(
             'class'         => $classes,

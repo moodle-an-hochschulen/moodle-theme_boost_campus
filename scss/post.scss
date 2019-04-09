@@ -158,6 +158,10 @@ body.loginbackgroundimage {
 	background-color: #ffc82e;
 	margin-top: 0.25em;
 }
+body.arts .page-navbkg {
+	background-color: #c9282d;
+}
+
 
 #page-header .card-body {
 	padding: 0;
@@ -172,6 +176,11 @@ body.loginbackgroundimage {
 
 .page-navbkg a {
 	color: #fff;
+}
+
+.page-navbkg .dimmed_text a, 
+.page-navbkg .dimmed_text a:link {
+	color: #e5e5e5;
 }
 
 .page-navbkg .breadcrumb-item + .breadcrumb-item::before {
@@ -548,6 +557,10 @@ blockquote::before {
     }
 }
 .coursebox {
+	
+	border-top: .5em solid #ffc82e;
+	margin-bottom: 1em;
+	
     .moreinfo {
         float: left;
         margin-left: 21px;
@@ -565,7 +578,17 @@ blockquote::before {
         border-left: 2px solid $gray-light;
     }
 }
+.coursebox.arts {
+	border-top: .5em solid #c9282d;
+}
 
+
+.coursebox > .info > .coursename a {
+    display: block;
+    background-image: none;
+    padding-left: 0;
+	font-weight: bold;
+}
 
 /*------------------------------------
   Blocks
@@ -656,6 +679,10 @@ blockquote::before {
 .block.card {
        border: 0;
        border-top: 0.5em solid #ffc82e;
+}
+
+body.arts .block.card {
+	border-top-color: #c9282d;
 }
 
 /*------------------------------------

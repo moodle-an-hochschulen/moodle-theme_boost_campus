@@ -25,7 +25,7 @@
 
 defined('MOODLE_INTERNAL') || die();
 // MODIFICATION START.
-global $PAGE;
+global $CFG,$PAGE,$DB,$COURSE;
 // MODIFICATION END.
 
 user_preference_allow_ajax_update('drawer-open-nav', PARAM_ALPHA);
@@ -43,6 +43,20 @@ $extraclasses = [];
 if ($navdraweropen) {
     $extraclasses[] = 'drawer-open-left';
 }
+
+
+$ur_categories = array('','misc'=>'','khs'=>'Faculty of Kinesiology and Health Studies','edu'=>'Faculty of Education','sci'=>'Faculty of Science','grad'=>'Grad Studies','fa'=>'Faculty of Fine Arts','map'=>'Faculty of Media, Art, and Performance','engg'=>'Faculty of Engineering','bus'=>'Business Administration','arts'=>'Faculty of Arts','sw'=>'Faculty of Social Work','nur'=>'Faculty of Nursing','misc'=>'Custom Themes');
+
+
+$sql = "SELECT a.name FROM {$CFG->prefix}course_categories a, {$CFG->prefix}course b WHERE a.id = b.category AND b.id = {$COURSE->id}";
+$check_course_category = $DB->get_record_sql($sql);
+if ($check_course_category) {
+	$key = array_search($check_course_category->name,$ur_categories);
+	if (!empty($key)) $extraclasses[] = $key;
+}
+
+
+
 $bodyattributes = $OUTPUT->body_attributes($extraclasses);
 $blockshtml = $OUTPUT->blocks('side-pre');
 $hasblocks = strpos($blockshtml, 'data-block=') !== false;

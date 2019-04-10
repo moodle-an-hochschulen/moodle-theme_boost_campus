@@ -46,6 +46,9 @@ use url_select;
 use context_course;
 use pix_icon;
 
+
+use \core_course\external\course_summary_exporter;
+
 defined('MOODLE_INTERNAL') || die;
 
 
@@ -193,6 +196,15 @@ class core_renderer extends \theme_boost\output\core_renderer {
 		$hascoursecat = $this->ur_check_course_cat();
 		$coursecat = (!empty($hascoursecat)) ? $hascoursecat['name'] : 'Default';
 		$header->facultydep = $coursecat;
+		
+        $context = \context_course::instance($COURSE->id);
+		
+		$urenderer = $PAGE->get_renderer('core');
+		$exporter = new course_summary_exporter($COURSE, ['context' => $context]);
+		$cobits = $exporter->export($urenderer);
+		
+		$header->courseimage = $cobits->courseimage;
+		
         // MODIFICATION START:
         // Change this to add the result in the html variable to be able to add further features below the header.
         // Render from the own header template.

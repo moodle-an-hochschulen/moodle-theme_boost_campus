@@ -156,17 +156,20 @@ body.loginbackgroundimage {
 */
 .page-navbkg {
 	background-color: #ffc82e;
-	margin-top: 0.25em;
 }
 body.arts .page-navbkg {
 	background-color: #c9282d;
 }
 
+.course-image img {
+	max-width: 10em;
+	margin-top: 0;
+}
 
 #page-header .card-body {
 	padding: 0;
 }
-#page-header .page-head {
+#page-header .course-head {
 	padding: 1rem;
 }
 #page-header .page-navbkg {
@@ -174,13 +177,24 @@ body.arts .page-navbkg {
 	color: #fff;
 }
 
+
+.page-navbkg li {
+	font-weight: bold;
+}
+
 .page-navbkg a {
 	color: #fff;
 }
 
+
 .page-navbkg .dimmed_text a, 
 .page-navbkg .dimmed_text a:link {
-	color: #e5e5e5;
+	color: #fbe982;
+}
+
+body.arts .page-navbkg .dimmed_text a, 
+body.arts .page-navbkg .dimmed_text a:link {
+	color: #f0f1ec;
 }
 
 .page-navbkg .breadcrumb-item + .breadcrumb-item::before {

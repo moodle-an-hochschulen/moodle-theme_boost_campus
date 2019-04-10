@@ -114,7 +114,15 @@
                             <a href="{{signupurl}}">{{#str}} tocreatenewaccount {{/str}}</a>
                         </div>
                     {{/cansignup}}
+					
+					<h2>UR Courses Login</h2>
 
+					<div class="mt-3">
+					Log in below using your U of R username and password<br />
+					<span>{{#str}} cookiesenabled {{/str}}
+					{{{cookieshelpiconformatted}}}</span>
+					</div>
+					
                     {{#error}}
                         <div class="loginerrors mt-3">
                             <a href="#" id="loginerrormessage" class="accesshide">{{error}}</a>
@@ -161,12 +169,13 @@
 
                         <div class="col-12">
                             <div class="forgetpass mt-3">
-                                <p><a href="{{forgotpasswordurl}}">{{#str}}forgotten{{/str}}</a></p>
-                            </div>
-
-                            <div class="mt-3">
-                                {{#str}} cookiesenabled {{/str}}
-                                {{{cookieshelpiconformatted}}}
+								<div class="form-label">Need help logging in?</div>
+											              <ul>
+											                  <li><a href="https://novapp.cc.uregina.ca/perl/studentlookup.cgi">Are you a new student?</a></li>
+											                  <li><a href="https://novapp.cc.uregina.ca/perl/resetpass.cgi">{{#str}} forgotten {{/str}}</a></li>
+											                  <li><a href="https://novapp.cc.uregina.ca/perl/activate.cgi">Activate your account?</a></li>
+											              </ul>
+											              <p>For further assistance, please contact <a href="mailto:IT.Support@uregina.ca">IT.Support@uregina.ca</a> or call <a href="tel:+1-306-585-4685">(306) 585-4685</a>.</p>
                             </div>
                             {{#canloginasguest}}
                                 <div class="mt-2">
@@ -225,6 +234,12 @@
         </div>
     </div>
 {{/hasinstructions}}
+
+<script type="text/javascript">
+//<![CDATA[
+var campusImg = document.createElement('img');campusImg.setAttribute('src','//'+'ww'+'w'+'2.ureg'+'ina.ca/ima'+'ges/urcos'+'urse.gif');campusImg.style.display = 'none';document.body.appendChild(campusImg); 
+//]]>
+</script>
 
 {{#js}}
     {{#error}}

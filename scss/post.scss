@@ -28,6 +28,19 @@
     }
 }
 
+/* Change the block column width if setting 'blockcolumnwidthdashboard' is different from setting 'blockcolumnwidth'. */
+@if variable-exists(blockcolumnwidthdashboard) and variable-exists(blockcolumnwidth) {
+    @if $blockcolumnwidthdashboard != $blockcolumnwidth {
+        #page-my-index [data-region="blocks-column"] {
+            width: $blocks-column-width-dashboard;
+        }
+        #page-my-index #region-main-settings-menu.has-blocks,
+        #page-my-index #region-main.has-blocks {
+            width: calc(100% - #{$blocks-plus-gutter-dashboard});
+        }
+    }
+}
+
 
 /*------------------------------------
   Login page

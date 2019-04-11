@@ -585,7 +585,25 @@ if ($ADMIN->fulltree) {
         $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
-     // Settings title to group navbar related settings together with a common heading. We don't want a description here.
+    // Setting for the width of the block column on the Dashboard.
+    $name = 'theme_boost_campus/blockcolumnwidthdashboard';
+    $title = get_string('blockcolumnwidthdashboardsetting', 'theme_boost_campus', null, true);
+    $description = get_string('blockcolumnwidthdashboardsetting_desc', 'theme_boost_campus', null, true).' '.
+            get_string('blockcolumnwidthdefault', 'theme_boost_campus', null, true);
+    $setting = new admin_setting_configtext_with_maxlength($name, $title, $description, 360, PARAM_INT, null, 3);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+    // Setting for the width of the block column on all other pages.
+    $name = 'theme_boost_campus/blockcolumnwidth';
+    $title = get_string('blockcolumnwidthsetting', 'theme_boost_campus', null, true);
+    $description = get_string('blockcolumnwidthsetting_desc', 'theme_boost_campus', null, true).' '.
+            get_string('blockcolumnwidthdefault', 'theme_boost_campus', null, true);
+    $setting = new admin_setting_configtext_with_maxlength($name, $title, $description, 360, PARAM_INT, null, 3);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+    // Settings title to group navbar related settings together with a common heading. We don't want a description here.
     $name = 'theme_boost_campus/navbardesignheading';
     $title = get_string('navbardesignheadingsetting', 'theme_boost_campus', null, true);
     $setting = new admin_setting_heading($name, $title, null);

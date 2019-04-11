@@ -184,6 +184,11 @@ $string['blockdesignheadingsetting'] = 'Blocks';
 $string['blockiconsetting'] = 'Block icon';
 $string['blockiconsetting_desc'] = 'With this setting you can add a default Font Awesome icon in front of the block title.  If checked, we additionally provide individual icon replacements for many Moodle core blocks and also some widely used blocks. You also can change the icons easily for each block individually in your raw SCSS via the change of the Font Awesome content. For all available icons please visit http://fontawesome.io/icons/ and use the Unicode value of the icon to replace the default one. <br/> The code to change the icon looks like this example change for the block "People": <br/>';
 $string['blockiconsetting_desc_code'] = '.block_people .card-block .card-title::before { content: \'\f0c0\' ; }';
+$string['blockcolumnwidthsetting'] = 'Block column width on all other pages';
+$string['blockcolumnwidthsetting_desc'] = 'With this setting you can change the width (in pixels) of the block column on all other pages except the Dashboard.';
+$string['blockcolumnwidthdashboardsetting'] = 'Block column width on Dashboard';
+$string['blockcolumnwidthdashboardsetting_desc'] = 'With this setting you can change the width (in pixels) of the block column on the Dashboard.';
+$string['blockcolumnwidthdefault'] = 'The default width from Moodle 3.6 on is 360px, until Moodle 3.5 the width was 250px.';
 // ...Navbar.
 $string['navbardesignheadingsetting'] = 'Navbar';
 $string['darknavbarsetting'] = 'Dark navbar';

@@ -232,26 +232,71 @@ body.arts .page-navbkg .dimmed_text a:link {
 
 .page-navbkg .singlebutton button {
 	color: #f5f5f5;
+	background-color: #c79200;
+	border-color: #bd8a00;
+}
+
+.page-navbkg .singlebutton button:hover {
+	background-color: #b88700;
+}
+
+body.arts .page-navbkg .singlebutton button {
+	color: #f5f5f5;
 	background-color: #81181c;
 	border-color: #c9282d;
 }
 
-.page-navbkg .singlebutton button:hover {
+body.arts .page-navbkg .singlebutton button:hover {
 	background-color: #9e1f23;
 }
+
+
 .page-navbkg .singlebutton button:before {
     content: '\f044';
     font-family: 'FontAwesome';
     padding-right: 5px;
 }
 
+
+.page-navbkg .context-header-settings-menu {
+	margin-left: 1rem !important;
+}
+
+@include media-breakpoint-down(sm) {
+    .page-navbkg .singlebutton button {
+		width: 1.75em;
+	    overflow: hidden;
+	    font-size: 1.5em;
+	    padding: 0 0.35em;
+    }
+	.page-navbkg .singlebutton button:before {
+	    padding-right: 1em;
+	}
+	.page-navbkg .context-header-settings-menu {
+		margin-left: 0.5rem !important;
+	}
+	#page-header .page-navbkg {
+	    padding: .25rem 0.65rem;
+	}
+}
+
+
 .page-navbkg .context-header-settings-menu .fa-cog {
-	color: #81181c;
+	color: #c79200;
 	margin-top: 0.11em;
 }
 .page-navbkg .context-header-settings-menu .fa-cog:hover {
+	color: #b88700;
+}
+
+body.arts .page-navbkg .context-header-settings-menu .fa-cog {
+	color: #81181c;
+	margin-top: 0.11em;
+}
+body.arts .page-navbkg .context-header-settings-menu .fa-cog:hover {
 	color: #9e1f23;
 }
+
 
 #page-navbar nav {
 	margin-top: 0.22em;
@@ -379,6 +424,14 @@ nav.fixed-top .icon .fa-comment {
 	display: inline-block;
 	margin-right: 1rem;
 	margin-left: 1rem;
+}
+
+.search-input-wrapper > div .icon {
+    margin-right: 0;
+    margin-top: 7px;
+}
+.search-input-wrapper {
+    margin: 0 0.5rem 0 0;
 }
 
 /*------------------------------------

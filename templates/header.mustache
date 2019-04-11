@@ -58,14 +58,16 @@
                         {{{navbar}}}
                     </div>
                     {{/hasnavbar}}
-                    <div class="ml-auto d-flex">
-                        {{{pageheadingbutton}}}
-                    </div>
-                    {{#settingsmenu}}
-                        <div class="context-header-settings-menu ml-4">
-                            {{{settingsmenu}}}
+                    <div class="no-wrap ml-auto d-flex">
+						<div class="ml-auto d-flex">
+                            {{{pageheadingbutton}}}
                         </div>
-                    {{/settingsmenu}}
+                        {{#settingsmenu}}
+                            <div class="context-header-settings-menu">
+                                {{{settingsmenu}}}
+                            </div>
+                        {{/settingsmenu}}
+					</div>
                     <div id="course-header">
                         {{{courseheader}}}
                     </div>

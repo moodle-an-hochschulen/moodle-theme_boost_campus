@@ -160,10 +160,15 @@ body.loginbackgroundimage {
 body.arts .page-navbkg {
 	background-color: #c9282d;
 }
-
+/*
 .course-image img {
 	max-width: 10em;
 	margin-top: 0;
+}
+*/
+
+.page-head {
+	padding: 1rem;
 }
 
 #page-header .card-body {
@@ -171,12 +176,26 @@ body.arts .page-navbkg {
 }
 #page-header .course-head {
 	padding: 1rem;
+	background-color: rgba(255,255,255, 0.8);
 }
 #page-header .page-navbkg {
 	padding: 0.25rem 1rem;
 	color: #fff;
 }
 
+.course-head a .page-context-header .page-header-headings h1 {
+	color: #666;
+	font-weight: 500;
+	transition: color 1s;
+}
+.course-head a:hover .page-context-header .page-header-headings h1 {
+	color: #888;
+}
+
+
+.course-head .instructors .teacherlist a {
+	color: #777;
+}
 
 .page-navbkg li {
 	font-weight: bold;
@@ -200,6 +219,49 @@ body.arts .page-navbkg .dimmed_text a:link {
 .page-navbkg .breadcrumb-item + .breadcrumb-item::before {
 	color: #fff;
 }
+
+#boost-campus-course-settings .card-body a {
+	color: #666;
+	display: inline-block;
+	padding: 0.25em 0.5em;
+}
+
+#boost-campus-course-settings .card-body a:hover {
+	background-color: #fcfcfc;
+}
+
+.page-navbkg .singlebutton button {
+	color: #f5f5f5;
+	background-color: #81181c;
+	border-color: #c9282d;
+}
+
+.page-navbkg .singlebutton button:hover {
+	background-color: #9e1f23;
+}
+.page-navbkg .singlebutton button:before {
+    content: '\f044';
+    font-family: 'FontAwesome';
+    padding-right: 5px;
+}
+
+.page-navbkg .context-header-settings-menu .fa-cog {
+	color: #81181c;
+	margin-top: 0.11em;
+}
+.page-navbkg .context-header-settings-menu .fa-cog:hover {
+	color: #9e1f23;
+}
+
+#page-navbar nav {
+	margin-top: 0.22em;
+}
+
+.navbar-expand .navbar-nav .nav-link {
+	padding-right: 0;
+	padding-left: 0;
+}
+
 
 /*------------------------------------
   User menu
@@ -298,6 +360,26 @@ body.arts .page-navbkg .dimmed_text a:link {
     }
 }
 
+
+nav.fixed-top .icon {
+	font-size: 20px;
+	width: 20px;
+	height: 20px;
+}
+
+nav.fixed-top .dropdown-menu .icon {
+	font-size: 16px;
+	width: 16px;
+	height: 16px;
+}
+
+nav.fixed-top .icon .fa-bell,
+nav.fixed-top .icon .fa-envelope-o,
+nav.fixed-top .icon .fa-comment {
+	display: inline-block;
+	margin-right: 1rem;
+	margin-left: 1rem;
+}
 
 /*------------------------------------
   Course page

@@ -161,7 +161,10 @@ class core_renderer extends \theme_boost\output\core_renderer {
         /* ORIGINAL START
         $header->settingsmenu = $this->context_header_settings_menu();
         ORIGINAL END. */
-        $header->contextheader = '<a href="'.$CFG->wwwroot.'/course/view.php?id='.$COURSE->id.'">'.$this->context_header().'</a>';
+		
+		$sitecontextheader = '<div class="page-context-header"><div class="page-header-headings"><h1>'.$COURSE->fullname.'</h1></div></div>';
+		$headertext = (!empty($this->context_header())) ? $this->context_header() : $sitecontextheader;
+        $header->contextheader = '<a href="'.$CFG->wwwroot.'/course/view.php?id='.$COURSE->id.'">'.$headertext.'</a>';
         $header->hasnavbar = empty($PAGE->layout_options['nonavbar']);
         $header->navbar = $this->navbar();
         // MODIFICATION START.
@@ -192,6 +195,7 @@ class core_renderer extends \theme_boost\output\core_renderer {
         $header->pageheadingbutton = $this->page_heading_button();
         ORIGINAL END. */
         $header->courseheader = $this->course_header();
+		
         $header->instructors = $this->course_authornames();
 		$hascoursecat = $this->ur_check_course_cat();
 		$coursecat = (!empty($hascoursecat)) ? $hascoursecat['name'] : 'Default';
@@ -204,6 +208,8 @@ class core_renderer extends \theme_boost\output\core_renderer {
 		$cobits = $exporter->export($urenderer);
 		
 		$header->courseimage = $cobits->courseimage;
+		if ($COURSE->id == 1) $header->courseimage = $CFG->wwwroot.'/theme/boost_campus/pix/siteheader.jpg';
+		
 		
         // MODIFICATION START:
         // Change this to add the result in the html variable to be able to add further features below the header.

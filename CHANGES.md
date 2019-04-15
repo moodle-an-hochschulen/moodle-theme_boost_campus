@@ -6,6 +6,7 @@ Changes
 
 ### Unreleased
 
+* 2019-04-15 - Adjusted function context_header_settings_menu() due to upstream changes in theme Boost.
 * 2019-04-15 - Added source information to all overridden renderers.
 
 ### Release v3.6-r2

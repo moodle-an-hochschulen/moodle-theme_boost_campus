@@ -63,6 +63,9 @@ class core_renderer extends \theme_boost\output\core_renderer {
      * Override to display an edit button again by calling the parent function
      * in core/core_renderer because theme_boost's function returns an empty
      * string and therefore displays nothing.
+     *
+     * MODIFICATION: This renderer function is copied and modified from /theme/boost/classes/output/core_renderer.php
+     *
      * @param moodle_url $url The current course url.
      * @return \core_renderer::edit_button Moodle edit button.
      */
@@ -137,6 +140,8 @@ class core_renderer extends \theme_boost\output\core_renderer {
     /**
      * Override to display switched role information beneath the course header instead of the user menu.
      * We change this because the switch role function is course related and therefore it should be placed in the course context.
+     *
+     * MODIFICATION: This renderer function is copied and modified from /theme/boost/classes/output/core_renderer.php
      *
      * Wrapper for header elements.
      *
@@ -274,6 +279,8 @@ class core_renderer extends \theme_boost\output\core_renderer {
      * This is an optional menu that can be added to a layout by a theme. It contains the
      * menu for the course administration, only on the course main page.
      *
+     * MODIFICATION: This renderer function is copied and modified from /theme/boost/classes/output/core_renderer.php
+     *
      * @return string
      */
     public function context_header_settings_menu() {
@@ -385,6 +392,8 @@ class core_renderer extends \theme_boost\output\core_renderer {
      * Override to use theme_boost_campus login template
      * Renders the login form.
      *
+     * MODIFICATION: This renderer function is copied and modified from /theme/boost/classes/output/core_renderer.php
+     *
      * @param \core_auth\output\login $form The renderable.
      * @return string
      */
@@ -422,6 +431,8 @@ class core_renderer extends \theme_boost\output\core_renderer {
 
     /**
      * Implementation of user image rendering.
+     *
+     * MODIFICATION: This renderer function is copied and modified from /theme/boost/classes/output/core_renderer.php
      *
      * @param help_icon $helpicon A help icon instance
      * @return string HTML fragment

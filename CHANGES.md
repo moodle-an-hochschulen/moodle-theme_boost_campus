@@ -4,6 +4,10 @@ moodle-theme_boost_campus
 Changes
 -------
 
+### Unreleased
+
+* 2019-04-15 - Added source information to all overridden renderers.
+
 ### Release v3.6-r2
 
 * 2019-02-13 - Added source information to renderers that are overridden from core directly.

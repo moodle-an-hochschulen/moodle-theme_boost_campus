@@ -4,7 +4,7 @@ moodle-theme_boost_campus
 Changes
 -------
 
-### Unreleased
+### Release v3.6-r3
 
 * 2019-04-16 - Add the possibility to set the block column width on the Dashboard and all other pages.
 * 2019-04-16 - Fixed template paths in mustache templates.

@@ -6,6 +6,7 @@ Changes
 
 ### Unreleased
 
+* 2019-04-16 - Adjusted navbar.mustache template due to upstream changes in theme Boost.
 * 2019-04-15 - Adjusted loginform.mustache and helpicon.mustache templates due to upstream changes in theme Boost.
 * 2019-04-15 - Increased limit for background images up to 25.
 * 2019-02-15 - Setting to manage where the Add a block widget should be displayed.

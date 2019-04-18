@@ -147,6 +147,45 @@ body.loginbackgroundimage {
         }
     }
 }
+
+.navbar {
+	background-color: #4d4d4f;
+	background-image: url([[pix:theme|navbkgsmall]]);
+	background-position: -0.5em 0;
+	background-repeat: no-repeat;
+    background-size: initial;
+	
+    .navbar-nav .nav-link .icon,
+    .navbar-nav .nav-link,
+    .usertext,
+    .dropdown-toggle,
+    .site-name,
+    .login,
+    .login a {
+        color: #fff;
+    }
+    .navbar-nav .nav-link .icon:hover,
+    .usertext:hover,
+    .dropdown-toggle:hover,
+    .site-name:hover {
+        color: $brand-primary;
+    }
+    .navbar-brand:not(.has-logo) .site-name:hover {
+        color: #fff;
+    }
+}
+
+@include media-breakpoint-up(md) {
+	.navbar {
+		background-color: #4d4d4f;
+		background-image: url([[pix:theme|navbkg]]);
+		background-position: 0 0;
+		background-repeat: no-repeat;
+	    background-size: contain;
+	}
+}
+
+
 /*
 .site-name {
 	padding-left: 100px;
@@ -445,6 +484,7 @@ nav.fixed-top .logo img {
 
 nav.fixed-top span.site-name {
 	font-size: 1.1em;
+	margin-left: 1em;
 }
 
 /*------------------------------------
@@ -1330,16 +1370,35 @@ a[href^="mailto"]::before {
 }
 
 
+div[data-region="drawer-toggle"] button.btn-secondary {
+	background-color: #ffc82e;
+	border-color: #bd8a00;
+}
+
+div[data-region="drawer-toggle"] button.btn-secondary:hover {
+	background-color: #b88700;
+	border-color: #bd8a00;
+}
+
+div[data-region="drawer-toggle"] button.btn-secondary:not(:disabled):not(.disabled):active {
+	background-color: #b88700;
+	border-color: #bd8a00;
+}
+
+div[data-region="drawer-toggle"] button.btn-secondary:focus {
+	box-shadow: none;
+}
+
 
 body.path-mod-book [data-region="blocks-column"],
-body.path-mod-quiz [data-region="blocks-column"] {
+body#page-mod-quiz-attempt [data-region="blocks-column"] {
 
     float: left;
 
 }
 
 body.path-mod-book #region-main,
-body.path-mod-quiz #region-main  {
+body#page-mod-quiz-attempt #region-main  {
 
     float: right;
 

@@ -149,7 +149,7 @@ body.loginbackgroundimage {
 }
 
 .navbar {
-	background-color: #4d4d4f;
+	background-color: #4d4d4f !important;
 	background-image: url([[pix:theme|navbkgsmall]]);
 	background-position: -0.5em 0;
 	background-repeat: no-repeat;
@@ -486,6 +486,18 @@ nav.fixed-top span.site-name {
 	font-size: 1.1em;
 	margin-left: 1em;
 }
+
+
+body.pagelayout-secure nav.fixed-top .logo img {
+	margin-right: 0.5em;
+	margin-left: 5.25em;
+}
+
+body.pagelayout-secure nav {
+	color: #fff;
+	background-color: #4d4d4f;
+}
+
 
 /*------------------------------------
   Course page

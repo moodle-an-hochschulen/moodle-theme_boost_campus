@@ -209,7 +209,7 @@ By checking this setting you can enlarge the opened nav drawer menu to the full 
 
 ##### Login page background images
 
-In this setting you can add up to 10 files as a background image for the login page. One of these images will be picked randomly and delivered when the user visits the login page.
+In this setting you can add up to 25 files as a background image for the login page. One of these images will be picked randomly and delivered when the user visits the login page.
 
 Please note: These images will *not* be rendered on small screens. We prevent the loading of the images for several reasons:
 * The login field takes most of the space on small screens, so the background image is hidden behind it and therefore it is not really needed there.

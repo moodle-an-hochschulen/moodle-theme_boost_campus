@@ -4,6 +4,10 @@ moodle-theme_boost_campus
 Changes
 -------
 
+### Unreleased
+
+* 2019-04-25 - Fixed bug in the change to increase the number of uploadable login background images.
+
 ### Release v3.6-r3
 
 * 2019-04-16 - Add the possibility to set the block column width on the Dashboard and all other pages.

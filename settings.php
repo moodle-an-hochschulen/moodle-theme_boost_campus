@@ -219,7 +219,8 @@ if ($ADMIN->fulltree) {
     $title = get_string('addablockpositionsetting', 'theme_boost_campus', null, true);
     $description = get_string('addablockpositionsetting_desc', 'theme_boost_campus', null, true);
     $addablockpositionsetting = [
-        // Don't use string lazy loading (= false) because the string will be directly used and would produce a PHP warning otherwise.
+        // Don't use string lazy loading (= false) because the string will be directly used and would produce a
+        // PHP warning otherwise.
         'positionblockregion' => get_string('settingsaddablockpositionbottomblockregion', 'theme_boost_campus', null, false),
         'positionnavdrawer' => get_string('settingsaddablockpositionbottomnavdrawer', 'theme_boost_campus', null, true),
     ];

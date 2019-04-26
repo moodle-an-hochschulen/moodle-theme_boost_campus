@@ -124,7 +124,8 @@ function theme_boost_campus_get_pre_scss($theme) {
     $scss .= '$grid-gutter-width: '. "30px;\n";
     // MODIFICATION END.
 
-    // MODIFICATION START: Set own SCSS variables which need units or calculations and thus couldn't be added to $configurable above.
+    // MODIFICATION START: Set own SCSS variables which need units or calculations and thus couldn't be
+    // added to $configurable above.
     // Set variables which are processed in the context of the blockcolumnwidth setting.
     $scss .= '$blocks-column-width-dashboard: ' . $theme->settings->blockcolumnwidthdashboard . "px;\n";
     $scss .= '$blocks-plus-gutter-dashboard: $blocks-column-width-dashboard + ( $grid-gutter-width / 2 )' . ";\n";

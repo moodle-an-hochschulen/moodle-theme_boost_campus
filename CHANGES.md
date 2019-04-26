@@ -6,6 +6,7 @@ Changes
 
 ### Unreleased
 
+* 2019-04-26 - Fixed some fixable prechecker warnings.
 * 2019-04-26 - Updated README.md, because a change was removed due tu upstream changes.
 * 2019-04-25 - Fixed bug in the change to increase the number of uploadable login background images.
 

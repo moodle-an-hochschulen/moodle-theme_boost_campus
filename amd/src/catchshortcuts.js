@@ -27,7 +27,7 @@ define(['jquery'], function($) {
     /**
      * Initialising.
      *
-     * @param value
+     * @param {string} value
      */
     function initcatchshortcuts(value) {
         if (value == 'end') {
@@ -73,7 +73,7 @@ define(['jquery'], function($) {
     /**
      * Function to scroll only to the bottom of the course and not the bottom of the whole page.
      *
-     * @param event
+     * @param {object} event
      */
     function scrollToBottomOfCourse(event) {
         // Prevent default behavior.
@@ -87,7 +87,7 @@ define(['jquery'], function($) {
     /**
      * Function to check for an active form element.
      *
-     * @return boolean
+     * @return {boolean}
      */
     function checkForActiveFormElement() {
         // Get the active Element for the current page.

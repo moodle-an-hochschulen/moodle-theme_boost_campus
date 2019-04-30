@@ -4,7 +4,7 @@ moodle-theme_boost_campus
 Changes
 -------
 
-### Unreleased
+### Release v3.6-r4
 
 * 2019-04-26 - Fixed some fixable prechecker warnings.
 * 2019-04-26 - Updated README.md, because a change was removed due tu upstream changes.

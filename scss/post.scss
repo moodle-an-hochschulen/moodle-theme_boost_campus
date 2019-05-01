@@ -222,21 +222,25 @@ body.arts .page-navbkg {
 	color: #fff;
 }
 
-.course-head a .page-context-header .page-header-headings h1 {
+#page-header .course-head a .page-context-header .page-header-headings h1 {
 	color: #666;
 	font-weight: 500;
 	transition: color 1s;
 }
-.course-head a:hover .page-context-header .page-header-headings h1 {
+#page-header .course-head a:hover .page-context-header .page-header-headings h1 {
 	color: #888;
 }
 
+#page-header .course-head h1,
+#page-header .course-head h5 {
+	margin-bottom: 0;
+}
 
-.course-head .instructors .teacherlist a {
+#page-header .course-head .instructors .teacherlist a {
 	color: #777;
 }
 
-.course-head .instructors .instr-avatar {
+#page-header .course-head .instructors .instr-avatar {
 	border-radius: 50%;
 }
 
@@ -252,12 +256,12 @@ body.arts .page-navbkg {
 
 .page-navbkg .dimmed_text a, 
 .page-navbkg .dimmed_text a:link {
-	color: #fbe982;
+	color: #fbe982 !important;
 }
 
 body.arts .page-navbkg .dimmed_text a, 
 body.arts .page-navbkg .dimmed_text a:link {
-	color: #f0f1ec;
+	color: #f0f1ec !important;
 }
 
 .page-navbkg .breadcrumb-item + .breadcrumb-item::before {
@@ -324,6 +328,17 @@ body.arts .page-navbkg .singlebutton button:hover {
 	}
 }
 
+/*
+.page-navbkg .context-header-settings-menu .fa-gear:before, 
+.page-navbkg .context-header-settings-menu .fa-cog:before {
+	content: "\f085";
+}
+*/
+
+#region-main-settings-menu .fa-gear:before,
+#region-main-settings-menu .fa-cog:before,{
+	content: "\f085";
+}
 
 .page-navbkg .context-header-settings-menu .fa-cog {
 	color: #c79200;
@@ -1448,17 +1463,26 @@ body.path-mod-quiz #region-main-settings-menu.has-blocks {
             visibility: visible;
         }
         .bookprev:after,
-        .booknext:before {
+        .booknext:before ,
+		.bookexit:before {
             content: attr(title);
             font-family: $font-family-base;
         }
+		.booknext:before,
+		.bookexit:before {
+			padding-right: 0.5em;
+		}
+		.fa-angle-left {
+			display: none;
+		}
     }
     // Style next and previous navigation.
     .navtop {
         display: none;
     }
     .bookprev,
-    .booknext {
+    .booknext,
+	.bookexit {
         display: inline-block;
         width: 50%;
     }
@@ -1466,4 +1490,25 @@ body.path-mod-quiz #region-main-settings-menu.has-blocks {
         text-align: left;
     }
 
+}
+
+.section .activity .activityinstance > a {
+	font-weight: 700;
+	
+}
+
+.activity img.activityicon,
+.block.block_activity_modules .icon {
+	height: 1.75rem;
+	width: 1.75rem;
+    vertical-align: middle;
+}
+
+.block.block_activity_modules .card-text .unlist li {
+	margin-bottom: 0.5em;
+}
+
+.section .activity .availabilityinfo {
+	margin-top: 0;
+	margin-bottom: 1em;
 }

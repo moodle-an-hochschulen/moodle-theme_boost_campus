@@ -649,6 +649,21 @@ if ($ADMIN->fulltree) {
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
+    // Settings title to group additional resources settings together with a common heading. We don't want a description here.
+    $name = 'theme_boost_campus/additionalresourcesheading';
+    $title = get_string('additionalresourcesheadingsetting', 'theme_boost_campus', null, true);
+    $setting = new admin_setting_heading($name, $title, null);
+    $page->add($setting);
+
+    // Background image setting.
+    $name = 'theme_boost_campus/additionalresources';
+    $title = get_string('additionalresourcessetting', 'theme_boost_campus', null, true);
+    $description = get_string('additionalresourcessetting_desc', 'theme_boost_campus', null, true);
+    $setting = new admin_setting_configstoredfile($name, $title, $description, 'additionalresources', 0,
+        array('maxfiles' => -1));
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
     // Add tab to settings page.
     $settings->add($page);
 }

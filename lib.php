@@ -173,6 +173,8 @@ function theme_boost_campus_pluginfile($course, $cm, $context, $filearea, $args,
             return $theme->setting_file_serve('fontfiles', $args, $forcedownload, $options);
         } else if ($filearea === 'imageareaitems') {
             return $theme->setting_file_serve('imageareaitems', $args, $forcedownload, $options);
+        } else if ($filearea === 'additionalresources') {
+            return $theme->setting_file_serve('additionalresources', $args, $forcedownload, $options);
         } else {
             send_file_not_found();
         }

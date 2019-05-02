@@ -204,6 +204,12 @@ $string['breakpointsetting'] = 'Change breakpoint';
 $string['breakpointsetting_desc'] = 'In theme Boost, the right block column will break down even on devices with a width up to 1200 pixels (widescreen resolution of the iPad is 1024 pixels, for example).
 This is because the breakpoint is set to <a href="https://getbootstrap.com/docs/4.0/layout/overview/#responsive-breakpoints">media-breakpoint-down(lg)</a>. <br/>
 If you think there is enough space to show the content plus the blocks column side by side on a screen width of 992 pixels and up, then enable this setting. It will change the breakpoint to media-breakpoint-down(md). This will break the blocks column only on screens with widths of less than 992 pixels.';
+// ...Additional resources.
+$string['additionalresourcesheadingsetting'] = 'Additional resources';
+$string['additionalresourcessetting'] = 'Add additional resources';
+$string['additionalresourcessetting_desc'] = 'With this setting you can upload additional resources to the theme. You can reference these resources by using a link. The url will look like this: "/pluginfile.php/1/theme_boost_campus/additionalresources/0/yourfilename.someextention"<br/>
+The advantage of uploading files to this file area is that those files can be delivered without a check if the user is logged in. This is also why you should only add files that are uncritical and everyone should be allowed to access and don\'t need be protected with a valid login. <br/>
+An example for a use case can be found in the README.md file.';
 
 // ADDITIONAL STRINGS (IN ALPHABETICAL ORDER).
 $string['cachedef_imagearea'] = 'Cache for imagearea items';

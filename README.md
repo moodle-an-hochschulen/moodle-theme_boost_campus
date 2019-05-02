@@ -325,6 +325,17 @@ This is because the breakpoint is set to [media-breakpoint-down(lg)](https://get
 
 If you think there is enough space to show the content plus the blocks column side by side on a screen width of 992 pixels and up, then enable this setting. It will change the breakpoint to media-breakpoint-down(md). This will break the blocks column only on screens with widths of less than 992 pixels.
 
+#### Additional resources
+
+##### Add additional resources
+
+With this setting you can upload additional resources to the theme. You can reference these resources by using a link.
+The advantage of uploading files to this file area is that those files can be delivered without a check if the user is logged in. This is also why you should only add files that are uncritical and everyone should be allowed to access and don't need be protected with a valid login.
+
+Use case and usage example:
+We're using the footer blocks setting and some of the blocks are displaying an image that was added to the HTML block. When a newly registered user logs in, he will be redirected to the policy page (user/policy.php). The footer blocks are displayed on this page layout and because the HTML block will only deliver its resources after the user is logged in and accepted the user policy, the delivering will be prevented and the redirect is saved to this resource. This leads to the behavior that after accepting the policy the resource was displayed and not the Dashbaord as intended.
+With this setting, the image (e.g. htmlblockimage.png) that should be displayed in the block could be added to this file area and added as a link with the url "/pluginfile.php/1/theme_boost_campus/additionalresources/0/htmlblockimage.png".
+
 
 Further improvements to Boost core theme
 ----------------------------------------

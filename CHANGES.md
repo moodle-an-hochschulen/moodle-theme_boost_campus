@@ -4,6 +4,10 @@ moodle-theme_boost_campus
 Changes
 -------
 
+### Unreleased
+
+* 2019-05-02 - Added setting to be able to add additional resources to the theme.
+
 ### Release v3.6-r4
 
 * 2019-04-26 - Fixed some fixable prechecker warnings.

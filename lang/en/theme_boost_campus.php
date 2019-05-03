@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Theme Boost Campus - Language pack
+ * Theme UR Courses Default - Language pack
  *
  * @package    theme_boost_campus
  * @copyright  2017 Kathrin Osswald, Ulm University <kathrin.osswald@uni-ulm.de>
@@ -25,11 +25,11 @@
 defined('MOODLE_INTERNAL') || die();
 
 // GENERAL.
-$string['pluginname'] = 'Boost Campus';
-$string['choosereadme'] = 'Theme Boost Campus is a child theme to be used on university campuses.';
+$string['pluginname'] = 'UR Courses: Default (beta)';
+$string['choosereadme'] = 'UR Courses: Default (beta) is a child theme of Boost to be used for University of Regina courses.';
 
 // SETTINGS.
-$string['configtitle'] = 'Boost Campus settings';
+$string['configtitle'] = 'UR Courses: Default (beta) settings';
 
 // General settings.
 $string['presetheadingsetting'] = 'Theme presets';
@@ -133,11 +133,11 @@ $string['imageareaheadingsetting_desc'] = 'The following settings allow adding a
 $string['imageareaitemssetting'] = 'Image area items';
 $string['imageareaitemssetting_desc'] = 'With this widget you can upload your images that will be displayed in the additional image area region. The images will be sorted and displayed alphabetically by the filename. To remove this region, simply delete all uploaded images.';
 $string['imageareaitemslinksetting'] = 'Image area item links';
-$string['imageareaitemslinksetting_desc'] = 'With this optional setting you can add links to your uplaoded images.<br/>
+$string['imageareaitemslinksetting_desc'] = 'With this optional setting you can add links to your uploaded images.<br/>
 Each line consists of the file identifier (the file name) the a link URL, separated by pipe characters. Each link declaration needs to be written in a new line. <br/>
 For example:<br/>
 moodle.jpg|http://moodle.org<br/>
-You can declare links for a abitrary amount of your uplaoded images. The links will be added only to those images that match their filename with the identifier declared in this setting.';
+You can declare links for a abitrary amount of your uploaded images. The links will be added only to those images that match their filename with the identifier declared in this setting.';
 $string['imageareaitemsmaxheightsetting'] = 'Image area items maximal height';
 $string['imageareaitemsmaxheightsetting_desc'] = 'With this setting you can change the height in pixels for your uploaded images. All images will have the same maximum height and their width will be resized proportionally. The default value is set to 100 pixels.';
 // ...Footnote.
@@ -170,7 +170,7 @@ $string['loginform_desc'] = 'With this setting you can optimize the login form t
 // ...Fonts.
 $string['fontdesignheadingsetting'] = 'Fonts';
 $string['fontfilessetting'] = 'Font files';
-$string['fontfilessetting_desc'] = 'With this dialogue you can upload own font files. The uplaod is resricted to the font files of type .eot, .woff, .woff2, .ttf and .svg. <br/>
+$string['fontfilessetting_desc'] = 'With this dialogue you can upload own font files. The upload is resricted to the font files of type .eot, .woff, .woff2, .ttf and .svg. <br/>
 Important: To be able to use the uploaded fonts within this theme, you have to add related code to your "Raw SCSS" area in the tab "Advanced Settings". A full example for this can be found in the README.md file.';
 // ...Blocks.
 $string['blockdesignheadingsetting'] = 'Blocks';
@@ -202,4 +202,4 @@ $string['showhintcoursehiddensettingslink'] = 'You can change the visibility in 
 $string['switchroleto'] = 'Switch role to';
 
 // PRIVACY.
-$string['privacy:metadata'] = 'The Boost Campus theme does not store any personal data about any user.';
+$string['privacy:metadata'] = 'The UR Courses default theme does not store any personal data about any user.';

@@ -183,6 +183,12 @@ body.loginbackgroundimage {
     }
 }
 
+/* Design for the text that can be added to the background images of the login page. */
+#loginbackgroundimagetext span {
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, .125);
+}
+
 /* This will only be needed if the setting "loginform" is checked */
 @if variable-exists(loginform) {
     @if $loginform == 'yes' {
@@ -199,6 +205,11 @@ body.loginbackgroundimage {
         }
         #page-login-index #page {
             margin-top: 0;
+        }
+        /* Adjust the design for the loginbackgroundimagetext. */
+        #loginbackgroundimagetext span {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 3px;
         }
     }
 }

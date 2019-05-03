@@ -544,6 +544,13 @@ if ($ADMIN->fulltree) {
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
+    $name = 'theme_boost_campus/loginbackgroundimagetext';
+    $title = get_string('loginbackgroundimagetextsetting', 'theme_boost_campus', null, true);
+    $description = get_string('loginbackgroundimagetextsetting_desc', 'theme_boost_campus', null, true);
+    $setting = new admin_setting_configtextarea($name, $title, $description, null, PARAM_TEXT);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
     // Setting to change the position and design of the login form.
     $name = 'theme_boost_campus/loginform';
     $title = get_string('loginform', 'theme_boost_campus', null, true);

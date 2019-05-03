@@ -25,12 +25,16 @@
 
 defined('MOODLE_INTERNAL') || die();
 
+require_once($CFG->dirroot . '/theme/boost_campus/locallib.php');
+
 $bodyattributes = $OUTPUT->body_attributes();
+$loginbackgroundimagetext = theme_boost_campus_get_loginbackgroundimage_text();
 
 $templatecontext = [
     'sitename' => format_string($SITE->shortname, true, ['context' => context_course::instance(SITEID), "escape" => false]),
     'output' => $OUTPUT,
-    'bodyattributes' => $bodyattributes
+    'bodyattributes' => $bodyattributes,
+    'loginbackgroundimagetext' => $loginbackgroundimagetext
 ];
 
 // MODIFICATION START: Handle additional layout elements.

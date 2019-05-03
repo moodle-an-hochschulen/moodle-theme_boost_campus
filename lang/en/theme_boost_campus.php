@@ -172,6 +172,12 @@ $string['designsettings'] = 'Design Settings';
 $string['loginpagedesignheadingsetting'] = 'Login page';
 $string['loginbackgroundimagesetting'] = 'Login page background images';
 $string['loginbackgroundimagesetting_desc'] = 'Images uploaded in this setting will be randomly displayed on the login page as background images.';
+$string['loginbackgroundimagetextsetting'] = 'Display text for login background images';
+$string['loginbackgroundimagetextsetting_desc'] = 'With this optional setting you can add text, e.g. a copyright notice to your uploaded background images.<br/>
+Each line consists of the file identifier (the file name) and the text that should be displayed, separated by a pipe character. Each declaration needs to be written in a new line. <br/>
+For example:<br/>
+background-image-1.jpg|Copyright: CC0<br/>
+You can declare texts for a arbitrary amount of your uploaded background images. The texts will be added only to those images that match their filename with the identifier declared in this setting.';
 $string['loginform'] = 'Login form';
 $string['loginform_desc'] = 'With this setting you can optimize the login form to fit to a greater variety background images (if checked). This means that the login form will be moved to the left of the login page, will get smaller in width and will get a background that let the background image shine through. The login form will be placed on the left because many images have their main content rather in the center and so we keep this content visible. Note: You can also activate this setting if no background images are uploaded, of course.';
 // ...Fonts.

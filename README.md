@@ -215,6 +215,16 @@ Please note: These images will *not* be rendered on small screens. We prevent th
 * The login field takes most of the space on small screens, so the background image is hidden behind it and therefore it is not really needed there.
 * Smalls screens indicate that the user is visiting the page with a mobile device. Not loading the background image in this cases will also save data traffic for the user.
 
+##### Display text for login background images
+
+With this optional setting you can add text, e.g. a copyright notice to your uploaded background images.
+Each line consists of the file identifier (the file name) and the text that should be displayed, separated by a pipe character. Each declaration needs to be written in a new line.
+
+For example:
+``background-image-1.jpg|Copyright: CC0``
+
+You can declare texts for a arbitrary amount of your uploaded background images. The texts will be added only to those images that match their filename with the identifier declared in this setting.
+
 ##### Login form
 
 With this setting you can optimize the login form to fit to a greater variety background images (if checked). This means that the login form will be moved to the left of the login page, will get smaller in width and will get a background that let the background image shine through. The login form will be placed on the left because many images have their main content rather in the center and so we keep this content visible. Note: You can also activate this setting if no background images are uploaded, of course.

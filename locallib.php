@@ -23,38 +23,118 @@
 
  defined('MOODLE_INTERNAL') || die();
 
+/**
+ * Return the files from the loginbackgroundimage file area.
+ * This function always loads the files from the filearea that is not really performant.
+ * However, we accept this at the moment as it is only invoked on the login page.
+ *
+ * @return array|null
+ * @throws coding_exception
+ * @throws dml_exception
+ */
+function theme_boost_campus_get_loginbackgroundimage_files() {
+
+    // Static variable to remember the files for subsequent calls of this function.
+    static $files = null;
+
+    if ($files == null) {
+        // Get the system context.
+        $systemcontext = \context_system::instance();
+
+        // Get filearea.
+        $fs = get_file_storage();
+
+        // Get all files from filearea.
+        $files = $fs->get_area_files($systemcontext->id, 'theme_boost_campus', 'loginbackgroundimage',
+            false, 'itemid', false);
+    }
+
+    return $files;
+}
+
+/**
+ * Get the random number for displaying the background image on the login page randomly.
+ *
+ * @return int|null
+ * @throws coding_exception
+ * @throws dml_exception
+ */
+function theme_boost_campus_get_random_loginbackgroundimage_number() {
+
+    // Static variable.
+    static $number = null;
+
+    if ($number == null) {
+        // Get all files for loginbackgroundimages.
+        $files = theme_boost_campus_get_loginbackgroundimage_files();
+
+        // Get count of array elements.
+        $filecount = count($files);
+
+        // We only return a number if images are uploaded to the loginbackgroundimage file area.
+        if ($filecount > 0) {
+            // Generate random number.
+            $number = rand(1, $filecount);
+        }
+    }
+
+    return $number;
+}
 
 /**
  * Get a random class for body tag for the background image of the login page.
- * This function always loads the files from the filearea that is not really performant.
- * However, we accept this at the moment as it is only invoked on the login page.
  *
  * @return string
  */
 function theme_boost_campus_get_random_loginbackgroundimage_class() {
+    // Get the static random number.
+    $number = theme_boost_campus_get_random_loginbackgroundimage_number();
 
-    // Fetch context.
-    $systemcontext = \context_system::instance();
-
-    // Get filearea.
-    $fs = get_file_storage();
-
-    // Get all files from filearea.
-    $files = $fs->get_area_files($systemcontext->id, 'theme_boost_campus', 'loginbackgroundimage', false, 'itemid', false);
-
-    // Get count of array elements.
-    $filecount = count($files);
-
-    /* We only add this class to the body background of the login page if images are uploaded at all (filearea contains images). */
-    if ($filecount > 0) {
-        // Generate random number.
-        $randomindex = rand(1, $filecount);
-        return "loginbackgroundimage" . $randomindex;
+    // Only create the class name with the random number if there is a number (=files uploaded to the file area).
+    if ($number != null) {
+        return "loginbackgroundimage" . $number;
     } else {
         return "";
     }
 }
 
+/**
+ * Get the text that should be displayed for the randomly displayed background image on the login page.
+ *
+ * @return string
+ * @throws coding_exception
+ * @throws dml_exception
+ */
+function theme_boost_campus_get_loginbackgroundimage_text() {
+    // Get the random number.
+    $number = theme_boost_campus_get_random_loginbackgroundimage_number();
+
+    // Only search for the text if there's a background image.
+    if ($number != null) {
+
+        // Get the files from the filearea loginbackgroundimage.
+        $files = theme_boost_campus_get_loginbackgroundimage_files();
+        // Get the file for the selected random number.
+        $file = array_slice($files, ($number - 1), 1, false);
+        // Get the filename.
+        $filename = array_pop($file)->get_filename();
+
+        // Get the config for loginbackgroundimagetext and make array out of the lines.
+        $lines = explode("\n", get_config('theme_boost_campus', 'loginbackgroundimagetext'));
+
+        // Proceed the lines.
+        foreach ($lines as $line) {
+            $settings = explode("|", $line);
+            // Compare the filenames for a match and return the text that belongs to the randomly selected image.
+            if (strcmp($filename, $settings[0]) == 0) {
+                return $settings[1];
+                break;
+            }
+        }
+    } else {
+        return "";
+    }
+}
 
 /**
  * Add background images from setting 'loginbackgroundimage' to SCSS.
@@ -65,14 +145,8 @@ function theme_boost_campus_get_loginbackgroundimage_scss() {
     $count = 0;
     $scss = "";
 
-    // Fetch context.
-    $systemcontext = \context_system::instance();
-
-    // Get filearea.
-    $fs = get_file_storage();
-
     // Get all files from filearea.
-    $files = $fs->get_area_files($systemcontext->id, 'theme_boost_campus', 'loginbackgroundimage', false, 'itemid', false);
+    $files = theme_boost_campus_get_loginbackgroundimage_files();
 
     // Add URL of uploaded images to eviqualent class.
     foreach ($files as $file) {
@@ -86,7 +160,6 @@ function theme_boost_campus_get_loginbackgroundimage_scss() {
 
     return $scss;
 }
-
 
 /**
  * Create information needed for the imagearea.mustache file.
@@ -162,7 +235,6 @@ function theme_boost_campus_get_imageareacontent() {
         }
     }
 }
-
 
 /**
  * Returns a modified flat_navigation object.

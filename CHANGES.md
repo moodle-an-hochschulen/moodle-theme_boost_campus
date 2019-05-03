@@ -6,6 +6,7 @@ Changes
 
 ### Unreleased
 
+* 2019-05-24 - Prevent back-to-top button from being printed.
 * 2019-05-03 - Added a setting to be able to add texts to your uploaded background images for the login page.
 * 2019-05-02 - Added setting to be able to add additional resources to the theme.
 

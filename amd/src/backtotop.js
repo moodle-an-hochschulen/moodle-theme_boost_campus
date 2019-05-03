@@ -29,7 +29,7 @@ define(['jquery'], function($) {
      */
     function initBackToTop() {
         // Add a fontawesome icon after the footer as the back to top button.
-        $('#page-footer').after('<i class="fa fa-chevron-up fa-2x" id="back-to-top"></i>');
+        $('#page-footer').after('<i class="fa fa-chevron-up fa-2x d-print-none" id="back-to-top"></i>');
 
         // This function fades the button in when the page is scrolled down or fades it out
         // if the user is at the top of the page.

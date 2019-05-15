@@ -1123,6 +1123,7 @@ a[href^="mailto"]::before {
     border-radius: 100px;
     cursor: pointer;
     box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.3);
+    z-index: 10;
 }
 #back-to-top::before {
     vertical-align: 0.3rem;

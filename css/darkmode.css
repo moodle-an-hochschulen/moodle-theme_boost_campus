@@ -1,0 +1,32 @@
+.card-body {
+    border-color: #e5e3e8;
+    background-color: #4f4f4d;
+    color: #e5e3e8;
+}
+
+.text-info, .highlight {
+    color: #bd8a00!important;
+}
+
+.calendar_event_site {
+    background-color: #9e7e23;
+}
+
+div.block_writinghelp {
+    color: #feeaff;
+
+}
+
+#page-my-index {
+    background-color: #4f4f4d;
+}
+
+.format-site {
+    background-color: #2f2d29;
+    color: #e5e3e8;
+}
+.container-fluid, #page-wrapper {
+    background-color: #2f2d29;
+}
+
+/*darkmode css*/

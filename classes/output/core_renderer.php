@@ -66,6 +66,16 @@ defined('MOODLE_INTERNAL') || die;
 class core_renderer extends \theme_boost\output\core_renderer {
 
     /**
+     * Get the compact logo URL.
+     *
+     * @return string
+     */
+    public function get_compact_logo_url($maxwidth = 100, $maxheight = 100) {
+        global $OUTPUT;
+        return $OUTPUT->image_url('logo', 'theme_boost_campus');
+    }
+
+    /**
      * Override to display an edit button again by calling the parent function
      * in core/core_renderer because theme_boost's function returns an empty
      * string and therefore displays nothing.

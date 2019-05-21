@@ -1,32 +1,249 @@
-.card-body {
+/*darkmode css*/
+
+a {
+    color: #e2d2a2;
+ }
+
+ body {
+     background-color: #f5eff9;
+ }
+.list-group-item {
+    color: #e5e3e8;
+    background-color: #4f4f4d;
+    letter-spacing: 0.5px; 
+}
+
+/*class colour swaps*/
+.bg-dark {
+    background-color: #4f4f4d!important;
+}
+
+.btn-primary {
+    color: #f8f1f9;
+    background-color: #898884;
+    border-color: #898884;
+}
+
+.btn.btn-secondary {
+    background-color: #dad8ce;
+    border-color: #dad8ce;
+}
+
+.card-title.d-inline {
+    letter-spacing: .7px;
+    color: #fff1c7;
+ }
+
+.courseovbox {
+    background-color: #383736;
+}
+
+.courseovbox.row-fluid a  {
+   color: #fff4d6;
+}
+
+.courseovbox.row-fluid {
+ color: #f8f1f9;
+}
+
+.custom-select {
+    background-color: #f5eff9;
+}
+
+.block_writinghelp .card-text a h4 {
+    color: #e5e3e8;
+
+}
+
+.bs-popover-top {
+    background-color: #757573;
+}
+
+.popover-body {
+   color: #e5e3e8;
+}
+
+.popover-header {
+    background-color: #d9b945;
+    color: #2f2d29;
+    border-bottom-color: #e5e3e8;
+}
+
+.calendar_event_site {
+    background-color: #4ab72e;
+}
+
+.calendar_event_category {
+    background-color: #ff4cff;
+}
+
+.calendar_event_course {
+    background-color: #ff935d;
+}
+
+.calendar_event_group {
+    background-color: #fffa74;
+}
+
+.calendar_event_user {
+    background-color: #0edcda;
+}
+
+.card-body, .card {
     border-color: #e5e3e8;
     background-color: #4f4f4d;
     color: #e5e3e8;
 }
 
-.text-info, .highlight {
-    color: #bd8a00!important;
+.card-title.d-inline {
+    letter-spacing: .5px;
+    color: #fff1c7;
+ }
+
+.container-fluid {
+    background-color: #2f2d29;
 }
 
-.calendar_event_site {
-    background-color: #9e7e23;
+.contentwithoutlink, .contentafterlink .isrestricted {
+    color: #f3eefb; 
 }
 
-div.block_writinghelp {
-    color: #feeaff;
-
+.coursebox {
+    background-color: #2f2d29;
 }
 
-#page-my-index {
-    background-color: #4f4f4d;
+.courses .coursebox.even {
+    background-color: #3c3934;
+}
+
+.dropdown-menu, .popover-region-container, .popover-region-footer-container {
+    background-color: #4d4d4f;
+}
+
+.dropdown-item.menu-action{
+    background-color: #4d4d4f;
+    color: #f3f1f7;
 }
 
 .format-site {
     background-color: #2f2d29;
     color: #e5e3e8;
 }
-.container-fluid, #page-wrapper {
+
+.logininfo {
+    margin-top: 1px;
+}
+
+.modal-content {
+    background-color: #4f4f4d;
+}
+
+.nav-tabs .nav-link.active {
+    color: #2f2d29;
+    background-color: #e2d2a2;
+    border-color: #e5e3e8 #e5e3e8 #e5e3e8;
+}
+
+.oubloglmt, .section .activity .availabilityinfo {
+    color: #f3eefb; 
+}
+
+.overview-description {
+ color: #e6e5de;
+}
+
+.path-mod-assign td.submissionnotgraded {
+    background-color: #f2eff3;  
+}
+
+.preferences-container .preference-table tr th:nth-child(even), .preferences-container .preference-table tr td:nth-child(even),
+.preferences-container tr td:nth-child(even) .container-fluid {
+    background-color: #6e6f6b;
+}
+
+.preferences-container tr td:nth-child(odd) .container-fluid {
+    background-color: #4f4f4d;
+}
+
+.summary {
+    letter-spacing: .5px;
+    color: #e5e3e8;
+}
+
+.tag-info {
+    background-color: #bd8a00;
+    color: black;
+}
+
+.teachers {
+    letter-spacing: .5px;
+}
+
+.text-info, .highlight {
+    color: #bd8a00!important;
+}
+
+ul.oublog-accordion li {
+    background-color: #4f4f4d;
+    color: #e5e3e8;
+    border-color: #e5e3e8;
+}
+
+.oublog-post-content, .description.card-block {
+    margin-left: 7px;
+    margin-right: 3px;
+}
+
+.userprofile .profile_tree section {
+    background-color: #383736;
+}
+
+/*id based colour swaps*/
+
+#frontpage-available-course-list {
+    background-color: #4f4f4d;
+}
+
+#intro, .oublog-post.oublog-odd {
+    background-color: #383736;
+    letter-spacing: 0.5px;
+    border-left-color: #dbe3de;
+}
+
+#page-my-index {
+    background-color: #4f4f4d;
+}
+
+#page-wrapper {
     background-color: #2f2d29;
 }
 
-/*darkmode css*/
+#nav-drawer, .message-drawer, .bg-light, .bg-white {
+    background-color: #383736!important;
+}
+
+
+#region-main, .region_main_settings_menu_proxy {
+    background-color: #4f4f4d;
+    color: #e5e3e8;;
+}
+
+/*psuedo classes*/
+a:hover {
+    color: #d9b945;
+ }
+
+ .dropdown-item:hover, .list-group-item:hover, .list-group-item:active ,.list-group-item:focus {
+    background-color: #2f2d29;
+    color: #e6e5de;
+ }
+
+
+/*decorated text spacing for easier readability*/
+i {
+    letter-spacing: .5px;
+}
+
+b {
+    letter-spacing: .5px;
+}

@@ -35,9 +35,7 @@
                 ">
             {{# output.should_display_navbar_logo }}
                 <span class="logo d-none d-sm-inline">
-                    {{$navbar_logo}}
-                        <img src="{{output.get_compact_logo_url}}" alt="{{sitename}}">
-                    {{/navbar_logo}}
+                    <img src="{{output.get_compact_logo_url}}" alt="{{sitename}}">
                 </span>
             {{/ output.should_display_navbar_logo }}
             <span class="site-name d-none d-md-inline">{{{ sitename }}}</span>

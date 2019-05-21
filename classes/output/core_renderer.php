@@ -48,6 +48,8 @@ use pix_icon;
 use user_picture;
 use action_menu_filler;
 use action_menu_link_secondary;
+use core_text;
+
 
 
 use \core_course\external\course_summary_exporter;

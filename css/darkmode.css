@@ -148,6 +148,10 @@ a {
     color: #f3eefb; 
 }
 
+.overlay-icon-container {
+    background-color: rgba(47, 45, 41, 0.64);
+}
+
 .overview-description {
  color: #e6e5de;
 }

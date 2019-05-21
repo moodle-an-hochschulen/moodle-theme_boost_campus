@@ -1538,3 +1538,8 @@ body.path-mod-quiz #region-main-settings-menu.has-blocks {
     max-width: 57%;
     word-wrap: break-word;
 }
+
+//prevents "unread email" from breaking into two lines
+.path-course-view .unread, span.unread {
+    white-space: nowrap;
+}

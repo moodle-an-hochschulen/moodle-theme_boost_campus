@@ -1513,3 +1513,28 @@ body.path-mod-quiz #region-main-settings-menu.has-blocks {
 	margin-top: 0;
 	margin-bottom: 1em;
 }
+
+
+//adding on maxwidth to stop text covering checkboxes 
+.section .activity .activityinstance {
+    max-width: 90%;
+}
+
+//altering grader report dropdown select to render better on mobile 
+//overriding older settings
+.path-grade-report #maincontent + .urlselect {
+    position: relative;
+    left: 0;
+}
+
+//setting the margin to 0 decreases awkward whitespace on the sides of the screen on mobile and barely
+//affects the desktop site
+.course-content ul.ctopics #section-0 .content {
+    margin: 0;
+}
+
+//prevents text after link from going outside of boxes on mobile and increasing pg width past boundaries
+.course-content ul.topics .section .contentafterlink {
+    max-width: 57%;
+    word-wrap: break-word;
+}

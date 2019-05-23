@@ -1533,13 +1533,72 @@ body.path-mod-quiz #region-main-settings-menu.has-blocks {
     margin: 0;
 }
 
+.section .activity .contentwithoutlink {
+    padding-right: 0;
+}
+
 //prevents text after link from going outside of boxes on mobile and increasing pg width past boundaries
 .course-content ul.topics .section .contentafterlink {
     max-width: 57%;
     word-wrap: break-word;
 }
 
-//prevents "unread email" from breaking into two lines
-.path-course-view .unread, span.unread {
+
+ul.section.img-text {
+    padding-left: 0;
+}
+
+//
+.course-content ul.ctopics {
+    padding-right: 10px;
+}
+
+//was set to table earlier and making text wrap when it didn't need to. also fixes random indenting 
+//issues due to the table display
+.mod-indent-outer {
+    display: block;
+}
+
+
+//past here is all css tweaks to suit mobile and desktop
+.que .info, .userprofile {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.path-mod-attendance .attfiltercontrols td.cell.c2 {
+    min-width: 93px;
+}
+
+.path-mod-attendance .row-fluid.spand4 {
+    margin-right: 15px;
+}
+#page-mod-attendance-report .attendancereporttable .headcol {
+    margin: unset;
+    left: 16px;
     white-space: nowrap;
+    overflow: hidden;
+}
+
+ul.ctopics .content .section ul {
+    margin: 0px 10px 10px 20px;
+}
+
+//for some reason the margin on the glossary pg made the text lower than it should be
+//this deletes the margin so it doesn't sit on top of a border
+#page-mod-glossary-view .glossarycontrol {
+    margin: 0;
+}
+
+//float overflow patch to keep grade report table from going into whitespace
+//extends the pg bgs
+#page-grade-report-grader-index {
+    overflow: auto;
+}
+#page-grade-report-grader-index #page-wrapper {
+    float: left;
+}
+
+#page-grade-report-grader-index #page-header .col-12.pt-3.pb-3 {
+    display: flex;
 }

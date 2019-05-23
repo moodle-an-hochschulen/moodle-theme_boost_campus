@@ -1,13 +1,42 @@
 /*darkmode css*/
 
-a {
+a, #boost-campus-course-settings .card-body a {
     color: #e2d2a2;
  }
 
  body {
      background-color: #f5eff9;
  }
-.list-group-item {
+
+ ol.checklist .itemblack {
+    color: #e5e3e8;
+ }
+
+ table.dataTable tr.odd td.sorting_1 {
+    background-color: #3c3934;
+}
+
+ /*Need to add a bg to red text to keep contrast ratio up*/
+ .checklist-itemoverdue {
+    color: #950F0F;
+    letter-spacing: 1px;
+    margin-left: 5px;
+    padding-right: 2px;
+    background-color: #EBEBEB;
+}
+
+.checklistreport .cell.level0 {
+    background-color: #3a3a38;
+}
+
+.checklistreport .header {
+    background-color: #3a3a3b;
+}
+
+ .path-mod-assign .gradingtable tr.unselectedrow td {
+    background-color: #4f4f4d;
+ }
+.list-group-item, #dataTable_info, #dataTable_filter, #dataTable_length {
     color: #e5e3e8;
     background-color: #4f4f4d;
     letter-spacing: 0.5px; 
@@ -20,8 +49,8 @@ a {
 
 .btn-primary {
     color: #f8f1f9;
-    background-color: #898884;
-    border-color: #898884;
+    background-color: #898884!important;
+    border-color: #898884!important;
 }
 
 .btn.btn-secondary {
@@ -89,7 +118,7 @@ a {
     background-color: #0edcda;
 }
 
-.card-body, .card {
+.block .card-body, .card, .pagelayout-embedded #page {
     border-color: #e5e3e8;
     background-color: #4f4f4d;
     color: #e5e3e8;
@@ -125,6 +154,15 @@ a {
     color: #f3f1f7;
 }
 
+.filemanager-container {
+    background-color: white!important;
+    color: black!important;
+}
+
+.form-control {
+    background-color: #efede7;
+}
+
 .format-site {
     background-color: #2f2d29;
     color: #e5e3e8;
@@ -134,8 +172,10 @@ a {
     margin-top: 1px;
 }
 
-.modal-content {
+.modal-content, .moodle-dialogue-base .moodle-dialogue-wrap.moodle-dialogue-content,
+.moodle-dialogue-base .moodle-dialogue-wrap .moodle-dialogue-hd h1 {
     background-color: #4f4f4d;
+    color: #f3eefb;
 }
 
 .nav-tabs .nav-link.active {
@@ -144,7 +184,8 @@ a {
     border-color: #e5e3e8 #e5e3e8 #e5e3e8;
 }
 
-.oubloglmt, .section .activity .availabilityinfo {
+.oubloglmt, .section .activity .availabilityinfo, .path-mod-workshop .userplan dt,
+.path-mod-workshop .userplan dd, .path-mod-workshop .userplan dd a, .path-mod-workshop .userplan dd a:link {
     color: #f3eefb; 
 }
 
@@ -155,9 +196,65 @@ a {
 .overview-description {
  color: #e6e5de;
 }
+/*table colors*/
+.path-grade-report-grader .gradeparent tr .cell,
+.path-grade-report-grader .gradeparent .floater .cell,
+table.dataTable tr.odd, .path-mod-workshop .userplan dd {
+    background-color: #3c3934;
+}
+
+
+
+.path-grade-report-grader .gradeparent tr:nth-of-type(even) .cell,
+.path-grade-report-grader .gradeparent .floater tr:nth-of-type(even) .cell,
+table.dataTable tbody tr.even, .path-mod-workshop .userplan {
+    background-color: #4d4d4f;
+}
+
+table.dataTable tr.even td.sorting_1 {
+    background-color: #6e6f6b;
+}
+
+table.dataTable tr.odd td.sorting_1 {
+    background-color: #585856;
+}
+
+.path-grade-report-grader .gradeparent .cell {
+    border-color: #fffbef;
+}
+
+.path-mod-attendance .attreport .contrast {
+    background-color: #6f6e6b;
+}
 
 .path-mod-assign td.submissionnotgraded {
     background-color: #f2eff3;  
+}
+
+.path-mod-quiz #mod_quiz_navblock .qnbutton.notyetanswered .trafficlight {
+    background-color: #dad8ce;
+}
+
+.path-mod-quiz #mod_quiz_navblock .qnbutton.answersaved .trafficlight {
+    background-color: #938696;
+}
+.path-mod-quiz #mod_quiz_navblock .qnbutton {
+    background-color: #dad8ce;
+}
+
+.pagination .page-link,
+#boost-campus-activity-settings .tab-content .card, 
+#boost-campus-course-settings .tab-content .card  {
+    background-color: #6f6e6b;
+    color: #fffce2;
+}
+
+.pagination .active .page-link,
+#boost-campus-activity-settings .nav-tabs .active,
+#boost-campus-course-settings .nav-tabs .active {
+    background-color: #dad8ce;
+    border-color: #dad8ce;
+    color: #383736;
 }
 
 .preferences-container .preference-table tr th:nth-child(even), .preferences-container .preference-table tr td:nth-child(even),
@@ -169,14 +266,33 @@ a {
     background-color: #4f4f4d;
 }
 
-.summary {
+.que .info {
+    background-color: #4f4f4d;
+}
+
+.summary, .dataTables_wrapper .dataTables_info, 
+.dataTables_wrapper .dataTables_filter, .dataTables_wrapper .dataTables_length {
     letter-spacing: .5px;
-    color: #e5e3e8;
+    color: #e5e3e8!important;
 }
 
 .tag-info {
     background-color: #bd8a00;
     color: black;
+}
+
+.block_heatmap_heat_0 {
+    color: black;
+    background-color: #f5eea9;
+}
+
+.block_heatmap_heat_1 {
+    color: black;
+    background-color: #c79470;
+}
+
+.block_heatmap_heat_0 a, .block_heatmap_heat_1 a {
+    color: #1f1e1a;
 }
 
 .teachers {
@@ -208,11 +324,13 @@ ul.oublog-accordion li {
     background-color: #4f4f4d;
 }
 
-#intro, .oublog-post.oublog-odd {
+#intro, .oublog-post.oublog-odd, .path-mod-mediagallery .gallery_list_item,
+.path-mod-mediagallery .gallery_list_item .title {
     background-color: #383736;
     letter-spacing: 0.5px;
     border-left-color: #dbe3de;
 }
+
 
 #page-my-index {
     background-color: #4f4f4d;
@@ -229,7 +347,7 @@ ul.oublog-accordion li {
 
 #region-main, .region_main_settings_menu_proxy {
     background-color: #4f4f4d;
-    color: #e5e3e8;;
+    color: #fffbef;
 }
 
 /*psuedo classes*/
@@ -237,10 +355,24 @@ a:hover {
     color: #d9b945;
  }
 
+ a:not([href]):not([tabindex]) {
+    color: #373a3c;
+}
+
  .dropdown-item:hover, .list-group-item:hover, .list-group-item:active ,.list-group-item:focus {
     background-color: #2f2d29;
     color: #e6e5de;
  }
+
+ .path-mod-feedback table.analysis tr:hover {
+    background: #2f2d29;
+ }
+
+ .page-link:hover {
+    color: #5e6162;
+    background-color: #e9ecef;
+    border-color: #dee2e6;
+}
 
 
 /*decorated text spacing for easier readability*/

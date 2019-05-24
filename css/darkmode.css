@@ -1,20 +1,16 @@
 /*darkmode css*/
 
-a, #boost-campus-course-settings .card-body a {
+a, #boost-campus-course-settings .card-body a, .ui-widget-content a {
     color: #e2d2a2;
  }
 
- body {
+ body, .custom-select {
      background-color: #f5eff9;
  }
 
- ol.checklist .itemblack {
-    color: #e5e3e8;
+ ol.checklist .itemblack, .block_writinghelp .card-text a h4, .popover-body {
+    color: #fff9e8;
  }
-
- table.dataTable tr.odd td.sorting_1 {
-    background-color: #3c3934;
-}
 
  /*Need to add a bg to red text to keep contrast ratio up*/
  .checklist-itemoverdue {
@@ -33,7 +29,9 @@ a, #boost-campus-course-settings .card-body a {
     background-color: #3a3a3b;
 }
 
- .path-mod-assign .gradingtable tr.unselectedrow td {
+ .path-mod-assign .gradingtable tr.unselectedrow td, .que .info,
+ .preferences-container tr td:nth-child(odd) .container-fluid, #frontpage-available-course-list,
+ #page-my-index  {
     background-color: #4f4f4d;
  }
 .list-group-item, #dataTable_info, #dataTable_filter, #dataTable_length {
@@ -75,26 +73,14 @@ a, #boost-campus-course-settings .card-body a {
  color: #f8f1f9;
 }
 
-.custom-select {
-    background-color: #f5eff9;
-}
-
-.block_writinghelp .card-text a h4 {
-    color: #e5e3e8;
-
-}
-
 .bs-popover-top {
-    background-color: #757573;
-}
-
-.popover-body {
-   color: #e5e3e8;
+    background-color: #2f2d29;
 }
 
 .popover-header {
     background-color: #d9b945;
-    color: #2f2d29;
+    color: #1d1c1a;
+    font-weight: 600;
     border-bottom-color: #e5e3e8;
 }
 
@@ -118,8 +104,19 @@ a, #boost-campus-course-settings .card-body a {
     background-color: #0edcda;
 }
 
+td.day.text-center.today a {
+    color: #ffc14f;
+}
+td.day.text-center.today {
+    border: 1px solid #e2d2a2;
+}
+
+td.day.text-center.hasevent.calendar_event_site a {
+    color: black;
+}
+
 .block .card-body, .card, .pagelayout-embedded #page {
-    border-color: #e5e3e8;
+    border-color: #fff1c7;
     background-color: #4f4f4d;
     color: #e5e3e8;
 }
@@ -130,7 +127,7 @@ a, #boost-campus-course-settings .card-body a {
  }
 
 .container-fluid {
-    background-color: #2f2d29;
+    background-color: #3c3934;
 }
 
 .contentwithoutlink, .contentafterlink .isrestricted {
@@ -139,14 +136,6 @@ a, #boost-campus-course-settings .card-body a {
 
 .coursebox {
     background-color: #2f2d29;
-}
-
-.courses .coursebox.even {
-    background-color: #3c3934;
-}
-
-.dropdown-menu, .popover-region-container, .popover-region-footer-container {
-    background-color: #4d4d4f;
 }
 
 .dropdown-item.menu-action{
@@ -163,7 +152,7 @@ a, #boost-campus-course-settings .card-body a {
     background-color: #efede7;
 }
 
-.format-site {
+.format-site, .path-mod-assign [data-region="grade-actions-panel"] {
     background-color: #2f2d29;
     color: #e5e3e8;
 }
@@ -175,7 +164,7 @@ a, #boost-campus-course-settings .card-body a {
 .modal-content, .moodle-dialogue-base .moodle-dialogue-wrap.moodle-dialogue-content,
 .moodle-dialogue-base .moodle-dialogue-wrap .moodle-dialogue-hd h1 {
     background-color: #4f4f4d;
-    color: #f3eefb;
+    color: #f2eff3;
 }
 
 .nav-tabs .nav-link.active {
@@ -185,7 +174,8 @@ a, #boost-campus-course-settings .card-body a {
 }
 
 .oubloglmt, .section .activity .availabilityinfo, .path-mod-workshop .userplan dt,
-.path-mod-workshop .userplan dd, .path-mod-workshop .userplan dd a, .path-mod-workshop .userplan dd a:link {
+.path-mod-workshop .userplan dd, .path-mod-workshop .userplan dd a, 
+.path-mod-workshop .userplan dd a:link {
     color: #f3eefb; 
 }
 
@@ -196,23 +186,27 @@ a, #boost-campus-course-settings .card-body a {
 .overview-description {
  color: #e6e5de;
 }
+
 /*table colors*/
 .path-grade-report-grader .gradeparent tr .cell,
 .path-grade-report-grader .gradeparent .floater .cell,
-table.dataTable tr.odd, .path-mod-workshop .userplan dd {
+table.dataTable tr.odd, .path-mod-workshop .userplan dd,
+table.dataTable tr.odd td.sorting_1, .courses .coursebox.even,
+.mod_turnitintooltwo .top.listbar.clearfix {
     background-color: #3c3934;
 }
-
-
-
-.path-grade-report-grader .gradeparent tr:nth-of-type(even) .cell,
-.path-grade-report-grader .gradeparent .floater tr:nth-of-type(even) .cell,
-table.dataTable tbody tr.even, .path-mod-workshop .userplan {
-    background-color: #4d4d4f;
+.submissionsDataTable .odd {
+    background: #3c3934!important;
 }
 
-table.dataTable tr.even td.sorting_1 {
-    background-color: #6e6f6b;
+.submissionsDataTable .even {
+    background: #4d4d4f!important;
+}
+.path-grade-report-grader .gradeparent tr:nth-of-type(even) .cell,
+.path-grade-report-grader .gradeparent .floater tr:nth-of-type(even) .cell,
+table.dataTable tbody tr.even, .path-mod-workshop .userplan, .dropdown-menu,
+.popover-region-container, .popover-region-footer-container, .path-mod-assign [data-region="grade-panel"] {
+    background-color: #4d4d4f;
 }
 
 table.dataTable tr.odd td.sorting_1 {
@@ -231,15 +225,13 @@ table.dataTable tr.odd td.sorting_1 {
     background-color: #f2eff3;  
 }
 
-.path-mod-quiz #mod_quiz_navblock .qnbutton.notyetanswered .trafficlight {
+.path-mod-quiz #mod_quiz_navblock .qnbutton.notyetanswered .trafficlight, 
+.path-mod-quiz #mod_quiz_navblock .qnbutton {
     background-color: #dad8ce;
 }
 
 .path-mod-quiz #mod_quiz_navblock .qnbutton.answersaved .trafficlight {
     background-color: #938696;
-}
-.path-mod-quiz #mod_quiz_navblock .qnbutton {
-    background-color: #dad8ce;
 }
 
 .pagination .page-link,
@@ -258,16 +250,8 @@ table.dataTable tr.odd td.sorting_1 {
 }
 
 .preferences-container .preference-table tr th:nth-child(even), .preferences-container .preference-table tr td:nth-child(even),
-.preferences-container tr td:nth-child(even) .container-fluid {
+.preferences-container tr td:nth-child(even) .container-fluid, table.dataTable tr.even td.sorting_1  {
     background-color: #6e6f6b;
-}
-
-.preferences-container tr td:nth-child(odd) .container-fluid {
-    background-color: #4f4f4d;
-}
-
-.que .info {
-    background-color: #4f4f4d;
 }
 
 .summary, .dataTables_wrapper .dataTables_info, 
@@ -286,17 +270,13 @@ table.dataTable tr.odd td.sorting_1 {
     background-color: #f5eea9;
 }
 
-.block_heatmap_heat_1 {
+.block_heatmap_heat_2,  .block_heatmap_heat_4, .block_heatmap_heat_4 a {
     color: black;
-    background-color: #c79470;
+    background-color: #72f17a;
 }
 
-.block_heatmap_heat_0 a, .block_heatmap_heat_1 a {
-    color: #1f1e1a;
-}
-
-.teachers {
-    letter-spacing: .5px;
+.block_heatmap_heat_0 a, .block_heatmap_heat_1 a, .ur_resub_msg {
+    color: #1f1e1a!important;
 }
 
 .text-info, .highlight {
@@ -320,20 +300,11 @@ ul.oublog-accordion li {
 
 /*id based colour swaps*/
 
-#frontpage-available-course-list {
-    background-color: #4f4f4d;
-}
-
 #intro, .oublog-post.oublog-odd, .path-mod-mediagallery .gallery_list_item,
 .path-mod-mediagallery .gallery_list_item .title {
     background-color: #383736;
     letter-spacing: 0.5px;
     border-left-color: #dbe3de;
-}
-
-
-#page-my-index {
-    background-color: #4f4f4d;
 }
 
 #page-wrapper {
@@ -345,7 +316,7 @@ ul.oublog-accordion li {
 }
 
 
-#region-main, .region_main_settings_menu_proxy {
+#region-main, .region_main_settings_menu_proxy, .ui-widget-content {
     background-color: #4f4f4d;
     color: #fffbef;
 }
@@ -374,12 +345,51 @@ a:hover {
     border-color: #dee2e6;
 }
 
-
 /*decorated text spacing for easier readability*/
-i {
+i, b, .teachers {
     letter-spacing: .5px;
+} 
+
+a.rubric_manager_launch, a.quickmark_manager_launch {
+    color: #4ac3ff!important;
+    background: #4f4f4d;
 }
 
-b {
-    letter-spacing: .5px;
+.gm-blue {
+    color: #4ac3ff!important; 
 }
+
+.submissionsDataTable .odd .sorting_1 {
+    background: #4f4f4d!important;
+}
+
+.submissionsDataTable .even .sorting_1 {
+    background: #6f6e6b!important;
+}
+
+.ui-widget-content {
+    background: #4f4f4d;
+}
+
+.mod_turnitintooltwo #refresh_1.refresh_link, 
+.mod_turnitintooltwo #nonsubmitters_1.nonsubmitters_link, 
+.mod_turnitintooltwo a.messages_inbox, .mod_turnitintooltwo #download_links {
+    margin-left: 8px;
+}
+
+.submissionsDataTable {
+    border: 1px solid #efefef;
+
+}
+
+table.dataTable.no-footer {
+    border-bottom: 1px solid #2f2d29;
+}
+
+.ui-widget-header {
+    background: #fff1c7!important;
+}
+.ui-state-active, .ui-widget-content .ui-state-active,
+ .ui-widget-header .ui-state-activ {
+background: #EFEFEF!important;
+ }

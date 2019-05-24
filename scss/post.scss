@@ -1598,7 +1598,30 @@ ul.ctopics .content .section ul {
 #page-grade-report-grader-index #page-wrapper {
     float: left;
 }
-
+//float overflow methed extends this so setting the display to flex prevents the class picture & title bar from doing that
 #page-grade-report-grader-index #page-header .col-12.pt-3.pb-3 {
     display: flex;
+}
+
+
+//patch for turnitin assingment page where the navbar wasn't aligning objects well
+.mod_turnitintooltwo .dataTables_length{
+    margin-bottom: 4px;
+}
+//changing the margins allows the search bar to sit in line with the others
+.mod_turnitintooltwo #refresh_1.refresh_link, 
+.mod_turnitintooltwo #nonsubmitters_1.nonsubmitters_link,
+.mod_turnitintooltwo a.messages_inbox,
+.mod_turnitintooltwo #download_links {
+    margin-left: 10px;
+}
+
+.mod_turnitintooltwo .dataTables_filter input {
+    width: 140px;
+    margin-top: 3px;
+}
+
+.mod_turnitintooltwo .top.listbar.clearfix .zip_downloads {
+    top: 0;
+    height: auto;
 }

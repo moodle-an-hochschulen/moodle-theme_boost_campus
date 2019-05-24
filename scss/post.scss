@@ -46,10 +46,10 @@
   Login page
   -------------------------------------*/
 
-body.loginbackgroundimage {
+body.loginbackgroundimage #page {
     background-size: cover;
-    background-position: center;
-    background-repeat: repeat-x;
+    background-position: center top;
+    background-repeat: no-repeat;
 }
 
 /* Add media breakpoint to only load images on screens with a medium size and up.
@@ -57,127 +57,127 @@ body.loginbackgroundimage {
  * Note: Building this code with a @for loop did not work. */
 @include media-breakpoint-up(md) {
     @if variable-exists(loginbackgroundimage1) {
-        body.loginbackgroundimage1 {
+        body.loginbackgroundimage1 #page {
             background-image: url($loginbackgroundimage1);
         }
     }
     @if variable-exists(loginbackgroundimage2) {
-        body.loginbackgroundimage2 {
+        body.loginbackgroundimage2 #page {
             background-image: url($loginbackgroundimage2);
         }
     }
     @if variable-exists(loginbackgroundimage3) {
-        body.loginbackgroundimage3 {
+        body.loginbackgroundimage3 #page {
             background-image: url($loginbackgroundimage3);
         }
     }
     @if variable-exists(loginbackgroundimage4) {
-        body.loginbackgroundimage4 {
+        body.loginbackgroundimage4 #page {
             background-image: url($loginbackgroundimage4);
         }
     }
     @if variable-exists(loginbackgroundimage5) {
-        body.loginbackgroundimage5 {
+        body.loginbackgroundimage5 #page {
             background-image: url($loginbackgroundimage5);
         }
     }
     @if variable-exists(loginbackgroundimage6) {
-        body.loginbackgroundimage6 {
+        body.loginbackgroundimage6 #page {
             background-image: url($loginbackgroundimage6);
         }
     }
     @if variable-exists(loginbackgroundimage7) {
-        body.loginbackgroundimage7 {
+        body.loginbackgroundimage7 #page {
             background-image: url($loginbackgroundimage7);
         }
     }
     @if variable-exists(loginbackgroundimage8) {
-        body.loginbackgroundimage8 {
+        body.loginbackgroundimage8 #page {
             background-image: url($loginbackgroundimage8);
         }
     }
     @if variable-exists(loginbackgroundimage9) {
-        body.loginbackgroundimage9 {
+        body.loginbackgroundimage9 #page {
             background-image: url($loginbackgroundimage9);
         }
     }
     @if variable-exists(loginbackgroundimage10) {
-        body.loginbackgroundimage10 {
+        body.loginbackgroundimage10 #page {
             background-image: url($loginbackgroundimage10);
         }
     }
     @if variable-exists(loginbackgroundimage11) {
-        body.loginbackgroundimage11 {
+        body.loginbackgroundimage11 #page {
             background-image: url($loginbackgroundimage11);
         }
     }
     @if variable-exists(loginbackgroundimage12) {
-        body.loginbackgroundimage12 {
+        body.loginbackgroundimage12 #page {
             background-image: url($loginbackgroundimage12);
         }
     }
     @if variable-exists(loginbackgroundimage13) {
-        body.loginbackgroundimage13 {
+        body.loginbackgroundimage13 #page {
             background-image: url($loginbackgroundimage13);
         }
     }
     @if variable-exists(loginbackgroundimage14) {
-        body.loginbackgroundimage14 {
+        body.loginbackgroundimage14 #page {
             background-image: url($loginbackgroundimage14);
         }
     }
     @if variable-exists(loginbackgroundimage15) {
-        body.loginbackgroundimage15 {
+        body.loginbackgroundimage15 #page {
             background-image: url($loginbackgroundimage15);
         }
     }
     @if variable-exists(loginbackgroundimage16) {
-        body.loginbackgroundimage16 {
+        body.loginbackgroundimage16 #page {
             background-image: url($loginbackgroundimage16);
         }
     }
     @if variable-exists(loginbackgroundimage17) {
-        body.loginbackgroundimage17 {
+        body.loginbackgroundimage17 #page {
             background-image: url($loginbackgroundimage17);
         }
     }
     @if variable-exists(loginbackgroundimage18) {
-        body.loginbackgroundimage18 {
+        body.loginbackgroundimage18 #page {
             background-image: url($loginbackgroundimage18);
         }
     }
     @if variable-exists(loginbackgroundimage19) {
-        body.loginbackgroundimage19 {
+        body.loginbackgroundimage19 #page {
             background-image: url($loginbackgroundimage19);
         }
     }
     @if variable-exists(loginbackgroundimage20) {
-        body.loginbackgroundimage20 {
+        body.loginbackgroundimage20 #page {
             background-image: url($loginbackgroundimage20);
         }
     }
     @if variable-exists(loginbackgroundimage21) {
-        body.loginbackgroundimage21 {
+        body.loginbackgroundimage21 #page {
             background-image: url($loginbackgroundimage21);
         }
     }
     @if variable-exists(loginbackgroundimage22) {
-        body.loginbackgroundimage22 {
+        body.loginbackgroundimage22 #page {
             background-image: url($loginbackgroundimage22);
         }
     }
     @if variable-exists(loginbackgroundimage23) {
-        body.loginbackgroundimage23 {
+        body.loginbackgroundimage23 #page {
             background-image: url($loginbackgroundimage23);
         }
     }
     @if variable-exists(loginbackgroundimage24) {
-        body.loginbackgroundimage24 {
+        body.loginbackgroundimage24 #page {
             background-image: url($loginbackgroundimage24);
         }
     }
     @if variable-exists(loginbackgroundimage25) {
-        body.loginbackgroundimage25 {
+        body.loginbackgroundimage25 #page {
             background-image: url($loginbackgroundimage25);
         }
     }

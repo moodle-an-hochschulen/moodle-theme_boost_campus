@@ -336,7 +336,7 @@ body.arts .page-navbkg .singlebutton button:hover {
 */
 
 #region-main-settings-menu .fa-gear:before,
-#region-main-settings-menu .fa-cog:before,{
+#region-main-settings-menu .fa-cog:before {
 	content: "\f085";
 }
 
@@ -1583,6 +1583,7 @@ ul.section.img-text {
 ul.ctopics .content .section ul {
     margin: 0px 10px 10px 20px;
 }
+
 
 //for some reason the margin on the glossary pg made the text lower than it should be
 //this deletes the margin so it doesn't sit on top of a border

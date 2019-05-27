@@ -127,7 +127,7 @@ function theme_boost_campus_get_loginbackgroundimage_text() {
             $settings = explode("|", $line);
             // Compare the filenames for a match and return the text that belongs to the randomly selected image.
             if (strcmp($filename, $settings[0]) == 0) {
-                return $settings[1];
+                return format_string($settings[1]);
                 break;
             }
         }

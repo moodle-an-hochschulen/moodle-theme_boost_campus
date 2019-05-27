@@ -6,6 +6,7 @@ Changes
 
 ### Unreleased
 
+* 2019-05-29 - Check existence of property blockcolumnwidth before accessing it.
 * 2019-05-29 - Login background image did not fill the page completely when browser window was really low but really wide.
 * 2019-05-27 - Added multilanguage filtering to the login background image texts.
 * 2019-05-24 - Prevent back-to-top button from being printed.

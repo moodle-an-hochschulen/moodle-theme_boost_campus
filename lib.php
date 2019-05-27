@@ -120,15 +120,19 @@ function theme_boost_campus_get_pre_scss($theme) {
 
     // MODIFICATION START: Overwrite Boost core SCSS variables which need units and thus couldn't be added to $configurable above.
     // Set variables which are processed in the context of the blockcolumnwidth setting.
-    $scss .= '$blocks-column-width: ' . $theme->settings->blockcolumnwidth . "px;\n";
-    $scss .= '$grid-gutter-width: '. "30px;\n";
+    if (isset($theme->settings->blockcolumnwidth)) {
+        $scss .= '$blocks-column-width: ' . $theme->settings->blockcolumnwidth . "px;\n";
+        $scss .= '$grid-gutter-width: ' . "30px;\n";
+    }
     // MODIFICATION END.
 
     // MODIFICATION START: Set own SCSS variables which need units or calculations and thus couldn't be
     // added to $configurable above.
     // Set variables which are processed in the context of the blockcolumnwidth setting.
-    $scss .= '$blocks-column-width-dashboard: ' . $theme->settings->blockcolumnwidthdashboard . "px;\n";
-    $scss .= '$blocks-plus-gutter-dashboard: $blocks-column-width-dashboard + ( $grid-gutter-width / 2 )' . ";\n";
+    if (isset($theme->settings->blockcolumnwidthdashboard)) {
+        $scss .= '$blocks-column-width-dashboard: ' . $theme->settings->blockcolumnwidthdashboard . "px;\n";
+        $scss .= '$blocks-plus-gutter-dashboard: $blocks-column-width-dashboard + ( $grid-gutter-width / 2 )' . ";\n";
+    }
     // MODIFICATION END.
 
     // MODIFICATION START: Add login background images that are uploaded to the setting 'loginbackgroundimage' to CSS.

@@ -30,139 +30,154 @@
             "description": "creates a floated container with an editable caption for images."
         },
         {
+            "title": "Blank Callout",
+            "src": "theme/boost_campus/callouts/templates/blank_callout.html",
+            "description": "Adds a pre-formatted Idea Block"
+        },
+        {
             "title": "Activity Callout",
             "src": "theme/boost_campus/callouts/templates/activity_callout.html",
-            "description": "Adds a pre-formatted callout block."
+            "description": "Adds a pre-formatted Idea Block"
         },
         {
             "title": "Aims Callout",
             "src": "theme/boost_campus/callouts/templates/aims_callout.html",
-            "description": "Adds a pre-formatted callout block."
+            "description": "Adds a pre-formatted Idea Block"
         },
         {
             "title": "Assignment Callout",
             "src": "theme/boost_campus/callouts/templates/assignment_callout.html",
-            "description": "Adds a pre-formatted callout block."
+            "description": "Adds a pre-formatted Idea Block"
         },
         {
             "title": "audio Callout",
             "src": "theme/boost_campus/callouts/templates/audio_callout.html",
-            "description": "Adds a pre-formatted callout block."
+            "description": "Adds a pre-formatted Idea Block"
         },
         {
             "title": "Blog Callout",
             "src": "theme/boost_campus/callouts/templates/blog_callout.html",
-            "description": "Adds a pre-formatted callout block."
+            "description": "Adds a pre-formatted Idea Block"
         },
         {
             "title": "Chat Callout",
             "src": "theme/boost_campus/callouts/templates/chat_callout.html",
-            "description": "Adds a pre-formatted callout block."
+            "description": "Adds a pre-formatted Idea Block"
         },
         {
             "title": "Discussion Callout",
             "src": "theme/boost_campus/callouts/templates/discussion_callout.html",
-            "description": "Adds a pre-formatted callout block."
+            "description": "Adds a pre-formatted Idea Block"
         },
         {
             "title": "Elder Callout",
             "src": "theme/boost_campus/callouts/templates/elder_callout.html",
-            "description": "Adds a pre-formatted callout block."
+            "description": "Adds a pre-formatted Idea Block"
         },
         {
             "title": "Example Callout",
             "src": "theme/boost_campus/callouts/templates/example_callout.html",
-            "description": "Adds a pre-formatted callout block."
+            "description": "Adds a pre-formatted Idea Block"
         },
         {
             "title": "Fact Callout",
             "src": "theme/boost_campus/callouts/templates/fact_callout.html",
-            "description": "Adds a pre-formatted callout block."
+            "description": "Adds a pre-formatted Idea Block"
         },
         {
             "title": "Feedback Callout",
             "src": "theme/boost_campus/callouts/templates/feedback_callout.html",
-            "description": "Adds a pre-formatted callout block."
+            "description": "Adds a pre-formatted Idea Block"
         },
         {
             "title": "FYI Callout",
             "src": "theme/boost_campus/callouts/templates/fyi_callout.html",
-            "description": "Adds a pre-formatted callout block."
+            "description": "Adds a pre-formatted Idea Block"
         },
         {
             "title": "Ideas Callout",
             "src": "theme/boost_campus/callouts/templates/ideas_callout.html",
-            "description": "Adds a pre-formatted callout block."
+            "description": "Adds a pre-formatted Idea Block"
         },
         {
             "title": "Important Callout",
             "src": "theme/boost_campus/callouts/templates/important_callout.html",
-            "description": "Adds a pre-formatted callout block."
+            "description": "Adds a pre-formatted Idea Block"
+        },
+        {
+            "title": "Important Callout Yellow bg",
+            "src": "theme/boost_campus/callouts/templates/important_yellow_callout.html",
+            "description": "Adds a pre-formatted Idea Block"
         },
         {
             "title": "Labs Callout",
             "src": "theme/boost_campus/callouts/templates/labs_callout.html",
-            "description": "Adds a pre-formatted callout block."
+            "description": "Adds a pre-formatted Idea Block"
         },
         {
-            "title": "Labs Callout",
-            "src": "theme/boost_campus/callouts/templates/labs_callout.html",
-            "description": "Adds a pre-formatted callout block."
+            "title": "Labs Callout Aqua bg",
+            "src": "theme/boost_campus/callouts/templates/labs_callout_aqua.html",
+            "description": "Adds a pre-formatted Idea Block"
         },
         {
             "title": "Links Callout",
             "src": "theme/boost_campus/callouts/templates/links_callout.html",
-            "description": "Adds a pre-formatted callout block."
+            "description": "Adds a pre-formatted Idea Block"
         },
         {
             "title": "Notes Callout",
             "src": "theme/boost_campus/callouts/templates/notes_callout.html",
-            "description": "Adds a pre-formatted callout block."
+            "description": "Adds a pre-formatted Idea Block"
         },
         {
             "title": "Objectives Callout",
             "src": "theme/boost_campus/callouts/templates/objectives_callout.html",
-            "description": "Adds a pre-formatted callout block."
+            "description": "Adds a pre-formatted Idea Block"
         },
         {
             "title": "Question Callout",
             "src": "theme/boost_campus/callouts/templates/question_callout.html",
-            "description": "Adds a pre-formatted callout block."
+            "description": "Adds a pre-formatted Idea Block"
+        },
+        {
+            "title": "Question Callout Blue bg",
+            "src": "theme/boost_campus/callouts/templates/question_callout_blue.html",
+            "description": "Adds a pre-formatted Idea Block"
         },
         {
             "title": "Quiz Callout",
             "src": "theme/boost_campus/callouts/templates/quiz_callout.html",
-            "description": "Adds a pre-formatted callout block."
+            "description": "Adds a pre-formatted Idea Block"
         },
         {
             "title": "Reading Callout",
             "src": "theme/boost_campus/callouts/templates/reading_callout.html",
-            "description": "Adds a pre-formatted callout block."
+            "description": "Adds a pre-formatted Idea Block"
         },
         {
             "title": "Reflect Callout",
             "src": "theme/boost_campus/callouts/templates/reflect_callout.html",
-            "description": "Adds a pre-formatted callout block."
+            "description": "Adds a pre-formatted Idea Block"
         },
         {
             "title": "Resources Callout",
             "src": "theme/boost_campus/callouts/templates/resources_callout.html",
-            "description": "Adds a pre-formatted callout block."
+            "description": "Adds a pre-formatted Idea Block"
         },
         {
             "title": "Start Callout",
             "src": "theme/boost_campus/callouts/templates/start_callout.html",
-            "description": "Adds a pre-formatted callout block."
+            "description": "Adds a pre-formatted Idea Block"
         },
         {
             "title": "Task Callout",
             "src": "theme/boost_campus/callouts/templates/task_callout.html",
-            "description": "Adds a pre-formatted callout block."
+            "description": "Adds a pre-formatted Idea Block"
         },
         {
             "title": "Video Callout",
             "src": "theme/boost_campus/callouts/templates/video_callout.html",
-            "description": "Adds a pre-formatted callout block."
+            "description": "Adds a pre-formatted Idea Block"
         },
         {
             "title": "Reading Block",

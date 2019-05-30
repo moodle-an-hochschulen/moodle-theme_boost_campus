@@ -16,3 +16,40 @@
     height:100%;
     margin-right: .5rem;
 }
+
+.callout-yellow {
+    border: solid 1px #FF9900;
+    background-color: #feefc3;
+    width: 50%;
+    margin: 0px 10px 10px 0px;
+    -moz-border-radius: 15px; 
+    border-radius: 15px; 
+    min-height: 70px;
+}
+
+.callout-yellow h2 {
+    color:#e15d29;
+}
+
+.callout-blue {
+    border: dotted 3px #0766b7;
+    background-color: #c1d9ed;
+    width: 35%; 
+    margin: 0px 0px 10px 10px; 
+    min-height: 70px;
+}
+
+.callout-blue h2 {
+    color: #0766b7;
+}
+
+.callout-aqua {
+    border: double 6px #000000; 
+    background-color: #359aae; 
+    margin: 0px auto 10px auto; min-height: 70px;
+    color: #ffffff;
+}
+
+.callout-aqua h2 {
+    color: #ffffff;
+}

@@ -117,7 +117,7 @@ if ($setdarkmode > -1) {
 
 //check if user has darkmode on in database and include if so
 if($DB->get_record('theme_boost_campus_darkmode', array('userid'=>$USER->id, 'darkmode'=>1))){
-   $PAGE->requires->css('/theme/boost_campus/css/darkmode.css');
+   $PAGE->requires->css('/theme/boost_campus/style/darkmode.css');
 }
    
 

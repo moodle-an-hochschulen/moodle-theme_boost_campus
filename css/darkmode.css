@@ -115,7 +115,7 @@ td.day.text-center.hasevent.calendar_event_site a {
     color: black;
 }
 
-.block .card-body, .card, .pagelayout-embedded #page {
+.block .card-body, .card, .callout, blockquote, .pagelayout-embedded #page {
     border-color: #fff1c7;
     background-color: #4f4f4d;
     color: #e5e3e8;

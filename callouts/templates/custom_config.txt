@@ -1,0 +1,179 @@
+{"template_templates" : [
+        {
+            "title": "Image Centered",
+            "src": "theme/boost_campus/callouts/templates/image_center.html",
+            "description": "creates a floated container for images."
+        },
+        {
+            "title": "Image Floated left",
+            "src": "theme/boost_campus/callouts/templates/image_left.html",
+            "description": "creates a floated container for images."
+        },
+        {
+            "title": "Image Floated Right",
+            "src": "theme/boost_campus/callouts/templates/image_right.html",
+            "description": "creates a floated container for images."
+        },
+        {
+            "title": "Captioned Image",
+            "src": "theme/boost_campus/callouts/templates/image_caption.html",
+            "description": "creates a container with an editable caption for images."
+        },
+        {
+            "title": "Captioned Image Floated right",
+            "src": "theme/boost_campus/callouts/templates/image_caption_right.html",
+            "description": "creates a floated container with an editable caption for images."
+        },
+        {
+            "title": "Captioned Image Floated Left",
+            "src": "theme/boost_campus/callouts/templates/image_caption_left.html",
+            "description": "creates a floated container with an editable caption for images."
+        },
+        {
+            "title": "Activity Callout",
+            "src": "theme/boost_campus/callouts/templates/activity_callout.html",
+            "description": "Adds a pre-formatted callout block."
+        },
+        {
+            "title": "Aims Callout",
+            "src": "theme/boost_campus/callouts/templates/aims_callout.html",
+            "description": "Adds a pre-formatted callout block."
+        },
+        {
+            "title": "Assignment Callout",
+            "src": "theme/boost_campus/callouts/templates/assignment_callout.html",
+            "description": "Adds a pre-formatted callout block."
+        },
+        {
+            "title": "audio Callout",
+            "src": "theme/boost_campus/callouts/templates/audio_callout.html",
+            "description": "Adds a pre-formatted callout block."
+        },
+        {
+            "title": "Blog Callout",
+            "src": "theme/boost_campus/callouts/templates/blog_callout.html",
+            "description": "Adds a pre-formatted callout block."
+        },
+        {
+            "title": "Chat Callout",
+            "src": "theme/boost_campus/callouts/templates/chat_callout.html",
+            "description": "Adds a pre-formatted callout block."
+        },
+        {
+            "title": "Discussion Callout",
+            "src": "theme/boost_campus/callouts/templates/discussion_callout.html",
+            "description": "Adds a pre-formatted callout block."
+        },
+        {
+            "title": "Elder Callout",
+            "src": "theme/boost_campus/callouts/templates/elder_callout.html",
+            "description": "Adds a pre-formatted callout block."
+        },
+        {
+            "title": "Example Callout",
+            "src": "theme/boost_campus/callouts/templates/example_callout.html",
+            "description": "Adds a pre-formatted callout block."
+        },
+        {
+            "title": "Fact Callout",
+            "src": "theme/boost_campus/callouts/templates/fact_callout.html",
+            "description": "Adds a pre-formatted callout block."
+        },
+        {
+            "title": "Feedback Callout",
+            "src": "theme/boost_campus/callouts/templates/feedback_callout.html",
+            "description": "Adds a pre-formatted callout block."
+        },
+        {
+            "title": "FYI Callout",
+            "src": "theme/boost_campus/callouts/templates/fyi_callout.html",
+            "description": "Adds a pre-formatted callout block."
+        },
+        {
+            "title": "Ideas Callout",
+            "src": "theme/boost_campus/callouts/templates/ideas_callout.html",
+            "description": "Adds a pre-formatted callout block."
+        },
+        {
+            "title": "Important Callout",
+            "src": "theme/boost_campus/callouts/templates/important_callout.html",
+            "description": "Adds a pre-formatted callout block."
+        },
+        {
+            "title": "Labs Callout",
+            "src": "theme/boost_campus/callouts/templates/labs_callout.html",
+            "description": "Adds a pre-formatted callout block."
+        },
+        {
+            "title": "Labs Callout",
+            "src": "theme/boost_campus/callouts/templates/labs_callout.html",
+            "description": "Adds a pre-formatted callout block."
+        },
+        {
+            "title": "Links Callout",
+            "src": "theme/boost_campus/callouts/templates/links_callout.html",
+            "description": "Adds a pre-formatted callout block."
+        },
+        {
+            "title": "Notes Callout",
+            "src": "theme/boost_campus/callouts/templates/notes_callout.html",
+            "description": "Adds a pre-formatted callout block."
+        },
+        {
+            "title": "Objectives Callout",
+            "src": "theme/boost_campus/callouts/templates/objectives_callout.html",
+            "description": "Adds a pre-formatted callout block."
+        },
+        {
+            "title": "Question Callout",
+            "src": "theme/boost_campus/callouts/templates/question_callout.html",
+            "description": "Adds a pre-formatted callout block."
+        },
+        {
+            "title": "Quiz Callout",
+            "src": "theme/boost_campus/callouts/templates/quiz_callout.html",
+            "description": "Adds a pre-formatted callout block."
+        },
+        {
+            "title": "Reading Callout",
+            "src": "theme/boost_campus/callouts/templates/reading_callout.html",
+            "description": "Adds a pre-formatted callout block."
+        },
+        {
+            "title": "Reflect Callout",
+            "src": "theme/boost_campus/callouts/templates/reflect_callout.html",
+            "description": "Adds a pre-formatted callout block."
+        },
+        {
+            "title": "Resources Callout",
+            "src": "theme/boost_campus/callouts/templates/resources_callout.html",
+            "description": "Adds a pre-formatted callout block."
+        },
+        {
+            "title": "Start Callout",
+            "src": "theme/boost_campus/callouts/templates/start_callout.html",
+            "description": "Adds a pre-formatted callout block."
+        },
+        {
+            "title": "Task Callout",
+            "src": "theme/boost_campus/callouts/templates/task_callout.html",
+            "description": "Adds a pre-formatted callout block."
+        },
+        {
+            "title": "Video Callout",
+            "src": "theme/boost_campus/callouts/templates/video_callout.html",
+            "description": "Adds a pre-formatted callout block."
+        },
+        {
+            "title": "Reading Block",
+            "src": "lib/editor/tinymce/callouts/read_block.html",
+            "description": "Adds a pre-formatted Reading Block"
+        },
+        {
+            "title": "Pull Quote - Align Right",
+            "src": "lib/editor/tinymce/callouts/pull_quote-right.html",
+            "description": "Adds a pre-formatted Pull Quote (aligned to the right)"
+        }
+    ],
+  "contextmenu": "link spellchecker image inserttable | cell row column deletetable"
+}

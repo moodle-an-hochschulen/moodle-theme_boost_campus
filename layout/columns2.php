@@ -86,10 +86,6 @@ if (get_config('theme_boost_campus', 'darknavbar') == 'yes') {
 }
 // MODIFICATION END.
 
-//legacy code support include css file
-$PAGE->requires->css('/theme/boost_campus/css/legacy.css');
-
-
 //including Dark Mode css if darkmode==1 if query string is set
 //darkmode toggle code
 $setdarkmode = optional_param('darkmode', -1, PARAM_INT);
@@ -194,4 +190,3 @@ echo $OUTPUT->render_from_template('theme_boost_campus/columns2', $templateconte
 /* ORIGINAL START.
 echo $OUTPUT->render_from_template('theme_boost/columns2', $templatecontext);
 ORIGINAL END. */
-

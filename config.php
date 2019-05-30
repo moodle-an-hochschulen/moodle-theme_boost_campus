@@ -26,7 +26,9 @@ defined('MOODLE_INTERNAL') || die();
 
 $THEME->name = 'boost_campus';
 $THEME->parents = ['boost'];
-$THEME->editor_sheets = [];
+
+$THEME->editor_sheets = array('editor','legacy','callout');
+$THEME->sheets = array('legacy');
 $THEME->scss = function($theme) {
     return theme_boost_campus_get_main_scss_content($theme);
 };

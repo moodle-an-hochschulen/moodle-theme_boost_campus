@@ -6,6 +6,7 @@ Changes
 
 ### Unreleased
 
+* 2019-06-03 - Adjusted columns2.php due to upstream changes in theme Boost.
 * 2019-06-03 - Adjusted login.mustache template due to upstream changes in theme Boost.
 * 2019-06-03 - Adjusted footer.mustache template due to upstream changes in theme Boost.
 * 2019-06-03 - Adjusted columns2.mustache template due to upstream changes in theme Boost.

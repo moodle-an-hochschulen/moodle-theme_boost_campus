@@ -92,9 +92,10 @@ $templatecontext = [
     // MODIFICATION END.
 ];
 
+$nav = $PAGE->flatnav;
 // MODIDFICATION START.
 // Use the returned value from theme_boost_campus_get_modified_flatnav_defaulthomepageontop as the template context.
-$templatecontext['flatnavigation'] = theme_boost_campus_process_flatnav($PAGE->flatnav);
+$templatecontext['flatnavigation'] = theme_boost_campus_process_flatnav($nav);
 // If setting showsettingsincourse is enabled.
 if (get_config('theme_boost_campus', 'showsettingsincourse') == 'yes') {
     // Context value for requiring incoursesettings.js.
@@ -104,6 +105,12 @@ if (get_config('theme_boost_campus', 'showsettingsincourse') == 'yes') {
     // Add the returned value from theme_boost_campus_get_incourse_activity_settings to the template context.
     $templatecontext['activitynode'] = theme_boost_campus_get_incourse_activity_settings();
 }
+// MODIFICATION END.
+/* ORIGINAL START.
+$templatecontext['flatnavigation'] = $nav;
+ORIGINAL END. */
+
+$templatecontext['firstcollectionlabel'] = $nav->get_collectionlabel();
 
 // MODIFICATION START: Handle additional layout elements.
 // The output buffer is needed to render the additional layout elements now without outputting them to the page directly.

@@ -279,7 +279,7 @@ class core_renderer extends \core_renderer {
      * This is an optional menu that can be added to a layout by a theme. It contains the
      * menu for the course administration, only on the course main page.
      *
-     * MODIFICATION: This renderer function is copied and modified from /theme/boost/classes/output/core_renderer.php
+     * MODIFICATION: This renderer function is copied and modified from /lib/outputrenderers.php.
      *
      * @return string
      */
@@ -358,7 +358,7 @@ class core_renderer extends \core_renderer {
                 if ($skipped) {
                     $text = get_string('morenavigationlinks');
                     $url = new moodle_url('/course/admin.php', array('courseid' => $this->page->course->id));
-                    $link = new action_link($url, $text, null, null, new pix_icon('t/edit', ''));
+                    $link = new action_link($url, $text, null, null, new pix_icon('t/edit', $text));
                     $menu->add_secondary_action($link);
                 }
             }
@@ -372,7 +372,7 @@ class core_renderer extends \core_renderer {
                 if ($skipped) {
                     $text = get_string('morenavigationlinks');
                     $url = new moodle_url('/course/admin.php', array('courseid' => $this->page->course->id));
-                    $link = new action_link($url, $text, null, null, new pix_icon('t/edit', ''));
+                    $link = new action_link($url, $text, null, null, new pix_icon('t/edit', $text));
                     $menu->add_secondary_action($link);
                 }
             }

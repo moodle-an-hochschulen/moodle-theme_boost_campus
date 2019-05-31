@@ -4,6 +4,10 @@ moodle-theme_boost_campus
 Changes
 -------
 
+### Unreleased
+
+* 2019-05-31 - Prepare compatibility for Moodle 3.7.
+
 ### Release v3.6-r5
 
 * 2019-05-29 - Check existence of property blockcolumnwidth before accessing it.

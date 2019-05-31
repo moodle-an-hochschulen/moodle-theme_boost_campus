@@ -57,7 +57,7 @@ defined('MOODLE_INTERNAL') || die;
  * @package theme_boost_campus
  * @category output
  */
-class core_renderer extends \theme_boost\output\core_renderer {
+class core_renderer extends \core_renderer {
 
     /**
      * Override to display an edit button again by calling the parent function

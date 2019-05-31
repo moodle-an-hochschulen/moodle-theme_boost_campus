@@ -32,6 +32,7 @@ use html_writer;
 global $CFG;
 
 require_once($CFG->dirroot . '/course/renderer.php');
+
 /**
  * Extending the course_renderer interface.
  *
@@ -40,7 +41,7 @@ require_once($CFG->dirroot . '/course/renderer.php');
  * @package theme_boost_campus
  * @category output
  */
-class course_renderer extends \theme_boost\output\core\course_renderer {
+class course_renderer extends \core_course_renderer {
 
     /**
      * Displays one course in the list of courses.

@@ -141,7 +141,7 @@ class core_renderer extends \core_renderer {
      * Override to display switched role information beneath the course header instead of the user menu.
      * We change this because the switch role function is course related and therefore it should be placed in the course context.
      *
-     * MODIFICATION: This renderer function is copied and modified from /theme/boost/classes/output/core_renderer.php
+     * MODIFICATION: This renderer function is copied and modified from /lib/outputrenderers.php
      *
      * Wrapper for header elements.
      *
@@ -197,10 +197,10 @@ class core_renderer extends \core_renderer {
         // MODIFICATION START:
         // Change this to add the result in the html variable to be able to add further features below the header.
         // Render from the own header template.
-        $html = $this->render_from_template('theme_boost_campus/header', $header);
+        $html = $this->render_from_template('theme_boost_campus/full_header', $header);
         // MODIFICATION END.
         /* ORIGINAL START
-        return $this->render_from_template('theme_boost/header', $header);
+        return $this->render_from_template('core/full_header', $header);
         ORIGINAL END. */
 
         // MODIFICATION START:

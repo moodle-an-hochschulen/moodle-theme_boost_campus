@@ -6,6 +6,7 @@ Changes
 
 ### Unreleased
 
+* 2019-05-31 - Adjusted function full_header() in core_renderer.php due to upstream changes in theme Boost.
 * 2019-05-31 - Fixed referencing of renderers due to upstream changes in theme Boost.
 * 2019-05-31 - Prepare compatibility for Moodle 3.7.
 

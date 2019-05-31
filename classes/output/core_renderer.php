@@ -392,7 +392,7 @@ class core_renderer extends \core_renderer {
      * Override to use theme_boost_campus login template
      * Renders the login form.
      *
-     * MODIFICATION: This renderer function is copied and modified from /theme/boost/classes/output/core_renderer.php
+     * MODIFICATION: This renderer function is copied and modified from lib/outputrenderers.php
      *
      * @param \core_auth\output\login $form The renderable.
      * @return string
@@ -415,7 +415,7 @@ class core_renderer extends \core_renderer {
         }
         $context->logourl = $url;
         $context->sitename = format_string($SITE->fullname, true,
-            ['context' => context_course::instance(SITEID), "escape" => false]);
+                ['context' => context_course::instance(SITEID), "escape" => false]);
         // MODIFICATION START.
         // Only if setting "loginform" is checked, then call own login.mustache.
         if (get_config('theme_boost_campus', 'loginform') == 'yes') {

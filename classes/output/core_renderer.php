@@ -432,7 +432,7 @@ class core_renderer extends \core_renderer {
     /**
      * Implementation of user image rendering.
      *
-     * MODIFICATION: This renderer function is copied and modified from /theme/boost/classes/output/core_renderer.php
+     * MODIFICATION: This renderer function is copied and modified from lib/outputrenderers.php
      *
      * @param help_icon $helpicon A help icon instance
      * @return string HTML fragment

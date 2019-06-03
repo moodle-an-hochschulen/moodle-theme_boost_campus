@@ -6,6 +6,7 @@ Changes
 
 ### Unreleased
 
+* 2019-06-03 - Added newly introduced collection labels in the navdrawer nodes.
 * 2019-06-03 - Adjusted columns2.php due to upstream changes in theme Boost.
 * 2019-06-03 - Adjusted login.mustache template due to upstream changes in theme Boost.
 * 2019-06-03 - Adjusted footer.mustache template due to upstream changes in theme Boost.

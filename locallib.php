@@ -304,9 +304,11 @@ function theme_boost_campus_set_node_on_top(flat_navigation $flatnav, $nodename,
         // Set the showdivider of the new top node to false that no empty nav-element will be created.
         $pageflatnav->set_showdivider(false);
         // Add the showdivider to the coursehome node as this is the next one and this will add a margin top to it.
-        $beforenode->set_showdivider(true);
+        $beforenode->set_showdivider(true, $beforenode->text);
         // Remove the site home navigation node that it does not appear twice in the menu.
         $flatnav->remove($nodename);
+        // Set the collection label for this node.
+        $flatnav->set_collectionlabel($pageflatnav->text);
         // Add the saved site home node before the $beforenode.
         $flatnav->add($pageflatnav, $beforenode->key);
     }

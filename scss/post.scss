@@ -206,6 +206,44 @@ body.arts .page-navbkg {
 }
 */
 
+
+.course-img-uploader-container {
+    
+    .course-image-uploader {
+        background-color: rgba(255, 255, 255, .8);
+        display: block;
+    }
+
+    .confirm-image-upload {
+        display: none;
+    }
+
+}
+
+.course-img-uploader-container.confirm {
+    
+    .course-image-uploader {
+        display: none;
+    }
+
+    .confirm-image-upload {
+        display: block;
+    }
+    
+}
+
+.course-image-uploader:hover {
+    background-color: rgba(200, 200, 200, .8);
+}
+
+.course-image-uploader input[type="file"] {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
 .page-head {
 	padding: 1rem;
 }

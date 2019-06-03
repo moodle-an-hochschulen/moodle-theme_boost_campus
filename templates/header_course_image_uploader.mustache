@@ -1,0 +1,39 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+
+    Moodle is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Moodle is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+}}
+{{!
+    @template boost_campus/header_course_image_uploader
+
+    This template renders the course image upload button.
+
+}}
+<div id="theme_boost_campus_header_course_image_uploader_{{uniqid}}" class="course-img-uploader-container">
+    <label for="course_image_uploader" class="btn btn-sm course-image-uploader">
+        <i class="fa fa-camera"></i>
+        <span class="d-none d-md-inline">{{#str}} change_course_image, theme_boost_campus {{/str}}</span>
+        <input id="course_image_uploader" type="file" accept="{{supported_types}}" />
+    </label>
+    <div class="btn-group confirm-image-upload">
+        <button id="upload_img_confirm" class="btn btn-sm btn-success mr-3">{{#str}} save, core {{/str}}</button>
+        <button id="upload_img_cancel" class="btn btn-sm btn-danger">{{#str}} cancel, core {{/str}}</button>
+    </div>
+</div>
+
+{{#js}}
+    require(['theme_boost_campus/course_image_uploader'], function(main) {
+        main.init('#theme_boost_campus_header_course_image_uploader_{{uniqid}}', {{maxbytes}}, {{courseid}});
+    });
+{{/js}}

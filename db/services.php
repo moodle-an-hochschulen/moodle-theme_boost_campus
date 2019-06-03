@@ -15,18 +15,21 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Theme Boost Campus - Version file
- *
- * @package    theme_boost_campus
- * @copyright  2017 Kathrin Osswald, Ulm University <kathrin.osswald@uni-ulm.de>
- * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ * Services
+ * @author    John Lane
  */
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->component = 'theme_boost_campus';
-$plugin->version = 2019051601;
-$plugin->release = 'v3.6-r2';
-$plugin->requires = 2018120300;
-$plugin->maturity = MATURITY_STABLE;
-$plugin->dependencies = array('theme_boost' => 2018120300);
+$functions = array(
+
+    'theme_boost_campus_upload_course_image' => array(
+        'classname'     => 'theme_boost_campus_external',
+        'methodname'    => 'upload_course_image',
+        'classpath'     => 'theme/boost_campus/externallib.php',
+        'description'   => 'Changes course image.',
+        'type'          => 'write',
+        'ajax'          => 'true',
+    ),
+
+);

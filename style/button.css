@@ -1,0 +1,114 @@
+/*button css for the editor can also be used to backport the bootstrap 3.6 classes*/
+button {
+    margin: 0;
+    font-family: inherit;
+}
+
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: .9375rem;
+    line-height: 1.5;
+    border-radius: 0;
+    -webkit-transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    -o-transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+
+.btn-primary {
+    color: #fff;
+    background-color: #848889;
+    border-color: #848889;
+}
+.btn-primary:hover {
+    color: #fff;
+    background-color: #717576;
+    border-color: #6b6e6f;
+}
+
+.btn-secondary, .button-default {
+    color: #212529;
+    background-color: #ced4da;
+    border-color: #ced4da;
+}
+.btn-secondary:hover, .btn-default:hover {
+    color: #212529;
+    background-color: #b8c1ca;
+    border-color: #b1bbc4;
+}
+
+.btn-success {
+    color: #fff;
+    background-color: #5cb85c;
+    border-color: #5cb85c;
+}
+.btn-success:hover {
+    color: #fff;
+    background-color: #48a648;
+    border-color: #449d44;
+}
+
+.btn-danger {
+    color: #fff;
+    background-color: #d9534f;
+    border-color: #d9534f;
+}
+.btn-danger:hover {
+    color: #fff;
+    background-color: #d23430;
+    border-color: #c9302c;
+}
+
+.btn-warning {
+    color: #212529;
+    background-color: #f0ad4e;
+    border-color: #f0ad4e;
+}
+.btn-warning:hover {
+    color: #212529;
+    background-color: #ed9d2b;
+    border-color: #ec971f;
+}
+
+.btn-info {
+    color: #212529;
+    background-color: #5bc0de;
+    border-color: #5bc0de;
+}
+.btn-info:hover {
+    color: #fff;
+    background-color: #3bb4d8;
+    border-color: #31b0d5;
+}
+
+.btn-light {
+    color: #212529;
+    background-color: #f8f9fa;
+    border-color: #f8f9fa;
+}
+.btn-light:hover {
+    color: #212529;
+    background-color: #e2e6ea;
+    border-color: #dae0e5;
+}
+
+.btn-dark {
+    color: #fff;
+    background-color: #373a3c;
+    border-color: #373a3c;
+}
+.btn-dark:hover {
+    color: #fff;
+    background-color: #252728;
+    border-color: #1f2021;
+}

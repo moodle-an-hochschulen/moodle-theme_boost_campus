@@ -40,7 +40,7 @@
             "src": "theme/boost_campus/callouts/templates/dropdown.html",
             "description": "Creates a single block which displays the content under the title once clicked. Will collapse once in the final page but not in the editor."
         },
-  {
+        {
             "title": "Drop Accordion List",
             "src": "theme/boost_campus/callouts/templates/accordian.html",
             "description": "Creates a group of dropdown blocks which display the content under the title once clicked. Will collapse once in the final page but not in the editor."
@@ -256,6 +256,11 @@
             "description": "Adds a button for your page. To link, select the text and clink the chain looking link button in the editor toolbar."
         },
         {
+            "title": "Button Light",
+            "src": "theme/boost_campus/callouts/templates/button_light.html",
+            "description": "Adds a button for your page. To link, select the text and clink the chain looking link button in the editor toolbar."
+        },
+        {
             "title": "Button Info",
             "src": "theme/boost_campus/callouts/templates/button_info.html",
             "description": "Adds a button for your page. To link, select the text and clink the chain looking link button in the editor toolbar."
@@ -280,11 +285,6 @@
             "src": "theme/boost_campus/callouts/templates/image_card.html",
             "description": "Creates a card on the page that's underneath an attached image."
         },
-        {
-            "title": "Pull Quote - Align Right",
-            "src": "lib/editor/tinymce/callouts/pull_quote-right.html",
-            "description": "Adds a pre-formatted Pull Quote (aligned to the right)"
-        }
     ],
   "contextmenu": "link spellchecker image inserttable | cell row column deletetable"
 }

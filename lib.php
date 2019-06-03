@@ -68,8 +68,10 @@ function theme_boost_campus_get_main_scss_content($theme) {
     $callout = file_get_contents($CFG->dirroot . '/theme/boost_campus/style/callout.css');
     //alert override css
     $alerts = file_get_contents($CFG->dirroot . '/theme/boost_campus/style/alert.css');
+    //pullquote css
+    $pquote = file_get_contents($CFG->dirroot . '/theme/boost_campus/style/pullquote.css');
     // Combine them together.
-    return $pre . "\n" . $scss . "\n" . $post . "\n" . $callout . "\n" . $alerts . "\n" . $legacy;
+    return $pre . "\n" . $scss . "\n" . $post . "\n" . $callout . "\n" . $alerts . "\n" . $pquote . "\n" . $legacy;
 }
 
 /**

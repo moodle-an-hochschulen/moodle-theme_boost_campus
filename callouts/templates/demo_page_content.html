@@ -1,8 +1,6 @@
-<div class="mceTmpl">
-    <div class="mceTmpl">
-        This page shows how HTML elements render by default in UR Courses. Custom-styled blocks appear at the bottom of this page.
-    </div>
-</div>
+<p>
+    This page shows how HTML elements render by default in UR Courses. Custom-styled blocks appear at the bottom of this page.
+</p>
 <hr />
 <p>
     <span style="color: #cc0000;">Paragraph</span>
@@ -42,12 +40,64 @@
         Quisque suscipit fermentum dui, ut porttitor dui elementum ac.
     </p>
 </blockquote>
+<div class="mceTmpl">
+    <blockquote class="pquote float-sm-left ">
+        <p>
+            Pull quote left, dolor sit what, consectetur adipiscing elit. Aliquam luctus tristique ligula, is pretium nunc bibendum
+            a. Suspendisse diam quote, keep me short please.
+        </p>
+    </blockquote>
+</div>
+<p>
+    Floated blockquotes:
+</p>
+<p>
+    Must be placed above the content you want it to be beside.
+</p>
+<p>
+</p>
 <p>
     Donec ullamcorper, nibh vitae viverra facilisis, orci felis faucibus diam, sit amet egestas odio nisl quis ex. Donec hendrerit,
     ipsum et sollicitudin pretium, magna lorem finibus turpis, ut varius lectus leo id nibh. Ut sodales faucibus vestibulum.
     Maecenas eu erat ut ex consequat tempus. Nunc molestie urna sit amet posuere varius. Curabitur neque nibh, iaculis et elit
     vel, pulvinar gravida diam. Mauris eu lectus sodales, ultricies turpis vitae, consequat dolor. Aliquam finibus laoreet risus,
     eu consequat turpis consequat in.
+</p>
+<p>
+</p>
+<div class="mceTmpl">
+    <blockquote class="pquote float-sm-right">
+        <p>
+            Pull quote right, dolor sit what, consectetur adipiscing elit. Aliquam luctus tristique ligula, is pretium nunc bibendum
+            a. Suspendisse diam quote, keep me short please.
+        </p>
+    </blockquote>
+</div>
+<p>
+    Donec ullamcorper, nibh vitae viverra facilisis, orci felis faucibus diam, sit amet egestas odio nisl quis ex. Donec hendrerit,
+    ipsum et sollicitudin pretium, magna lorem finibus turpis, ut varius lectus leo id nibh. Ut sodales faucibus vestibulum.
+    Maecenas eu erat ut ex consequat tempus. Nunc molestie urna sit amet posuere varius. Curabitur neque nibh, iaculis et elit
+    vel, pulvinar gravida diam. Mauris eu lectus sodales, ultricies turpis vitae, consequat dolor. Aliquam finibus laoreet risus,
+    eu consequat turpis consequat in.
+</p>
+<p>
+    Ut vitae tincidunt erat, et consequat magna. Nullam commodo sapien eu blandit lacinia. Duis pulvinar diam sodales mi pulvinar
+    fringilla. Ut semper est enim, in condimentum nisl pharetra quis. In aliquam, enim tristique commodo dignissim, purus turpis
+    ultricies risus, sit amet tempus elit risus at nisl.
+</p>
+<h4 style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; color: #333333;">
+    The Code
+</h4>
+<pre class="prettyprint">
+    &lt;blockquote class="pquote float-sm-left"&gt;
+    <br />
+    &lt;p&gt; your quote here &lt;/p&gt;
+    <br />
+    &lt;/blockquote&gt;
+</pre>
+<p>
+</p>
+<p>
 </p>
 <h1>
     This is an H1 Heading
@@ -1690,15 +1740,10 @@
 <hr />
 <div class="container">
        
-    <img src="https://urcourses.uregina.ca/pluginfile.php/405011/mod_book/chapter/35339/journal-icon.png" alt="Journal" height="48"
-    width="48" />
-       
-    <img src="https://urcourses.uregina.ca/pluginfile.php/405011/mod_book/chapter/35339/lecture-icon.png" alt="Lecture" height="48"
-    width="48" />
-       
-    <img src="https://urcourses.uregina.ca/pluginfile.php/405011/mod_book/chapter/35344/icon-quotes.png" alt="image" height="48"
-    width="48" />
-     
+    <img src="http://localhost/moodle/theme/boost_campus/callouts/lecture.png" class="img-fluid" />
+    <img src="http://localhost/moodle/theme/boost_campus/callouts/journal.png" class="img-fluid" />
+    <img src="http://localhost/moodle/theme/boost_campus/callouts/quotes.png" class="img-fluidat" />
+      
     <img src="http://localhost/moodle/theme/boost_campus/callouts/introduction.png" class="img-fluid" width="48" height="48"
     />
      
@@ -1915,4 +1960,440 @@
     elit nisi, scelerisque nec tincidunt pellentesque, pretium id urna. Slap hairy done heffer fell feud poker horse.
 </p>
 <p>
+</p>
+<hr />
+<p>
+</p>
+<p>
+</p>
+<h3>
+    Dropdowns
+</h3>
+<p>
+    Dropdowns are blocks where the title part is the only part visible until you click it. Then the rest of the content displays
+    as it drops down from under the title.  Clicking again will collapse the dropdown.
+</p>
+<p>
+    Note: If you plan to use these, avoid putting anything but text into the title section. It won't look as good unless you're
+    willing to fiddle with the code and css.
+</p>
+<div class="mceTmpl">
+    <div class="alert alert-info" role="alert">
+        Note: When in the page editor, dropdowns will always be in the open display. It makes them easier to edit and the collapsable
+        version will display correctly on the final page.
+    </div>
+</div>
+<p>
+    This is a single dropdown. If you place more than one of them you <em>absolutely</em>
+    have to change the numbers in the ids otherwise only the first one will be toggleable.
+</p>
+<div class="mceTmpl">
+    <div class="accordion" id="singledrop">
+        <div class="card">
+            <div class="card-header" id="heading">
+                <h2 class="mb-0">
+                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#singlecollapse" aria-expanded="true" aria-controls="collapse"> Dropdown Title </button>
+                </h2>
+            </div>
+            <div id="singlecollapse" class="collapse" aria-labelledby="heading" data-parent="#singledrop">
+                <div class="card-body">
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute,
+                    non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua
+                    put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore
+                    wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table,
+                    raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<p>
+</p>
+<p>
+</p>
+<h5>
+    The Code
+</h5>
+<pre class="prettyprint">
+    &lt;div class="accordion" id="drop1"&gt; &lt;div class="card"&gt; &lt;div class="card-header" id="heading"&gt; &lt;h2 class="mb-0"&gt;
+    &lt;button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse1" aria-expanded="true" aria-controls="collapse"&gt;
+    Your dropdown title &lt;/button&gt; &lt;/h2&gt; &lt;/div&gt; &lt;/div&gt; &lt;div id="collapse1" class="collapse" aria-labelledby="heading"
+    data-parent="#drop1"&gt; &lt;div class="card-body"&gt; Your content here &lt;/div&gt; &lt;/div&gt; &lt;/div&gt;
+</pre>
+<p>
+</p>
+<p>
+    This is an accordion dropdown. Only one of the toggled dropdowns will display at a time when clicked. Again this will always
+    been shown as open for all dropdowns in the accordion when using the editor. If you're worried it isn't working you can always
+    save one in your page and check the final version. 
+</p>
+<p>
+    Any trouble with toggling dropdowns is usually because you have dropdowns sharing id names or the paired names in the dropdown
+    tags which aren't the same due to a typo. 
+</p>
+<p>
+</p>
+<div class="accordion" id="accordionExample">
+    <div class="card">
+        <div class="card-header" id="headingOne">
+            <h2 class="mb-0">
+                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"> Collapsible Group Item #1 </button>
+            </h2>
+        </div>
+        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+            <div class="card-body">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute,
+                non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua
+                put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore
+                wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table,
+                raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header" id="headingTwo">
+            <h2 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
+                aria-controls="collapseTwo"> Collapsible Group Item #2 </button>
+            </h2>
+        </div>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+            <div class="card-body">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute,
+                non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua
+                put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore
+                wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table,
+                raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header" id="headingThree">
+            <h2 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false"
+                aria-controls="collapseThree"> Collapsible Group Item #3 </button>
+            </h2>
+        </div>
+        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+            <div class="card-body">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute,
+                non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua
+                put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore
+                wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table,
+                raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+            </div>
+        </div>
+    </div>
+</div>
+<p>
+</p>
+<h5>
+    The Code
+</h5>
+<pre class="prettyprint">
+    &lt;div class="accordion" id="accordion"&gt; &lt;div class="card"&gt; &lt;div class="card-header" id="headingOne"&gt; &lt;h2
+    class="mb-0"&gt; &lt;button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+    aria-controls="collapseOne"&gt; Title for the first dropdown &lt;/button&gt; &lt;/h2&gt; &lt;/div&gt; &lt;/div&gt; &lt;div
+    id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion"&gt; &lt;div class="card-body"&gt;
+    Your content here &lt;/div&gt; &lt;/div&gt;
+    <br />
+    &lt;div class="card"&gt; &lt;div class="card-header" id="headingTwo"&gt; &lt;h2 class="mb-0"&gt; &lt;button class="btn btn-link"
+    type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo"&gt; Title
+    for the second dropdown &lt;/button&gt;
+    <br />
+    &lt;/h2&gt;
+    <br />
+    &lt;/div&gt; &lt;/div&gt; &lt;div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion"&gt;
+    &lt;div class="card-body"&gt; Your content here &lt;/div&gt; &lt;/div&gt; &lt;div class="card"&gt;
+    <br />
+    &lt;div class="card-header" id="headingThree"&gt; &lt;h2 class="mb-0"&gt; &lt;button class="btn btn-link" type="button"
+    data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree"&gt; Title for the
+    Third dropdown &lt;/button&gt; &lt;/h2&gt; &lt;/div&gt; &lt;/div&gt; &lt;div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+    data-parent="#accordion"&gt; &lt;div class="card-body"&gt; Your content here &lt;/div&gt; &lt;/div&gt;
+    <br />
+    &lt;/div&gt;
+</pre>
+<div class="mceTmpl">
+    <div class="alert alert-warning" role="alert">
+        Remember to change the numbers in the quotes in the above code if you want to add more to the accordion!
+    </div>
+    <div class="alert alert-warning" role="alert">
+        If you have more than one accordion you need to change all of the matching name sets and the id of the other accordions
+        so they aren't competing for the toggle!
+    </div>
+</div>
+<hr />
+<p>
+</p>
+<p>
+</p>
+<h3>
+    Card Blocks
+</h3>
+<p>
+    These can just be used to as a quick pop out for anything you'd like. If you want to make them float, all you need to do
+    is add "float-sm-left" or "float-sm-right" into the class brackets of the outermost divs. Make sure to keep the class card
+    in with a space between the two class types.  
+</p>
+<p>
+    To make them wider, just increase the number on the width value. 
+</p>
+<div class="mceTmpl">
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+            <h2 class="card-title">
+                Title
+            </h2>
+            <hr />
+            <div class="card-text content mt-3">
+                <p>
+                    Some quick example text to build on the card title and make up the bulk of the card's content.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<p>
+</p>
+<h5>
+    The Code
+</h5>
+<pre class="prettyprint">
+    &lt;div class="card" style="width:18rem;"&gt; &lt;div class="card-body"&gt;
+    <br />
+    &lt;h2 class="card-title"&gt; Title &lt;/h2&gt; &lt;hr /&gt; &lt;div class="card-text content mt-3"&gt; &lt;p&gt; your content
+    here &lt;/p&gt; &lt;/div&gt;
+    <br />
+    &lt;/div&gt; &lt;/div&gt;
+</pre>
+<p>
+    This card has a picture on top to make it fancy. It's good for anything you want to pop out with a picture and text underneath.
+    Keep it short though or it defeats the purpose of the card. 
+</p>
+<p>
+    If you want a longer block, use a centered image where the header text of a blank callout would be. 
+</p>
+<div class="mceTmpl">
+    <div class="card" style="width: 18rem;">
+        <img src="http://localhost/moodle/theme/boost_campus/pix/imaginarium.jpg" class="card-img-top img-fluid" alt="..." />
+        <div class="card-body">
+            <h5 class="card-title">
+                Card title
+            </h5>
+            <p class="card-text">
+                Some quick example text to build on the card title and make up the bulk of the card's content.
+            </p>
+        </div>
+    </div>
+</div>
+<p>
+</p>
+<h5>
+    The Code
+</h5>
+<pre class="prettyprint">
+    &lt;div class="card" style="width:18rem;"&gt; &lt;img src=".." class="card-img-top img-fluid" alt="..." &lt;div class="card-body"&gt;
+    &lt;h5 class="card-title"&gt; Title &lt;/h5&gt; &lt;p class="card-text"&gt; your content here &lt;/p&gt; &lt;/div&gt; &lt;/div&gt;
+</pre>
+<hr />
+<p>
+</p>
+<p>
+</p>
+<h3>
+    Alerts
+</h3>
+<p>
+    Alerts are short blocks of text meant to draw attention for something important. These can be inserted anywhere and will
+    adjust their length to fit the area you've inserted them into.
+</p>
+<p>
+    Don't float anything beside the alerts, these go over top of anything that has been floated.
+</p>
+<h4>
+    The Code
+</h4>
+<pre class="prettyprint">
+    &lt;div class="alert alert-info" role="alert"&gt; alert text &lt;/div&gt;
+</pre>
+<div class="mceTmpl">
+    <div class="alert alert-info" role="alert">
+        My colour comes from the class "alert-info"!
+    </div>
+</div>
+<div class="mceTmpl">
+    <div class="callout">
+        <h2>
+            A Callout Block
+        </h2>
+        <div class="mceTmpl">
+            <div class="alert alert-info" role="alert">
+                My colour comes from the class "alert-info"!
+            </div>
+        </div>
+    </div>
+</div>
+<div class="mceTmpl">
+    <div class="alert alert-success" role="alert">
+        My colour comes from the class "alert-success"!
+    </div>
+</div>
+<div class="mceTmpl">
+    <div class="alert alert-warning" role="alert">
+        My colour comes from the class "alert-warning"!
+    </div>
+</div>
+<div class="mceTmpl">
+    <div class="mceTmpl">
+        <figure class="img-thumbnail mx-auto" style="width: fit-content;">
+            <img src="http://localhost/moodle/theme/boost_campus/pix/imaginarium.jpg" class="img-fluid" alt="..." />
+            <figcaption class="figure-caption text-center">
+                <div class="mceTmpl">
+                    <div class="alert alert-purple" role="alert">
+                        If an alert is placed in a caption it looks like this.
+                    </div>
+                </div>
+            </figcaption>
+        </figure>
+    </div>
+</div>
+<div class="mceTmpl">
+</div>
+<div class="mceTmpl">
+    <div class="alert alert-danger" role="alert">
+        My colour comes from the class "alert-danger"!
+    </div>
+</div>
+<p>
+</p>
+<div class="mceTmpl">
+    <div class="alert alert-purple" role="alert">
+        My colour comes from the class "alert-purple"!
+    </div>
+</div>
+<p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam luctus tristique ligula, eu pretium nunc bibendum et. Suspendisse
+    diam dui, gravida fermentum auctor eget, luctus a eros. Nunc lacinia nunc ut nulla lacinia, vel porttitor nisl sollicitudin.
+    Cras ut orci porta, placerat nibh sed, iaculis purus. Mauris eros augue, tristique at ante eget, hendrerit mattis erat. Cras
+    elit nisi, scelerisque nec tincidunt pellentesque, pretium id urna.
+</p>
+<p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam luctus tristique ligula, eu pretium nunc bibendum et. Suspendisse
+    diam dui, gravida fermentum auctor eget, luctus a eros. Nunc lacinia nunc ut nulla lacinia, vel porttitor nisl sollicitudin.
+    Cras ut orci porta, placerat nibh sed, iaculis purus. Mauris eros augue, tristique at ante eget, hendrerit mattis erat. Cras
+    elit nisi, scelerisque nec tincidunt pellentesque, pretium id urna. Slap hairy done heffer fell feud poker horse.
+</p>
+<div class="mceTmpl">
+    <div class="alert alert-light" role="alert">
+        My colour comes from the class "alert-light"!
+    </div>
+</div>
+<p>
+</p>
+<div class="mceTmpl">
+    <div class="alert alert-dark" role="alert">
+        My colour comes from the class "alert-dark"!
+    </div>
+</div>
+<p>
+</p>
+<hr />
+<p>
+</p>
+<p>
+</p>
+<h3>
+    Buttons
+</h3>
+<p>
+    Buttons need a bit of work if you want them to have a link. Clicking to the right of the button and holding down the mouse
+    button as you move over it until all the text is highlighted will select the entire button for you.
+</p>
+<p>
+    Next you'll see the washed out chain icons at the top of the editor toolbar are darkened as long as the text is highlighted.
+    So leave the text highlighted by only clicking on button with a linked chain. This will open up a menu in which you'll see
+    a section you can paste your URL in. Save that and your button is ready to take people places!
+</p>
+<p>
+</p>
+<p>
+    As for the button html code, all you need to change is the class to change the color. The template does have all of the
+    button types ready for you to save some time though.
+</p>
+<h4>
+    The Code
+</h4>
+<pre class="prettyprint">
+    &lt;button type ="button" class="btn btn-primary"&gt; button text &lt;/button&gt;
+</pre>
+<p>
+    This is a primary button, the class is "btn btn-primary"
+</p>
+<div class="mceTmpl">
+    <button type="button" class="btn btn-primary"> Link me</button>
+</div>
+<p>
+</p>
+<p>
+    This is a secondary button, the class is "btn btn-secondary"
+</p>
+<div class="mceTmpl">
+    <button type="button" class="btn btn-secondary"> Link me </button>
+</div>
+<p>
+</p>
+<p>
+    This is a red button, the class is "btn btn-danger"
+</p>
+<div class="mceTmpl">
+    <button type="button" class="btn btn-danger"> Link me </button>
+</div>
+<p>
+</p>
+<p>
+    This is a yellow button, the class is "btn btn-warning"
+</p>
+<div class="mceTmpl">
+    <button type="button" class="btn btn-warning"> Link me </button>
+</div>
+<p>
+</p>
+<p>
+    This is a green button, the class is "btn btn-success"
+</p>
+<div class="mceTmpl">
+    <button type="button" class="btn btn-success"> Link me </button>
+</div>
+<p>
+</p>
+<p>
+    This is a blue button, the class is "btn btn-info"
+</p>
+<div class="mceTmpl">
+    <button type="button" class="btn btn-info"> Link me </button>
+</div>
+<p>
+</p>
+<p>
+    This is a light button, the class is "btn btn-light"
+</p>
+<div class="mceTmpl">
+    <button type="button" class="btn btn-light"> Link me </button>
+</div>
+<p>
+</p>
+<p>
+    This is a dark button, the class is "btn btn-dark"
+</p>
+<div class="mceTmpl">
+    <button type="button" class="btn btn-dark"> Link me </button>
+</div>
+<p>
+</p>
+<p>
+</p>
+<p>
+</p>
+<p>
+    <span style="color: #cc0000;">Nested <strong>Blockquote</strong></span><strong style="font-size: 17.5px; background-color: #fafafa;"></strong><span style="font-size: 17.5px; background-color: #fafafa;"> Phasellus at lacus semper ante mattis tempus ornare luctus lorem. Sed nec feugiat nulla, nec elementum tellus. Suspendisse varius ipsum nec metus dignissim, a lobortis lectus elementum.</span>
 </p>

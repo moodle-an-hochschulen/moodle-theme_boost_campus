@@ -1,0 +1,31 @@
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    -webkit-background-clip: border-box;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    }
+    
+    .card-header {
+      padding: .75rem 1.25rem;
+      margin-bottom: 0;
+      background-color: rgba(0,0,0,.03);
+      border-bottom: 1px solid rgba(0,0,0,.125);
+    }
+    
+    .card-body {
+      flex: 1 1 auto;
+      padding: 1.25rem;
+    }
+    
+    mb-0 {
+      margin-bottom: 0!important;
+    }
+    
+    h2 {
+      font-size: 1.875rem;
+    }

@@ -1,0 +1,27 @@
+.carousel {
+    background-color: #040404;
+    position:relative;
+  }
+  
+  .carousel-item {
+    position: relative;
+    display: inline-block;
+    align-items: center;
+    width: 100%;
+    -webkit-transition: transform .6s ease;
+    -o-transition: transform .6s ease;
+    transition: transform .6s ease;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-perspective: 1000px;
+    perspective: 1000px;
+  }
+  .carousel-item.active, .carousel-item-next, .carousel-item-prev {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .carousel-inner {
+    position: relative;
+    width: 100%;
+    overflow: visible;
+  }

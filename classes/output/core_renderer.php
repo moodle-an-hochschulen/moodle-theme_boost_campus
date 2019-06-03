@@ -214,7 +214,16 @@ class core_renderer extends \theme_boost\output\core_renderer {
         $header->instructors = $this->course_authornames();
 		$hascoursecat = $this->ur_check_course_cat();
 		$coursecat = (!empty($hascoursecat)) ? $hascoursecat['name'] : 'Default';
-		$header->facultydep = $coursecat;
+        $header->facultydep = $coursecat;
+        
+        // JL EDIT - Add course image uploader button.
+        // This button should only appear if user is editing.
+        // If we are on the main page of a course, add the cover image selector (COPIED FROM SNAP).
+        if ($COURSE->id !== SITEID) {
+            if (strpos($this->page->url, '/course/view.php')) {
+                $header->course_image_uploader = $this->get_course_image_uploader();
+            }
+        }
 		
         $context = \context_course::instance($COURSE->id);
 		
@@ -302,6 +311,26 @@ class core_renderer extends \theme_boost\output\core_renderer {
         }
         // MODIFICATION END.
         return $html;
+    }
+
+    /**
+     * Gets markup for image uploader button.
+     * @return string - Upload button markup, or false if user is not editing and doesn't have permission.
+     */
+    public function get_course_image_uploader() {
+        global $CFG, $COURSE;
+        
+        if ($this->page->user_is_editing()) {
+            $context = [
+                'supported_types' => 'image/png,image/jpeg,image/gif',
+                'maxbytes' => get_max_upload_file_size($CFG->maxbytes),
+                'courseid' => $COURSE->id,
+            ];
+            return $this->render_from_template('theme_boost_campus/header_course_image_uploader', $context);
+        }
+        else {
+            return false;
+        }
     }
 
 

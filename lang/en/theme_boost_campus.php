@@ -203,3 +203,9 @@ $string['switchroleto'] = 'Switch role to';
 
 // PRIVACY.
 $string['privacy:metadata'] = 'The UR Courses default theme does not store any personal data about any user.';
+
+// HEADER
+$string['change_course_image'] = "Change Course Image";
+
+// ERROR
+$string['error:courseimageexceedsmaxbytes'] = 'Cover image exceeds the site level maximum allowed file size ({$a})';

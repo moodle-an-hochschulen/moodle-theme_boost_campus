@@ -21,7 +21,7 @@
  * 
  */
 
-define(['jquery', 'core/ajax', 'core/notification'], function($, ajax, notification) {
+define(['jquery', 'core/ajax', 'core/notification', 'core/str'], function($, ajax, notification, str) {
 
     /** Container jquery object. */
     var _root;
@@ -99,11 +99,17 @@ define(['jquery', 'core/ajax', 'core/notification'], function($, ajax, notificat
 
         // if file was not an image, return
         if (!file.type.match('image.*')) {
+            str.get_string('error:courseimageinvalidfiletype', 'theme_boost_campus')
+                .done(_createErrorPopup);
+
             return;
         }
 
         // if the file is too big, return
         if (file.size > _maxbytes) {
+            str.get_string('error:courseimageexceedsmaxbytes', 'theme_boost_campus', _humanFileSize(_maxbytes))
+                .done(_createErrorPopup);
+
             return;
         }
 
@@ -130,7 +136,7 @@ define(['jquery', 'core/ajax', 'core/notification'], function($, ajax, notificat
 
         // show confirm/cancel buttons
         _root.addClass('confirm');
-        
+
         // init _imagedata
         imagedata = imagedata.split('base64,')[1];
         _setImageData(imagedata);
@@ -146,14 +152,14 @@ define(['jquery', 'core/ajax', 'core/notification'], function($, ajax, notificat
         }
 
         // set args
-        args = {
+        var args = {
             courseid: _courseid,
             imagedata: _imagedata,
             imagename: _imagename,
         };
 
         // set ajax call
-        ajaxCall = {
+        var ajaxCall = {
             methodname: 'theme_boost_campus_upload_course_image',
             args: args,
             done: _uploadDone,
@@ -168,8 +174,19 @@ define(['jquery', 'core/ajax', 'core/notification'], function($, ajax, notificat
      * Handles theme_boost_campus_upload_course_image response data.
      * @param {Object} response 
      */
-    var _uploadDone = function(response) {
+    var _uploadDone = function() {
+        // unset image data
+        _setImageData('');
+        _setImageName('');
+
+        // remove confirm/cancel buttons
         _root.removeClass('confirm');
+
+        // unset course original image data
+        $(SELECTORS.HEADER).data('original_image', '');
+
+        str.get_string('success:courseimageuploaded', 'theme_boost_campus')
+            .done(_createSuccessPopup);
     };
 
     /**
@@ -186,6 +203,72 @@ define(['jquery', 'core/ajax', 'core/notification'], function($, ajax, notificat
 
         // hide save/cancel buttons
         _root.removeClass('confirm');
+    };
+
+    /**
+     * Creates a bootstrap dismissable containing error text. 
+     * Dismissable should appear in header and should cover upload button.
+     * @param {string} text Error text
+     */
+    var _createErrorPopup = function(text) {
+        // create bootstrap 4 dismissable
+        var popup = $('<div></div>');
+        popup.text(text);
+        popup.css({'position' : 'absolute'});
+        popup.css({'right' : '5px'});
+        popup.addClass('alert alert-danger alert-dismissable fade show');
+
+        // create dismiss button
+        var dismissBtn = $('<button></button>');
+        dismissBtn.html('&times;');
+        dismissBtn.addClass('close');
+        dismissBtn.attr('type', 'button');
+        dismissBtn.attr('data-dismiss', 'alert');
+
+        // append dismiss button to popup
+        popup.append(dismissBtn);
+
+        // add to header's course image area
+        $(SELECTORS.HEADER_TOP).append(popup);
+    };
+
+    /**
+     * Creates a bootstrap dismissable containing success text.
+     * Dismissable should appear in header and should cover upload button.
+     * @param {string} text Success text.
+     */
+    var _createSuccessPopup = function(text) {
+        // create bootstrap 4 dismissable
+        var popup = $('<div></div>');
+        popup.text(text);
+        popup.css({'position' : 'absolute'});
+        popup.css({'right' : '5px'});
+        popup.addClass('alert alert-success alert-dismissable fade show');
+
+        // create dismiss button
+        var dismissBtn = $('<button></button>');
+        dismissBtn.html('&times;');
+        dismissBtn.addClass('close');
+        dismissBtn.attr('type', 'button');
+        dismissBtn.attr('data-dismiss', 'alert');
+
+        // append dismiss button to popup
+        popup.append(dismissBtn);
+
+        // add to header's course image area
+        $(SELECTORS.HEADER_TOP).append(popup);
+    };
+
+    /**
+     * Taken from theme_snap.
+     * Get human file size from bytes.
+     * https://stackoverflow.com/questions/10420352/converting-file-size-in-bytes-to-human-readable.
+     * @param {int} size
+     * @returns {string}
+     */
+    var _humanFileSize = function(size) {
+        var i = Math.floor(Math.log(size) / Math.log(1024));
+        return (size / Math.pow(1024, i)).toFixed(2) * 1 + ' ' + ['B', 'KB', 'MB', 'GB', 'TB'][i];
     };
 
     /**

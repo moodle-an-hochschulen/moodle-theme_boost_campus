@@ -208,4 +208,8 @@ $string['privacy:metadata'] = 'The UR Courses default theme does not store any p
 $string['change_course_image'] = "Change Course Image";
 
 // ERROR
-$string['error:courseimageexceedsmaxbytes'] = 'Cover image exceeds the site level maximum allowed file size ({$a})';
+$string['error:courseimageexceedsmaxbytes'] = 'Image too large! Course image exceeds maximum allowed file size ({$a})';
+$string['error:courseimageinvalidfiletype'] = 'Invalid file type! Course image must be .png, .jpeg, or .gif';
+
+// SUCCESS
+$string['success:courseimageuploaded'] = 'Course image changed';

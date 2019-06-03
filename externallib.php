@@ -34,19 +34,7 @@ class theme_boost_campus_external extends external_api {
      * @return external_function_parameters
      */
     public static function upload_course_image_parameters() {
-        return new external_function_parameters(array (
-            'courseid' => new external_value(PARAM_INT),
-            'imagedata' => new external_value(PARAM_TEXT),
-            'imagename' => new external_value(PARAM_TEXT),
-        ));
-    }
-
-    /**
-     * Describes upload_couse_image return value.
-     * @return external_single_structure
-     */
-    public static function upload_course_image_returns() {
-        return new external_single_structure(
+        return new external_function_parameters(
             array(
             'courseid' => new external_value(PARAM_INT),
             'imagedata' => new external_value(PARAM_TEXT),
@@ -56,11 +44,19 @@ class theme_boost_campus_external extends external_api {
     }
 
     /**
+     * Describes upload_couse_image return value.
+     * @return external_single_structure
+     */
+    public static function upload_course_image_returns() {
+        return new external_single_structure(array('success' => new external_value(PARAM_BOOL)));
+    }
+
+    /**
      * Changes course header image.
      * @param int $courseid - ID of course.
      * @param string $imagedata - Raw image data.
      * @param string $imagename - Name of image.
-     * @return string $image - New image data.
+     * @return bool $success - Whether or not the image was uploaded properly.
      */
     public static function upload_course_image($courseid, $imagedata, $imagename) {
         global $CFG;
@@ -86,9 +82,16 @@ class theme_boost_campus_external extends external_api {
         $new_filename = 'courseimage.' . $filetype;
 
         $binary_data = base64_decode($params['imagedata']);
-        // if (strlen($binary_data) > max_file_upload_size($CFG->maxbytes)) {
-        //     throw new \moodle_exception('error:courseimageexceedsmaxbytes', 'theme_boost_campus');
-        // }
+
+        // verify size
+        if (strlen($binary_data) > get_max_upload_file_size($CFG->maxbytes)) {
+            throw new \moodle_exception('error:courseimageexceedsmaxbytes', 'theme_boost_campus', $CFG->maxbytes);
+        }
+
+        // verify filetype
+        if ($filetype !== 'jpg' && $filetype !== 'png' && $filetype !== 'gif') {
+            throw new \moodle_exception('error:courseimageinvalidfiletype', 'theme_boost_campus');
+        }
 
         if ($context->contextlevel === CONTEXT_COURSE) {
             $fileinfo = array(
@@ -105,14 +108,11 @@ class theme_boost_campus_external extends external_api {
 
             // Create and set new image.
             $storedfile = $filestorage->create_file_from_string($fileinfo, $binary_data);
+            $success = $storedfile instanceof \stored_file;
         }
 
         // return
-        return array(
-            'courseid' => $params['courseid'],
-            'imagedata' => $params['imagedata'],
-            'imagename' => $new_filename,
-        );
+        return array('success' => $success);
     }
 
 }

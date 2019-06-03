@@ -20,7 +20,7 @@
             "description": "creates a container with an editable caption for images."
         },
         {
-            "title": "Immage Captioned Floated right",
+            "title": "Image Captioned Floated right",
             "src": "theme/boost_campus/callouts/templates/image_caption_right.html",
             "description": "creates a floated container with an editable caption for images."
         },
@@ -34,16 +34,7 @@
             "src": "theme/boost_campus/callouts/templates/carousel.html",
             "description": "creates a slideshow for your images. Make sure all of your images are inside the block with the black background and are the same height. To add or insert new images, make sure to put the link inside a <div> class=carousel-item in the html view for it to be a part of the slideshow."
         },
-        {
-            "title": "Card Block",
-            "src": "theme/boost_campus/callouts/templates/card.html",
-            "description": "Creates a card on the page."
-        },
-        {
-            "title": "Card Block with Image Top",
-            "src": "theme/boost_campus/callouts/templates/image_card.html",
-            "description": "Creates a card on the page that's underneath an attached image."
-        },
+
         {
             "title": "Drop Down Block",
             "src": "theme/boost_campus/callouts/templates/dropdown.html",
@@ -245,9 +236,49 @@
             "description": "Adds a dark grey coloured block with text to match."
         },
         {
-            "title": "Button",
-            "src": "theme/boost_campus/callouts/templates/button.html",
+            "title": "Button Primary",
+            "src": "theme/boost_campus/callouts/templates/button_primary.html",
             "description": "Adds a button for your page. To link, select the text and clink the chain looking link button in the editor toolbar."
+        },
+        {
+            "title": "Button Secondary",
+            "src": "theme/boost_campus/callouts/templates/button_secondary.html",
+            "description": "Adds a button for your page. To link, select the text and clink the chain looking link button in the editor toolbar."
+        },
+        {
+            "title": "Button Danger",
+            "src": "theme/boost_campus/callouts/templates/button_danger.html",
+            "description": "Adds a button for your page. To link, select the text and clink the chain looking link button in the editor toolbar."
+        },
+        {
+            "title": "Button Dark",
+            "src": "theme/boost_campus/callouts/templates/button_dark.html",
+            "description": "Adds a button for your page. To link, select the text and clink the chain looking link button in the editor toolbar."
+        },
+        {
+            "title": "Button Info",
+            "src": "theme/boost_campus/callouts/templates/button_info.html",
+            "description": "Adds a button for your page. To link, select the text and clink the chain looking link button in the editor toolbar."
+        },
+        {
+            "title": "Button Success",
+            "src": "theme/boost_campus/callouts/templates/button_success.html",
+            "description": "Adds a button for your page. To link, select the text and clink the chain looking link button in the editor toolbar."
+        },
+        {
+            "title": "Button Warning",
+            "src": "theme/boost_campus/callouts/templates/button_warning.html",
+            "description": "Adds a button for your page. To link, select the text and clink the chain looking link button in the editor toolbar."
+        },
+        {
+            "title": "Card Block",
+            "src": "theme/boost_campus/callouts/templates/card.html",
+            "description": "Creates a card on the page."
+        },
+        {
+            "title": "Card Block with Image Top",
+            "src": "theme/boost_campus/callouts/templates/image_card.html",
+            "description": "Creates a card on the page that's underneath an attached image."
         },
         {
             "title": "Pull Quote - Align Right",

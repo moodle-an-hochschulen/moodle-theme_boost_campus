@@ -294,6 +294,7 @@ class core_renderer extends \core_renderer {
         $showfrontpagemenu = false;
         $showusermenu = false;
 
+        // We are on the course home page.
         // MODIFICATION START.
         // REASON: With the original code, the course settings icon will only appear on the course main page.
         // Therefore the access to the course settings and related functions is not possible on other
@@ -316,7 +317,7 @@ class core_renderer extends \core_renderer {
         $courseformat = course_get_format($this->page->course);
         // This is a single activity course format, always show the course menu on the activity main page.
         if ($context->contextlevel == CONTEXT_MODULE &&
-            !$courseformat->has_view_page()) {
+                !$courseformat->has_view_page()) {
 
             $this->page->navigation->initialise();
             $activenode = $this->page->navigation->find_active_node();
@@ -324,7 +325,7 @@ class core_renderer extends \core_renderer {
             if ($this->page->is_settings_menu_forced()) {
                 $showcoursemenu = true;
             } else if (!empty($activenode) && ($activenode->type == navigation_node::TYPE_ACTIVITY ||
-                    $activenode->type == navigation_node::TYPE_RESOURCE)) {
+                        $activenode->type == navigation_node::TYPE_RESOURCE)) {
 
                 // We only want to show the menu on the first page of the activity. This means
                 // the breadcrumb has no additional nodes.
@@ -336,15 +337,15 @@ class core_renderer extends \core_renderer {
 
         // This is the site front page.
         if ($context->contextlevel == CONTEXT_COURSE &&
-            !empty($currentnode) &&
-            $currentnode->key === 'home') {
+                !empty($currentnode) &&
+                $currentnode->key === 'home') {
             $showfrontpagemenu = true;
         }
 
         // This is the user profile page.
         if ($context->contextlevel == CONTEXT_USER &&
-            !empty($currentnode) &&
-            ($currentnode->key === 'myprofile')) {
+                !empty($currentnode) &&
+                ($currentnode->key === 'myprofile')) {
             $showusermenu = true;
         }
 
@@ -450,5 +451,9 @@ class core_renderer extends \core_renderer {
             return $this->render_from_template('core/help_icon', $context);
         }
         // MODIFICATION END.
+        /* ORIGINAL START.
+        $context = $helpicon->export_for_template($this);
+        return $this->render_from_template('core/help_icon', $context);
+        ORIGINAL END. */
     }
 }

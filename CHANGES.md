@@ -6,6 +6,7 @@ Changes
 
 ### Unreleased
 
+* 2019-06-03 - Further formal changes to the renderers to be constistent with Moodle core.
 * 2019-05-31 - Adjusted function render_help_icon() in core_renderer.php due to upstream changes in theme Boost.
 * 2019-05-31 - Adjusted function render_login() in core_renderer.php due to upstream changes in theme Boost.
 * 2019-05-31 - Adjusted function context_header_settings_menu() in core_renderer.php due to upstream changes in theme Boost.

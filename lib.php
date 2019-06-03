@@ -66,8 +66,10 @@ function theme_boost_campus_get_main_scss_content($theme) {
     $legacy = file_get_contents($CFG->dirroot . '/theme/boost_campus/style/legacy.css');
     //callout css
     $callout = file_get_contents($CFG->dirroot . '/theme/boost_campus/style/callout.css');
+    //alert override css
+    $alerts = file_get_contents($CFG->dirroot . '/theme/boost_campus/style/alert.css');
     // Combine them together.
-    return $pre . "\n" . $scss . "\n" . $post . "\n" . $callout . "\n" . $legacy;
+    return $pre . "\n" . $scss . "\n" . $post . "\n" . $callout . "\n" . $alerts . "\n" . $legacy;
 }
 
 /**

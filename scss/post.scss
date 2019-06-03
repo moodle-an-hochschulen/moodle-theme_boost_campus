@@ -1626,3 +1626,13 @@ ul.ctopics .content .section ul {
     top: 0;
     height: auto;
 }
+
+//carousel bg override to make the controls easier to see
+.carousel {
+    background-color: #040404;
+}
+
+//content editor pg targeting the column next to it. If max width is lowered there is no overflow so no pg scroll
+#page-mod-book-edit .col-md-3{
+    max-width: 20%;
+}

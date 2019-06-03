@@ -1,6 +1,6 @@
 /*darkmode css*/
 
-a, #boost-campus-course-settings .card-body a, .ui-widget-content a {
+a, #boost-campus-course-settings .card-body a, .ui-widget-content a, .btn-link {
     color: #e2d2a2;
  }
 
@@ -11,6 +11,7 @@ a, #boost-campus-course-settings .card-body a, .ui-widget-content a {
  ol.checklist .itemblack, .block_writinghelp .card-text a h4, .popover-body {
     color: #fff9e8;
  }
+
 
  /*Need to add a bg to red text to keep contrast ratio up*/
  .checklist-itemoverdue {
@@ -319,6 +320,23 @@ ul.oublog-accordion li {
 #region-main, .region_main_settings_menu_proxy, .ui-widget-content {
     background-color: #4f4f4d;
     color: #fffbef;
+}
+
+.callout-blue {
+    background-color: #c1d9ed;
+    border-color: #0766b7;
+    color: #373a3c;
+}
+
+.callout-yellow{
+    background-color: #feefc3;
+    border-color: #f90;
+    color: #373a3c;
+}
+
+.callout-aqua {
+    background-color: #359aae;
+    color: #fff;
 }
 
 /*psuedo classes*/

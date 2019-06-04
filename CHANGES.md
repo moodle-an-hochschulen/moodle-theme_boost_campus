@@ -4,7 +4,7 @@ moodle-theme_boost_campus
 Changes
 -------
 
-### Unreleased
+### Release v3.7-r1
 
 * 2019-06-04 - Further formal changes to the course_renderer to be constistent with Moodle core.
 * 2019-06-04 - Adjusted function coursecat_coursebox() in course_renderer.php due to upstream changes in theme Boost.

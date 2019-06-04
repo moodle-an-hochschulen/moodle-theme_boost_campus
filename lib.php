@@ -190,3 +190,31 @@ function theme_urcourses_default_reset_app_cache() {
     // we also delete the complete theme cache here.
     theme_reset_all_caches();
 }
+
+/**
+ * Inplace editable elements for boost campus theme.
+ * @param string $itemtype
+ * @param int $itemid
+ * @param string $newvalue
+ * @return \core\output\inplace_editable
+ */
+function theme_boost_campus_inplace_editable($itemtype, $itemid, $newvalue) {
+    // coursename: allows instructors to change course name inline if editing is on
+    if ($itemtype === 'coursename') {
+        global $CFG;
+
+        $course = get_course($itemid);
+        $context = context_course::instance($course->id);
+        $newvalue = clean_param($newvalue, PARAM_TEXT);
+
+        \external_api::validate_context($context);
+        require_capability('moodle/course:changefullname', $context);
+
+        $course->fullname = $newvalue;
+        update_course($course);
+
+        $can_edit_coursename = has_capability('moodle/course:changefullname', $context);
+        $course_link = '<h1 class="d-inline"><a href="'.$CFG->wwwroot.'/course/view.php?id='.$course->id.'">'.$course->fullname.'</a></h1>';
+        return new \core\output\inplace_editable('theme_boost_campus', 'coursename', $course->id, $can_edit_coursename, $course_link, format_string($course->fullname));
+    }
+}

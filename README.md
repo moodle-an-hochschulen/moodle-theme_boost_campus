@@ -1,7 +1,7 @@
-moodle-theme_boost_campus
+moodle-theme_urcourses_default
 =========================
 
-[![Build Status](https://travis-ci.org/moodleuulm/moodle-theme_boost_campus.svg?branch=master)](https://travis-ci.org/moodleuulm/moodle-theme_boost_campus)
+[![Build Status](https://travis-ci.org/moodleuulm/moodle-theme_urcourses_default.svg?branch=master)](https://travis-ci.org/moodleuulm/moodle-theme_urcourses_default)
 
 Moodle Boost child theme which is intended to meet the needs of university campuses and adds several features and improvements
 
@@ -23,7 +23,7 @@ Installation
 ------------
 
 Install the plugin like any other theme to folder
-/theme/boost_campus
+/theme/urcourses_default
 
 See http://docs.moodle.org/en/Installing_plugins for details on installing Moodle plugins
 
@@ -55,7 +55,7 @@ This setting is already available in the Moodle core theme Boost. For more infor
 #### Background image
 
 This setting is already available in the Moodle core theme Boost. For more information how to use it, please have a look at the official Moodle documentation: http://docs.moodle.org/en/Boost_theme
-Please note: This will not override the setting "theme_boost_campus | loginbackgroundimage" which means that the pictures uploaded to the login page background will be displayed anyway.
+Please note: This will not override the setting "theme_urcourses_default | loginbackgroundimage" which means that the pictures uploaded to the login page background will be displayed anyway.
 
 #### Brand colors
 
@@ -233,57 +233,57 @@ First you have to add all font-faces correctly and then you can set the font as 
         font-style: normal;
         font-weight: 400;
         /* IE9 Compat Modes */
-        src: url("/pluginfile.php/1/theme_boost_campus/fontfiles/0/your-font-latin-regular.eot");
+        src: url("/pluginfile.php/1/theme_urcourses_default/fontfiles/0/your-font-latin-regular.eot");
         src: local("Your Font"), local("YourFont-Regular"),
                /* IE6-IE8 */
-                url("/pluginfile.php/1/theme_boost_campus/fontfiles/0/your-font-latin-regular.eot?#iefix") format("embedded-opentype"),
+                url("/pluginfile.php/1/theme_urcourses_default/fontfiles/0/your-font-latin-regular.eot?#iefix") format("embedded-opentype"),
                 /* Super Modern Browsers */
-                url("/pluginfile.php/1/theme_boost_campus/fontfiles/0/your-font-latin-regular.woff2") format("woff2"),
+                url("/pluginfile.php/1/theme_urcourses_default/fontfiles/0/your-font-latin-regular.woff2") format("woff2"),
                 /* Modern Browsers */
-                url("/pluginfile.php/1/theme_boost_campus/fontfiles/0/your-font-latin-regular.woff") format("woff"),
+                url("/pluginfile.php/1/theme_urcourses_default/fontfiles/0/your-font-latin-regular.woff") format("woff"),
                 /* Safari, Android, iOS */
-                url("/pluginfile.php/1/theme_boost_campus/fontfiles/0/your-font-latin-regular.ttf") format("truetype"),
+                url("/pluginfile.php/1/theme_urcourses_default/fontfiles/0/your-font-latin-regular.ttf") format("truetype"),
                 /* Legacy iOS */
-                url("/pluginfile.php/1/theme_boost_campus/fontfiles/0/your-font-latin-regular.svg#YourFont") format("svg");
+                url("/pluginfile.php/1/theme_urcourses_default/fontfiles/0/your-font-latin-regular.svg#YourFont") format("svg");
 \}
 /* your-font-italic - latin */
 @font-face {
         font-family: "Your Font";
         font-style: italic;
         font-weight: 400;
-        src: url("/pluginfile.php/1/theme_boost_campus/fontfiles/0/your-font-latin-italic.eot");
+        src: url("/pluginfile.php/1/theme_urcourses_default/fontfiles/0/your-font-latin-italic.eot");
         src: local("Your Font Italic"), local("YourFont-Italic"),
-                url("/pluginfile.php/1/theme_boost_campus/fontfiles/0/your-font-latin-italic.eot?#iefix") format("embedded-opentype"),
-                url("/pluginfile.php/1/theme_boost_campus/fontfiles/0/your-font-latin-italic.woff2") format("woff2"),
-                url("/pluginfile.php/1/theme_boost_campus/fontfiles/0/your-font-latin-italic.woff") format("woff"),
-                url("/pluginfile.php/1/theme_boost_campus/fontfiles/0/your-font-latin-italic.ttf") format("truetype"),
-                url("/pluginfile.php/1/theme_boost_campus/fontfiles/0/your-font-latin-italic.svg#YourFont") format("svg");
+                url("/pluginfile.php/1/theme_urcourses_default/fontfiles/0/your-font-latin-italic.eot?#iefix") format("embedded-opentype"),
+                url("/pluginfile.php/1/theme_urcourses_default/fontfiles/0/your-font-latin-italic.woff2") format("woff2"),
+                url("/pluginfile.php/1/theme_urcourses_default/fontfiles/0/your-font-latin-italic.woff") format("woff"),
+                url("/pluginfile.php/1/theme_urcourses_default/fontfiles/0/your-font-latin-italic.ttf") format("truetype"),
+                url("/pluginfile.php/1/theme_urcourses_default/fontfiles/0/your-font-latin-italic.svg#YourFont") format("svg");
 }
 /* your-font-700 - latin */
 @font-face {
         font-family: "Your Font";
         font-style: normal;
         font-weight: 700;
-        src: url("/pluginfile.php/1/theme_boost_campus/fontfiles/0/your-font-latin-700.eot");
+        src: url("/pluginfile.php/1/theme_urcourses_default/fontfiles/0/your-font-latin-700.eot");
         src: local("Your Font Bold"), local("YourFont-Bold"),
-                url("/pluginfile.php/1/theme_boost_campus/fontfiles/0/your-font-latin-700.eot?#iefix") format("embedded-opentype"),
-                url("/pluginfile.php/1/theme_boost_campus/fontfiles/0/your-font-latin-700.woff2") format("woff2"),
-                url("/pluginfile.php/1/theme_boost_campus/fontfiles/0/your-font-latin-700.woff") format("woff"),
-                url("/pluginfile.php/1/theme_boost_campus/fontfiles/0/your-font-latin-700.ttf") format("truetype"),
-                url("/pluginfile.php/1/theme_boost_campus/fontfiles/0/your-font-latin-700.svg#YourFont") format("svg");
+                url("/pluginfile.php/1/theme_urcourses_default/fontfiles/0/your-font-latin-700.eot?#iefix") format("embedded-opentype"),
+                url("/pluginfile.php/1/theme_urcourses_default/fontfiles/0/your-font-latin-700.woff2") format("woff2"),
+                url("/pluginfile.php/1/theme_urcourses_default/fontfiles/0/your-font-latin-700.woff") format("woff"),
+                url("/pluginfile.php/1/theme_urcourses_default/fontfiles/0/your-font-latin-700.ttf") format("truetype"),
+                url("/pluginfile.php/1/theme_urcourses_default/fontfiles/0/your-font-latin-700.svg#YourFont") format("svg");
 }
 /* your-font-700italic - latin */
 @font-face {
         font-family: "Your Font";
         font-style: italic;
         font-weight: 700;
-        src: url("/pluginfile.php/1/theme_boost_campus/fontfiles/0/your-font-latin-700italic.eot");
+        src: url("/pluginfile.php/1/theme_urcourses_default/fontfiles/0/your-font-latin-700italic.eot");
         src: local("Your Font Bold Italic"), local("YourFont-BoldItalic"),
-                url("/pluginfile.php/1/theme_boost_campus/fontfiles/0/your-font-latin-700-italic.eot?#iefix") format("embedded-opentype"),
-                url("/pluginfile.php/1/theme_boost_campus/fontfiles/0/your-font-latin-700-italic.woff2") format("woff2"),
-                url("/pluginfile.php/1/theme_boost_campus/fontfiles/0/your-font-latin-700-italic.woff") format("woff"),
-                url("/pluginfile.php/1/theme_boost_campus/fontfiles/0/your-font-latin-700-italic.ttf") format("truetype"),
-                url("/pluginfile.php/1/theme_boost_campus/fontfiles/0/your-font-latin-700-italic.svg#YourFont") format("svg");
+                url("/pluginfile.php/1/theme_urcourses_default/fontfiles/0/your-font-latin-700-italic.eot?#iefix") format("embedded-opentype"),
+                url("/pluginfile.php/1/theme_urcourses_default/fontfiles/0/your-font-latin-700-italic.woff2") format("woff2"),
+                url("/pluginfile.php/1/theme_urcourses_default/fontfiles/0/your-font-latin-700-italic.woff") format("woff"),
+                url("/pluginfile.php/1/theme_urcourses_default/fontfiles/0/your-font-latin-700-italic.ttf") format("truetype"),
+                url("/pluginfile.php/1/theme_urcourses_default/fontfiles/0/your-font-latin-700-italic.svg#YourFont") format("svg");
 }
 
 body {
@@ -379,10 +379,10 @@ Plugin repositories
 -------------------
 
 This plugin is published and regularly updated in the Moodle plugins repository:
-http://moodle.org/plugins/view/theme_boost_campus
+http://moodle.org/plugins/view/theme_urcourses_default
 
 The latest development version can be found on Github:
-https://github.com/moodleuulm/moodle-theme_boost_campus
+https://github.com/moodleuulm/moodle-theme_urcourses_default
 
 
 Bug and problem reports / Support requests
@@ -391,7 +391,7 @@ Bug and problem reports / Support requests
 This plugin is carefully developed and thoroughly tested, but bugs and problems can always appear.
 
 Please report bugs and problems on Github:
-https://github.com/moodleuulm/moodle-theme_boost_campus/issues
+https://github.com/moodleuulm/moodle-theme_urcourses_default/issues
 
 We will do our best to solve your problems, but please note that due to limited resources we can't always provide per-case support.
 
@@ -402,10 +402,10 @@ Feature proposals
 Due to limited resources, the functionality of this plugin is primarily implemented for our own local needs and published as-is to the community. We are aware that members of the community will have other needs and would love to see them solved by this plugin.
 
 Please issue feature proposals on Github:
-https://github.com/moodleuulm/moodle-theme_boost_campus/issues
+https://github.com/moodleuulm/moodle-theme_urcourses_default/issues
 
 Please create pull requests on Github:
-https://github.com/moodleuulm/moodle-theme_boost_campus/pulls
+https://github.com/moodleuulm/moodle-theme_urcourses_default/pulls
 
 We are always interested to read about your feature proposals or even get a pull request from you, but please accept that we can handle your issues only as feature _proposals_ and not as feature _requests_.
 

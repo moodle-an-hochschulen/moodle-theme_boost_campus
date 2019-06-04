@@ -17,32 +17,32 @@
 /**
  * Theme Boost Campus - Theme config
  *
- * @package    theme_boost_campus
+ * @package    theme_urcourses_default
  * @copyright  2017 Kathrin Osswald, Ulm University <kathrin.osswald@uni-ulm.de>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 defined('MOODLE_INTERNAL') || die();
 
-$THEME->name = 'boost_campus';
+$THEME->name = 'urcourses_default';
 $THEME->parents = ['boost'];
 
 $THEME->editor_sheets = array('editor','legacy','callout','alert', 'button', 'pullquote');
 $THEME->sheets = array('legacy');
 $THEME->scss = function($theme) {
-    return theme_boost_campus_get_main_scss_content($theme);
+    return theme_urcourses_default_get_main_scss_content($theme);
 };
 
 // MODIFICATION START:
 // The declaration of the regions in that way is not part of the default config file.
 // It is needed for the Footer Blocks feature of Boost Campus.
 $regions = array('side-pre');
-if (get_config('theme_boost_campus', 'footerblocks') == '1columns') {
+if (get_config('theme_urcourses_default', 'footerblocks') == '1columns') {
     $regions[] = 'footer-left';
-} else if (get_config('theme_boost_campus', 'footerblocks') == '2columns') {
+} else if (get_config('theme_urcourses_default', 'footerblocks') == '2columns') {
     $regions[] = 'footer-left';
     $regions[] = 'footer-middle';
-} else if (get_config('theme_boost_campus', 'footerblocks') == '3columns') {
+} else if (get_config('theme_urcourses_default', 'footerblocks') == '3columns') {
     $regions[] = 'footer-left';
     $regions[] = 'footer-middle';
     $regions[] = 'footer-right';
@@ -162,7 +162,7 @@ $THEME->layouts = [
 ];
 
 $THEME->enable_dock = false;
-$THEME->prescsscallback = 'theme_boost_campus_get_pre_scss';
+$THEME->prescsscallback = 'theme_urcourses_default_get_pre_scss';
 $THEME->yuicssmodules = array();
 $THEME->rendererfactory = 'theme_overridden_renderer_factory';
 $THEME->requiredblocks = ' ';

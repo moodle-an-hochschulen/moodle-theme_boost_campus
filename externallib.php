@@ -17,7 +17,7 @@
 /**
  * Webservices for Boost Campus.
  *
- * @package    theme_boost_campus
+ * @package    theme_urcourses_default
  * @author     John Lane
  * 
  */
@@ -27,7 +27,7 @@ defined('MOODLE_INTERNAL') || die();
 require_once($CFG->libdir . "/externallib.php");
 require_once($CFG->dirroot . "/course/lib.php");
 
-class theme_boost_campus_external extends external_api {
+class theme_urcourses_default_external extends external_api {
 
     /**
      * Describes upload_course_image parameters.
@@ -85,12 +85,12 @@ class theme_boost_campus_external extends external_api {
 
         // verify size
         if (strlen($binary_data) > get_max_upload_file_size($CFG->maxbytes)) {
-            throw new \moodle_exception('error:courseimageexceedsmaxbytes', 'theme_boost_campus', $CFG->maxbytes);
+            throw new \moodle_exception('error:courseimageexceedsmaxbytes', 'theme_urcourses_default', $CFG->maxbytes);
         }
 
         // verify filetype
         if ($filetype !== 'jpg' && $filetype !== 'png' && $filetype !== 'gif') {
-            throw new \moodle_exception('error:courseimageinvalidfiletype', 'theme_boost_campus');
+            throw new \moodle_exception('error:courseimageinvalidfiletype', 'theme_urcourses_default');
         }
 
         if ($context->contextlevel === CONTEXT_COURSE) {

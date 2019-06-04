@@ -17,7 +17,7 @@
 /**
  * Theme Boost Campus - Upgrade script
  *
- * @package   theme_boost_campus
+ * @package   theme_urcourses_default
  * @copyright 2017 Kathrin Osswald, Ulm University kathrin.osswald@uni-ulm.de
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -25,43 +25,43 @@
 defined('MOODLE_INTERNAL') || die;
 
 /**
- * Function to upgrade theme_boost_campus
+ * Function to upgrade theme_urcourses_default
  * @param int $oldversion the version we are upgrading from
  * @return bool result
  */
-function xmldb_theme_boost_campus_upgrade($oldversion) {
+function xmldb_theme_urcourses_default_upgrade($oldversion) {
     global $DB;
     $dbman = $DB->get_manager();
 
     if ($oldversion < 2018051701) {
-        // The setting "theme_boost_campus|navdrawericons" has been deleted because this functionality was
+        // The setting "theme_urcourses_default|navdrawericons" has been deleted because this functionality was
         // integrated into core.
         // Set the config to null.
-        set_config('navdrawericons', null, 'theme_boost_campus');
+        set_config('navdrawericons', null, 'theme_urcourses_default');
 
-        // The setting "theme_boost_campus|nawdrawerfullwidth" has been renamed to navdrawerfullwidth.
+        // The setting "theme_urcourses_default|nawdrawerfullwidth" has been renamed to navdrawerfullwidth.
         // If the setting is configured.
-        if ($oldnavdrawerfullwidth = get_config('theme_boost_campus', 'nawdrawerfullwidth')) {
+        if ($oldnavdrawerfullwidth = get_config('theme_urcourses_default', 'nawdrawerfullwidth')) {
             // Set the value of the setting to the new setting.
-            set_config('navdrawerfullwidth', $oldnavdrawerfullwidth, 'theme_boost_campus');
+            set_config('navdrawerfullwidth', $oldnavdrawerfullwidth, 'theme_urcourses_default');
             // Drop the old setting.
-            set_config('nawdrawerfullwidth', null, 'theme_boost_campus');
+            set_config('nawdrawerfullwidth', null, 'theme_urcourses_default');
         }
 
-        upgrade_plugin_savepoint(true, 2018051701, 'theme', 'boost_campus');
+        upgrade_plugin_savepoint(true, 2018051701, 'theme', 'urcourses_default');
     }
 
     if ($oldversion < 2018121700) {
-        // The setting "theme_boost_campus|incoursesettingsswitchtorole" has been renamed because the setting was
+        // The setting "theme_urcourses_default|incoursesettingsswitchtorole" has been renamed because the setting was
         // upgraded with another option.
         // Therefore set the old config to null.
-        set_config('incoursesettingsswitchtorole', null, 'theme_boost_campus');
+        set_config('incoursesettingsswitchtorole', null, 'theme_urcourses_default');
 
-        upgrade_plugin_savepoint(true, 2018121700, 'theme', 'boost_campus');
+        upgrade_plugin_savepoint(true, 2018121700, 'theme', 'urcourses_default');
     }
 
     if ($oldversion < 2019051600) {
-        $table = new xmldb_table('theme_boost_campus_darkmode');
+        $table = new xmldb_table('theme_urcourses_darkmode');
         $table->add_field('id', XMLDB_TYPE_INTEGER, '10', null, XMLDB_NOTNULL, XMLDB_SEQUENCE, null);
         $table->add_field('userid', XMLDB_TYPE_INTEGER, '10', null, XMLDB_NOTNULL, null, null);
         $table->add_field('darkmode', XMLDB_TYPE_INTEGER, '4', null, XMLDB_NOTNULL, null, null);
@@ -72,7 +72,7 @@ function xmldb_theme_boost_campus_upgrade($oldversion) {
             $dbman->create_table($table);
         }
 
-        upgrade_plugin_savepoint(true, 2019051600, 'theme', 'boost_campus');
+        upgrade_plugin_savepoint(true, 2019051600, 'theme', 'urcourses_default');
     }
     return true;
 }

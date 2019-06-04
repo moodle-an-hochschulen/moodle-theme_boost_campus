@@ -1,288 +1,288 @@
 {"template_templates" : [
         {
             "title": "Image Centered",
-            "src": "theme/boost_campus/callouts/templates/image_center.html",
+            "src": "theme/urcourses_default/callouts/templates/image_center.html",
             "description": "creates a floated container for images."
         },
         {
             "title": "Image Floated left",
-            "src": "theme/boost_campus/callouts/templates/image_left.html",
+            "src": "theme/urcourses_default/callouts/templates/image_left.html",
             "description": "creates a floated container for images."
         },
         {
             "title": "Image Floated Right",
-            "src": "theme/boost_campus/callouts/templates/image_right.html",
+            "src": "theme/urcourses_default/callouts/templates/image_right.html",
             "description": "creates a floated container for images."
         },
         {
             "title": "Image Captioned Centered",
-            "src": "theme/boost_campus/callouts/templates/image_caption.html",
+            "src": "theme/urcourses_default/callouts/templates/image_caption.html",
             "description": "creates a container with an editable caption for images."
         },
         {
             "title": "Image Captioned Floated right",
-            "src": "theme/boost_campus/callouts/templates/image_caption_right.html",
+            "src": "theme/urcourses_default/callouts/templates/image_caption_right.html",
             "description": "creates a floated container with an editable caption for images."
         },
         {
             "title": "Image Captioned Floated Left",
-            "src": "theme/boost_campus/callouts/templates/image_caption_left.html",
+            "src": "theme/urcourses_default/callouts/templates/image_caption_left.html",
             "description": "creates a floated container with an editable caption for images."
         },
         {
             "title": "Image Carousel Slideshow",
-            "src": "theme/boost_campus/callouts/templates/carousel.html",
+            "src": "theme/urcourses_default/callouts/templates/carousel.html",
             "description": "creates a slideshow for your images. Make sure all of your images are inside the block with the black background and are the same height. To add or insert new images, make sure to put the link inside a <div> class=carousel-item in the html view for it to be a part of the slideshow."
         },
 
         {
             "title": "Drop Down Block",
-            "src": "theme/boost_campus/callouts/templates/dropdown.html",
+            "src": "theme/urcourses_default/callouts/templates/dropdown.html",
             "description": "Creates a single block which displays the content under the title once clicked. Will collapse once in the final page but not in the editor."
         },
         {
             "title": "Drop Accordion List",
-            "src": "theme/boost_campus/callouts/templates/accordian.html",
+            "src": "theme/urcourses_default/callouts/templates/accordian.html",
             "description": "Creates a group of dropdown blocks which display the content under the title once clicked. Will collapse once in the final page but not in the editor."
         },
         {
             "title": "Callout Blank",
-            "src": "theme/boost_campus/callouts/templates/callout_blank.html",
+            "src": "theme/urcourses_default/callouts/templates/callout_blank.html",
             "description": "Adds a pre-formatted Idea Block"
         },
         {
             "title": "Callout Activity",
-            "src": "theme/boost_campus/callouts/templates/callout_activity.html",
+            "src": "theme/urcourses_default/callouts/templates/callout_activity.html",
             "description": "Adds a pre-formatted Idea Block"
         },
         {
             "title": "Callout Aims",
-            "src": "theme/boost_campus/callouts/templates/callout_aims.html",
+            "src": "theme/urcourses_default/callouts/templates/callout_aims.html",
             "description": "Adds a pre-formatted Idea Block"
         },
         {
             "title": "Callout Assignment",
-            "src": "theme/boost_campus/callouts/templates/callout_assignment.html",
+            "src": "theme/urcourses_default/callouts/templates/callout_assignment.html",
             "description": "Adds a pre-formatted Idea Block"
         },
         {
             "title": "Callout Audio",
-            "src": "theme/boost_campus/callouts/templates/callout_audio.html",
+            "src": "theme/urcourses_default/callouts/templates/callout_audio.html",
             "description": "Adds a pre-formatted Idea Block"
         },
         {
             "title": "Callout Blog",
-            "src": "theme/boost_campus/callouts/templates/callout_blog.html",
+            "src": "theme/urcourses_default/callouts/templates/callout_blog.html",
             "description": "Adds a pre-formatted Idea Block"
         },
         {
             "title": "Callout Chat",
-            "src": "theme/boost_campus/callouts/templates/callout_chat.html",
+            "src": "theme/urcourses_default/callouts/templates/callout_chat.html",
             "description": "Adds a pre-formatted Idea Block"
         },
         {
             "title": "Callout Discussion",
-            "src": "theme/boost_campus/callouts/templates/callout_discussion.html",
+            "src": "theme/urcourses_default/callouts/templates/callout_discussion.html",
             "description": "Adds a pre-formatted Idea Block"
         },
         {
             "title": "Callout Elder",
-            "src": "theme/boost_campus/callouts/templates/callout_elder.html",
+            "src": "theme/urcourses_default/callouts/templates/callout_elder.html",
             "description": "Adds a pre-formatted Idea Block"
         },
         {
             "title": "Callout Example",
-            "src": "theme/boost_campus/callouts/templates/callout_example.html",
+            "src": "theme/urcourses_default/callouts/templates/callout_example.html",
             "description": "Adds a pre-formatted Idea Block"
         },
         {
             "title": "Callout Fact",
-            "src": "theme/boost_campus/callouts/templates/callout_fact.html",
+            "src": "theme/urcourses_default/callouts/templates/callout_fact.html",
             "description": "Adds a pre-formatted Idea Block"
         },
         {
             "title": "Callout Feedback",
-            "src": "theme/boost_campus/callouts/templates/callout_feedback.html",
+            "src": "theme/urcourses_default/callouts/templates/callout_feedback.html",
             "description": "Adds a pre-formatted Idea Block"
         },
         {
             "title": "Callout FYI",
-            "src": "theme/boost_campus/callouts/templates/callout_fyi.html",
+            "src": "theme/urcourses_default/callouts/templates/callout_fyi.html",
             "description": "Adds a pre-formatted Idea Block"
         },
         {
             "title": "Callout Ideas",
-            "src": "theme/boost_campus/callouts/templates/callout_ideas.html",
+            "src": "theme/urcourses_default/callouts/templates/callout_ideas.html",
             "description": "Adds a pre-formatted Idea Block"
         },
         {
             "title": "Callout Important",
-            "src": "theme/boost_campus/callouts/templates/callout_important.html",
+            "src": "theme/urcourses_default/callouts/templates/callout_important.html",
             "description": "Adds a pre-formatted Idea Block"
         },
         {
             "title": "Callout Important Yellow bg",
-            "src": "theme/boost_campus/callouts/templates/callout_important_yellow.html",
+            "src": "theme/urcourses_default/callouts/templates/callout_important_yellow.html",
             "description": "Adds a pre-formatted Idea Block"
         },
         {
             "title": "CalloutLabs",
-            "src": "theme/boost_campus/callouts/templates/callout_labs.html",
+            "src": "theme/urcourses_default/callouts/templates/callout_labs.html",
             "description": "Adds a pre-formatted Idea Block"
         },
         {
             "title": "Callout Labs Aqua bg",
-            "src": "theme/boost_campus/callouts/templates/callout_labs_aqua.html",
+            "src": "theme/urcourses_default/callouts/templates/callout_labs_aqua.html",
             "description": "Adds a pre-formatted Idea Block"
         },
         {
             "title": "Callout Links",
-            "src": "theme/boost_campus/callouts/templates/callout_links.html",
+            "src": "theme/urcourses_default/callouts/templates/callout_links.html",
             "description": "Adds a pre-formatted Idea Block"
         },
         {
             "title": "Callout Notes",
-            "src": "theme/boost_campus/callouts/templates/callout_notes.html",
+            "src": "theme/urcourses_default/callouts/templates/callout_notes.html",
             "description": "Adds a pre-formatted Idea Block"
         },
         {
             "title": "Calout Objectives",
-            "src": "theme/boost_campus/callouts/templates/callout_objectives.html",
+            "src": "theme/urcourses_default/callouts/templates/callout_objectives.html",
             "description": "Adds a pre-formatted Idea Block"
         },
         {
             "title": "Callout Question",
-            "src": "theme/boost_campus/callouts/templates/callout_question.html",
+            "src": "theme/urcourses_default/callouts/templates/callout_question.html",
             "description": "Adds a pre-formatted Idea Block"
         },
         {
             "title": "Callout Question Blue bg",
-            "src": "theme/boost_campus/callouts/templates/callout_question_blue.html",
+            "src": "theme/urcourses_default/callouts/templates/callout_question_blue.html",
             "description": "Adds a pre-formatted Idea Block"
         },
         {
             "title": "Callout Quiz",
-            "src": "theme/boost_campus/callouts/templates/callout_quiz.html",
+            "src": "theme/urcourses_default/callouts/templates/callout_quiz.html",
             "description": "Adds a pre-formatted Idea Block"
         },
         {
             "title": "Callout Reading",
-            "src": "theme/boost_campus/callouts/templates/callout_reading.html",
+            "src": "theme/urcourses_default/callouts/templates/callout_reading.html",
             "description": "Adds a pre-formatted Idea Block"
         },
         {
             "title": "Callout Reflect",
-            "src": "theme/boost_campus/callouts/templates/callout_reflect.html",
+            "src": "theme/urcourses_default/callouts/templates/callout_reflect.html",
             "description": "Adds a pre-formatted Idea Block"
         },
         {
             "title": "Callout Resources",
-            "src": "theme/boost_campus/callouts/templates/callout_resources.html",
+            "src": "theme/urcourses_default/callouts/templates/callout_resources.html",
             "description": "Adds a pre-formatted Idea Block"
         },
         {
             "title": "Callout Start",
-            "src": "theme/boost_campus/callouts/templates/callout_start.html",
+            "src": "theme/urcourses_default/callouts/templates/callout_start.html",
             "description": "Adds a pre-formatted Idea Block"
         },
         {
             "title": "Callout Task",
-            "src": "theme/boost_campus/callouts/templates/callout_task.html",
+            "src": "theme/urcourses_default/callouts/templates/callout_task.html",
             "description": "Adds a pre-formatted Idea Block"
         },
         {
             "title": "Callout Video",
-            "src": "theme/boost_campus/callouts/templates/callout_video.html",
+            "src": "theme/urcourses_default/callouts/templates/callout_video.html",
             "description": "Adds a pre-formatted Idea Block"
         },
         {
             "title": "Alert Blue Info",
-            "src": "theme/boost_campus/callouts/templates/alert_info.html",
+            "src": "theme/urcourses_default/callouts/templates/alert_info.html",
             "description": "Adds a blue coloured block with text to match."
         },
         {
             "title": "Alert Green Success",
-            "src": "theme/boost_campus/callouts/templates/alert_success.html",
+            "src": "theme/urcourses_default/callouts/templates/alert_success.html",
             "description": "Adds a green coloured block with text to match."
         },
         {
             "title": "Alert Orange Warning",
-            "src": "theme/boost_campus/callouts/templates/alert_warning.html",
+            "src": "theme/urcourses_default/callouts/templates/alert_warning.html",
             "description": "Adds a green coloured block with text to match."
         },
         {
             "title": "Alert Red Danger",
-            "src": "theme/boost_campus/callouts/templates/alert_danger.html",
+            "src": "theme/urcourses_default/callouts/templates/alert_danger.html",
             "description": "Adds a red coloured block with text to match."
         },
         {
             "title": "Alert purple",
-            "src": "theme/boost_campus/callouts/templates/alert_purple.html",
+            "src": "theme/urcourses_default/callouts/templates/alert_purple.html",
             "description": "Adds a purple coloured block with text to match."
         },
         {
             "title": "Alert yellow",
-            "src": "theme/boost_campus/callouts/templates/alert_yellow.html",
+            "src": "theme/urcourses_default/callouts/templates/alert_yellow.html",
             "description": "Adds a yellow coloured block with text to match."
         },
         {
             "title": "Alert Light",
-            "src": "theme/boost_campus/callouts/templates/alert_light.html",
+            "src": "theme/urcourses_default/callouts/templates/alert_light.html",
             "description": "Adds a light grey coloured block with text to match."
         },
         {
             "title": "Alert Dark",
-            "src": "theme/boost_campus/callouts/templates/alert_dark.html",
+            "src": "theme/urcourses_default/callouts/templates/alert_dark.html",
             "description": "Adds a dark grey coloured block with text to match."
         },
         {
             "title": "Button Primary",
-            "src": "theme/boost_campus/callouts/templates/button_primary.html",
+            "src": "theme/urcourses_default/callouts/templates/button_primary.html",
             "description": "Adds a button for your page. To link, select the text and clink the chain looking link button in the editor toolbar."
         },
         {
             "title": "Button Secondary",
-            "src": "theme/boost_campus/callouts/templates/button_secondary.html",
+            "src": "theme/urcourses_default/callouts/templates/button_secondary.html",
             "description": "Adds a button for your page. To link, select the text and clink the chain looking link button in the editor toolbar."
         },
         {
             "title": "Button Danger",
-            "src": "theme/boost_campus/callouts/templates/button_danger.html",
+            "src": "theme/urcourses_default/callouts/templates/button_danger.html",
             "description": "Adds a button for your page. To link, select the text and clink the chain looking link button in the editor toolbar."
         },
         {
             "title": "Button Dark",
-            "src": "theme/boost_campus/callouts/templates/button_dark.html",
+            "src": "theme/urcourses_default/callouts/templates/button_dark.html",
             "description": "Adds a button for your page. To link, select the text and clink the chain looking link button in the editor toolbar."
         },
         {
             "title": "Button Light",
-            "src": "theme/boost_campus/callouts/templates/button_light.html",
+            "src": "theme/urcourses_default/callouts/templates/button_light.html",
             "description": "Adds a button for your page. To link, select the text and clink the chain looking link button in the editor toolbar."
         },
         {
             "title": "Button Info",
-            "src": "theme/boost_campus/callouts/templates/button_info.html",
+            "src": "theme/urcourses_default/callouts/templates/button_info.html",
             "description": "Adds a button for your page. To link, select the text and clink the chain looking link button in the editor toolbar."
         },
         {
             "title": "Button Success",
-            "src": "theme/boost_campus/callouts/templates/button_success.html",
+            "src": "theme/urcourses_default/callouts/templates/button_success.html",
             "description": "Adds a button for your page. To link, select the text and clink the chain looking link button in the editor toolbar."
         },
         {
             "title": "Button Warning",
-            "src": "theme/boost_campus/callouts/templates/button_warning.html",
+            "src": "theme/urcourses_default/callouts/templates/button_warning.html",
             "description": "Adds a button for your page. To link, select the text and clink the chain looking link button in the editor toolbar."
         },
         {
             "title": "Card Block",
-            "src": "theme/boost_campus/callouts/templates/card.html",
+            "src": "theme/urcourses_default/callouts/templates/card.html",
             "description": "Creates a card on the page."
         },
         {
             "title": "Card Block with Image Top",
-            "src": "theme/boost_campus/callouts/templates/image_card.html",
+            "src": "theme/urcourses_default/callouts/templates/image_card.html",
             "description": "Creates a card on the page that's underneath an attached image."
         },
     ],

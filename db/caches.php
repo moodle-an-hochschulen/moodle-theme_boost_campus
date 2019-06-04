@@ -17,7 +17,7 @@
 /**
  * Theme Boost Campus - Cache file.
  *
- * @package   theme_boost_campus
+ * @package   theme_urcourses_default
  * @copyright 2017 Kathrin Osswald, Ulm University kathrin.osswald@uni-ulm.de
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */

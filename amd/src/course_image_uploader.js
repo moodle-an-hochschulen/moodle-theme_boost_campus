@@ -16,7 +16,7 @@
 /**
  * Theme Boost Campus - Code for course header image uploader.
  *
- * @package    theme_boost_campus
+ * @package    theme_urcourses_default
  * @author     John Lane
  * 
  */
@@ -99,7 +99,7 @@ define(['jquery', 'core/ajax', 'core/notification', 'core/str'], function($, aja
 
         // if file was not an image, return
         if (!file.type.match('image.*')) {
-            str.get_string('error:courseimageinvalidfiletype', 'theme_boost_campus')
+            str.get_string('error:courseimageinvalidfiletype', 'theme_urcourses_default')
                 .done(_createErrorPopup);
 
             return;
@@ -107,7 +107,7 @@ define(['jquery', 'core/ajax', 'core/notification', 'core/str'], function($, aja
 
         // if the file is too big, return
         if (file.size > _maxbytes) {
-            str.get_string('error:courseimageexceedsmaxbytes', 'theme_boost_campus', _humanFileSize(_maxbytes))
+            str.get_string('error:courseimageexceedsmaxbytes', 'theme_urcourses_default', _humanFileSize(_maxbytes))
                 .done(_createErrorPopup);
 
             return;
@@ -160,7 +160,7 @@ define(['jquery', 'core/ajax', 'core/notification', 'core/str'], function($, aja
 
         // set ajax call
         var ajaxCall = {
-            methodname: 'theme_boost_campus_upload_course_image',
+            methodname: 'theme_urcourses_default_upload_course_image',
             args: args,
             done: _uploadDone,
             fail: notification.exception
@@ -171,7 +171,7 @@ define(['jquery', 'core/ajax', 'core/notification', 'core/str'], function($, aja
     };
 
     /**
-     * Handles theme_boost_campus_upload_course_image response data.
+     * Handles theme_urcourses_default_upload_course_image response data.
      * @param {Object} response 
      */
     var _uploadDone = function() {
@@ -185,7 +185,7 @@ define(['jquery', 'core/ajax', 'core/notification', 'core/str'], function($, aja
         // unset course original image data
         $(SELECTORS.HEADER).data('original_image', '');
 
-        str.get_string('success:courseimageuploaded', 'theme_boost_campus')
+        str.get_string('success:courseimageuploaded', 'theme_urcourses_default')
             .done(_createSuccessPopup);
     };
 

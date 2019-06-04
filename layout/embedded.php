@@ -26,8 +26,8 @@ defined('MOODLE_INTERNAL') || die();
 
 global $CFG,$PAGE,$DB;
 //check if user has darkmode on in database and include if so
-if($DB->get_record('theme_boost_campus_darkmode', array('userid'=>$USER->id, 'darkmode'=>1))){
-    $PAGE->requires->css('/theme/boost_campus/style/darkmode.css');
+if($DB->get_record('theme_urcourses_darkmode', array('userid'=>$USER->id, 'darkmode'=>1))){
+    $PAGE->requires->css('/theme/urcourses_default/style/darkmode.css');
  }
 
 $templatecontext = [

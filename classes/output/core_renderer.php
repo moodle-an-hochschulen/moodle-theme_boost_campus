@@ -17,13 +17,13 @@
 /**
  * Renderers to align Moodle's HTML with that expected by Bootstrap
  *
- * @package   theme_boost_campus
+ * @package   theme_urcourses_default
  * @copyright 2017 Kathrin Osswald, Ulm University kathrin.osswald@uni-ulm.de
  *            copyright based on code from theme_boost by Bas Brands
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-namespace theme_boost_campus\output;
+namespace theme_urcourses_default\output;
 
 use coding_exception;
 use html_writer;
@@ -62,7 +62,7 @@ defined('MOODLE_INTERNAL') || die;
  *
  * @copyright 2017 Kathrin Osswald, Ulm University kathrin.osswald@uni-ulm.de
  * @license http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
- * @package theme_boost_campus
+ * @package theme_urcourses_default
  * @category output
  */
 class core_renderer extends \theme_boost\output\core_renderer {
@@ -74,7 +74,7 @@ class core_renderer extends \theme_boost\output\core_renderer {
      */
     public function get_compact_logo_url($maxwidth = 100, $maxheight = 100) {
         global $OUTPUT;
-        return $OUTPUT->image_url('logo', 'theme_boost_campus');
+        return $OUTPUT->image_url('logo', 'theme_urcourses_default');
     }
 
     /**
@@ -87,7 +87,7 @@ class core_renderer extends \theme_boost\output\core_renderer {
     public function edit_button(moodle_url $url) {
         // MODIFICATION START.
         // If setting editbuttonincourseheader ist checked give out the edit on / off button in course header.
-        if (get_config('theme_boost_campus', 'courseeditbutton') == '1') {
+        if (get_config('theme_urcourses_default', 'courseeditbutton') == '1') {
             return \core_renderer::edit_button($url);
         }
         // MODIFICATION END.
@@ -109,7 +109,7 @@ class core_renderer extends \theme_boost\output\core_renderer {
      */
     public function body_attributes($additionalclasses = array()) {
         global $PAGE, $CFG;
-        require_once($CFG->dirroot . '/theme/boost_campus/locallib.php');
+        require_once($CFG->dirroot . '/theme/urcourses_default/locallib.php');
 
         if (!is_array($additionalclasses)) {
             $additionalclasses = explode(' ', $additionalclasses);
@@ -120,7 +120,7 @@ class core_renderer extends \theme_boost\output\core_renderer {
         if ($PAGE->bodyid == 'page-login-index') {
             $additionalclasses[] = 'loginbackgroundimage';
             // Generating a random class for displaying a random image for the login page.
-            $additionalclasses[] = theme_boost_campus_get_random_loginbackgroundimage_class();
+            $additionalclasses[] = theme_urcourses_default_get_random_loginbackgroundimage_class();
         }
         // MODIFICATION END.
 
@@ -232,13 +232,13 @@ class core_renderer extends \theme_boost\output\core_renderer {
 		$cobits = $exporter->export($urenderer);
 		
 		$header->courseimage = $cobits->courseimage;
-		if ($COURSE->id == 1) $header->courseimage = $CFG->wwwroot.'/theme/boost_campus/pix/siteheader.jpg';
+		if ($COURSE->id == 1) $header->courseimage = $CFG->wwwroot.'/theme/urcourses_default/pix/siteheader.jpg';
 		
 		
         // MODIFICATION START:
         // Change this to add the result in the html variable to be able to add further features below the header.
         // Render from the own header template.
-        $html = $this->render_from_template('theme_boost_campus/header', $header);
+        $html = $this->render_from_template('theme_urcourses_default/header', $header);
         // MODIFICATION END.
         /* ORIGINAL START
         return $this->render_from_template('theme_boost/header', $header);
@@ -247,15 +247,15 @@ class core_renderer extends \theme_boost\output\core_renderer {
         // MODIFICATION START:
         // If the setting showhintcoursehidden is set, the visibility of the course is hidden and
         // a hint for the visibility will be shown.
-        if (get_config('theme_boost_campus', 'showhintcoursehidden') == 'yes' && $COURSE->visible == false &&
+        if (get_config('theme_urcourses_default', 'showhintcoursehidden') == 'yes' && $COURSE->visible == false &&
             $PAGE->has_set_url() && $PAGE->url->compare(new moodle_url('/course/view.php'), URL_MATCH_BASE)) {
             $html .= html_writer::start_tag('div', array('class' => 'course-hidden-infobox alert alert-warning'));
             $html .= html_writer::tag('i', null, array('class' => 'fa fa-exclamation-circle fa-3x fa-pull-left'));
-            $html .= get_string('showhintcoursehiddengeneral', 'theme_boost_campus', $COURSE->id);
+            $html .= get_string('showhintcoursehiddengeneral', 'theme_urcourses_default', $COURSE->id);
             // If the user has the capability to change the course settings, an additional link to the course settings is shown.
             if (has_capability('moodle/course:update', context_course::instance($COURSE->id))) {
                 $html .= html_writer::tag('div', get_string('showhintcoursehiddensettingslink',
-                    'theme_boost_campus', array('url' => $CFG->wwwroot.'/course/edit.php?id='. $COURSE->id)));
+                    'theme_urcourses_default', array('url' => $CFG->wwwroot.'/course/edit.php?id='. $COURSE->id)));
             }
             $html .= html_writer::end_tag('div');
         }
@@ -266,23 +266,23 @@ class core_renderer extends \theme_boost\output\core_renderer {
         // We also check that the user did not switch the role. This is a special case for roles that can fully access the course
         // without being enrolled. A role switch would show the guest access hint additionally in that case and this is not
         // intended.
-        if (get_config('theme_boost_campus', 'showhintcourseguestaccess') == 'yes'
+        if (get_config('theme_urcourses_default', 'showhintcourseguestaccess') == 'yes'
             && is_guest(\context_course::instance($COURSE->id), $USER->id)
             && $PAGE->has_set_url()
             && $PAGE->url->compare(new moodle_url('/course/view.php'), URL_MATCH_BASE)
             && !is_role_switched($COURSE->id)) {
             $html .= html_writer::start_tag('div', array('class' => 'course-guestaccess-infobox alert alert-warning'));
             $html .= html_writer::tag('i', null, array('class' => 'fa fa-exclamation-circle fa-3x fa-pull-left'));
-            $html .= get_string('showhintcourseguestaccessgeneral', 'theme_boost_campus',
+            $html .= get_string('showhintcourseguestaccessgeneral', 'theme_urcourses_default',
                 array('role' => role_get_name(get_guest_role())));
-            $html .= theme_boost_campus_get_course_guest_access_hint($COURSE->id);
+            $html .= theme_urcourses_default_get_course_guest_access_hint($COURSE->id);
             $html .= html_writer::end_tag('div');
         }
         // MODIFICATION END.
 
         // MODIFICATION START.
         // Only use this if setting 'showswitchedroleincourse' is active.
-        if (get_config('theme_boost_campus', 'showswitchedroleincourse') === 'yes') {
+        if (get_config('theme_urcourses_default', 'showswitchedroleincourse') === 'yes') {
             // Check if the user did a role switch.
             // If not, adding this section would make no sense and, even worse,
             // user_get_user_navigation_info() will throw an exception due to the missing user object.
@@ -297,7 +297,7 @@ class core_renderer extends \theme_boost\output\core_renderer {
                 $html .= html_writer::start_tag('div', array('class' => 'switched-role-infobox alert alert-info'));
                 $html .= html_writer::tag('i', null, array('class' => 'fa fa-user-circle fa-3x fa-pull-left'));
                 $html .= html_writer::start_tag('div');
-                $html .= get_string('switchedroleto', 'theme_boost_campus');
+                $html .= get_string('switchedroleto', 'theme_urcourses_default');
                 // Give this a span to be able to address via CSS.
                 $html .= html_writer::tag('span', $role, array('class' => 'switched-role'));
                 $html .= html_writer::end_tag('div');
@@ -326,7 +326,7 @@ class core_renderer extends \theme_boost\output\core_renderer {
                 'maxbytes' => get_max_upload_file_size($CFG->maxbytes),
                 'courseid' => $COURSE->id,
             ];
-            return $this->render_from_template('theme_boost_campus/header_course_image_uploader', $context);
+            return $this->render_from_template('theme_urcourses_default/header_course_image_uploader', $context);
         }
         else {
             return false;
@@ -448,7 +448,7 @@ class core_renderer extends \theme_boost\output\core_renderer {
     }
 
     /**
-     * Override to use theme_boost_campus login template
+     * Override to use theme_urcourses_default login template
      * Renders the login form.
      *
      * @param \core_auth\output\login $form The renderable.
@@ -475,8 +475,8 @@ class core_renderer extends \theme_boost\output\core_renderer {
             ['context' => context_course::instance(SITEID), "escape" => false]);
         // MODIFICATION START.
         // Only if setting "loginform" is checked, then call own login.mustache.
-        if (get_config('theme_boost_campus', 'loginform') == 'yes') {
-            return $this->render_from_template('theme_boost_campus/loginform', $context);
+        if (get_config('theme_urcourses_default', 'loginform') == 'yes') {
+            return $this->render_from_template('theme_urcourses_default/loginform', $context);
         } else {
             return $this->render_from_template('core/loginform', $context);
         }
@@ -499,8 +499,8 @@ class core_renderer extends \theme_boost\output\core_renderer {
         $context->linkid = $helpicon->component.'-'.$helpicon->identifier;
         // Fill body variable needed for modal mustache with text value.
         $context->body = $context->text;
-        if (get_config('theme_boost_campus', 'helptextmodal') == 'yes') {
-            return $this->render_from_template('theme_boost_campus/help_icon', $context);
+        if (get_config('theme_urcourses_default', 'helptextmodal') == 'yes') {
+            return $this->render_from_template('theme_urcourses_default/help_icon', $context);
         } else {
             return $this->render_from_template('core/help_icon', $context);
         }
@@ -583,7 +583,7 @@ function ur_check_course_cat() {
 
 	$ur_categories = array('','misc'=>'','khs'=>'Faculty of Kinesiology and Health Studies','edu'=>'Faculty of Education','sci'=>'Faculty of Science','grad'=>'Grad Studies','fa'=>'Faculty of Fine Arts','map'=>'Faculty of Media, Art, and Performance','engg'=>'Faculty of Engineering and Applied Science','bus'=>'Business Administration','arts'=>'Faculty of Arts','sw'=>'Faculty of Social Work','nur'=>'Faculty of Nursing','misc'=>'Custom Themes');
 	
-	if ($COURSE->theme != 'boost_campus') {
+	if ($COURSE->theme != 'urcourses_default') {
 		$currthemeelms = explode('_',$COURSE->theme);
 		return array('css'=>'','name'=>$ur_categories[$currthemeelms[1]]);
 	}
@@ -663,7 +663,7 @@ public function user_menu($user = null, $withlinks = null) {
     // Get some navigation opts.
     $opts = user_get_user_navigation_info($user, $this->page);
 
-    $usedarkmode = $DB->get_record('theme_boost_campus_darkmode', array('userid'=>$USER->id, 'darkmode'=>1));
+    $usedarkmode = $DB->get_record('theme_urcourses_darkmode', array('userid'=>$USER->id, 'darkmode'=>1));
     //changes url to opposite of whatever the toggle currently is to set dark mode in db under columns2.php
     
     $usedarkmodeurl = ($usedarkmode == 1) ? 0 : 1;
@@ -676,7 +676,7 @@ public function user_menu($user = null, $withlinks = null) {
     $mynode->itemtype = "link";
     $mynode->url = new moodle_url($this->page->url,array("darkmode"=>$usedarkmodeurl));
     $mynode->title = "Darkmode " . $darkstate;
-    $mynode->titleidentifier = "darkmode, theme_boost_campus";
+    $mynode->titleidentifier = "darkmode, theme_urcourses_default";
     $mynode->pix = $mynodelabel;
 
 

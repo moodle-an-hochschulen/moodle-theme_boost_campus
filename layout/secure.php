@@ -28,7 +28,7 @@ $blockshtml = $OUTPUT->blocks('side-pre');
 $hasblocks = strpos($blockshtml, 'data-block=') !== false;
 $bodyattributes = $OUTPUT->body_attributes();
 // MODIFICATION START: Setting 'darknavbar'.
-if (get_config('theme_boost_campus', 'darknavbar') == 'yes') {
+if (get_config('theme_urcourses_default', 'darknavbar') == 'yes') {
     $darknavbar = true;
 } else {
     $darknavbar = false;
@@ -47,5 +47,5 @@ $templatecontext = [
 	'contextheader' => $headertext;
 ];
 
-echo $OUTPUT->render_from_template('theme_boost_campus/secure', $templatecontext);
+echo $OUTPUT->render_from_template('theme_urcourses_default/secure', $templatecontext);
 

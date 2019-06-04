@@ -15,15 +15,15 @@
     along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 }}
 {{!
-    @template boost_campus/header_course_image_uploader
+    @template urcourses_default/header_course_image_uploader
 
     This template renders the course image upload button.
 
 }}
-<div id="theme_boost_campus_header_course_image_uploader_{{uniqid}}" class="course-img-uploader-container">
+<div id="theme_urcourses_default_header_course_image_uploader_{{uniqid}}" class="course-img-uploader-container">
     <label for="course_image_uploader" class="btn btn-sm course-image-uploader">
         <i class="fa fa-camera"></i>
-        <span class="d-none d-md-inline">{{#str}} change_course_image, theme_boost_campus {{/str}}</span>
+        <span class="d-none d-md-inline">{{#str}} change_course_image, theme_urcourses_default {{/str}}</span>
         <input id="course_image_uploader" type="file" accept="{{supported_types}}" />
     </label>
     <div class="btn-group confirm-image-upload">
@@ -33,7 +33,7 @@
 </div>
 
 {{#js}}
-    require(['theme_boost_campus/course_image_uploader'], function(main) {
-        main.init('#theme_boost_campus_header_course_image_uploader_{{uniqid}}', {{maxbytes}}, {{courseid}});
+    require(['theme_urcourses_default/course_image_uploader'], function(main) {
+        main.init('#theme_urcourses_default_header_course_image_uploader_{{uniqid}}', {{maxbytes}}, {{courseid}});
     });
 {{/js}}

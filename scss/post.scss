@@ -608,7 +608,7 @@ body.pagelayout-secure nav {
  * Sections
  */
 
-/* Check if setting theme_boost_campus|section0title is set.
+/* Check if setting theme_urcourses_default|section0title is set.
    If set, then revert the styles from .accesshide and set the style to be the same as other section titles. */
 @if variable-exists(section0title) {
     @if $section0title == 'yes' {

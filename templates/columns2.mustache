@@ -15,7 +15,7 @@
     along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 }}
 {{!
-    @template theme_boost_campus/columns2
+    @template theme_urcourses_default/columns2
 
     Admin time setting template.
 
@@ -53,7 +53,7 @@
 {{! MODIFICATION:
     * Remove section for footer blocks with own mustache template
     * Require own javascript module for back to top button functionality
-    * If setting "showsettingsincourse" is enabled, then render course context menu from theme_boost_campus/settings_link_page
+    * If setting "showsettingsincourse" is enabled, then render course context menu from theme_urcourses_default/settings_link_page
       template and use the equivalent own javascript "incoursesettings".
     * Call to own navbar mustache template instead of boost/navbar.
     * Add own additional layout elements: the footer, footnote or image area.
@@ -66,7 +66,7 @@
 
     {{{ output.standard_top_of_body_html }}}
 
-    {{> theme_boost_campus/navbar }}
+    {{> theme_urcourses_default/navbar }}
 
     <div id="page" class="container-fluid">
         {{{ output.full_header }}}
@@ -74,7 +74,7 @@
         <div id="page-content" class="row pb-3">
             <div id="region-main-box" class="col-12">
                 {{#node}}
-                    {{> theme_boost_campus/settings_link_page }}
+                    {{> theme_urcourses_default/settings_link_page }}
                 {{/node}}
                 {{#hasregionmainsettingsmenu}}
                 <div id="region-main-settings-menu" class="d-print-none {{#hasblocks}}has-blocks{{/hasblocks}}">
@@ -88,7 +88,7 @@
                     {{/hasregionmainsettingsmenu}}
                     {{{ output.course_content_header }}}
                     {{#activitynode}}
-                        {{> theme_boost_campus/activity_settings_incourse }}
+                        {{> theme_urcourses_default/activity_settings_incourse }}
                     {{/activitynode}}
                     {{{ output.main_content }}}
                     {{{ output.activity_navigation }}}
@@ -115,14 +115,14 @@ require(['theme_boost/loader']);
 require(['theme_boost/drawer'], function(mod) {
     mod.init();
 });
-require(['theme_boost_campus/backtotop'], function(mod) {
+require(['theme_urcourses_default/backtotop'], function(mod) {
     mod.init();
 });
-require(['theme_boost_campus/catchshortcuts'], function(mod) {
+require(['theme_urcourses_default/catchshortcuts'], function(mod) {
     mod.init({{{catchshortcuts}}});
 });
 {{#incoursesettings}}
-    require(['theme_boost_campus/incoursesettings'], function(mod) {
+    require(['theme_urcourses_default/incoursesettings'], function(mod) {
     mod.init();
     });
 {{/incoursesettings}}

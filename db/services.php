@@ -23,10 +23,10 @@ defined('MOODLE_INTERNAL') || die();
 
 $functions = array(
 
-    'theme_boost_campus_upload_course_image' => array(
-        'classname'     => 'theme_boost_campus_external',
+    'theme_urcourses_default_upload_course_image' => array(
+        'classname'     => 'theme_urcourses_default_external',
         'methodname'    => 'upload_course_image',
-        'classpath'     => 'theme/boost_campus/externallib.php',
+        'classpath'     => 'theme/urcourses_default/externallib.php',
         'description'   => 'Changes course image.',
         'type'          => 'write',
         'ajax'          => 'true',

@@ -17,7 +17,7 @@
 /**
  * Theme Boost Campus - Layout file for footnote.
  *
- * @package   theme_boost_campus
+ * @package   theme_urcourses_default
  * @copyright 2017 Kathrin Osswald, Ulm University kathrin.osswald@uni-ulm.de
  * @copyright based on code from theme_boost by Damyon Wiese
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
@@ -25,7 +25,7 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$footnotesetting = get_config('theme_boost_campus', 'footnote');
+$footnotesetting = get_config('theme_urcourses_default', 'footnote');
 
 // Only proceed if text area does not only contains empty tags.
 if (!html_is_blank($footnotesetting)) {
@@ -34,5 +34,5 @@ if (!html_is_blank($footnotesetting)) {
 
     $templatecontext['footnotesetting'] = $footnotesetting;
 
-    echo $OUTPUT->render_from_template('theme_boost_campus/footnote', $templatecontext);
+    echo $OUTPUT->render_from_template('theme_urcourses_default/footnote', $templatecontext);
 }

@@ -1,4 +1,4 @@
-moodle-theme_boost_campus
+moodle-theme_urcourses_default
 =========================
 
 Changes
@@ -47,7 +47,7 @@ Changes
 
 ### Release v3.5-r2
 
-* 2018-07-31 - Fixed bug in function theme_boost_campus_process_flatnav.
+* 2018-07-31 - Fixed bug in function theme_urcourses_default_process_flatnav.
 * 2018-07-31 - Removed deprecated.txt file because it is unnecessary.
 * 2018-07-24 - Setting to display help texts in modal dialogues instead of popups.
 * 2018-07-24 - Fixed brand colors due to Bootstrap changes in Boost.

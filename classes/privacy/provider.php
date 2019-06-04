@@ -17,19 +17,19 @@
 /**
  * Theme Boost Campus - Privacy provider
  *
- * @package    theme_boost_campus
+ * @package    theme_urcourses_default
  * @copyright  2018 Alexander Bias, Ulm University <alexander.bias@uni-ulm.de>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-namespace theme_boost_campus\privacy;
+namespace theme_urcourses_default\privacy;
 
 defined('MOODLE_INTERNAL') || die();
 
 /**
  * Privacy Subsystem implementing null_provider.
  *
- * @package    theme_boost_campus
+ * @package    theme_urcourses_default
  * @copyright  2018 Alexander Bias, Ulm University <alexander.bias@uni-ulm.de>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */

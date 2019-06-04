@@ -17,13 +17,13 @@
 /**
  * Renderers to align Moodle's HTML with that expected by Bootstrap
  *
- * @package   theme_boost_campus
+ * @package   theme_urcourses_default
  * @copyright 2017 Kathrin Osswald, Ulm University kathrin.osswald@uni-ulm.de
  *            copyright based on code from theme_boost by 2016 Frédéric Massart - FMCorz.net
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-namespace theme_boost_campus\output\core;
+namespace theme_urcourses_default\output\core;
 
 defined('MOODLE_INTERNAL') || die;
 
@@ -38,7 +38,7 @@ require_once($CFG->dirroot . '/course/renderer.php');
  *
  * @copyright 2017 Kathrin Osswald, Ulm University kathrin.osswald@uni-ulm.de
  * @license http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
- * @package theme_boost_campus
+ * @package theme_urcourses_default
  * @category output
  */
 class course_renderer extends \theme_boost\output\core\course_renderer {

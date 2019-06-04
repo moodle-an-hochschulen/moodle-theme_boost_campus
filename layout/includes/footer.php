@@ -17,7 +17,7 @@
 /**
  * Theme Boost Campus - Layout file for footer.
  *
- * @package   theme_boost_campus
+ * @package   theme_urcourses_default
  * @copyright 2017 Kathrin Osswald, Ulm University kathrin.osswald@uni-ulm.de
  * @copyright based on code from theme_boost by Damyon Wiese
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
@@ -25,11 +25,11 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$footerblocksetting = get_config('theme_boost_campus', 'footerblocks');
+$footerblocksetting = get_config('theme_urcourses_default', 'footerblocks');
 
 // Setting is set to no footer blocks layout.
 if ($footerblocksetting === '0columns') {
-    echo $OUTPUT->render_from_template('theme_boost_campus/footer', $templatecontext);
+    echo $OUTPUT->render_from_template('theme_urcourses_default/footer', $templatecontext);
 }
 
 // Setting is set to one columns layout.
@@ -41,7 +41,7 @@ if ($footerblocksetting === '1columns') {
     $templatecontext['footerleftblocks'] = $footerleftblockshtml;
     $templatecontext['footerblock1columns'] = $footerblock1columns;
 
-    echo $OUTPUT->render_from_template('theme_boost_campus/footer', $templatecontext);
+    echo $OUTPUT->render_from_template('theme_urcourses_default/footer', $templatecontext);
 }
 
 // Setting is set to two columns layout.
@@ -55,7 +55,7 @@ if ($footerblocksetting === '2columns') {
     $templatecontext['footerrightblocks'] = $footerrightblockshtml;
     $templatecontext['footerblock2columns'] = $footerblock2columns;
 
-    echo $OUTPUT->render_from_template('theme_boost_campus/footer', $templatecontext);
+    echo $OUTPUT->render_from_template('theme_urcourses_default/footer', $templatecontext);
 }
 
 // Setting is set to three columns layout.
@@ -71,5 +71,5 @@ if ($footerblocksetting === '3columns') {
     $templatecontext['footerrightblocks'] = $footerrightblockshtml;
     $templatecontext['footerblock3columns'] = $footerblock3columns;
 
-    echo $OUTPUT->render_from_template('theme_boost_campus/footer', $templatecontext);
+    echo $OUTPUT->render_from_template('theme_urcourses_default/footer', $templatecontext);
 }

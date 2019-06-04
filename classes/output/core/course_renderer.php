@@ -51,11 +51,10 @@ class course_renderer extends \core_course_renderer {
      *
      * KIZ MODIFICATION: This renderer function is copied and modified from /course/renderer.php
      *
-     * @param \coursecat_helper       $chelper           various display options
+     * @param \coursecat_helper $chelper various display options
      * @param \core_course_list_element|\stdClass $course
-     * @param string                  $additionalclasses additional classes to add to the main <div> tag (usually
-     *                                                   depend on the course position in list - first/last/even/odd)
-     *
+     * @param string $additionalclasses additional classes to add to the main <div> tag (usually
+     *    depend on the course position in list - first/last/even/odd)
      * @return string
      */
     protected function coursecat_coursebox(\coursecat_helper $chelper, $course, $additionalclasses = '') {
@@ -69,7 +68,7 @@ class course_renderer extends \core_course_renderer {
             $course = new \core_course_list_element($course);
         }
         $content = '';
-        $classes = trim('coursebox clearfix ' . $additionalclasses);
+        $classes = trim('coursebox clearfix '. $additionalclasses);
         if ($chelper->get_show_courses() >= self::COURSECAT_SHOW_COURSES_EXPANDED) {
             $nametag = 'h3';
         } else {
@@ -79,9 +78,9 @@ class course_renderer extends \core_course_renderer {
 
         // .coursebox
         $content .= html_writer::start_tag('div', array(
-            'class'         => $classes,
+            'class' => $classes,
             'data-courseid' => $course->id,
-            'data-type'     => self::COURSECAT_TYPE_COURSE,
+            'data-type' => self::COURSECAT_TYPE_COURSE,
         ));
 
         $content .= html_writer::start_tag('div', array('class' => 'info'));
@@ -89,13 +88,13 @@ class course_renderer extends \core_course_renderer {
         // course name
         $coursename = $chelper->get_course_formatted_name($course);
         $coursenamelink = html_writer::link(new moodle_url('/course/view.php', array('id' => $course->id)),
-            $coursename, array('class' => $course->visible ? '' : 'dimmed'));
+                                            $coursename, array('class' => $course->visible ? '' : 'dimmed'));
         $content .= html_writer::tag($nametag, $coursenamelink, array('class' => 'coursename'));
         // If we display course in collapsed form but the course has summary or course contacts, display the link to the info page.
         $content .= html_writer::start_tag('div', array('class' => 'moreinfo'));
         if ($chelper->get_show_courses() < self::COURSECAT_SHOW_COURSES_EXPANDED) {
             if ($course->has_summary() || $course->has_course_contacts() || $course->has_course_overviewfiles()
-                || $course->has_custom_fields()) {
+                    || $course->has_custom_fields()) {
                 $url = new moodle_url('/course/info.php', array('id' => $course->id));
                 $image = $this->output->pix_icon('i/info', $this->strings->summary);
                 $content .= html_writer::link($url, $image, array('title' => $this->strings->summary));
@@ -114,7 +113,7 @@ class course_renderer extends \core_course_renderer {
         // print enrolmenticons
         if ($icons = enrol_get_course_info_icons($course)) {
             $content .= html_writer::start_tag('div', array('class' => 'enrolmenticons'));
-            foreach ($icons as $pixicon) {
+            foreach ($icons as $pixicon) { // pix_icon makes Travis fail.
                 $content .= $this->render($pixicon);
             }
             $content .= html_writer::end_tag('div'); // .enrolmenticons

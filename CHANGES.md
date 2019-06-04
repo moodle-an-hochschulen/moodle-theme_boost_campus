@@ -6,6 +6,7 @@ Changes
 
 ### Unreleased
 
+* 2019-06-04 - Further formal changes to the course_renderer to be constistent with Moodle core.
 * 2019-06-04 - Adjusted function coursecat_coursebox() in course_renderer.php due to upstream changes in theme Boost.
 * 2019-06-03 - Added newly introduced collection labels in the navdrawer nodes.
 * 2019-06-03 - Adjusted columns2.php due to upstream changes in theme Boost.

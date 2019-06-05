@@ -101,7 +101,7 @@ if ($ADMIN->fulltree) {
     $name = 'theme_urcourses_default/brandcolor';
     $title = get_string('brandcolor', 'theme_boost', null, true);
     $description = get_string('brandcolor_desc', 'theme_boost', null, true);
-    $setting = new admin_setting_configcolourpicker($name, $title, $description, '');
+    $setting = new admin_setting_configcolourpicker($name, $title, $description, '#848889');
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 

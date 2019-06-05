@@ -185,7 +185,7 @@ class core_renderer extends \theme_boost\output\core_renderer {
         if ($this->page->user_is_editing() && $COURSE->id !== SITEID) {
             $can_edit_name = has_capability('moodle/course:changefullname', context_course::instance($COURSE->id));
             $course_link = '<h1 class="d-inline"><a href="'.$CFG->wwwroot.'/course/view.php?id='.$COURSE->id.'">'.$COURSE->fullname.'</a></h1>';
-            $course_editname_template = new \core\output\inplace_editable('theme_boost_campus', 'coursename', $COURSE->id, $can_edit_name, $course_link, format_string($COURSE->fullname));
+            $course_editname_template = new \core\output\inplace_editable('theme_urcourses_default', 'coursename', $COURSE->id, $can_edit_name, $course_link, format_string($COURSE->fullname));
             $course_editname_html = $this->render($course_editname_template);
             $header->contextheader = $course_editname_html;
         }

@@ -198,7 +198,7 @@ function theme_urcourses_default_reset_app_cache() {
  * @param string $newvalue
  * @return \core\output\inplace_editable
  */
-function theme_boost_campus_inplace_editable($itemtype, $itemid, $newvalue) {
+function theme_urcourses_default_inplace_editable($itemtype, $itemid, $newvalue) {
     // coursename: allows instructors to change course name inline if editing is on
     if ($itemtype === 'coursename') {
         global $CFG;
@@ -215,6 +215,6 @@ function theme_boost_campus_inplace_editable($itemtype, $itemid, $newvalue) {
 
         $can_edit_coursename = has_capability('moodle/course:changefullname', $context);
         $course_link = '<h1 class="d-inline"><a href="'.$CFG->wwwroot.'/course/view.php?id='.$course->id.'">'.$course->fullname.'</a></h1>';
-        return new \core\output\inplace_editable('theme_boost_campus', 'coursename', $course->id, $can_edit_coursename, $course_link, format_string($course->fullname));
+        return new \core\output\inplace_editable('theme_urcourses_default', 'coursename', $course->id, $can_edit_coursename, $course_link, format_string($course->fullname));
     }
 }

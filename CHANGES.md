@@ -4,6 +4,10 @@ moodle-theme_boost_campus
 Changes
 -------
 
+### Unreleased
+
+* 2019-06-11 - Added hide_if function to suitable admin setting incoursesettingsswitchtoroleposition and corrected README.md.
+
 ### Release v3.7-r1
 
 * 2019-06-04 - Further formal changes to the course_renderer to be constistent with Moodle core.

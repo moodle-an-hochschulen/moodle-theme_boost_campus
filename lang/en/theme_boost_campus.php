@@ -100,8 +100,7 @@ $string['incoursesettingsswitchtorolepositionsetting'] = '"Switch role to..." lo
 $string['incoursesettingsswitchtorolesettingjustmenu'] = 'Just in the user menu';
 $string['incoursesettingsswitchtorolesettingjustcourse'] = 'Just in the course settings';
 $string['incoursesettingsswitchtorolesettingboth'] = 'In both places: in the user menu and in the course settings';
-$string['incoursesettingsswitchtorolepositionsetting_desc'] = 'With this setting you can choose the place where the information to which role a user has switched is being displayed. If set to \'Just in the user menu\' (default value), the role information will be displayed right beneath the user\'s name in the user menu(like in theme Boost). If set to \'Just in the course settings\', this information - together with a link to switch back - will be displayed beneath the course, as this functionality is course related. If set to \'Both in the user menu and in the course settings\' it will be shown in both places. <br/>
-Please note that this setting won\'t have any effect if you do not activate the "In course settings menu" above.';
+$string['incoursesettingsswitchtorolepositionsetting_desc'] = 'With this setting you can choose the place where the information to which role a user has switched is being displayed. If set to \'Just in the user menu\' (default value), the role information will be displayed right beneath the user\'s name in the user menu (like in theme Boost). If set to \'Just in the course settings\', this information - together with a link to switch back - will be displayed beneath the course, as this functionality is course related. If set to \'Both in the user menu and in the course settings\' it will be shown in both places.';
 
 
 // Footer layout settings.

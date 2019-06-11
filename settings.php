@@ -326,6 +326,8 @@ if ($ADMIN->fulltree) {
         $incoursesettingsswitchtorolesetting);
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
+    $settings->hide_if('theme_boost_campus/incoursesettingsswitchtoroleposition',
+            'theme_boost_campus/showsettingsincourse', 'notchecked');
 
     // Add tab to settings page.
     $settings->add($page);

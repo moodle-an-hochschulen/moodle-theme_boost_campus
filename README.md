@@ -468,7 +468,6 @@ Copyright
 ---------
 
 Ulm University
-kiz - Media Department
-Team Web & Teaching Support
+Communication and Information Centre (kiz)
 Kathrin Osswald
 

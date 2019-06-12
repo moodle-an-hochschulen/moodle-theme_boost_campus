@@ -31,7 +31,8 @@ a, #boost-campus-course-settings .card-body a, .ui-widget-content a, .btn-link,
 /*border changes*/
 .block .block-cards .course-summaryitem, .nav-tabs, .nav-tabs .nav-link.active, .block-course-overview .courseovbox, 
 .border-bottom, .btn-outline-secondary, .btn-outline-primary, .nav-tabs .nav-link:hover,
-.course-content ul.topics li.section.main, .card-body, .generaltable thead th {
+.course-content ul.topics li.section.main, .card-body, .generaltable thead th, .dropdown-divider,
+.tour-actions > ul > li, .mform fieldset {
     border-color: rgba(10, 10, 10, 0.25)!important;
 }
 
@@ -82,7 +83,8 @@ a, #boost-campus-course-settings .card-body a, .ui-widget-content a, .btn-link,
     color: #fff1c7;
  }
 
-.courseovbox, .block .block-cards .course-summaryitem, .path-course-view .unread, span.unread {
+.courseovbox, .block .block-cards .course-summaryitem, .path-course-view .unread,
+span.unread, .tour-actions > ul > li {
     background-color: #3a3936;
 }
 
@@ -314,7 +316,7 @@ table.dataTable tr.odd td.sorting_1 {
 ul.oublog-accordion li {
     background-color: #4f4f4d;
     color: #e5e3e8;
-    border-color: #e5e3e8;
+    border-color:  rgba(10, 10, 10, 0.25);
 }
 
 .oublog-post-content, .description.card-block {

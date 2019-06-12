@@ -460,10 +460,7 @@ body.arts .page-navbkg .context-header-settings-menu .fa-cog:hover {
     /* Course home menu. */
     .list-group-item[data-key="coursehome"] {
         padding: .75rem 1.25rem;
-        /* As this node is a heading node, no icon is needed and the media span can be hidden. */
-        .media-left {
-            display: none;
-        }
+        
     }
 
     /* Menu item: my courses. */
@@ -1673,4 +1670,11 @@ ul.ctopics .content .section ul {
 //content editor pg targeting the column next to it. If max width is lowered there is no overflow so no pg scroll
 #page-mod-book-edit .col-md-3{
     max-width: 20%;
+}
+
+#nav-drawer .list-group-item[data-parent-key="mycourses"] .media-left .fa-home:before {
+  content: ""; }
+  
+#nav-drawer .list-group-item[data-parent-key="mycourses"] .media-left .fa-home {
+	//display: none;
 }

@@ -167,3 +167,5 @@ $THEME->yuicssmodules = array();
 $THEME->rendererfactory = 'theme_overridden_renderer_factory';
 $THEME->requiredblocks = ' ';
 $THEME->addblockposition = BLOCK_ADDBLOCK_POSITION_DEFAULT;
+
+$THEME->iconsystem = '\\theme_urcourses_default\\output\\icon_system_fontawesome';

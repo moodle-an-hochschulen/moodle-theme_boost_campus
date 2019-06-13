@@ -126,7 +126,7 @@
             "description": "Adds a pre-formatted Idea Block"
         },
         {
-            "title": "CalloutLabs",
+            "title": "Callout Labs",
             "src": "theme/urcourses_default/callouts/templates/callout_labs.php",
             "description": "Adds a pre-formatted Idea Block"
         },
@@ -146,7 +146,7 @@
             "description": "Adds a pre-formatted Idea Block"
         },
         {
-            "title": "Calout Objectives",
+            "title": "Callout Objectives",
             "src": "theme/urcourses_default/callouts/templates/callout_objectives.php",
             "description": "Adds a pre-formatted Idea Block"
         },
@@ -284,6 +284,16 @@
             "title": "Card Block with Image Top",
             "src": "theme/urcourses_default/callouts/templates/image_card.php",
             "description": "Creates a card on the page that's underneath an attached image."
+        },
+        {
+            "title": "Pull Quote Left",
+            "src": "theme/urcourses_default/callouts/templates/pullquote_left.hml",
+            "description": "Creates a floated quote block."
+        },
+        {
+            "title": "Pull Quote Right",
+            "src": "theme/urcourses_default/callouts/templates/pullquote_right.hml",
+            "description": "Creates a floated quote block."
         }
     ],
   "contextmenu": "link spellchecker image inserttable | cell row column deletetable"

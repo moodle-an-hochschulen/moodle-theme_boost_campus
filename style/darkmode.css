@@ -32,7 +32,7 @@ a, #boost-campus-course-settings .card-body a, .ui-widget-content a, .btn-link,
 .block .block-cards .course-summaryitem, .nav-tabs, .nav-tabs .nav-link.active, .block-course-overview .courseovbox, 
 .border-bottom, .btn-outline-secondary, .btn-outline-primary, .nav-tabs .nav-link:hover,
 .course-content ul.topics li.section.main, .card-body, .generaltable thead th, .dropdown-divider,
-.tour-actions > ul > li, .mform fieldset {
+.tour-actions > ul > li, .mform fieldset, #page-header .card {
     border-color: rgba(10, 10, 10, 0.25)!important;
 }
 
@@ -140,7 +140,7 @@ td.day.text-center.hasevent.calendar_event_site a,
     color: black;
 }
 
-.block .card-body, .card, .callout, blockquote, .pagelayout-embedded #page {
+.block .card-body, .card, .callout, .pagelayout-embedded #page {
     border-color: #fff1c7;
     background-color: #4f4f4d;
     color: #e5e3e8;
@@ -246,7 +246,7 @@ table.dataTable tr.odd td.sorting_1 {
     border-color: rgba(0,0,0,.125)!important;
 }
 
-.path-mod-attendance .attreport .contrast {
+.path-mod-attendance .attreport .contrast, blockquote {
     background-color: #6f6e6b;
 }
 

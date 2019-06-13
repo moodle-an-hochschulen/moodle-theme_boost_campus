@@ -44,7 +44,7 @@ a, #boost-campus-course-settings .card-body a, .ui-widget-content a, .btn-link,
     background-color: #3a3a38;
 }
 
-.checklistreport .header {
+.checklistreport .header, .bs-popover-right, .bs-popover-top, .bs-popover-left, .bs-popover-bottom{
     background-color: #3a3a3b;
 }
 

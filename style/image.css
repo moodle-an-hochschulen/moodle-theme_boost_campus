@@ -8,16 +8,20 @@
     .d-sm-inline-flex {
       display: inline-flex!important;
     }
-    }
+}
     
     .img-fluid, .img-responsive {
       max-width: 100%;
       height: auto;
     }
     
-    .figure-caption {
+    figure.img-thumgnail .figure-caption {
       font-size: 90%;
       color: #868e96;
+      display:table-caption;
+      caption-side: bottom;
+      background-color: #fff;
+      border: 0 1px 1px 1px solid #dee2e6;
     }
     
     .text-center {

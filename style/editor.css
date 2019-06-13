@@ -2505,3 +2505,7 @@ button {
   width: 100%;
   overflow: visible;
 }
+
+.d-table {
+  display: table !important;
+}

@@ -287,12 +287,12 @@
         },
         {
             "title": "Pull Quote Left",
-            "src": "theme/urcourses_default/callouts/templates/pullquote_left.hml",
+            "src": "theme/urcourses_default/callouts/templates/pullquote_left.html",
             "description": "Creates a floated quote block."
         },
         {
             "title": "Pull Quote Right",
-            "src": "theme/urcourses_default/callouts/templates/pullquote_right.hml",
+            "src": "theme/urcourses_default/callouts/templates/pullquote_right.html",
             "description": "Creates a floated quote block."
         }
     ],

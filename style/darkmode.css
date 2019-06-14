@@ -190,10 +190,11 @@ td.day.text-center.hasevent.calendar_event_site a,
     margin-top: 1px;
 }
 
-.modal-content, .moodle-dialogue-base .moodle-dialogue-wrap.moodle-dialogue-content,
+.modal-content, .modal-footer, .modal-header, .moodle-dialogue-base .moodle-dialogue-wrap.moodle-dialogue-content,
 .moodle-dialogue-base .moodle-dialogue-wrap .moodle-dialogue-hd h1 {
     background-color: #4f4f4d;
     color: #f2eff3;
+    border-color: rgba(10, 10, 10, 0.25)!important;
 }
 
 .nav-tabs .nav-link.active {

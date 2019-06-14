@@ -1664,11 +1664,11 @@ ul.ctopics .content .section ul {
 
 //carousel bg override to make the controls easier to see
 .carousel {
-    background-color: #040404;
+    background-color: hsla(0, 0%, 2%, 0.24);
 }
 
 //content editor pg targeting the column next to it. If max width is lowered there is no overflow so no pg scroll
-#page-mod-book-edit .col-md-3{
+#page-mod-book-edit .col-md-3, #fitem_id_summary_editor .col-md-3{
     max-width: 20%;
 }
 

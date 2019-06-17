@@ -320,7 +320,8 @@ body.loginbackgroundimage #page {
 
     /* Remove border of child nodes which should appear as one block. */
     .list-group-item[data-parent-key="mycourses"],
-    .list-group-item[href*="#section-"]:not([href*="#section-0"]) {
+    .list-group-item[href*="#section-"]:not([href*="#section-0"]),
+    .list-group-item[href*="&section="]:not([href*="&section=0"]) {
         border-top: none;
     }
 }

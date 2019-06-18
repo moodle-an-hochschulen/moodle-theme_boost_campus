@@ -141,7 +141,7 @@ td.day.text-center.hasevent.calendar_event_site a,
 }
 
 .block .card-body, .card, .callout, .pagelayout-embedded #page {
-    border-color: #fff1c7;
+    border-color: rgba(10, 10, 10, 0.25);
     background-color: #4f4f4d;
     color: #e5e3e8;
 }

@@ -1,12 +1,21 @@
 /*darkmode css*/
 
 a, #boost-campus-course-settings .card-body a, .ui-widget-content a, .btn-link, 
-.inplaceeditable .quickeditlink {
+.inplaceeditable .quickeditlink, .list-group-item-action {
     color: #e2d2a2;
  }
 
+ .gitblock_timeline .list-group-item-action:hover {
+    background-color: #4f4f4d;
+    color: #e5e3e8;
+ }
+
+ .block_timeline .list-group-item:hover {
+    background-color: #4f4f4d;
+ }
+
  body, .custom-select {
-     background-color: #f5eff9;
+    background-color: #f5eff9;
  }
 
  ol.checklist .itemblack, .block_writinghelp .card-text a h4, .popover-body,
@@ -32,7 +41,7 @@ a, #boost-campus-course-settings .card-body a, .ui-widget-content a, .btn-link,
 .block .block-cards .course-summaryitem, .nav-tabs, .nav-tabs .nav-link.active, .block-course-overview .courseovbox, 
 .border-bottom, .btn-outline-secondary, .btn-outline-primary, .nav-tabs .nav-link:hover,
 .course-content ul.topics li.section.main, .card-body, .generaltable thead th, .dropdown-divider,
-.tour-actions > ul > li, .mform fieldset, #page-header .card {
+.tour-actions > ul > li, .mform fieldset, #page-header .card, .fp-iconview .fp-thumbnail img,.fp-iconview .fp-thumbnail {
     border-color: rgba(10, 10, 10, 0.25)!important;
 }
 
@@ -40,7 +49,18 @@ a, #boost-campus-course-settings .card-body a, .ui-widget-content a, .btn-link,
     border-color: rgba(10, 10, 10, 0.5)!important;
 }
 
-.checklistreport .cell.level0 {
+.dropdown-item.active {
+    background-color: #636363;
+    color: #e5e3e8;
+}
+
+.dropdown-item {
+    color: #e5e3e8;
+}
+
+.checklistreport .cell.level0,
+.moodle-dialogue-base .moodle-dialogue-wrap .moodle-dialogue-hd.yui3-widget-hd,
+.choosercontainer #chooseform .submitbuttons, .form-control {
     background-color: #3a3a38;
 }
 
@@ -50,7 +70,7 @@ a, #boost-campus-course-settings .card-body a, .ui-widget-content a, .btn-link,
 
  .path-mod-assign .gradingtable tr.unselectedrow td, .que .info,
  .preferences-container tr td:nth-child(odd) .container-fluid, #frontpage-available-course-list,
- #page-my-index  {
+ #page-my-index, .choosercontainer #chooseform .selected, .jschooser .choosercontainer #chooseform .typesummary  {
     background-color: #4f4f4d;
  }
 .list-group-item, #dataTable_info, #dataTable_filter, #dataTable_length {
@@ -134,16 +154,27 @@ td.day.text-center.today {
     border: 1px solid #e2d2a2;
 }
 
-td.day.text-center.hasevent.calendar_event_site a, 
+td.day.text-center.hasevent a, 
 .course-img-uploader-container .course-image-uploader,
 .course-content ul.ctopics li.section .content .toggle a {
     color: black;
 }
 
-.block .card-body, .card, .callout, .pagelayout-embedded #page {
+.block .card-body, .card, .callout, .pagelayout-embedded #page, .file-picker .fp-content,
+.file-picker .fp-navbar, .moodle-dialogue-base .moodle-dialogue-wrap .moodle-dialogue-hd,
+.jschooser .choosercontainer #chooseform .instruction {
     border-color: rgba(10, 10, 10, 0.25);
     background-color: #4f4f4d;
-    color: #e5e3e8;
+    color: #e5e3e8!important;
+}
+
+.jschooser .choosercontainer #chooseform .alloptions {
+    background-color: #3a3a3b;
+}
+
+.choosercontainer #chooseform .option label {
+    border-color: rgba(10, 10, 10, 0.25);
+    letter-spacing: .01rem;
 }
 
 .card-title.d-inline {
@@ -181,15 +212,32 @@ td.day.text-center.hasevent.calendar_event_site a,
     background-color: #efede7;
 }
 
-.format-site, .path-mod-assign [data-region="grade-actions-panel"] {
+.format-site, .path-mod-assign [data-region="grade-actions-panel"], .path-mod-assign [data-region="grading-navigation-panel"] {
     background-color: #2f2d29;
     color: #e5e3e8;
+    border-color: rgba(10, 10, 10, 0.25)
+}
+
+.path-mod-assign div.submissionstatus {
+    background-color: #999;
 }
 
 .logininfo {
     margin-top: 1px;
 }
 
+.fp-iconview .fp-filename-field .fp-filename {
+    background: #3e3e3c;
+}
+.invalid-feedback, .text-danger {
+    color: #f87772;
+    letter-spacing: .02rem;
+}
+
+.form-control.is-invalid {
+    border-color: #fc534d;
+    border-width: medium;
+}
 .modal-content, .modal-footer, .modal-header, .moodle-dialogue-base .moodle-dialogue-wrap.moodle-dialogue-content,
 .moodle-dialogue-base .moodle-dialogue-wrap .moodle-dialogue-hd h1 {
     background-color: #4f4f4d;
@@ -209,7 +257,7 @@ td.day.text-center.hasevent.calendar_event_site a,
     color: #f3eefb; 
 }
 
-.overlay-icon-container {
+.overlay-icon-container,  .bg-pulse-grey, .mymedia.mm-media.entry:hover{
     background-color: rgba(47, 45, 41, 0.64);
 }
 
@@ -306,7 +354,20 @@ table.dataTable tr.odd td.sorting_1 {
     background-color: #72f17a;
 }
 
-.block_heatmap_heat_0 a, .block_heatmap_heat_1 a, .ur_resub_msg {
+.block_heatmap_heat_0 a {
+    color: #543f20 !important;
+}
+
+.block_heatmap_heat_2 a {
+    color: #294200 !important;
+}
+
+.block_heatmap_heat_3 a {
+    color: #331503!important;
+}
+
+.block_heatmap_heat_1 a, .ur_resub_msg, .block_heatmap_heat_0,
+.block_heatmap_heat_1, .block_heatmap_heat_3 {
     color: #1f1e1a!important;
 }
 
@@ -347,7 +408,8 @@ ul.oublog-accordion li {
 }
 
 
-#region-main, .region_main_settings_menu_proxy, .ui-widget-content {
+#region-main, .region_main_settings_menu_proxy, .ui-widget-content,
+[data-fieldtype="modgrade"] {
     background-color: #4f4f4d;
     color: #fffbef;
 }

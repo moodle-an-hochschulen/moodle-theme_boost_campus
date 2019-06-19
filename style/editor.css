@@ -1847,26 +1847,7 @@
       font-size: 105%; 
       color: black;
   }
-  /*
-  td { 
-      padding-top: 2px; 
-      padding-bottom: 2px;
-  }
-  */
-  /*
-  table { 
-      font-family: "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif; 
-      margin: 10px 0;
-  }
-  */
-  /*
-  th { 
-      background-color: #fff; 
-      color: #000; 
-      padding-top: 5px; 
-      padding-bottom: 5px;
-  }
-  */
+
   .altrows tr:nth-child(2n+1) { 
       background-color: #f1f6fb;
   }
@@ -1874,17 +1855,6 @@
   tr:nth-child(2n) { 
       
   }
-  
-  /* @end */
-  
-  /* @group Lists */
-  
-  /*
-  li { 
-      margin-bottom: 10px;
-  }
-  */
-  
   
   /* @end */
   
@@ -2072,34 +2042,6 @@
   }
   
   /* @end */
-  
-  
-  .image {
-      background-color: transparent;
-      float: none;
-      clear: both;
-      border: solid #ccc 1px;
-  }
-  
-  
-  .image img {
-      padding: 0;
-  }
-  
-  .image p { font-size: 85%; color: #333; }
-  
-  .image.right {
-      float: right;
-      clear: none;
-      margin: 0px 0px 20px 20px;
-  }
-  
-  .image.left {
-      float: left;
-      clear: none;
-      margin: 0px 20px 20px 0px;
-  }
-  
   .book_content img.image {
       padding: 0.5em; 
   }
@@ -2392,14 +2334,6 @@
   text-align: right!important;
 }
 
-.img-thumbnail {
-  padding: .25rem;
-  background-color: #fff;
-  border: 1px solid #dee2e6;
-  max-width: 100%;
-  height: auto;
-}
-
 .mx-auto {
   margin-right: auto!important;
   margin-left: auto!important;
@@ -2508,4 +2442,97 @@ button {
 
 .d-table {
   display: table !important;
+}
+
+/*bootstrap 4.0 table classes*/
+.table thead th {
+  vertical-align: bottom;
+  border-bottom: 2px solid #dee2e6;
+}
+
+th {
+  text-align: inherit;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+.table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 1rem;
+  background-color: transparent;
+}
+
+.table td, .table th {
+  padding: .75rem;
+  vertical-align: top;
+  border-top: 1px solid #dee2e6;
+      border-top-color: rgb(222, 226, 230);
+}
+
+.table-dark td, .table-dark th, .table-dark thead th {
+  border-color: #32383e;
+}
+
+.table-dark {
+  color: #fff;
+  background-color: #212529;
+}
+
+.table .thead-light th {
+  color: #495057;
+  background-color: #e9ecef;
+  border-color: #dee2e6;
+}
+
+.table .thead-dark th {
+  color: #fff;
+  background-color: #212529;
+  border-color: #32383e;
+}
+
+.table-striped tbody tr:nth-of-type(2n+1) {
+  background-color: rgba(0,0,0,.05);
+}
+
+.table-dark.table-striped tbody tr:nth-of-type(2n+1) {
+  background-color: rgba(255,255,255,.05);
+}
+
+.table-bordered {
+  border: 1px solid #dee2e6;
+}
+
+.table-dark.table-bordered {
+  border: 0;
+}
+
+.table-hover tbody tr:hover {
+  background-color: rgba(0,0,0,.075);
+}
+
+.table-dark.table-hover tbody tr:hover {
+  background-color: rgba(255,255,255,.075);
+}
+
+.table-sm td, .table-sm th {
+  padding: .3rem;
+}
+
+.table-responsive {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+.text-decoration-none {
+  text-decoration: none !important;
+}
+
+.text-reset {
+  color: inherit !important;
 }

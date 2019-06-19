@@ -30,7 +30,8 @@ $bodyattributes = $OUTPUT->body_attributes();
 $templatecontext = [
     'sitename' => format_string($SITE->shortname, true, ['context' => context_course::instance(SITEID), "escape" => false]),
     'output' => $OUTPUT,
-    'bodyattributes' => $bodyattributes
+    'bodyattributes' => $bodyattributes,
+	'loginlogourl' => $OUTPUT->image_url('uofr_logo_primary_blk', 'theme')
 ];
 
 // MODIFICATION START: Handle additional layout elements.

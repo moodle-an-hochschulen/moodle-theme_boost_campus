@@ -465,7 +465,7 @@ class core_renderer extends \theme_boost\output\core_renderer {
      * @return string
      */
     public function render_login(\core_auth\output\login $form) {
-        global $CFG, $SITE;
+        global $CFG, $SITE, $OUTPUT;
 
         $context = $form->export_for_template($this);
 
@@ -481,6 +481,9 @@ class core_renderer extends \theme_boost\output\core_renderer {
             $url = $url->out(false);
         }
         $context->logourl = $url;
+		
+		$context->loginlogourl = $OUTPUT->image_url('uofr_logo_primary_blk', 'theme');
+		
         $context->sitename = format_string($SITE->fullname, true,
             ['context' => context_course::instance(SITEID), "escape" => false]);
         // MODIFICATION START.

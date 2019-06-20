@@ -1678,3 +1678,16 @@ ul.ctopics .content .section ul {
 #nav-drawer .list-group-item[data-parent-key="mycourses"] .media-left .fa-home {
 	//display: none;
 }
+
+//css to make the tabpanel li items display horizontally like a table on larger screens
+@include media-breakpoint-up(sm) {
+    li.inline-nav {
+        display: inline-block;
+        width: 33%;
+    }
+
+    li.inline-nav-admin {
+        display: inline-block;
+        width: 24%;
+    }
+}

@@ -67,22 +67,26 @@
             <div class="tab-pane active" id="course-settings-{{node.key}}" role="tabpanel">
                 <div class="card">
                     <div class="card-body pb-0">
-                        <div class="row">
-                            <div class="col-sm-4">
-                                {{#action}}<h4><a href="{{action}}">{{text}}</a></h4>{{/action}}
-                                {{^action}}<h4>{{text}}</h4>{{/action}}
-                            </div>
-                            <div class="col-sm-8">
-                                <ul class="list-unstyled">
-                                    {{#node.children}}
-                                        {{^children.count}}
-                                            {{#display}}
-                                                <li><a href="{{{action}}}">{{text}}</a></li>
-                                            {{/display}}
-                                        {{/children.count}}
-                                    {{/node.children}}
-                                </ul>
-                            </div>
+                        <div class="col-sm-4 row">
+                            {{#action}}<h4><a href="{{action}}">{{text}}</a></h4>{{/action}}
+                            {{^action}}<h4>{{text}}</h4>{{/action}}
+                        </div>
+                        <div class="container">
+                            <ul class="list-unstyled">
+                                {{#node.children}}
+                                    {{^children.count}}
+                                        {{#display}}
+                                            <li class="inline-nav-admin"><a href="{{{action}}}">
+                                            {{#icon.pix}}
+                                                 <icon>
+                                                     {{#pix}}{{{icon.pix}}}, {{{icon.component}}}, {{{icon.alt}}}{{/pix}}
+                                                </icon>
+                                           {{/icon.pix}}
+                                            {{text}}</a></li>
+                                        {{/display}}
+                                    {{/children.count}}
+                                {{/node.children}}
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -97,12 +101,16 @@
                                         {{#action}}<h4><a href="{{action}}">{{text}}</a></h4>{{/action}}
                                         {{^action}}<h4>{{text}}</h4>{{/action}}
                                     </div>
-                                    <div class="col-sm-8">
+                                    <div class="container">
                                         <ul class="list-unstyled">
                                             {{#children}}
                                                 {{#display}}
                                                     {{^children.count}}
-                                                        <li><a href="{{{action}}}">{{text}}</a></li>
+                                                        <li class="inline-nav"><a href="{{{action}}}">
+                                                           {{#icon.pix}}
+                                                                <icon>{{#pix}}{{{icon.pix}}}, {{{icon.component}}}, {{{icon.alt}}}{{/pix}}</icon>
+                                                            {{/icon.pix}}
+                                           {{text}}</a></li>
                                                     {{/children.count}}
                                                 {{/display}}
                                             {{/children}}
@@ -118,10 +126,19 @@
                                                     {{#action}}<h4><a href="{{action}}">{{text}}</a></h4>{{/action}}
                                                     {{^action}}<h4>{{text}}</h4>{{/action}}
                                                 </div>
-                                                <div class="col-sm-8">
+                                                <div class="container">
                                                     <ul class="list-unstyled">
                                                         {{#children}}
-                                                            {{> core/settings_link_page_single }}
+                                                {{#display}}
+                                                    {{^children.count}}
+                                                        <li class="inline-nav"><a href="{{{action}}}">                                            {{#icon.pix}}
+                                                 <icon>
+                                                     {{#pix}}{{{icon.pix}}}, {{{icon.component}}}, {{{icon.alt}}}{{/pix}}
+                                                </icon>
+                                           {{/icon.pix}} {{text}}</a></li>
+                                                    {{/children.count}}
+                                                {{/display}}                                                        
+                                                           
                                                         {{/children}}
                                                     </ul>
                                                 </div>

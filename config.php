@@ -51,7 +51,7 @@ if (get_config('theme_urcourses_default', 'footerblocks') == '1columns') {
 $THEME->layouts = [
     // Most backwards compatible layout without the blocks - this is the layout used by default.
     'base' => array(
-        'file' => 'columns2.php',
+        'file' => 'base.php',
         'regions' => $regions,
         'defaultregion' => 'side-pre',
     ),

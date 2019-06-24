@@ -394,8 +394,7 @@ function theme_urcourses_default_get_ur_category_class($courseid) {
     //debugging("Themes: " . $check_course_theme->theme  . "Course ID: " . $courseid, DEBUG_DEVELOPER);
 	
 	if (!empty($check_course_theme->theme)) {
-		debugging("inside in lib", DEBUG_DEVELOPER);
-        $clean_theme_key = substr($check_course_theme->theme, 0, 16); //'urcourses_clean_'
+		$clean_theme_key = substr($check_course_theme->theme, 0, 16); //'urcourses_clean_'
         $default_theme_key = substr($check_course_theme->theme, 0, 10); //'urcourses_'
         
         if ($clean_theme_key == 'urcourses_clean_') {
@@ -404,16 +403,18 @@ function theme_urcourses_default_get_ur_category_class($courseid) {
         else if ($default_theme_key == 'urcourses_') {
             $theme_val = substr($check_course_theme->theme, 10);
         }
-
-        switch ($theme_val) {
-            case 'socialwork':
-                $theme_val = 'sw';
-                break;
-            case 'finearts':
-                $theme_val = 'map';
-                break;
-        }
-
+		
+		
+		$exc_themes = array('sw'=>'socialwork',
+			'map'=>'finearts',
+			'edu'=>'education',
+			'bus'=>'business',
+			'nur'=>'nursing',
+			'sci'=>'science');
+		
+		$key = array_search($theme_val,$exc_themes);
+		if (!empty($key)) $theme_val = $key;	
+		
         return $theme_val;
 	}
 	

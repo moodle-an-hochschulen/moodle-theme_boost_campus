@@ -436,6 +436,10 @@ a:hover {
     color: #d9b945;
  }
 
+ #boost-campus-course-settings .card-body a:hover {
+    color: #d9b945;
+    background-color: #6f6e6b;
+ }
  a:not([href]):not([tabindex]) {
     color: #373a3c;
 }

@@ -72,12 +72,18 @@
                                 {{#action}}<h4><a href="{{action}}">{{text}}</a></h4>{{/action}}
                                 {{^action}}<h4>{{text}}</h4>{{/action}}
                             </div>
-                            <div class="col-sm-8">
+                            <div>
                                 <ul class="list-unstyled">
                                     {{#activitynode.children}}
                                         {{^children.count}}
                                             {{#display}}
-                                                <li><a href="{{{action}}}">{{text}}</a></li>
+                                                 <li class="inline-nav-admin"><a href="{{{action}}}">
+                                                     {{#icon.pix}}
+                                                        <icon>
+                                                          {{#pix}}{{{icon.pix}}}, {{{icon.component}}}, {{{icon.alt}}}{{/pix}}
+                                                        </icon>
+                                                    {{/icon.pix}}
+                                                {{text}}</a></li>
                                             {{/display}}
                                         {{/children.count}}
                                     {{/activitynode.children}}

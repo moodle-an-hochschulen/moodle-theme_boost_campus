@@ -79,18 +79,21 @@ class course_renderer extends \theme_boost\output\core\course_renderer {
             $classes .= ' collapsed';
             $nametag = 'div';
         }
-		
-		
+        
+        $key = theme_urcourses_default_get_ur_category_class($course->id);
+		if (!empty($key)) {
+            $classes .= ' ' . $key;
+        }
 		
 		$ur_categories = array('','misc'=>'','khs'=>'Faculty of Kinesiology and Health Studies','edu'=>'Faculty of Education','sci'=>'Faculty of Science','grad'=>'Grad Studies','fa'=>'Faculty of Fine Arts','map'=>'Faculty of Media, Art, and Performance','engg'=>'Faculty of Engineering','bus'=>'Business Administration','arts'=>'Faculty of Arts','sw'=>'Faculty of Social Work','nur'=>'Faculty of Nursing','misc'=>'Custom Themes');
 		
 		
-		$sql = "SELECT a.name FROM {$CFG->prefix}course_categories a, {$CFG->prefix}course b WHERE a.id = b.category AND b.id = {$course->id}";
-		$check_course_category = $DB->get_record_sql($sql);
-		if ($check_course_category) {
-			$key = array_search($check_course_category->name,$ur_categories);
-			$classes .= (!empty($key)) ? ' '.$key : '';
-		}
+		// $sql = "SELECT a.name FROM {$CFG->prefix}course_categories a, {$CFG->prefix}course b WHERE a.id = b.category AND b.id = {$course->id}";
+		// $check_course_category = $DB->get_record_sql($sql);
+		// if ($check_course_category) {
+		// 	$key = array_search($check_course_category->name,$ur_categories);
+		// 	$classes .= (!empty($key)) ? ' '.$key : '';
+		// }
 		
         // .coursebox
         $content .= html_writer::start_tag('div', array(
@@ -147,4 +150,5 @@ class course_renderer extends \theme_boost\output\core\course_renderer {
         $content .= html_writer::end_tag('div'); // .coursebox
         return $content;
     }
+    
 }

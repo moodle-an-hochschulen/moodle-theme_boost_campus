@@ -390,21 +390,31 @@ function theme_urcourses_default_get_ur_category_class($courseid) {
 		
 	$sql = "SELECT `theme` FROM mdl_course WHERE id={$courseid}";	
 	
-	$check_course_theme = $DB->get_record_sql($sql);
+    $check_course_theme = $DB->get_record_sql($sql);
+    //debugging("Themes: " . $check_course_theme->theme  . "Course ID: " . $courseid, DEBUG_DEVELOPER);
 	
-	if (!empty($check_course_theme)) {
-		$theme_key = substr($check_course_theme, 0, 16); //'urcourses_clean_'
-		
-		if ($theme_key == 'urcourses_clean_') {
-			$theme_val = substr($check_course_theme, 17);
-			return $theme_val;
-		}
-		$theme_key = substr($check_course_theme, 0, 10); //'urcourses_'
-		
-		if ($theme_key == 'urcourses_') {
-			$theme_val = substr($check_course_theme, 11);
-			return $theme_val;
-		}
+	if (!empty($check_course_theme->theme)) {
+		debugging("inside in lib", DEBUG_DEVELOPER);
+        $clean_theme_key = substr($check_course_theme->theme, 0, 16); //'urcourses_clean_'
+        $default_theme_key = substr($check_course_theme->theme, 0, 10); //'urcourses_'
+        
+        if ($clean_theme_key == 'urcourses_clean_') {
+            $theme_val = substr($check_course_theme->theme, 16);
+        }
+        else if ($default_theme_key == 'urcourses_') {
+            $theme_val = substr($check_course_theme->theme, 10);
+        }
+
+        switch ($theme_val) {
+            case 'socialwork':
+                $theme_val = 'sw';
+                break;
+            case 'finearts':
+                $theme_val = 'map';
+                break;
+        }
+
+        return $theme_val;
 	}
 	
 		

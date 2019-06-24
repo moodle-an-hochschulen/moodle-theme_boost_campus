@@ -1711,7 +1711,42 @@ ul.ctopics .content .section ul {
 #nav-drawer .list-group-item[data-parent-key="mycourses"] .media-left.luthervssn .fa-home:before {
 	color: #3155a5; }
 #nav-drawer .list-group-item[data-parent-key="mycourses"] .media-left.fnuniv .fa-home:before {
-	color: #0086D4; }
+    color: #0086D4; }
+    
+.coursebox.arts {
+    border-color: #c9282d; }
+.coursebox.khs {
+    border-color: #bfb9a7; }
+.coursebox.sw {
+    border-color: #00a0df; }
+.coursebox.edu {
+    border-color: #ff5a00; }
+.coursebox.sci {
+    border-color: #007836; }
+.coursebox.map {
+    border-color: #00A9CE; }
+.coursebox.engg {
+    border-color: #5bb4e5; }
+.coursebox.bus {
+    border-color: #2a6ebb; }
+.coursebox.nur {
+    border-color: #fbceb1; }
+.coursebox.cnpp {
+	border-color: #662d91; }
+.coursebox.scbscn {
+	border-color: #6c9d41; }
+.coursebox.gbus {
+	border-color: #89022d; }
+.coursebox.jsgspp {
+	border-color: #8b9b3c; }
+.coursebox.lacite {
+	border-color: #CCDB2A; }
+.coursebox.luther {
+	border-color: #3155a5; }
+.coursebox.luthervssn {
+	border-color: #3155a5; }
+.coursebox.fnuniv {
+	border-color: #0086D4; }
   
 #nav-drawer .list-group-item[data-parent-key="mycourses"] .media-left .fa-home {
 	//display: none;
@@ -1719,13 +1754,26 @@ ul.ctopics .content .section ul {
 
 //css to make the tabpanel li items display horizontally like a table on larger screens
 @include media-breakpoint-up(sm) {
-    li.inline-nav {
+    li.inline-nav, li.inline-nav-admin {
         display: inline-block;
+        vertical-align: top;
+        margin-left: 1.1em;
+    }
+
+    li.inline-nav {
         width: 33%;
     }
 
     li.inline-nav-admin {
-        display: inline-block;
         width: 24%;
     }
+
+    li.inline-nav-admin a, li.inline-nav a {
+        display: inline-flex!important;
+    }
 }
+
+li.inline-nav-admin icon, li.inline-na icon {
+    margin-right: -0.3em;
+}
+

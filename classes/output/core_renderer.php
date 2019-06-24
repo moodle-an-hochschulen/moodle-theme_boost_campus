@@ -595,8 +595,8 @@ function ur_check_course_cat() {
 	global $CFG,$DB,$COURSE;
 
 	$ur_categories = array('','misc'=>'','khs'=>'Faculty of Kinesiology and Health Studies','edu'=>'Faculty of Education','sci'=>'Faculty of Science','grad'=>'Grad Studies','fa'=>'Faculty of Fine Arts','map'=>'Faculty of Media, Art, and Performance','engg'=>'Faculty of Engineering and Applied Science','bus'=>'Business Administration','arts'=>'Faculty of Arts','sw'=>'Faculty of Social Work','nur'=>'Faculty of Nursing','misc'=>'Custom Themes');
-	
-	if ($COURSE->theme != 'urcourses_default') {
+    error_log("theme: " . $COURSE->theme);
+	if ($COURSE->theme != 'urcourses_default' && $COURSE->theme !== NULL) {
 		$currthemeelms = explode('_',$COURSE->theme);
 		return array('css'=>'','name'=>$ur_categories[$currthemeelms[1]]);
 	}
@@ -678,11 +678,11 @@ public function user_menu($user = null, $withlinks = null) {
 
     $usedarkmode = $DB->get_record('theme_urcourses_darkmode', array('userid'=>$USER->id, 'darkmode'=>1));
     //changes url to opposite of whatever the toggle currently is to set dark mode in db under columns2.php
-    
-    $usedarkmodeurl = ($usedarkmode == 1) ? 0 : 1;
+    $darkchk = $usedarkmode->darkmode;
+    $usedarkmodeurl = ($darkchk == 1) ? 0 : 1;
     //dark mode variable for if on/off to swap icon
-    $mynodelabel = ($usedarkmode == 1) ? "i/item" : "i/marker";
-    $darkstate = ($usedarkmode == 1) ? "off" : "on";
+    $mynodelabel = ($darkchk == 1) ? "i/item" : "i/marker";
+    $darkstate = ($darkchk == 1) ? "off" : "on";
 
     //creating dark mode object 
     $mynode = new stdClass();

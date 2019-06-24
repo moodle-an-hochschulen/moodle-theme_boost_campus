@@ -1673,7 +1673,45 @@ ul.ctopics .content .section ul {
 }
 
 #nav-drawer .list-group-item[data-parent-key="mycourses"] .media-left .fa-home:before {
-  content: ""; }
+  content: ""; 
+  color: #ffc82e;
+}
+  
+
+#nav-drawer .list-group-item[data-parent-key="mycourses"] .media-left.arts .fa-home:before {
+      color: #c9282d; }
+#nav-drawer .list-group-item[data-parent-key="mycourses"] .media-left.khs .fa-home:before {
+    color: #bfb9a7; }
+#nav-drawer .list-group-item[data-parent-key="mycourses"] .media-left.sw .fa-home:before {
+    color: #00a0df; }
+#nav-drawer .list-group-item[data-parent-key="mycourses"] .media-left.edu .fa-home:before {
+    color: #ff5a00; }
+#nav-drawer .list-group-item[data-parent-key="mycourses"] .media-left.sci .fa-home:before {
+    color: #007836; }
+#nav-drawer .list-group-item[data-parent-key="mycourses"] .media-left.map .fa-home:before {
+    color: #00A9CE; }
+#nav-drawer .list-group-item[data-parent-key="mycourses"] .media-left.engg .fa-home:before {
+    color: #5bb4e5; }
+#nav-drawer .list-group-item[data-parent-key="mycourses"] .media-left.bus .fa-home:before {
+    color: #2a6ebb; }
+#nav-drawer .list-group-item[data-parent-key="mycourses"] .media-left.nur .fa-home:before {
+    color: #fbceb1; }
+#nav-drawer .list-group-item[data-parent-key="mycourses"] .media-left.cnpp .fa-home:before {
+	color: #662d91; }
+#nav-drawer .list-group-item[data-parent-key="mycourses"] .media-left.scbscn .fa-home:before {
+	color: #6c9d41; }
+#nav-drawer .list-group-item[data-parent-key="mycourses"] .media-left.gbus .fa-home:before {
+	color: #89022d; }
+#nav-drawer .list-group-item[data-parent-key="mycourses"] .media-left.jsgspp .fa-home:before {
+	color: #8b9b3c; }
+#nav-drawer .list-group-item[data-parent-key="mycourses"] .media-left.lacite .fa-home:before {
+	color: #CCDB2A; }
+#nav-drawer .list-group-item[data-parent-key="mycourses"] .media-left.luther .fa-home:before {
+	color: #3155a5; }
+#nav-drawer .list-group-item[data-parent-key="mycourses"] .media-left.luthervssn .fa-home:before {
+	color: #3155a5; }
+#nav-drawer .list-group-item[data-parent-key="mycourses"] .media-left.fnuniv .fa-home:before {
+	color: #0086D4; }
   
 #nav-drawer .list-group-item[data-parent-key="mycourses"] .media-left .fa-home {
 	//display: none;

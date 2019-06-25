@@ -1777,3 +1777,36 @@ li.inline-nav-admin icon, li.inline-na icon {
     margin-right: -0.3em;
 }
 
+/*For mod/feedback's edit questions tab. elements of form were squished together*/
+#feedback_edit_form {
+    padding-top: 1em;
+}
+
+#feedback_edit_form .fitem.row > .col-md-3 {
+    width: 100%;
+}
+
+#feedback_edit_form .fitem.row {
+    justify-content: flex-end;
+    right: auto;
+}
+
+#feedback_edit_form .itemhandle {
+    float: right;
+    padding-right: 12px;
+    right: auto;
+}
+
+#feedback_edit_form .col-md-9.form-inline.felement {
+    justify-content: center;
+}
+
+@include media-breakpoint-down(sm) {
+    #feedback_edit_form .itemhandle {
+        right: .6em;
+    }
+
+    #feedback_edit_form .fitem.row > .col-md-3 {
+        padding-bottom: .5em;
+    }
+}

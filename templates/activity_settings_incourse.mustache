@@ -72,7 +72,7 @@
                                 {{#action}}<h4><a href="{{action}}">{{text}}</a></h4>{{/action}}
                                 {{^action}}<h4>{{text}}</h4>{{/action}}
                             </div>
-                            <div>
+                            <div class="table">
                                 <ul class="list-unstyled">
                                     {{#activitynode.children}}
                                         {{^children.count}}
@@ -124,7 +124,7 @@
                                                     {{#action}}<h4><a href="{{action}}">{{text}}</a></h4>{{/action}}
                                                     {{^action}}<h4>{{text}}</h4>{{/action}}
                                                 </div>
-                                                <div class="col-sm-8">
+                                                <div class="table">
                                                     <ul class="list-unstyled">
                                                         {{#children}}
                                                             {{> core/settings_link_page_single }}

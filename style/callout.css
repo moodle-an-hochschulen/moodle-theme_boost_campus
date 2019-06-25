@@ -18,6 +18,7 @@
     margin-bottom: -5px;
     margin-top: -7px;
     margin-left: -5px;
+    flex-shrink: 0;
 }
 
 .callout-yellow {

@@ -1,7 +1,7 @@
 /*darkmode css*/
 
 a, #boost-campus-course-settings .card-body a, .ui-widget-content a, .btn-link, 
-.inplaceeditable .quickeditlink, .list-group-item-action {
+.inplaceeditable .quickeditlink, .list-group-item-action, #page-header .course-head .instructors .teacherlist a {
     color: #e2d2a2;
  }
 
@@ -19,8 +19,12 @@ a, #boost-campus-course-settings .card-body a, .ui-widget-content a, .btn-link,
  }
 
  ol.checklist .itemblack, .block_writinghelp .card-text a h4, .popover-body,
- .dropdown-menu.show .dropdown-item a{
-    color: #fff9e8;
+ .dropdown-menu.show .dropdown-item a, #page-header .course-head a .page-context-header .page-header-headings h1{
+    color: whitesmoke;
+ }
+
+ #page-header .course-head a:hover .page-context-header .page-header-headings h1 {
+     color:#dacca6;
  }
 
  .text-primary {
@@ -45,8 +49,21 @@ a, #boost-campus-course-settings .card-body a, .ui-widget-content a, .btn-link,
     border-color: rgba(10, 10, 10, 0.25)!important;
 }
 
+#page-header i {
+    color: rgba(10,10,10,0.5) !important;
+}
+
+#page-header .course-head {
+    background-color: rgba(10,10,10,.5);
+}
+
 .path-grade-report-grader .gradeparent table, .page-link, .generaltable th, .generaltable td {
     border-color: rgba(10, 10, 10, 0.5)!important;
+}
+
+table, table td, table tr, table th, .forumpost, .path-mod-feedback table.analysis,
+ .path-mod-forum article .nav .nav-link + .nav-link {
+    border-color: rgba(10, 10, 10, 0.25)!important;
 }
 
 .dropdown-item.active {

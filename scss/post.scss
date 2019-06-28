@@ -1810,3 +1810,15 @@ li.inline-nav-admin icon, li.inline-na icon {
         padding-bottom: .5em;
     }
 }
+
+/*Default link colour override. Would be the brand colour otherwise*/ 
+a {
+    color: #07770c;
+}
+
+/*throwing this in here for now. Colour and design to be fixed
+currently copying the default hover*/
+a:visited {
+    color: #464646;
+    text-decoration: underline;
+}

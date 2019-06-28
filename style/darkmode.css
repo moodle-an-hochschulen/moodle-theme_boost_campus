@@ -19,7 +19,8 @@ a, #boost-campus-course-settings .card-body a, .ui-widget-content a, .btn-link,
  }
 
  ol.checklist .itemblack, .block_writinghelp .card-text a h4, .popover-body,
- .dropdown-menu.show .dropdown-item a, #page-header .course-head a .page-context-header .page-header-headings h1{
+ .dropdown-menu.show .dropdown-item a, #page-header .course-head a .page-context-header .page-header-headings h1,
+ #page-header h1 a {
     color: whitesmoke;
  }
 
@@ -59,6 +60,11 @@ a, #boost-campus-course-settings .card-body a, .ui-widget-content a, .btn-link,
 
 .path-grade-report-grader .gradeparent table, .page-link, .generaltable th, .generaltable td {
     border-color: rgba(10, 10, 10, 0.5)!important;
+}
+
+.img-thumbnail {
+    border-color: rgba(10, 10, 10, 0.5);
+    background-color: rgba(10, 10, 10, 0.25);
 }
 
 table, table td, table tr, table th, .forumpost, .path-mod-feedback table.analysis,
@@ -361,30 +367,17 @@ table.dataTable tr.odd td.sorting_1 {
     color: black;
 }
 
-.block_heatmap_heat_0 {
+.block_heatmap_heat_0 a,  .block_heatmap_heat_1 a, .block_heatmap_heat_2 a, .block_heatmap_heat_3 a,
+.block_heatmap_heat_4 a{
+    color: #2b1010!important;
+}
+
+.block_heatmap_heat_0, .block_heatmap_heat_1, .block_heatmap_heat_2, 
+.block_heatmap_heat_3, .block_heatmap_heat_4 {
     color: black;
-    background-color: #f5eea9;
 }
 
-.block_heatmap_heat_2,  .block_heatmap_heat_4, .block_heatmap_heat_4 a {
-    color: black;
-    background-color: #72f17a;
-}
-
-.block_heatmap_heat_0 a {
-    color: #543f20 !important;
-}
-
-.block_heatmap_heat_2 a {
-    color: #294200 !important;
-}
-
-.block_heatmap_heat_3 a {
-    color: #331503!important;
-}
-
-.block_heatmap_heat_1 a, .ur_resub_msg, .block_heatmap_heat_0,
-.block_heatmap_heat_1, .block_heatmap_heat_3 {
+.ur_resub_msg {
     color: #1f1e1a!important;
 }
 

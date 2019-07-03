@@ -1822,3 +1822,11 @@ a:visited {
     color: #464646;
     text-decoration: underline;
 }
+
+.generaltable tbody tr:hover, table.flexible tbody tr:hover {
+    background-color:#fcf8e3;
+}
+
+.hcol-hov {
+    background-color: #fef2b9;
+}

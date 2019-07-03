@@ -121,6 +121,7 @@ require(['theme_urcourses_default/backtotop'], function(mod) {
 require(['theme_urcourses_default/catchshortcuts'], function(mod) {
     mod.init({{{catchshortcuts}}});
 });
+require(['jquery','theme_boost/tooltip'], function($){$('[data-toggle="tooltip"]').tooltip()});
 {{#incoursesettings}}
     require(['theme_urcourses_default/incoursesettings'], function(mod) {
     mod.init();

@@ -517,3 +517,11 @@ table.dataTable.no-footer {
  .ui-widget-header .ui-state-activ {
 background: #EFEFEF!important;
  }
+
+ .generaltable tbody tr:hover, table.flexible tbody tr:hover {
+    background-color:#32312e;
+}
+
+.hcol-hov {
+    background-color: #ded7b5!important;
+}

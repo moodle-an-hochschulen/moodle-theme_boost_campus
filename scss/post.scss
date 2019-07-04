@@ -1836,12 +1836,12 @@ li.inline-nav-admin icon, li.inline-na icon {
 
 /*Default link colour override. Would be the brand colour otherwise*/ 
 a {
-    color: #07770c;
+    color: #05779a;
 }
 
 /*throwing this in here for now. Colour and design to be fixed
 currently copying the default hover*/
-a:visited {
+.course-content a:visited {
     color: #464646;
     text-decoration: underline;
 }

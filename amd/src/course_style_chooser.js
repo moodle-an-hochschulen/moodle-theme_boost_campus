@@ -21,7 +21,7 @@
  * 
  */
 
-define(['jquery', 'core/ajax', 'core/notification', 'core/str'], function($, ajax, notification, str) {
+define(['jquery', 'core/ajax', 'core/notification', 'core/str', 'core/modal_factory', 'core/modal_events'], function($, ajax, notification, str, ModalFactory, ModalEvents) {
 
     /** Container jquery object. */
     var _root;
@@ -29,6 +29,7 @@ define(['jquery', 'core/ajax', 'core/notification', 'core/str'], function($, aja
     var _courseid;
     /** Selected Header style. */
     var _headerstyle;
+    var _element;
 
     /** Jquery selector strings. */
     var SELECTORS = {
@@ -73,53 +74,80 @@ define(['jquery', 'core/ajax', 'core/notification', 'core/str'], function($, aja
      * Initiate ajax call to upload and set new image.
      */
     var _chooseStyle = function() {
-		
-		console.log('header clicked: '+$(this).attr('id'));
-		console.log('_courseid:'+_courseid);
-		
-		$(SELECTORS.HDRSTYLEA_BTN+', '+SELECTORS.HDRSTYLEB_BTN).removeClass('selected');
-		
-		if ('#'+$(this).attr('id') == SELECTORS.HDRSTYLEB_BTN) {
-			_headerstyle = 1;
-			$(SELECTORS.HDRSTYLEB_BTN).addClass('selected');
-			
-			bkgimg = $('#hdr_chooser_a_div img').attr('src');
-			console.log('bkgimg: '+bkgimg);
-			$('#hdr_chooser_a_div').remove();
-			var styles = {
-			      'background-image' : 'url('+bkgimg+')',
-			      'background-size' : '100%',
-				  'background-position' : 'center'
-			    };
-			
-			
-			$('#hdr_chooser_b_div').css(styles);
-			
-			
-		} else {
-			_headerstyle = 0;
-			$(SELECTORS.HDRSTYLEA_BTN).addClass('selected');
-			
-			bkgimg = $('#hdr_chooser_b_div').css('background-image');
-			bkgimg = bkgimg.substring(5,bkgimg.length-2);
-			$('#hdr_chooser_b_div').css('background-image','');
-			
+        _element = $(this);
+        //adding in confirmation modal in case buttons accidentally clicked
+        ModalFactory.create({
+            type: ModalFactory.types.SAVE_CANCEL,
+            title: 'Change Style',
+            body: 'Are you sure you want to change the header style?'
+        })
+        .then(function(modal) {
+            modal.setSaveButtonText('Change');
+            var root = modal.getRoot();
+            root.on(ModalEvents.cancel, function(){
+                return;
+            })
+            root.on(ModalEvents.save, _styleChange)
+            modal.show()
+        });
+    };
 
-			console.log('bkgimg: '+bkgimg);
-			$('#header_a_head').prepend('<div id="hdr_chooser_a_div" class="course-image"><img src="'+bkgimg+'" height="300" width="300" /></div>');
-			//$('#hdr_chooser_a_div').add('img').attr('src',bkgimg);
-		}
-		
-		
-		
-		console.log('_headerstyle:'+_headerstyle);
-		
-		
-		
-		
-		
-		
-		
+
+    var _styleChange = function() {
+
+        console.log('header clicked: '+ _element.attr('id'));
+        console.log('_courseid:'+_courseid);
+        
+        $(SELECTORS.HDRSTYLEA_BTN+', '+SELECTORS.HDRSTYLEB_BTN).removeClass('selected');
+        _changed = 1;
+        
+        
+        if ('#'+_element.attr('id') == SELECTORS.HDRSTYLEB_BTN) {
+            _headerstyle = 1;
+            $(SELECTORS.HDRSTYLEB_BTN).addClass('selected');
+            
+            bkgimg = $('#hdr_chooser_a_div img').attr('src');
+            console.log('bkgimg: '+bkgimg);
+            if (bkgimg){
+                $('#hdr_chooser_a_div').remove();
+                var styles = {
+                    'background-image' : 'url('+bkgimg+')',
+                    'background-size' : '100%',
+                    'background-position' : 'center'
+                    };
+                
+                
+                $('#hdr_chooser_b_div').css(styles);
+            }
+            else {
+                console.log("no change from B");
+                return;
+            }
+            
+        } else {
+            _headerstyle = 0;
+            $(SELECTORS.HDRSTYLEA_BTN).addClass('selected');
+            
+            bkgimg = $('#hdr_chooser_b_div').css('background-image');
+            console.log("bkgim before substring: " + bkgimg);
+            if (bkgimg !== 'none') {
+                bkgimg = bkgimg.substring(5,bkgimg.length-2);
+                $('#hdr_chooser_b_div').css('background-image','');
+                
+
+                $('#header_a_head').prepend('<div id="hdr_chooser_a_div" class="course-image"><img src="'+bkgimg+'" height="300" width="300" /></div>');
+                //$('#hdr_chooser_a_div').add('img').attr('src',bkgimg);
+            }
+            else {
+                console.log("no change from A and no IMG");
+                return;
+            }
+        }
+        
+        
+        
+        console.log('_headerstyle:'+_headerstyle);
+        
         // return if required values aren't set
         if (!_courseid) {
             return;
@@ -141,8 +169,7 @@ define(['jquery', 'core/ajax', 'core/notification', 'core/str'], function($, aja
 
         // initiate ajax call
         ajax.call([ajaxCall]);
-    };
-
+    }
     /**
      * Handles theme_urcourses_default_upload_course_image response data.
      * @param {Object} response 
@@ -177,6 +204,7 @@ define(['jquery', 'core/ajax', 'core/notification', 'core/str'], function($, aja
 
         // add to header's course image area
         $(SELECTORS.HEADER_TOP).append(popup);
+        
     };
 
     /**
@@ -190,6 +218,7 @@ define(['jquery', 'core/ajax', 'core/notification', 'core/str'], function($, aja
         popup.text(text);
         popup.css({'position' : 'absolute'});
         popup.css({'right' : '5px'});
+        popup.css({'z-index' : '1200'});
         popup.addClass('alert alert-success alert-dismissable fade show');
 
         // create dismiss button
@@ -204,6 +233,11 @@ define(['jquery', 'core/ajax', 'core/notification', 'core/str'], function($, aja
 
         // add to header's course image area
         $(SELECTORS.HEADER_TOP).append(popup);
+
+        // makes the alert disapear after a set amout of time.
+        setTimeout(function() {
+            $('div.alert.alert-success.alert-dismissable.fade.show').alert('close');
+        },1800);
     };
 
     /**

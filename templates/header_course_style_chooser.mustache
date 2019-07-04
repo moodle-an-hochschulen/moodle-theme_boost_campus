@@ -1,0 +1,34 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+
+    Moodle is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Moodle is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+}}
+{{!
+    @template urcourses_default/header_course_style_chooser
+
+    This template renders the course header style chooser buttons.
+
+}}
+<div id="theme_urcourses_default_header_course_style_chooser_{{uniqid}}" class="course-hdr-chooser-container">
+    <div class="btn-group course-hdr-chooser">
+        <button id="hdr_chooser_a" class="btn btn-sm mr-3{{^headerstyle}} selected{{/headerstyle}}">Style A</button>
+        <button id="hdr_chooser_b" class="btn btn-sm{{#headerstyle}} selected{{/headerstyle}}">Style B</button>
+    </div>
+</div>
+
+{{#js}}
+    require(['theme_urcourses_default/course_style_chooser'], function(main) {
+        main.init('#theme_urcourses_default_header_course_style_chooser_{{uniqid}}', {{courseid}}, {{headerstyle}});
+    });
+{{/js}}

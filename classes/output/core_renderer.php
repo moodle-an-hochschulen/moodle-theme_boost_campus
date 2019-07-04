@@ -163,7 +163,7 @@ class core_renderer extends \theme_boost\output\core_renderer {
      */
     public function full_header() {
         // MODIFICATION START.
-        global $PAGE, $USER, $COURSE, $CFG;
+        global $PAGE, $USER, $COURSE, $CFG, $DB;
         // MODIFICATION END.
 
         $header = new stdClass();
@@ -233,8 +233,18 @@ class core_renderer extends \theme_boost\output\core_renderer {
         if ($COURSE->id !== SITEID) {
             if (strpos($this->page->url, '/course/view.php')) {
                 $header->course_image_uploader = $this->get_course_image_uploader();
+                $header->course_header_style = $this->get_course_header_style();
             }
         }
+		
+		//check if course has alternate header style in database
+		if($record = $DB->get_record('theme_urcourses_hdrstyle', array('courseid'=>$COURSE->id, 'hdrstyle'=>1))){
+			$headerstyle = 1;
+		} else {
+			$headerstyle = 0;	
+		}
+		
+		$header->headerstyle = $headerstyle;
 		
         $context = \context_course::instance($COURSE->id);
 		
@@ -344,7 +354,30 @@ class core_renderer extends \theme_boost\output\core_renderer {
         }
     }
 
-
+	
+	public function get_course_header_style() {
+        global $CFG, $DB, $COURSE;
+        
+		
+		//check if course has alternate style in database
+		if($record = $DB->get_record('theme_urcourses_hdrstyle', array('courseid'=>$COURSE->id, 'hdrstyle'=>1))){
+		    $headerstyle = 1;
+		} else {
+			$headerstyle = 0;
+		}
+		
+        if ($this->page->user_is_editing()) {
+            $context = [
+                'courseid' => $COURSE->id,
+				'headerstyle' => $headerstyle
+            ];
+            return $this->render_from_template('theme_urcourses_default/header_course_style_chooser', $context);
+        }
+        else {
+            return false;
+        }
+	}
+	
     /**
      * Override to display course settings on every course site for permanent access
      *

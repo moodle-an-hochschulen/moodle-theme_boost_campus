@@ -109,7 +109,6 @@ if ($setdarkmode > -1) {
 if($DB->get_record('theme_urcourses_darkmode', array('userid'=>$USER->id, 'darkmode'=>1))){
    $PAGE->requires->css('/theme/urcourses_default/style/darkmode.css');
 }
-   
 
 // MODIFICATION START: Setting 'navdrawerfullwidth'.
 $navdrawerfullwidth = get_config('theme_urcourses_default', 'navdrawerfullwidth');
@@ -127,7 +126,7 @@ $templatecontext = [
     // MODIFICATION START: Add Boost Campus realated values to the template context.
     'catchshortcuts' => json_encode($catchshortcuts),
     'navdrawerfullwidth' => $navdrawerfullwidth,
-    'darknavbar' => $darknavbar
+    'darknavbar' => $darknavbar,
     // MODIFICATION END.
 ];
 

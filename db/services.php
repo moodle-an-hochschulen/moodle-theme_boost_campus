@@ -31,5 +31,14 @@ $functions = array(
         'type'          => 'write',
         'ajax'          => 'true',
     ),
+	
+    'theme_urcourses_default_header_choose_style' => array(
+        'classname'     => 'theme_urcourses_default_external',
+        'methodname'    => 'choose_header_style',
+        'classpath'     => 'theme/urcourses_default/externallib.php',
+        'description'   => 'Changes header style',
+        'type'          => 'write',
+        'ajax'          => 'true',
+    ),
 
 );

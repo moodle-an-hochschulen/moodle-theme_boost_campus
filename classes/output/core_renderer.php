@@ -232,6 +232,7 @@ class core_renderer extends \theme_boost\output\core_renderer {
         if ($COURSE->id !== SITEID) {
             if (strpos($this->page->url, '/course/view.php')) {
                 $header->course_image_uploader = $this->get_course_image_uploader();
+                $header->course_header_style = $this->get_course_header_style();
             }
         }
 		
@@ -343,7 +344,29 @@ class core_renderer extends \theme_boost\output\core_renderer {
         }
     }
 
-
+	
+	public function get_course_header_style() {
+        global $CFG, $DB, $COURSE;
+        
+		$headerstyle = 0;
+		
+		//check if course has alternate style in database
+		if($DB->get_record('theme_urcourses_hdrstyle', array('courseid'=>$COURSE->id, 'hdrstyle'=>1))){
+		  $headerstyle = 1;
+		}
+		
+        if ($this->page->user_is_editing()) {
+            $context = [
+                'courseid' => $COURSE->id,
+				'headerstyle' => $headerstyle
+            ];
+            return $this->render_from_template('theme_urcourses_default/header_course_style_chooser', $context);
+        }
+        else {
+            return false;
+        }
+	}
+	
     /**
      * Override to display course settings on every course site for permanent access
      *

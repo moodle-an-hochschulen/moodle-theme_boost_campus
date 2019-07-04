@@ -206,6 +206,8 @@ $string['privacy:metadata'] = 'The UR Courses default theme does not store any p
 
 // HEADER
 $string['change_course_image'] = "Change Course Image";
+// HEADER
+$string['change_course_headerstyle'] = "Change Course Header Style";
 
 // ERROR
 $string['error:courseimageexceedsmaxbytes'] = 'Image too large! Course image exceeds maximum allowed file size ({$a})';
@@ -213,3 +215,5 @@ $string['error:courseimageinvalidfiletype'] = 'Invalid file type! Course image m
 
 // SUCCESS
 $string['success:courseimageuploaded'] = 'Course image changed';
+// SUCCESS
+$string['success:coursestylechosen'] = 'Course header style changed';

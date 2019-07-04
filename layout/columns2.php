@@ -109,7 +109,12 @@ if ($setdarkmode > -1) {
 if($DB->get_record('theme_urcourses_darkmode', array('userid'=>$USER->id, 'darkmode'=>1))){
    $PAGE->requires->css('/theme/urcourses_default/style/darkmode.css');
 }
-   
+
+$headerstyle = 0;
+//check if course has alternate style in database
+if($DB->get_record('theme_urcourses_hdrstyle', array('courseid'=>$COURSE->id, 'hdrstyle'=>1))){
+  $headerstyle = 1;
+}   
 
 // MODIFICATION START: Setting 'navdrawerfullwidth'.
 $navdrawerfullwidth = get_config('theme_urcourses_default', 'navdrawerfullwidth');
@@ -127,7 +132,8 @@ $templatecontext = [
     // MODIFICATION START: Add Boost Campus realated values to the template context.
     'catchshortcuts' => json_encode($catchshortcuts),
     'navdrawerfullwidth' => $navdrawerfullwidth,
-    'darknavbar' => $darknavbar
+    'darknavbar' => $darknavbar,
+	'headerstyle' => $headerstyle
     // MODIFICATION END.
 ];
 

@@ -199,12 +199,24 @@ body.loginbackgroundimage {
 body.arts .page-navbkg {
 	background-color: #c9282d;
 }
-/*
+
+.course-image img {
+	display: hidden;
+}
+
+@include media-breakpoint-up(md) {
+	
 .course-image img {
 	max-width: 10em;
+	max-height: 10em;
 	margin-top: 0;
+	margin-right: 1em;
+	float: left;
 }
-*/
+	
+}
+
+
 
 
 .course-img-uploader-container {
@@ -232,6 +244,7 @@ body.arts .page-navbkg {
     
 }
 
+.course-hdr-chooser .btn:hover,
 .course-image-uploader:hover {
     background-color: rgba(200, 200, 200, .8);
 }
@@ -242,6 +255,16 @@ body.arts .page-navbkg {
     top: 0;
     left: 0;
     opacity: 0;
+}
+
+
+.course-hdr-chooser-container {
+    
+    .course-hdr-chooser {
+        /*background-color: rgba(255, 255, 255, .8);*/
+        display: block;
+    }
+
 }
 
 .page-head {

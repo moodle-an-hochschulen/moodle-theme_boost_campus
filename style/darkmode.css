@@ -525,3 +525,11 @@ background: #EFEFEF!important;
 .hcol-hov {
     background-color: #ded7b5!important;
 }
+
+.jumbotron {
+    background-color: #42413e;
+}
+
+.table-primary, .table-secondary, .table-success, .table-danger, .table-warning, .table-info, .table-light, .table-dark {
+    color: #2f3440;
+}

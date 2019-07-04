@@ -32,12 +32,65 @@
 /*------------------------------------
   Login page
   -------------------------------------*/
-
 body.loginbackgroundimage {
     background-size: cover;
     background-position: center;
     background-repeat: repeat-x;
 }
+
+@include media-breakpoint-down(md) {
+    @if variable-exists(loginbackgroundimage1) {
+        body.loginbackgroundimagesmall1 {
+            background-image: url($loginbackgroundimagesmall1);
+        }
+    }
+    @if variable-exists(loginbackgroundimagesmall2) {
+        body.loginbackgroundimage2 {
+            background-image: url($loginbackgroundimagesmall2);
+        }
+    }
+    @if variable-exists(loginbackgroundimagesmall3) {
+        body.loginbackgroundimage3 {
+            background-image: url($loginbackgroundimagesmall3);
+        }
+    }
+    @if variable-exists(loginbackgroundimagesmall4) {
+        body.loginbackgroundimage4 {
+            background-image: url($loginbackgroundimagesmall4);
+        }
+    }
+    @if variable-exists(loginbackgroundimagesmall5) {
+        body.loginbackgroundimage5 {
+            background-image: url($loginbackgroundimagesmall5);
+        }
+    }
+    @if variable-exists(loginbackgroundimagesmall6) {
+        body.loginbackgroundimage6 {
+            background-image: url($loginbackgroundimagesmall6);
+        }
+    }
+    @if variable-exists(loginbackgroundimagesmall7) {
+        body.loginbackgroundimage7 {
+            background-image: url($loginbackgroundimagesmall7);
+        }
+    }
+    @if variable-exists(loginbackgroundimagesmall8) {
+        body.loginbackgroundimage8 {
+            background-image: url($loginbackgroundimagesmall8);
+        }
+    }
+    @if variable-exists(loginbackgroundimagesmall9) {
+        body.loginbackgroundimage9 {
+            background-image: url($loginbackgroundimagesmall9);
+        }
+    }
+    @if variable-exists(loginbackgroundimagesmall10) {
+        body.loginbackgroundimage10 {
+            background-image: url($loginbackgroundimagesmall10);
+        }
+    }
+}
+
 
 /* Add media breakpoint to only load images on screens with a medium size and up.
  * Check if variable exists to only add code to images that were uploaded.
@@ -1813,12 +1866,12 @@ li.inline-nav-admin icon, li.inline-na icon {
 
 /*Default link colour override. Would be the brand colour otherwise*/ 
 a {
-    color: #07770c;
+    color: #05779a;
 }
 
 /*throwing this in here for now. Colour and design to be fixed
 currently copying the default hover*/
-a:visited {
+.course-content a:visited {
     color: #464646;
     text-decoration: underline;
 }

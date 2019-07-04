@@ -121,6 +121,7 @@ class core_renderer extends \theme_boost\output\core_renderer {
             $additionalclasses[] = 'loginbackgroundimage';
             // Generating a random class for displaying a random image for the login page.
             $additionalclasses[] = theme_urcourses_default_get_random_loginbackgroundimage_class();
+            $additionalclasses[] = theme_urcourses_default_get_random_mobile_loginbackgroundimage_class();
         }
         // MODIFICATION END.
 

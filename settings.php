@@ -524,15 +524,6 @@ if ($ADMIN->fulltree) {
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
-    //login page mobile/smaller page background setting
-    $name = 'theme_urcourses_default/loginbackgroundimagesmall';
-    $title = get_string('loginbackgroundimagesetting', 'theme_urcourses_default', null, true);
-    $description = get_string('loginbackgroundimagesmallsetting_desc', 'theme_urcourses_default', null, true);
-    $setting = new admin_setting_configstoredfile($name, $title, $description, 'loginbackgroundimagesmall', 0,
-        array('maxfiles' => 10, 'accepted_types' => 'web_image'));
-    $setting->set_updatedcallback('theme_reset_all_caches');
-    $page->add($setting);
-
     // Setting to change the position and design of the login form.
     $name = 'theme_urcourses_default/loginform';
     $title = get_string('loginform', 'theme_urcourses_default', null, true);

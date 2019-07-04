@@ -42,12 +42,33 @@ class theme_urcourses_default_external extends external_api {
             )
         );
     }
-
+	
+	
+	
+	public static function choose_header_style_parameters() {
+        return new external_function_parameters(
+            array(
+            'courseid' => new external_value(PARAM_INT),
+            'headerstyle' => new external_value(PARAM_INT),
+            )
+        );
+    }
+	
+	
     /**
      * Describes upload_couse_image return value.
      * @return external_single_structure
      */
     public static function upload_course_image_returns() {
+        return new external_single_structure(array('success' => new external_value(PARAM_BOOL)));
+    }
+	
+	
+    /**
+     * Describes choose_header_style return value.
+     * @return external_single_structure
+     */
+    public static function choose_header_style_returns() {
         return new external_single_structure(array('success' => new external_value(PARAM_BOOL)));
     }
 
@@ -114,6 +135,47 @@ class theme_urcourses_default_external extends external_api {
         // return
         return array('success' => $success);
     }
+	
+	
+	
+	public static function choose_header_style($courseid, $headerstyle) {
+        global $CFG, $DB;
+
+        // get params
+        $params = self::validate_parameters(
+            self::choose_header_style_parameters(),
+            array(
+            'courseid' => $courseid,
+            'headerstyle' => $headerstyle,
+            )
+        );
+
+        // ensure user has permissions to change image
+        $context = \context_course::instance($params['courseid']);
+        self::validate_context($context);
+        require_capability('moodle/course:changesummary', $context);
+		
+		//update the db
+		$table = 'theme_urcourses_hdrstyle';
+		
+	    $newrecord = new stdClass();
+	    $newrecord->courseid = $courseid;
+	    $newrecord->hdrstyle = $headerstyle;
+
+	    //database check if user has a record, insert if not
+	    if ($record = $DB->get_record($table, array('courseid'=>$courseid))) {
+	     	//if has a record, update record to $setdarkmode
+			
+			$newrecord->id = $record->id;
+     	 	$success = $DB->update_record($table, $newrecord);
+	    } else {
+	        //create a record
+	        $success = $DB->insert_record($table, $newrecord);
+	    } 
+		
+		return array('success' => $success);
+		
+	}
 
 }
 

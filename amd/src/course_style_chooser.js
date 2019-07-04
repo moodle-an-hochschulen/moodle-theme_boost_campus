@@ -45,10 +45,10 @@ define(['jquery', 'core/ajax', 'core/notification', 'core/str'], function($, aja
      * @param {int} courseid - ID of current course.
      * @return void
      */
-    var _setGlobals = function(root, headerstyle, courseid) {
+    var _setGlobals = function(root, courseid, headerstyle) {
        _root = $(root);
-       _headerstyle = headerstyle;
        _courseid = courseid;
+       _headerstyle = headerstyle;
     };
 
     /**
@@ -74,10 +74,54 @@ define(['jquery', 'core/ajax', 'core/notification', 'core/str'], function($, aja
      */
     var _chooseStyle = function() {
 		
-		console.log('header clicked');
+		console.log('header clicked: '+$(this).attr('id'));
+		console.log('_courseid:'+_courseid);
+		
+		$(SELECTORS.HDRSTYLEA_BTN+', '+SELECTORS.HDRSTYLEB_BTN).removeClass('selected');
+		
+		if ('#'+$(this).attr('id') == SELECTORS.HDRSTYLEB_BTN) {
+			_headerstyle = 1;
+			$(SELECTORS.HDRSTYLEB_BTN).addClass('selected');
+			
+			bkgimg = $('#hdr_chooser_a_div img').attr('src');
+			console.log('bkgimg: '+bkgimg);
+			$('#hdr_chooser_a_div').remove();
+			var styles = {
+			      'background-image' : 'url('+bkgimg+')',
+			      'background-size' : '100%',
+				  'background-position' : 'center'
+			    };
+			
+			
+			$('#hdr_chooser_b_div').css(styles);
+			
+			
+		} else {
+			_headerstyle = 0;
+			$(SELECTORS.HDRSTYLEA_BTN).addClass('selected');
+			
+			bkgimg = $('#hdr_chooser_b_div').css('background-image');
+			bkgimg = bkgimg.substring(5,bkgimg.length-2);
+			$('#hdr_chooser_b_div').css('background-image','');
+			
+
+			console.log('bkgimg: '+bkgimg);
+			$('#header_a_head').prepend('<div id="hdr_chooser_a_div" class="course-image"><img src="'+bkgimg+'" height="300" width="300" /></div>');
+			//$('#hdr_chooser_a_div').add('img').attr('src',bkgimg);
+		}
+		
+		
+		
+		console.log('_headerstyle:'+_headerstyle);
+		
+		
+		
+		
+		
+		
 		
         // return if required values aren't set
-        if (!_headerstyle || !_courseid) {
+        if (!_courseid) {
             return;
         }
 

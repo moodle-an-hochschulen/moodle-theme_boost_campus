@@ -1845,3 +1845,8 @@ a:visited {
     color: #464646;
     text-decoration: underline;
 }
+
+
+.course-hdr-chooser button.selected {
+	border: solid 2px red;
+}

@@ -74,9 +74,25 @@ class core_renderer extends \theme_boost\output\core_renderer {
      */
     public function get_compact_logo_url($maxwidth = 100, $maxheight = 100) {
         global $OUTPUT;
+        return $OUTPUT->image_url('logosmall', 'theme_urcourses_default');
+    }
+
+    public function get_logo_url($maxwidth = 100, $maxheight = 100){
+        global $OUTPUT;
         return $OUTPUT->image_url('logo', 'theme_urcourses_default');
     }
 
+    /**
+     * count num of bgs in bg image folder
+     */
+
+
+    /**
+     * get login bg img url 
+     * */ 
+
+
+     
     /**
      * Override to display an edit button again by calling the parent function
      * in core/core_renderer because theme_boost's function returns an empty

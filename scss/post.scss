@@ -1832,6 +1832,10 @@ li.inline-nav-admin icon, li.inline-na icon {
     #feedback_edit_form .fitem.row > .col-md-3 {
         padding-bottom: .5em;
     }
+
+    .navbar-brand .logo-compact {
+        display: initial!important;
+    }
 }
 
 /*Default link colour override. Would be the brand colour otherwise*/ 

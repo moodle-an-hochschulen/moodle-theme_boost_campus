@@ -4,7 +4,7 @@ moodle-theme_boost_campus
 Changes
 -------
 
-### Unreleased
+### Release v3.7-r2
 
 * 2019-06-21 - Removed SCSS fix because MDL-61319 has now been fixed and integrated.
 * 2019-06-11 - Added hide_if function to suitable admin setting incoursesettingsswitchtoroleposition and corrected README.md.

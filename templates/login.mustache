@@ -35,10 +35,9 @@
 }}
 {{> theme_boost/head }}
 
-<body {{{ bodyattributes }}}>
+<body {{{ bodyattributes }}} style="background-image:url({{output.get_login_bg_url}});">
 
 <div id="page-wrapper">
-
     {{{ output.standard_top_of_body_html }}}
 
     <div id="page" class="container-fluid mt-0">
@@ -74,4 +73,7 @@
 </html>
 {{#js}}
 require(['theme_boost/loader']);
+require(['theme_urcourses_default/bgloader'], function(mod) {
+    mod.init();
+});
 {{/js}}

@@ -56,8 +56,10 @@ $pagebottomelements = ob_get_clean();
 if ($pagebottomelements == false) {
     $pagebottomelements = '';
 }
+
 // Add the additional layouts to the template context.
 $templatecontext['pagebottomelements'] = $pagebottomelements;
+
 
 // Render own template.
 echo $OUTPUT->render_from_template('theme_urcourses_default/login', $templatecontext);

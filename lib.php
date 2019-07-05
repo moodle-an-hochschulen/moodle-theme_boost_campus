@@ -128,10 +128,6 @@ function theme_urcourses_default_get_pre_scss($theme) {
         }, (array) $targets);
     }
 
-    // MODIFICATION START: Add login background images that are uploaded to the setting 'loginbackgroundimage' to CSS.
-    $scss .= theme_urcourses_default_get_loginbackgroundimage_scss();
-    // MODIFICATION END.
-
     // Prepend pre-scss.
     if (!empty($theme->settings->scsspre)) {
         $scss .= $theme->settings->scsspre;
@@ -164,8 +160,6 @@ function theme_urcourses_default_pluginfile($course, $cm, $context, $filearea, $
             return $theme->setting_file_serve('favicon', $args, $forcedownload, $options);
         } else if (s($filearea === 'logo' || $filearea === 'backgroundimage')) {
             return $theme->setting_file_serve($filearea, $args, $forcedownload, $options);
-        } else if ($filearea === 'loginbackgroundimage') {
-            return $theme->setting_file_serve('loginbackgroundimage', $args, $forcedownload, $options);
         } else if ($filearea === 'fontfiles') {
             return $theme->setting_file_serve('fontfiles', $args, $forcedownload, $options);
         } else if ($filearea === 'imageareaitems') {

@@ -72,27 +72,42 @@ class core_renderer extends \theme_boost\output\core_renderer {
      *
      * @return string
      */
-    public function get_compact_logo_url($maxwidth = 100, $maxheight = 100) {
+    public function get_compact_logosmall_url($maxwidth = 100, $maxheight = 100) {
         global $OUTPUT;
         return $OUTPUT->image_url('logosmall', 'theme_urcourses_default');
     }
 
-    public function get_logo_url($maxwidth = 100, $maxheight = 100){
+    public function get_compact_logo_url($maxwidth = 100, $maxheight = 100){
         global $OUTPUT;
         return $OUTPUT->image_url('logo', 'theme_urcourses_default');
     }
 
     /**
-     * count num of bgs in bg image folder
-     */
-
-
-    /**
      * get login bg img url 
      * */ 
+    public function get_login_bg_url() {
+        $directory = '/../pix/login_backgrounds/';
+        $files = glob($directory . '*.*');
+        $bgfile;
+        if ($files !== false){
+          $bgfiles = count($files);
+          if ($bgfiles > 2 ){
+            //assumes you have paired a low res file with a high res files
+            $bgfiles = $bgfiles/2;
+            $filenum = mt_rand(1,$bgfiles);
+            $filenum = 'more than 2 files';
+          }
+          else {
+              $filenum = 1;
+          }
+           $bgfile = 'login_backgrounds/loginlow' . $filenum;
+        }
+
+        global $OUTPUT;
+        return $OUTPUT->image_url($bgfile, 'theme_urcourses_default');
+    }
 
 
-     
     /**
      * Override to display an edit button again by calling the parent function
      * in core/core_renderer because theme_boost's function returns an empty
@@ -135,8 +150,6 @@ class core_renderer extends \theme_boost\output\core_renderer {
         // Only add classes for the login page.
         if ($PAGE->bodyid == 'page-login-index') {
             $additionalclasses[] = 'loginbackgroundimage';
-            // Generating a random class for displaying a random image for the login page.
-            $additionalclasses[] = theme_urcourses_default_get_random_loginbackgroundimage_class();
         }
         // MODIFICATION END.
 

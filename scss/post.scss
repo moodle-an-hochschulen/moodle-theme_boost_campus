@@ -330,7 +330,14 @@ body.arts .page-navbkg .singlebutton button:hover {
 	}
 	#page-header .page-navbkg {
 	    padding: .25rem 0.65rem;
-	}
+    }
+    
+    #hdr_chooser_b_div .course-head.mr-auto {
+        position: absolute;
+        top: 34px;
+        /*ensures text stays on img and doesn't grow off of it*/
+        max-width: 300px;
+    }
 }
 
 /*
@@ -1808,4 +1815,8 @@ currently copying the default hover*/
 
 .course-hdr-chooser button.selected {
 border: solid 2px red;
+}
+
+#page-mod-book-mod.empty-region-side-pre #region-main {
+    float:none;
 }

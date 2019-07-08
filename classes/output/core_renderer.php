@@ -265,15 +265,20 @@ class core_renderer extends \theme_boost\output\core_renderer {
             if (strpos($this->page->url, '/course/view.php')) {
                 $header->course_image_uploader = $this->get_course_image_uploader();
                 $header->course_header_style = $this->get_course_header_style();
-            }
-        }
+	        }
+			
+			//check if course has alternate header style in database
+			if($record = $DB->get_record('theme_urcourses_hdrstyle', array('courseid'=>$COURSE->id, 'hdrstyle'=>1))){
+				$headerstyle = 1;
+			} else {
+				$headerstyle = 0;	
+			}
+			
+			
+        } else $headerstyle = 1;
 		
-		//check if course has alternate header style in database
-		if($record = $DB->get_record('theme_urcourses_hdrstyle', array('courseid'=>$COURSE->id, 'hdrstyle'=>1))){
-			$headerstyle = 1;
-		} else {
-			$headerstyle = 0;	
-		}
+		
+		
 		
 		$header->headerstyle = $headerstyle;
 		
@@ -660,8 +665,8 @@ function ur_check_course_cat() {
 	global $CFG,$DB,$COURSE;
 
 	$ur_categories = array('','misc'=>'','khs'=>'Faculty of Kinesiology and Health Studies','edu'=>'Faculty of Education','sci'=>'Faculty of Science','grad'=>'Grad Studies','fa'=>'Faculty of Fine Arts','map'=>'Faculty of Media, Art, and Performance','engg'=>'Faculty of Engineering and Applied Science','bus'=>'Business Administration','arts'=>'Faculty of Arts','sw'=>'Faculty of Social Work','nur'=>'Faculty of Nursing','misc'=>'Custom Themes');
-    error_log("theme: " . $COURSE->theme);
-	if ($COURSE->theme != 'urcourses_default' && $COURSE->theme !== NULL) {
+    //error_log("theme: " . $COURSE->theme);
+	if ($COURSE->theme != 'urcourses_default' && $COURSE->theme !== NULL && !empty($COURSE->theme)) {
 		$currthemeelms = explode('_',$COURSE->theme);
 		return array('css'=>'','name'=>$ur_categories[$currthemeelms[1]]);
 	}
@@ -741,9 +746,12 @@ public function user_menu($user = null, $withlinks = null) {
     // Get some navigation opts.
     $opts = user_get_user_navigation_info($user, $this->page);
 
-    $usedarkmode = $DB->get_record('theme_urcourses_darkmode', array('userid'=>$USER->id, 'darkmode'=>1));
-    //changes url to opposite of whatever the toggle currently is to set dark mode in db under columns2.php
-    $darkchk = $usedarkmode->darkmode;
+    if ($usedarkmode = $DB->get_record('theme_urcourses_darkmode', array('userid'=>$USER->id, 'darkmode'=>1))) {
+    	//changes url to opposite of whatever the toggle currently is to set dark mode in db under columns2.php
+    	$darkchk = $usedarkmode->darkmode;
+    } else {
+    	$darkchk = 0;
+    }
     $usedarkmodeurl = ($darkchk == 1) ? 0 : 1;
     //dark mode variable for if on/off to swap icon
     $mynodelabel = ($darkchk == 1) ? "i/item" : "i/marker";

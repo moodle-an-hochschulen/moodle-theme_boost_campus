@@ -33,7 +33,7 @@
   Login page
   -------------------------------------*/
 
-body.loginbackgroundimage {
+body.loginbackgroundimage, body .loginbackgroundimage {
     background-size: cover;
     background-position: center;
     background-repeat: repeat-x;
@@ -1779,6 +1779,10 @@ li.inline-nav-admin icon, li.inline-na icon {
 
     .navbar-brand .logo-compact {
         display: initial!important;
+    }
+
+    body.loginbackgroundimage {
+        background-size: initial;
     }
 }
 

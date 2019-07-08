@@ -94,10 +94,6 @@ define(['jquery', 'core/ajax', 'core/notification', 'core/str', 'core/modal_fact
 
 
     var _styleChange = function() {
-
-        console.log('header clicked: '+ _element.attr('id'));
-        console.log('_courseid:'+_courseid);
-        
         $(SELECTORS.HDRSTYLEA_BTN+', '+SELECTORS.HDRSTYLEB_BTN).removeClass('selected');
         _changed = 1;
         
@@ -107,7 +103,6 @@ define(['jquery', 'core/ajax', 'core/notification', 'core/str', 'core/modal_fact
             $(SELECTORS.HDRSTYLEB_BTN).addClass('selected');
             
             bkgimg = $('#hdr_chooser_a_div img').attr('src');
-            console.log('bkgimg: '+bkgimg);
             if (bkgimg){
                 $('#hdr_chooser_a_div').remove();
                 var styles = {
@@ -120,7 +115,6 @@ define(['jquery', 'core/ajax', 'core/notification', 'core/str', 'core/modal_fact
                 $('#hdr_chooser_b_div').css(styles);
             }
             else {
-                console.log("no change from B");
                 return;
             }
             
@@ -129,7 +123,6 @@ define(['jquery', 'core/ajax', 'core/notification', 'core/str', 'core/modal_fact
             $(SELECTORS.HDRSTYLEA_BTN).addClass('selected');
             
             bkgimg = $('#hdr_chooser_b_div').css('background-image');
-            console.log("bkgim before substring: " + bkgimg);
             if (bkgimg !== 'none') {
                 bkgimg = bkgimg.substring(5,bkgimg.length-2);
                 $('#hdr_chooser_b_div').css('background-image','');
@@ -139,14 +132,9 @@ define(['jquery', 'core/ajax', 'core/notification', 'core/str', 'core/modal_fact
                 //$('#hdr_chooser_a_div').add('img').attr('src',bkgimg);
             }
             else {
-                console.log("no change from A and no IMG");
                 return;
             }
         }
-        
-        
-        
-        console.log('_headerstyle:'+_headerstyle);
         
         // return if required values aren't set
         if (!_courseid) {

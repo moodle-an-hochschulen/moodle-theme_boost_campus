@@ -86,21 +86,24 @@ class core_renderer extends \theme_boost\output\core_renderer {
      * get login bg img url 
      * */ 
     public function get_login_bg_url() {
-        $directory = '/../pix/login_backgrounds/';
-        $files = glob($directory . '*.*');
-        $bgfile;
-        if ($files !== false){
-          $bgfiles = count($files);
-          if ($bgfiles > 2 ){
-            //assumes you have paired a low res file with a high res files
-            $bgfiles = $bgfiles/2;
-            $filenum = mt_rand(1,$bgfiles);
-            $filenum = 'more than 2 files';
-          }
-          else {
+        global $CFG;
+        $directory =  $CFG->dirroot . '/theme/urcourses_default/pix/login_backgrounds/';
+        $bgfile = '';
+        $files = [];
+        $files = glob($directory . "*");
+        $bgfiles = count($files);
+        if ($bgfiles != 0){
+
+            if ($bgfiles > 2 ){
+                //assumes you have paired a low res file with a high res file
+                $bgfiles = $bgfiles/2;
+                $filenum = mt_rand(1,$bgfiles);
+            }
+            else {
               $filenum = 1;
-          }
-           $bgfile = 'login_backgrounds/loginlow' . $filenum;
+            }
+            
+            $bgfile = 'login_backgrounds/loginlow' . $filenum;
         }
 
         global $OUTPUT;

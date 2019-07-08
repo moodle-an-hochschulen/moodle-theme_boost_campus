@@ -9,7 +9,11 @@ define(['jquery'], function($) {
                 var img =  $('#page-login-index').attr('style');
                 var imgname = 'loginlow';
                 var imghighres = img.replace(imgname, 'login');
-                $('#page-login-index').attr('style', imghighres);
+                //don't replace if a low version isn't being used
+                if (imghighres){
+                    //targetting this div to prevent a white flash when loading high res bg
+                    $('#page-wrapper').attr('style', imghighres);
+                }
             }
         })
     };

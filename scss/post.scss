@@ -1817,6 +1817,20 @@ currently copying the default hover*/
 border: solid 2px red;
 }
 
+body.format-topcoll.editing ul.ctopics .section .activity .activityinstance {
+	float: left;
+	width: 100%;
+}
+
+
+.navbar .navbar-nav .nav-link.drawer-active .icon {
+	color: #848889;
+}
+
+#nav-notification-popover-container .nav-link.menu-drawer-open .icon {
+	color: #848889;
+}
+
 #page-mod-book-mod.empty-region-side-pre #region-main {
-    float:none;
+float:none;
 }

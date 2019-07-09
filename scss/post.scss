@@ -1834,3 +1834,8 @@ body.format-topcoll.editing ul.ctopics .section .activity .activityinstance {
 #page-mod-book-mod.empty-region-side-pre #region-main {
 float:none;
 }
+
+#page-mod-kalvidres-mod #upload_modal {
+    -webkit-overflow-scrolling: auto !important;
+    overflow-y: auto !important;
+}

@@ -211,6 +211,29 @@ if ($ADMIN->fulltree) {
 
     // Add tab to settings page.
     $settings->add($page);
+    
+    // Settings title for the Add a block widget. We don't need a description here.
+    $name = 'theme_boost_campus/addablockwidgetheading';
+    $title = get_string('addablockwidgetheadingsetting', 'theme_boost_campus', null, true);
+    $setting = new admin_setting_heading($name, $title, null);
+    $page->add($setting);
+    // Setting to manage where the Add a block widget should be displayed.
+    $name = 'theme_boost_campus/addablockposition';
+    $title = get_string('addablockpositionsetting', 'theme_boost_campus', null, true);
+    $description = get_string('addablockpositionsetting_desc', 'theme_boost_campus', null, true);
+    $addablockpositionsetting = [
+        // Don't use string lazy loading (= false) because the string will be directly used and would produce a
+        // PHP warning otherwise.
+        'positionblockregion' => get_string('settingsaddablockpositionbottomblockregion', 'theme_boost_campus', null, false),
+        'positionnavdrawer' => get_string('settingsaddablockpositionbottomnavdrawer', 'theme_boost_campus', null, true),
+    ];
+    $setting = new admin_setting_configselect($name, $title, $description, $addablockpositionsetting['positionblockregion'],
+        $addablockpositionsetting);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+    // Add tab to settings page.
+    $settings->add($page);
 
 
     // Create course layout settings tab.

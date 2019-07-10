@@ -25,7 +25,7 @@
 defined('MOODLE_INTERNAL') || die();
 
 // GENERAL.
-$string['pluginname'] = 'UR Courses: Default (Fall 2019)';
+$string['pluginname'] = 'UR Courses Default (Fall 2019)';
 $string['choosereadme'] = 'UR Courses: Default (Fall 2019) is a child theme of Boost for University of Regina courses.';
 
 // SETTINGS.
@@ -76,6 +76,12 @@ $string['coursehintsheadingsetting'] = 'Course related hints.';
 $string['showswitchedroleincoursesetting'] = 'Position of switch role information';
 $string['showswitchedroleincoursesetting_desc'] = 'With this setting you can choose the place where the information to which role a user has switched is being displayed. If not checked (default value), the role information will be displayed right beneath the user\'s name in the user menu (like in theme Boost). If checked, this information - together with a link to switch back - will be displayed beneath the course, as this functionality is course related.';
 $string['switchedroleto'] = 'You are viewing this course currently with the role:';
+// ...Add a block widget position.
+$string['addablockwidgetheadingsetting'] = 'Position of "Add a block" widget';
+$string['addablockpositionsetting'] = 'Position of "Add a block" widget';
+$string['addablockpositionsetting_desc'] = 'With this setting you can manage where the "Add a block" widget should be displayed. If you select "At the bottom of the nav drawer" the widget to add new blocks is displayed in the left sliding navigation panel like in theme Boost. If you select "At the bottom of the default block region" the widget to add new blocks will be displayed in the default block region. Please note: This has the side effect that this block will also be shown in the block region on activity settings pages when editing mode is turned on.';
+$string['settingsaddablockpositionbottomnavdrawer'] = 'At the bottom of the nav drawer';
+$string['settingsaddablockpositionbottomblockregion'] = 'At the bottom of the default block region';
 // ...Show hint for hidden course.
 $string['showhintcoursehiddensetting'] = 'Show hint in hidden courses';
 $string['showhintcoursehiddensetting_desc'] = 'With this setting a hint will appear in the course header as long as the visibility of the course is hidden. This helps to identify the visibility state of a course at a glance without the need for looking at the course settings.';

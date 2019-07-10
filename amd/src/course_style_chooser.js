@@ -105,6 +105,7 @@ define(['jquery', 'core/ajax', 'core/notification', 'core/str', 'core/modal_fact
             bkgimg = $('#hdr_chooser_a_div img').attr('src');
             if (bkgimg){
                 $('#hdr_chooser_a_div').remove();
+                $('#hdr_chooser_b_div').removeClass('style-a');
                 var styles = {
                     'background-image' : 'url('+bkgimg+')',
                     'background-size' : '100%',
@@ -126,7 +127,7 @@ define(['jquery', 'core/ajax', 'core/notification', 'core/str', 'core/modal_fact
             if (bkgimg !== 'none') {
                 bkgimg = bkgimg.substring(5,bkgimg.length-2);
                 $('#hdr_chooser_b_div').css('background-image','');
-                
+                $('#hdr_chooser_b_div').addClass('style-a');
 
                 $('#header_a_head').prepend('<div id="hdr_chooser_a_div" class="course-image"><img src="'+bkgimg+'" height="300" width="300" /></div>');
                 //$('#hdr_chooser_a_div').add('img').attr('src',bkgimg);

@@ -332,7 +332,7 @@ body.arts .page-navbkg .singlebutton button:hover {
 	    padding: .25rem 0.65rem;
     }
     
-    #hdr_chooser_b_div .course-head.mr-auto {
+    #hdr_chooser_b_div.style-a .course-head.mr-auto {
         position: absolute;
         top: 34px;
         /*ensures text stays on img and doesn't grow off of it*/
@@ -1838,4 +1838,8 @@ float:none;
 #page-mod-kalvidres-mod #upload_modal {
     -webkit-overflow-scrolling: auto !important;
     overflow-y: auto !important;
+}
+
+body.format-topcoll.editing ul.ctopics .section .activity .actions {
+    display: block;
 }

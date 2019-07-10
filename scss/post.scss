@@ -1843,3 +1843,23 @@ float:none;
 body.format-topcoll.editing ul.ctopics .section .activity .actions {
     display: block;
 }
+
+#page-mod-page-view td, #page-mod-page-view th {
+    padding-left: .5em;
+    padding-right: .5em;
+}
+
+#page-user-files .col-md-9, #page-user-files .col-md-3{
+    flex: unset;
+    max-width: none;
+    padding-left: 0px;
+}
+
+#page-user-files .mform > .form-group {
+    margin-left: 0;
+}
+
+#page-user-files #fitem_id_emailaddress .col-md-9 {
+    display: block;
+    word-wrap: break-word;
+}

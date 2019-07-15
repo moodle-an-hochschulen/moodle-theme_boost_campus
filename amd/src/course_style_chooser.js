@@ -99,37 +99,39 @@ define(['jquery', 'core/ajax', 'core/notification', 'core/str', 'core/modal_fact
         
         
         if ('#'+_element.attr('id') == SELECTORS.HDRSTYLEB_BTN) {
+            if (!$(SELECTORS.HDRSTYLEB_BTN).hasClass('selected')){
             _headerstyle = 1;
             $(SELECTORS.HDRSTYLEB_BTN).addClass('selected');
             
             bkgimg = $('#hdr_chooser_a_div img').attr('src');
-            if (bkgimg){
-                $('#hdr_chooser_a_div').remove();
-                $('#hdr_chooser_b_div').removeClass('style-a');
-                var styles = {
-                    'background-image' : 'url('+bkgimg+')',
-                    'background-size' : '100%',
-                    'background-position' : 'center'
-                    };
+            $('#hdr_chooser_a_div').addClass('d-none');
+            $('#hdr_chooser_b_div').removeClass('style-a');
+
+           /* var styles = {
+                'background-image' : 'url('+bkgimg+')',
+                'background-size' : '100%',
+                'background-position' : 'center'
+                };       
                 
-                
-                $('#hdr_chooser_b_div').css(styles);
+            */
+           //$('#bg_img').css(styles);
             }
             else {
                 return;
             }
             
         } else {
+            if(!$(SELECTORS.HDRSTYLEA_BTN).hasClass('selected')){
             _headerstyle = 0;
             $(SELECTORS.HDRSTYLEA_BTN).addClass('selected');
             
-            bkgimg = $('#hdr_chooser_b_div').css('background-image');
-            if (bkgimg !== 'none') {
-                bkgimg = bkgimg.substring(5,bkgimg.length-2);
-                $('#hdr_chooser_b_div').css('background-image','');
-                $('#hdr_chooser_b_div').addClass('style-a');
+           // bkgimg = $('#hdr_chooser_b_div').css('background-image');
+           // bkgimg = bkgimg.substring(5,bkgimg.length-2);
 
-                $('#header_a_head').prepend('<div id="hdr_chooser_a_div" class="course-image"><img src="'+bkgimg+'" height="300" width="300" /></div>');
+            $('#hdr_chooser_a_div').removeClass('d-none');
+            $('#hdr_chooser_b_div').addClass('style-a');
+                 
+               // $('#header_a_head').prepend('<div id="hdr_chooser_a_div" class="course-image"><img src="'+bkgimg+'" height="300" width="300" /></div>');
                 //$('#hdr_chooser_a_div').add('img').attr('src',bkgimg);
             }
             else {

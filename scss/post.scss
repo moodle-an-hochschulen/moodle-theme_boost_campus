@@ -148,15 +148,15 @@ body.arts .page-navbkg {
 	display: hidden;
 }
 
-@include media-breakpoint-up(md) {
+@include media-breakpoint-up(sm) {
 	
-.course-image img {
-	max-width: 10em;
-	max-height: 10em;
-	margin-top: 0;
-	margin-right: 1em;
-	float: left;
-}
+    .course-image img {
+        max-width: 10em;
+        max-height: 10em;
+        margin-top: 0;
+        margin-right: 1em;
+        float: left;
+    }
 	
 }
 
@@ -225,6 +225,11 @@ body.arts .page-navbkg {
 #page-header .page-navbkg {
 	padding: 0.25rem 1rem;
 	color: #fff;
+}
+
+#page-header .course-head a .page-context-header {
+    display: flex;
+    margin-bottom: 5px;
 }
 
 #page-header .course-head a .page-context-header .page-header-headings h1 {
@@ -331,13 +336,7 @@ body.arts .page-navbkg .singlebutton button:hover {
 	#page-header .page-navbkg {
 	    padding: .25rem 0.65rem;
     }
-    
-    #hdr_chooser_b_div.style-a .course-head.mr-auto {
-        position: absolute;
-        top: 34px;
-        /*ensures text stays on img and doesn't grow off of it*/
-        max-width: 300px;
-    }
+
 }
 
 /*
@@ -1745,6 +1744,15 @@ ul.ctopics .content .section ul {
     li.inline-nav-admin a, li.inline-nav a {
         display: inline-flex!important;
     }
+
+    #hdr_chooser_b_div.style-a {
+        background-image: none!important;
+    }
+
+    #hdr_chooser_b_div.style-a div.d-flex.page-head {
+        padding: 0;
+    }
+
 }
 
 li.inline-nav-admin icon, li.inline-na icon {
@@ -1862,4 +1870,19 @@ body.format-topcoll.editing ul.ctopics .section .activity .actions {
 #page-user-files #fitem_id_emailaddress .col-md-9 {
     display: block;
     word-wrap: break-word;
+}
+
+.nav-search {
+    border: 1px solid #dfdfdf;
+}
+
+#header_a_head {
+    width: 100%;
+}
+
+/*for some reason bootstrap breakpoint sm up isn't matching sm down*/
+@media (max-width: 576px){
+    #hdr_chooser_b_div.style-a #hdr_chooser_a_div{
+        display: none!important;
+    }
 }

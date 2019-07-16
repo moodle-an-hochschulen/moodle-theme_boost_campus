@@ -1810,8 +1810,11 @@ a {
 /*throwing this in here for now. Colour and design to be fixed
 currently copying the default hover*/
 .course-content a:visited {
-    color: #464646;
+    color: #531e9f;
     text-decoration: underline;
+}
+.course-content a:visited[href="#"]{
+    color: #05779a;
 }
 
 .generaltable tbody tr:hover, table.flexible tbody tr:hover {
@@ -1820,10 +1823,6 @@ currently copying the default hover*/
 
 .hcol-hov {
     background-color: #fef2b9;
-}
-
-.course-hdr-chooser button.selected {
-border: solid 2px red;
 }
 
 body.format-topcoll.editing ul.ctopics .section .activity .activityinstance {
@@ -1847,10 +1846,6 @@ float:none;
 #page-mod-kalvidres-mod #upload_modal {
     -webkit-overflow-scrolling: auto !important;
     overflow-y: auto !important;
-}
-
-body.format-topcoll.editing ul.ctopics .section .activity .actions {
-    display: block;
 }
 
 #page-mod-page-view td, #page-mod-page-view th {
@@ -1895,4 +1890,28 @@ body.format-topcoll.editing ul.ctopics .section .activity .actions {
 
 li.activity p {
     margin-right: 1.75em;
+}
+
+.editing-row {
+ padding-right: 1em;
+ padding-left: 1em;
+}
+
+.style-a .editing-row {
+    padding-left: 0; 
+}
+.course-img-uploader-container {
+    margin-right: auto;
+}
+
+#oublog-searchblogs-modal-dialogue {
+    color: black;
+}
+
+body.format-topcoll.editing ul.ctopics .section .activity .action {
+    justify-content: end;
+}
+
+.contentafterlink .no-overflow {
+    width: 100%;
 }

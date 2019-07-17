@@ -166,6 +166,9 @@ body.arts .page-navbkg {
 
 .course-img-uploader-container {
     
+	margin-left: 1rem;
+	margin-right: 1rem;
+	
     .course-image-uploader {
         background-color: rgba(255, 255, 255, .8);
         display: block;
@@ -193,6 +196,21 @@ body.arts .page-navbkg {
 .course-image-uploader:hover {
     background-color: rgba(200, 200, 200, .8);
 }
+
+.course-hdr-chooser span { font-size: 0.85em; background-color: rgba(255,255,255,.8);
+    display: inline-block; padding: 0.25rem 0.5rem; }
+
+.course-hdr-chooser .icon { width: 36px !important; margin-right: 0; }
+
+.course-hdr-chooser .btn-sm {
+	padding: 0;
+	background-color: transparent;
+}
+
+.course-hdr-chooser .btn-sm.btn-success {
+	background-color: #5cb85c;
+}
+
 
 .course-image-uploader input[type="file"] {
     display: none;

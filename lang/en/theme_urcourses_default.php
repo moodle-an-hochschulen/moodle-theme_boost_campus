@@ -25,7 +25,7 @@
 defined('MOODLE_INTERNAL') || die();
 
 // GENERAL.
-$string['pluginname'] = 'UR Courses Default (Fall 2019)';
+$string['pluginname'] = 'UR Courses: Default (Fall 2019)';
 $string['choosereadme'] = 'UR Courses: Default (Fall 2019) is a child theme of Boost for University of Regina courses.';
 
 // SETTINGS.

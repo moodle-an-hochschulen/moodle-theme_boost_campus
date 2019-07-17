@@ -894,4 +894,19 @@ public function user_menu($user = null, $withlinks = null) {
     );
 }
 
+
+function search_small() {
+    global $CFG;
+
+    return html_writer::tag('a', $this->pix_icon('a/search', get_string('search', 'search'), 'moodle'), array('class' => 'd-inline-flex nav-link', 'href' => $CFG->wwwroot . '/search/index.php'));
+}
+
+    /*
+     * This renders the navbar.
+     * Uses bootstrap compatible html.
+     */
+    // public function navbar() {
+    //     debugging("in breadcrumb function", DEBUG_DEVELOPER);
+    //     return $this->render_from_template('theme_urcourses_default/breadcrumbs', $this->page->navbar);
+    // }
 }

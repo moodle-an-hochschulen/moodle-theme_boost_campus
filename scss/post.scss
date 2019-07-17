@@ -1886,10 +1886,6 @@ float:none;
     word-wrap: break-word;
 }
 
-.nav-search {
-    border: 1px solid #dfdfdf;
-}
-
 #header_a_head {
     width: 100%;
 }
@@ -1932,4 +1928,20 @@ body.format-topcoll.editing ul.ctopics .section .activity .action {
 
 .contentafterlink .no-overflow {
     width: 100%;
+}
+
+.nav-search{
+    margin-right: 8px;
+}
+
+.nav .caret {
+    margin-left: 0;
+}
+
+.nav.navbar .img.userpicture {
+    margin-right: 0;
+}
+
+.navbar {
+    padding: .5rem .5rem;
 }

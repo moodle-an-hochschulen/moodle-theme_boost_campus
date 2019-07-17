@@ -210,7 +210,7 @@ if ($ADMIN->fulltree) {
     $page->add($setting);
 
     // Add tab to settings page.
-    $settings->add($page);
+    //$settings->add($page);
     
     // Settings title for the Add a block widget. We don't need a description here.
     $name = 'theme_boost_campus/addablockwidgetheading';

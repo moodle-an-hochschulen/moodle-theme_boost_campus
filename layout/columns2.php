@@ -44,6 +44,15 @@ if ($navdraweropen) {
     $extraclasses[] = 'drawer-open-left';
 }
 
+$noblockpg = array(
+    'page-course-edit', 
+    'page-mod-book-mod',
+    'page-mod-book-edit'
+);
+if(in_array($PAGE->bodyid, $noblockpg)) {
+    debugging("course editing.", DEBUG_DEVELOPER);
+    $PAGE->theme->addblockposition = BLOCK_ADDBLOCK_POSITION_FLATNAV;
+}
 // get the UR Cateogry class, if one exists
 $extraclasses[] = theme_urcourses_default_get_ur_category_class($COURSE->id);
 
@@ -171,7 +180,7 @@ if ($pagebottomelements == false) {
     $pagebottomelements = '';
 }
 // Add the additional layouts to the template context.
-$templatecontext['pagebottomelements'] = $pagebottomelements;
+$templatecontext['pagebottomelements'] = $pagebottomelements; 
 
 // Render columns2.mustache from urcourses_default.
 echo $OUTPUT->render_from_template('theme_urcourses_default/columns2', $templatecontext);

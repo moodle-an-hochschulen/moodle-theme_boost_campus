@@ -24,7 +24,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -111,9 +111,9 @@
      inkscape:window-height="752"
      id="namedview22"
      showgrid="false"
-     inkscape:zoom="17.063346"
-     inkscape:cx="-2.6719304"
-     inkscape:cy="13.764066"
+     inkscape:zoom="15.84459"
+     inkscape:cx="13.503089"
+     inkscape:cy="13.764062"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
@@ -158,11 +158,22 @@
          x="3.8961039"
          y="180.29953"
          style="stroke-width:4.16666651" /></text>
-    <path
-       id="path3888"
-       d="m 41.658937,36.423396 c -0.394586,-0.979559 -0.61594,-2.050668 -0.61594,-3.167553 0,-4.852032 4.13833,-8.788587 9.239061,-8.788587 1.895936,0 3.666755,0.549287 5.129609,1.483075 2.665852,-4.394293 7.641471,-7.342131 13.348518,-7.342131 8.507637,0 15.398437,6.554823 15.398437,14.647643 0,0.24718 -0.0098,0.49436 -0.01925,0.741538 5.389453,1.803492 9.258311,6.692144 9.258311,12.441344 0,7.278047 -6.207497,13.182879 -13.858592,13.182879 H 44.122687 c -6.804187,0 -12.318753,-5.245687 -12.318753,-11.718116 0,-5.666806 4.234572,-10.399827 9.855003,-11.480092 z m 13.877841,5.621037 h 6.29411 v 10.253351 c 0,0.805618 0.69293,1.464762 1.539844,1.464762 h 4.619531 c 0.846916,0 1.539846,-0.659144 1.539846,-1.464762 V 42.044433 h 6.294109 c 1.376234,0 2.059541,-1.574625 1.087516,-2.499257 L 66.768011,29.89604 c -0.596689,-0.567595 -1.578338,-0.567595 -2.175027,0 l -10.14372,9.649136 c -0.972026,0.924632 -0.279098,2.499257 1.087514,2.499257 z"
-       inkscape:connector-curvature="0"
-       style="fill:#4aabe9;fill-opacity:1;stroke-width:0.0938647" />
+    <g
+       id="g2243"
+       transform="matrix(1.2248229,0,0,1.2248229,434.62166,-306.73212)">
+      <path
+         id="path2239"
+         d="m -319.9,279.3 c 2,-4.7 3.1,-10 3.1,-15.5 h 18.9 c 0,8.8 -2,17.2 -5.5,24.8 h -7.2 z m 9.3,7.2 h 6 c 2.8,-6.4 4.4,-13.3 4.7,-20.6 h -14.9 c -0.2,4.8 -1.2,9.2 -2.9,13.4 z"
+         class="st0"
+         inkscape:connector-curvature="0"
+         style="fill:#4091ce" />
+      <path
+         id="path2241"
+         d="m -298.1,268.4 c 3.4,-0.7 7.1,0.3 8.4,2 3,3.7 0,12.7 -7.9,19.1 -7.3,5.9 -16.1,8.2 -18.9,4.8 -1.9,-2.4 -0.5,-7.1 2,-9.6 l 3.9,3.9 v -9.3 h -9.3 l 3.9,3.9 c -3.3,3.3 -4.8,8.8 -2.2,12.3 0.8,1.1 2.1,1.7 3.5,2.1 4.4,1 11.2,-1.5 17.3,-6.3 8.7,-7 12.4,-16.3 8.7,-20.9 -1.9,-2.3 -5.3,-2.9 -9.4,-2"
+         class="st1"
+         inkscape:connector-curvature="0"
+         style="fill:#f34336" />
+    </g>
     <g
        id="g14799"
        transform="matrix(3.7058697,0.54062794,-0.54062794,3.7058697,22.494748,9.9223005)"
@@ -5551,7 +5562,7 @@
            style="display:none">
           <polygon
              id="polygon10808"
-             points="2.203,13.402 2.203,20.954 9.724,13.402 "
+             points="2.203,20.954 9.724,13.402 2.203,13.402 "
              display="inline"
              style="display:inline;fill:#7ac943" />
           <g
@@ -5606,7 +5617,7 @@
           </g>
           <polygon
              id="polygon10825"
-             points="7.992,18.282 7.992,24.218 13.904,18.282 "
+             points="7.992,24.218 13.904,18.282 7.992,18.282 "
              display="inline"
              style="display:inline;fill:#3fa9f5" />
           <g
@@ -5658,7 +5669,7 @@
                style="display:inline">
               <polygon
                  id="polygon10839"
-                 points="0,6 24,6 23.03,22 1,22 "
+                 points="24,6 23.03,22 1,22 0,6 "
                  style="opacity:0.27000002;fill:#ff00ff" />
             </g>
             <g
@@ -5667,7 +5678,7 @@
                style="display:inline">
               <polygon
                  id="polygon10843"
-                 points="9.5,4 22,4 22,22 2,22 2,2 6.969,2 "
+                 points="6.969,2 9.5,4 22,4 22,22 2,22 2,2 "
                  style="fill:#7ac943" />
             </g>
           </g>
@@ -5701,7 +5712,7 @@
            style="display:none">
           <polygon
              id="polygon10858"
-             points="2,24 22,24 22,7.889 14.087,0 2,0 "
+             points="14.087,0 2,0 2,24 22,24 22,7.889 "
              display="inline"
              style="display:inline;fill:#3fa9f5" />
           <g
@@ -5738,7 +5749,7 @@
              style="fill:#f15a24" />
           <polygon
              id="polygon10871"
-             points="7.257,17.062 9.105,20.031 10.954,23 7.257,23 3.56,23 5.408,20.031 "
+             points="9.105,20.031 10.954,23 7.257,23 3.56,23 5.408,20.031 7.257,17.062 "
              style="fill:#f15a24" />
           <g
              id="g10875">
@@ -5751,7 +5762,7 @@
           </g>
           <polygon
              id="polygon10877"
-             points="22,9.435 22,18.937 5.114,9.435 22,-0.066 "
+             points="22,18.937 5.114,9.435 22,-0.066 22,9.435 "
              style="fill:#f15a24" />
           <rect
              id="rect10879"
@@ -6934,7 +6945,7 @@
             </linearGradient>
             <polygon
                id="polygon11282"
-               points="22,24 22,7.889 14.482,0 13.482,0 3,0 2,0 2,24 3,24 21,24 "
+               points="2,24 3,24 21,24 22,24 22,7.889 14.482,0 13.482,0 3,0 2,0 "
                style="fill:url(#SVGID_65_)" />
             <linearGradient
                y2="23.0005"
@@ -6954,7 +6965,7 @@
             </linearGradient>
             <polygon
                id="polygon11289"
-               points="21,23 21,8.29 14.054,1 13.054,1 4,1 3,1 3,23 4,23 20,23 "
+               points="3,23 4,23 20,23 21,23 21,8.29 14.054,1 13.054,1 4,1 3,1 "
                style="fill:url(#SVGID_66_)" />
             <linearGradient
                y2="22.0005"
@@ -6974,7 +6985,7 @@
             </linearGradient>
             <polygon
                id="polygon11296"
-               points="20,22 20,8.69 13.625,2 12.625,2 5,2 4,2 4,22 5,22 19,22 "
+               points="4,22 5,22 19,22 20,22 20,8.69 13.625,2 12.625,2 5,2 4,2 "
                style="fill:url(#SVGID_67_)" />
             <linearGradient
                y2="9.3593998"
@@ -7558,7 +7569,7 @@
           </linearGradient>
           <polygon
              id="polygon11486"
-             points="14,15 14,12 14,5 14,2 9,2 9,5 9,12 9,15 11.469,13 "
+             points="9,2 9,5 9,12 9,15 11.469,13 14,15 14,12 14,5 14,2 "
              display="inline"
              style="display:inline;fill:url(#SVGID_88_)" />
           <linearGradient
@@ -7579,7 +7590,7 @@
           </linearGradient>
           <polygon
              id="polygon11493"
-             points="13,12.936 13,9.936 13,6 13,3 10,3 10,6 10,9.903 10,12.902 11.461,11.719 "
+             points="10,3 10,6 10,9.903 10,12.902 11.461,11.719 13,12.936 13,9.936 13,6 13,3 "
              display="inline"
              style="display:inline;fill:url(#SVGID_89_)" />
           <linearGradient
@@ -7600,7 +7611,7 @@
           </linearGradient>
           <polygon
              id="polygon11500"
-             points="12,10.871 12,7.871 12,7 12,4 11,4 11,7 11,7.806 11,10.806 11.453,10.438 "
+             points="11,4 11,7 11,7.806 11,10.806 11.453,10.438 12,10.871 12,7.871 12,7 12,4 "
              display="inline"
              style="display:inline;fill:url(#SVGID_90_)" />
         </g>
@@ -7634,7 +7645,7 @@
             </linearGradient>
             <polygon
                id="polygon11510"
-               points="22,24 22,7.889 14.482,0 13.482,0 3,0 2,0 2,24 3,24 21,24 "
+               points="2,24 3,24 21,24 22,24 22,7.889 14.482,0 13.482,0 3,0 2,0 "
                style="fill:url(#SVGID_91_)" />
             <linearGradient
                y2="23.0005"
@@ -7654,7 +7665,7 @@
             </linearGradient>
             <polygon
                id="polygon11517"
-               points="21,23 21,8.29 14.054,1 13.054,1 4,1 3,1 3,23 4,23 20,23 "
+               points="3,23 4,23 20,23 21,23 21,8.29 14.054,1 13.054,1 4,1 3,1 "
                style="fill:url(#SVGID_92_)" />
             <linearGradient
                y2="22.0005"
@@ -7674,7 +7685,7 @@
             </linearGradient>
             <polygon
                id="polygon11524"
-               points="20,22 20,8.69 13.625,2 12.625,2 5,2 4,2 4,22 5,22 19,22 "
+               points="4,22 5,22 19,22 20,22 20,8.69 13.625,2 12.625,2 5,2 4,2 "
                style="fill:url(#SVGID_93_)" />
             <linearGradient
                y2="9.3593998"
@@ -7841,7 +7852,7 @@
           </linearGradient>
           <polygon
              id="polygon11586"
-             points="3,24 21,24 22,24 22,7.889 14.482,0 13.482,0 3,0 2,0 2,24 "
+             points="14.482,0 13.482,0 3,0 2,0 2,24 3,24 21,24 22,24 22,7.889 "
              display="inline"
              style="display:inline;fill:url(#SVGID_99_)" />
           <linearGradient
@@ -7862,7 +7873,7 @@
           </linearGradient>
           <polygon
              id="polygon11593"
-             points="4,23 20,23 21,23 21,8.29 14.054,1 13.054,1 4,1 3,1 3,23 "
+             points="14.054,1 13.054,1 4,1 3,1 3,23 4,23 20,23 21,23 21,8.29 "
              display="inline"
              style="display:inline;fill:url(#SVGID_100_)" />
           <linearGradient
@@ -7883,7 +7894,7 @@
           </linearGradient>
           <polygon
              id="polygon11600"
-             points="5,22 19,22 20,22 20,8.69 13.625,2 12.625,2 5,2 4,2 4,22 "
+             points="13.625,2 12.625,2 5,2 4,2 4,22 5,22 19,22 20,22 20,8.69 "
              display="inline"
              style="display:inline;fill:url(#SVGID_101_)" />
           <g
@@ -7941,7 +7952,7 @@
             </linearGradient>
             <polygon
                id="polygon11612"
-               points="19,12 19,5.791 17.294,4 16.294,4 6,4 5,4 5,12 6,12 18,12 "
+               points="5,12 6,12 18,12 19,12 19,5.791 17.294,4 16.294,4 6,4 5,4 "
                style="fill:url(#SVGID_102_)" />
             <linearGradient
                y2="11"
@@ -8153,7 +8164,7 @@
           </linearGradient>
           <polygon
              id="polygon11686"
-             points="6,10 5,10 5,18 5,19 6,19 9,19 9,18 6,18 "
+             points="9,19 9,18 6,18 6,10 5,10 5,18 5,19 6,19 "
              display="inline"
              style="display:inline;fill:url(#SVGID_105_)" />
           <linearGradient
@@ -8178,7 +8189,7 @@
           </linearGradient>
           <polygon
              id="polygon11695"
-             points="8,5 8,6 18,6 18,9 19,9 19,6 19,5 18,5 "
+             points="19,6 19,5 18,5 8,5 8,6 18,6 18,9 19,9 "
              display="inline"
              style="display:inline;fill:url(#SVGID_106_)" />
           <g
@@ -8533,7 +8544,7 @@
           </linearGradient>
           <polygon
              id="polygon11807"
-             points="15.298,2 22,2 22,8.75 8.748,22.014 2.028,15.29 "
+             points="8.748,22.014 2.028,15.29 15.298,2 22,2 22,8.75 "
              display="inline"
              style="display:inline;fill:url(#SVGID_121_)" />
           <ellipse
@@ -8565,7 +8576,7 @@
                  offset="1" />
             </linearGradient>
             <polygon
-               points="8.751,20.631 3.42,15.3 8.751,9.969 14.08,15.3 "
+               points="14.08,15.3 8.751,20.631 3.42,15.3 8.751,9.969 "
                id="frame_17_"
                style="fill:url(#frame_1_)" />
             <linearGradient
@@ -8606,7 +8617,7 @@
                  offset="1" />
             </linearGradient>
             <polygon
-               points="11.351,13.999 7.451,17.899 8.751,19.2 12.651,15.3 "
+               points="12.651,15.3 11.351,13.999 7.451,17.899 8.751,19.2 "
                id="water_9_"
                style="fill:url(#water_2_)" />
             <path
@@ -8682,7 +8693,7 @@
                  offset="1" />
             </linearGradient>
             <polygon
-               points="8.751,11.401 4.852,15.3 7.451,17.899 11.351,13.999 "
+               points="11.351,13.999 8.751,11.401 4.852,15.3 7.451,17.899 "
                id="sky_11_"
                style="fill:url(#sky_2_)" />
             <path
@@ -8867,7 +8878,7 @@
             </linearGradient>
             <polygon
                id="polygon11911"
-               points="19,13.681 19,12 17,12 17,13.681 17,17 17,18.423 17.985,17.475 19,18.423 19,17 "
+               points="17.985,17.475 19,18.423 19,17 19,13.681 19,12 17,12 17,13.681 17,17 17,18.423 "
                style="fill:url(#SVGID_127_)" />
           </g>
           <g
@@ -9007,7 +9018,7 @@
             </linearGradient>
             <polygon
                id="polygon11955"
-               points="7,13.681 7,12 5,12 5,13.681 5,17 5,18.423 5.985,17.475 7,18.423 7,17 "
+               points="5.985,17.475 7,18.423 7,17 7,13.681 7,12 5,12 5,13.681 5,17 5,18.423 "
                style="fill:url(#SVGID_133_)" />
           </g>
           <g
@@ -9147,7 +9158,7 @@
             </linearGradient>
             <polygon
                id="polygon11999"
-               points="13,3.681 13,2 11,2 11,3.681 11,7 11,8.423 11.985,7.475 13,8.423 13,7 "
+               points="11.985,7.475 13,8.423 13,7 13,3.681 13,2 11,2 11,3.681 11,7 11,8.423 "
                style="fill:url(#SVGID_139_)" />
           </g>
         </g>
@@ -9702,7 +9713,7 @@
           </linearGradient>
           <polygon
              id="polygon12177"
-             points="10,18.989 10,19 8,19 8,10 22,10 22,19 10.197,19 "
+             points="10.197,19 10,18.989 10,19 8,19 8,10 22,10 22,19 "
              display="inline"
              style="display:inline;fill:url(#SVGID_159_)" />
           <rect
@@ -9870,7 +9881,7 @@
           </linearGradient>
           <polygon
              id="polygon12230"
-             points="2.134,8.957 21.928,8.998 21.156,20 2.874,20 "
+             points="21.928,8.998 21.156,20 2.874,20 2.134,8.957 "
              display="inline"
              style="display:inline;fill:url(#SVGID_165_)" />
         </g>
@@ -9900,7 +9911,7 @@
           </linearGradient>
           <polygon
              id="polygon12240"
-             points="3,24 21,24 22,24 22,7.889 14.482,0 13.482,0 3,0 2,0 2,24 "
+             points="14.482,0 13.482,0 3,0 2,0 2,24 3,24 21,24 22,24 22,7.889 "
              display="inline"
              style="display:inline;fill:url(#SVGID_166_)" />
           <linearGradient
@@ -9921,7 +9932,7 @@
           </linearGradient>
           <polygon
              id="polygon12247"
-             points="4,23 20,23 21,23 21,8.29 14.054,1 13.054,1 4,1 3,1 3,23 "
+             points="14.054,1 13.054,1 4,1 3,1 3,23 4,23 20,23 21,23 21,8.29 "
              display="inline"
              style="display:inline;fill:url(#SVGID_167_)" />
           <linearGradient
@@ -9942,7 +9953,7 @@
           </linearGradient>
           <polygon
              id="polygon12254"
-             points="5,22 19,22 20,22 20,8.69 13.625,2 12.625,2 5,2 4,2 4,22 "
+             points="13.625,2 12.625,2 5,2 4,2 4,22 5,22 19,22 20,22 20,8.69 "
              display="inline"
              style="display:inline;fill:url(#SVGID_168_)" />
           <linearGradient
@@ -11126,4 +11137,10 @@
      inkscape:groupmode="layer"
      id="layer1"
      inkscape:label="Layer 1" />
+  <style
+     id="style2237"
+     type="text/css">
+	.st0{fill:#4091CE;}
+	.st1{fill:#F34336;}
+</style>
 </svg>

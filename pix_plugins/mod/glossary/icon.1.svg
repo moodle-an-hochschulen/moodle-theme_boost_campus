@@ -43,19 +43,21 @@
      id="namedview20"
      showgrid="false"
      inkscape:zoom="14.202256"
-     inkscape:cx="7.4102366"
-     inkscape:cy="10.704298"
+     inkscape:cx="11.986974"
+     inkscape:cy="13.520752"
      inkscape:window-x="0"
      inkscape:window-y="22"
      inkscape:window-maximized="0"
      inkscape:current-layer="g14" />
   <g
+     stroke-linejoin="round"
+     stroke-linecap="round"
+     stroke-width="3"
      stroke-miterlimit="10"
-     id="g14"
-     style="stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10">
+     id="g14">
     <g
-       id="g10"
-       style="display:none;stroke:#999999">
+       stroke="#999"
+       id="g10">
       <g
          id="g6"
          transform="translate(-8.3333333)"
@@ -71,26 +73,26 @@
       </g>
     </g>
     <circle
-       cx="49.851673"
-       cy="34.705711"
-       r="27.085329"
+       cx="54.016556"
+       cy="47.375145"
+       r="19.013033"
        id="circle12"
-       style="fill:#009688;stroke:#009688;stroke-width:3.35768533" />
+       style="fill:#009688;stroke:#009688;stroke-width:2.35698748" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:237.42776489px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#999999;fill-opacity:1;stroke:none;stroke-width:17.80708122"
-       x="30.577244"
-       y="92.119827"
+       style="font-style:normal;font-weight:normal;font-size:166.66667175px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#999999;fill-opacity:1;stroke:none;stroke-width:12.5;"
+       x="40.486526"
+       y="87.678017"
        id="text358"><tspan
          sodipodi:role="line"
          id="tspan356"
-         x="30.577244"
-         y="92.119827"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:31.65703201px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#999999;fill-opacity:1;stroke-width:17.80708122">Aa</tspan></text>
+         x="40.486526"
+         y="87.678017"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.22222137px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:12.5;fill:#999999;fill-opacity:1;">Aa</tspan></text>
   </g>
   <path
-     d="M 56.567038,38.511084 H 55.112041 L 54.66435,38.063393 c 1.790765,-2.014612 2.798071,-4.70076 2.798071,-7.610754 0,-6.491524 -5.260373,-11.639976 -11.639975,-11.639976 -6.379602,0 -11.639974,5.260374 -11.639974,11.639976 0,6.379602 5.260372,11.639976 11.639974,11.639976 2.909993,0 5.484219,-1.119229 7.610753,-2.79807 l 0.447692,0.447691 v 1.454997 l 8.953826,8.953828 2.686149,-2.686149 c 0,0 -8.953828,-8.953828 -8.953828,-8.953828 m -10.744592,0 c -4.476914,0 -8.058443,-3.581531 -8.058443,-8.058445 0,-4.476914 3.581529,-8.058445 8.058443,-8.058445 4.476914,0 8.058445,3.581531 8.058445,8.058445 0,4.476914 -3.581531,8.058445 -8.058445,8.058445"
+     d="M 58.730528,50.046395 H 57.709167 L 57.394902,49.73213 c 1.25706,-1.414193 1.964156,-3.299783 1.964156,-5.342505 0,-4.556842 -3.692613,-8.17089 -8.170889,-8.17089 -4.478276,0 -8.170888,3.692614 -8.170888,8.17089 0,4.478276 3.692612,8.17089 8.170888,8.17089 2.042722,0 3.849746,-0.785663 5.342505,-1.964156 l 0.314265,0.314265 v 1.021361 l 6.285299,6.2853 1.88559,-1.88559 c 0,0 -6.2853,-6.2853 -6.2853,-6.2853 m -7.542359,0 c -3.14265,0 -5.656768,-2.51412 -5.656768,-5.65677 0,-3.14265 2.514118,-5.65677 5.656768,-5.65677 3.14265,0 5.65677,2.51412 5.65677,5.65677 0,3.14265 -2.51412,5.65677 -5.65677,5.65677"
      id="path16"
      inkscape:connector-curvature="0"
-     style="fill:#ffffff;stroke-width:1.11922848" />
+     style="fill:#ffffff;stroke-width:0.78566247" />
 </svg>

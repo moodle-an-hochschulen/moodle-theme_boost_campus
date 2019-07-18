@@ -39,6 +39,10 @@ body.loginbackgroundimage, body .loginbackgroundimage {
     background-repeat: repeat-x;
 }
 
+#page-login-index #region-main {
+    overflow-x: hidden;
+}
+
 /* This will only be needed if the setting "loginform" is checked */
 @if variable-exists(loginform) {
     @if $loginform == 'yes' {
@@ -1965,7 +1969,7 @@ body.format-topcoll.editing ul.ctopics .section .activity .action {
     margin-left: 0;
 }
 
-.nav.navbar .img.userpicture {
+.nav-item img.userpicture {
     margin-right: 0;
 }
 

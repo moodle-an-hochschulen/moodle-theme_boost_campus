@@ -911,8 +911,8 @@ function search_small() {
      * This renders the navbar.
      * Uses bootstrap compatible html.
      */
-    // public function navbar() {
-    //     debugging("in breadcrumb function", DEBUG_DEVELOPER);
-    //     return $this->render_from_template('theme_urcourses_default/breadcrumbs', $this->page->navbar);
-    // }
+     public function navbar() {
+        debugging("in breadcrumb function", DEBUG_DEVELOPER);
+         return $this->render_from_template('theme_urcourses_default/breadcrumbs', $this->page->navbar);
+    }
 }

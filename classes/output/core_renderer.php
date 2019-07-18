@@ -898,6 +898,12 @@ public function user_menu($user = null, $withlinks = null) {
 function search_small() {
     global $CFG;
 
+    // Accessing $CFG directly as using \core_search::is_global_search_enabled would
+    // result in an extra included file for each site, even the ones where global search
+    // is disabled.
+    if (empty($CFG->enableglobalsearch) || !has_capability('moodle/search:query', \context_system::instance())) {
+        return '';
+    }
     return html_writer::tag('a', $this->pix_icon('a/search', get_string('search', 'search'), 'moodle'), array('class' => 'd-inline-flex nav-link', 'href' => $CFG->wwwroot . '/search/index.php'));
 }
 

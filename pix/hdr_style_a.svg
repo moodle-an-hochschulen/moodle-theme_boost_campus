@@ -38,16 +38,16 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="2189"
-     inkscape:window-height="1128"
+     inkscape:window-width="1440"
+     inkscape:window-height="855"
      id="namedview34"
      showgrid="false"
-     inkscape:zoom="46.025846"
-     inkscape:cx="13.400371"
-     inkscape:cy="7.923762"
+     inkscape:zoom="29.3125"
+     inkscape:cx="16"
+     inkscape:cy="8"
      inkscape:window-x="0"
-     inkscape:window-y="23"
-     inkscape:window-maximized="0"
+     inkscape:window-y="1"
+     inkscape:window-maximized="1"
      inkscape:current-layer="g69"
      fit-margin-bottom="1"
      fit-margin-top="1"
@@ -60,7 +60,7 @@
 	.st1{fill:#FFFFFF;}
 </style>
   <rect
-     style="fill:none;stroke:#1d1d1d;stroke-width:5.69765663;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     style="fill:none;stroke:#373a3c;stroke-width:5.69765663;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
      id="rect1094"
      width="122.8533"
      height="46.749489"
@@ -82,18 +82,18 @@
      id="g69"
      transform="translate(-131.61906,-13.30663)">
     <path
-       style="fill:#1d1d1d;stroke:#000000;stroke-width:0.04448719;stroke-opacity:1"
-       d="m 145.78665,31.500567 v 30.934408 h 33.48238 V 31.500567 Z"
+       style="fill:#373a3c;fill-opacity:1;stroke:#373a3c;stroke-width:0.05647538;stroke-opacity:1"
+       d="m 137.45713,25.112375 v 43.573238 h 38.30774 V 25.112375 Z"
        id="path16"
        inkscape:connector-curvature="0" />
     <path
-       style="fill:#1d1d1d;stroke:#000000;stroke-width:0.06489892;stroke-opacity:1"
-       d="m 184.59789,37.908466 h 58.70071 v 6.38632 h -58.70071 z"
+       style="fill:#373a3c;fill-opacity:1;stroke:#373a3c;stroke-width:0.06489892;stroke-opacity:1"
+       d="m 182.46569,37.908466 h 58.70071 v 6.38632 h -58.70071 z"
        id="path14"
        inkscape:connector-curvature="0" />
     <path
-       style="fill:#1d1d1d;stroke:#000000;stroke-width:0.06489892;stroke-opacity:1"
-       d="m 184.59789,49.939867 h 58.70071 v 6.38632 h -58.70071 z"
+       style="fill:#373a3c;fill-opacity:1;stroke:#373a3c;stroke-width:0.06489892;stroke-opacity:1"
+       d="m 182.46569,49.939867 h 58.70071 v 6.38632 h -58.70071 z"
        id="rect133-4"
        inkscape:connector-curvature="0" />
   </g>

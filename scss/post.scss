@@ -176,6 +176,14 @@ body.arts .page-navbkg {
 
 }
 
+.course-head .form-control {
+    font-size: 1.9375rem;
+}
+
+.course-hdr-chooser {
+	background-color: rgba(255, 255, 255, .8);
+}
+
 .course-img-uploader-container.confirm {
     
     .course-image-uploader {
@@ -189,22 +197,35 @@ body.arts .page-navbkg {
 }
 
 .course-hdr-chooser .btn:hover,
-.course-image-uploader:hover {
-    background-color: rgba(200, 200, 200, .8);
+.course-image-uploader:hover,
+.course-head .quickeditlink:hover {
+    background-color: rgba(253, 221, 155, 1);
 }
 
-.course-hdr-chooser span { font-size: 0.85em; background-color: rgba(255,255,255,.8);
-    display: inline-block; padding: 0.25rem 0.5rem; }
+.course-hdr-chooser .btn-success:hover {
+    background-color: rgba(68, 156, 68, .8) !important;
+}
 
-.course-hdr-chooser .icon { width: 36px !important; margin-right: 0; }
+
+.course-hdr-chooser span { 
+	font-size: 0.85em;
+	padding: 0 0.85em;
+    display: inline-block;  
+}
+
+.course-hdr-chooser .icon { width: 40px; height: 20px; margin-right: 0; }
 
 .course-hdr-chooser .btn-sm {
 	padding: 0;
-	background-color: transparent;
+	background-color: rgba(0,0,0,.2);
+
+	padding: 0.25rem;
+	border: 0;
 }
 
 .course-hdr-chooser .btn-sm.btn-success {
 	background-color: #5cb85c;
+	border: 0;
 }
 
 
@@ -218,6 +239,8 @@ body.arts .page-navbkg {
 
 
 .course-hdr-chooser-container {
+	
+
     
     .course-hdr-chooser {
         /*background-color: rgba(255, 255, 255, .8);*/

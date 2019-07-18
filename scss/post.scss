@@ -1735,41 +1735,45 @@ ul.ctopics .content .section ul {
 	color: #3155a5; }
 #nav-drawer .list-group-item[data-parent-key="mycourses"] .media-left.fnuniv .fa-home:before {
     color: #0086D4; }
+
+.course-summaryitem, .dashboard-card .course-info-container, .course-listitem {
+    border-top: 5px solid #fec82e!important;
+}
     
-.coursebox.arts {
-    border-color: #c9282d; }
-.coursebox.khs {
-    border-color: #bfb9a7; }
-.coursebox.sw {
-    border-color: #00a0df; }
-.coursebox.edu {
-    border-color: #ff5a00; }
-.coursebox.sci {
-    border-color: #007836; }
-.coursebox.map {
-    border-color: #00A9CE; }
-.coursebox.engg {
-    border-color: #5bb4e5; }
-.coursebox.bus {
-    border-color: #2a6ebb; }
-.coursebox.nur {
-    border-color: #fbceb1; }
-.coursebox.cnpp {
-	border-color: #662d91; }
-.coursebox.scbscn {
-	border-color: #6c9d41; }
-.coursebox.gbus {
-	border-color: #89022d; }
-.coursebox.jsgspp {
-	border-color: #8b9b3c; }
-.coursebox.lacite {
-	border-color: #CCDB2A; }
-.coursebox.luther {
-	border-color: #3155a5; }
-.coursebox.luthervssn {
-	border-color: #3155a5; }
-.coursebox.fnuniv {
-	border-color: #0086D4; }
+.coursebox.arts, .course-summaryitem.arts, .dashboard-card .course-info-container.arts, .course-listitem.arts {
+    border-top-color: #c9282d!important; }
+.coursebox.khs, .course-summaryitem.khs, .dashboard-card .course-info-container.khs, .course-listitem.khs {
+    border-top-color: #bfb9a7!important; }
+.coursebox.sw, .course-summaryitem.sw, .dashboard-card .course-info-container.sw, .course-listitem.sw {
+    border-top-color: #00a0df!important; }
+.coursebox.edu, .course-summaryitem.edu, .dashboard-card .course-info-container.edu, .course-listitem.edu {
+    border-top-color: #ff5a00!important; }
+.coursebox.sci, .course-summaryitem.sci, .dashboard-card .course-info-container.sci, .course-listitem.sci {
+    border-top-color: #007836!important; }
+.coursebox.map, .course-summaryitem.map, .dashboard-card .course-info-container.map, .course-listitem.map {
+    border-top-color: #00A9CE!important; }
+.coursebox.engg, .course-summaryitem.engg, .dashboard-card .course-info-container.engg, .course-listitem.engg {
+    border-top-color: #5bb4e5!important; }
+.coursebox.bus, .course-summaryitem.bus, .dashboard-card .course-info-container.bus, .course-listitem.bus {
+    border-top-color: #2a6ebb!important; }
+.coursebox.nur, .course-summaryitem.nur, .dashboard-card .course-info-container.nur, .course-listitem.nur {
+    border-top-color: #fbceb1!important; }
+.coursebox.cnpp, .course-summaryitem.cnpp, .dashboard-card .course-info-container.cnpp, .course-listitem.cnpp {
+	border-top-color: #662d91!important; }
+.coursebox.scbscn, .course-summaryitem.scbscn, .dashboard-card .course-info-container.scbscn, .course-listitem.scbscn {
+	border-top-color: #6c9d41!important; }
+.coursebox.gbus, .course-summaryitem.gbus, .dashboard-card .course-info-container.gbus, .course-listitem.gbus {
+	border-top-color: #89022d!important; }
+.coursebox.jsgspp, .course-summaryitem.jsgspp, .dashboard-card .course-info-container.jsgspp, .course-listitem.jsgspp {
+	border-top-color: #8b9b3c!important; }
+.coursebox.lacite, .course-summaryitem.lacite, .dashboard-card .course-info-container.lacite, .course-listitem.lacite {
+	border-top-color: #CCDB2A!important; }
+.coursebox.luther, .course-summaryitem.luther, .dashboard-card .course-info-container.luther, .course-listitem.luther {
+	border-top-color: #3155a5!important; }
+.coursebox.luthervssn, .course-summaryitem.luthervssn, .dashboard-card .course-info-container.luthernssn, .course-listitem.luthervssn {
+	border-top-color: #3155a5!important; }
+.coursebox.fnuniv, .course-summaryitem.fnuniv, .dashboard-card .course-info-container.fnuniv, .course-listitem.fnuniv {
+	border-top-color: #0086D4!important; }
   
 #nav-drawer .list-group-item[data-parent-key="mycourses"] .media-left .fa-home {
 	//display: none;

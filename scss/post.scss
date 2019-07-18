@@ -95,9 +95,8 @@ body.loginbackgroundimage, body .loginbackgroundimage {
 .navbar {
 	background-color: #4d4d4f !important;
 	background-image: url([[pix:theme|navbkgsmall]]);
-	background-position: -0.5em 0;
+	background-position: -18px 0;
 	background-repeat: no-repeat;
-    background-size: initial;
 	
     .navbar-nav .nav-link .icon,
     .navbar-nav .nav-link,
@@ -122,10 +121,9 @@ body.loginbackgroundimage, body .loginbackgroundimage {
 @include media-breakpoint-up(md) {
 	.navbar {
 		background-color: #4d4d4f;
-		background-image: url([[pix:theme|navbkg]]);
-		background-position: 0 0;
+		background-image: url([[pix:theme|navbkgsmall]]);
+		background-position: -18px 0;
 		background-repeat: no-repeat;
-	    background-size: contain;
 	}
 }
 

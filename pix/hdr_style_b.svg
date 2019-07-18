@@ -13,7 +13,7 @@
    enable-background="new 0 0 100 100"
    version="1.1"
    id="svg32"
-   sodipodi:docname="hdr_style_a.svg"
+   sodipodi:docname="hdr_style_b.svg"
    inkscape:version="0.92.2 5c3e80d, 2017-08-06">
   <metadata
      id="metadata38">
@@ -23,7 +23,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -38,17 +38,17 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1812"
-     inkscape:window-height="954"
+     inkscape:window-width="1440"
+     inkscape:window-height="856"
      id="namedview34"
      showgrid="false"
-     inkscape:zoom="46.025846"
-     inkscape:cx="16.094509"
-     inkscape:cy="7.923762"
+     inkscape:zoom="29.25"
+     inkscape:cx="16"
+     inkscape:cy="8"
      inkscape:window-x="0"
      inkscape:window-y="23"
      inkscape:window-maximized="0"
-     inkscape:current-layer="g69"
+     inkscape:current-layer="svg32"
      fit-margin-bottom="1"
      fit-margin-top="1"
      fit-margin-left="1"
@@ -59,13 +59,11 @@
 	.st0{fill:#1D1D1D;}
 	.st1{fill:#FFFFFF;}
 </style>
-  <rect
-     style="fill:none;stroke:#1d1d1d;stroke-width:5.69765663;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-     id="rect1094"
-     width="122.8533"
-     height="46.749489"
-     x="5.6338024"
-     y="10.276247" />
+  <path
+     style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:#373a3c;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.3674376;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+     d="M 0.66796875 1.7832031 L 0.66796875 2.4667969 L 0.66796875 14.369141 L 31.521484 14.369141 L 31.521484 1.7832031 L 0.66796875 1.7832031 z M 3.4023438 4.3691406 L 20.515625 4.3691406 L 20.515625 11.789062 L 3.4023438 11.789062 L 3.4023438 4.3691406 z "
+     transform="scale(4.1666666)"
+     id="path827" />
   <style
      type="text/css"
      id="style131-02">
@@ -78,14 +76,14 @@
 	.st0{fill:#1D1D1D;}
 	.st1{fill:#FFFFFF;}
 </style>
-  <g
-     id="g69"
-     transform="translate(-131.61906,-13.30663)">
-    <path
-       sodipodi:nodetypes="ccccccccccccccc"
-       inkscape:connector-curvature="0"
-       id="rect133-4"
-       d="m 145.79686,31.510773 v 30.913996 h 71.30302 V 31.510773 Z m 5.46771,6.397693 h 58.70071 v 6.38632 h -58.70071 z m 0,12.031401 h 58.70071 v 6.38632 h -58.70071 z"
-       style="fill:#1d1d1d;stroke:#000000;stroke-width:0.06489892;stroke-opacity:1" />
-  </g>
+  <path
+     inkscape:connector-curvature="0"
+     id="path819"
+     d="m 19.64551,24.601836 h 58.70071 v 6.38632 H 19.64551 Z"
+     style="fill:#373a3c;fill-opacity:1;stroke:none;stroke-width:0.06489892;stroke-opacity:1" />
+  <path
+     inkscape:connector-curvature="0"
+     id="rect133-4"
+     d="m 19.64551,36.633237 h 58.70071 v 6.38632 H 19.64551 Z"
+     style="fill:#373a3c;fill-opacity:1;stroke:none;stroke-width:0.06489892;stroke-opacity:1" />
 </svg>

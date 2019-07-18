@@ -2009,3 +2009,23 @@ body.format-topcoll.editing ul.ctopics .section .activity .action {
         margin-bottom: .75em;
     }
 }
+
+.coursesearchbox.invisiblefieldset {
+    width: 100%;
+}
+
+.coursesearchbox.invisiblefieldset label {
+    display: flex;
+    justify-content: center;
+}
+
+.coursesearchbox.invisiblefieldset input {
+    display: inline-block;
+    width: 70%;
+    vertical-align: middle;
+}
+
+.coursesearchbox.invisiblefieldset button {
+    position: relative;
+    left: -4px;
+}

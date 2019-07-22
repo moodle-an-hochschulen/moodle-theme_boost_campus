@@ -381,7 +381,7 @@ body.arts .page-navbkg .singlebutton button:hover {
         display: none;
     }
     .course-content ul.ctopics li.section.main .content {
-        margin: 0!important;
+        margin: 0 !important;
     }
 
     .path-course-view li.activity form.togglecompletion img {
@@ -810,6 +810,80 @@ body.pagelayout-secure nav {
         }
     }
 }
+
+.section .activity.modtype_label.label {
+	padding: .25em 0;
+}
+
+.section li.activity {
+    padding: .25em 0;
+}
+
+
+.course-content .action-menu .dropdown-toggle {
+    display: inline-block;
+    border: solid 1px #dcdcdc;
+    background: #f6f6f6;
+    padding: 0.15em 0.5em 0.15em 0.2em;
+    color: #888;
+    font-size: 0.85em;
+}
+.course-content .action-menu .dropdown-toggle:before {
+    font-family: FontAwesome;
+    content: '\f013\a0';
+}
+
+body.format-topcoll.editing .course-content ul.topics li.section div.sectionbody.toggledsection a.editsumm {
+    margin-bottom: 1em;
+}
+
+a.editsumm {
+    font-size: .85em;
+    background: #f6f6f6;
+    display: inline-block;
+    margin-top: .5em;
+    padding: .15em .5em .15em .2em;
+    color: #888;
+    border: solid 1px #dcdcdc;
+    border-radius: 0;
+}
+
+a.editsumm:before {
+    font-family: "FontAwesome";
+    content: "\f013\a0";
+}
+
+div.section-modchooser a {
+    background: #f6f6f6;
+    padding: .5em;
+    font-size: .85em;
+    color: #888;
+    border: solid 1px #dcdcdc;
+}
+
+
+@include media-breakpoint-down(sm) {
+	
+	body.format-topcoll.editing ul.ctopics .section .activity .activityinstance {
+	    display: inline;
+	    padding-right: 60px;
+	}
+
+ 
+	body.format-topcoll.editing ul.ctopics .section .activity .contentwithoutlink {
+	    display: inline;
+	    padding-right: 80px;
+	}
+
+	.section .activity .actions {
+	    position: absolute !important;
+	    right: 0;
+	    top: 0;
+	    display: inline-block !important;
+	}
+
+}
+
 
 /*
  * Misc
@@ -1963,9 +2037,6 @@ li.activity p {
  padding-left: 1em;
 }
 
-.style-a .editing-row {
-    padding-left: 0; 
-}
 .course-img-uploader-container {
     margin-right: auto;
 }

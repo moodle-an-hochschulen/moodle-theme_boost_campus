@@ -29,7 +29,7 @@ defined('MOODLE_INTERNAL') || die;
 
 use moodle_url;
 use html_writer;
-global $CFG;
+global $CFG,$PAGE;
 
 require_once($CFG->dirroot . '/course/renderer.php');
 
@@ -150,5 +150,16 @@ class course_renderer extends \theme_boost\output\core\course_renderer {
         $content .= html_writer::end_tag('div'); // .coursebox
         return $content;
     }
-    
+
+    public function course_modchooser($modules, $course) {
+        // This HILLBROOK function is overridden here to refer to the local theme's copy of modchooser to render a modified.
+        // Activity chooser for Hillbrook.
+        if (!$this->page->requires->should_create_one_time_item_now('core_course_modchooser')) {
+            return '';
+        }
+        $modchooser = new \theme_urcourses_default\output\modchooser($course, $modules);
+        return $this->render($modchooser);
+    }
 }
+
+

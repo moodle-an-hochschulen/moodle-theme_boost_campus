@@ -260,7 +260,6 @@ class core_renderer extends \theme_boost\output\core_renderer {
         }
         else  $header->instructnum = "smalllist"; 
         
-        debugging("Instructor List: " . $header->instructnum, DEBUG_DEVELOPER);
 		$hascoursecat = $this->ur_check_course_cat();
 		$coursecat = (!empty($hascoursecat)) ? $hascoursecat['name'] : 'Default';
         $header->facultydep = $coursecat;

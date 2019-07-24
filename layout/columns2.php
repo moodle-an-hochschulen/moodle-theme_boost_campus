@@ -45,12 +45,14 @@ if ($navdraweropen) {
 }
 
 $noblockpg = array(
-    'page-course-edit', 
-    'page-mod-book-mod',
-    'page-mod-book-edit'
+    'page-course-edit'
 );
-if(in_array($PAGE->bodyid, $noblockpg)) {
-    debugging("course editing.", DEBUG_DEVELOPER);
+
+/*page-mod is a common page for editing. If it contains view then it's viewing the page not adding elements but if in editing mode
+*can still have add a block
+*/
+if(in_array($PAGE->bodyid, $noblockpg) || (strpos($PAGE->bodyid, 'page-mod') !== false && strpos($PAGE->bodyid, 'view') === false)) {
+
     $PAGE->theme->addblockposition = BLOCK_ADDBLOCK_POSITION_FLATNAV;
 }
 // get the UR Cateogry class, if one exists

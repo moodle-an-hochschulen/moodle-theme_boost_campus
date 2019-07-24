@@ -2210,6 +2210,10 @@ body.format-topcoll.editing ul.ctopics .section .activity .action {
     text-align: right;
 }
 
+#modchooser_help .typename {
+    font-weight: bold;
+}
+
 @include media-breakpoint-down(sm) {
     #chooserform .mod-option {
         width: 30%;
@@ -2220,5 +2224,8 @@ body.format-topcoll.editing ul.ctopics .section .activity .action {
 
     .choosercontainer #chooseform .moduletypetitle {
         padding: 0 1em 0 1em;
+    }
+    #modchooser_help .row {
+        display: block;
     }
 }

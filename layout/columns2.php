@@ -45,7 +45,10 @@ if ($navdraweropen) {
 }
 
 $noblockpg = array(
-    'page-course-edit'
+    'page-course-edit',
+    'page-mod-mail-view',
+    'page-course-resources',
+    'page-mod-data-view'
 );
 
 /*page-mod is a common page for editing. If it contains view then it's viewing the page not adding elements but if in editing mode

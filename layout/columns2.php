@@ -45,9 +45,10 @@ if ($navdraweropen) {
 }
 
 $noblockpg = array(
-    'page-course-edit', 
+    'page-course-edit',
     'page-mod-book-mod',
-    'page-mod-book-edit'
+    'page-mod-book-edit',
+    'page-mymedia-index'
 );
 if(in_array($PAGE->bodyid, $noblockpg)) {
     debugging("course editing.", DEBUG_DEVELOPER);

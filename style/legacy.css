@@ -155,7 +155,8 @@ li {
     border: 2px solid #e6e6e6;
     border-radius: 10px;
     margin: 0;
-    margin-bottom: 1em;
+	margin-bottom: 1em;
+	background-repeat: no-repeat;
 }
 
 @media screen and (min-width: 540px) {
@@ -168,7 +169,8 @@ li {
         color: black;
         border: 2px solid #e6e6e6;
         border-radius: 10px;
-        margin: 20px;
+		margin: 20px;
+		background-repeat: no-repeat;
     }
     
 }

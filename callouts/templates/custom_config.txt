@@ -331,12 +331,14 @@
         {
             "title": "Quote Float Left",
             "src": "theme/urcourses_default/callouts/templates/pullquote_left.html",
-            "description": "Creates a smaller floated quote block."
+            "description": "Creates a smaller floated quote block.",
+            "icon": "lib/editor/tinymce/tiny_mce/3.5.11/plugins/template/icons/quote-left.svg"
         },
         {
             "title": "Quote Float Right",
             "src": "theme/urcourses_default/callouts/templates/pullquote_right.html",
-            "description": "Creates a smaller floated quote block."
+            "description": "Creates a smaller floated quote block.",
+            "icon": "lib/editor/tinymce/tiny_mce/3.5.11/plugins/template/icons/quote-right.svg"
         }
     ],
   "contextmenu": "link spellchecker image inserttable | cell row column deletetable"

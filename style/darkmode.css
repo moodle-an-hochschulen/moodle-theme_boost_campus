@@ -530,8 +530,9 @@ background: #EFEFEF!important;
     background-color: #ded7b5!important;
 }
 
-.jumbotron, .nav-tabs {
+.jumbotron, .nav-tabs, ul.nav.nav-tabs  {
     background-color: #42413e;
+    background: #42413e;
 }
 
 .table-primary, .table-secondary, .table-success, .table-danger, .table-warning, .table-info, .table-light, .table-dark,  .btn-group.course-hdr-chooser span {

@@ -33,6 +33,8 @@ class icon_system_fontawesome extends \core\output\icon_system_fontawesome {
         $iconmap['core:i/navigationitem'] = 'fa-angle-right';
         $iconmap['core:i/home'] = 'fa-university';
         $iconmap['mod_mail:icon'] = 'fa-envelope';
+        $iconmap['mod_forum:i/lock'] = 'fa-lock';
+        $iconmap['mod_forum:i/unlock'] = 'fa-unlock-alt';
         return $iconmap;
     }
 }

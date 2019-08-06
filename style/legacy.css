@@ -93,8 +93,12 @@ li {
 	background: url([[pix:theme|icons/48/30]]) no-repeat;
 }
 
-.fyi_block, div[class*="question_block"] { 
+.fyi_block, div[class*="fyi_block"] { 
 	background: url([[pix:theme|icons/48/161]]) no-repeat;
+}
+
+.aims_block, div[class*="aims_block"] { 
+	background: url([[pix:theme|icons/48/147]]) no-repeat;
 }
 
 .important_block, div[class*="important_block"] { 

@@ -1364,6 +1364,17 @@ a[href^="mailto"]::before {
     }
 }
 
+
+#page-login-index #page-footer {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+#page-login-index #page-footer .container {
+	max-width: 100%;
+}
+
+
+
 /* TODO: Remove when MDL-61319 is fixed */
 /* This is needed because a bug leads to a mess with fa.fa-pull-left/right rules. */
 .fa-pull-left {

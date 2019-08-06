@@ -1,0 +1,560 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   height="24px"
+   width="24px"
+   viewBox="0 0 100 100"
+   enable-background="new 0 0 100 100"
+   version="1.1"
+   id="svg32"
+   sodipodi:docname="icon.svg"
+   inkscape:version="0.92.2 5c3e80d, 2017-08-06">
+  <metadata
+     id="metadata38">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs36">
+    <style
+       id="style1183">
+      .cls-1 {
+        isolation: isolate;
+      }
+
+      .cls-2 {
+        fill: none;
+      }
+
+      .cls-3 {
+        fill: #6bc9a7;
+      }
+
+      .cls-4 {
+        opacity: 0.15;
+        mix-blend-mode: multiply;
+      }
+
+      .cls-5 {
+        fill: #fff;
+      }
+
+      .cls-6 {
+        fill: #cde6fc;
+      }
+
+      .cls-7 {
+        fill: #8db7e2;
+      }
+
+      .cls-8 {
+        opacity: 0.2;
+      }
+
+      .cls-9 {
+        fill: #231f20;
+      }
+
+      .cls-10 {
+        fill: #ddd;
+      }
+
+      .cls-11 {
+        fill: #239630;
+      }
+    </style>
+    <style
+       id="style244">
+      .cls-1 {
+        isolation: isolate;
+      }
+
+      .cls-2 {
+        fill: #56b5ef;
+      }
+
+      .cls-3 {
+        opacity: 0.15;
+        mix-blend-mode: multiply;
+      }
+
+      .cls-4 {
+        fill: #fff;
+      }
+
+      .cls-5 {
+        opacity: 0.2;
+      }
+
+      .cls-6 {
+        fill: #231f20;
+      }
+
+      .cls-7 {
+        fill: #ddd;
+      }
+
+      .cls-8 {
+        fill: #8db7e2;
+      }
+
+      .cls-9 {
+        fill: none;
+      }
+    </style>
+    <style
+       id="style755">
+      .cls-1 {
+        isolation: isolate;
+      }
+
+      .cls-2 {
+        fill: #fc7e8a;
+      }
+
+      .cls-3, .cls-6 {
+        opacity: 0.15;
+      }
+
+      .cls-3 {
+        mix-blend-mode: multiply;
+      }
+
+      .cls-4 {
+        fill: #fff;
+      }
+
+      .cls-5 {
+        fill: #8db7e2;
+      }
+
+      .cls-7 {
+        fill: #231f20;
+      }
+
+      .cls-8 {
+        fill: #6cd389;
+      }
+
+      .cls-9 {
+        fill: #239630;
+      }
+
+      .cls-10 {
+        fill: #686868;
+      }
+
+      .cls-11 {
+        fill: #1d9eff;
+      }
+
+      .cls-12 {
+        opacity: 0.2;
+      }
+
+      .cls-13 {
+        fill: #ddd;
+      }
+
+      .cls-14 {
+        fill: none;
+      }
+    </style>
+  </defs>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1440"
+     inkscape:window-height="856"
+     id="namedview34"
+     showgrid="false"
+     inkscape:zoom="20.886475"
+     inkscape:cx="12.437689"
+     inkscape:cy="12.73478"
+     inkscape:window-x="75"
+     inkscape:window-y="47"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg32" />
+  <g
+     stroke-miterlimit="10"
+     id="g22"
+     style="display:none;stroke-miterlimit:10">
+    <g
+       id="g14"
+       style="stroke-width:3;stroke-linecap:round;stroke-linejoin:round">
+      <g
+         id="g10"
+         style="stroke:#999999"
+         transform="translate(29.166667)">
+        <g
+           id="g6"
+           style="fill:#ffffff">
+          <path
+             d="m 41.566667,28.1 h 18.4 l -23.3,-24.1 v 18.9 c 0,2.8 2.2,5.2 4.9,5.2 z"
+             id="path2"
+             inkscape:connector-curvature="0" />
+          <path
+             d="m 41.566667,28.1 c -2.7,0 -4.8,-2.3 -4.8,-5.2 V 4 H -8.5666667 c -2.7000003,0 -4.8000003,2.3 -4.8000003,5.2 v 83.2 c 0,2.9 2.1,5.2 4.8000003,5.2 H 55.066667 c 2.7,0 4.8,-2.3 4.8,-5.2 V 28.1 Z"
+             id="path4"
+             inkscape:connector-curvature="0"
+             sodipodi:nodetypes="sscsssssscs" />
+        </g>
+      </g>
+    </g>
+  </g>
+  <style
+     id="style131"
+     type="text/css">
+	.st0{fill:#1D1D1D;}
+	.st1{fill:#FFFFFF;}
+</style>
+  <style
+     id="style900"
+     type="text/css">
+	.st0{fill:none;}
+	.st1{fill:#88C87A;}
+	.st2{opacity:0.15;}
+	.st3{fill:#231F20;}
+	.st4{fill:#FFFFFF;}
+	.st5{fill:#F05F5F;}
+</style>
+  <g
+     id="g857"
+     class="cls-1"
+     style="isolation:isolate"
+     transform="matrix(0.45350986,0,0,0.45350986,-40.0875,-2.3855518)">
+    <g
+       data-name="Layer 2"
+       id="Layer_2-7">
+      <g
+         data-name="single choice set"
+         id="single_choice_set">
+        <g
+           id="g851">
+          <circle
+             id="circle761"
+             r="85"
+             cy="113.5"
+             cx="204"
+             class="cls-2"
+             style="fill:#fc7e8a" />
+          <g
+             id="g849">
+            <g
+               id="g795"
+               class="cls-3"
+               style="opacity:0.15;mix-blend-mode:multiply">
+              <rect
+                 id="rect763"
+                 height="87.709999"
+                 width="108.06"
+                 y="72.440002"
+                 x="153.57001" />
+              <rect
+                 id="rect765"
+                 height="6.3000002"
+                 width="62.130001"
+                 y="112.96"
+                 x="168.34" />
+              <rect
+                 id="rect767"
+                 ry="5.8299999"
+                 rx="5.8299999"
+                 height="17.65"
+                 width="101.04"
+                 y="83.419998"
+                 x="157.89" />
+              <rect
+                 id="rect769"
+                 ry="5.8299999"
+                 rx="5.8299999"
+                 height="17.65"
+                 width="101.04"
+                 y="81.620003"
+                 x="156.99001" />
+              <rect
+                 id="rect771"
+                 height="6.8400002"
+                 width="71.860001"
+                 y="87.389999"
+                 x="163.3" />
+              <path
+                 id="path773"
+                 d="m 251.1,88 -5.1,5.06 -1,1 a 0.68,0.68 0 0 1 -1,0 l -1,-1 -2.54,-2.54 a 0.68,0.68 0 0 1 0,-1 l 1,-1 a 0.68,0.68 0 0 1 1,0 l 2.06,2.07 4.61,-4.62 a 0.68,0.68 0 0 1 1,0 l 1,1 a 0.68,0.68 0 0 1 0,1 z"
+                 inkscape:connector-curvature="0" />
+              <rect
+                 id="rect775"
+                 height="4.3200002"
+                 width="108.06"
+                 y="157.44"
+                 x="153.57001" />
+              <rect
+                 id="rect777"
+                 height="4.3200002"
+                 width="32.779999"
+                 y="157.44"
+                 x="153.57001" />
+              <rect
+                 id="rect779"
+                 ry="5.8299999"
+                 rx="5.8299999"
+                 height="16.209999"
+                 width="91.129997"
+                 y="109.54"
+                 x="162.22" />
+              <rect
+                 id="rect781"
+                 height="6.48"
+                 width="45.740002"
+                 y="114.76"
+                 x="167.44" />
+              <rect
+                 id="rect783"
+                 ry="5.8299999"
+                 rx="5.8299999"
+                 height="16.209999"
+                 width="91.129997"
+                 y="107.74"
+                 x="162.22" />
+              <rect
+                 id="rect785"
+                 height="6.48"
+                 width="45.740002"
+                 y="112.96"
+                 x="167.44" />
+              <rect
+                 id="rect787"
+                 ry="5.8299999"
+                 rx="5.8299999"
+                 height="16.209999"
+                 width="91.129997"
+                 y="133.85001"
+                 x="162.22" />
+              <rect
+                 id="rect789"
+                 height="6.48"
+                 width="60.330002"
+                 y="138.89"
+                 x="167.44" />
+              <rect
+                 id="rect791"
+                 ry="5.8299999"
+                 rx="5.8299999"
+                 height="16.209999"
+                 width="91.129997"
+                 y="132.05"
+                 x="162.22" />
+              <rect
+                 id="rect793"
+                 height="6.48"
+                 width="60.330002"
+                 y="137.09"
+                 x="167.44" />
+            </g>
+            <g
+               id="g847">
+              <rect
+                 id="rect797"
+                 height="87.709999"
+                 width="108.06"
+                 y="68.839996"
+                 x="149.97"
+                 class="cls-4"
+                 style="fill:#ffffff" />
+              <rect
+                 id="rect799"
+                 height="6.3000002"
+                 width="62.130001"
+                 y="109.36"
+                 x="164.74001"
+                 class="cls-5"
+                 style="fill:#8db7e2" />
+              <g
+                 id="g813">
+                <g
+                   id="g807">
+                  <g
+                     id="g803"
+                     class="cls-6"
+                     style="opacity:0.15">
+                    <rect
+                       id="rect801"
+                       ry="5.8299999"
+                       rx="5.8299999"
+                       height="17.65"
+                       width="101.04"
+                       y="79.82"
+                       x="154.28999"
+                       class="cls-7"
+                       style="fill:#231f20" />
+                  </g>
+                  <rect
+                     id="rect805"
+                     ry="5.8299999"
+                     rx="5.8299999"
+                     height="17.65"
+                     width="101.04"
+                     y="78.019997"
+                     x="153.39"
+                     class="cls-8"
+                     style="fill:#6cd389" />
+                </g>
+                <rect
+                   id="rect809"
+                   height="6.8400002"
+                   width="71.860001"
+                   y="83.779999"
+                   x="159.7"
+                   class="cls-9"
+                   style="fill:#239630" />
+                <path
+                   id="path811"
+                   d="m 247.5,84.37 -5.09,5.09 -1,1 a 0.68,0.68 0 0 1 -1,0 l -1,-1 -2.41,-2.55 a 0.68,0.68 0 0 1 0,-1 l 1,-1 a 0.68,0.68 0 0 1 1,0 l 2,2.16 4.61,-4.62 a 0.68,0.68 0 0 1 1,0 l 1,1 a 0.68,0.68 0 0 1 0,1 z"
+                   class="cls-9"
+                   inkscape:connector-curvature="0"
+                   style="fill:#239630" />
+              </g>
+              <rect
+                 id="rect815"
+                 height="4.3200002"
+                 width="108.06"
+                 y="153.84"
+                 x="149.97"
+                 class="cls-10"
+                 style="fill:#686868" />
+              <rect
+                 id="rect817"
+                 height="4.3200002"
+                 width="32.779999"
+                 y="153.84"
+                 x="149.97"
+                 class="cls-11"
+                 style="fill:#1d9eff" />
+              <g
+                 id="g831">
+                <g
+                   id="g823"
+                   class="cls-12"
+                   style="opacity:0.2">
+                  <rect
+                     id="rect819"
+                     ry="5.8299999"
+                     rx="5.8299999"
+                     height="16.209999"
+                     width="91.129997"
+                     y="105.94"
+                     x="158.62"
+                     class="cls-7"
+                     style="fill:#231f20" />
+                  <rect
+                     id="rect821"
+                     height="6.48"
+                     width="45.740002"
+                     y="111.16"
+                     x="163.84"
+                     class="cls-7"
+                     style="fill:#231f20" />
+                </g>
+                <g
+                   id="g829">
+                  <rect
+                     id="rect825"
+                     ry="5.8299999"
+                     rx="5.8299999"
+                     height="16.209999"
+                     width="91.129997"
+                     y="104.13"
+                     x="158.62"
+                     class="cls-13"
+                     style="fill:#dddddd" />
+                  <rect
+                     id="rect827"
+                     height="6.48"
+                     width="45.740002"
+                     y="109.36"
+                     x="163.84"
+                     class="cls-5"
+                     style="fill:#8db7e2" />
+                </g>
+              </g>
+              <g
+                 id="g845">
+                <g
+                   id="g837"
+                   class="cls-12"
+                   style="opacity:0.2">
+                  <rect
+                     id="rect833"
+                     ry="5.8299999"
+                     rx="5.8299999"
+                     height="16.209999"
+                     width="91.129997"
+                     y="130.25"
+                     x="158.62"
+                     class="cls-7"
+                     style="fill:#231f20" />
+                  <rect
+                     id="rect835"
+                     height="6.48"
+                     width="60.330002"
+                     y="135.28999"
+                     x="163.84"
+                     class="cls-7"
+                     style="fill:#231f20" />
+                </g>
+                <g
+                   id="g843">
+                  <rect
+                     id="rect839"
+                     ry="5.8299999"
+                     rx="5.8299999"
+                     height="16.209999"
+                     width="91.129997"
+                     y="128.45"
+                     x="158.62"
+                     class="cls-13"
+                     style="fill:#dddddd" />
+                  <rect
+                     id="rect841"
+                     height="6.48"
+                     width="60.330002"
+                     y="133.49001"
+                     x="163.84"
+                     class="cls-5"
+                     style="fill:#8db7e2" />
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+        <rect
+           id="rect853"
+           height="225"
+           width="400"
+           class="cls-14"
+           x="0"
+           y="0"
+           style="fill:none" />
+      </g>
+    </g>
+  </g>
+</svg>

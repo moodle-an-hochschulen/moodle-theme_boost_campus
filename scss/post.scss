@@ -2245,3 +2245,9 @@ table.mod-data-default-template {
     width: 100%;
     margin-bottom: 1em;
 }
+
+@media (min-width: 991.98px) {
+    .used-region-side-pre #region-main-settings-menu > div {
+        right: 370px;
+    }
+}

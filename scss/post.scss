@@ -2251,3 +2251,9 @@ table.mod-data-default-template {
         right: 370px;
     }
 }
+
+/* Boost resets UL padding to 1rem; let's change back to w3c recommended default, at least in main content */
+
+#region-main ul {
+	padding-left: 40px;
+}

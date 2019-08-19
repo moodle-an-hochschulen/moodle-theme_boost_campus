@@ -6,6 +6,8 @@ Changes
 
 ### Unreleased
 
+* 2019-12-20 - Added Behat tests.
+               PLEASE NOTE: For all scenarios to pass, the Moodle version 3.7.3+ (Build: 20191212) is needed.
 * 2019-12-17 - Fixed bug for the selection of block regions when 2 block columns in footer are enabled.
 * 2019-11-29 - Moved the variable output.standard_end_of_body_html from footer.mustache to solve Javascript issues with behat tests.
 

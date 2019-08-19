@@ -1717,13 +1717,6 @@ ul.section.img-text {
     padding-right: 10px;
 }
 
-//was set to table earlier and making text wrap when it didn't need to. also fixes random indenting 
-//issues due to the table display
-.mod-indent-outer {
-    display: block;
-}
-
-
 //past here is all css tweaks to suit mobile and desktop
 .que .info, .userprofile {
     margin-left: 5px;

@@ -2,48 +2,57 @@
         {
             "title": "Image Centered",
             "src": "theme/urcourses_default/callouts/templates/image_center.php",
-            "description": "creates a floated container for images."
+            "description": "creates a floated container for images.",
+            "icon": "lib/editor/tinymce/tiny_mce/3.5.11/plugins/template/icons/imagecenter.svg"
         },
         {
             "title": "Image Floated left",
             "src": "theme/urcourses_default/callouts/templates/image_left.php",
-            "description": "creates a floated container for images."
+            "description": "creates a floated container for images.",
+            "icon": "lib/editor/tinymce/tiny_mce/3.5.11/plugins/template/icons/imageleft.svg"
         },
         {
             "title": "Image Floated Right",
             "src": "theme/urcourses_default/callouts/templates/image_right.php",
-            "description": "creates a floated container for images."
+            "description": "creates a floated container for images.",
+            "icon": "lib/editor/tinymce/tiny_mce/3.5.11/plugins/template/icons/imageright.svg"
         },
         {
             "title": "Image Captioned Centered",
             "src": "theme/urcourses_default/callouts/templates/image_caption.php",
-            "description": "creates a container with an editable caption for images."
-        },
-        {
-            "title": "Image Captioned Floated right",
-            "src": "theme/urcourses_default/callouts/templates/image_caption_right.php",
-            "description": "creates a floated container with an editable caption for images."
+            "description": "creates a container with an editable caption for images.",
+            "icon": "lib/editor/tinymce/tiny_mce/3.5.11/plugins/template/icons/imagecaptionedcenter.svg"
         },
         {
             "title": "Image Captioned Floated Left",
             "src": "theme/urcourses_default/callouts/templates/image_caption_left.php",
-            "description": "creates a floated container with an editable caption for images."
+            "description": "creates a floated container with an editable caption for images.",
+            "icon": "lib/editor/tinymce/tiny_mce/3.5.11/plugins/template/icons/imagecaptionedleft.svg"
+        },
+        {
+            "title": "Image Captioned Floated right",
+            "src": "theme/urcourses_default/callouts/templates/image_caption_right.php",
+            "description": "creates a floated container with an editable caption for images.",
+            "icon": "lib/editor/tinymce/tiny_mce/3.5.11/plugins/template/icons/imagecaptionedright.svg"
         },
         {
             "title": "Image Carousel Slideshow",
             "src": "theme/urcourses_default/callouts/templates/carousel.php",
-            "description": "creates a slideshow for your images. Make sure all of your images are inside the block with the black background and are the same height. To add or insert new images, make sure to put the link inside a <div> class=carousel-item in the html view for it to be a part of the slideshow."
+            "description": "creates a slideshow for your images. Make sure all of your images are inside the block with the black background and are the same height. To add or insert new images, make sure to put the link inside a <div> class=carousel-item in the html view for it to be a part of the slideshow.",
+            "icon": "lib/editor/tinymce/tiny_mce/3.5.11/plugins/template/icons/carousel.svg"
         },
 
         {
             "title": "Drop Down Block",
             "src": "theme/urcourses_default/callouts/templates/dropdown.html",
-            "description": "Creates a single block which displays the content under the title once clicked. Will collapse once in the final page but not in the editor."
+            "description": "Creates a single block which displays the content under the title once clicked. Will collapse once in the final page but not in the editor.",
+            "icon": "lib/editor/tinymce/tiny_mce/3.5.11/plugins/template/icons/dropdown.svg"
         },
         {
             "title": "Drop Accordion List",
             "src": "theme/urcourses_default/callouts/templates/accordian.html",
-            "description": "Creates a group of dropdown blocks which display the content under the title once clicked. Will collapse once in the final page but not in the editor."
+            "description": "Creates a group of dropdown blocks which display the content under the title once clicked. Will collapse once in the final page but not in the editor.",
+            "icon": "lib/editor/tinymce/tiny_mce/3.5.11/plugins/template/icons/accordion.svg"
         },
         {
             "title": "Callout Blank",
@@ -53,147 +62,176 @@
         {
             "title": "Callout Activity",
             "src": "theme/urcourses_default/callouts/templates/callout_activity.php",
-            "description": "Adds a pre-formatted Idea Block"
+            "description": "Adds a pre-formatted Idea Block",
+            "icon": "theme/urcourses_default/callouts/activity.png"
         },
         {
             "title": "Callout Aims",
             "src": "theme/urcourses_default/callouts/templates/callout_aims.php",
-            "description": "Adds a pre-formatted Idea Block"
+            "description": "Adds a pre-formatted Idea Block",
+            "icon": "theme/urcourses_default/callouts/aims.png"
         },
         {
             "title": "Callout Assignment",
             "src": "theme/urcourses_default/callouts/templates/callout_assignment.php",
-            "description": "Adds a pre-formatted Idea Block"
+            "description": "Adds a pre-formatted Idea Block",
+            "icon": "theme/urcourses_default/callouts/assignment.png"
         },
         {
             "title": "Callout Audio",
             "src": "theme/urcourses_default/callouts/templates/callout_audio.php",
-            "description": "Adds a pre-formatted Idea Block"
+            "description": "Adds a pre-formatted Idea Block",
+            "icon": "theme/urcourses_default/callouts/audio.png"
         },
         {
             "title": "Callout Blog",
             "src": "theme/urcourses_default/callouts/templates/callout_blog.php",
-            "description": "Adds a pre-formatted Idea Block"
+            "description": "Adds a pre-formatted Idea Block",
+            "icon": "theme/urcourses_default/callouts/blog.png"
         },
         {
             "title": "Callout Chat",
             "src": "theme/urcourses_default/callouts/templates/callout_chat.php",
-            "description": "Adds a pre-formatted Idea Block"
+            "description": "Adds a pre-formatted Idea Block",
+            "icon": "theme/urcourses_default/callouts/chat.png"
         },
         {
             "title": "Callout Discussion",
             "src": "theme/urcourses_default/callouts/templates/callout_discussion.php",
-            "description": "Adds a pre-formatted Idea Block"
+            "description": "Adds a pre-formatted Idea Block",
+            "icon": "theme/urcourses_default/callouts/discussion.png"
         },
         {
             "title": "Callout Elder",
             "src": "theme/urcourses_default/callouts/templates/callout_elder.php",
-            "description": "Adds a pre-formatted Idea Block"
+            "description": "Adds a pre-formatted Idea Block",
+            "icon": "theme/urcourses_default/callouts/elder.png"
         },
         {
             "title": "Callout Example",
             "src": "theme/urcourses_default/callouts/templates/callout_example.php",
-            "description": "Adds a pre-formatted Idea Block"
+            "description": "Adds a pre-formatted Idea Block",
+            "icon": "theme/urcourses_default/callouts/example.png"
         },
         {
             "title": "Callout Fact",
             "src": "theme/urcourses_default/callouts/templates/callout_fact.php",
-            "description": "Adds a pre-formatted Idea Block"
+            "description": "Adds a pre-formatted Idea Block",
+            "icon": "theme/urcourses_default/callouts/fact.png"
         },
         {
             "title": "Callout Feedback",
             "src": "theme/urcourses_default/callouts/templates/callout_feedback.php",
-            "description": "Adds a pre-formatted Idea Block"
+            "description": "Adds a pre-formatted Idea Block",
+            "icon": "theme/urcourses_default/callouts/feedback.png"
         },
         {
             "title": "Callout FYI",
             "src": "theme/urcourses_default/callouts/templates/callout_fyi.php",
-            "description": "Adds a pre-formatted Idea Block"
+            "description": "Adds a pre-formatted Idea Block",
+            "icon": "theme/urcourses_default/callouts/fyi.png"
         },
         {
             "title": "Callout Ideas",
             "src": "theme/urcourses_default/callouts/templates/callout_ideas.php",
-            "description": "Adds a pre-formatted Idea Block"
+            "description": "Adds a pre-formatted Idea Block",
+            "icon": "theme/urcourses_default/callouts/ideas.png"
         },
         {
             "title": "Callout Important",
             "src": "theme/urcourses_default/callouts/templates/callout_important.php",
-            "description": "Adds a pre-formatted Idea Block"
+            "description": "Adds a pre-formatted Idea Block",
+            "icon": "theme/urcourses_default/callouts/important.png"
         },
         {
             "title": "Callout Important Yellow bg",
             "src": "theme/urcourses_default/callouts/templates/callout_important_yellow.php",
-            "description": "Adds a pre-formatted Idea Block"
+            "description": "Adds a pre-formatted Idea Block",
+            "icon": "theme/urcourses_default/callouts/important.png"
         },
         {
             "title": "Callout Labs",
             "src": "theme/urcourses_default/callouts/templates/callout_labs.php",
-            "description": "Adds a pre-formatted Idea Block"
+            "description": "Adds a pre-formatted Idea Block",
+            "icon": "theme/urcourses_default/callouts/labs.png"
         },
         {
             "title": "Callout Labs Aqua bg",
             "src": "theme/urcourses_default/callouts/templates/callout_labs_aqua.php",
-            "description": "Adds a pre-formatted Idea Block"
+            "description": "Adds a pre-formatted Idea Block",
+            "icon": "theme/urcourses_default/callouts/labs.png"
         },
         {
             "title": "Callout Links",
             "src": "theme/urcourses_default/callouts/templates/callout_links.php",
-            "description": "Adds a pre-formatted Idea Block"
+            "description": "Adds a pre-formatted Idea Block",
+            "icon": "theme/urcourses_default/callouts/labs.png"
         },
         {
             "title": "Callout Notes",
             "src": "theme/urcourses_default/callouts/templates/callout_notes.php",
-            "description": "Adds a pre-formatted Idea Block"
+            "description": "Adds a pre-formatted Idea Block",
+            "icon": "theme/urcourses_default/callouts/notes.png"
         },
         {
             "title": "Callout Objectives",
             "src": "theme/urcourses_default/callouts/templates/callout_objectives.php",
-            "description": "Adds a pre-formatted Idea Block"
+            "description": "Adds a pre-formatted Idea Block",
+            "icon": "theme/urcourses_default/callouts/objectives.png"
         },
         {
             "title": "Callout Question",
             "src": "theme/urcourses_default/callouts/templates/callout_question.php",
-            "description": "Adds a pre-formatted Idea Block"
+            "description": "Adds a pre-formatted Idea Block",
+            "icon": "theme/urcourses_default/callouts/question.png"
         },
         {
             "title": "Callout Question Blue bg",
             "src": "theme/urcourses_default/callouts/templates/callout_question_blue.php",
-            "description": "Adds a pre-formatted Idea Block"
+            "description": "Adds a pre-formatted Idea Block",
+            "icon": "theme/urcourses_default/callouts/question.png"
         },
         {
             "title": "Callout Quiz",
             "src": "theme/urcourses_default/callouts/templates/callout_quiz.php",
-            "description": "Adds a pre-formatted Idea Block"
+            "description": "Adds a pre-formatted Idea Block",
+            "icon": "theme/urcourses_default/callouts/quiz.png"
         },
         {
             "title": "Callout Reading",
             "src": "theme/urcourses_default/callouts/templates/callout_reading.php",
-            "description": "Adds a pre-formatted Idea Block"
+            "description": "Adds a pre-formatted Idea Block",
+            "icon": "theme/urcourses_default/callouts/reading.png"
         },
         {
             "title": "Callout Reflect",
             "src": "theme/urcourses_default/callouts/templates/callout_reflect.php",
-            "description": "Adds a pre-formatted Idea Block"
+            "description": "Adds a pre-formatted Idea Block",
+            "icon": "theme/urcourses_default/callouts/reflect.png"
         },
         {
             "title": "Callout Resources",
             "src": "theme/urcourses_default/callouts/templates/callout_resources.php",
-            "description": "Adds a pre-formatted Idea Block"
+            "description": "Adds a pre-formatted Idea Block",
+            "icon": "theme/urcourses_default/callouts/resources.png"
         },
         {
             "title": "Callout Start",
             "src": "theme/urcourses_default/callouts/templates/callout_start.php",
-            "description": "Adds a pre-formatted Idea Block"
+            "description": "Adds a pre-formatted Idea Block",
+            "icon": "theme/urcourses_default/callouts/start.png"
         },
         {
             "title": "Callout Task",
             "src": "theme/urcourses_default/callouts/templates/callout_task.php",
-            "description": "Adds a pre-formatted Idea Block"
+            "description": "Adds a pre-formatted Idea Block",
+            "icon": "theme/urcourses_default/callouts/task.png"
         },
         {
             "title": "Callout Video",
             "src": "theme/urcourses_default/callouts/templates/callout_video.php",
-            "description": "Adds a pre-formatted Idea Block"
+            "description": "Adds a pre-formatted Idea Block",
+            "icon": "theme/urcourses_default/callouts/video.png"
         },
         {
             "title": "Alert Blue Info",
@@ -286,14 +324,21 @@
             "description": "Creates a card on the page that's underneath an attached image."
         },
         {
-            "title": "Pull Quote Left",
-            "src": "theme/urcourses_default/callouts/templates/pullquote_left.html",
-            "description": "Creates a floated quote block."
+            "title": "Quote Block",
+            "src": "theme/urcourses_default/callouts/templates/pullquote_block.html",
+            "description": "Creates a quote block."
         },
         {
-            "title": "Pull Quote Right",
+            "title": "Quote Float Left",
+            "src": "theme/urcourses_default/callouts/templates/pullquote_left.html",
+            "description": "Creates a smaller floated quote block.",
+            "icon": "lib/editor/tinymce/tiny_mce/3.5.11/plugins/template/icons/quote-left.svg"
+        },
+        {
+            "title": "Quote Float Right",
             "src": "theme/urcourses_default/callouts/templates/pullquote_right.html",
-            "description": "Creates a floated quote block."
+            "description": "Creates a smaller floated quote block.",
+            "icon": "lib/editor/tinymce/tiny_mce/3.5.11/plugins/template/icons/quote-right.svg"
         }
     ],
   "contextmenu": "link spellchecker image inserttable | cell row column deletetable"

@@ -43,11 +43,15 @@ a, #boost-campus-course-settings .card-body a, .ui-widget-content a, .btn-link,
 }
 
 /*border changes*/
-.block .block-cards .course-summaryitem, .nav-tabs, .nav-tabs .nav-link.active, .block-course-overview .courseovbox, 
+.nav-tabs, .nav-tabs .nav-link.active, .block-course-overview .courseovbox, 
 .border-bottom, .btn-outline-secondary, .btn-outline-primary, .nav-tabs .nav-link:hover,
 .course-content ul.topics li.section.main, .card-body, .generaltable thead th, .dropdown-divider,
 .tour-actions > ul > li, .mform fieldset, #page-header .card, .fp-iconview .fp-thumbnail img,.fp-iconview .fp-thumbnail {
     border-color: rgba(10, 10, 10, 0.25)!important;
+}
+
+.block .block-cards .course-summaryitem {
+    border-color: rgba(10, 10, 10, 0.25);
 }
 
 #page-header i {
@@ -526,10 +530,28 @@ background: #EFEFEF!important;
     background-color: #ded7b5!important;
 }
 
-.jumbotron {
+.jumbotron, .nav-tabs, ul.nav.nav-tabs  {
     background-color: #42413e;
+    background: #42413e;
 }
 
-.table-primary, .table-secondary, .table-success, .table-danger, .table-warning, .table-info, .table-light, .table-dark {
+.table-primary, .table-secondary, .table-success, .table-danger, .table-warning, .table-info, .table-light, .table-dark,  .btn-group.course-hdr-chooser span {
     color: #2f3440;
+}
+
+.style-a #header_a_head .course-head {
+    background: transparent;
+}
+
+.choosercontainer #chooseform .options, .choosercontainer #chooseform .moduletypetitle.active {
+    background-color: #9b9d9d;
+}
+
+.choosercontainer #chooseform .moduletypetitle.active {
+    border-color: rgba(10, 10, 10, 0.25);
+    border-bottom-color: #9b9d9d;
+}
+
+.choosercontainer #chooseform .moduletypetitle.active span {
+    color: #291a09;
 }

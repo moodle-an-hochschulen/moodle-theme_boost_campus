@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   height="24px"
+   width="24px"
+   viewBox="0 0 100 100"
+   enable-background="new 0 0 100 100"
+   version="1.1"
+   id="svg32"
+   sodipodi:docname="icon.svg"
+   inkscape:version="0.92.2 5c3e80d, 2017-08-06">
+  <metadata
+     id="metadata38">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs36">
+    <style
+       id="style1183">
+      .cls-1 {
+        isolation: isolate;
+      }
+
+      .cls-2 {
+        fill: none;
+      }
+
+      .cls-3 {
+        fill: #6bc9a7;
+      }
+
+      .cls-4 {
+        opacity: 0.15;
+        mix-blend-mode: multiply;
+      }
+
+      .cls-5 {
+        fill: #fff;
+      }
+
+      .cls-6 {
+        fill: #cde6fc;
+      }
+
+      .cls-7 {
+        fill: #8db7e2;
+      }
+
+      .cls-8 {
+        opacity: 0.2;
+      }
+
+      .cls-9 {
+        fill: #231f20;
+      }
+
+      .cls-10 {
+        fill: #ddd;
+      }
+
+      .cls-11 {
+        fill: #239630;
+      }
+    </style>
+    <style
+       id="style1586">
+      .cls-1 {
+        fill: #ea964d;
+      }
+
+      .cls-2 {
+        fill: #f0f1f5;
+      }
+
+      .cls-3 {
+        fill: #b8b8bf;
+      }
+
+      .cls-4 {
+        fill: #34495e;
+      }
+
+      .cls-5 {
+        fill: #e94c3d;
+      }
+
+      .cls-6 {
+        fill: #c1392b;
+      }
+
+      .cls-7 {
+        fill: #3497da;
+      }
+
+      .cls-8 {
+        fill: #2a80bb;
+      }
+
+      .cls-9 {
+        fill: #2c3e50;
+        opacity: 0.1;
+      }
+
+      .cls-10 {
+        fill: #8e44ad;
+      }
+
+      .cls-11 {
+        fill: none;
+      }
+    </style>
+    <style
+       id="style199">
+      .cls-1 {
+        isolation: isolate;
+      }
+
+      .cls-2 {
+        opacity: 0.15;
+        mix-blend-mode: multiply;
+      }
+
+      .cls-3 {
+        fill: #91cade;
+      }
+
+      .cls-4 {
+        fill: #f26262;
+      }
+
+      .cls-5 {
+        fill: #8ac97a;
+      }
+
+      .cls-6 {
+        fill: #589b42;
+      }
+
+      .cls-7 {
+        fill: #e0e0e0;
+      }
+
+      .cls-8 {
+        fill: #fff;
+      }
+
+      .cls-9 {
+        fill: none;
+      }
+    </style>
+  </defs>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1440"
+     inkscape:window-height="856"
+     id="namedview34"
+     showgrid="false"
+     inkscape:zoom="22.539938"
+     inkscape:cx="8.269765"
+     inkscape:cy="12.678916"
+     inkscape:window-x="5"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg32" />
+  <g
+     stroke-miterlimit="10"
+     id="g22"
+     style="display:none;stroke-miterlimit:10">
+    <g
+       id="g14"
+       style="stroke-width:3;stroke-linecap:round;stroke-linejoin:round">
+      <g
+         id="g10"
+         style="stroke:#999999"
+         transform="translate(29.166667)">
+        <g
+           id="g6"
+           style="fill:#ffffff">
+          <path
+             d="m 41.566667,28.1 h 18.4 l -23.3,-24.1 v 18.9 c 0,2.8 2.2,5.2 4.9,5.2 z"
+             id="path2"
+             inkscape:connector-curvature="0" />
+          <path
+             d="m 41.566667,28.1 c -2.7,0 -4.8,-2.3 -4.8,-5.2 V 4 H -8.5666667 c -2.7000003,0 -4.8000003,2.3 -4.8000003,5.2 v 83.2 c 0,2.9 2.1,5.2 4.8000003,5.2 H 55.066667 c 2.7,0 4.8,-2.3 4.8,-5.2 V 28.1 Z"
+             id="path4"
+             inkscape:connector-curvature="0"
+             sodipodi:nodetypes="sscsssssscs" />
+        </g>
+      </g>
+    </g>
+  </g>
+  <style
+     id="style131"
+     type="text/css">
+	.st0{fill:#1D1D1D;}
+	.st1{fill:#FFFFFF;}
+</style>
+  <style
+     id="style900"
+     type="text/css">
+	.st0{fill:none;}
+	.st1{fill:#88C87A;}
+	.st2{opacity:0.15;}
+	.st3{fill:#231F20;}
+	.st4{fill:#FFFFFF;}
+	.st5{fill:#F05F5F;}
+</style>
+  <style
+     id="style248"
+     type="text/css">
+	.st0{opacity:0.15;}
+	.st1{fill:#D94D6A;}
+	.st2{fill:#92CAB1;}
+	.st3{fill:#F6C358;}
+	.st4{fill:#ED7864;}
+	.st5{fill:#50B5D8;}
+	.st6{fill:none;}
+</style>
+  <g
+     id="g243"
+     class="cls-1"
+     style="isolation:isolate"
+     transform="matrix(0.41870825,0,0,0.41870825,-32.456039,3.6464901)">
+    <g
+       data-name="Layer 2"
+       id="Layer_2">
+      <g
+         id="flashcards">
+        <g
+           id="g237">
+          <g
+             id="g211">
+            <g
+               id="g207"
+               class="cls-2"
+               style="opacity:0.15;mix-blend-mode:multiply">
+              <rect
+                 id="rect205"
+                 transform="rotate(-10.27,204.04177,115.59478)"
+                 ry="12.36"
+                 rx="12.36"
+                 height="137.32001"
+                 width="152.71001"
+                 y="46.959999"
+                 x="127.79" />
+            </g>
+            <rect
+               id="rect209"
+               transform="rotate(-10.27,204.07985,113.29854)"
+               ry="12.36"
+               rx="12.36"
+               height="137.32001"
+               width="152.71001"
+               y="44.68"
+               x="127.79"
+               class="cls-3"
+               style="fill:#91cade" />
+          </g>
+          <g
+             id="g219">
+            <g
+               id="g215"
+               class="cls-2"
+               style="opacity:0.15;mix-blend-mode:multiply">
+              <rect
+                 id="rect213"
+                 transform="rotate(-5.3,200.3244,108.97892)"
+                 ry="12.36"
+                 rx="12.36"
+                 height="137.75"
+                 width="152.71001"
+                 y="40.16"
+                 x="124.14" />
+            </g>
+            <rect
+               id="rect217"
+               transform="rotate(-5.3,200.32137,106.70533)"
+               ry="12.36"
+               rx="12.36"
+               height="137.75"
+               width="152.71001"
+               y="37.889999"
+               x="124.14"
+               class="cls-4"
+               style="fill:#f26262" />
+          </g>
+          <g
+             id="g227">
+            <g
+               id="g223"
+               class="cls-2"
+               style="opacity:0.15;mix-blend-mode:multiply">
+              <rect
+                 id="rect221"
+                 ry="12.36"
+                 rx="12.36"
+                 height="133"
+                 width="152"
+                 y="35.5"
+                 x="118" />
+            </g>
+            <rect
+               id="rect225"
+               ry="12.36"
+               rx="12.36"
+               height="133"
+               width="152"
+               y="33.5"
+               x="118"
+               class="cls-5"
+               style="fill:#8ac97a" />
+          </g>
+          <polygon
+             id="polygon229"
+             points="259,121.5 130,121.5 130,103.86 159.8,74.86 174.69,89.36 186.34,77.93 221.44,42.89 251.47,73.03 259,80.66 "
+             class="cls-6"
+             style="fill:#589b42" />
+          <circle
+             id="circle231"
+             r="11.93"
+             cy="54.82"
+             cx="143.41"
+             class="cls-6"
+             style="fill:#589b42" />
+          <rect
+             id="rect233"
+             ry="7.4099998"
+             rx="7.4099998"
+             height="15"
+             width="90"
+             y="134.5"
+             x="147"
+             class="cls-7"
+             style="fill:#e0e0e0" />
+          <rect
+             id="rect235"
+             ry="7.4099998"
+             rx="7.4099998"
+             height="15"
+             width="90"
+             y="136.5"
+             x="147"
+             class="cls-8"
+             style="fill:#ffffff" />
+        </g>
+        <rect
+           id="rect239"
+           height="225"
+           width="400"
+           class="cls-9"
+           x="0"
+           y="0"
+           style="fill:none" />
+      </g>
+    </g>
+  </g>
+</svg>

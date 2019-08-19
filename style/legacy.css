@@ -84,7 +84,7 @@ li {
 
 /* @group Callout Blocks */
 
-.group.callout h3, div[class*="_block_callout"] h3 { 
+.callout h3, div[class*="_block_callout"] h3 { 
 	margin: 0 0 5px; 
 	font-weight: bold;
 }
@@ -145,6 +145,64 @@ li {
 	background: url([[pix:theme|icons/48/144]]) no-repeat;
 }
 
+/* Begin Additions */
+
+.fact_block, div[class*="fact_block"] { 
+	background: url([[pix:theme|icons/48/159]]) no-repeat;
+}
+
+.labs_block, div[class*="labs_block"] { 
+	background: url([[pix:theme|icons/48/148]]) no-repeat;
+}
+
+.reflect_block, div[class*="reflect_block"] { 
+	background: url([[pix:theme|icons/48/160]]) no-repeat;
+}
+
+.fyi_block, div[class*="fyi_block"] { 
+	background: url([[pix:theme|icons/48/161]]) no-repeat;
+}
+
+.aims_block, div[class*="aims_block"] { 
+	background: url([[pix:theme|icons/48/147]]) no-repeat;
+}
+
+.start_block, div[class*="start_block"] { 
+	background: url([[pix:theme|icons/48/166]]) no-repeat;
+}
+
+.resources_block, div[class*="resources_block"] { 
+	background: url([[pix:theme|icons/48/105]]) no-repeat;
+}
+
+.example_block, div[class*="example_block"] {
+	background: url([[pix:theme|icons/48/162]]) no-repeat;
+}
+
+.activity_block, div[class*="activity_block"] {
+	background: url([[pix:theme|icons/48/163]]) no-repeat;
+}
+
+.feedback_block, div[class*="feedback_block"] {
+	background: url([[pix:theme|icons/48/164]]) no-repeat;
+}
+
+.objectives_block, div[class*="objectives_block"] {
+	background: url([[pix:theme|icons/48/165]]) no-repeat;
+}
+
+.chat_block, div[class*="chat_block"] {
+	background: url([[pix:theme|icons/48/154]]) no-repeat;
+}
+
+.forum_block, div[class*="forum_block"] {
+	background: url([[pix:theme|icons/48/167]]) no-repeat;
+}
+
+.wiki_block, div[class*="wiki_block"] {
+	background: url([[pix:theme|icons/48/168]]) no-repeat;
+}
+
 
 .group.callout, div[class*="_block_callout"], table[class*="_block_callout"], div[class*="generic_large_callout"], table[class*="generic_large_callout"], div[class*="generic_small_callout"], table[class*="generic_small_callout"] {
     background-color: #fcfcfc;
@@ -155,7 +213,8 @@ li {
     border: 2px solid #e6e6e6;
     border-radius: 10px;
     margin: 0;
-    margin-bottom: 1em;
+	margin-bottom: 1em;
+	background-repeat: no-repeat;
 }
 
 @media screen and (min-width: 540px) {
@@ -168,7 +227,8 @@ li {
         color: black;
         border: 2px solid #e6e6e6;
         border-radius: 10px;
-        margin: 20px;
+		margin: 20px;
+		background-repeat: no-repeat;
     }
     
 }

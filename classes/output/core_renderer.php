@@ -254,6 +254,12 @@ class core_renderer extends \theme_boost\output\core_renderer {
         $header->courseheader = $this->course_header();
 		
         $header->instructors = $this->course_authornames();
+        $instnum = substr_count($this->course_authornames(), 'href');
+        if ($instnum > 2) {
+            $header->instructnum = "largelist"; 
+        }
+        else  $header->instructnum = "smalllist"; 
+        
 		$hascoursecat = $this->ur_check_course_cat();
 		$coursecat = (!empty($hascoursecat)) ? $hascoursecat['name'] : 'Default';
         $header->facultydep = $coursecat;
@@ -646,14 +652,14 @@ class core_renderer extends \theme_boost\output\core_renderer {
                 $ra->rolename = $aliasnames[$ra->roleid]->name;
             }
 
-            $fullname = fullname($ra, $canviewfullnames);
+            $fullname = '<span>' . fullname($ra, $canviewfullnames) . '</span>';
             $usr_img = '<img class="instr-avatar img-rounded" src="'.$CFG->wwwroot.'/user/pix.php/'.$ra->id.'/f2.jpg" height="24" width="24" title="Profile picture of '.$fullname.'" alt="Profile picture of '.$fullname.'" />';
             $namesarray[$ra->id] = html_writer::link(new moodle_url('/user/view.php', array('id'=>$ra->id, 'course'=>$COURSE->id)), $usr_img.' '.$fullname);
         }
 
         if (!empty($namesarray)) {
             $course_authornames = html_writer::start_tag('div', array('class'=>'teacherlist'));
-            $course_authornames .= implode(' &nbsp;&nbsp; ', $namesarray);
+            $course_authornames .= implode('', $namesarray);
             $course_authornames .= html_writer::end_tag('div');
 			
 			return $course_authornames;
@@ -898,6 +904,12 @@ public function user_menu($user = null, $withlinks = null) {
 function search_small() {
     global $CFG;
 
+    // Accessing $CFG directly as using \core_search::is_global_search_enabled would
+    // result in an extra included file for each site, even the ones where global search
+    // is disabled.
+    if (empty($CFG->enableglobalsearch) || !has_capability('moodle/search:query', \context_system::instance())) {
+        return '';
+    }
     return html_writer::tag('a', $this->pix_icon('a/search', get_string('search', 'search'), 'moodle'), array('class' => 'd-inline-flex nav-link', 'href' => $CFG->wwwroot . '/search/index.php'));
 }
 
@@ -905,8 +917,12 @@ function search_small() {
      * This renders the navbar.
      * Uses bootstrap compatible html.
      */
-    // public function navbar() {
-    //     debugging("in breadcrumb function", DEBUG_DEVELOPER);
-    //     return $this->render_from_template('theme_urcourses_default/breadcrumbs', $this->page->navbar);
-    // }
+     public function navbar() {
+        if(strpos($this->page->bodyid, 'admin')){
+            return $this->render_from_template('core/navbar', $this->page->navbar);
+
+        } else {
+            return $this->render_from_template('theme_urcourses_default/breadcrumbs', $this->page->navbar);
+        }
+    }
 }

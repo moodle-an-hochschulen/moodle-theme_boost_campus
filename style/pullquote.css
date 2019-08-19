@@ -1,9 +1,12 @@
 .pquote {
-    width: 200px;
     font-size: 26px;
     line-height: 0.9;
     font-style: italic;
     padding: 13px;
+}
+
+.quote-pull {
+    width: 200px;
 }
 
 .pquote p:first-letter {

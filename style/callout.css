@@ -61,12 +61,22 @@
 .carousel {
     background-color: hsla(0, 0%, 2%, 0.24);
     position:relative;
-  }
+}
 
-  figure.img-thumbnail figcaption.figure-caption {
+figure.img-thumbnail {
+    margin: 1em;
+}
+figure.img-thumbnail.float-sm-left  {
+	margin-left: 0;
+}
+figure.img-thumbnail.float-sm-right  {
+	margin-right: 0;
+}
+
+figure.img-thumbnail figcaption.figure-caption {
     display:table-caption;
     caption-side: bottom;
     background-color: #dee2e6;
     padding-bottom: .5rem;
     color: #3d4042;
-  }
+}  

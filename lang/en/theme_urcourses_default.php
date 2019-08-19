@@ -223,3 +223,6 @@ $string['error:courseimageinvalidfiletype'] = 'Invalid file type! Course image m
 $string['success:courseimageuploaded'] = 'Course image changed';
 // SUCCESS
 $string['success:coursestylechosen'] = 'Course header style changed';
+
+//Modchooser
+$string['moremodchooser'] = 'More';

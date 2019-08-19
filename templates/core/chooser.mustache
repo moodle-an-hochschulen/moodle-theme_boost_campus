@@ -1,0 +1,127 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+
+    Moodle is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Moodle is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+}}
+{{!
+    @template core/chooser
+
+    Chooser.
+
+    Example context (json):
+    {
+        "title": "Chooser title",
+        "method": "post",
+        "actionurl": "http://example.org/test",
+        "instructions": "Choose one:",
+        "paramname": "param",
+        "sections": [{
+            "id": "section-1",
+            "label": "Section one",
+            "items": [{
+                "label": "item one",
+                "description": "description one"
+            }]
+        }]
+    }
+}}
+<div class="hd choosertitle">
+    {{title}}
+</div>
+
+<div class="chooserdialoguebody">
+    <div class="choosercontainer">
+        <div id="chooseform">
+            <form action="{{actionurl}}" id="chooserform" method="{{method}}">
+                <div id="typeformdiv">
+                    {{#params}}
+                        <input type="hidden" id="{{id}}" name="{{name}}" value="{{value}}">
+                    {{/params}}
+                    <input type="hidden" name="sesskey" value="{{sesskey}}">
+                </div>
+
+                <div class="options">
+                    <ul class="nav nav-tabs">
+                        {{#sections}}
+                            <li class="modchooser_{{id}} modchoosersection">
+                                <a class="moduletypetitle" href="#modchooser_{{id}}" data-toggle="tab">
+                                    <span class="typename">{{label}}</span>
+                                </a>
+                            </li>
+                        {{/sections}}
+                        <li class="help-tab">
+                            <a class="moduletypetitle" href="#modchooser_help" data-toggle="tab">
+                                <span class="typename">Help</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="tab-content alloptions">
+                        {{#sections}}
+                            <div id="modchooser_{{id}}" class="tab-pane row text-center fade" role="tabpanel">
+                                <ul>
+                                {{#items}}
+                                    <li class="mod-option">
+                                        <div class="option">
+                                            <label for="item_{{id}}">
+                                                <input type="radio" name="{{paramname}}" id="item_{{id}}" value="{{value}}">
+                                                <span class="modicon">
+                                                    {{#icon}}
+                                                        {{>core/pix_icon}}
+                                                    {{/icon}}
+                                                </span>
+                                                <span class="typename mx-auto">{{label}}</span>
+                                            </label>
+                                        </div>
+                                    </li>
+                                {{/items}}
+                                </ul>
+                            </div>
+                        {{/sections}}    
+                        <div id="modchooser_help" class="tab-pane fade row" role="tabpanel">
+                            {{#sections}}
+                                {{#items}}
+                                <div class="row">
+                                    <div class="col-1 modicon">
+                                        {{#icon}}
+                                            {{>core/pix_icon}}
+                                      {{/icon}}
+                                    </div>    
+                                    <div class="col-11">
+                                        <span class="typename">{{label}}</span>
+                                        <span class="type-summary">
+                                            {{{description}}}
+                                        </span>
+                                    </div>
+                                </div>
+                                {{/items}} 
+                            {{/sections}}
+                        </div>                    
+                    </div>
+                </div>
+
+
+                <div class="submitbuttons">
+                    <input type="submit" name="submitbutton" class="submitbutton btn btn-primary" value={{#quote}}{{#str}}add{{/str}}{{/quote}}>
+                    <input type="submit" name="addcancel" class="addcancel btn btn-secondary" value={{#quote}}{{#str}}cancel{{/str}}{{/quote}}>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+{{#js}}
+    require(['theme_urcourses_default/modchooser'], function(mod) {
+        mod.init();
+    });
+{{/js}}

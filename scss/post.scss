@@ -381,7 +381,7 @@ body.arts .page-navbkg .singlebutton button:hover {
         display: none;
     }
     .course-content ul.ctopics li.section.main .content {
-        margin: 0;
+        margin: 0 !important;
     }
 
     .path-course-view li.activity form.togglecompletion img {
@@ -810,6 +810,80 @@ body.pagelayout-secure nav {
         }
     }
 }
+
+.section .activity.modtype_label.label {
+	padding: .25em 0;
+}
+
+.section li.activity {
+    padding: .25em 0;
+}
+
+
+.course-content .action-menu .dropdown-toggle {
+    display: inline-block;
+    border: solid 1px #dcdcdc;
+    background: #f6f6f6;
+    padding: 0.15em 0.5em 0.15em 0.2em;
+    color: #888;
+    font-size: 0.85em;
+}
+.course-content .action-menu .dropdown-toggle:before {
+    font-family: FontAwesome;
+    content: '\f013\a0';
+}
+
+body.format-topcoll.editing .course-content ul.topics li.section div.sectionbody.toggledsection a.editsumm {
+    margin-bottom: 1em;
+}
+
+a.editsumm {
+    font-size: .85em;
+    background: #f6f6f6;
+    display: inline-block;
+    margin-top: .5em;
+    padding: .15em .5em .15em .2em;
+    color: #888;
+    border: solid 1px #dcdcdc;
+    border-radius: 0;
+}
+
+a.editsumm:before {
+    font-family: "FontAwesome";
+    content: "\f013\a0";
+}
+
+div.section-modchooser a {
+    background: #f6f6f6;
+    padding: .5em;
+    font-size: .85em;
+    color: #888;
+    border: solid 1px #dcdcdc;
+}
+
+
+@include media-breakpoint-down(sm) {
+	
+	body.format-topcoll.editing ul.ctopics .section .activity .activityinstance {
+	    display: inline;
+	    padding-right: 60px;
+	}
+
+ 
+	body.format-topcoll.editing ul.ctopics .section .activity .contentwithoutlink {
+	    display: inline;
+	    padding-right: 80px;
+	}
+
+	.section .activity .actions {
+	    position: absolute !important;
+	    right: 0;
+	    top: 0;
+	    display: inline-block !important;
+	}
+
+}
+
 
 /*
  * Misc
@@ -1289,6 +1363,17 @@ a[href^="mailto"]::before {
         }
     }
 }
+
+
+#page-login-index #page-footer {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+#page-login-index #page-footer .container {
+	max-width: 100%;
+}
+
+
 
 /* TODO: Remove when MDL-61319 is fixed */
 /* This is needed because a bug leads to a mess with fa.fa-pull-left/right rules. */
@@ -1807,6 +1892,10 @@ ul.ctopics .content .section ul {
         padding: 0;
     }
 
+    #page-header .course-head .instructors .teacherlist a {
+        padding-right: .5em; 
+    }
+
 }
 
 li.inline-nav-admin icon, li.inline-na icon {
@@ -1930,6 +2019,19 @@ float:none;
     #hdr_chooser_b_div.style-a #hdr_chooser_a_div{
         display: none!important;
     }
+    .instructors.smalllist .teacherlist a {
+        display: flex;
+        padding-top: .5em;
+    }
+
+    .instructors .teacherlist img {
+        margin-right: .5em;
+    }
+
+    .instructors.largelist .teacherlist span {
+        display: none;
+    }
+
 }
 
 .pageheadingbutton {
@@ -1946,9 +2048,6 @@ li.activity p {
  padding-left: 1em;
 }
 
-.style-a .editing-row {
-    padding-left: 0; 
-}
 .course-img-uploader-container {
     margin-right: auto;
 }
@@ -2008,4 +2107,153 @@ body.format-topcoll.editing ul.ctopics .section .activity .action {
         width: 100%;
         margin-bottom: .75em;
     }
+}
+
+.coursesearchbox.invisiblefieldset {
+    width: 100%;
+}
+
+.coursesearchbox.invisiblefieldset label {
+    display: flex;
+    justify-content: center;
+}
+
+.coursesearchbox.invisiblefieldset input {
+    display: inline-block;
+    width: 70%;
+    vertical-align: middle;
+}
+
+.coursesearchbox.invisiblefieldset button {
+    position: relative;
+    left: -4px;
+}
+
+/*activity chooser panel*/
+.chooserdialogue-course-modchooser {
+    width: 80% !important;
+}
+#chooserform ul.nav-tabs li {
+    padding-top: .7em;
+}
+#chooserform ul.nav {
+    height: 3em;
+    margin-bottom: 1em;
+}
+
+
+#chooserform .help-tab {
+    margin-left: auto;
+    margin-right: 1em;
+}
+
+#chooserform .mod-option {
+    display: inline-flex;
+    width: 15%;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+#chooserform .submitbuttons {
+    display: none !important;
+}
+
+#modchooser_help {
+    margin: 1em;
+    height: 30em;
+    overflow: scroll;
+}
+
+#modchooser_help .col-11 {
+    margin-bottom: 2em;
+}
+#modchooser_help .icon {
+    width: 36px;
+    height: 36px;
+}
+
+.chooserdialogue-course-modchooser .modicon .icon {
+    width: 30px;
+    height: 30px;
+}
+.choosercontainer #chooseform .moduletypetitle {
+    text-transform: none;
+}
+.choosercontainer #chooseform .option label {
+    font-size: 14px;
+}
+.choosercontainer #chooseform .moduletypetitle.active {
+    border: 1px solid #dee2e6;
+    background: #f2f2f2;
+    border-bottom-color: #f2f2f2;
+    padding-top: .8em;
+    padding-bottom: .8em;
+}
+
+.choosercontainer #chooseform .option input {
+    display: none !important;
+}
+.choosercontainer #chooseform .option label {
+    font-size: 14px;
+    border: none;
+    display: inline-flex;
+    flex-direction: column;
+    padding: 1em;
+}
+.choosercontainer #chooseform .option {
+    padding: 0;
+    width: 5em;
+}
+.nav-tabs{
+    background: aliceblue;
+}
+.jschooser .choosercontainer #chooseform .alloptions {
+    max-width: none;
+    height: 520px !important;
+}
+
+.jschooser .choosercontainer #chooseform .alloptions .option .typename {
+    width: auto;
+}
+
+#modchooser_help .modicon {
+    padding-right: 0;
+    text-align: right;
+}
+
+#modchooser_help .typename {
+    font-weight: bold;
+}
+
+@include media-breakpoint-down(sm) {
+    #chooserform .mod-option {
+        width: 30%;
+    }
+    .chooserdialogue-course-modchooser {
+        width: 100% !important;
+    }
+
+    .choosercontainer #chooseform .moduletypetitle {
+        padding: 0 1em 0 1em;
+    }
+    #modchooser_help .row {
+        display: block;
+    }
+}
+
+table.mod-data-default-template {
+    width: 100%;
+    margin-bottom: 1em;
+}
+
+@media (min-width: 991.98px) {
+    .used-region-side-pre #region-main-settings-menu > div {
+        right: 370px;
+    }
+}
+
+/* Boost resets UL padding to 1rem; let's change back to w3c recommended default, at least in main content */
+
+#region-main ul {
+	padding-left: 40px;
 }

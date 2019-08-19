@@ -40,8 +40,8 @@
             <div id="hdr_chooser_b_div" class="card-body {{^headerstyle}} style-a {{/headerstyle}} {{^contextheader}}p-2{{/contextheader}} header-body" style="background-image:url({{{courseimage}}}); background-size:cover; background-position:center;"> 
                 <div class="d-flex page-head">
                     {{#contextheader}}
-					<div id="header_a_head" class="flex-row flex-grow-1">
-						<div id="hdr_chooser_a_div" class="course-image {{#headerstyle}}d-none{{/headerstyle}}"><img src="{{{courseimage}}}"/></div>
+					<div id="{{^headerstyle}}header_a_head{{/headerstyle}}{{#headerstyle}}header_b_head{{/headerstyle}}" class="flex-row flex-grow-1">
+						<div id="hdr_chooser_a_div" class="course-image {{#headerstyle}}d-none{{/headerstyle}}" style="background-image:url({{{courseimage}}});"></div>
 	                    <div class="course-head mr-auto">
 		                    <div class="facultydep">
 		                        <h5>{{{facultydep}}}</h5>
@@ -51,13 +51,13 @@
 		                        {{{instructors}}}
 		                    </div>
 	                    </div>
+		                <div class="editing-row d-flex">
+							{{{course_image_uploader}}}
+		                    {{{course_header_style}}}
+						</div>
 					</div>
                     {{/contextheader}}
                 </div>
-                <div class="editing-row d-flex">
-					{{{course_image_uploader}}}
-                    {{{course_header_style}}}
-				</div>
                 <div class="d-flex page-navbkg">
                     {{#hasnavbar}}
                     <div id="page-navbar">

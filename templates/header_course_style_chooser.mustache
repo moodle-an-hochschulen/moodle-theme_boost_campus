@@ -23,8 +23,8 @@
 <div id="theme_urcourses_default_header_course_style_chooser_{{uniqid}}" class="course-hdr-chooser-container">
     <div class="btn-group course-hdr-chooser">
 		<span class="d-none d-md-inline">Change Header Style</span>
-        <button id="hdr_chooser_a" class="btn btn-sm{{^headerstyle}} btn-success{{/headerstyle}}" title="Square Style">{{# pix }} hdr_style_a, theme_urcourses_default, Square style {{/ pix }}</button>
-        <button id="hdr_chooser_b" class="btn btn-sm{{#headerstyle}} btn-success{{/headerstyle}}" title="Background Style">{{# pix }} hdr_style_b, theme_urcourses_default, Background style {{/ pix }}</button>
+        <button id="hdr_chooser_a" class="btn btn-sm{{^headerstyle}} btn-success " disabled="true{{/headerstyle}}" title="Square Style{{^headerstyle}} (Selected){{/headerstyle}}">{{# pix }} hdr_style_a, theme_urcourses_default, Square style {{/ pix }}</button>
+        <button id="hdr_chooser_b" class="btn btn-sm{{#headerstyle}} btn-success disabled="true{{/headerstyle}}" title="Background Style{{#headerstyle}} (Selected){{/headerstyle}}">{{# pix }} hdr_style_b, theme_urcourses_default, Background style {{/ pix }}</button>
     </div>
 </div>
 

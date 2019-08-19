@@ -254,6 +254,9 @@ body.arts .page-navbkg {
 .page-head {
 	padding: 1rem;
 }
+body.editing .page-head {
+	padding-bottom: 0;
+}
 
 #page-header .card-body {
 	padding: 0;
@@ -267,8 +270,12 @@ body.arts .page-navbkg {
 	color: #fff;
 }
 
+#page-header #header_a_head .course-head {
+    margin-left: 12em;
+}
+
 #page-header .course-head a .page-context-header {
-    display: flex;
+    display: inline-block;
     margin-bottom: 5px;
 }
 
@@ -387,6 +394,10 @@ body.arts .page-navbkg .singlebutton button:hover {
     .path-course-view li.activity form.togglecompletion img {
         margin: 0;
     }
+	
+	#page-header #header_a_head .course-head {
+	    margin-left: auto;
+	}
 }
 
 /*
@@ -1691,8 +1702,18 @@ ul.section.img-text {
     padding-left: 0;
 }
 
-//
-.course-content ul.ctopics {
+
+/* Boost resets UL padding to 1rem; let's change back to w3c recommended default, at least in main content */
+/*
+#region-main ul {
+	padding-left: 40px;
+}
+
+#region-main ul.ctopics {
+	padding-left: 0;
+}
+*/
+#region-main .course-content ul.ctopics {
     padding-right: 10px;
 }
 
@@ -1883,7 +1904,20 @@ ul.ctopics .content .section ul {
     li.inline-nav-admin a, li.inline-nav a {
         display: inline-flex!important;
     }
-
+	
+	#hdr_chooser_a_div {
+	    width: 12em !important;
+	    /* border: solid 1px red; */
+	    min-height: 100% !important;
+	    margin: 0;
+	    float: left;
+	    background-size: cover;
+	}
+	
+	#hdr_chooser_a_div img {
+		display: none;
+	}
+	
     #hdr_chooser_b_div.style-a {
         background-image: none!important;
     }
@@ -1891,7 +1925,7 @@ ul.ctopics .content .section ul {
     #hdr_chooser_b_div.style-a div.d-flex.page-head {
         padding: 0;
     }
-
+	
     #page-header .course-head .instructors .teacherlist a {
         padding-right: .5em; 
     }
@@ -2010,7 +2044,8 @@ float:none;
     word-wrap: break-word;
 }
 
-#header_a_head {
+#header_a_head,
+#header_b_head {
     width: 100%;
 }
 
@@ -2044,8 +2079,12 @@ li.activity p {
 }
 
 .editing-row {
- padding-right: 1em;
- padding-left: 1em;
+ padding-top: 0.5em;
+}
+
+body.editing #header_a_head .editing-row {
+	padding-left: 0.65em;
+	padding-right: 1em;
 }
 
 .course-img-uploader-container {
@@ -2250,10 +2289,4 @@ table.mod-data-default-template {
     .used-region-side-pre #region-main-settings-menu > div {
         right: 370px;
     }
-}
-
-/* Boost resets UL padding to 1rem; let's change back to w3c recommended default, at least in main content */
-
-#region-main ul {
-	padding-left: 40px;
 }

@@ -100,7 +100,7 @@ class theme_urcourses_default_external extends external_api {
         $filestorage = get_file_storage();
         $filetype = strtolower(pathinfo($params['imagename'], PATHINFO_EXTENSION));
         $filetype === 'jpeg' ? 'jpg' : $filetype;
-        $new_filename = 'courseimage.' . $filetype;
+        $new_filename = 'courseimage_'.time().'.' . $filetype;
 
         $binary_data = base64_decode($params['imagedata']);
 

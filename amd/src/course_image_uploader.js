@@ -21,7 +21,8 @@
  * 
  */
 
-define(['jquery', 'core/ajax', 'core/notification', 'core/str'], function($, ajax, notification, str) {
+define(['jquery', 'core/ajax', 'core/notification', 'core/str', 'core/modal_factory',
+    'core/modal_events'], function($, ajax, notification, str, ModalFactory, ModalEvents) {
 
     /** Container jquery object. */
     var _root;
@@ -38,7 +39,9 @@ define(['jquery', 'core/ajax', 'core/notification', 'core/str'], function($, aja
     var SELECTORS = {
         UPLOADER: '#course_image_uploader',
         HEADER: '#page-header .header-body',
-        HEADER_TOP: "#page-header .page-head",
+        HEADER_TOP: '#page-header .page-head',
+        SQUARE_IMG: '#hdr_chooser_a_div',
+        STYLE_HDR: '#header_a_head',
         UPLOAD_BTN: '#upload_img_confirm',
         CANCEL_BTN: '#upload_img_cancel',
     };
@@ -82,6 +85,24 @@ define(['jquery', 'core/ajax', 'core/notification', 'core/str'], function($, aja
         _root.on('click', SELECTORS.CANCEL_BTN, _cancelUpload);
     };
 
+    var _handleImageModal = function() {
+        //adding in confirmation modal in case buttons accidentally clicked
+        ModalFactory.create({
+            type: ModalFactory.types.SAVE_CANCEL,
+            title: 'Change Course Image',
+            body: 'Some body content here'
+        })
+        .then(function(modal) {
+            modal.setSaveButtonText('Change');
+            var root = modal.getRoot();
+            root.on(ModalEvents.cancel, function(){
+                return;
+            });
+            root.on(ModalEvents.save, _handleImageChange);
+            modal.show();
+        });
+    };
+
     /**
      * Sets course image to uploaded file.
      * Mostly lifted from theme_snap.
@@ -89,6 +110,7 @@ define(['jquery', 'core/ajax', 'core/notification', 'core/str'], function($, aja
      * @return void
      */
     var _handleImageChange = function(event) {
+        //console.log('imagechange');
         // if no file was uploaded, return
         if (!event.target.files.length) {
             return;
@@ -128,10 +150,13 @@ define(['jquery', 'core/ajax', 'core/notification', 'core/str'], function($, aja
     var _confirmImageUpload = function(file) {
         var imagedata = file.target.result;
 
+        var styleselect = ($(SELECTORS.STYLE_HDR).length>0) ? SELECTORS.SQUARE_IMG : SELECTORS.HEADER;
+
         // store original image in DOM node
-        $(SELECTORS.HEADER).data('original_img', $(SELECTORS.HEADER).css('background-image'));
+        $(styleselect).data('original_img', $(styleselect).css('background-image'));
 
         // set background image to temp file
+        $(SELECTORS.SQUARE_IMG).css({'background-image': 'url(' + imagedata + ')'});
         $(SELECTORS.HEADER).css({'background-image': 'url(' + imagedata + ')'});
 
         // show confirm/cancel buttons
@@ -185,6 +210,9 @@ define(['jquery', 'core/ajax', 'core/notification', 'core/str'], function($, aja
         // unset course original image data
         $(SELECTORS.HEADER).data('original_image', '');
 
+        // clear file input
+        $(SELECTORS.UPLOADER).val('');
+
         str.get_string('success:courseimageuploaded', 'theme_urcourses_default')
             .done(_createSuccessPopup);
     };
@@ -199,10 +227,17 @@ define(['jquery', 'core/ajax', 'core/notification', 'core/str'], function($, aja
 
         // reset header image
         var original_img = $(SELECTORS.HEADER).data('original_img');
+        $(SELECTORS.SQUARE_IMG).css({'background-image': original_img});
         $(SELECTORS.HEADER).css({'background-image': original_img});
+
+        // clear file input
+        $(SELECTORS.UPLOADER).val('');
 
         // hide save/cancel buttons
         _root.removeClass('confirm');
+
+        // unset course original image data
+        $(SELECTORS.HEADER).data('original_image', '');
     };
 
     /**
@@ -215,7 +250,8 @@ define(['jquery', 'core/ajax', 'core/notification', 'core/str'], function($, aja
         var popup = $('<div></div>');
         popup.text(text);
         popup.css({'position' : 'absolute'});
-        popup.css({'right' : '5px'});
+        popup.css({'left' : '5px'});
+        popup.css({'bottom' : '30px'});
         popup.addClass('alert alert-danger alert-dismissable fade show');
 
         // create dismiss button
@@ -241,8 +277,10 @@ define(['jquery', 'core/ajax', 'core/notification', 'core/str'], function($, aja
         // create bootstrap 4 dismissable
         var popup = $('<div></div>');
         popup.text(text);
+        popup.prop('id','cimage_success_popup');
         popup.css({'position' : 'absolute'});
-        popup.css({'right' : '5px'});
+        popup.css({'left' : '5px'});
+        popup.css({'bottom' : '30px'});
         popup.addClass('alert alert-success alert-dismissable fade show');
 
         // create dismiss button
@@ -257,6 +295,13 @@ define(['jquery', 'core/ajax', 'core/notification', 'core/str'], function($, aja
 
         // add to header's course image area
         $(SELECTORS.HEADER_TOP).append(popup);
+
+        // makes the alert disapear after a set amout of time.
+        setTimeout(function() {
+            $('#cimage_success_popup').fadeTo(500, 0).slideUp(500, function(){
+                 $(this).remove();
+            });
+        },1800);
     };
 
     /**

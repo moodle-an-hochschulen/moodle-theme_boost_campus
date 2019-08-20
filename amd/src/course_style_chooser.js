@@ -21,7 +21,8 @@
  * 
  */
 
-define(['jquery', 'core/ajax', 'core/notification', 'core/str', 'core/modal_factory', 'core/modal_events'], function($, ajax, notification, str, ModalFactory, ModalEvents) {
+define(['jquery', 'core/ajax', 'core/notification', 'core/str',
+    'core/modal_factory', 'core/modal_events'], function($, ajax, notification, str, ModalFactory, ModalEvents) {
 
     /** Container jquery object. */
     var _root;
@@ -53,14 +54,6 @@ define(['jquery', 'core/ajax', 'core/notification', 'core/str', 'core/modal_fact
     };
 
     /**
-     * Initializes _headerstyle.
-     * @param {string} headerstyle 
-     */
-    var _setHeaderStyle = function(imagedata) {
-        _headerstyle = headerstyle;
-    };
-
-    /**
      * Sets up event listeners.
      * @return void
      */
@@ -75,59 +68,70 @@ define(['jquery', 'core/ajax', 'core/notification', 'core/str', 'core/modal_fact
      */
     var _chooseStyle = function() {
         _element = $(this);
+
+        //if current style is clicked, do nothing...
+        //console.log('_headerstyle:'+_headerstyle);
+        /*
+        if ('#'+_element.attr('id') == SELECTORS.HDRSTYLEA_BTN && _headerstyle == 0) {
+            return;
+        } else if ('#'+_element.attr('id') == SELECTORS.HDRSTYLEB_BTN && _headerstyle == 1) {
+            return;
+        }
+        */
+
         //adding in confirmation modal in case buttons accidentally clicked
         ModalFactory.create({
             type: ModalFactory.types.SAVE_CANCEL,
-            title: 'Change Style',
-            body: 'Are you sure you want to change the header style?'
+            title: 'Change Course Header Style',
+            body: "<p><b>Are you sure you want to change the course header style?</b><br />"
+                  + "Confirmation is required to ensure the course header style isn't changed accidentally.</p>"
         })
         .then(function(modal) {
             modal.setSaveButtonText('Change');
             var root = modal.getRoot();
             root.on(ModalEvents.cancel, function(){
                 return;
-            })
-            root.on(ModalEvents.save, _styleChange)
-            modal.show()
+            });
+            root.on(ModalEvents.save, _styleChange);
+            modal.show();
         });
     };
 
 
-    var _styleChange = function() {  
+    var _styleChange = function() {
         if ('#'+_element.attr('id') == SELECTORS.HDRSTYLEB_BTN) {
-            if (!$(SELECTORS.HDRSTYLEB_BTN).hasClass('btn-success')){
+
             _headerstyle = 1;
+
             $(SELECTORS.HDRSTYLEA_BTN).removeClass('btn-success');
+            $(SELECTORS.HDRSTYLEA_BTN).prop('disabled',false);
+
             $(SELECTORS.HDRSTYLEB_BTN).addClass('btn-success');
-            
-            bkgimg = $('#hdr_chooser_a_div img').attr('src');
+            $(SELECTORS.HDRSTYLEB_BTN).prop('disabled',true);
+
+            //bkgimg = $('#hdr_chooser_a_div img').attr('src');
             $('#hdr_chooser_a_div').addClass('d-none');
             $('#hdr_chooser_b_div').removeClass('style-a');
 
-           _changed = 1;
-           
-            }
-            else {
-                return;
-            }
-            
+            $('#header_a_head').attr('id','header_b_head');
+
         } else {
-            if(!$(SELECTORS.HDRSTYLEA_BTN).hasClass('btn-success')){
+
             _headerstyle = 0;
+
             $(SELECTORS.HDRSTYLEB_BTN).removeClass('btn-success');
+            $(SELECTORS.HDRSTYLEB_BTN).prop('disabled',false);
+
             $(SELECTORS.HDRSTYLEA_BTN).addClass('btn-success');
+            $(SELECTORS.HDRSTYLEA_BTN).prop('disabled',true);
 
             $('#hdr_chooser_a_div').removeClass('d-none');
             $('#hdr_chooser_b_div').addClass('style-a');
 
-            _changed = 1;
+            $('#header_b_head').attr('id','header_a_head');
 
-            }
-            else {
-                return;
-            }
         }
-        
+
         // return if required values aren't set
         if (!_courseid) {
             return;
@@ -149,7 +153,7 @@ define(['jquery', 'core/ajax', 'core/notification', 'core/str', 'core/modal_fact
 
         // initiate ajax call
         ajax.call([ajaxCall]);
-    }
+    };
     /**
      * Handles theme_urcourses_default_upload_course_image response data.
      * @param {Object} response 
@@ -157,34 +161,6 @@ define(['jquery', 'core/ajax', 'core/notification', 'core/str', 'core/modal_fact
     var _choiceDone = function() {
         str.get_string('success:coursestylechosen', 'theme_urcourses_default')
             .done(_createSuccessPopup);
-    };
-
-    /**
-     * Creates a bootstrap dismissable containing error text. 
-     * Dismissable should appear in header and should cover upload button.
-     * @param {string} text Error text
-     */
-    var _createErrorPopup = function(text) {
-        // create bootstrap 4 dismissable
-        var popup = $('<div></div>');
-        popup.text(text);
-        popup.css({'position' : 'absolute'});
-        popup.css({'right' : '5px'});
-        popup.addClass('alert alert-danger alert-dismissable fade show');
-
-        // create dismiss button
-        var dismissBtn = $('<button></button>');
-        dismissBtn.html('&times;');
-        dismissBtn.addClass('close');
-        dismissBtn.attr('type', 'button');
-        dismissBtn.attr('data-dismiss', 'alert');
-
-        // append dismiss button to popup
-        popup.append(dismissBtn);
-
-        // add to header's course image area
-        $(SELECTORS.HEADER_TOP).append(popup);
-        
     };
 
     /**
@@ -196,8 +172,10 @@ define(['jquery', 'core/ajax', 'core/notification', 'core/str', 'core/modal_fact
         // create bootstrap 4 dismissable
         var popup = $('<div></div>');
         popup.text(text);
+        popup.prop('id','cstyle_success_popup');
         popup.css({'position' : 'absolute'});
         popup.css({'right' : '5px'});
+        popup.css({'bottom' : '30px'});
         popup.css({'z-index' : '1200'});
         popup.addClass('alert alert-success alert-dismissable fade show');
 
@@ -216,7 +194,9 @@ define(['jquery', 'core/ajax', 'core/notification', 'core/str', 'core/modal_fact
 
         // makes the alert disapear after a set amout of time.
         setTimeout(function() {
-            $('div.alert.alert-success.alert-dismissable.fade.show').alert('close');
+            $('#cstyle_success_popup').fadeTo(500, 0).slideUp(500, function(){
+                $(this).remove();
+            });
         },1800);
     };
 

@@ -15,7 +15,7 @@ define(['jquery'], function($) {
                     $('#page-wrapper').attr('style', imghighres);
                 }
             }
-        })
+        });
     };
 
     return {

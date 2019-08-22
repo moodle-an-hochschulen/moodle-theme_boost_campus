@@ -394,10 +394,6 @@ body.arts .page-navbkg .singlebutton button:hover {
     .path-course-view li.activity form.togglecompletion img {
         margin: 0;
     }
-	
-	#page-header #header_a_head .course-head {
-	    margin-left: auto;
-	}
 }
 
 /*
@@ -2061,6 +2057,10 @@ float:none;
     .instructors.largelist .teacherlist span {
         display: none;
     }
+    
+    #page-header #header_a_head .course-head {
+	    margin-left: auto;
+	}
 
 }
 

@@ -1582,6 +1582,14 @@ body#page-mod-quiz-attempt #region-main  {
 
 }
 
+body.path-mod-book #region-main-settings-menu > div,
+body#page-mod-quiz-attempt #region-main-settings-menu > div {
+    position: absolute;
+    right: 0;
+    z-index: 100;
+    margin: 1rem;
+}
+
 body.path-mod-book #region-main-settings-menu.has-blocks,
 body.path-mod-quiz #region-main-settings-menu.has-blocks {
     display: inline-block;

@@ -2142,7 +2142,7 @@ body.format-topcoll.editing ul.ctopics .section .activity .action {
 
     #region-main {
         border: none;
-        padding: 0;
+        padding: 1em;
     }
 
     .course-content ul.topics .section .contentafterlink {
@@ -2152,6 +2152,16 @@ body.format-topcoll.editing ul.ctopics .section .activity .action {
     .path-course-view .completionprogress {
         width: 100%;
         margin-bottom: .75em;
+    }
+
+    .col-12 {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    .row-fluid, .row {
+        margin-right: 0;
+        margin-left: 0;
     }
 }
 
@@ -2284,6 +2294,10 @@ body.format-topcoll.editing ul.ctopics .section .activity .action {
     }
     #modchooser_help .row {
         display: block;
+    }
+
+    .container-fluid {
+        padding: 0;
     }
 }
 

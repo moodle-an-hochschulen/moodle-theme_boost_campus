@@ -20,7 +20,7 @@ a, #boost-campus-course-settings .card-body a, .ui-widget-content a, .btn-link,
 
  ol.checklist .itemblack, .block_writinghelp .card-text a h4, .popover-body,
  .dropdown-menu.show .dropdown-item a, #page-header .course-head a .page-context-header .page-header-headings h1,
- #page-header h1 a {
+ #page-header h1 a, .popover-region-container {
     color: whitesmoke;
  }
 
@@ -43,14 +43,14 @@ a, #boost-campus-course-settings .card-body a, .ui-widget-content a, .btn-link,
 }
 
 /*border changes*/
-.nav-tabs, .nav-tabs .nav-link.active, .block-course-overview .courseovbox, 
+.nav-tabs, .nav-tabs .nav-link.active, .block-course-overview .courseovbox, .input-group-text,
 .border-bottom, .btn-outline-secondary, .btn-outline-primary, .nav-tabs .nav-link:hover,
 .course-content ul.topics li.section.main, .card-body, .generaltable thead th, .dropdown-divider,
 .tour-actions > ul > li, .mform fieldset, #page-header .card, .fp-iconview .fp-thumbnail img,.fp-iconview .fp-thumbnail {
     border-color: rgba(10, 10, 10, 0.25)!important;
 }
 
-.block .block-cards .course-summaryitem {
+.block .block-cards .course-summaryitem, .content-item-container, .popover-region-header-container, .popover-region-container {
     border-color: rgba(10, 10, 10, 0.25);
 }
 
@@ -389,7 +389,7 @@ table.dataTable tr.odd td.sorting_1 {
     color: #bd8a00!important;
 }
 
-ul.oublog-accordion li {
+ul.oublog-accordion li, .format-tiles li.activity.subtile {
     background-color: #4f4f4d;
     color: #e5e3e8;
     border-color:  rgba(10, 10, 10, 0.25);
@@ -423,9 +423,29 @@ ul.oublog-accordion li {
 
 
 #region-main, .region_main_settings_menu_proxy, .ui-widget-content,
-[data-fieldtype="modgrade"] {
+[data-fieldtype="modgrade"], .format-tiles #page .course-content ul li.section.main {
     background-color: #4f4f4d;
     color: #fffbef;
+}
+
+.format-tiles .section li.activity.label h1, .format-tiles .section li.activity.label h2, 
+.format-tiles .section li.activity.label h3, .format-tiles .section li.activity.label h4,
+.format-tiles .tile_bar .inplaceeditable a, .format-tiles li.activity.subtile a, 
+.format-tiles #page-content li.activity.subtile a, .format-tiles ul.tiles .tile_bar {
+    color: #fffbef!important;
+}
+
+.format-tiles.editing .subtiles li.activity.label {
+    border-color: rgba(10, 10, 10, 0.25);
+}
+
+.group.callout, div[class*="_block_callout"], 
+table[class*="_block_callout"], div[class*="generic_large_callout"], 
+table[class*="generic_large_callout"], div[class*="generic_small_callout"], 
+table[class*="generic_small_callout"] {
+    border-color: rgba(10, 10, 10, 0.25);
+    background-color: #4f4f4d;
+    color: #e5e3e8!important;
 }
 
 .callout-blue {

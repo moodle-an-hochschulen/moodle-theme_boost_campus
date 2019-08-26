@@ -5,6 +5,14 @@ a, #boost-campus-course-settings .card-body a, .ui-widget-content a, .btn-link,
     color: #e2d2a2;
  }
 
+ .course-content a:visited {
+    color: #e2d2a2;
+}
+
+ .editing .course-content a:visited {
+    color: #e2d2a2;
+}
+
  .gitblock_timeline .list-group-item-action:hover {
     background-color: #4f4f4d;
     color: #e5e3e8;
@@ -111,7 +119,7 @@ table, table td, table tr, table th, .forumpost, .path-mod-feedback table.analys
     background-color: #4f4f4d!important;
 }
 
-.btn-primary {
+.btn-primary, #toggle-sections .btn.btn-primary {
     color: #f8f1f9;
     background-color: #898884!important;
     border-color: #898884!important;
@@ -123,6 +131,13 @@ table, table td, table tr, table th, .forumpost, .path-mod-feedback table.analys
 .btn.btn-secondary {
     background-color: #dad8ce;
     border-color: #dad8ce;
+}
+
+#page-course-view-tiles .expand-collapse-all-btns .btn.btn-secondary{
+    color: #212529!important;
+}
+#page-course-view-tiles .expand-collapse-all-btns .btn.btn-secondary:hover {
+    background-color: #dad8ce;
 }
 
 .card-title.d-inline {
@@ -389,7 +404,7 @@ table.dataTable tr.odd td.sorting_1 {
     color: #bd8a00!important;
 }
 
-ul.oublog-accordion li, .format-tiles li.activity.subtile {
+ul.oublog-accordion li {
     background-color: #4f4f4d;
     color: #e5e3e8;
     border-color:  rgba(10, 10, 10, 0.25);
@@ -423,22 +438,52 @@ ul.oublog-accordion li, .format-tiles li.activity.subtile {
 
 
 #region-main, .region_main_settings_menu_proxy, .ui-widget-content,
-[data-fieldtype="modgrade"], .format-tiles #page .course-content ul li.section.main {
+[data-fieldtype="modgrade"], .format-tiles #page .course-content ul li.section.main, .format-tiles .course-content .section {
     background-color: #4f4f4d;
     color: #fffbef;
 }
 
-.format-tiles .section li.activity.label h1, .format-tiles .section li.activity.label h2, 
-.format-tiles .section li.activity.label h3, .format-tiles .section li.activity.label h4,
-.format-tiles .tile_bar .inplaceeditable a, .format-tiles li.activity.subtile a, 
-.format-tiles #page-content li.activity.subtile a, .format-tiles ul.tiles .tile_bar {
+.format-tiles li.activity.subtile {
+    background-color: #4a4a48;
+    color: #fffbef;
+    border-color:  rgba(10, 10, 10, 0.25);
+}
+.format-tiles .course-content ul.tiles .tile {
+    box-shadow: 2px 4px 5px 0 #3c3737;
+    background-color: rgba(83, 75, 70, 0.1)!important;
+}
+.format-tiles .course-content ul.tiles .tile_bar {
+    background-color: rgba(83, 75, 70, 0.1)!important;
+}
+.format-tiles .section li.activity.label h1, .format-tiles .section li.activity.label h2, .format-tiles .sectiontitle h2,
+.format-tiles .section li.activity.label h3, .format-tiles ul.tiles .tile h3, 
+.format-tiles .section li.activity.label h4, .format-tiles .tile_bar .inplaceeditable a,
+.format-tiles li.activity.subtile a, .format-tiles #page-content li.activity.subtile a, 
+.format-tiles ul.tiles .tile_bar, .format-tiles li.activity.subtile .activitytype, .format-tiles .course-content .icon,
+.format-tiles .progress-indic .progress-indic-label {
     color: #fffbef!important;
+}
+.format-tiles li.activity.subtile .activitytitle a {
+    background-image: linear-gradient(to bottom,rgb(74, 74, 72) 85%,rgb(72, 72, 70));
+}
+
+.format-tiles .progress-indic svg text {
+    fill: #dedbdb;
+}
+.format-tiles.editing .section .activity.subtile .action-menu{
+    background-color: #4a4a48;
 }
 
 .format-tiles.editing .subtiles li.activity.label {
-    border-color: rgba(10, 10, 10, 0.25);
+    border-color: rgba(10, 10, 10, 0.25); 
 }
-
+.format-tiles .expand-collapse-all-btns {
+    margin-right: .5rem;
+    margin-top: .5rem;
+}
+a.editsumm {
+    margin-left: 1rem;
+}
 .group.callout, div[class*="_block_callout"], 
 table[class*="_block_callout"], div[class*="generic_large_callout"], 
 table[class*="generic_large_callout"], div[class*="generic_small_callout"], 
@@ -574,4 +619,10 @@ background: #EFEFEF!important;
 
 .choosercontainer #chooseform .moduletypetitle.active span {
     color: #291a09;
+}
+
+div.section-modchooser a, .course-content .action-menu .dropdown-toggle, a.editsumm {
+    background: #474541;
+    border-color: rgba(10, 10, 10, 0.25);
+    color: #ffdaa9 !important;
 }

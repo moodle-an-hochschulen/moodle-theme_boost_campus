@@ -1980,6 +1980,10 @@ currently copying the default hover*/
     color: #531e9f;
     text-decoration: underline;
 }
+
+.editing .course-content a:visited {
+    color: #05779a;
+}
 .course-content a:visited[href="#"]{
     color: #05779a;
 }

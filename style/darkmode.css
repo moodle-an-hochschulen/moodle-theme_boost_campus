@@ -250,14 +250,24 @@ td.day.text-center.hasevent a,
     color: black!important;
 }
 
-.form-control {
-    background-color: #efede7;
+.form-control, .form-control:focus, #conversation-actions-menu {
+    color: #efede7!important;
+}
+
+.message-drawer .text-muted {
+    color: #e3e3e3 !important;
+}
+
+span[data-flexitour="container"][x-placement="top-start"] div[data-role="arrow"]::after {
+    color:#4f4f4d!important;
+    border-top-color: #4f4f4d!important;
+    border-bottom-color: rgba(10, 10, 10, 0.25);
 }
 
 .format-site, .path-mod-assign [data-region="grade-actions-panel"], .path-mod-assign [data-region="grading-navigation-panel"] {
     background-color: #2f2d29;
     color: #e5e3e8;
-    border-color: rgba(10, 10, 10, 0.25)
+    border-color: rgba(10, 10, 10, 0.25);
 }
 
 .path-mod-assign div.submissionstatus {
@@ -434,8 +444,30 @@ ul.oublog-accordion li {
 
 #nav-drawer, .message-drawer, .bg-light, .bg-white {
     background-color: #383736!important;
+    color: #e5e3e8;
+}
+.message-drawer .bg-secondary {
+    background-color: #454342 !important;
+}
+.message-drawer .message.send .tail {
+    border-bottom-color: #454342;
 }
 
+.message-drawer .bg-white {
+    background-color: #565352 !important;
+}
+
+.message-drawer .message.received .tail {
+    border-bottom-color: #565352;
+}
+
+.message-drawer .border-top, .form-control:focus, .form-control {
+    border-color: rgba(10, 10, 10, 0.25)!important;
+}
+
+.message-drawer .bg-pulse-grey {
+    color: rgba(10, 10, 10, 0.85)!important; 
+}
 
 #region-main, .region_main_settings_menu_proxy, .ui-widget-content,
 [data-fieldtype="modgrade"], .format-tiles #page .course-content ul li.section.main, .format-tiles .course-content .section {

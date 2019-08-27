@@ -254,6 +254,9 @@ td.day.text-center.hasevent a,
     color: #efede7!important;
 }
 
+.font-italic {
+    letter-spacing: .03em;
+}
 .message-drawer .text-muted {
     color: #e3e3e3 !important;
 }
@@ -262,6 +265,24 @@ span[data-flexitour="container"][x-placement="top-start"] div[data-role="arrow"]
     color:#4f4f4d!important;
     border-top-color: #4f4f4d!important;
     border-bottom-color: rgba(10, 10, 10, 0.25);
+}
+
+span[data-flexitour="container"][x-placement="bottom-start"] div[data-role="arrow"]::after {
+    color:#4f4f4d!important;
+    border-bottom-color: #4f4f4d!important;
+    border-top-color: rgba(10, 10, 10, 0.25);
+}
+
+span[data-flexitour="container"][x-placement="left-start"] div[data-role="arrow"]::after {
+    color:#4f4f4d!important;
+    border-right-color: #4f4f4d!important;
+    border-left-color: rgba(10, 10, 10, 0.25);
+}
+
+span[data-flexitour="container"][x-placement="left-start"] div[data-role="arrow"]::after {
+    color:#4f4f4d!important;
+    border-left-color: #4f4f4d!important;
+    border-right-color: rgba(10, 10, 10, 0.25);
 }
 
 .format-site, .path-mod-assign [data-region="grade-actions-panel"], .path-mod-assign [data-region="grading-navigation-panel"] {

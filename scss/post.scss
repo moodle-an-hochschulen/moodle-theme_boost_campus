@@ -2230,6 +2230,10 @@ body.format-topcoll.editing ul.ctopics .section .activity .action {
     overflow: scroll;
 }
 
+#chooserform .tab-pane > ul {
+    padding-left: 0;
+}
+
 #modchooser_help .col-11 {
     margin-bottom: 2em;
 }

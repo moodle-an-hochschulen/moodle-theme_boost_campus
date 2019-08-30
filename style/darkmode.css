@@ -62,9 +62,11 @@ a, #boost-campus-course-settings .card-body a, .ui-widget-content a, .btn-link,
     border-color: rgba(10, 10, 10, 0.25);
 }
 
+/* too greedy
 #page-header i {
     color: rgba(10,10,10,0.5) !important;
 }
+*/
 
 #page-header .course-head {
     background-color: rgba(10,10,10,.5);

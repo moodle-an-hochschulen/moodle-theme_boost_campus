@@ -339,6 +339,7 @@ body.arts .page-navbkg .dimmed_text a:link {
 	color: #f5f5f5;
 	background-color: #c79200;
 	border-color: #bd8a00;
+	border-radius: 0.25em;
 }
 
 .page-navbkg .singlebutton button:hover {
@@ -1961,6 +1962,13 @@ li.inline-nav-admin icon, li.inline-na icon {
     justify-content: center;
 }
 
+@media (min-width: 768px) {
+	/* try to fix filepicker width */
+	div[data-fieldtype="filepicker"].col-md-9.form-inline.felement {
+		display: block !important;
+	}
+}
+
 @include media-breakpoint-down(sm) {
     #feedback_edit_form .itemhandle {
         right: .6em;
@@ -2312,4 +2320,19 @@ table.mod-data-default-template {
     .used-region-side-pre #region-main-settings-menu > div {
         right: 370px;
     }
+}
+
+@media (max-width: 1199.98px) {
+#region-main-settings-menu.has-blocks, #region-main.has-blocks {
+width: calc(100% - 385px);
+display: inline-block;
+}
+}
+
+
+@media (max-width: 991.98px) {
+#region-main-settings-menu.has-blocks, #region-main.has-blocks {
+width: 100%;
+display: block;
+}
 }

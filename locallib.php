@@ -337,6 +337,8 @@ function theme_urcourses_default_get_ur_category_class($courseid) {
         }
         else if ($default_theme_key == 'urcourses_') {
             $theme_val = substr($check_course_theme->theme, 10);
+        } else {
+        	$theme_val = '';
         }
 		
 		

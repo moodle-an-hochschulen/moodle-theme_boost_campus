@@ -898,6 +898,10 @@ div.section-modchooser a, a.tiles-summary-edit {
     justify-content: end;
 }
 
+body.format-topcoll.editing .ctopics .section .activity .mod-indent-outer {
+    width: 100%;
+}
+
 /*
  * Misc
  * /
@@ -2342,4 +2346,12 @@ display: inline-block;
 width: 100%;
 display: block;
 }
+}
+
+#page-course-view-topcoll.editing.jsenabled .course-content ul.topics li.section .right{
+    padding-right: 5em;
+}
+
+#page-course-view-topcoll.editing .course-content ul.ctopics li.section.main .content {
+    margin-right: 0;
 }

@@ -887,13 +887,16 @@ div.section-modchooser a, a.tiles-summary-edit {
 
 	.section .activity .actions {
 	    position: absolute !important;
-	    right: 0;
+	    right: -30px;
 	    top: 0;
 	    display: inline-block !important;
 	}
 
 }
 
+.section .activity .actions {
+    justify-content: end;
+}
 
 /*
  * Misc

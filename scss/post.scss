@@ -2326,11 +2326,17 @@ table.mod-data-default-template {
     width: 100%;
     margin-bottom: 1em;
 }
-
+/*
 @media (min-width: 991.98px) {
     .used-region-side-pre #region-main-settings-menu > div {
         right: 370px;
     }
+}
+*/
+
+
+body.editing.format-topcoll .section .activity.modtype_label.label .no-overflow .no-overflow {
+    margin-right: 8em;
 }
 
 @media (max-width: 1199.98px) {
@@ -2356,6 +2362,8 @@ display: block;
     margin-right: 0;
     margin-top: 18px;
 }
+
+
 
 #page-my-index .box.generalbox {
     padding-left: 1em;

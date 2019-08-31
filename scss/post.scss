@@ -310,6 +310,9 @@ body.editing .page-head {
 	color: #fff;
 }
 
+.page-navbkg a[role="menuitem"] {
+	color: #333;
+}
 
 .page-navbkg .dimmed_text a, 
 .page-navbkg .dimmed_text a:link {
@@ -335,15 +338,31 @@ body.arts .page-navbkg .dimmed_text a:link {
 	background-color: #fcfcfc;
 }
 
-.page-navbkg .singlebutton button {
+.page-navbkg a.maintmodebutton {
+    padding: .375rem .75rem;
+    font-size: .9375rem;
+    line-height: 1.5;
+	margin-right: 1em;
+	
+}
+.page-navbkg a.maintmodebutton:before {
+content: "\f0ad";
+    font-family: "FontAwesome";
+    padding-right: 5px;
+}	
+	
+.page-navbkg .singlebutton button,
+.page-navbkg a.maintmodebutton {
 	color: #f5f5f5;
 	background-color: #c79200;
 	border-color: #bd8a00;
 	border-radius: 0.25em;
 }
 
-.page-navbkg .singlebutton button:hover {
+.page-navbkg .singlebutton button:hover,
+.page-navbkg a.maintmodebutton:hover {
 	background-color: #b88700;
+	text-decoration: none;
 }
 
 body.arts .page-navbkg .singlebutton button {
@@ -1578,24 +1597,11 @@ div[data-region="drawer-toggle"] button.btn-secondary:focus {
 }
 
 
-body.path-mod-book [data-region="blocks-column"],
-body#page-mod-quiz-attempt [data-region="blocks-column"] {
-
-    float: left;
-
-}
-
-body.path-mod-book #region-main,
-body#page-mod-quiz-attempt #region-main  {
-
-    float: right;
-
-}
 
 body.path-mod-book #region-main-settings-menu > div,
 body#page-mod-quiz-attempt #region-main-settings-menu > div {
     position: absolute;
-    right: 0;
+    right: 375px;
     z-index: 100;
     margin: 1rem;
 }

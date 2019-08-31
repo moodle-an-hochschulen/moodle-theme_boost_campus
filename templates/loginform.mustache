@@ -104,6 +104,14 @@
             <div class="card-block">
                 <h2 class="card-header text-center" ><img src="{{loginlogourl}}" title="{{sitename}}" alt="{{sitename}}" /></h2>
                 <div class="card-body">
+					{{#maintenance}}
+                    <div class="alert alert-info">
+                        <h5><b>UR Courses is in maintenance mode.</b></h5>
+						<p><small>{{#str}}sitemaintenance, core_admin{{/str}}</small></p>
+                    </div>
+					{{/maintenance}}
+					
+					
                     {{#cansignup}}
                         <div class="sr-only">
                             <a href="{{signupurl}}">{{#str}} tocreatenewaccount {{/str}}</a>

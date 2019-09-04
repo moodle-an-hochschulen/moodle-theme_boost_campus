@@ -322,6 +322,8 @@ function theme_urcourses_default_get_ur_category_class($courseid) {
 
 	
 	// Check theme first
+	
+	if (!is_numeric($courseid)) { $courseid=0; } // some IDs not numeric? check...
 		
 	$sql = "SELECT `theme` FROM mdl_course WHERE id={$courseid}";	
 	

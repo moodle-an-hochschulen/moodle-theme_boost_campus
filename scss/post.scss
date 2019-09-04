@@ -2339,7 +2339,9 @@ table.mod-data-default-template {
     }
 }
 */
-
+body.format-topcoll ul.ctopics #section-0 .content .summary .no-overflow {
+	overflow: inherit;
+}
 
 body.editing.format-topcoll .section .activity.modtype_label.label .no-overflow .no-overflow {
     margin-right: 7.25em;

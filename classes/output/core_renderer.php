@@ -29,6 +29,7 @@ use coding_exception;
 use html_writer;
 use tabobject;
 use tabtree;
+use context_system;
 use custom_menu_item;
 use custom_menu;
 use block_contents;
@@ -665,12 +666,96 @@ class core_renderer extends \theme_boost\output\core_renderer {
 			return $course_authornames;
         } else return '';
     }
+
+
+
+
+
 }
+
+
+/**
+ * The standard tags (typically performance information and validation links,
+ * if we are in developer debug mode) that should be output in the footer area
+ * of the page. Designed to be called in theme layout.php files.
+ *
+ * @return string HTML fragment.
+ */
+ function standard_footer_html() {
+    global $CFG, $SCRIPT;
+
+    $output = '';
+    if (during_initial_install()) {
+        // Debugging info can not work before install is finished,
+        // in any case we do not want any links during installation!
+        return $output;
+    }
+
+    // Give plugins an opportunity to add any footer elements.
+    // The callback must always return a string containing valid html footer content.
+    $pluginswithfunction = get_plugins_with_function('standard_footer_html', 'lib.php');
+    foreach ($pluginswithfunction as $plugins) {
+        foreach ($plugins as $function) {
+            $output .= $function();
+        }
+    }
+
+    // This function is normally called from a layout.php file in {@link core_renderer::header()}
+    // but some of the content won't be known until later, so we return a placeholder
+    // for now. This will be replaced with the real content in {@link core_renderer::footer()}.
+    $output .= $this->unique_performance_info_token;
+    if ($this->page->devicetypeinuse == 'legacy') {
+        // The legacy theme is in use print the notification
+        $output .= html_writer::tag('div', get_string('legacythemeinuse'), array('class'=>'legacythemeinuse'));
+    }
+
+    // Get links to switch device types (only shown for users not on a default device)
+    //$output .= $this->theme_switch_links();
+
+    if (!empty($CFG->debugpageinfo)) {
+        $output .= '<div class="performanceinfo pageinfo">' . get_string('pageinfodebugsummary', 'core_admin',
+            $this->page->debug_summary()) . '</div>';
+    }
+    if (debugging(null, DEBUG_DEVELOPER) and has_capability('moodle/site:config', context_system::instance())) {  // Only in developer mode
+        // Add link to profiling report if necessary
+        if (function_exists('profiling_is_running') && profiling_is_running()) {
+            $txt = get_string('profiledscript', 'admin');
+            $title = get_string('profiledscriptview', 'admin');
+            $url = $CFG->wwwroot . '/admin/tool/profiling/index.php?script=' . urlencode($SCRIPT);
+            $link= '<a title="' . $title . '" href="' . $url . '">' . $txt . '</a>';
+            $output .= '<div class="profilingfooter">' . $link . '</div>';
+        }
+        $purgeurl = new moodle_url('/admin/purgecaches.php', array('confirm' => 1,
+            'sesskey' => sesskey(), 'returnurl' => $this->page->url->out_as_local_url(false)));
+        $output .= '<div class="purgecaches">' .
+                html_writer::link($purgeurl, get_string('purgecaches', 'admin')) . '</div>';
+    }
+    return $output;
+}
+
 
 function ur_check_course_cat() {
 	global $CFG,$DB,$COURSE;
 
-	$ur_categories = array('','misc'=>'','khs'=>'Faculty of Kinesiology and Health Studies','edu'=>'Faculty of Education','sci'=>'Faculty of Science','grad'=>'Grad Studies','fa'=>'Faculty of Fine Arts','map'=>'Faculty of Media, Art, and Performance','engg'=>'Faculty of Engineering and Applied Science','bus'=>'Business Administration','arts'=>'Faculty of Arts','sw'=>'Faculty of Social Work','nur'=>'Faculty of Nursing','misc'=>'Custom Themes','luther'=>'Luther College','luthervssn'=>'Luther College VSSN');
+	$ur_categories = array('','default'=>'',
+							'arts'=>'Faculty of Arts',
+							'business'=>'Business Administration',
+							'campion'=>'Campion College',
+							'cnpp'=>'Collaborative Nurse Practitioner Program',
+							'education'=>'Faculty of Education',
+							'engineering'=>'Faculty of Engineering and Applied Science',
+							'fnuniv'=>'First Nations University of Canada',
+							'gbus'=>'Kenneth Levene Graduate School of Business',
+							'jsgspp'=>'Johnson Shoyama Graduate School of Public Policy',
+							'khs'=>'Faculty of Kinesiology and Health Studies',
+							'lacite'=>'La Cit&eacute;',
+							'luther'=>'Luther College',
+							'luthervssn'=>'Luther College VSSN',
+							'map'=>'Faculty of Media, Art, and Performance',
+							'nursing'=>'Faculty of Nursing',
+							'scbscn'=>'SCBScN',
+							'science'=>'Faculty of Science',
+							'socialwork'=>'Faculty of Social Work');
     //error_log("theme: " . $COURSE->theme);
 	if ($COURSE->theme != 'urcourses_default' && $COURSE->theme !== NULL && !empty($COURSE->theme)) {
 		$currthemeelms = explode('_',$COURSE->theme);

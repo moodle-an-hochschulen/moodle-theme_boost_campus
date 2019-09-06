@@ -2,15 +2,14 @@
 <!-- Generator: Adobe Illustrator 15.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1"
-	 id="svg75" sodipodi:docname="icon.svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" inkscape:version="0.92.2 5c3e80d, 2017-08-06" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"
+	 id="svg75" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:svg="http://www.w3.org/2000/svg" inkscape:version="0.92.2 5c3e80d, 2017-08-06" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" sodipodi:docname="icon.svg" xmlns:cc="http://creativecommons.org/ns#"
 	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px" height="24px"
 	 viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
-<sodipodi:namedview  bordercolor="#666666" borderopacity="1" id="namedview77" inkscape:window-height="563" objecttolerance="10" pagecolor="#ffffff" gridtolerance="10" guidetolerance="10" inkscape:pageopacity="0" inkscape:pageshadow="2" inkscape:window-width="1114" showgrid="false" inkscape:cy="12" inkscape:zoom="9.8333333" inkscape:cx="12" inkscape:window-x="328" inkscape:window-y="155" inkscape:window-maximized="0" inkscape:current-layer="svg75">
+<sodipodi:namedview  objecttolerance="10" id="namedview77" inkscape:window-y="155" bordercolor="#666666" inkscape:window-x="328" borderopacity="1" inkscape:window-width="1114" inkscape:cx="12" showgrid="false" inkscape:cy="12" inkscape:pageopacity="0" inkscape:zoom="9.8333333" inkscape:pageshadow="2" inkscape:window-maximized="0" inkscape:window-height="563" pagecolor="#ffffff" gridtolerance="10" guidetolerance="10" inkscape:current-layer="svg75">
 	</sodipodi:namedview>
 <g id="g1134" transform="matrix(0.24,0,0,0.24,-3.084,0.048)">
 	<g id="g1100">
-		
-			<path id="path1096" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#999999" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+		<path id="path1096" fill="#FFFFFF" stroke="#999999" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
 			M92.302,2.201c3.398,0,5.998,2.6,5.998,5.699v83.803c0,3.198-2.702,5.697-5.998,5.697H32.9c-3.3,0-6-2.6-6-5.697V7.899
 			c0-3.2,2.7-5.699,6-5.699H92.302L92.302,2.201z"/>
 	</g>
@@ -24,16 +23,14 @@
 <g id="_375-Present">
 	<rect x="5.318" y="5.25" fill="#999999" width="13.25" height="1.882"/>
 	<g>
-		<rect id="polyline13_1_" x="5.318" y="5.25" fill="none" stroke="#DBDBDB" width="13.25" height="13.881"/>
+		<rect id="polyline13_1_" x="5.318" y="5.25" fill="none" stroke="#DBDBDB" width="13.25" height="9.917"/>
 	</g>
-	<line id="line23_1_" fill="none" stroke="#DBDBDB" x1="14.568" y1="18.801" x2="14.568" y2="5.683"/>
+	<line id="line23_1_" fill="none" stroke="#DBDBDB" x1="14.568" y1="15.051" x2="14.568" y2="5.683"/>
 	<line id="line23_3_" fill="none" stroke="#DBDBDB" x1="5.318" y1="7.132" x2="18.568" y2="7.132"/>
 	<line id="line23_4_" fill="none" stroke="#DBDBDB" x1="5.318" y1="9.132" x2="18.568" y2="9.132"/>
 	<line id="line23_5_" fill="none" stroke="#DBDBDB" x1="5.318" y1="11.132" x2="18.568" y2="11.132"/>
 	<line id="line23_6_" fill="none" stroke="#DBDBDB" x1="5.318" y1="13.133" x2="18.568" y2="13.133"/>
-	<line id="line23_7_" fill="none" stroke="#DBDBDB" x1="5.318" y1="15.133" x2="18.568" y2="15.133"/>
-	<line id="line23_8_" fill="none" stroke="#DBDBDB" x1="5.318" y1="17.133" x2="18.568" y2="17.133"/>
-	<line id="line23_2_" fill="none" stroke="#DBDBDB" x1="9.568" y1="18.801" x2="9.568" y2="5.683"/>
+	<line id="line23_2_" fill="none" stroke="#DBDBDB" x1="9.568" y1="15.051" x2="9.568" y2="5.683"/>
 </g>
 <g>
 	<polyline fill="#DD5B26" points="10.936,13.959 0,13.959 0,3.515 10.936,3.515 10.936,13.959 	"/>
@@ -46,5 +43,18 @@
 	<polyline fill="#08743B" points="10.913,13.938 0,13.938 0,3.515 10.913,3.515 10.913,13.938 	"/>
 	<polyline fill="#FFFFFF" points="8.443,11.435 6.615,11.435 5.368,9.67 4.057,11.435 2.223,11.435 4.5,8.57 2.66,6.064 
 		4.516,6.064 5.377,7.427 6.294,6.064 8.18,6.064 6.253,8.57 8.443,11.435 	"/>
+</g>
+<g>
+	<path fill="#999999" d="M6.957,21.404H5.875l1.432-2.269l-1.362-2.184h1.111l0.794,1.449l0.816-1.449h1.075L8.38,19.1l1.447,2.305
+		h-1.13l-0.846-1.519L6.957,21.404z"/>
+	<path fill="#999999" d="M10.622,16.952h0.931v3.651h2.223v0.801h-3.153V16.952z"/>
+	<path fill="#999999" d="M15.305,20.03c0.029,0.203,0.086,0.355,0.17,0.456c0.154,0.183,0.42,0.274,0.793,0.274
+		c0.225,0,0.406-0.024,0.547-0.072c0.266-0.093,0.396-0.265,0.396-0.517c0-0.147-0.064-0.261-0.193-0.342
+		c-0.131-0.078-0.336-0.147-0.619-0.208l-0.482-0.105c-0.473-0.104-0.799-0.219-0.977-0.342c-0.299-0.205-0.449-0.526-0.449-0.964
+		c0-0.398,0.146-0.729,0.439-0.993c0.295-0.264,0.725-0.396,1.295-0.396c0.475,0,0.879,0.124,1.215,0.373
+		c0.336,0.248,0.512,0.609,0.527,1.083h-0.895c-0.016-0.269-0.137-0.459-0.359-0.571c-0.148-0.074-0.332-0.112-0.553-0.112
+		c-0.246,0-0.443,0.049-0.59,0.146s-0.219,0.231-0.219,0.404c0,0.159,0.072,0.278,0.217,0.356c0.092,0.053,0.289,0.114,0.592,0.185
+		l0.781,0.185c0.342,0.08,0.598,0.188,0.77,0.323c0.266,0.209,0.398,0.513,0.398,0.909c0,0.406-0.158,0.744-0.473,1.014
+		c-0.314,0.269-0.758,0.403-1.332,0.403c-0.586,0-1.047-0.133-1.383-0.397s-0.504-0.629-0.504-1.092H15.305z"/>
 </g>
 </svg>

@@ -403,11 +403,12 @@ body.arts .page-navbkg .singlebutton button:hover {
 	#page-header .page-navbkg {
 	    padding: .25rem 0.65rem;
     }
-
+	/*
     .course-content ul.ctopics li.section.main .side {
         display: none;
     }
-    .course-content ul.ctopics li.section.main .content {
+	*/
+    body:not(.editing) > .course-content ul.ctopics li.section.main .content {
         margin: 0 !important;
     }
 
@@ -856,10 +857,12 @@ body.pagelayout-secure nav {
     padding: 0.15em 0.5em 0.15em 0.2em;
     color: #888;
     font-size: 0.85em;
+	border-radius: .25em;
 }
 .course-content .action-menu .dropdown-toggle:before {
     font-family: FontAwesome;
     content: '\f013\a0';
+	color: #888;
 }
 
 body.format-topcoll.editing .course-content ul.topics li.section div.sectionbody.toggledsection a.editsumm {
@@ -874,7 +877,7 @@ a.editsumm {
     padding: .15em .5em .15em .2em;
     color: #888;
     border: solid 1px #dcdcdc;
-    border-radius: 0;
+    border-radius: 0.25em;
 }
 
 a.editsumm:before {
@@ -888,6 +891,7 @@ div.section-modchooser a, a.tiles-summary-edit {
     font-size: .85em;
     color: #888;
     border: solid 1px #dcdcdc;
+	border-radius: 0.25em;
 }
 
 
@@ -901,9 +905,11 @@ div.section-modchooser a, a.tiles-summary-edit {
  
 	body.format-topcoll.editing ul.ctopics .section .activity .contentwithoutlink {
 	    display: inline;
-	    padding-right: 80px;
+	    /*padding-right: 80px;*/
 	}
-
+	
+	body.format-topcoll.editing ul.ctopics li.activity p
+	
 	.section .activity .actions {
 	    position: absolute !important;
 	    right: -30px;
@@ -1714,16 +1720,20 @@ body.path-mod-quiz #region-main-settings-menu.has-blocks {
 }
 
 //prevents text after link from going outside of boxes on mobile and increasing pg width past boundaries
+@media (max-width: 576px){
 .course-content ul.topics .section .contentafterlink {
     max-width: 57%;
     word-wrap: break-word;
 }
-
+}
 
 ul.section.img-text {
     padding-left: 0;
 }
 
+body.format-topcoll .course-content ul.ctopics li.section .summary {
+	padding-top: 1em;
+}
 
 /* Boost resets UL padding to 1rem; let's change back to w3c recommended default, at least in main content */
 /*
@@ -1735,6 +1745,7 @@ ul.section.img-text {
 	padding-left: 0;
 }
 */
+
 #region-main .course-content ul.ctopics {
     padding-right: 10px;
 }
@@ -2363,7 +2374,87 @@ display: block;
 }
 
 #page-course-view-topcoll.editing.jsenabled .course-content ul.topics li.section .right{
+	margin-top: 2.25rem;
     padding-right: 5em;
+}
+
+body.format-topcoll.editing .section .activity .activityinstance {
+	padding-right: 110px;
+}
+
+@media (max-width:768px) {
+	/*
+	#page-course-view-topcoll.editing.jsenabled .course-content ul.topics li.section .right{
+		margin-top: 1.25rem;
+	}
+	*/
+	#page-header .pt-3 {
+		padding-top: 0 !important;
+	}
+	
+	body.editing.format-topcoll .section .activity.modtype_label.label .no-overflow .no-overflow {
+		margin-right: 0;
+	}
+	
+	
+	.course-content ul.topics li.section.main,
+	.course-content ul.weeks li.section.main, 
+	.course-content ul.periods li.section.main {
+		padding: 1.75em 0;
+	}
+	
+	.course-content .action-menu .dropdown-toggle:after {
+    	position: absolute;
+    	margin-left: -2.25em;
+		margin-top: 0.25em;
+		color: #888;
+	}
+
+	.course-content .action-menu .dropdown-toggle {
+		display: inline-block;
+		width: 25px;
+		overflow: hidden;
+		color: #f6f6f6;
+	}
+	body.format-topcoll #region-main {
+	    border: none;
+	    padding: 1em 0 1em 0.25em;
+	}
+	body.format-topcoll #region-main .course-content ul.ctopics {
+	    padding-right: 10px;
+	}
+	.editing .course-content ul.ctopics li.section.main .side {
+		margin-top: 0;
+	}
+	#page-course-view-topcoll.editing.jsenabled .course-content ul.topics li.section .right {
+		padding-right: 0;
+	}
+	
+	body.format-topcoll #region-main .course-content ul.ctopics .section .filler {
+		display: none;
+	}
+	
+	#page-course-view-topcoll.editing .course-content ul.ctopics li.section .content {
+	    margin-top: 0.5em;
+	}
+	
+	#page-footer {
+		padding-left: 1em;
+		padding-right: 1em;
+	}
+}
+
+.editing .course-content ul.ctopics li.section.main .left.side .section-handle {
+	padding-left: 0.25em;
+}
+
+#page-course-view-topcoll.editing .course-content ul.ctopics .section .left.side {
+	position: relative;
+	top: -0.5em;
+}
+
+#page-course-view-topcoll.editing .course-content ul.topics li.section .sectionhead .sectionname .inplaceeditable a {
+	padding-right: 0.5em;
 }
 
 #page-course-view-topcoll.editing .course-content ul.ctopics li.section.main .content {
@@ -2371,8 +2462,20 @@ display: block;
     margin-top: 18px;
 }
 
-
+.course-content ul.topics .section .contentafterlink, .course-content ul.weeks .section .contentafterlink, .course-content ul.periods .section .contentafterlink {
+    border-left: 2px solid #ccc;
+}
 
 #page-my-index .box.generalbox {
     padding-left: 1em;
+}
+
+.course-img-uploader-container .course-image-uploader,
+.course-hdr-chooser-container .course-hdr-chooser,
+.course-hdr-chooser-container .course-hdr-chooser .btn-sm:hover {
+	border-radius: 0.15em !important;
+}
+
+.course-hdr-chooser-container .course-hdr-chooser .btn-sm {
+	border-radius: 0;
 }

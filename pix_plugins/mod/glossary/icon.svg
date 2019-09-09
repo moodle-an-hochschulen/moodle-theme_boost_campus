@@ -3,17 +3,17 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="24px" height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
-<path fill="#FFFFFF" stroke="#999999" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M15.708,6.504
-	c-0.72,0-1.271-0.552-1.271-1.272V0.648H4.717c-0.72,0-1.272,0.552-1.272,1.272v20.232c0,0.72,0.552,1.271,1.272,1.271h14.545
-	c0.719,0,1.271-0.552,1.271-1.271V6.504H15.708z"/>
+<path id="path4" fill="#FFFFFF" stroke="#BBBBBB" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+	M16.977,6.744c-0.646,0-1.15-0.552-1.15-1.248V0.96H4.944c-0.648,0-1.152,0.552-1.152,1.248v19.968c0,0.696,0.504,1.248,1.152,1.248
+	h15.272c0.647,0,1.152-0.552,1.152-1.248V6.744H16.977z"/>
 <g>
-	<circle fill="#009688" cx="12" cy="9.384" r="5.808"/>
-	<path fill="#FFFFFF" d="M13.439,10.2h-0.312l-0.099-0.097c0.386-0.432,0.603-1.008,0.603-1.632c0-1.392-1.129-2.496-2.497-2.496
-		c-1.368,0-2.496,1.128-2.496,2.496c0,1.368,1.128,2.496,2.496,2.496c0.623,0,1.176-0.239,1.631-0.6l0.096,0.096v0.312l1.921,1.92
-		l0.575-0.575L13.439,10.2 M11.136,10.2c-0.961,0-1.729-0.768-1.729-1.729c0-0.96,0.768-1.728,1.729-1.728
-		c0.959,0,1.727,0.768,1.727,1.728C12.863,9.432,12.095,10.2,11.136,10.2"/>
+	<circle fill="#009688" cx="12.58" cy="9.327" r="5.807"/>
+	<path fill="#FFFFFF" d="M14.02,10.144h-0.312l-0.1-0.097c0.387-0.432,0.604-1.008,0.604-1.632c0-1.392-1.129-2.496-2.497-2.496
+		S9.218,7.047,9.218,8.415c0,1.368,1.128,2.496,2.496,2.496c0.623,0,1.175-0.239,1.632-0.6l0.096,0.096v0.312l1.92,1.92l0.576-0.575
+		L14.02,10.144 M11.716,10.144c-0.961,0-1.729-0.768-1.729-1.729c0-0.96,0.768-1.728,1.729-1.728c0.958,0,1.728,0.768,1.728,1.728
+		C13.443,9.376,12.674,10.144,11.716,10.144"/>
 </g>
-<path fill="#FFFFFF" stroke="#999999" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M15.708,6.504
-	h4.849l-6.119-5.856v4.584C14.438,5.952,15.014,6.504,15.708,6.504z"/>
-<text transform="matrix(1 0 0 1 8.1597 20.9189)" fill="#999999" font-family="'Sathu'" font-size="6">Aa</text>
+<text transform="matrix(1 0 0 1 8.7397 20.8633)" fill="#999999" font-family="'Sathu'" font-size="6">Aa</text>
+<path id="path2" fill="#FFFFFF" stroke="#BBBBBB" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+	M16.977,6.744h4.416L15.8,0.96v4.536C15.8,6.168,16.328,6.744,16.977,6.744z"/>
 </svg>

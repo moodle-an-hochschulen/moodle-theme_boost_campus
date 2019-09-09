@@ -2,23 +2,24 @@
 <!-- Generator: Adobe Illustrator 15.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1"
-	 id="svg32" sodipodi:docname="icon.svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" inkscape:version="0.92.2 5c3e80d, 2017-08-06" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"
+	 id="svg32" sodipodi:docname="icon.svg" inkscape:version="0.92.2 5c3e80d, 2017-08-06" xmlns:cc="http://creativecommons.org/ns#" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns:dc="http://purl.org/dc/elements/1.1/"
 	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px" height="24px"
 	 viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
-<sodipodi:namedview  bordercolor="#666666" borderopacity="1" id="namedview34" inkscape:window-height="699" objecttolerance="10" pagecolor="#ffffff" gridtolerance="10" guidetolerance="10" inkscape:pageopacity="0" inkscape:pageshadow="2" inkscape:window-width="1205" showgrid="false" inkscape:cy="11.84843" inkscape:zoom="9.8333333" inkscape:cx="12" inkscape:window-x="0" inkscape:window-y="0" inkscape:window-maximized="0" inkscape:current-layer="svg32">
+<sodipodi:namedview  objecttolerance="10" id="namedview34" borderopacity="1" inkscape:window-y="0" bordercolor="#666666" inkscape:window-x="0" inkscape:window-width="1205" inkscape:cx="12" showgrid="false" inkscape:cy="11.84843" gridtolerance="10" inkscape:pageopacity="0" inkscape:zoom="9.8333333" inkscape:pageshadow="2" inkscape:window-maximized="0" inkscape:window-height="699" pagecolor="#ffffff" guidetolerance="10" inkscape:current-layer="svg32">
 	</sodipodi:namedview>
-<path id="path2" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#999999" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+<path id="path2" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#BBBBBB" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
 	M16.977,6.744h4.416L15.8,0.96v4.536C15.8,6.168,16.328,6.744,16.977,6.744z"/>
-<path id="path4" inkscape:connector-curvature="0" sodipodi:nodetypes="sscsssssscs" fill="#FFFFFF" stroke="#999999" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
-	M16.977,6.744c-0.648,0-1.152-0.552-1.152-1.248V0.96H4.944c-0.648,0-1.152,0.552-1.152,1.248v19.968
-	c0,0.696,0.504,1.248,1.152,1.248h15.272c0.647,0,1.152-0.552,1.152-1.248V6.744H16.977z"/>
-<path id="path8" inkscape:connector-curvature="0" sodipodi:nodetypes="cccc" fill="none" stroke="#666666" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
-	M7.248,16.416h10.424 M7.248,19.92h10.424"/>
+<path id="path4" inkscape:connector-curvature="0" sodipodi:nodetypes="sscsssssscs" fill="#FFFFFF" stroke="#BBBBBB" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+	M16.977,6.744c-0.646,0-1.15-0.552-1.15-1.248V0.96H4.944c-0.648,0-1.152,0.552-1.152,1.248v19.968c0,0.696,0.504,1.248,1.152,1.248
+	h15.272c0.647,0,1.152-0.552,1.152-1.248V6.744H16.977z"/>
+<path id="path8" inkscape:connector-curvature="0" sodipodi:nodetypes="cccc" fill="#FFFFFF" stroke="#BBBBBB" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+	M7.248,18.084h10.424 M7.248,16.084h10.424 M7.248,14.084h3.424 M7.248,12.083h3.424 M7.248,10.25h10.424 M7.248,8.25h10.424
+	 M7.248,6.083h4.424 M7.248,20.083h10.424"/>
 <g id="g30" transform="matrix(1.2433951,0,0,1.2249888,7.6656567,-13.274337)">
-	<path id="path24" inkscape:connector-curvature="0" fill="#297ACC" d="M5.778,18.004l1.272,2.184l1.249,2.208h-5.04l1.248-2.208
-		L5.778,18.004"/>
-	<path id="path26" inkscape:connector-curvature="0" fill="#1A4C87" d="M1.699,19.156l0.936,1.608l0.936,1.632h-3.72l0.912-1.632
-		L1.699,19.156"/>
-	<ellipse id="circle28" fill="#FFCC33" cx="0.018" cy="17.884" rx="1.134" ry="1.117"/>
+	<path id="path24" inkscape:connector-curvature="0" fill="#297ACC" d="M6.759,20.76l0.609,1.048l0.598,1.059H5.551l0.598-1.059
+		L6.759,20.76"/>
+	<path id="path26" inkscape:connector-curvature="0" fill="#1A4C87" d="M4.803,21.313l0.448,0.77L5.7,22.867H3.916l0.437-0.784
+		L4.803,21.313"/>
+	<ellipse id="circle28" fill="#FFCC33" cx="3.996" cy="20.702" rx="0.543" ry="0.535"/>
 </g>
 </svg>

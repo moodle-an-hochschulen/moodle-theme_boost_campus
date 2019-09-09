@@ -2,7 +2,7 @@
 <!-- Generator: Adobe Illustrator 15.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1"
-	 id="svg28" sodipodi:docname="icon.svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" inkscape:version="0.92.2 5c3e80d, 2017-08-06" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"
+	 id="svg28" sodipodi:docname="icon.svg" inkscape:version="0.92.2 5c3e80d, 2017-08-06" xmlns:cc="http://creativecommons.org/ns#" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns:dc="http://purl.org/dc/elements/1.1/"
 	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px" height="24px"
 	 viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
 <g id="Layer_2">
@@ -11,7 +11,7 @@
 			<g>
 				<path id="path1096_1_" inkscape:connector-curvature="0" fill="#FFFFFF" d="M92.554,2.201c3.394,0,5.998,2.6,5.998,5.699v83.803
 					c0,3.198-2.702,5.697-5.998,5.697H33.15c-3.3,0-6-2.6-6-5.697V7.899c0-3.2,2.7-5.699,6-5.699H92.554L92.554,2.201z"/>
-				<path fill="#999999" d="M92.554,99.483H33.15c-4.458,0-8.083-3.491-8.083-7.78V7.899c0-4.291,3.625-7.782,8.083-7.782h59.403
+				<path fill="#BBBBBB" d="M92.554,99.483H33.15c-4.458,0-8.083-3.491-8.083-7.78V7.899c0-4.291,3.625-7.782,8.083-7.782h59.403
 					c4.456,0,8.081,3.491,8.081,7.782v83.803C100.635,95.991,97.009,99.483,92.554,99.483z M33.15,4.284
 					c-2.195,0-3.916,1.589-3.916,3.615v83.803c0,1.957,1.794,3.613,3.916,3.613h59.403c2.193,0,3.914-1.587,3.914-3.613V7.899
 					c0-1.994-1.758-3.615-3.914-3.615H33.15z"/>
@@ -53,7 +53,7 @@
 	<g id="g7505" transform="translate(-34.33791)">
 		<g id="g7485">
 			
-				<linearGradient id="polygon7483_2_" gradientUnits="userSpaceOnUse" x1="111.6836" y1="-749.918" x2="111.6836" y2="-756.3364" gradientTransform="matrix(1 0 0 -1 -68.4375 -742)">
+				<linearGradient id="polygon7483_2_" gradientUnits="userSpaceOnUse" x1="146.0235" y1="1541.918" x2="146.0235" y2="1548.3359" gradientTransform="matrix(1 0 0 1 -102.7754 -1534)">
 				<stop  offset="0" style="stop-color:#58DB17"/>
 				<stop  offset="1" style="stop-color:#45BF08"/>
 			</linearGradient>
@@ -64,7 +64,7 @@
 	<g id="g7505_1_" transform="translate(-34.33791)">
 		<g id="g7485_1_">
 			
-				<linearGradient id="polygon7483_3_" gradientUnits="userSpaceOnUse" x1="111.6836" y1="-755.9185" x2="111.6836" y2="-762.3364" gradientTransform="matrix(1 0 0 -1 -68.4375 -742)">
+				<linearGradient id="polygon7483_3_" gradientUnits="userSpaceOnUse" x1="146.0235" y1="1547.918" x2="146.0235" y2="1554.3359" gradientTransform="matrix(1 0 0 1 -102.7754 -1534)">
 				<stop  offset="0" style="stop-color:#58DB17"/>
 				<stop  offset="1" style="stop-color:#45BF08"/>
 			</linearGradient>

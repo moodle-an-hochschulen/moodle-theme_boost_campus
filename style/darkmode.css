@@ -123,8 +123,8 @@ table, table td, table tr, table th, .forumpost, .path-mod-feedback table.analys
 
 .btn-primary, #toggle-sections .btn.btn-primary {
     color: #f8f1f9;
-    background-color: #898884!important;
-    border-color: #898884!important;
+    background-color: #848889 !important;
+    border-color: #848889 !important;
 }
 .sectionhead.toggle.toggle-arrow {
     background-color: #d2d0cb !important;
@@ -136,7 +136,7 @@ table, table td, table tr, table th, .forumpost, .path-mod-feedback table.analys
 }
 
 #page-course-view-tiles .expand-collapse-all-btns .btn.btn-secondary{
-    color: #212529!important;
+    color: #212529 !important;
 }
 #page-course-view-tiles .expand-collapse-all-btns .btn.btn-secondary:hover {
     background-color: #dad8ce;
@@ -680,4 +680,89 @@ div.section-modchooser a, .course-content .action-menu .dropdown-toggle, a.edits
     background: #474541;
     border-color: rgba(10, 10, 10, 0.25);
     color: #ffdaa9 !important;
+}
+
+
+
+#boost-campus-course-settings .nav-tabs {
+    background: none;
+}
+
+#boost-campus-course-settings .nav-tabs .nav-link {
+    border-color: #4f4f4d #4f4f4d #999;
+	background-color: #666;
+	color: #333;
+}
+
+#boost-campus-course-settings .nav-tabs .nav-link:hover, 
+#boost-campus-course-settings .nav-tabs .nav-link:focus {
+    background-color: #838381;
+	color: #333;
+}
+
+#boost-campus-course-settings .nav-tabs .nav-link.active,
+#boost-campus-course-settings .nav-tabs .nav-link.active:hover {
+    background-color: #6f6e6a;
+    border-color: solid 1px #6f6e6a;
+	color: #333;
+}
+
+body.path-mod-mail #mail_container .btn-with, 
+body.path-mod-mail #mail_container .btn-with:hover {
+	color: #fff;
+	background-color: #4f4f4d;
+}
+
+body.path-mod-mail #mail_container .btn-outline-primary {
+	background-color: transparent !important;
+}
+body.path-mod-mail #mail_container .btn-outline-primary:hover {
+	background-color: #2f2d29 !important;
+	color: #847b62;
+}
+
+
+
+
+body.path-mod-mail #mail_container .btn-outline-primary:active,
+body.path-mod-mail #mail_container .btn-outline-primary:focus {
+    background-color: #f0f8ff;
+	color: #247dcc;
+    border-color: #ced4da;
+}
+
+body.path-mod-mail #mail_container .mail-list-toolbar .btn-primary {
+	background-color: #247dcc;
+    border-color: #247dcc;
+}
+
+body.path-mod-mail #mail_container .dropdown-item.active {
+	color: #fff;
+	background-color: #999;
+}
+
+body.path-mod-mail #mail_container .dropdown-item:active {
+    color: #fff;
+    text-decoration: none;
+    background-color: #247dcc;
+}
+
+body.path-mod-mail #mail_container .btn-outline-primary:hover {  
+	background-color: #f0f8ff;
+    border-color: #ced4da;
+	color: #848889;
+}
+
+body.path-mod-mail #mail_container .list-group-item-primary {
+	background-color: #247dcc;
+	color: #fff;
+}
+
+body.path-mod-mail #mail_container .list-group-item-primary .mm-preview {
+	color: #f2f2f2;
+}
+
+body.path-mod-mail #mail_container .mm-message .quote {
+	background-color: #999;
+	padding: .75rem !important;
 }

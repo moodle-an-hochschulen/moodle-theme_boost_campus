@@ -3,16 +3,16 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="24px" height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
-<path fill="#FFFFFF" stroke="#999999" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M15.708,6.42
-	c-0.72,0-1.271-0.552-1.271-1.271V0.564h-9.72c-0.72,0-1.272,0.552-1.272,1.271v20.232c0,0.72,0.552,1.271,1.272,1.271h14.544
-	c0.719,0,1.271-0.552,1.271-1.271V6.42H15.708z"/>
+<path id="path4" inkscape:connector-curvature="0" sodipodi:nodetypes="sscsssssscs" fill="#FFFFFF" stroke="#BBBBBB" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+	M16.977,6.744c-0.646,0-1.149-0.552-1.149-1.248V0.96H4.944c-0.648,0-1.152,0.552-1.152,1.248v19.968
+	c0,0.696,0.504,1.248,1.152,1.248h15.272c0.647,0,1.152-0.552,1.152-1.248V6.744H16.977z"/>
 <g>
-	<path fill="#339933" d="M14.076,4.56l1.271,2.184l1.248,2.208h-5.041l1.248-2.208L14.076,4.56"/>
+	<path fill="#339933" d="M14.076,4.56l1.271,2.184l1.248,2.208h-5.042l1.248-2.208L14.076,4.56"/>
 	<path fill="#336633" d="M9.996,5.712l0.937,1.608l0.936,1.632h-3.72L9.06,7.32L9.996,5.712"/>
 	<circle fill="#FFCC33" cx="8.315" cy="4.44" r="0.912"/>
 </g>
 <g>
-	<path fill="none" stroke="#999999" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M7.296,16.057h9.384
+	<path fill="none" stroke="#BBBBBB" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M7.296,16.057h9.384
 		 M7.296,12.24h9.384 M7.296,19.968h9.384"/>
 </g>
 <g>
@@ -20,6 +20,6 @@
 	<path fill="none" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M1.968,11.952h7.008
 		 M6.36,9.336l2.616,2.616L6.36,14.568"/>
 </g>
-<path fill="#FFFFFF" stroke="#999999" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M15.708,6.42
-	h4.848l-6.119-5.855v4.584C14.437,5.868,15.013,6.42,15.708,6.42z"/>
+<path id="path2" inkscape:connector-curvature="0" fill="#FFFFFF" stroke="#BBBBBB" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+	M16.977,6.744h4.416L15.8,0.96v4.536C15.8,6.168,16.328,6.744,16.977,6.744z"/>
 </svg>

@@ -2481,23 +2481,29 @@ body.format-topcoll.editing .section .activity .activityinstance {
 }
 
 
-#boost-campus-course-settings .nav-tabs {
+#boost-campus-course-settings .nav-tabs,
+#boost-campus-activity-settings .nav-tabs {
     background: none;
 }
 
-#boost-campus-course-settings .nav-tabs .nav-link {
+#boost-campus-course-settings .nav-tabs .nav-link,
+#boost-campus-activity-settings .nav-tabs .nav-link {
     border-color: #e9ecef #fcfcfc #dee2e6;
 	background-color: #d1d1d1;
 	color: #666;
 }
 
 #boost-campus-course-settings .nav-tabs .nav-link:hover, 
-#boost-campus-course-settings .nav-tabs .nav-link:focus {
+#boost-campus-course-settings .nav-tabs .nav-link:focus,
+#boost-campus-activity-settings .nav-tabs .nav-link:hover, 
+#boost-campus-activity-settings .nav-tabs .nav-link:focus {
     background-color: #dde1e3;
 }
 
 #boost-campus-course-settings .nav-tabs .nav-link.active,
-#boost-campus-course-settings .nav-tabs .nav-link.active:hover {
+#boost-campus-course-settings .nav-tabs .nav-link.active:hover,
+#boost-campus-activity-settings .nav-tabs .nav-link.active,
+#boost-campus-activity-settings .nav-tabs .nav-link.active:hover {
     background-color: #f2f2f2;
 }
 

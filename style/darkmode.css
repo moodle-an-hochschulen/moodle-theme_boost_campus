@@ -684,24 +684,30 @@ div.section-modchooser a, .course-content .action-menu .dropdown-toggle, a.edits
 
 
 
-#boost-campus-course-settings .nav-tabs {
+#boost-campus-course-settings .nav-tabs,
+#boost-campus-activity-settings .nav-tabs {
     background: none;
 }
 
-#boost-campus-course-settings .nav-tabs .nav-link {
+#boost-campus-course-settings .nav-tabs .nav-link,
+#boost-campus-activity-settings .nav-tabs .nav-link {
     border-color: #4f4f4d #4f4f4d #999;
 	background-color: #666;
 	color: #333;
 }
 
 #boost-campus-course-settings .nav-tabs .nav-link:hover, 
-#boost-campus-course-settings .nav-tabs .nav-link:focus {
+#boost-campus-course-settings .nav-tabs .nav-link:focus,
+#boost-campus-activity-settings .nav-tabs .nav-link:hover, 
+#boost-campus-activity-settings .nav-tabs .nav-link:focus {
     background-color: #838381;
 	color: #333;
 }
 
 #boost-campus-course-settings .nav-tabs .nav-link.active,
-#boost-campus-course-settings .nav-tabs .nav-link.active:hover {
+#boost-campus-course-settings .nav-tabs .nav-link.active:hover,
+#boost-campus-activity-settings .nav-tabs .nav-link.active,
+#boost-campus-activity-settings .nav-tabs .nav-link.active:hover {
     background-color: #6f6e6a;
     border-color: solid 1px #6f6e6a;
 	color: #333;

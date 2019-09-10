@@ -1603,22 +1603,6 @@ div[data-region="drawer-toggle"] button.btn-secondary:focus {
 }
 
 
-
-body.path-mod-book #region-main-settings-menu > div,
-body#page-mod-quiz-attempt #region-main-settings-menu > div {
-    position: absolute;
-    right: 375px;
-    z-index: 100;
-    margin: 1rem;
-}
-
-body.path-mod-book #region-main-settings-menu.has-blocks,
-body.path-mod-quiz #region-main-settings-menu.has-blocks {
-    display: inline-block;
-    width: 100%;
-}
-
-
 /**
  * Mod book.
  */

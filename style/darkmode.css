@@ -768,7 +768,7 @@ body.path-mod-mail #mail_container .list-group-item-primary .mm-preview {
 	color: #f2f2f2;
 }
 
-body.path-mod-mail #mail_container .mm-message .quote {
+body.path-mod-mail .mm-message .quote {
 	background-color: #999;
 	padding: .75rem !important;
 }

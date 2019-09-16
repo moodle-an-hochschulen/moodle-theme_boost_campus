@@ -262,7 +262,8 @@ class core_renderer extends \theme_boost\output\core_renderer {
         else  $header->instructnum = "smalllist"; 
         
 		$hascoursecat = $this->ur_check_course_cat();
-		$coursecat = (!empty($hascoursecat)) ? $hascoursecat['name'] : 'Default';
+		
+		$coursecat = (!empty($hascoursecat)) ? $hascoursecat['name'] : '';
         $header->facultydep = $coursecat;
         
         // JL EDIT - Add course image uploader button.
@@ -653,9 +654,9 @@ class core_renderer extends \theme_boost\output\core_renderer {
                 $ra->rolename = $aliasnames[$ra->roleid]->name;
             }
 
-            $fullname = '<span>' . fullname($ra, $canviewfullnames) . '</span>';
+            $fullname = fullname($ra, $canviewfullnames);
             $usr_img = '<img class="instr-avatar img-rounded" src="'.$CFG->wwwroot.'/user/pix.php/'.$ra->id.'/f2.jpg" height="24" width="24" title="Profile picture of '.$fullname.'" alt="Profile picture of '.$fullname.'" />';
-            $namesarray[$ra->id] = html_writer::link(new moodle_url('/user/view.php', array('id'=>$ra->id, 'course'=>$COURSE->id)), $usr_img.' '.$fullname);
+            $namesarray[$ra->id] = html_writer::link(new moodle_url('/user/view.php', array('id'=>$ra->id, 'course'=>$COURSE->id)), $usr_img.' <span>'.$fullname.'</span>');
         }
 
         if (!empty($namesarray)) {
@@ -666,10 +667,6 @@ class core_renderer extends \theme_boost\output\core_renderer {
 			return $course_authornames;
         } else return '';
     }
-
-
-
-
 
 }
 
@@ -739,7 +736,7 @@ function ur_check_course_cat() {
 
 	$ur_categories = array('','default'=>'',
 							'arts'=>'Faculty of Arts',
-							'business'=>'Business Administration',
+							'business'=>'Faculty of Business Administration',
 							'campion'=>'Campion College',
 							'cnpp'=>'Collaborative Nurse Practitioner Program',
 							'education'=>'Faculty of Education',
@@ -753,7 +750,7 @@ function ur_check_course_cat() {
 							'luthervssn'=>'Luther College VSSN',
 							'map'=>'Faculty of Media, Art, and Performance',
 							'nursing'=>'Faculty of Nursing',
-							'scbscn'=>'SCBScN',
+							'scbscn'=>'',
 							'science'=>'Faculty of Science',
 							'socialwork'=>'Faculty of Social Work');
     //error_log("theme: " . $COURSE->theme);

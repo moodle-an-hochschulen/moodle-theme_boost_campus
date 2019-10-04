@@ -247,13 +247,116 @@ td.day.text-center.hasevent a,
     color: #f3f1f7;
 }
 
-.filemanager-container {
-    background-color: white!important;
-    color: black!important;
+
+div.editor_atto_toolbar {
+	background-color: #737373;
+    border: 1px solid #333 !important;
+}
+div.editor_atto_toolbar button {
+	background-color: #a1a1a1;
+}
+
+div.editor_atto_toolbar button .icon {
+	color: #333;
+}
+
+.editor_atto_toolbar button:hover {
+    background-image: radial-gradient(ellipse at center,#cdcdcd 60%,#a0a0a0 100%);
+    background-color: #aaa;
+}
+
+.editor_atto_toolbar button:active, .editor_atto_toolbar button.highlight {
+    background-image: radial-gradient(ellipse at center,#ddd 40%,#bbb 100%);
+    background-color: #a1a1a1;
+}
+
+div.editor_atto_toolbar button + button {
+    border-left: 1px solid #333;
+}
+
+div.editor_atto_toolbar div.atto_group {
+	background: #666;
+    border: 1px solid #333;
+    border-bottom: 1px solid #333;
+}
+
+div.editor_atto_toolbar div.atto_group button:first-child {
+	border-radius: 4px 0 0 4px;
+}
+div.editor_atto_toolbar div.atto_group button:last-child {
+	border-radius: 0 4px 4px 0;
+}
+
+div.editor_atto_toolbar div.atto_group button:only-child {
+	border-radius: 4px;
+}
+
+.editor_atto_notification .atto_info {
+    background-color: #737373;
+}
+
+.editor_atto_content_wrap, .editor_atto + textarea {
+	border: solid 1px #333;
+}
+
+.CodeMirror {
+	color: #efefef;
+    background: #333;
+}
+
+.CodeMirror-gutters {
+	background-color: #999;
+	border-color: #666;
+}
+
+.CodeMirror-linenumber {
+	color: #666;
+}
+
+.filemanager .filemanager-container {
+    background-color: #3a3a38 !important;
+    color: black !important;
+	border: 1px solid rgba(10, 10, 10, 0.25) !important;
+}
+
+.filemanager .filemanager-toolbar {
+    background-color: #737373 !important;
+}
+.filemanager .fp-pathbar {
+    background-color: #8c8c8c !important;
+}
+
+.filemanager .btn.btn-secondary {
+    background-color: #a1a1a1;
+    border-color: #545454;
+}
+
+.filemanager .fp-toolbar .btn.btn-secondary {
+	border-radius: 4px;
+}
+
+.filemanager .fp-viewbar .btn.btn-secondary:first-child {
+	border-radius: 4px 0 0 4px;
+}
+.filemanager .fp-viewbar .btn.btn-secondary:last-child {
+	border-radius: 0 4px 4px 0;
+}
+
+.filemanager .fp-viewbar:not(.disabled) a.checked:not(:disabled):not(.disabled) {
+	background-color: #bababa;
+	border-color: #545454;
 }
 
 .form-control, .form-control:focus, #conversation-actions-menu {
     color: #efede7!important;
+}
+
+.form-control {
+	border: 1px solid #333 !important;
+}
+
+.form-control:focus {
+	background-color: #33322f !important;
 }
 
 .font-italic {
@@ -484,8 +587,8 @@ ul.oublog-accordion li {
     border-bottom-color: #565352;
 }
 
-.message-drawer .border-top, .form-control:focus, .form-control {
-    border-color: rgba(10, 10, 10, 0.25)!important;
+.message-drawer .border-top {
+    border-color: #333 !important;
 }
 
 .message-drawer .bg-pulse-grey {

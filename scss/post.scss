@@ -2183,6 +2183,17 @@ body.format-topcoll.editing ul.ctopics .section .activity .action {
     }
 }
 
+.filemanager .fp-toolbar .btn.btn-secondary {
+	border-radius: 4px;
+}
+
+.filemanager .fp-viewbar .btn.btn-secondary:first-child {
+	border-radius: 4px 0 0 4px;
+}
+.filemanager .fp-viewbar .btn.btn-secondary:last-child {
+	border-radius: 0 4px 4px 0;
+}
+
 .coursesearchbox.invisiblefieldset {
     width: 100%;
 }

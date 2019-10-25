@@ -864,7 +864,6 @@ a[href^="mailto"]::before {
   -------------------------------------*/
 /* Improve the maintenance warning to be full width and to be displayed above the navdrawer navigation. */
 .maintenancewarning {
-    z-index: $zindex-dropdown;
     width: 100%;
     text-align: center;
     margin: 0 !important;

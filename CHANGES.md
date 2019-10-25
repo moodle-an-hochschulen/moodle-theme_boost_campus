@@ -4,6 +4,10 @@ moodle-theme_boost_campus
 Changes
 -------
 
+### Unreleased
+
+* 2019-10-28 - Removed CSS rule for maintenance warning due to upstream changes.
+
 ### Release v3.7-r2
 
 * 2019-06-21 - Removed SCSS fix because MDL-61319 has now been fixed and integrated.

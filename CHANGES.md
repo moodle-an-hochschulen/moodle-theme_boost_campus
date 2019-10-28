@@ -6,6 +6,7 @@ Changes
 
 ### Unreleased
 
+* 2019-10-28 - Changed the link in the README.md to get to the correct Font Awesome version.
 * 2019-10-28 - Adjusted login.mustache template due to upstream changes in theme Boost.
 * 2019-10-28 - Adjusted columns2.mustache template due to upstream changes in theme Boost.
 * 2019-10-28 - Adjusted loginform.mustache template due to upstream changes in Moodle core.

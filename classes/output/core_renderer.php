@@ -115,12 +115,12 @@ class core_renderer extends \core_renderer {
     /**
      * Override to be able to use uploaded images from admin_setting as well.
      *
-     * Returns the URL for the favicon.
+     * Returns the moodle_url for the favicon.
      *
      * KIZ MODIFICATION: This renderer function is copied and modified from /lib/outputrenderers.php
      *
      * @since Moodle 2.5.1 2.6
-     * @return string The favicon URL
+     * @return moodle_url The moodle_url for the favicon
      */
     public function favicon() {
         global $PAGE;

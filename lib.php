@@ -103,7 +103,8 @@ function theme_boost_campus_get_pre_scss($theme) {
         'helptextmodal' => ['helptextmodal'],
         'breakpoint' => ['breakpoint'],
         'blockcolumnwidth' => ['blockcolumnwidth'],
-        'blockcolumnwidthdashboard' => ['blockcolumnwidthdashboard']
+        'blockcolumnwidthdashboard' => ['blockcolumnwidthdashboard'],
+        'addablockposition' => ['addablockposition']
         // MODIFICATION END.
     ];
 

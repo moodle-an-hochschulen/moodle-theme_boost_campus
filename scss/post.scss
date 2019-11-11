@@ -1173,7 +1173,7 @@ a[href^="mailto"]::before {
 
 
 /*------------------------------------
-  Special: Local Plugins
+  Special: Additional Plugins
   -------------------------------------*/
 
 /* Special styles for plugin local_boostnavigation. */
@@ -1183,5 +1183,18 @@ a[href^="mailto"]::before {
     .list-group-item[data-parent-key^="localboostnavigationcustom"],
     .list-group-item[data-key="localboostnavigationcoursesections"][data-collapse="0"] + .list-group-item[href$="#section-0"] {
         border-top: none;
+    }
+}
+/* Special styles for plugin mod_attendance to fix problems with positioning of the table headers in editing mode when
+   the add a block widget is placed in the blocks column. */
+@if variable-exists(addablockposition) {
+    @if $addablockposition == 'positionblockregion' {
+        #page-mod-attendance-report .attendancereporttable .headcol {
+            left: 20px;
+        }
+        #page-mod-attendance-report.has-region-side-pre:not(.empty-region-side-pre) .attendancereporttable .headcol {
+            left: 20px;
+            width: 300px;
+        }
     }
 }

@@ -6,6 +6,7 @@ Changes
 
 ### Unreleased
 
+* 2019-11-11 - Improved loginform.mustache for the info box and maintenance box to fit to the login box.
 * 2019-11-08 - Added special CSS styles for plugin mod_attendance.
 * 2019-10-28 - Changed the link in the README.md to get to the correct Font Awesome version.
 * 2019-10-28 - Adjusted login.mustache template due to upstream changes in theme Boost.

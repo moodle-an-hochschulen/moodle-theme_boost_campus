@@ -4,7 +4,7 @@ moodle-theme_boost_campus
 Changes
 -------
 
-### Unreleased
+### Release v3.7-r3
 
 * 2019-11-13 - Improved Video JS Skin for hiding big play button in audio players and removed centered placement of this button in SCSS.
                IMPORTANT NOTE for ADMINS: If you want the button to be centered again, please add the class "vjs-big-play-centered"

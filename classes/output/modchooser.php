@@ -79,12 +79,22 @@ class modchooser extends chooser {
         });
 		*/
 		
-		$extras_list = array('IMS content package','Kaltura Video Presentation','RecordingsBN','Assignment Media','BigBlueButtonBN','Certificate','Checklist','Etherpad','External Tool', 'Lightbox Gallery', 'OU blog', 'Scheduler', 'Scorm Package', 'Skype');
+		$extras_list = array('IMS content package', 'Bootstrap Elements', 'Reading List (inline)', 'Reading List', 'Kaltura Video Presentation','RecordingsBN','Assignment Media','BigBlueButtonBN','Certificate','Checklist','Etherpad','External Tool', 'Lightbox Gallery', 'OU blog', 'Scheduler', 'Scorm Package', 'Skype');
 				
 		// Resources.
 		$resources = array_filter($modules, function($mod) use ($extras_list) {
 			return (($mod->archetype === MOD_ARCHETYPE_RESOURCE) && !in_array($mod->title,$extras_list));
 		});
+		
+		// reading list hack - let's move it to resources
+		$ltis = array_filter($modules, function($mod) {
+			return ((substr($mod->name,0,4) == 'lti:') && $mod->title=='Reading List');
+		});
+		
+		$sorthack = [array_pop($resources)];		
+		$resources = array_merge($resources, $ltis);
+		$resources = array_merge($resources, $sorthack);
+
 		
         if (count($resources)) {
             $sections[] = new chooser_section('resources', new lang_string('resources'),
@@ -95,8 +105,8 @@ class modchooser extends chooser {
         }
 		
         // Activities.
-        $activities = array_filter($modules, function($mod) {
-            return ($mod->archetype !== MOD_ARCHETYPE_RESOURCE && $mod->archetype !== MOD_ARCHETYPE_SYSTEM);
+        $activities = array_filter($modules, function($mod) use ($extras_list) {
+            return ($mod->archetype !== MOD_ARCHETYPE_RESOURCE && $mod->archetype !== MOD_ARCHETYPE_SYSTEM && !in_array($mod->title,$extras_list));
         });
         if (count($activities)) {
             $sections[] = new chooser_section('activities', new lang_string('activities'),
@@ -107,11 +117,12 @@ class modchooser extends chooser {
         }
 		
 		// Extras Hack
+		// remove reading list because we included it in resources
 		$more = array_filter($modules, function($mod) use ($extras_list) {
-			return in_array($mod->title,$extras_list);
+			return in_array($mod->title,$extras_list) && $mod->title != 'Reading List';
 		});
 		if (count($more)) {
-	 	   $sections[] = new chooser_section('more', new lang_string('more'),
+	 	   $sections[] = new chooser_section('more', new lang_string('morenavigationlinks'),
 	     		array_map(function($module) use ($context) {
 	         	   return new modchooser_item($module, $context);
 	     	  	}, $more));

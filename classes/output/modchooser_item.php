@@ -50,7 +50,7 @@ class modchooser_item extends \core\output\chooser_item {
         if ($colon = strpos($modulename, ':')) {
             $modulename = substr($modulename, 0, $colon);
         }
-
+		if ($modulename == 'lti' && $module->title == 'Reading List') { $modulename = 'readinglist'; }
         $icon = new pix_icon('icon', '', $modulename, ['class' => 'icon']);
         $help = isset($module->help) ? $module->help : new lang_string('nohelpforactivityorresource', 'moodle');
 

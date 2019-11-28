@@ -33,6 +33,9 @@
         "footerrightblocks": "<aside id='block-region-footer-right' class='block-region' data-blockregion='footer-right' data-droptarget='1'>This is the right footer region</aside>"
     }
 }}
+{{! MODIFICATION:
+    * Moved the variable output.standard_end_of_body_html to the end of the columns2.mustache template to solve Javascript issues with behat tests.
+}}
 <footer id="page-footer" class="py-3 bg-dark text-light">
     <div class="container-fluid">
         <div class="row-fluid">
@@ -103,7 +106,9 @@
                     {{/ output.custom_menu_flat }}
                 </nav>
                 {{{ output.standard_footer_html }}}
-                {{{ output.standard_end_of_body_html }}}
+                {{! Moved the variable
+                output.standard_end_of_body_html
+                to the end of the columns2.mustache template to solve Javascript issues with behat tests. }}
             </div>
         </div>
     </div>

@@ -4,6 +4,10 @@ moodle-theme_boost_campus
 Changes
 -------
 
+### Unreleased
+
+* 2019-11-29 - Moved the variable output.standard_end_of_body_html from footer.mustache to solve Javascript issues with behat tests.
+
 ### Release v3.7-r3
 
 * 2019-11-13 - Improved Video JS Skin for hiding big play button in audio players and removed centered placement of this button in SCSS.

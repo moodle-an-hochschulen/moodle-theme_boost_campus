@@ -57,6 +57,7 @@
       template and use the equivalent own javascript "incoursesettings".
     * Call to own navbar mustache template instead of boost/navbar.
     * Add own additional layout elements: the footer, footnote or image area.
+    * Moved the variable output.standard_end_of_body_html from footer.mustache to solve Javascript issues with behat tests.
 }}
 {{> theme_boost/head }}
 
@@ -107,6 +108,8 @@
     {{> theme_boost/nav-drawer }}
     {{{ pagebottomelements }}}
 </div>
+{{! Moved the variable here from footer.mustache to solve Javascript issues with behat tests. }}
+{{{ output.standard_end_of_body_html }}}
 
 </body>
 </html>

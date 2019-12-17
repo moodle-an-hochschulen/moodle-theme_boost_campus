@@ -39,7 +39,7 @@ if (get_config('theme_boost_campus', 'footerblocks') == '1columns') {
     $regions[] = 'footer-left';
 } else if (get_config('theme_boost_campus', 'footerblocks') == '2columns') {
     $regions[] = 'footer-left';
-    $regions[] = 'footer-middle';
+    $regions[] = 'footer-right';
 } else if (get_config('theme_boost_campus', 'footerblocks') == '3columns') {
     $regions[] = 'footer-left';
     $regions[] = 'footer-middle';

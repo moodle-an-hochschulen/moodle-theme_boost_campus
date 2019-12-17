@@ -6,6 +6,7 @@ Changes
 
 ### Unreleased
 
+* 2019-12-17 - Fixed bug for the selection of block regions when 2 block columns in footer are enabled.
 * 2019-11-29 - Moved the variable output.standard_end_of_body_html from footer.mustache to solve Javascript issues with behat tests.
 
 ### Release v3.7-r3

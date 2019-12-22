@@ -164,6 +164,9 @@ $string['defaulthomepageontopsetting_desc'] = 'By checking this setting the defa
 // ...Navdrawer full width on small screens.
 $string['navdrawerfullwidthsetting'] = 'Nav drawer full width on small screens';
 $string['navdrawerfullwidthsettings_desc'] = 'By checking this setting you can enlarge the opened nav drawer menu to the full page width on small screens. This may be wanted because on small screens only very few of the main content area in the background is visible. And a full width menu might serve the users\' expectations how menus are displayed on small screens.';
+// ...Small nav drawer.
+$string['navdrawercollapsedsetting'] = 'Small nav drawer if collapsed';
+$string['navdrawercollapsedsetting_desc'] = 'By checking this setting you can enable a small nav drawer if the navigation is collapsed. It will show only the icons without text.';
 
 // Design settings.
 $string['designsettings'] = 'Design Settings';

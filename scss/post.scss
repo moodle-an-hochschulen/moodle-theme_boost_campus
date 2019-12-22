@@ -340,6 +340,50 @@ body.loginbackgroundimage #page {
     }
 }
 
+/* If the setting navdrawercollapsed is enabled, we want the nav drawer menu to be displayed as small with only icons. */
+@if variable-exists(navdrawercollapsed) {
+    @if $navdrawercollapsed == 'yes' {
+        $drawer-width-closed: 82px;
+
+        body {
+            margin-left: $drawer-width-closed;
+
+            #nav-drawer.closed {
+                left: -($drawer-width - $drawer-width-closed);
+
+                @if variable-exists(navdrawerfullwidth) {
+                    @if $navdrawerfullwidth == 'yes' {
+                        width: $drawer-width;
+                    }
+                }
+                .list-group {
+                    padding-left: $drawer-width - $drawer-width-closed - 5px;
+                }
+                .list-group-item {
+                    padding-left: 1.875rem;
+
+                    .media-left {
+                        margin-left: -.8125rem;
+
+                        .fa-graduation-cap {
+                            margin-left: -.375rem;
+                        }
+                    }
+                    .media-body {
+                        display: none;
+                    }
+                    &[data-key="mycourses"] {
+                        display: none;
+                    }
+                    &[data-parent-key="mycourses"] {
+                        border-top: 1px solid rgba(0,0,0,.125);
+                        margin-top: 15px;
+                    }
+                }
+            }
+        }
+    }
+}
 
 /*------------------------------------
   Course page

@@ -6,6 +6,7 @@ Changes
 
 ### Unreleased
 
+* 2020-01-29 - Adjusted columns2.mustache template due to upstream changes in theme Boost.
 * 2019-12-20 - Added Behat tests.
                PLEASE NOTE: For all scenarios to pass, the Moodle version 3.7.3+ (Build: 20191212) is needed.
 * 2019-12-17 - Fixed bug for the selection of block regions when 2 block columns in footer are enabled.

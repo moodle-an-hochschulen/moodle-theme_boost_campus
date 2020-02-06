@@ -31,6 +31,7 @@ define(['jquery'], function($) {
         var courseSettings = $('#boost-campus-course-settings');
         var activitySettings = $('#boost-campus-activity-settings');
         var frontpage = $('body').hasClass('pagelayout-frontpage');
+        var headerCardBorderBottom = $('#page-header .card').css("border-bottom");
 
         // Only change the behaviour if the setting is enabled and we are not on the frontpage,
         // because we did not change the settings menu there. So we need the default propagation here.
@@ -39,8 +40,15 @@ define(['jquery'], function($) {
                 event.stopPropagation();
                 if (courseSettings.is(":visible")) {
                     courseSettings.hide(400);
+                    setTimeout(function() {
+                        $('#page-header .card').css('border-bottom', headerCardBorderBottom);
+                        $('#page-header > div').addClass('pb-3');
+                    }, 300);
                 } else {
                     courseSettings.show(400);
+                    $('#page-header div').removeClass('pb-3');
+                    $('#page-header .card').css('border-bottom', 'none');
+                    courseSettings.css('border-top', 'none');
                     // Additionally close activity settings if they are currently open.
                     if (activitySettings.is(":visible")) {
                         activitySettings.hide(400);
@@ -53,6 +61,10 @@ define(['jquery'], function($) {
                     activitySettings.hide(400);
                 } else {
                     activitySettings.show(400);
+                    setTimeout(function() {
+                        $('#page-header .card').css('border-bottom', headerCardBorderBottom);
+                        $('#page-header > div').addClass('pb-3');
+                    }, 300);
                     // Additionally close course settings if they are currently open.
                     if (courseSettings.is(":visible")) {
                         courseSettings.hide(400);

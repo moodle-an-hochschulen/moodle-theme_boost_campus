@@ -377,6 +377,7 @@ Course Design:
 * Designed description and intro boxes.
 * Designed blockquotes.
 * Improved design of maintenance warning to be more visible.
+* Changed the design of the activity navigation links within a course to buttons for better recognisability.
 
 ### Categories overview page
 

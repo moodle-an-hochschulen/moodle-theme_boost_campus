@@ -612,24 +612,6 @@ blockquote::before {
         font-weight: normal;
     }
 }
-.coursebox {
-    .moreinfo {
-        float: left;
-        margin-left: 21px;
-        // Put the further information into a new line.
-        clear: left;
-    }
-    .enrolmenticons {
-        // Align the icons in one line with the information icon.
-        display: inline;
-        padding-left: 0.75rem;
-        // As these icons are just for information and not clickable, make the color gray.
-        color: $gray-light;
-    }
-    .moreinfo a + div.enrolmenticons {
-        border-left: 2px solid $gray-light;
-    }
-}
 
 
 /*------------------------------------

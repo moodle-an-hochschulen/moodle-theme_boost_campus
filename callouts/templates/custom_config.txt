@@ -57,221 +57,221 @@
         {
             "title": "Callout Blank",
             "src": "theme/urcourses_default/callouts/templates/callout_blank.php",
-            "description": "Adds a pre-formatted Idea Block"
+            "description": "Adds a pre-formatted callout block"
         },
         {
             "title": "Callout Activity",
             "src": "theme/urcourses_default/callouts/templates/callout_activity.php",
-            "description": "Adds a pre-formatted Idea Block",
+            "description": "Adds a pre-formatted callout block",
             "icon": "theme/urcourses_default/callouts/activity.png"
         },
         {
             "title": "Callout Aims",
             "src": "theme/urcourses_default/callouts/templates/callout_aims.php",
-            "description": "Adds a pre-formatted Idea Block",
+            "description": "Adds a pre-formatted Aims callout block",
             "icon": "theme/urcourses_default/callouts/aims.png"
         },
         {
             "title": "Callout Assignment",
             "src": "theme/urcourses_default/callouts/templates/callout_assignment.php",
-            "description": "Adds a pre-formatted Idea Block",
+            "description": "Adds a pre-formatted Assignment callout block",
             "icon": "theme/urcourses_default/callouts/assignment.png"
         },
         {
             "title": "Callout Audio",
             "src": "theme/urcourses_default/callouts/templates/callout_audio.php",
-            "description": "Adds a pre-formatted Idea Block",
+            "description": "Adds a pre-formatted Audio callout block",
             "icon": "theme/urcourses_default/callouts/audio.png"
         },
         {
             "title": "Callout Blog",
             "src": "theme/urcourses_default/callouts/templates/callout_blog.php",
-            "description": "Adds a pre-formatted Idea Block",
+            "description": "Adds a pre-formatted Blog callout block",
             "icon": "theme/urcourses_default/callouts/blog.png"
         },
         {
             "title": "Callout Chat",
             "src": "theme/urcourses_default/callouts/templates/callout_chat.php",
-            "description": "Adds a pre-formatted Idea Block",
+            "description": "Adds a pre-formatted Chat callout block",
             "icon": "theme/urcourses_default/callouts/chat.png"
         },
         {
             "title": "Callout Discussion",
             "src": "theme/urcourses_default/callouts/templates/callout_discussion.php",
-            "description": "Adds a pre-formatted Idea Block",
+            "description": "Adds a pre-formatted Discussion callout block",
             "icon": "theme/urcourses_default/callouts/discussion.png"
         },
         {
             "title": "Callout Elder",
             "src": "theme/urcourses_default/callouts/templates/callout_elder.php",
-            "description": "Adds a pre-formatted Idea Block",
+            "description": "Adds a pre-formatted Elder callout block",
             "icon": "theme/urcourses_default/callouts/elder.png"
         },
         {
             "title": "Callout Example",
             "src": "theme/urcourses_default/callouts/templates/callout_example.php",
-            "description": "Adds a pre-formatted Idea Block",
+            "description": "Adds a pre-formatted Example callout block",
             "icon": "theme/urcourses_default/callouts/example.png"
         },
         {
             "title": "Callout Fact",
             "src": "theme/urcourses_default/callouts/templates/callout_fact.php",
-            "description": "Adds a pre-formatted Idea Block",
+            "description": "Adds a pre-formatted Fact callout block",
             "icon": "theme/urcourses_default/callouts/fact.png"
         },
         {
             "title": "Callout Feedback",
             "src": "theme/urcourses_default/callouts/templates/callout_feedback.php",
-            "description": "Adds a pre-formatted Idea Block",
+            "description": "Adds a pre-formatted Feedback callout block",
             "icon": "theme/urcourses_default/callouts/feedback.png"
         },
         {
             "title": "Callout FYI",
             "src": "theme/urcourses_default/callouts/templates/callout_fyi.php",
-            "description": "Adds a pre-formatted Idea Block",
+            "description": "Adds a pre-formatted FYI callout block",
             "icon": "theme/urcourses_default/callouts/fyi.png"
         },
         {
             "title": "Callout Ideas",
             "src": "theme/urcourses_default/callouts/templates/callout_ideas.php",
-            "description": "Adds a pre-formatted Idea Block",
+            "description": "Adds a pre-formatted Ideas callout block",
             "icon": "theme/urcourses_default/callouts/ideas.png"
         },
         {
             "title": "Callout Important",
             "src": "theme/urcourses_default/callouts/templates/callout_important.php",
-            "description": "Adds a pre-formatted Idea Block",
+            "description": "Adds a pre-formatted Important callout block",
             "icon": "theme/urcourses_default/callouts/important.png"
         },
         {
             "title": "Callout Important Yellow bg",
             "src": "theme/urcourses_default/callouts/templates/callout_important_yellow.php",
-            "description": "Adds a pre-formatted Idea Block",
+            "description": "Adds a pre-formatted Important Yellow callout block",
             "icon": "theme/urcourses_default/callouts/important.png"
         },
         {
             "title": "Callout Labs",
             "src": "theme/urcourses_default/callouts/templates/callout_labs.php",
-            "description": "Adds a pre-formatted Idea Block",
+            "description": "Adds a pre-formatted Labs callout block",
             "icon": "theme/urcourses_default/callouts/labs.png"
         },
         {
             "title": "Callout Labs Aqua bg",
             "src": "theme/urcourses_default/callouts/templates/callout_labs_aqua.php",
-            "description": "Adds a pre-formatted Idea Block",
+            "description": "Adds a pre-formatted Labs Aqua callout block",
             "icon": "theme/urcourses_default/callouts/labs.png"
         },
         {
             "title": "Callout Links",
             "src": "theme/urcourses_default/callouts/templates/callout_links.php",
-            "description": "Adds a pre-formatted Idea Block",
-            "icon": "theme/urcourses_default/callouts/labs.png"
+            "description": "Adds a pre-formatted Links callout block",
+            "icon": "theme/urcourses_default/callouts/links.png"
         },
         {
             "title": "Callout Notes",
             "src": "theme/urcourses_default/callouts/templates/callout_notes.php",
-            "description": "Adds a pre-formatted Idea Block",
+            "description": "Adds a pre-formatted Notes callout block",
             "icon": "theme/urcourses_default/callouts/notes.png"
         },
         {
             "title": "Callout Objectives",
             "src": "theme/urcourses_default/callouts/templates/callout_objectives.php",
-            "description": "Adds a pre-formatted Idea Block",
+            "description": "Adds a pre-formatted Objectives callout block",
             "icon": "theme/urcourses_default/callouts/objectives.png"
         },
         {
             "title": "Callout Question",
             "src": "theme/urcourses_default/callouts/templates/callout_question.php",
-            "description": "Adds a pre-formatted Idea Block",
+            "description": "Adds a pre-formatted Question callout block",
             "icon": "theme/urcourses_default/callouts/question.png"
         },
         {
             "title": "Callout Question Blue bg",
             "src": "theme/urcourses_default/callouts/templates/callout_question_blue.php",
-            "description": "Adds a pre-formatted Idea Block",
+            "description": "Adds a pre-formatted Question Blue callout block",
             "icon": "theme/urcourses_default/callouts/question.png"
         },
         {
             "title": "Callout Quiz",
             "src": "theme/urcourses_default/callouts/templates/callout_quiz.php",
-            "description": "Adds a pre-formatted Idea Block",
+            "description": "Adds a pre-formatted Quiz callout block",
             "icon": "theme/urcourses_default/callouts/quiz.png"
         },
         {
             "title": "Callout Reading",
             "src": "theme/urcourses_default/callouts/templates/callout_reading.php",
-            "description": "Adds a pre-formatted Idea Block",
+            "description": "Adds a pre-formatted Reading callout block",
             "icon": "theme/urcourses_default/callouts/reading.png"
         },
         {
             "title": "Callout Reflect",
             "src": "theme/urcourses_default/callouts/templates/callout_reflect.php",
-            "description": "Adds a pre-formatted Idea Block",
+            "description": "Adds a pre-formatted Reflect callout block",
             "icon": "theme/urcourses_default/callouts/reflect.png"
         },
         {
             "title": "Callout Resources",
             "src": "theme/urcourses_default/callouts/templates/callout_resources.php",
-            "description": "Adds a pre-formatted Idea Block",
+            "description": "Adds a pre-formatted Resources callout block",
             "icon": "theme/urcourses_default/callouts/resources.png"
         },
         {
             "title": "Callout Start",
             "src": "theme/urcourses_default/callouts/templates/callout_start.php",
-            "description": "Adds a pre-formatted Idea Block",
+            "description": "Adds a pre-formatted Start callout block",
             "icon": "theme/urcourses_default/callouts/start.png"
         },
         {
             "title": "Callout Task",
             "src": "theme/urcourses_default/callouts/templates/callout_task.php",
-            "description": "Adds a pre-formatted Idea Block",
+            "description": "Adds a pre-formatted Task callout block",
             "icon": "theme/urcourses_default/callouts/task.png"
         },
         {
             "title": "Callout Video",
             "src": "theme/urcourses_default/callouts/templates/callout_video.php",
-            "description": "Adds a pre-formatted Idea Block",
+            "description": "Adds a pre-formatted Video callout block",
             "icon": "theme/urcourses_default/callouts/video.png"
         },
         {
             "title": "Alert Blue Info",
             "src": "theme/urcourses_default/callouts/templates/alert_info.html",
-            "description": "Adds a blue coloured block with text to match."
+            "description": "Adds a blue coloured Alert block with text to match."
         },
         {
             "title": "Alert Green Success",
             "src": "theme/urcourses_default/callouts/templates/alert_success.html",
-            "description": "Adds a green coloured block with text to match."
+            "description": "Adds a green coloured Alert block with text to match."
         },
         {
             "title": "Alert Orange Warning",
             "src": "theme/urcourses_default/callouts/templates/alert_warning.html",
-            "description": "Adds a green coloured block with text to match."
+            "description": "Adds an orange coloured Alert block with text to match."
         },
         {
             "title": "Alert Red Danger",
             "src": "theme/urcourses_default/callouts/templates/alert_danger.html",
-            "description": "Adds a red coloured block with text to match."
+            "description": "Adds a red coloured Alert block with text to match."
         },
         {
-            "title": "Alert purple",
+            "title": "Alert Purple",
             "src": "theme/urcourses_default/callouts/templates/alert_purple.html",
-            "description": "Adds a purple coloured block with text to match."
+            "description": "Adds a purple coloured Alert block with text to match."
         },
         {
-            "title": "Alert yellow",
+            "title": "Alert Yellow",
             "src": "theme/urcourses_default/callouts/templates/alert_yellow.html",
-            "description": "Adds a yellow coloured block with text to match."
+            "description": "Adds a yellow coloured Alert block with text to match."
         },
         {
             "title": "Alert Light",
             "src": "theme/urcourses_default/callouts/templates/alert_light.html",
-            "description": "Adds a light grey coloured block with text to match."
+            "description": "Adds a light grey coloured Alert block with text to match."
         },
         {
             "title": "Alert Dark",
             "src": "theme/urcourses_default/callouts/templates/alert_dark.html",
-            "description": "Adds a dark grey coloured block with text to match."
+            "description": "Adds a dark grey coloured Alert block with text to match."
         },
         {
             "title": "Button Primary",

@@ -81,3 +81,7 @@ figure.img-thumbnail figcaption.figure-caption {
     padding-bottom: .5rem;
     color: #3d4042;
 }  
+
+.callout.d-sm-inline-flex {
+    display: block !important;
+}

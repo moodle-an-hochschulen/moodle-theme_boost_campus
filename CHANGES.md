@@ -4,7 +4,7 @@ moodle-theme_boost_campus
 Changes
 -------
 
-### Unreleased
+### Release v3.7-r4
 
 * 2020-02-11 - Re-ordered in course course settings to be displayed within the course header.
 * 2020-02-07 - Added missing information to README.md for the changes to the activity navigation links.

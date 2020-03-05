@@ -4,6 +4,10 @@ moodle-theme_boost_campus
 Changes
 -------
 
+### Unreleased
+
+* 2020-03-05 - Prepare compatibility for Moodle 3.8.
+
 ### Release v3.7-r4
 
 * 2020-02-11 - Re-ordered in course course settings to be displayed within the course header.

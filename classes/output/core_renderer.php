@@ -152,6 +152,17 @@ class core_renderer extends \core_renderer {
         global $PAGE, $USER, $COURSE, $CFG;
         // MODIFICATION END.
 
+        if ($PAGE->include_region_main_settings_in_header_actions() && !$PAGE->blocks->is_block_present('settings')) {
+            // Only include the region main settings if the page has requested it and it doesn't already have
+            // the settings block on it. The region main settings are included in the settings block and
+            // duplicating the content causes behat failures.
+            $PAGE->add_header_action(html_writer::div(
+                    $this->region_main_settings_menu(),
+                    'd-print-none',
+                    ['id' => 'region-main-settings-menu']
+            ));
+        }
+
         $header = new stdClass();
         // MODIFICATION START.
         // Show the context header settings menu on all pages except for the profile page as we replace
@@ -194,6 +205,7 @@ class core_renderer extends \core_renderer {
         $header->pageheadingbutton = $this->page_heading_button();
         ORIGINAL END. */
         $header->courseheader = $this->course_header();
+        $header->headeractions = $PAGE->get_header_actions();
         // MODIFICATION START:
         // Change this to add the result in the html variable to be able to add further features below the header.
         // Render from the own header template.

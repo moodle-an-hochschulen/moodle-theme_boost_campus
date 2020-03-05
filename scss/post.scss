@@ -686,10 +686,6 @@ blockquote::before {
     }
 }
 
-/* Rule to wrap the content within a block card. */
-.block .card-text.content {
-    word-wrap: break-word;
-}
 /* Rule to reset the whitespace for buttons within blocks. */
 .block .btn {
     white-space: normal;

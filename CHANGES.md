@@ -6,6 +6,7 @@ Changes
 
 ### Unreleased
 
+* 2020-03-05 - Adjusted columns2.mustache template due to upstream changes in theme Boost.
 * 2020-03-05 - Prepare compatibility for Moodle 3.8.
 
 ### Release v3.7-r4

@@ -25,7 +25,7 @@
 defined('MOODLE_INTERNAL') || die();
 
 $plugin->component = 'theme_boost_campus';
-$plugin->version = 2020021200;
+$plugin->version = 2020030800;
 $plugin->release = 'v3.7-r4';
 $plugin->requires = 2019111800;
 $plugin->maturity = MATURITY_STABLE;

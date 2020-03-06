@@ -138,12 +138,18 @@ $string['imageareaheadingsetting'] = 'Image area';
 $string['imageareaheadingsetting_desc'] = 'The following settings allow adding an additional region for displaying images like logos. This region will be added beneath the standard footer and above the optional footnote region. If images are uploaded this area will be displayed on all sites that use the columns2 layout.';
 $string['imageareaitemssetting'] = 'Image area items';
 $string['imageareaitemssetting_desc'] = 'With this widget you can upload your images that will be displayed in the additional image area region. The images will be sorted and displayed alphabetically by the filename. To remove this region, simply delete all uploaded images.';
-$string['imageareaitemslinksetting'] = 'Image area item links';
-$string['imageareaitemslinksetting_desc'] = 'With this optional setting you can add links to your uplaoded images.<br/>
-Each line consists of the file identifier (the file name) the a link URL, separated by pipe characters. Each link declaration needs to be written in a new line. <br/>
+$string['imageareaitemsattributessetting'] = 'Image area item additional attributes';
+$string['imageareaitemsattributessetting_desc'] = 'With this optional setting you can add additional attributes to your uplaoded images:
+<ul>
+<li>a link</li>
+<li>an alt attribute which describes the image</li>
+</ul>
+Each line consists of the file identifier (the file name) the link URL and the alt-text, separated by pipe characters. Each link declaration needs to be written in a new line. <br/>
 For example:<br/>
-moodle.jpg|http://moodle.org<br/>
-You can declare links for a abitrary amount of your uplaoded images. The links will be added only to those images that match their filename with the identifier declared in this setting.';
+```
+moodle.jpg|https://moodle.org|Moodle logo
+```<br/><br/>
+You can declare the additional attributes for an arbitrary amount of your uplaoded images. The attributes will be added only to those images that match their filename with the identifier declared in this setting.';
 $string['imageareaitemsmaxheightsetting'] = 'Image area items maximal height';
 $string['imageareaitemsmaxheightsetting_desc'] = 'With this setting you can change the height in pixels for your uploaded images. All images will have the same maximum height and their width will be resized proportionally. The default value is set to 100 pixels.';
 // ...Footnote.

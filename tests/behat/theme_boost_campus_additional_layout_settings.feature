@@ -36,15 +36,16 @@ Feature: Configuring the theme_boost_campus plugin for the "Additional Layout Se
 
   # Dependent on setting "Image area items"
   @javascript @_file_upload
-  Scenario: Add "Image area item links"
+  Scenario: Add "Image area item attributes"
     When I log in as "admin"
     And I navigate to "Appearance > Boost Campus" in site administration
     And I click on "Additional Layout Settings" "link"
     And I upload "theme/boost_campus/tests/fixtures/moodle_logo.jpg" file to "Image area items" filemanager
-    And I set the field "id_s_theme_boost_campus_imageareaitemslink" to "moodle_logo.jpg|http://moodle.org"
+    And I set the field "id_s_theme_boost_campus_imageareaitemsattributes" to "moodle_logo.jpg|http://moodle.org|Moodle Logo"
     And I press "Save changes"
     Then ".imagearea img" "css_element" should exist
     And "//div[contains(concat(' ',normalize-space(@class),' '),' imagearea ')]//a[contains(@href, 'http://moodle.org')]" "xpath_element" should exist
+    And "//div[contains(concat(' ',normalize-space(@class),' '),' imagearea ')]//img[contains(@alt, 'Moodle Logo')]" "xpath_element" should exist
 
   # Dependent on setting "Image area items"
   # This is not testable with behat.

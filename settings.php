@@ -447,9 +447,9 @@ if ($ADMIN->fulltree) {
     $setting->set_updatedcallback('theme_boost_campus_reset_app_cache');
     $page->add($setting);
 
-    $name = 'theme_boost_campus/imageareaitemslink';
-    $title = get_string('imageareaitemslinksetting', 'theme_boost_campus', null, true);
-    $description = get_string('imageareaitemslinksetting_desc', 'theme_boost_campus', null, true);
+    $name = 'theme_boost_campus/imageareaitemsattributes';
+    $title = get_string('imageareaitemsattributessetting', 'theme_boost_campus', null, true);
+    $description = get_string('imageareaitemsattributessetting_desc', 'theme_boost_campus', null, true);
     $setting = new admin_setting_configtextarea($name, $title, $description, null, PARAM_TEXT);
     $setting->set_updatedcallback('theme_boost_campus_reset_app_cache');
     $page->add($setting);

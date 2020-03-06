@@ -6,6 +6,7 @@ Changes
 
 ### Unreleased
 
+* 2020-03-24 - Changed setting imageareaitemslink to imageareaitemsattributes to be able to add alt text to the images.
 * 2020-03-10 - Fixed accessibility issues with in-course settings.
 * 2020-03-09 - Fixed accessibility issues with back-to-top button.
 * 2020-03-05 - Adjusted function full_header() in core_renderer.php due to upstream changes in theme Boost.

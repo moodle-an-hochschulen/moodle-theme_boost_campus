@@ -217,6 +217,7 @@ The advantage of uploading files to this file area is that those files can be de
 An example for a use case can be found in the README.md file.';
 
 // ADDITIONAL STRINGS (IN ALPHABETICAL ORDER).
+$string['backtotop'] = 'Back to top';
 $string['cachedef_imagearea'] = 'Cache for imagearea items';
 $string['showhintcourseguestaccessgeneral'] = 'You are currently viewing this course as <strong>{$a->role}</strong>.';
 $string['showhintcourseguestaccesslink'] = 'To have full access to the course, you can <a href="{$a->url}">self enrol into this course</a>.';

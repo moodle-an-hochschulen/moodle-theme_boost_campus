@@ -21,15 +21,21 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-define(['jquery'], function($) {
+
+
+define(['jquery', 'core/str'], function($, str) {
     "use strict";
 
     /**
      * Initialising.
      */
     function initBackToTop() {
-        // Add a fontawesome icon after the footer as the back to top button.
-        $('#page-footer').after('<i class="fa fa-chevron-up fa-2x d-print-none" id="back-to-top"></i>');
+        // Get the string backtotop from language file.
+        str.get_string('backtotop', 'theme_boost_campus').then(function (string) {
+            // Add a fontawesome icon after the footer as the back to top button.
+            $('#page-footer').after('<i class="fa fa-chevron-up fa-2x d-print-none"' +
+                'id="back-to-top" aria-label="' + string + '"></i>');
+        });
 
         // This function fades the button in when the page is scrolled down or fades it out
         // if the user is at the top of the page.

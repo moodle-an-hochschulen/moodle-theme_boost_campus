@@ -6,6 +6,7 @@ Changes
 
 ### Unreleased
 
+* 2020-03-10 - Fixed accessibility issues with in-course settings.
 * 2020-03-09 - Fixed accessibility issues with back-to-top button.
 * 2020-03-05 - Adjusted function full_header() in core_renderer.php due to upstream changes in theme Boost.
 * 2020-03-05 - Removed SCSS rule to wrap words in cards as it has been fixed in theme Boost.

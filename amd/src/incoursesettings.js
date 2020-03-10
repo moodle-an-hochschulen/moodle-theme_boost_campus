@@ -28,18 +28,31 @@ define(['jquery'], function($) {
      * Initialising.
      */
     function initInCourseSettings() {
-        var courseSettings = $('#boost-campus-course-settings');
-        var activitySettings = $('#boost-campus-activity-settings');
         var frontpage = $('body').hasClass('pagelayout-frontpage');
-        var headerCardBorderBottom = $('#page-header .card').css("border-bottom");
 
         // Only change the behaviour if the setting is enabled and we are not on the frontpage,
         // because we did not change the settings menu there. So we need the default propagation here.
         if (!frontpage) {
-            $('#page-header .context-header-settings-menu').on('click', function(event) {
+
+            var courseSettings = $('#boost-campus-course-settings');
+            var activitySettings = $('#boost-campus-activity-settings');
+            var headerCardBorderBottom = $('#page-header .card').css("border-bottom");
+            var courseSettingsDropdownToggle = $('#page-header .context-header-settings-menu .dropdown-toggle');
+            var activitySettingsDropdownToggle = $('#region-main-settings-menu .action-menu .dropdown-toggle');
+
+            // Remove attribute aria-haspopup because we are replacing this with the in-course course settings and
+            // set the new in-course course settings for the aria-controls attribute
+            courseSettingsDropdownToggle.removeAttr('aria-haspopup').attr('aria-controls', 'boost-campus-course-settings');
+
+            // Remove attribute aria-haspopup because we are replacing this with the in-course activity settings
+            // set the new in-course activity settings for the aria-controls attribute
+            activitySettingsDropdownToggle.removeAttr('aria-haspopup').attr('aria-controls', 'boost-campus-activity-settings');
+
+            courseSettingsDropdownToggle.on('click', function(event) {
                 event.stopPropagation();
                 if (courseSettings.is(":visible")) {
                     courseSettings.hide(400);
+                    courseSettingsDropdownToggle.attr('aria-expanded', 'false');
                     setTimeout(function() {
                         $('#page-header .card').css('border-bottom', headerCardBorderBottom);
                         $('#page-header > div').addClass('pb-3');
@@ -49,18 +62,22 @@ define(['jquery'], function($) {
                     $('#page-header div').removeClass('pb-3');
                     $('#page-header .card').css('border-bottom', 'none');
                     courseSettings.css('border-top', 'none');
+                    courseSettingsDropdownToggle.attr('aria-expanded', 'true');
                     // Additionally close activity settings if they are currently open.
                     if (activitySettings.is(":visible")) {
                         activitySettings.hide(400);
+                        activitySettingsDropdownToggle.attr('aria-expanded', 'false');
                     }
                 }
             });
-            $('#region-main-settings-menu .action-menu .dropdown-toggle').on('click', function(event) {
+            activitySettingsDropdownToggle.on('click', function(event) {
                 event.stopPropagation();
                 if (activitySettings.is(":visible")) {
                     activitySettings.hide(400);
+                    activitySettingsDropdownToggle.attr('aria-expanded', 'false');
                 } else {
                     activitySettings.show(400);
+                    activitySettingsDropdownToggle.attr('aria-expanded', 'true');
                     setTimeout(function() {
                         $('#page-header .card').css('border-bottom', headerCardBorderBottom);
                         $('#page-header > div').addClass('pb-3');
@@ -68,6 +85,7 @@ define(['jquery'], function($) {
                     // Additionally close course settings if they are currently open.
                     if (courseSettings.is(":visible")) {
                         courseSettings.hide(400);
+                        courseSettingsDropdownToggle.attr('aria-expanded', 'false');
                     }
                 }
             });

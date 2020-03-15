@@ -1,0 +1,29 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+
+    Moodle is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Moodle is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+}}
+{{!
+    @template urcourses_default/header_course_style_chooser
+
+    This template renders the course header style chooser buttons.
+
+}}
+<div id="theme_urcourses_default_header_toggle_course_availability_{{uniqid}}" class="col-12 alert alert-{{^availability}}warning{{/availability}}{{#availability}}secondary{{/availability}} mb-0">This course is {{^availability}}hidden{{/availability}}{{#availability}}available{{/availability}} {{^availability}}from{{/availability}}{{#availability}}to{{/availability}} students. <a href="#" id="avail_btn">Make it {{#availability}}un{{/availability}}available <i class="icon fa fa-question-circle text-info fa-fw " title="Help with Course availability" aria-label="Help with Course availability"></i></a></div>
+
+{{#js}}
+    require(['theme_urcourses_default/toggle_course_availability'], function(main) {
+        main.init('#theme_urcourses_default_header_toggle_course_availability_{{uniqid}}', {{courseid}}, {{availability}});
+    });
+{{/js}}

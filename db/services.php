@@ -41,4 +41,13 @@ $functions = array(
         'ajax'          => 'true',
     ),
 
+    'theme_urcourses_default_toggle_course_availability' => array(
+        'classname'     => 'theme_urcourses_default_external',
+        'methodname'    => 'toggle_course_availability',
+        'classpath'     => 'theme/urcourses_default/externallib.php',
+        'description'   => 'Toggles course availability',
+        'type'          => 'write',
+        'ajax'          => 'true',
+    ),
+
 );

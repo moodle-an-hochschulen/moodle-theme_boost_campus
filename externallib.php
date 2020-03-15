@@ -55,6 +55,17 @@ class theme_urcourses_default_external extends external_api {
     }
 	
 	
+	
+	public static function toggle_course_availability_parameters() {
+        return new external_function_parameters(
+            array(
+            'courseid' => new external_value(PARAM_INT),
+            'availability' => new external_value(PARAM_INT),
+            )
+        );
+    }
+	
+	
     /**
      * Describes upload_couse_image return value.
      * @return external_single_structure
@@ -69,6 +80,15 @@ class theme_urcourses_default_external extends external_api {
      * @return external_single_structure
      */
     public static function choose_header_style_returns() {
+        return new external_single_structure(array('success' => new external_value(PARAM_BOOL)));
+    }
+	
+	
+    /**
+     * Describes choose_header_style return value.
+     * @return external_single_structure
+     */
+    public static function toggle_course_availability_returns() {
         return new external_single_structure(array('success' => new external_value(PARAM_BOOL)));
     }
 
@@ -176,6 +196,43 @@ class theme_urcourses_default_external extends external_api {
 		return array('success' => $success);
 		
 	}
+	
+	
+	
+	public static function toggle_course_availability($courseid, $availability) {
+        global $CFG, $DB;
+		
+        // get params
+        $params = self::validate_parameters(
+            self::toggle_course_availability_parameters(),
+            array(
+            'courseid' => $courseid,
+            'availability' => $availability,
+            )
+        );
+
+        // ensure user has permissions to change image
+        $context = \context_course::instance($params['courseid']);
+        self::validate_context($context);
+        require_capability('moodle/course:changesummary', $context);
+		
+		$table = 'course';
+		
+	    $newrecord = new stdClass();
+	    $newrecord->courseid = $courseid;
+	    $newrecord->visible = $availability==1?0:1;
+
+		if ($record = $DB->get_record($table, array('id'=>$courseid))) {
+			$newrecord->id = $record->id;
+     		$success = $DB->update_record($table, $newrecord);
+
+			return array('success' => $success);
+		} else {
+			return array('error' => 'Record not found');
+		}
+		
+	}
+	
 
 }
 

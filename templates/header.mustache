@@ -41,7 +41,7 @@
                 <div class="d-flex page-head">
                     {{#contextheader}}
 					<div id="{{^headerstyle}}header_a_head{{/headerstyle}}{{#headerstyle}}header_b_head{{/headerstyle}}" class="flex-row flex-grow-1">
-						<div id="hdr_chooser_a_div" class="course-image {{#headerstyle}}d-none{{/headerstyle}}" style="background-image:url({{{courseimage}}});"></div>
+							<div id="hdr_chooser_a_div" class="course-image {{#headerstyle}}d-none{{/headerstyle}}" style="background-image:url({{{courseimage}}});"></div>
 	                    <div class="course-head mr-auto">
 		                    <div class="facultydep">
 		                        <h5>{{{facultydep}}}</h5>
@@ -80,5 +80,6 @@
                 </div>
             </div>
         </div>
+	{{{toggle_course_availability}}}
     </div>
 </header>

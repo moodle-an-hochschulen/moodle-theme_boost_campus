@@ -225,6 +225,12 @@ class core_renderer extends \theme_boost\output\core_renderer {
 
         $header->hasnavbar = empty($PAGE->layout_options['nonavbar']);
         $header->navbar = $this->navbar();
+		
+		// TODO: Show notice if course is hidden AND editing is turned on
+		$header->toggle_course_availability = $this->get_course_toggle_availability();
+		
+		
+		
         // MODIFICATION START.
         // Show the page heading button on all pages except for the profile page.
         // There we replace it with an edit profile button.
@@ -416,6 +422,24 @@ class core_renderer extends \theme_boost\output\core_renderer {
 				'headerstyle' => $headerstyle
             ];
             return $this->render_from_template('theme_urcourses_default/header_course_style_chooser', $context);
+        }
+        else {
+            return false;
+        }
+	}
+	
+	
+	public function get_course_toggle_availability() {
+        global $CFG, $DB, $COURSE;
+        
+		if ($COURSE->id==1) return false; 
+		
+        if ($this->page->user_is_editing()||(has_capability('moodle/course:update', context_course::instance($COURSE->id))&&$COURSE->visible==0)) {
+            $context = [
+                'courseid' => $COURSE->id,
+				'availability' => $COURSE->visible
+            ];
+            return $this->render_from_template('theme_urcourses_default/header_toggle_course_availability', $context);
         }
         else {
             return false;

@@ -430,14 +430,38 @@ class core_renderer extends \theme_boost\output\core_renderer {
 	
 	
 	public function get_course_toggle_availability() {
-        global $CFG, $DB, $COURSE;
+        global $CFG, $DB, $COURSE, $USER, $PAGE;
         
-		if ($COURSE->id==1) return false; 
+		/*
+		$sql = <<<EOD
+		            select crn, subject, course, section, title from ur_course_info
+		            where semester='{$CFG->ur_current_semester}' and crn in (
+		                select crn from ur_instructors where
+		                    semester='{$CFG->ur_current_semester}' and
+		                    username='{$USER->username}'
+		            ) and crn in (
+		                select crn from ur_crn_map where semester='{$CFG->ur_current_semester}'
+		            ) order by subject, course, section
+		EOD;
+		
+		$enrol_output = array();
+		
+        $rs = $DB->get_recordset_sql($sql);
+        foreach($rs as $course) {
+			$enrol_output[$course->crn] = 'CRN: '.$course->crn.' '.$course->subject.' '.$course->section;
+		}
+		*/
+		
+		//only show availability bar when on course main page, but not site home
+		$allowurl = $CFG->wwwroot.'/course/view.php?id='.$COURSE->id;
+		
+		if ($COURSE->id==1||$PAGE->url!=$allowurl) return false; 
 		
         if ($this->page->user_is_editing()||(has_capability('moodle/course:update', context_course::instance($COURSE->id))&&$COURSE->visible==0)) {
             $context = [
                 'courseid' => $COURSE->id,
-				'availability' => $COURSE->visible
+				'availability' => $COURSE->visible,
+				'enrolment' => ''
             ];
             return $this->render_from_template('theme_urcourses_default/header_toggle_course_availability', $context);
         }

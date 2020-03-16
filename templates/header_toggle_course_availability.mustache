@@ -20,7 +20,7 @@
     This template renders the course header style chooser buttons.
 
 }}
-<div id="theme_urcourses_default_header_toggle_course_availability_{{uniqid}}" class="col-12 alert alert-{{^availability}}warning{{/availability}}{{#availability}}secondary{{/availability}} mb-0">This course is {{^availability}}hidden{{/availability}}{{#availability}}available{{/availability}} {{^availability}}from{{/availability}}{{#availability}}to{{/availability}} students. <a href="#" id="avail_btn">Make it {{#availability}}un{{/availability}}available <i class="icon fa fa-question-circle text-info fa-fw " title="Help with Course availability" aria-label="Help with Course availability"></i></a></div>
+<div id="theme_urcourses_default_header_toggle_course_availability_{{uniqid}}" class="col-12 alert alert-{{^availability}}warning{{/availability}}{{#availability}}secondary{{/availability}} d-flex mb-0"><div>This course is {{^availability}}hidden{{/availability}}{{#availability}}available{{/availability}} {{^availability}}from{{/availability}}{{#availability}}to{{/availability}} students. <a href="#" id="avail_btn">Make it {{#availability}}un{{/availability}}available <i class="icon fa fa-question-circle text-info fa-fw " title="Help with Course availability" aria-label="Help with Course availability"></i></a></div><div class="ml-auto d-flex"><!--Enrolment: {{enrolment}}--></div></div>
 
 {{#js}}
     require(['theme_urcourses_default/toggle_course_availability'], function(main) {

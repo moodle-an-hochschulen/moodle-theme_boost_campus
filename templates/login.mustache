@@ -25,13 +25,27 @@
             "doctype": "<!DOCTYPE html>",
             "page_title": "Login page",
             "favicon": "favicon.ico",
-            "main_content": "<h1>Headers keep HTML validators happy</h1>"
+            "main_content": "<h1>Headers keep HTML validators happy</h1>",
+            "timedinfobannershowonselectedpage":true,
+            "timedibcontent": "This is a test content for perpetual info banner.",
+            "timedibcss": danger,
+            "perpinfobannershowonselectedpage": true,
+            "perpibcontent": "This is a test content.",
+            "perpibcss": primary,
+            "perpibdismiss": true
         }
         * pagebottomelements - HTML for all additional layout elements: the footnote.
+        * timedinfobannershowonselectedpage - true if the time controlled info banner should be displayed.
+        * timedetualinfobannercontent - The content that should be shown in the time controled information banner.
+        * timedetualinfobannercssclass - The Bootstrap class that is used for the time controlled info banner.
+        * perpinfobannershowonselectedpage - true if the info banner should be displayed.
+        * perpibcontent - The content that should be shown in the information banner.
+        * perpibcss - The Bootstrap class that is used for the info banner.
     }
 }}
 {{! MODIFICATION:
     * Add own additional layout elements: the footnote.
+    * Added the possibility to show information banners.
 }}
 {{> theme_boost/head }}
 
@@ -41,6 +55,18 @@
 <div id="page-wrapper">
 
     {{{ output.standard_top_of_body_html }}}
+
+    {{#timedinfobannershowonselectedpage}}
+    <div id="themeboostcampustimedinfobanner" class="alert alert-{{{ timedibcss }}} m-3" role="alert">
+        {{{ timedibcontent }}}
+    </div>
+    {{/timedinfobannershowonselectedpage}}
+
+    {{#perpinfobannershowonselectedpage}}
+    <div id="themeboostcampusperpinfobanner" class="alert alert-{{{ perpibcss }}} m-3" role="alert">
+        {{{ perpibcontent }}}
+    </div>
+    {{/perpinfobannershowonselectedpage}}
 
     <div id="page" class="container-fluid mt-0">
         <div id="page-content" class="row">

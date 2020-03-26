@@ -30,12 +30,61 @@ require_once($CFG->dirroot . '/theme/boost_campus/locallib.php');
 $bodyattributes = $OUTPUT->body_attributes();
 $loginbackgroundimagetext = theme_boost_campus_get_loginbackgroundimage_text();
 
+// MODIFICATION START: Set these variables in any case as it's needed in the columns2.mustache file.
+$perpinfobannershowonselectedpage = false;
+$timedinfobannershowonselectedpage = false;
+// MODIFICATION END.
+
 $templatecontext = [
     'sitename' => format_string($SITE->shortname, true, ['context' => context_course::instance(SITEID), "escape" => false]),
     'output' => $OUTPUT,
     'bodyattributes' => $bodyattributes,
-    'loginbackgroundimagetext' => $loginbackgroundimagetext
+    'loginbackgroundimagetext' => $loginbackgroundimagetext,
+    'perpinfobannershowonselectedpage' => $perpinfobannershowonselectedpage,
+    'timedinfobannershowonselectedpage' => $timedinfobannershowonselectedpage
 ];
+
+// MODIFICATION START: Settings for information banner.
+$perpibenable = get_config('theme_boost_campus', 'perpibenable');
+
+if ($perpibenable) {
+    $perpibcontent = format_text(get_config('theme_boost_campus', 'perpibcontent'), FORMAT_HTML);
+    // Result of multiselect is a string divided by a comma, so exploding into an array.
+    $perpibshowonpages = explode(",", get_config('theme_boost_campus', 'perpibshowonpages'));
+    $perpibcss = get_config('theme_boost_campus', 'perpibcss');
+
+    $perpinfobannershowonselectedpage = theme_boost_campus_show_banner_on_selected_page($perpibshowonpages,
+            $perpibcontent, $PAGE->pagelayout, false);
+
+    // Add the variables to the templatecontext array.
+    $templatecontext['perpibcontent'] = $perpibcontent;
+    $templatecontext['perpibcss'] = $perpibcss;
+    $templatecontext['perpinfobannershowonselectedpage'] = $perpinfobannershowonselectedpage;
+}
+// MODIFICATION END.
+
+// MODIFICATION START: Settings for time controlled information banner.
+$timedibenable = get_config('theme_boost_campus', 'timedibenable');
+
+if ($timedibenable) {
+    $timedibcontent = format_text(get_config('theme_boost_campus', 'timedibcontent'), FORMAT_HTML);
+    // Result of multiselect is a string divided by a comma, so exploding into an array.
+    $timedibshowonpages = explode(",", get_config('theme_boost_campus', 'timedibshowonpages'));
+    $timedibcss = get_config('theme_boost_campus', 'timedibcss');
+    $timedibstartsetting = get_config('theme_boost_campus', 'timedibstart');
+    $timedibendsetting = get_config('theme_boost_campus', 'timedibend');
+    // Get the current server time.
+    $now = (new DateTime("now", core_date::get_server_timezone_object()))->getTimestamp();
+
+    $timedinfobannershowonselectedpage = theme_boost_campus_show_timed_banner_on_selected_page($now, $timedibshowonpages,
+            $timedibcontent, $timedibstartsetting, $timedibendsetting, $PAGE->pagelayout);
+
+    // Add the variables to the templatecontext array.
+    $templatecontext['timedibcontent'] = $timedibcontent;
+    $templatecontext['timedibcss'] = $timedibcss;
+    $templatecontext['timedinfobannershowonselectedpage'] = $timedinfobannershowonselectedpage;
+}
+// MODIFICATION END.
 
 // MODIFICATION START: Handle additional layout elements.
 // The output buffer is needed to render the additional layout elements now without outputting them to the page directly.

@@ -4,6 +4,11 @@ moodle-theme_boost_campus
 Changes
 -------
 
+### Unreleased
+
+* 2020-08-05 - Added settings to be able to show a banner with information on selected pages.
+               PLEASE NOTE: For all scenarios to pass, the Moodle version 3.8.4+ (Build: 2019111804) is needed.
+
 ### Release v3.8-r2
 
 * 2020-06-22 - Improved SCSS settings to be used with admin_setting_scsscode that validates the code before saving.

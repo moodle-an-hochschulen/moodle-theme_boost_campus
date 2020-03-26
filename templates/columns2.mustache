@@ -31,6 +31,13 @@
     * regionmainsettingsmenu - HTML for the region main settings menu
     * hasregionmainsettingsmenu - There is a region main settings menu on this page.
     * pagebottomelements - HTML for all additional layout elements below the main content, e.g. the footer.
+    * timedinfobannershowonselectedpage - true if the time controlled info banner should be displayed.
+    * timedetualinfobannercontent - The content that should be shown in the time controled information banner.
+    * timedetualinfobannercssclass - The Bootstrap class that is used for the time controlled info banner.
+    * perpinfobannershowonselectedpage - true if the perpetual info banner should be displayed.
+    * perpibcontent - The content that should be shown in the perpetual information banner.
+    * perpibcss - The Bootstrap class that is used for the perpetual info banner.
+    * perpibdismiss - true if the setting perpibdismiss is enabled.
 
     Example context (json):
     {
@@ -47,7 +54,15 @@
         "navdraweropen":true,
         "regionmainsettingsmenu": "",
         "hasregionmainsettingsmenu": false,
-        "pagebottomelements": ""
+        "pagebottomelements": "".,
+        "timedinfobannershowonselectedpage":true,
+        "timedibcontent": "This is a test content for perpetual info banner.",
+        "timedibcss": danger,
+        "perpinfobannershowonselectedpage":true,
+        "perpibcontent": "This is a test content for perpetual info banner.",
+        "perpibcss": primary,
+        "perpibdismiss": true,
+        "infobannerconfirmationdialogue" : true
     }
 }}
 {{! MODIFICATION:
@@ -58,6 +73,7 @@
     * Call to own navbar mustache template instead of boost/navbar.
     * Add own additional layout elements: the footer, footnote or image area.
     * Moved the variable output.standard_end_of_body_html from footer.mustache to solve Javascript issues with behat tests.
+    * Added the possibility to show information banners.
 }}
 {{> theme_boost/head }}
 
@@ -72,6 +88,24 @@
     {{> theme_boost/nav-drawer }}
 
     <div id="page" class="container-fluid d-print-block">
+
+        {{#timedinfobannershowonselectedpage}}
+        <div id="themeboostcampusitimedinfobanner" class="alert alert-{{{ timedibcss }}} mt-3" role="alert">
+          {{{ timedibcontent }}}
+        </div>
+        {{/timedinfobannershowonselectedpage}}
+
+        {{#perpinfobannershowonselectedpage}}
+        <div id="themeboostcampusperpinfobanner" class="alert alert-{{{ perpibcss }}} {{#perpibdismiss}}alert-dismissible fade show{{/perpibdismiss}} mt-3" role="alert">
+          {{{ perpibcontent }}}
+          {{#perpibdismiss}}
+          <button type="button" id="themeboostcampusperpinfobannerclosebutton" class="close" data-dismiss="alert" aria-label="{{#str}}close, theme_boost_campus{{/str}}">
+              <span aria-hidden="true">&times;</span>
+           </button>
+           {{/perpibdismiss}}
+        </div>
+        {{/perpinfobannershowonselectedpage}}
+
         {{{ output.full_header }}}
 
         <div id="page-content" class="row pb-3 d-print-block">
@@ -135,4 +169,9 @@ require(['theme_boost_campus/catchshortcuts'], function(mod) {
     mod.init();
     });
 {{/incoursesettings}}
+{{#perpinfobannershowonselectedpage}}
+    require(['theme_boost_campus/infobanner'], function(mod) {
+    mod.init({{{perbibconfirmdialogue}}});
+    });
+{{/perpinfobannershowonselectedpage}}
 {{/js}}

@@ -222,14 +222,84 @@ $string['additionalresourcessetting_desc'] = 'With this setting you can upload a
 The advantage of uploading files to this file area is that those files can be delivered without a check if the user is logged in. This is also why you should only add files that are uncritical and everyone should be allowed to access and don\'t need be protected with a valid login. <br/>
 An example for a use case can be found in the README.md file.';
 
+// Info banner settings.
+$string['infobannersettings'] = 'Info Banner Settings';
+
+// ...Perpetual information banner.
+$string['perpetualinfobannerheadingsetting'] = 'Perpetual information banner';
+$string['perpetualinfobannerheadingsetting_desc'] = 'The following settings allow to show some important information within a prominent perpetual banner.';
+$string['perpibenablesetting'] = 'Enable perpetual info banner';
+$string['perpibenablesetting_desc'] = 'With this checkbox you can decide if the perpetual information banner should be shown or hidden on the selected pages.';
+$string['perpibcontent'] = 'Perpetual information banner content';
+$string['perpibcontent_desc'] = 'Enter your information which should be shown within the banner here.';
+$string['perpibshowonpagessetting'] = 'Page layouts to display the info banner on';
+$string['perpibshowonpagessetting_desc'] = 'With this setting you can select the pages on which the perpetual information banner should be displayed.';
+$string['perpibcsssetting'] = 'Bootstrap css class for the perpetual info banner';
+$string['perpibcsssetting_desc'] = 'With this setting you can select the Bootstrap style with which the perpetual information banner should be displayed.';
+$string['perpibdismisssetting'] = 'Perpetual info banner dismissible';
+$string['perpibdismisssetting_desc'] = 'With this checkbox you can make the banner dismissible permanently. If the user clicks on the x-button a confirmation dialogue will appear and only after the user confirmed this dialogue the banner will be hidden for this user permanently.
+<br/><br/>Please note: <br/> This setting has no effect for the banners shown on the login page. Because banners on the login page cannot be clicked away permanently, we do not offer the possibility to click the banner away at all on the login page.';
+$string['perpibconfirmsetting'] = 'Confirmation dialogue';
+$string['perpibconfirmsetting_desc'] = 'When you enable this setting you can show a confirmation dialogue to a user when he is dismissing the info banner.
+<br/>The text is saved in the string with the name "closingperpetualinfobanner":<br/><br/>
+Are you sure you want to dismiss this information? Once done it will not occur again!<br/><br/>
+You can override this within your language customization if you need some other text in this dialogue.';
+$string['perpetualinfobannerresetvisiblitysetting'] = 'Reset visibility for perpetual info banner';
+$string['perpetualinfobannerresetvisiblitysetting_desc'] = 'By enabling this checkbox, the visibility of the individually dismissed perpetual info banners will be set to visible again. You can use this setting if you made important content changes and want to show the info to all users again.<br/><br/>
+Please note: <br/>
+After saving this option, the database operations for resetting the visibility will be triggered and this checkbox will be unticked again. The next enabling and saving of this feature will trigger the database operations for resetting the visibility again.';
+
+// ...Time controlled information banner.
+$string['timedinfobannerheadingsetting'] = 'Time controlled information banner';
+$string['timedinfobannerheadingsetting_desc'] = 'The following settings allow to show some important information within a prominent time controlled banner.';
+$string['timedibenablesetting'] = 'Enable time controlled info banner';
+$string['timedibenablesetting_desc'] = 'With this checkbox you can decide if the time controlled information banner should be shown or hidden on the selected pages.';
+$string['timedibcontent'] = 'Time controlled information banner content';
+$string['timedibcontent_desc'] = 'Enter your information which should be shown within the time controlled banner here.';
+$string['timedibshowonpagessetting'] = 'Page layouts to display the info banner on';
+$string['timedibshowonpagessetting_desc'] = 'With this setting you can select the pages on which the time controlled information banner should be displayed.
+<br/> If both info banners are active on a selected layout, the time controlled info banner will always appear above the perpetual info banner!';
+$string['timedibcsssetting'] = 'Bootstrap css class for the time controlled info banner';
+$string['timedibcsssetting_desc'] = 'With this setting you can select the Bootstrap style with which the time controlled information banner should be displayed.';
+$string['timedibstartsetting'] = 'Start time for the time controlled info banner';
+$string['timedibstartsetting_desc'] = 'With this setting you can define when the time controlled information banner should be displayed on the selected pages.
+<br/>Please enter a valid in this format: YYYY-MM-DD HH:MM:SS. For example: "2020-01-01 08:00:00". The time zone will be the time zone you have defined in the setting "Default timezone".
+<br/>If you leave this setting empty but entered a date in the for the end, it is the same as if you entered a date far in the past.';
+$string['timedibendsetting'] = 'End time for the time controlled info banner';
+$string['timedibendsetting_desc'] = 'With this setting you can define when the time controlled information banner should be hidden on the selected pages.
+<br/>Please enter a valid date in this format: YYYY-MM-DD HH:MM:SS. For example: "2020-01-07 08:00:00. The time zone will be the time zone you have defined in the setting "Default timezone".
+<br/>If you leave this setting empty but entered a date in the for the start, the banner won\'t hide after the starting time has been reached.';
+
 // ADDITIONAL STRINGS (IN ALPHABETICAL ORDER).
 $string['backtotop'] = 'Back to top';
+$string['bootstrapprimarycolor'] = 'Primary color';
+$string['bootstrapsecondarycolor'] = 'Secondary color';
+$string['bootstrapsuccesscolor'] = 'Success color';
+$string['bootstrapdangercolor'] = 'Danger color';
+$string['bootstrapwarningcolor'] = 'Warning color';
+$string['bootstrapinfocolor'] = 'Info color';
+$string['bootstraplightcolor'] = 'Light color';
+$string['bootstrapdarkcolor'] = 'Dark color';
 $string['cachedef_imagearea'] = 'Cache for imagearea items';
+$string['close'] = 'Close';
+$string['confirmation'] = 'Confirmation';
+$string['closingperpetualinfobanner'] = 'Are you sure you want to dismiss this information? Once done it will not occur again!';
+$string['login_page'] = "Login page";
+$string['resetperpetualinfobannervisibilityerror'] = 'Oops... Something went wrong updating the database tables. The user preference "theme_boost_campus_infobanner_dismissed" should have been reset in the table "user_preferences".
+<br/>Exception thrown: {$a->message}.
+<br/>Stack Trace:
+<br/>{$a->stacktrace}.
+<br/>The setting "Reset visibility for perpetual info banner" has been reset nevertheless.';
+$string['resetperpetualinfobannersuccess'] = 'Success! All perpetual info banner instances are visible again.
+<br/>The setting "Reset visibility for perpetual info banner" has been reset.';
 $string['showhintcourseguestaccessgeneral'] = 'You are currently viewing this course as <strong>{$a->role}</strong>.';
 $string['showhintcourseguestaccesslink'] = 'To have full access to the course, you can <a href="{$a->url}">self enrol into this course</a>.';
 $string['showhintcoursehiddengeneral'] = 'This course is currently <strong>hidden</strong>. Only enrolled teachers can access this course when hidden.';
 $string['showhintcoursehiddensettingslink'] = 'You can change the visibility in the <a href="{$a->url}">course settings</a>.';
 $string['switchroleto'] = 'Switch role to';
+$string['yes_close'] = "Yes, close!";
 
 // PRIVACY.
-$string['privacy:metadata'] = 'The Boost Campus theme does not store any personal data about any user.';
+$string['privacy:metadata:preference:infobanner_dismissed'] = 'The user preference for the status if the perpetual info banner has been dismissed.';
+$string['privacy:metadata:request:infobanner_dismissed_yes'] = 'Perpetual info banner has been dismissed.';
+$string['privacy:metadata:request:infobanner_dismissed_no'] = 'Perpetual info banner has not been dismissed.';

@@ -529,7 +529,8 @@ if ($ADMIN->fulltree) {
 
 
      // Create design settings tab.
-    $page = new admin_settingpage('theme_boost_campus_design', get_string('designsettings', 'theme_boost_campus', null, true));
+    $page = new admin_settingpage('theme_boost_campus_design', get_string('designsettings',
+            'theme_boost_campus', null, true));
 
     // Settings title to group login page related settings together with a common heading. We don't want a description here.
     $name = 'theme_boost_campus/loginpagedesignheading';
@@ -672,6 +673,202 @@ if ($ADMIN->fulltree) {
         array('maxfiles' => -1));
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
+
+    // Add tab to settings page.
+    $settings->add($page);
+
+    // Create info banner settings tab.
+    $page = new admin_settingpage('theme_boost_campus_infobanner', get_string('infobannersettings',
+            'theme_boost_campus', null, true));
+
+    // Settings title to group perpetual information banner settings together with a common heading and description.
+    $name = 'theme_boost_campus/perpetualinfobannerheading';
+    $title = get_string('perpetualinfobannerheadingsetting', 'theme_boost_campus', null, true);
+    $description = get_string('perpetualinfobannerheadingsetting_desc', 'theme_boost_campus', null, true);
+    $setting = new admin_setting_heading($name, $title, $description);
+    $page->add($setting);
+
+    // Activate perpetual information banner.
+    $name = 'theme_boost_campus/perpibenable';
+    $title = get_string('perpibenablesetting', 'theme_boost_campus', null, true);
+    $description = get_string('perpibenablesetting_desc', 'theme_boost_campus', null, true);
+    $setting = new admin_setting_configcheckbox($name, $title, $description, 0);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+    // Perpetual information banner content.
+    $name = 'theme_boost_campus/perpibcontent';
+    $title = get_string('perpibcontent', 'theme_boost_campus', null, true);
+    $description = get_string('perpibcontent_desc', 'theme_boost_campus', null, true);
+    $setting = new admin_setting_confightmleditor($name, $title, $description, '');
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    $settings->hide_if('theme_boost_campus/perpibcontent',
+            'theme_boost_campus/perpibenable', 'notchecked');
+
+    // Select pages on which the perpetual information banner should be shown.
+    $name = 'theme_boost_campus/perpibshowonpages';
+    $title = get_string('perpibshowonpagessetting', 'theme_boost_campus', null, true);
+    $description = get_string('perpibshowonpagessetting_desc', 'theme_boost_campus', null, true);
+    $perpibshowonpageoptions = [
+            // Don't use string lazy loading (= false) because the string will be directly used and would produce a
+            // PHP warning otherwise.
+            'mydashboard' => get_string('myhome', 'core', null, false),
+            'course' => get_string('course', 'core', null, false),
+            'login' => get_string('login_page', 'theme_boost_campus', null, false)
+    ];
+    $setting = new admin_setting_configmultiselect($name, $title, $description,
+            array($perpibshowonpageoptions['mydashboard']), $perpibshowonpageoptions);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    $settings->hide_if('theme_boost_campus/perpibshowonpages',
+            'theme_boost_campus/perpibenable', 'notchecked');
+
+    // Select the bootstrap class that should be used for the perpetual info banner.
+    $name = 'theme_boost_campus/perpibcss';
+    $title = get_string('perpibcsssetting', 'theme_boost_campus', null, true);
+    $description = get_string('perpibcsssetting_desc', 'theme_boost_campus', null, true);
+    $perpibcssoptions = [
+            // Don't use string lazy loading (= false) because the string will be directly used and would produce a
+            // PHP warning otherwise.
+            'primary' => get_string('bootstrapprimarycolor', 'theme_boost_campus', null, false),
+            'secondary' => get_string('bootstrapsecondarycolor', 'theme_boost_campus', null, false),
+            'success' => get_string('bootstrapsuccesscolor', 'theme_boost_campus', null, false),
+            'danger' => get_string('bootstrapdangercolor', 'theme_boost_campus', null, false),
+            'warning' => get_string('bootstrapwarningcolor', 'theme_boost_campus', null, false),
+            'info' => get_string('bootstrapinfocolor', 'theme_boost_campus', null, false),
+            'light' => get_string('bootstraplightcolor', 'theme_boost_campus', null, false),
+            'dark' => get_string('bootstrapdarkcolor', 'theme_boost_campus', null, false)
+    ];
+    $setting = new admin_setting_configselect($name, $title, $description, $perpibcssoptions['primary'],
+            $perpibcssoptions);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    $settings->hide_if('theme_boost_campus/perpibcss',
+            'theme_boost_campus/perpibenable', 'notchecked');
+
+    // Perpetual information banner dismissible.
+    $name = 'theme_boost_campus/perpibdismiss';
+    $title = get_string('perpibdismisssetting', 'theme_boost_campus', null, true);
+    $description = get_string('perpibdismisssetting_desc', 'theme_boost_campus', null, true);
+    $setting = new admin_setting_configcheckbox($name, $title, $description, 0);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    $settings->hide_if('theme_boost_campus/perpibdismiss',
+            'theme_boost_campus/perpibenable', 'notchecked');
+
+    // Perpetual information banner show confirmation dialogue when dismissing.
+    $name = 'theme_boost_campus/perpibconfirm';
+    $title = get_string('perpibconfirmsetting', 'theme_boost_campus', null, true);
+    $description = get_string('perpibconfirmsetting_desc', 'theme_boost_campus', null, true);
+    $setting = new admin_setting_configcheckbox($name, $title, $description, 0);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    $settings->hide_if('theme_boost_campus/perpibconfirm',
+            'theme_boost_campus/perpibenable', 'notchecked');
+    $settings->hide_if('theme_boost_campus/perpibconfirm',
+            'theme_boost_campus/perpibdismiss', 'notchecked');
+
+    // Reset the user preference for all users.
+    $name = 'theme_boost_campus/perpibresetvisibility';
+    $title = get_string('perpetualinfobannerresetvisiblitysetting', 'theme_boost_campus', null, true);
+    $description = get_string('perpetualinfobannerresetvisiblitysetting_desc', 'theme_boost_campus', null, true);
+    $setting = new admin_setting_configcheckbox($name, $title, $description, 0);
+    $setting->set_updatedcallback('theme_boost_campus_infobanner_reset_visibility');
+    $page->add($setting);
+    $settings->hide_if('theme_boost_campus/perpibresetvisibility',
+            'theme_boost_campus/perpibenable', 'notchecked');
+    $settings->hide_if('theme_boost_campus/perpibresetvisibility',
+            'theme_boost_campus/perpibdismiss', 'notchecked');
+
+    // Settings title to group time controlled information banner settings together with a common heading and description.
+    $name = 'theme_boost_campus/timedinfobannerheading';
+    $title = get_string('timedinfobannerheadingsetting', 'theme_boost_campus', null, true);
+    $description = get_string('timedinfobannerheadingsetting_desc', 'theme_boost_campus', null, true);
+    $setting = new admin_setting_heading($name, $title, $description);
+    $page->add($setting);
+
+    // Activate time controlled information banner.
+    $name = 'theme_boost_campus/timedibenable';
+    $title = get_string('timedibenablesetting', 'theme_boost_campus', null, true);
+    $description = get_string('timedibenablesetting_desc', 'theme_boost_campus', null, true);
+    $setting = new admin_setting_configcheckbox($name, $title, $description, 0);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+    // Time controlled information banner content.
+    $name = 'theme_boost_campus/timedibcontent';
+    $title = get_string('timedibcontent', 'theme_boost_campus', null, true);
+    $description = get_string('timedibcontent_desc', 'theme_boost_campus', null, true);
+    $setting = new admin_setting_confightmleditor($name, $title, $description, '');
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    $settings->hide_if('theme_boost_campus/timedibcontent',
+            'theme_boost_campus/timedibenable', 'notchecked');
+
+    // Select pages on which the time controlled information banner should be shown.
+    $name = 'theme_boost_campus/timedibshowonpages';
+    $title = get_string('timedibshowonpagessetting', 'theme_boost_campus', null, true);
+    $description = get_string('timedibshowonpagessetting_desc', 'theme_boost_campus', null, true);
+    $timedibpageoptions = [
+        // Don't use string lazy loading (= false) because the string will be directly used and would produce a
+        // PHP warning otherwise.
+            'mydashboard' => get_string('myhome', 'core', null, false),
+            'course' => get_string('course', 'core', null, false),
+            'login' => get_string('login_page', 'theme_boost_campus', null, false)
+    ];
+    $setting = new admin_setting_configmultiselect($name, $title, $description,
+            array($timedibpageoptions['mydashboard']), $timedibpageoptions);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    $settings->hide_if('theme_boost_campus/timedibshowonpages',
+            'theme_boost_campus/timedibenable', 'notchecked');
+
+    // Select the bootstrap class that should be used for the perpetual info banner.
+    $name = 'theme_boost_campus/timedibcss';
+    $title = get_string('timedibcsssetting', 'theme_boost_campus', null, true);
+    $description = get_string('timedibcsssetting_desc', 'theme_boost_campus', null, true);
+    $timedibcssoptions = [
+        // Don't use string lazy loading (= false) because the string will be directly used and would produce a
+        // PHP warning otherwise.
+            'primary' => get_string('bootstrapprimarycolor', 'theme_boost_campus', null, false),
+            'secondary' => get_string('bootstrapsecondarycolor', 'theme_boost_campus', null, false),
+            'success' => get_string('bootstrapsuccesscolor', 'theme_boost_campus', null, false),
+            'danger' => get_string('bootstrapdangercolor', 'theme_boost_campus', null, false),
+            'warning' => get_string('bootstrapwarningcolor', 'theme_boost_campus', null, false),
+            'info' => get_string('bootstrapinfocolor', 'theme_boost_campus', null, false),
+            'light' => get_string('bootstraplightcolor', 'theme_boost_campus', null, false),
+            'dark' => get_string('bootstrapdarkcolor', 'theme_boost_campus', null, false)
+    ];
+    $setting = new admin_setting_configselect($name, $title, $description, $timedibcssoptions['primary'],
+            $timedibcssoptions);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    $settings->hide_if('theme_boost_campus/timedibcss',
+            'theme_boost_campus/timedibenable', 'notchecked');
+
+    // This will check for the desired date time format YYYY-MM-DD HH:MM:SS
+    $timeregex = '/20[0-9]{2}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])\s([0-1][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]/';
+
+    // Start time for controlled information banner.
+    $name = 'theme_boost_campus/timedibstart';
+    $title = get_string('timedibstartsetting', 'theme_boost_campus', null, true);
+    $description = get_string('timedibstartsetting_desc', 'theme_boost_campus', null, true);
+    $setting = new admin_setting_configtext($name, $title, $description, '', $timeregex);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    $settings->hide_if('theme_boost_campus/timedibstart',
+            'theme_boost_campus/timedibenable', 'notchecked');
+
+    // End time for controlled information banner.
+    $name = 'theme_boost_campus/timedibend';
+    $title = get_string('timedibendsetting', 'theme_boost_campus', null, true);
+    $description = get_string('timedibendsetting_desc', 'theme_boost_campus', null, true);
+    $setting = new admin_setting_configtext($name, $title, $description, '', $timeregex);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    $settings->hide_if('theme_boost_campus/timedibend',
+            'theme_boost_campus/timedibenable', 'notchecked');
 
     // Add tab to settings page.
     $settings->add($page);

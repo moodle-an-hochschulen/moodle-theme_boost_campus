@@ -448,3 +448,78 @@ function theme_boost_campus_get_course_guest_access_hint($courseid) {
 
     return $html;
 }
+
+/**
+ * Return if the info banner should be displayed on current page layout.
+ *
+ * @param array $infobannerpagestoshow The list of page layouts on which the info banner should be shown.
+ * @param string $infobannercontent The content which should be displayed within the info banner.
+ * @param mixed|moodle_page $thispagelayout The current page layout.
+ * @param string $perbibuserprefdialdismissed The user preference if the dissmissible banner has been dismissed.
+ * @return boolean
+ */
+function theme_boost_campus_show_banner_on_selected_page($infobannerpagestoshow, $infobannercontent, $thispagelayout,
+        $perbibuserprefdialdismissed) {
+
+    // Initialize variable.
+    $infobannershowonselectedpage = false;
+
+    // Traverse multiselect setting.
+    foreach ($infobannerpagestoshow as $page) {
+        if (empty($infobannercontent)) {
+            $infobannershowonselectedpage = false;
+        } else {
+            // Decide if the info banner should be shown at all.
+            if (!empty($infobannercontent) && $thispagelayout == $page && !$perbibuserprefdialdismissed) {
+                $infobannershowonselectedpage = true;
+                continue;
+            }
+        }
+    }
+    return $infobannershowonselectedpage;
+}
+
+/**
+ * Return if the time limited info banner should be displayed on current page layout.
+ *
+ * @param int $now The timestamp of the current server time.
+ * @param array $timedibshowonpages The list of page layouts on which the info banner should be shown.
+ * @param string $timedibcontent The content which should be displayed within the info banner.
+ * @param string $timedibstartsetting The value from setting timedibstart.
+ * @param string $timedibendsetting The value from setting timedibend.
+ * @param mixed|moodle_page $thispagelayout The current page layout.
+ * @return boolean
+ */
+function theme_boost_campus_show_timed_banner_on_selected_page($now, $timedibshowonpages, $timedibcontent, $timedibstartsetting,
+        $timedibendsetting, $thispagelayout) {
+
+    // Initialize variable.
+    $timedinfobannershowonselectedpage = false;
+
+    // Check if time settings are empty and try to convert the time string_s_ to a unix timestamp.
+    if (empty($timedibstartsetting)) {
+        $timedibstartempty = true;
+    } else {
+        $timedibstart = strtotime($timedibstartsetting);
+    }
+    if (empty($timedibendsetting)) {
+        $timedibendempty = true;
+    } else {
+        $timedibend = strtotime($timedibendsetting);
+    }
+
+    // Add the time check:
+    // Show the banner when now is between start and end time OR
+    // Show the banner when start is not set but end is not reached yet OR
+    // Show the banner when end is not set, but start lies in the past OR
+    // Show the banner if no dates are set, so there's no time restriction.
+    if (($now >= $timedibstart && $now <= $timedibend ||
+            ($now <= $timedibend && $timedibstartempty) ||
+            ($now >= $timedibstart && $timedibendempty) ||
+            ($timedibstartempty && $timedibendempty))) {
+        $timedinfobannershowonselectedpage = theme_boost_campus_show_banner_on_selected_page($timedibshowonpages,
+                $timedibcontent, $thispagelayout, false);
+    }
+
+    return $timedinfobannershowonselectedpage;
+}

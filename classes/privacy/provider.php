@@ -26,22 +26,53 @@ namespace theme_boost_campus\privacy;
 
 defined('MOODLE_INTERNAL') || die();
 
+use \core_privacy\local\metadata\collection;
+use core_privacy\local\request\writer;
+
 /**
- * Privacy Subsystem implementing null_provider.
+ * Privacy Subsystem implementing provider.
  *
  * @package    theme_boost_campus
- * @copyright  2018 Alexander Bias, Ulm University <alexander.bias@uni-ulm.de>
+ * @copyright  2020 Kathrin Osswald, Ulm University <kathrin.osswald@uni-ulm.de>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-class provider implements \core_privacy\local\metadata\null_provider {
+class provider implements \core_privacy\local\metadata\provider,
+        \core_privacy\local\request\user_preference_provider {
 
     /**
-     * Get the language string identifier with the component's language
-     * file to explain why this plugin stores no data.
+     * Returns meta data about this system.
      *
-     * @return string
+     * @param collection $collection The initialised collection to add items to.
+     * @return collection A listing of user data stored through this system.
      */
-    public static function get_reason() : string {
-        return 'privacy:metadata';
+    public static function get_metadata(collection $collection) : collection {
+        $collection->add_user_preference('theme_boost_campus_infobanner_dismissed',
+                'privacy:metadata:preference:infobanner_dismissed');
+
+        return $collection;
+    }
+
+    /**
+     * Export all user preferences for the plugin.
+     *
+     * @param int $userid The userid of the user whose data is to be exported.
+     */
+    public static function export_user_preferences(int $userid) {
+        $infobannerpref = get_user_preferences('theme_boost_campus_infobanner_dismissed', null, $userid);
+        if ($infobannerpref !== null) {
+            switch ($infobannerpref) {
+                case 0:
+                default:
+                    $infobannerprefdesc = get_string('privacy:metadata:request:infobanner_dismissed_no',
+                            'theme_boost_campus');
+                    break;
+                case 1:
+                    $infobannerprefdesc = get_string('privacy:metadata:request:infobanner_dismissed_yes',
+                            'theme_boost_campus');
+                    break;
+            }
+            writer::export_user_preference('theme_boost_campus', 'theme_boost_campus_infobanner_dismissed',
+                    $infobannerpref, $infobannerprefdesc);
+        }
     }
 }

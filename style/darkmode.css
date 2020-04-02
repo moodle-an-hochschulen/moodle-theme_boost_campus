@@ -875,3 +875,7 @@ body.path-mod-mail .mm-message .quote {
 	background-color: #999;
 	padding: .75rem !important;
 }
+
+.hsuforum-thread {
+	background-color: transparent;
+}

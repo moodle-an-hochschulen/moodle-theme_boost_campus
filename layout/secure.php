@@ -44,7 +44,7 @@ $templatecontext = [
     'sidepreblocks' => $blockshtml,
     'hasblocks' => $hasblocks,
     'darknavbar' => $darknavbar,
-	'contextheader' => $headertext;
+	'contextheader' => $headertext
 ];
 
 echo $OUTPUT->render_from_template('theme_urcourses_default/secure', $templatecontext);

@@ -35,6 +35,7 @@ define(['jquery'], function($) {
 			$(this).click(function() {
 				$('#lbimg').attr('src',$(this).children('img').eq(0).attr('src'));
 				$('#lbimgcap').html($(this).attr('title'));
+				$('#lightboxmodal .modal-dialog').css({ width: ($('#lbimg').width() + 34)+' px' });
 				//console.log($( this ).attr( "title" )+' clicked');
 				//console.log('obj:'+$(this).children('img').eq(0));
 				//console.log('src:'+$(this).children('img').eq(0).attr('src'));

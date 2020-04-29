@@ -2513,6 +2513,13 @@ body.format-topcoll.editing .section .activity .activityinstance {
     height: 36px;
 }
 
+
+// try to address modal lightbox sizing
+#lightboxmodal .modal-dialog {
+    max-width: max-content;
+}
+
+
 // restore flex-video functionality
 @media screen and (max-width: 767px) {
     

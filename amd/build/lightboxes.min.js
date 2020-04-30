@@ -61,8 +61,8 @@ define(['jquery'], function($) {
 					modalmarkup += '        <!--<h4 class="modal-title">Modal Header</h4>-->';
 					modalmarkup += '      </div>';
 					modalmarkup += '      <div class="modal-body">';
-					modalmarkup += '        <figure class="figure"><img id="lbimg" class="" src="" />';
-					modalmarkup += '        <figcaption id="lbimgcap" class="figure-caption"></figcaption>';
+					modalmarkup += '        <figure class="figure"><img id="lbimg" class="img-fluid" src="" />';
+					modalmarkup += '        <figcaption id="lbimgcap" class="figure-caption mt-2"></figcaption>';
 					modalmarkup += '      </div>';
 					modalmarkup += '      <div class="modal-footer">';
 					modalmarkup += '        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>';

@@ -1415,6 +1415,16 @@ a[href^="mailto"]::before {
 	max-width: 100%;
 }
 
+#page-login-index .card.login-art-credit {
+	background-color: rgba(255,255,255,0.8);
+}
+
+/*.make the art credit lighter background due to position on larger screens */
+@include media-breakpoint-up(md) {
+	#page-login-index #region-main-box div.card.login-art-credit {
+		background-color: rgba(255,255,255,0.4);
+	}
+}
 
 
 /* TODO: Remove when MDL-61319 is fixed */

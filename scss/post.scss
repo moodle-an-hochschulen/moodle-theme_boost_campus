@@ -2005,6 +2005,14 @@ li.inline-nav-admin icon, li.inline-na icon {
     }
 }
 
+body.loginbackgroundimage,
+body .loginbackgroundimage {
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-position: 60% bottom;
+	background-repeat: repeat-x;
+}
+
 /*Default link colour override. Would be the brand colour otherwise*/ 
 a {
     color: #05779a;

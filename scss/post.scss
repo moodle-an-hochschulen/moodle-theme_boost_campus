@@ -457,27 +457,20 @@ body.loginbackgroundimage #page {
         li#section-0 {
             padding-top: 0;
         }
-        /* Remove padding => section move button is center-aligned in front of section title and sections are aligned equal to
-           section elements. */
-        li.section .left {
-            padding: 0;
-            padding-right: 5px; /* Align section title equal to beginning of icons within section. */
-        }
         /* Remove spacer from regular sections. */
         img.icon.spacer {
             display: none;
         }
-        /* Increase space from section title (edit mode off) to left border. */
-        h3.sectionname {
-            padding-left: 15px;
-            padding-bottom: 10px;
+        /* Make the summary aligned the same way as with option all section on one page. */
+        .summarytext {
+            margin-left: 25px;
         }
         /* Display icon of hidden activity or resource in grayscale.*/
         .activity .contentwithoutlink .dimmed .activityicon,
         .activity .activityinstance .dimmed .activityicon {
             filter: grayscale(100%);
         }
-        /* Add border to descripion text to differ it from module content. */
+        /* Add border to description text to differ it from module content. */
         .section .contentafterlink {
             border-left: 2px solid $gray-light;
             padding-left: 10px;
@@ -498,7 +491,6 @@ body.loginbackgroundimage #page {
         /* Align section title in single view left. */
         h3.sectionname {
             text-align: left;
-            padding-left: 40px;
             padding-top: 1.5rem;
         }
         /* Reduce padding top of first and only section in this view. */

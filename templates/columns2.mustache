@@ -69,6 +69,7 @@
     {{{ output.standard_top_of_body_html }}}
 
     {{> theme_boost_campus/navbar }}
+    {{> theme_boost/nav-drawer }}
 
     <div id="page" class="container-fluid d-print-block">
         {{{ output.full_header }}}
@@ -106,7 +107,6 @@
         </div>
     </div>
     {{{ output.standard_after_main_region_html }}}
-    {{> theme_boost/nav-drawer }}
     {{{ pagebottomelements }}}
 </div>
 {{! Moved the variable here from footer.mustache to solve Javascript issues with behat tests. }}

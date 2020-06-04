@@ -6,6 +6,7 @@ Changes
 
 ### Unreleased
 
+* 2020-06-08 - Fixed functionality bug for back to top button.
 * 2020-06-05 - Fixing broken behat step.
 * 2020-06-04 - Adjusted columns2.mustache template due to upstream changes in theme Boost.
 * 2020-06-04 - Making Travis happy again.

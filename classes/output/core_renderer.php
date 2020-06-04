@@ -93,7 +93,7 @@ class core_renderer extends \core_renderer {
      * @return string
      */
     public function body_attributes($additionalclasses = array()) {
-        global $PAGE, $CFG;
+        global $CFG;
         require_once($CFG->dirroot . '/theme/boost_campus/locallib.php');
 
         if (!is_array($additionalclasses)) {
@@ -102,7 +102,7 @@ class core_renderer extends \core_renderer {
 
         // MODIFICATION START.
         // Only add classes for the login page.
-        if ($PAGE->bodyid == 'page-login-index') {
+        if ($this->page->bodyid == 'page-login-index') {
             $additionalclasses[] = 'loginbackgroundimage';
             // Generating a random class for displaying a random image for the login page.
             $additionalclasses[] = theme_boost_campus_get_random_loginbackgroundimage_class();
@@ -123,10 +123,9 @@ class core_renderer extends \core_renderer {
      * @return moodle_url The moodle_url for the favicon
      */
     public function favicon() {
-        global $PAGE;
         // MODIFICATION START.
-        if (!empty($PAGE->theme->settings->favicon)) {
-            return $PAGE->theme->setting_file_url('favicon', 'favicon');
+        if (!empty($this->page->theme->settings->favicon)) {
+            return $this->page->theme->setting_file_url('favicon', 'favicon');
         } else {
             return $this->image_url('favicon', 'theme');
         }
@@ -149,14 +148,14 @@ class core_renderer extends \core_renderer {
      */
     public function full_header() {
         // MODIFICATION START.
-        global $PAGE, $USER, $COURSE, $CFG;
+        global $USER, $COURSE, $CFG;
         // MODIFICATION END.
 
-        if ($PAGE->include_region_main_settings_in_header_actions() && !$PAGE->blocks->is_block_present('settings')) {
+        if ($this->page->include_region_main_settings_in_header_actions() && !$this->page->blocks->is_block_present('settings')) {
             // Only include the region main settings if the page has requested it and it doesn't already have
             // the settings block on it. The region main settings are included in the settings block and
             // duplicating the content causes behat failures.
-            $PAGE->add_header_action(html_writer::div(
+            $this->page->add_header_action(html_writer::div(
                     $this->region_main_settings_menu(),
                     'd-print-none',
                     ['id' => 'region-main-settings-menu']
@@ -167,7 +166,7 @@ class core_renderer extends \core_renderer {
         // MODIFICATION START.
         // Show the context header settings menu on all pages except for the profile page as we replace
         // it with an edit button there.
-        if ($PAGE->pagelayout != 'mypublic') {
+        if ($this->page->pagelayout != 'mypublic') {
             $header->settingsmenu = $this->context_header_settings_menu();
         }
         // MODIFICATION END.
@@ -175,12 +174,12 @@ class core_renderer extends \core_renderer {
         $header->settingsmenu = $this->context_header_settings_menu();
         ORIGINAL END. */
         $header->contextheader = $this->context_header();
-        $header->hasnavbar = empty($PAGE->layout_options['nonavbar']);
+        $header->hasnavbar = empty($this->page->layout_options['nonavbar']);
         $header->navbar = $this->navbar();
         // MODIFICATION START.
         // Show the page heading button on all pages except for the profile page.
         // There we replace it with an edit profile button.
-        if ($PAGE->pagelayout != 'mypublic') {
+        if ($this->page->pagelayout != 'mypublic') {
             $header->pageheadingbutton = $this->page_heading_button();
         } else {
             // Get the id of the user for whom the profile page is shown.
@@ -205,7 +204,7 @@ class core_renderer extends \core_renderer {
         $header->pageheadingbutton = $this->page_heading_button();
         ORIGINAL END. */
         $header->courseheader = $this->course_header();
-        $header->headeractions = $PAGE->get_header_actions();
+        $header->headeractions = $this->page->get_header_actions();
         // MODIFICATION START:
         // Change this to add the result in the html variable to be able to add further features below the header.
         // Render from the own header template.
@@ -219,7 +218,7 @@ class core_renderer extends \core_renderer {
         // If the setting showhintcoursehidden is set, the visibility of the course is hidden and
         // a hint for the visibility will be shown.
         if (get_config('theme_boost_campus', 'showhintcoursehidden') == 'yes' && $COURSE->visible == false &&
-            $PAGE->has_set_url() && $PAGE->url->compare(new moodle_url('/course/view.php'), URL_MATCH_BASE)) {
+                $this->page->has_set_url() && $this->page->url->compare(new moodle_url('/course/view.php'), URL_MATCH_BASE)) {
             $html .= html_writer::start_tag('div', array('class' => 'course-hidden-infobox alert alert-warning'));
             $html .= html_writer::tag('i', null, array('class' => 'fa fa-exclamation-circle fa-3x fa-pull-left'));
             $html .= get_string('showhintcoursehiddengeneral', 'theme_boost_campus', $COURSE->id);
@@ -239,8 +238,8 @@ class core_renderer extends \core_renderer {
         // intended.
         if (get_config('theme_boost_campus', 'showhintcourseguestaccess') == 'yes'
             && is_guest(\context_course::instance($COURSE->id), $USER->id)
-            && $PAGE->has_set_url()
-            && $PAGE->url->compare(new moodle_url('/course/view.php'), URL_MATCH_BASE)
+            && $this->page->has_set_url()
+            && $this->page->url->compare(new moodle_url('/course/view.php'), URL_MATCH_BASE)
             && !is_role_switched($COURSE->id)) {
             $html .= html_writer::start_tag('div', array('class' => 'course-guestaccess-infobox alert alert-warning'));
             $html .= html_writer::tag('i', null, array('class' => 'fa fa-exclamation-circle fa-3x fa-pull-left'));

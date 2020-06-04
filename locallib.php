@@ -243,7 +243,7 @@ function theme_boost_campus_get_imageareacontent() {
                 } else {
                     $alttext = "";
                 }
-                // Add the file
+                // Add the file.
                 $imageareacache[] = array('filepath' => $filepath, 'linkpath' => $linkpath, 'alttext' => $alttext);
             }
             // Sort array alphabetically ascending to the key "filepath".

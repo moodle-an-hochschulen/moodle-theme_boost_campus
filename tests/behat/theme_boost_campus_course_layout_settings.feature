@@ -153,19 +153,19 @@ Feature: Configuring the theme_boost_campus plugin for the "Course Layout settin
     And I should see "Course administration" in the "#boost-campus-course-settings" "css_element"
     And I should see "Backup" in the "#course-settings-courseadmin" "css_element"
     And I should see "Users" in the "#boost-campus-course-settings" "css_element"
-    When I click on "Users" "link"
+    When I click on "Users" "link" in the "#boost-campus-course-settings" "css_element"
     Then "#course-settings-users" "css_element" should be visible
     And I should see "Enrolment methods" in the "#course-settings-users" "css_element"
     And I should see "Reports" in the "#boost-campus-course-settings" "css_element"
-    When I click on "Reports" "link"
+    When I click on "Reports" "link" in the "#boost-campus-course-settings" "css_element"
     Then "#course-settings-coursereports" "css_element" should be visible
     And I should see "Activity report" in the "#course-settings-coursereports" "css_element"
     And I should see "Badges" in the "#boost-campus-course-settings" "css_element"
-    When I click on "Badges" "link"
+    When I click on "Badges" "link" in the "#boost-campus-course-settings" "css_element"
     Then "#course-settings-coursebadges" "css_element" should be visible
     And I should see "Manage badges" in the "#course-settings-coursebadges" "css_element"
     And I should see "Question bank" in the "#boost-campus-course-settings" "css_element"
-    When I click on "Question bank" "link"
+    When I click on "Question bank" "link" in the "#boost-campus-course-settings" "css_element"
     Then "#course-settings-questionbank" "css_element" should be visible
     And I should see "Questions" in the "#course-settings-questionbank" "css_element"
 

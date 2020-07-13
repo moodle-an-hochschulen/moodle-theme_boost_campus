@@ -121,10 +121,6 @@ With this setting you can manage where the "Add a block" widget should be displa
 
 This setting can change the behaviour Moodle displays the title for the first course section. Moodle does not display it as long as the default title for this section is set. As soon as a user changes the title, it will appear. With this setting (option is checked), you can achieve a consistent behaviour by always showing the title for section 0.
 
-#### Course edit button
-
-With this setting you can add an additional course edit on / off button to the course header for faster accessibility. This the same way as it was displayed before theme_boost.
-
 #### Course related hints
 
 ##### Position of switch role information

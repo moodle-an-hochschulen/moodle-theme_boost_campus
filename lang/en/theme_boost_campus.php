@@ -67,9 +67,6 @@ $string['courselayoutsettings'] = 'Course Layout Settings';
 // ...Section 0.
 $string['section0titlesetting'] = 'Section 0: Title';
 $string['section0titlesetting_desc'] = 'This setting can change the behaviour Moodle displays the title for the first course section. Moodle does not display it as long as the default title for this section is set. As soon as a user changes the title, it will appear. With this setting (option is checked), you can achieve a consistent behaviour by always showing the title for section 0.';
-// ...Course edit button.
-$string['courseeditbuttonsetting'] = 'Course edit button';
-$string['courseeditbuttonsetting_desc'] = 'With this setting you can add an additional course edit on / off button to the course header for faster accessibility of this often used function.';
 // ...Course related hints.
 $string['coursehintsheadingsetting'] = 'Course related hints.';
 // ...Switch role information.

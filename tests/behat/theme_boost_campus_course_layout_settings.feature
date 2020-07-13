@@ -52,17 +52,6 @@ Feature: Configuring the theme_boost_campus plugin for the "Course Layout settin
       | New value for Section name | This is the general section |
     Then I should see "This is the general section" in the "li#section-0" "css_element"
 
-  Scenario: Enable "Course edit button"
-    Given the following config values are set as admin:
-      | config           | value | plugin             |
-      | courseeditbutton | 1     | theme_boost_campus |
-    When I log in as "teacher1"
-    And I am on "Course 1" course homepage
-    Then I should see "Turn editing on" in the "#page-header .singlebutton" "css_element"
-    When I click on "Turn editing on" "button"
-    Then I should see "Turn editing off" in the "#page-header .singlebutton" "css_element"
-    And I should see "Add an activity or resource"
-
   Scenario: Enable "Position of switch role information"
     Given the following config values are set as admin:
       | config                   | value | plugin             |

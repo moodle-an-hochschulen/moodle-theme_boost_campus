@@ -60,28 +60,6 @@ defined('MOODLE_INTERNAL') || die;
 class core_renderer extends \core_renderer {
 
     /**
-     * Override to display an edit button again by calling the parent function
-     * in core/core_renderer because theme_boost's function returns an empty
-     * string and therefore displays nothing.
-     *
-     * MODIFICATION: This renderer function is copied and modified from /theme/boost/classes/output/core_renderer.php
-     *
-     * @param moodle_url $url The current course url.
-     * @return \core_renderer::edit_button Moodle edit button.
-     */
-    public function edit_button(moodle_url $url) {
-        // MODIFICATION START.
-        // If setting editbuttonincourseheader ist checked give out the edit on / off button in course header.
-        if (get_config('theme_boost_campus', 'courseeditbutton') == '1') {
-            return \core_renderer::edit_button($url);
-        }
-        // MODIFICATION END.
-        /* ORIGINAL START.
-        return '';
-        ORIGINAL END. */
-    }
-
-    /**
      * Override to add additional class for the random login image to the body.
      *
      * Returns HTML attributes to use within the body tag. This includes an ID and classes.

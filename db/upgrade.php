@@ -73,5 +73,14 @@ function xmldb_theme_boost_campus_upgrade($oldversion) {
         upgrade_plugin_savepoint(true, 2020030800, 'theme', 'boost_campus');
     }
 
+    if ($oldversion < 2020082801) {
+        // The setting "theme_boost_campus|courseeditbutton" has been removed because the setting was
+        // reimplemented in Boost core.
+        // Therefore we remove this setting in the database.
+        set_config('courseeditbutton', null, 'theme_boost_campus');
+
+        upgrade_plugin_savepoint(true, 2020082801, 'theme', 'boost_campus');
+    }
+
     return true;
 }

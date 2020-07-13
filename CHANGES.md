@@ -6,6 +6,8 @@ Changes
 
 ### Unreleased
 
+* 2020-09-02 - Deleted own additional edit button for courses because upstream Boost reimplemented it.
+               Many thanks to @christianwolters for providing this fix.
 * 2020-09-02 - Prepare compatibility for Moodle 3.9.
 
 ### Release v3.8-r5

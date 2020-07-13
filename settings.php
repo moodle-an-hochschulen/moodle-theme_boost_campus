@@ -248,14 +248,6 @@ if ($ADMIN->fulltree) {
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
-    // Setting for displaying edit on / off button addionally in course header.
-    $name = 'theme_boost_campus/courseeditbutton';
-    $title = get_string('courseeditbuttonsetting', 'theme_boost_campus', null, true);
-    $description = get_string('courseeditbuttonsetting_desc', 'theme_boost_campus', null, true);
-    $setting = new admin_setting_configcheckbox($name, $title, $description, 0);
-    $setting->set_updatedcallback('theme_reset_all_caches');
-    $page->add($setting);
-
     // Settings title for grouping course settings related aspects together. We don't need a description here.
     $name = 'theme_boost_campus/coursehintsheading';
     $title = get_string('coursehintsheadingsetting', 'theme_boost_campus', null, true);

@@ -4,7 +4,7 @@ moodle-theme_boost_campus
 Changes
 -------
 
-### Unreleased
+### Release v3.8-r2
 
 * 2020-06-22 - Improved SCSS settings to be used with admin_setting_scsscode that validates the code before saving.
 * 2020-06-08 - Adjusted post.scss due to upstream changes in theme Boost.

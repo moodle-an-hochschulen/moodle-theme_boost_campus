@@ -6,6 +6,7 @@ Changes
 
 ### Unreleased
 
+* 2020-08-07 - Added rule to show description border for all users for restricted activities.
 * 2020-08-07 - Added check for empty string to regular expression for time controlled info banner settings.
 * 2020-08-05 - Added settings to be able to show a banner with information on selected pages.
                PLEASE NOTE: For all scenarios to pass, the Moodle version 3.8.4+ (Build: 2019111804) is needed.

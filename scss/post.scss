@@ -476,6 +476,19 @@ body.loginbackgroundimage #page {
             padding-left: 10px;
             font-size: .9rem;
         }
+        /* Add border to description text for restricted activities and show it also to students.
+           This is needed because the classes for teachers and students differ. */
+        .section .contentwithoutlink {
+            border-left: 2px solid $gray-light;
+            padding-left: 10px;
+            font-size: .9rem;
+            display: block;
+            margin-left: 30px;
+            margin-top: .5em;
+            p {
+                margin: .5em 0;
+            }
+        }
         /* Place meta information in a new line. */
         .resourcelinkdetails {
             display: block;

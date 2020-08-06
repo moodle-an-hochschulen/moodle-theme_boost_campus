@@ -140,6 +140,91 @@ Feature: Configuring the theme_boost_campus plugin for the "Course Layout settin
     Then I should not see "You are currently viewing this course as Guest."
     And ".course-guestaccess-infobox" "css_element" should not exist
 
+  Scenario: Enable "Show hint for unrestricted self enrolment"
+    Given the following config values are set as admin:
+      | config                  | value | plugin             |
+      | showhintcourseselfenrol | yes   | theme_boost_campus |
+    When I log in as "teacher1"
+    And I am on "Course 1" course homepage
+    Then I should not see "This course is currently visible and an unrestricted self enrolment is active:"
+    And ".course-selfenrol-infobox" "css_element" should not exist
+    And I navigate to "Users > Enrolment methods" in current page administration
+    When I click on "Enable" "link" in the "Self enrolment (Student)" "table_row"
+    And I am on "Course 1" course homepage
+    Then I should see "This course is currently visible and an unrestricted self enrolment is active: \"Self enrolment (Student)\"."
+    And ".course-selfenrol-infobox" "css_element" should exist
+    And I log out
+    When I log in as "student1"
+    And I am on "Course 1" course homepage
+    Then I should not see "This course is currently visible and an unrestricted self enrolment is active: \"Self enrolment (Student)\""
+    And ".course-selfenrol-infobox" "css_element" should not exist
+
+  Scenario: Enable "Show hint for unrestricted self enrolment and check that it hides when password or end date is set"
+    Given the following config values are set as admin:
+      | config                  | value | plugin             |
+      | showhintcourseselfenrol | yes   | theme_boost_campus |
+    When I log in as "teacher1"
+    And I am on "Course 1" course homepage
+    Then I should not see "This course is currently visible and an unrestricted self enrolment is active:"
+    And ".course-selfenrol-infobox" "css_element" should not exist
+    And I navigate to "Users > Enrolment methods" in current page administration
+    When I click on "Enable" "link" in the "Self enrolment (Student)" "table_row"
+    And I am on "Course 1" course homepage
+    Then I should see "This course is currently visible and an unrestricted self enrolment is active: \"Self enrolment (Student)\"."
+    And ".course-selfenrol-infobox" "css_element" should exist
+    When I click on "enrolment settings" "link" in the ".course-selfenrol-infobox" "css_element"
+    And I set the following fields to these values:
+      | id_enrolenddate_enabled | 1 |
+    And I press "Save changes"
+    And I am on "Course 1" course homepage
+    Then I should not see "This course is currently visible and an unrestricted self enrolment is active: \"Self enrolment (Student)\""
+    And ".course-selfenrol-infobox" "css_element" should not exist
+    When I navigate to "Users > Enrolment methods" in current page administration
+    And I click on "Edit" "link" in the "Self enrolment (Student)" "table_row"
+    And I set the following fields to these values:
+        | id_enrolenddate_enabled | 0 |
+    And I press "Save changes"
+    And I am on "Course 1" course homepage
+    Then I should see "This course is currently visible and an unrestricted self enrolment is active: \"Self enrolment (Student)\"."
+    And ".course-selfenrol-infobox" "css_element" should exist
+    When I click on "enrolment settings" "link" in the ".course-selfenrol-infobox" "css_element"
+    And I set the following fields to these values:
+        | Enrolment key | 1234 |
+    And I press "Save changes"
+    And I am on "Course 1" course homepage
+    Then I should not see "This course is currently visible and an unrestricted self enrolment is active: \"Self enrolment (Student)\""
+    And ".course-selfenrol-infobox" "css_element" should not exist
+
+  Scenario: Enable "Show hint for unrestricted self enrolment and add more than one self enrolment instance"
+    Given the following config values are set as admin:
+      | config                  | value | plugin             |
+      | showhintcourseselfenrol | yes   | theme_boost_campus |
+    When I log in as "teacher1"
+    And I am on "Course 1" course homepage
+    Then I should not see "This course is currently visible and an unrestricted self enrolment is active"
+    And ".course-selfenrol-infobox" "css_element" should not exist
+    And I navigate to "Users > Enrolment methods" in current page administration
+    When I click on "Enable" "link" in the "Self enrolment (Student)" "table_row"
+    And I am on "Course 1" course homepage
+    Then I should see "This course is currently visible and an unrestricted self enrolment is active: \"Self enrolment (Student)\"."
+    And ".course-selfenrol-infobox" "css_element" should exist
+    When I add "Self enrolment" enrolment method with:
+      | Custom instance name | Custom self enrolment |
+    And I am on "Course 1" course homepage
+    Then I should see "This course is currently visible and an unrestricted self enrolment is active: \"Self enrolment (Student)\"."
+    And ".course-selfenrol-infobox" "css_element" should exist
+    And I should see "This course is currently visible and an unrestricted self enrolment is active: \"Custom self enrolment\"."
+    And ".course-selfenrol-infobox" "css_element" should exist
+    When I navigate to "Users > Enrolment methods" in current page administration
+    And I click on "Edit" "link" in the "Self enrolment (Student)" "table_row"
+    And I set the following fields to these values:
+      | Enrolment key | 1234 |
+    And I press "Save changes"
+    And I am on "Course 1" course homepage
+    Then I should not see "This course is currently visible and an unrestricted self enrolment is active: \"Self enrolment (Student)\"."
+    And I should see "This course is currently visible and an unrestricted self enrolment is active: \"Custom self enrolment\"."
+    And ".course-selfenrol-infobox" "css_element" should exist
+
   @javascript
   Scenario: Enable "In course settings menu"
     Given the following config values are set as admin:

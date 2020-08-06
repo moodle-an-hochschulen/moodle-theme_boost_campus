@@ -295,6 +295,17 @@ if ($ADMIN->fulltree) {
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
+    // Setting to display a hint that the active course has a unrestricted self enrolment.
+    $name = 'theme_boost_campus/showhintcourseselfenrol';
+    $title = get_string('showhintcourseselfenrolsetting', 'theme_boost_campus', null, true);
+    $description = get_string('showhintcourseselfenrolsetting_desc', 'theme_boost_campus', null, true);
+    $setting = new admin_setting_configcheckbox($name, $title, $description, 'no', 'yes', 'no'); // Overriding default values
+    // yes = 1 and no = 0 because of the use of empty() in theme_boost_campus_get_pre_scss() (lib.php).
+    // Default 0 value would not write the variable to scss that could cause the scss to crash if used in that file.
+    // See MDL-58376.
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
     // Settings title for grouping course settings related aspects together. We don't need a description here.
     $name = 'theme_boost_campus/coursesettingsheading';
     $title = get_string('coursesettingsheadingsetting', 'theme_boost_campus', null, true);

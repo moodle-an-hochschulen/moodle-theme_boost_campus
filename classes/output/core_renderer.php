@@ -26,6 +26,7 @@
 namespace theme_boost_campus\output;
 
 use coding_exception;
+use core\plugininfo\enrol;
 use html_writer;
 use tabobject;
 use tabtree;
@@ -247,6 +248,48 @@ class core_renderer extends \core_renderer {
                 array('role' => role_get_name(get_guest_role())));
             $html .= theme_boost_campus_get_course_guest_access_hint($COURSE->id);
             $html .= html_writer::end_tag('div');
+        }
+        // MODIFICATION END.
+
+        // MODIFICATION START:
+        // If the setting showhintcourseselfenrol is set, a hint for users is shown that the course has an unrestricted self
+        // enrolment. This hint is only shown if the course is visible, the self enrolment is visible and if the user has the
+        // capability "theme/boost_campus:viewhintcourseselfenrol".
+        if (get_config('theme_boost_campus', 'showhintcourseselfenrol') == 'yes'
+                && has_capability('theme/boost_campus:viewhintcourseselfenrol', \context_course::instance($COURSE->id))
+                && $this->page->has_set_url()
+                && $this->page->url->compare(new moodle_url('/course/view.php'), URL_MATCH_BASE)
+                && $COURSE->visible == true) {
+            // Get the active enrol instances for this course.
+            $enrolinstances = enrol_get_instances($COURSE->id, true);
+            foreach ($enrolinstances as $instance) {
+                if ($instance->enrol == 'self' && empty($instance->password) && empty($instance->enrolenddate)) {
+                    if (empty($instance->name)) {
+                        $selfenrolinstances[$instance->id] = get_string('pluginname', 'enrol_self') .
+                                " (" . get_string('defaultcoursestudent', 'core') . ")";
+                    } else {
+                        $selfenrolinstances[$instance->id] = $instance->name;
+                    }
+                }
+            }
+
+            if (!empty($selfenrolinstances)) {
+                // Give out a hint for each unrestricted active self enrolment in the course.
+                foreach ($selfenrolinstances as $selfenrolinstanceid => $selfenrolinstancename) {
+                    $html .= html_writer::start_tag('div', array('class' => 'course-selfenrol-infobox alert alert-info'));
+                    $html .= html_writer::tag('i', null, array('class' => 'fa fa-sign-in fa-3x fa-pull-left'));
+                    $html .= get_string('showhintcourseselfenrol', 'theme_boost_campus',
+                            array('name' => $selfenrolinstancename));
+                    // Only show the link to edit the specific self enrolment if the user has the capability to config self enrolments.
+                    if (has_capability('enrol/self:config', \context_course::instance($COURSE->id))) {
+                        $url = new moodle_url('/enrol/editinstance.php', array('courseid' => $COURSE->id,
+                                                                               'id' => $selfenrolinstanceid, 'type' => 'self'));
+                        $html .= html_writer::tag('div', get_string('showhintcourseselfenrollink',
+                                'theme_boost_campus', array('url' => $url->out())));
+                    }
+                    $html .= html_writer::end_tag('div');
+                }
+            }
         }
         // MODIFICATION END.
 

@@ -15,18 +15,25 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Theme Boost Campus - Version file
+ * Theme Boost Campus - Capability definitions.
  *
  * @package    theme_boost_campus
- * @copyright  2017 Kathrin Osswald, Ulm University <kathrin.osswald@uni-ulm.de>
+ * @copyright  2020 Kathrin Osswald, Ulm University <kathrin.osswald@uni-ulm.de>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->component = 'theme_boost_campus';
-$plugin->version = 2020081200;
-$plugin->release = 'v3.8-r2';
-$plugin->requires = 2019111804;
-$plugin->maturity = MATURITY_STABLE;
-$plugin->dependencies = array('theme_boost' => 2019111800);
+$capabilities = array(
+
+    // Ability to see a hint for unrestricted self enrolment in a visible course.
+        'theme/boost_campus:viewhintcourseselfenrol' => array(
+                'captype' => 'read',
+                'contextlevel' => CONTEXT_COURSE,
+                'archetypes' => array(
+                        'teacher' => CAP_ALLOW,
+                        'editingteacher' => CAP_ALLOW,
+                        'manager' => CAP_ALLOW
+                )
+        )
+);

@@ -499,13 +499,17 @@ function theme_boost_campus_show_timed_banner_on_selected_page($now, $timedibsho
     // Check if time settings are empty and try to convert the time string_s_ to a unix timestamp.
     if (empty($timedibstartsetting)) {
         $timedibstartempty = true;
+        $timedibstart = 0;
     } else {
         $timedibstart = strtotime($timedibstartsetting);
+        $timedibstartempty = false;
     }
     if (empty($timedibendsetting)) {
         $timedibendempty = true;
+        $timedibend = 0;
     } else {
         $timedibend = strtotime($timedibendsetting);
+        $timedibendempty = false;
     }
 
     // Add the time check:

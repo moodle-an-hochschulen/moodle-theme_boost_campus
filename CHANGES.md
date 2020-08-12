@@ -6,6 +6,7 @@ Changes
 
 ### Unreleased
 
+* 2020-08-12 - Fixed undefined variables notices.
 * 2020-08-11 - Added setting to be able to show a hint for a unrestricted self enrolment in a visible course.
                NOTE: Capability theme/boost_campus:viewhintcourseselfenrol introduced.
 * 2020-08-07 - Added rule to show description border for all users for restricted activities.

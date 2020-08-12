@@ -218,8 +218,11 @@ class core_renderer extends \core_renderer {
         // MODIFICATION START:
         // If the setting showhintcoursehidden is set, the visibility of the course is hidden and
         // a hint for the visibility will be shown.
-        if (get_config('theme_boost_campus', 'showhintcoursehidden') == 'yes' && $COURSE->visible == false &&
-                $this->page->has_set_url() && $this->page->url->compare(new moodle_url('/course/view.php'), URL_MATCH_BASE)) {
+        if (get_config('theme_boost_campus', 'showhintcoursehidden') == 'yes'
+                && has_capability('theme/boost_campus:viewhintinhiddencourse', \context_course::instance($COURSE->id))
+                && $this->page->has_set_url()
+                && $this->page->url->compare(new moodle_url('/course/view.php'), URL_MATCH_BASE)
+                && $COURSE->visible == false) {
             $html .= html_writer::start_tag('div', array('class' => 'course-hidden-infobox alert alert-warning'));
             $html .= html_writer::tag('i', null, array('class' => 'fa fa-exclamation-circle fa-3x fa-pull-left'));
             $html .= get_string('showhintcoursehiddengeneral', 'theme_boost_campus', $COURSE->id);

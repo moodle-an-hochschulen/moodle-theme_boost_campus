@@ -33,6 +33,15 @@ $capabilities = array(
                 'archetypes' => array(
                         'teacher' => CAP_ALLOW,
                         'editingteacher' => CAP_ALLOW,
+                        'manager' => CAP_ALLOW )
+        ),
+    // Ability to see a hint in a hidden course.
+        'theme/boost_campus:viewhintinhiddencourse' => array(
+                'captype' => 'read',
+                'contextlevel' => CONTEXT_COURSE,
+                'archetypes' => array(
+                        'teacher' => CAP_ALLOW,
+                        'editingteacher' => CAP_ALLOW,
                         'manager' => CAP_ALLOW
                 )
         )

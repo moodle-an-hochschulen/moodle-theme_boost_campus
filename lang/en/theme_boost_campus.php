@@ -312,3 +312,4 @@ $string['privacy:metadata:request:infobanner_dismissed_no'] = 'Perpetual info ba
 
 // CAPABILITIES.
 $string['boost_campus:viewhintcourseselfenrol'] = 'To be able to see a hint for unrestricted self enrolment in a visible course.';
+$string['boost_campus:viewhintinhiddencourse'] = 'To be able to see a hint in a hidden course.';

@@ -6,6 +6,7 @@ Changes
 
 ### Unreleased
 
+* 2020-08-19 - Added capability theme/boost_campus:viewhintinhiddencourse for setting showhintcoursehidden.
 * 2020-08-14 - Reduced inflationary call to reset theme caches for the settings.
 * 2020-08-12 - Fixed undefined variables notices.
 * 2020-08-11 - Added setting to be able to show a hint for a unrestricted self enrolment in a visible course.

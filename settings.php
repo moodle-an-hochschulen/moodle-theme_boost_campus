@@ -188,7 +188,6 @@ if ($ADMIN->fulltree) {
     $description = get_string('catchendkeysetting_desc', 'theme_boost_campus', null, true) . ' ' .
         get_string('catchkeys_desc_addition', 'theme_boost_campus', null, true);
     $setting = new admin_setting_configcheckbox($name, $title, $description, 0);
-    $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
     // Setting for catching the cmd + arrow down keys.
@@ -197,7 +196,6 @@ if ($ADMIN->fulltree) {
     $description = get_string('catchcmdarrowdownsetting_desc', 'theme_boost_campus', null, true) . ' ' .
         get_string('catchkeys_desc_addition', 'theme_boost_campus', null, true);
     $setting = new admin_setting_configcheckbox($name, $title, $description, 0);
-    $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
     // Setting for catching the strg + arrow down keys.
@@ -206,7 +204,6 @@ if ($ADMIN->fulltree) {
     $description = get_string('catchctrlarrowdownsetting_desc', 'theme_boost_campus', null, true) . ' ' .
         get_string('catchkeys_desc_addition', 'theme_boost_campus', null, true);
     $setting = new admin_setting_configcheckbox($name, $title, $description, 0);
-    $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
     // Settings title for the Add a block widget. We don't need a description here.
@@ -253,7 +250,6 @@ if ($ADMIN->fulltree) {
     $title = get_string('courseeditbuttonsetting', 'theme_boost_campus', null, true);
     $description = get_string('courseeditbuttonsetting_desc', 'theme_boost_campus', null, true);
     $setting = new admin_setting_configcheckbox($name, $title, $description, 0);
-    $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
     // Settings title for grouping course settings related aspects together. We don't need a description here.
@@ -281,7 +277,6 @@ if ($ADMIN->fulltree) {
     // yes = 1 and no = 0 because of the use of empty() in theme_boost_campus_get_pre_scss() (lib.php).
     // Default 0 value would not write the variable to scss that could cause the scss to crash if used in that file.
     // See MDL-58376.
-    $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
     // Setting to display a hint to the guest accessing of a course.
@@ -292,7 +287,6 @@ if ($ADMIN->fulltree) {
     // yes = 1 and no = 0 because of the use of empty() in theme_boost_campus_get_pre_scss() (lib.php).
     // Default 0 value would not write the variable to scss that could cause the scss to crash if used in that file.
     // See MDL-58376.
-    $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
     // Setting to display a hint that the active course has a unrestricted self enrolment.
@@ -303,7 +297,6 @@ if ($ADMIN->fulltree) {
     // yes = 1 and no = 0 because of the use of empty() in theme_boost_campus_get_pre_scss() (lib.php).
     // Default 0 value would not write the variable to scss that could cause the scss to crash if used in that file.
     // See MDL-58376.
-    $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
     // Settings title for grouping course settings related aspects together. We don't need a description here.
@@ -484,7 +477,6 @@ if ($ADMIN->fulltree) {
     $title = get_string('footnotesetting', 'theme_boost_campus', null, true);
     $description = get_string('footnotesetting_desc', 'theme_boost_campus', null, true);
     $setting = new admin_setting_confightmleditor($name, $title, $description, '');
-    $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
     // Settings title to group navdrawer related settings together with a common heading. We don't want a description here.
@@ -562,7 +554,6 @@ if ($ADMIN->fulltree) {
     $title = get_string('loginbackgroundimagetextsetting', 'theme_boost_campus', null, true);
     $description = get_string('loginbackgroundimagetextsetting_desc', 'theme_boost_campus', null, true);
     $setting = new admin_setting_configtextarea($name, $title, $description, null, PARAM_TEXT);
-    $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
     // Setting to change the position and design of the login form.
@@ -587,7 +578,6 @@ if ($ADMIN->fulltree) {
     $description = get_string('fontfilessetting_desc', 'theme_boost_campus', null, true);
     $setting = new admin_setting_configstoredfile($name, $title, $description, 'fontfiles', 0,
             array('maxfiles' => 100, 'accepted_types' => array('.ttf', '.eot', '.woff', '.woff2')));
-    $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
     // Settings title to group block related settings together with a common heading. We don't want a description here.
@@ -682,7 +672,6 @@ if ($ADMIN->fulltree) {
     $description = get_string('additionalresourcessetting_desc', 'theme_boost_campus', null, true);
     $setting = new admin_setting_configstoredfile($name, $title, $description, 'additionalresources', 0,
         array('maxfiles' => -1));
-    $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
     // Add tab to settings page.
@@ -704,7 +693,6 @@ if ($ADMIN->fulltree) {
     $title = get_string('perpibenablesetting', 'theme_boost_campus', null, true);
     $description = get_string('perpibenablesetting_desc', 'theme_boost_campus', null, true);
     $setting = new admin_setting_configcheckbox($name, $title, $description, 0);
-    $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
     // Perpetual information banner content.
@@ -712,7 +700,6 @@ if ($ADMIN->fulltree) {
     $title = get_string('perpibcontent', 'theme_boost_campus', null, true);
     $description = get_string('perpibcontent_desc', 'theme_boost_campus', null, true);
     $setting = new admin_setting_confightmleditor($name, $title, $description, '');
-    $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
     $settings->hide_if('theme_boost_campus/perpibcontent',
             'theme_boost_campus/perpibenable', 'notchecked');
@@ -730,7 +717,6 @@ if ($ADMIN->fulltree) {
     ];
     $setting = new admin_setting_configmultiselect($name, $title, $description,
             array($perpibshowonpageoptions['mydashboard']), $perpibshowonpageoptions);
-    $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
     $settings->hide_if('theme_boost_campus/perpibshowonpages',
             'theme_boost_campus/perpibenable', 'notchecked');
@@ -753,7 +739,6 @@ if ($ADMIN->fulltree) {
     ];
     $setting = new admin_setting_configselect($name, $title, $description, $perpibcssoptions['primary'],
             $perpibcssoptions);
-    $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
     $settings->hide_if('theme_boost_campus/perpibcss',
             'theme_boost_campus/perpibenable', 'notchecked');
@@ -763,7 +748,6 @@ if ($ADMIN->fulltree) {
     $title = get_string('perpibdismisssetting', 'theme_boost_campus', null, true);
     $description = get_string('perpibdismisssetting_desc', 'theme_boost_campus', null, true);
     $setting = new admin_setting_configcheckbox($name, $title, $description, 0);
-    $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
     $settings->hide_if('theme_boost_campus/perpibdismiss',
             'theme_boost_campus/perpibenable', 'notchecked');
@@ -773,7 +757,6 @@ if ($ADMIN->fulltree) {
     $title = get_string('perpibconfirmsetting', 'theme_boost_campus', null, true);
     $description = get_string('perpibconfirmsetting_desc', 'theme_boost_campus', null, true);
     $setting = new admin_setting_configcheckbox($name, $title, $description, 0);
-    $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
     $settings->hide_if('theme_boost_campus/perpibconfirm',
             'theme_boost_campus/perpibenable', 'notchecked');
@@ -804,7 +787,6 @@ if ($ADMIN->fulltree) {
     $title = get_string('timedibenablesetting', 'theme_boost_campus', null, true);
     $description = get_string('timedibenablesetting_desc', 'theme_boost_campus', null, true);
     $setting = new admin_setting_configcheckbox($name, $title, $description, 0);
-    $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
     // Time controlled information banner content.
@@ -812,7 +794,6 @@ if ($ADMIN->fulltree) {
     $title = get_string('timedibcontent', 'theme_boost_campus', null, true);
     $description = get_string('timedibcontent_desc', 'theme_boost_campus', null, true);
     $setting = new admin_setting_confightmleditor($name, $title, $description, '');
-    $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
     $settings->hide_if('theme_boost_campus/timedibcontent',
             'theme_boost_campus/timedibenable', 'notchecked');
@@ -830,7 +811,6 @@ if ($ADMIN->fulltree) {
     ];
     $setting = new admin_setting_configmultiselect($name, $title, $description,
             array($timedibpageoptions['mydashboard']), $timedibpageoptions);
-    $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
     $settings->hide_if('theme_boost_campus/timedibshowonpages',
             'theme_boost_campus/timedibenable', 'notchecked');
@@ -853,7 +833,6 @@ if ($ADMIN->fulltree) {
     ];
     $setting = new admin_setting_configselect($name, $title, $description, $timedibcssoptions['primary'],
             $timedibcssoptions);
-    $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
     $settings->hide_if('theme_boost_campus/timedibcss',
             'theme_boost_campus/timedibenable', 'notchecked');
@@ -866,7 +845,6 @@ if ($ADMIN->fulltree) {
     $title = get_string('timedibstartsetting', 'theme_boost_campus', null, true);
     $description = get_string('timedibstartsetting_desc', 'theme_boost_campus', null, true);
     $setting = new admin_setting_configtext($name, $title, $description, '', $timeregex);
-    $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
     $settings->hide_if('theme_boost_campus/timedibstart',
             'theme_boost_campus/timedibenable', 'notchecked');
@@ -876,7 +854,6 @@ if ($ADMIN->fulltree) {
     $title = get_string('timedibendsetting', 'theme_boost_campus', null, true);
     $description = get_string('timedibendsetting_desc', 'theme_boost_campus', null, true);
     $setting = new admin_setting_configtext($name, $title, $description, '', $timeregex);
-    $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
     $settings->hide_if('theme_boost_campus/timedibend',
             'theme_boost_campus/timedibenable', 'notchecked');

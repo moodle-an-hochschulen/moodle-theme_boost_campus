@@ -196,9 +196,6 @@ function theme_boost_campus_reset_app_cache() {
     $themeboostcampuscache = cache::make('theme_boost_campus', 'imagearea');
     // Delete the cache for the imagearea.
     $themeboostcampuscache->delete('imageareadata');
-    // To be safe and because there can only be one callback function added to a plugin setting,
-    // we also delete the complete theme cache here.
-    theme_reset_all_caches();
 }
 
 /**
@@ -238,8 +235,4 @@ function theme_boost_campus_infobanner_reset_visibility() {
         // Reset the checkbox.
         set_config('perpibresetvisibility', 0, 'theme_boost_campus');
     }
-
-    // To be safe and because there can only be one callback function added to a plugin setting,
-    // we also delete the complete theme cache here.
-    theme_reset_all_caches();
 }

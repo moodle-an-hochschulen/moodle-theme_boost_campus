@@ -36,9 +36,10 @@
 
 }}
 
+{{# imageareafiles }}
 <div class="imagearea d-flex justify-content-center flex-wrap pb-3 bg-dark">
     {{#imageareafiles}}
         {{#linkpath}}<a href="{{linkpath}}">{{/linkpath}}<img src="{{filepath}}" class="mt-3" {{#alttext}} alt="{{alttext}}"{{/alttext}}>{{#linkpath}}</a>{{/linkpath}}
     {{/imageareafiles}}
 </div>
-
+{{/ imageareafiles }}

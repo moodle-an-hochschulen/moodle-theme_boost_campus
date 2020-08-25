@@ -31,5 +31,4 @@ $imageareafiles = theme_boost_campus_get_imageareacontent();
 // Only proceed if received array is not empty.
 if (!empty($imageareafiles)) {
     $templatecontext['imageareafiles'] = $imageareafiles;
-    echo $OUTPUT->render_from_template('theme_boost_campus/imagearea', $templatecontext);
 }

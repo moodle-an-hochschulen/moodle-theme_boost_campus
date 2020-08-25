@@ -34,7 +34,7 @@
     }
 }}
 {{! MODIFICATION:
-    * Moved the variable output.standard_end_of_body_html to the end of the columns2.mustache template to solve Javascript issues with behat tests.
+    * Add footer blocks.
 }}
 <footer id="page-footer" class="py-3 bg-dark text-light">
     <div class="container-fluid">
@@ -106,9 +106,7 @@
                     {{/ output.custom_menu_flat }}
                 </nav>
                 {{{ output.standard_footer_html }}}
-                {{! Moved the variable
-                output.standard_end_of_body_html
-                to the end of the columns2.mustache template to solve Javascript issues with behat tests. }}
+                {{{ output.standard_end_of_body_html }}}
             </div>
         </div>
     </div>

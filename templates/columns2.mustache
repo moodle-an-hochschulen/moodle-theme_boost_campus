@@ -71,8 +71,8 @@
     * If setting "showsettingsincourse" is enabled, then render course context menu from theme_boost_campus/settings_link_page
       template and use the equivalent own javascript "incoursesettings".
     * Call to own navbar mustache template instead of boost/navbar.
-    * Add own additional layout elements: the footer, footnote or image area.
-    * Moved the variable output.standard_end_of_body_html from footer.mustache to solve Javascript issues with behat tests.
+    * Use own footer instead of the theme_boost footer.
+    * Add own additional layout elements: footnote or image area.
     * Added the possibility to show information banners.
 }}
 {{> theme_boost/head }}
@@ -141,10 +141,10 @@
         </div>
     </div>
     {{{ output.standard_after_main_region_html }}}
-    {{{ pagebottomelements }}}
+    {{> theme_boost_campus/footer }}
+    {{> theme_boost_campus/imagearea }}
+    {{> theme_boost_campus/footnote }}
 </div>
-{{! Moved the variable here from footer.mustache to solve Javascript issues with behat tests. }}
-{{{ output.standard_end_of_body_html }}}
 
 </body>
 </html>

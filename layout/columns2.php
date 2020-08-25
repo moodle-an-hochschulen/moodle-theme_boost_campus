@@ -169,36 +169,14 @@ ORIGINAL END. */
 
 $templatecontext['firstcollectionlabel'] = $nav->get_collectionlabel();
 
-// MODIFICATION START: Handle additional layout elements.
-// The output buffer is needed to render the additional layout elements now without outputting them to the page directly.
-ob_start();
-
-// Require additional layout files.
-// Add footer blocks and standard footer.
+// MODIFICATION START.
+// Set the template context for the footer and additional layouts.
 require_once(__DIR__ . '/includes/footer.php');
-// Get imageareaitems config.
-$imageareaitems = get_config('theme_boost_campus', 'imageareaitems');
-if (!empty($imageareaitems)) {
-    // Add imagearea layout file.
-    require_once(__DIR__ . '/includes/imagearea.php');
-}
-// Get footnote config.
-$footnote = get_config('theme_boost_campus', 'footnote');
-if (!empty($footnote)) {
-    // Add footnote layout file.
-    require_once(__DIR__ . '/includes/footnote.php');
-}
+require_once(__DIR__ . '/includes/imagearea.php');
+require_once(__DIR__ . '/includes/footnote.php');
+// MODIFICATION END.
 
-// Get output buffer.
-$pagebottomelements = ob_get_clean();
-
-// If there isn't anything in the buffer, set the additional layouts string to an empty string to avoid problems later on.
-if ($pagebottomelements == false) {
-    $pagebottomelements = '';
-}
-// Add the additional layouts to the template context.
-$templatecontext['pagebottomelements'] = $pagebottomelements;
-
+// MODIFICATION START.
 // Render columns2.mustache from boost_campus.
 echo $OUTPUT->render_from_template('theme_boost_campus/columns2', $templatecontext);
 // MODIFICATION END.

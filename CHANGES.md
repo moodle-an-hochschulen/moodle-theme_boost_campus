@@ -4,7 +4,7 @@ moodle-theme_boost_campus
 Changes
 -------
 
-### Unreleased
+### Release v3.8-r3
 
 * 2020-08-26 - Removed nasty hack in Behat tests as it is not needed anymore.
 * 2020-08-25 - Changed calling of footer and footnote layouts to fix behat issues.

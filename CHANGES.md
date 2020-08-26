@@ -6,6 +6,7 @@ Changes
 
 ### Unreleased
 
+* 2020-08-26 - Removed nasty hack in Behat tests as it is not needed anymore.
 * 2020-08-25 - Changed calling of footer and footnote layouts to fix behat issues.
 * 2020-08-25 - Fixed favicon 404 Error when no individual favicon is uploaded in Boost Campus.
 * 2020-08-19 - Added capability theme/boost_campus:viewhintinhiddencourse for setting showhintcoursehidden.

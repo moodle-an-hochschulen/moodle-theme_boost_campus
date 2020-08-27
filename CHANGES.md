@@ -4,6 +4,10 @@ moodle-theme_boost_campus
 Changes
 -------
 
+### Unreleased
+
+* 2020-08-27 - Fixed regression for commit Added rule to show description border for all users for restricted activities.
+
 ### Release v3.8-r3
 
 * 2020-08-26 - Removed nasty hack in Behat tests as it is not needed anymore.

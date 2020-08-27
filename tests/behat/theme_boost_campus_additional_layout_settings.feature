@@ -36,6 +36,25 @@ Feature: Configuring the theme_boost_campus plugin for the "Additional Layout Se
     Then ".imagearea img" "css_element" should exist
     And "//div[contains(concat(' ',normalize-space(@class),' '),' imagearea ')]//a[contains(@href, 'http://moodle.org')]" "xpath_element" should exist
     And "//div[contains(concat(' ',normalize-space(@class),' '),' imagearea ')]//img[contains(@alt, 'Moodle Logo')]" "xpath_element" should exist
+    When I navigate to "Appearance > Boost Campus" in site administration
+    And I click on "Additional Layout Settings" "link"
+    And I set the field "id_s_theme_boost_campus_imageareaitemsattributes" to "moodle_logo.jpg||Moodle Logo"
+    And I press "Save changes"
+    Then ".imagearea img" "css_element" should exist
+    And "//div[contains(concat(' ',normalize-space(@class),' '),' imagearea ')]//img[contains(@alt, 'Moodle Logo')]" "xpath_element" should exist
+    And "//div[contains(concat(' ',normalize-space(@class),' '),' imagearea ')]//a" "xpath_element" should not exist
+    When I navigate to "Appearance > Boost Campus" in site administration
+    And I click on "Additional Layout Settings" "link"
+    And I set the field "id_s_theme_boost_campus_imageareaitemsattributes" to "moodle_logo.jpg|http://moodle.org"
+    And I press "Save changes"
+    Then ".imagearea img" "css_element" should exist
+    And "//div[contains(concat(' ',normalize-space(@class),' '),' imagearea ')]//a[contains(@href, 'http://moodle.org')][not(@alt)]" "xpath_element" should exist
+    When I navigate to "Appearance > Boost Campus" in site administration
+    And I click on "Additional Layout Settings" "link"
+    And I set the field "id_s_theme_boost_campus_imageareaitemsattributes" to "moodle_logo.jpg"
+    And I press "Save changes"
+    Then "//div[contains(concat(' ',normalize-space(@class),' '),' imagearea ')]//img[not(@alt)]" "xpath_element" should exist
+    And "//div[contains(concat(' ',normalize-space(@class),' '),' imagearea ')]//a" "xpath_element" should not exist
 
   # Dependent on setting "Image area items"
   # This is not testable with behat.

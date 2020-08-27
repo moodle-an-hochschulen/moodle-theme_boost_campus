@@ -181,6 +181,10 @@ function theme_boost_campus_get_imageareacontent() {
         // Get all files from filearea.
         $files = $fs->get_area_files($systemcontext->id, 'theme_boost_campus', 'imageareaitems', false, 'itemid', false);
 
+        // Initialize the array which holds the image links.
+        $links = [];
+        // Initialize the array which holds the alt texts.
+        $alttexts = [];
         // Only continue processing if there are files in the filearea.
         if (!empty($files)) {
             // Get the content from the setting imageareaitemsattributes and explode it to an array by the delimiter "new line".
@@ -199,7 +203,7 @@ function theme_boost_campus_get_imageareacontent() {
                 } else {
                     $settings = explode("|", $line);
                     // Check if parameter 2 or 3 is set.
-                    if (!empty($settings[1] || !empty($settings[2]))) {
+                    if (!empty($settings[1]) || !empty($settings[2])) {
                         foreach ($settings as $i => $setting) {
                             $setting = trim($setting);
                             if (!empty($setting)) {

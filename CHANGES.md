@@ -4,7 +4,7 @@ moodle-theme_boost_campus
 Changes
 -------
 
-### Unreleased
+### Release v3.8-r4
 
 * 2020-08-27 - Fixed bug in image area feature if link attribute was left empty.
 * 2020-08-27 - Fixed regression for commit Added rule to show description border for all users for restricted activities.

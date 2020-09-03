@@ -6,6 +6,7 @@ Changes
 
 ### Unreleased
 
+* 2020-09-03 - Adjusted columns2.mustache template due to upstream changes in theme Boost.
 * 2020-09-03 - Adjusted navbar.mustache template due to upstream changes in theme Boost.
 * 2020-09-03 - Fixed Behat issues after upgrading to 3.9.
 * 2020-09-02 - Deleted own additional edit button for courses because upstream Boost reimplemented it.

@@ -221,14 +221,18 @@ Feature: Configuring the theme_boost_campus plugin for the "Footer Layout Settin
   #    | footerhideusertourslink | 1     | theme_boost_campus |
   Scenario: Enable "Hide link to reset the user tour"
     When I log in as "admin"
+    And I add a new user tour with:
+      | Name                | First tour    |
+      | Description         | My first tour |
+      | Apply to URL match  | /my/%         |
+      | Tour is enabled     | 1             |
+    And I add steps to the "First tour" tour:
+      | targettype                  | Title             | Content                                  |
+      | Display in middle of page   | Welcome           | Welcome to your personal learning space. |
     And I navigate to "Appearance > Boost Campus" in site administration
     And I click on "Footer Layout Settings" "link"
     And I set the field "s_theme_boost_campus_footerhideusertourslink" to "1"
     And I press "Save changes"
-    # As both provided user tours are disabled in the testing environment, we need to enable one
-    # (the Dashboard tour) first.
-    And I navigate to "Appearance > User tours" in site administration
-    And I click on "//td[@id='tours_r0_c3']//a[contains(concat(' ',normalize-space(@class),' '),'quickeditlink')]" "xpath_element"
     And I log out
     When I log in as "teacher1"
     Then I should not see "Reset user tour on this page" in the "page-footer" "region"
@@ -241,14 +245,18 @@ Feature: Configuring the theme_boost_campus plugin for the "Footer Layout Settin
   #    | footerhideusertourslink | 0     | theme_boost_campus |
   Scenario: Counter check: Disable "Hide link to reset the user tour"
     When I log in as "admin"
+    And I add a new user tour with:
+      | Name                | First tour    |
+      | Description         | My first tour |
+      | Apply to URL match  | /my/%         |
+      | Tour is enabled     | 1             |
+    And I add steps to the "First tour" tour:
+      | targettype                  | Title             | Content                                  |
+      | Display in middle of page   | Welcome           | Welcome to your personal learning space. |
     And I navigate to "Appearance > Boost Campus" in site administration
     And I click on "Footer Layout Settings" "link"
     And I set the field "s_theme_boost_campus_footerhideusertourslink" to "0"
     And I press "Save changes"
-    # As both provided user tours are disabled in the testing environment, we need to enable one
-    # (the Dashboard tour) first.
-    And I navigate to "Appearance > User tours" in site administration
-    And I click on "//td[@id='tours_r0_c3']//a[contains(concat(' ',normalize-space(@class),' '),'quickeditlink')]" "xpath_element"
     And I log out
     When I log in as "teacher1"
     Then I should see "Reset user tour on this page" in the "page-footer" "region"

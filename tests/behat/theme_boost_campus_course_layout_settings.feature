@@ -36,7 +36,7 @@ Feature: Configuring the theme_boost_campus plugin for the "Course Layout settin
       | section0title | no     | theme_boost_campus |
     When I log in as "teacher1"
     And I am on "Course 1" course homepage with editing mode on
-    Then "General" "text" in the "li#section-0" "css_element" should not be visible
+    Then "#section-0 h3.sectionname.accesshide" "css_element" should exist
     When I edit the section "0" and I fill the form with:
       | Custom                     | 1                           |
       | New value for Section name | This is the general section |

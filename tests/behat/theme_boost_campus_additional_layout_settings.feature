@@ -16,13 +16,19 @@ Feature: Configuring the theme_boost_campus plugin for the "Additional Layout Se
       | teacher1 | C1     | editingteacher |
 
   @javascript @_file_upload
-  Scenario: Add "Image area items"
+  Scenario: Add "Image area items" and delete them again
     When I log in as "admin"
     And I navigate to "Appearance > Boost Campus" in site administration
     And I click on "Additional Layout Settings" "link"
     And I upload "theme/boost_campus/tests/fixtures/moodle_logo.jpg" file to "Image area items" filemanager
     And I press "Save changes"
     Then ".imagearea img" "css_element" should exist
+    And "//div[contains(concat(' ',normalize-space(@class),' '),' imagearea ')]//img[contains(@src, '/pluginfile.php/1/theme_boost_campus/imageareaitems/0/moodle_logo.jpg')]" "xpath_element" should exist
+    When I navigate to "Appearance > Boost Campus" in site administration
+    And I click on "Additional Layout Settings" "link"
+    And I delete "moodle_logo.jpg" from "Image area items" filemanager
+    And I press "Save changes"
+    Then ".imagearea" "css_element" should not exist
 
   # Dependent on setting "Image area items"
   @javascript @_file_upload

@@ -20,6 +20,7 @@
     Boost_campus imagearea layout template.
 
     Context variables required for this template:
+    * hasimagearea - true if images have been uploaded.
     * imageareafiles - array of uploaded images.
     * linkpath - true if image has a link defined in setting imageareaitemslink.
     * filepath - the path where the uploaded image is stored.
@@ -27,6 +28,7 @@
 
      Example context (json):
     {
+        "hasimagearea" : true,
         "imageareafiles": {
             "filepath": "/pix/moodlelogo.png",
             "linkpath": "http://moodle.org"
@@ -36,10 +38,10 @@
 
 }}
 
-{{# imageareafiles }}
+{{#hasimagearea}}
 <div class="imagearea d-flex justify-content-center flex-wrap pb-3 bg-dark">
     {{#imageareafiles}}
         {{#linkpath}}<a href="{{linkpath}}">{{/linkpath}}<img src="{{filepath}}" class="mt-3" {{#alttext}} alt="{{alttext}}"{{/alttext}}>{{#linkpath}}</a>{{/linkpath}}
     {{/imageareafiles}}
 </div>
-{{/ imageareafiles }}
+{{/hasimagearea}}

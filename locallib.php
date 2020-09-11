@@ -258,7 +258,8 @@ function theme_boost_campus_get_imageareacontent() {
             $themeboostcampuscache->set('imageareadata', $imageareacache);
             return $imageareacache;
         } else { // If no images are uploaded, then cache an empty array.
-            return $themeboostcampuscache->set('imageareadata', array());
+            $themeboostcampuscache->set('imageareadata', array());
+            return array();
         }
     }
 }

@@ -4,6 +4,9 @@ moodle-theme_boost_campus
 Changes
 -------
 
+### Unreleased
+* 2020-09-01 - Fixed bug that multiple imagearea rows are displayed dependent on the amount of uploaded images.
+
 ### Release v3.8-r4
 
 * 2020-08-27 - Fixed bug in image area feature if link attribute was left empty.

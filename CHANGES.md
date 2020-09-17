@@ -4,7 +4,8 @@ moodle-theme_boost_campus
 Changes
 -------
 
-### Unreleased
+### Release v3.8-r5
+
 * 2020-09-01 - Fixed bug that multiple imagearea rows are displayed dependent on the amount of uploaded images.
 
 ### Release v3.8-r4

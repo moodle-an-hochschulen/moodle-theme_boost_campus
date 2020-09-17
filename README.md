@@ -331,7 +331,7 @@ For this reason, with this setting you can decide that the help texts should be 
 ##### Change breakpoint
 
 In theme Boost, the right block column will break down even on devices with a width up to 1200 pixels (widescreen resolution of the iPad is 1024 pixels, for example).
-This is because the breakpoint is set to [media-breakpoint-down(lg)](https://getbootstrap.com/docs/4.0/layout/overview/#responsive-breakpoints").
+This is because the breakpoint is set to [media-breakpoint-down(lg)](https://getbootstrap.com/docs/4.5/layout/overview/#responsive-breakpoints").
 
 If you think there is enough space to show the content plus the blocks column side by side on a screen width of 992 pixels and up, then enable this setting. It will change the breakpoint to media-breakpoint-down(md). This will break the blocks column only on screens with widths of less than 992 pixels.
 

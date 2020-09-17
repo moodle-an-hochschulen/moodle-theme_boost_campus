@@ -6,6 +6,7 @@ Changes
 
 ### Unreleased
 
+* 2020-09-23 - Updated referenced Bootstrap version to latest in upstream used version 4.5.
 * 2020-09-18 - Removed fix that bullet points are cut off because it is fixed in upstream Boost now.
                NOTE: requires minimum Moodle version Moodle 3.9.2 (2020061502)
 * 2020-09-03 - Adjusted columns2.mustache template due to upstream changes in theme Boost.

@@ -418,10 +418,6 @@ body.loginbackgroundimage #page {
     ul.topics,
     ul.weeks,
     ul.periods {
-        /* We need this to prevent bullet points are cut on the left side of the course content. */
-        .contentwithoutlink ul li {
-            list-style-position: inside;
-        }
         /* Set section dividing border-color to brand-primary. */
         li.section.main {
             border: none;

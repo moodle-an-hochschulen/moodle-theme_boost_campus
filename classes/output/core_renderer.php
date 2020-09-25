@@ -144,8 +144,9 @@ class core_renderer extends \core_renderer {
         $header = new stdClass();
         // MODIFICATION START.
         // Show the context header settings menu on all pages except for the profile page as we replace
-        // it with an edit button there.
-        if ($this->page->pagelayout != 'mypublic') {
+        // it with an edit button there and if we are not on the content bank view page (contentbank/view.php)
+        // as this page only adds header actions.
+        if ($this->page->pagelayout != 'mypublic' && $this->page->bodyid != 'page-contentbank') {
             $header->settingsmenu = $this->context_header_settings_menu();
         }
         // MODIFICATION END.
@@ -186,8 +187,12 @@ class core_renderer extends \core_renderer {
         $header->headeractions = $this->page->get_header_actions();
         // MODIFICATION START:
         // Change this to add the result in the html variable to be able to add further features below the header.
-        // Render from the own header template.
-        $html = $this->render_from_template('theme_boost_campus/full_header', $header);
+        // Render from the own header template if we are not on the content bank view page (contentbank/view.php).
+        if ($this->page->bodyid == 'page-contentbank') {
+            $html = $this->render_from_template('core/full_header', $header);
+        } else {
+            $html = $this->render_from_template('theme_boost_campus/full_header', $header);
+        }
         // MODIFICATION END.
         /* ORIGINAL START
         return $this->render_from_template('core/full_header', $header);

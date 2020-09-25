@@ -153,8 +153,8 @@ $nav = $PAGE->flatnav;
 // MODIDFICATION START.
 // Use the returned value from theme_boost_campus_get_modified_flatnav_defaulthomepageontop as the template context.
 $templatecontext['flatnavigation'] = theme_boost_campus_process_flatnav($nav);
-// If setting showsettingsincourse is enabled.
-if (get_config('theme_boost_campus', 'showsettingsincourse') == 'yes') {
+// If setting showsettingsincourse is enabled and we are not on the content bank view page (contentbank/view.php).
+if (get_config('theme_boost_campus', 'showsettingsincourse') == 'yes' && $PAGE->bodyid != 'page-contentbank') {
     // Context value for requiring incoursesettings.js.
     $templatecontext['incoursesettings'] = true;
     // Add the returned value from theme_boost_campus_get_incourse_settings to the template context.

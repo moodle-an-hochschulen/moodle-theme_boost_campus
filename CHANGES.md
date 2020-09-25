@@ -6,6 +6,8 @@ Changes
 
 ### Unreleased
 
+* 2020-09-25 - Fixed Bug that content bank view page cog icon showed course context menu entries.
+               NOTE: This is just a kind of hacky interim solution until MDL-69793 is done. 
 * 2020-09-23 - Updated referenced Bootstrap version to latest in upstream used version 4.5.
 * 2020-09-18 - Removed fix that bullet points are cut off because it is fixed in upstream Boost now.
                NOTE: requires minimum Moodle version Moodle 3.9.2 (2020061502)

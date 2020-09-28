@@ -226,6 +226,19 @@ if ($ADMIN->fulltree) {
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
+    // Settings title for "Back to top" button. We don't need a description here.
+    $name = 'theme_boost_campus/bcbttbuttonheading';
+    $title = get_string('bcbttbuttonheadingsetting', 'theme_boost_campus', null, true);
+    $setting = new admin_setting_heading($name, $title, null);
+    $page->add($setting);
+
+    // Setting enabling the Boost Campus version of the "Back to top" button.
+    $name = 'theme_boost_campus/bcbttbutton';
+    $title = get_string('bcbttbuttonsetting', 'theme_boost_campus', null, true);
+    $description = get_string('bcbttbuttonsetting_desc', 'theme_boost_campus', null, true);
+    $setting = new admin_setting_configcheckbox($name, $title, $description, 0);
+    $page->add($setting);
+
     // Add tab to settings page.
     $settings->add($page);
 

@@ -51,3 +51,27 @@ Feature: Configuring the theme_boost_campus plugin for the "Advanced settings" t
     And I am on "Course 1" course homepage with editing mode on
     Then I should see "Add a block" in the "#nav-drawer" "css_element"
     And "#block-region-side-pre" "css_element" should not exist
+
+  @javascript
+  Scenario: Enable "Boost Campus "Back to top" button"
+    Given the following config values are set as admin:
+      | config      | value | plugin             |
+      | bcbttbutton | 1     | theme_boost_campus |
+    When I log in as "admin"
+    And I navigate to "Development > Purge caches" in site administration
+    And I press "Purge all caches"
+    Then "#back-to-top" "css_element" should exist
+    And "#page-footer" "css_element" should appear before "#back-to-top" "css_element"
+    And "#goto-top-link" "css_element" should not exist
+
+  @javascript
+  Scenario: Counter check: Disable "Boost Campus "Back to top" button"
+    Given the following config values are set as admin:
+      | config      | value | plugin             |
+      | bcbttbutton | 0     | theme_boost_campus |
+    When I log in as "admin"
+    And I navigate to "Development > Purge caches" in site administration
+    And I press "Purge all caches"
+    Then "#goto-top-link" "css_element" should exist
+    And "#goto-top-link" "css_element" should appear before "#page-footer" "css_element"
+    And "#back-to-top" "css_element" should not exist

@@ -62,6 +62,21 @@ $string['catchctrlarrowdownsetting'] = 'Ctrl + Arrow down shortcut';
 $string['catchctrlarrowdownsetting_desc'] = 'This setting will catch the "Ctrl + Arrow down" shortcut (Windows),';
 $string['catchkeys_desc_addition'] = 'prevent the default scrolling to the bottom of the web page and changes the behavior to scroll only to the bottom of the main course content.';
 
+// ..."Back to top" button.
+$string['bcbttbuttonheadingsetting'] = 'Boost Campus "Back to top" button';
+$string['bcbttbuttonsetting'] = 'Boost Campus "Back to top" button';
+$string['bcbttbuttonsetting_desc'] = 'Since Moodle 3.9, a "Go to top" button was integrated into theme Boost and usually that would make our provided solution obsolete.<br/>
+However, the core solution has still some little itches and that is the reason why we would like to provide the Boost Campus "Back to top" button as an optional setting. <br/>
+If you enable this setting, the core "Go to top" button will not be displayed and instead the Boost Campus "Back to top" button will occur. The differences are:<br/>
+<ul>
+<li>Smooth scolling: Boost Campus "Back to top" button uses smooth scrolling whilst the core "Go to top" button jumps directly to the top.</li>
+<li>URL implications: Boost Campus "Back to top" button only uses Javascript and has no implication to the URL whilst the core "Go to top" button adds a "#" at the end of the URL by clicking the button. If you copy the URL the "#" will be copied along.</li>
+<li>Styling: The styling of both buttons differ.</li>
+<li>Accessibility: Boost Campus "Back to top" button is not improved in terms of accessibility whilst the core "Go to top" button is.</li>
+</ul>
+Please note:<br/>
+This setting will be removed as soon a the core feature is improved so that no individual theme solution is needed anymore.';
+
 // Course layout settings.
 $string['courselayoutsettings'] = 'Course Layout Settings';
 // ...Section 0.

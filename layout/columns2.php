@@ -79,6 +79,10 @@ if (get_config('theme_boost_campus', 'darknavbar') == 'yes') {
 $navdrawerfullwidth = get_config('theme_boost_campus', 'navdrawerfullwidth');
 // MODIFICATION END.
 
+// MODIFICATION START: Setting 'bcbttbutton'.
+$bcbttbutton = get_config('theme_boost_campus', 'bcbttbutton');
+// MODIFICATION END.
+
 // MODIFICATION START: Set these variables in any case as it's needed in the columns2.mustache file.
 $perpinfobannershowonselectedpage = false;
 $timedinfobannershowonselectedpage = false;
@@ -98,7 +102,8 @@ $templatecontext = [
     'navdrawerfullwidth' => $navdrawerfullwidth,
     'darknavbar' => $darknavbar,
     'perpinfobannershowonselectedpage' => $perpinfobannershowonselectedpage,
-    'timedinfobannershowonselectedpage' => $timedinfobannershowonselectedpage
+    'timedinfobannershowonselectedpage' => $timedinfobannershowonselectedpage,
+    'bcbttbutton' => $bcbttbutton
     // MODIFICATION END.
 ];
 

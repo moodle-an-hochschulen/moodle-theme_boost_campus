@@ -115,6 +115,21 @@ This setting will catch the "Ctrl + Arrow down" shortcut (Windows), prevent the 
 
 With this setting you can manage where the "Add a block" widget should be displayed. "At the bottom of the nav drawer" means the widget to add new blocks is displayed in the left sliding navigation panel like in theme Boost. "At the bottom of the default block region" means the widget to add new blocks will be displayed in the default block region.
 
+##### Boost Campus "Back to top" button
+
+Since Moodle 3.9, a "Go to top" button was integrated into theme Boost and usually that would make our provided solution obsolete.
+However, the core solution has still some little itches and that is the reason why we would like to provide the Boost Campus "Back to top" button as an optional setting.
+If you enable this setting, the core "Go to top" button will not be displayed and instead the Boost Campus "Back to top" button will occur. The differences are:
+
+* Smooth scolling: Boost Campus "Back to top" button uses smooth scrolling whilst the core "Go to top" button jumps directly to the top.
+* URL implications: Boost Campus "Back to top" button only uses Javascript and has no implication to the URL whilst the core "Go to top" button adds a "#" at the end of the URL by clicking the button. If you copy the URL the "#" will be copied along.
+* Styling: The styling of both buttons differ.
+* Accessibility: Boost Campus "Back to top" button is not improved in terms of accessibility whilst the core "Go to top" button is.
+
+Please note:
+
+This setting will be removed as soon a the core feature is improved so that no individual theme solution is needed anymore.';
+
 ### 3. Tab "Course Layout Settings"
 
 #### Section 0: Title

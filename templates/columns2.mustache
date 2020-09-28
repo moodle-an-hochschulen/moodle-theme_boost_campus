@@ -38,6 +38,7 @@
     * perpibcontent - The content that should be shown in the perpetual information banner.
     * perpibcss - The Bootstrap class that is used for the perpetual info banner.
     * perpibdismiss - true if the setting perpibdismiss is enabled.
+    * bcbttbutton - true if the setting bcbttbutton is enabled.
 
     Example context (json):
     {
@@ -62,7 +63,8 @@
         "perpibcontent": "This is a test content for perpetual info banner.",
         "perpibcss": primary,
         "perpibdismiss": true,
-        "infobannerconfirmationdialogue" : true
+        "infobannerconfirmationdialogue" : true,
+        "bcbttbutton": true
     }
 }}
 {{! MODIFICATION:
@@ -74,6 +76,8 @@
     * Use own footer instead of the theme_boost footer.
     * Add own additional layout elements: footnote or image area.
     * Added the possibility to show information banners.
+    * Added the possibility to show Boost Campus traditional "Back to top" button instead of Boost core "Go to top" button
+      located in footer.mustache file.
 }}
 {{> theme_boost/head }}
 
@@ -159,9 +163,11 @@ require(['theme_boost/drawer'], function(drawer) {
     drawer.init();
     M.util.js_complete('theme_boost/drawer');
 });
+{{#bcbttbutton}}
 require(['theme_boost_campus/backtotop'], function(mod) {
     mod.init();
 });
+{{/bcbttbutton}}
 require(['theme_boost_campus/catchshortcuts'], function(mod) {
     mod.init({{{catchshortcuts}}});
 });

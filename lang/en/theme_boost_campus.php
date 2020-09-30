@@ -154,7 +154,7 @@ $string['imageareaheadingsetting_desc'] = 'The following settings allow adding a
 $string['imageareaitemssetting'] = 'Image area items';
 $string['imageareaitemssetting_desc'] = 'With this widget you can upload your images that will be displayed in the additional image area region. The images will be sorted and displayed alphabetically by the filename. To remove this region, simply delete all uploaded images.';
 $string['imageareaitemsattributessetting'] = 'Image area item additional attributes';
-$string['imageareaitemsattributessetting_desc'] = 'With this optional setting you can add additional attributes to your uplaoded images:
+$string['imageareaitemsattributessetting_desc'] = 'With this optional setting you can add additional attributes to your uploaded images:
 <ul>
 <li>a link</li>
 <li>an alt attribute which describes the image</li>
@@ -164,7 +164,7 @@ For example:<br/>
 ```
 moodle.jpg|https://moodle.org|Moodle logo
 ```<br/><br/>
-You can declare the additional attributes for an arbitrary amount of your uplaoded images. The attributes will be added only to those images that match their filename with the identifier declared in this setting.';
+You can declare the additional attributes for an arbitrary amount of your uploaded images. The attributes will be added only to those images that match their filename with the identifier declared in this setting.';
 $string['imageareaitemsmaxheightsetting'] = 'Image area items maximal height';
 $string['imageareaitemsmaxheightsetting_desc'] = 'With this setting you can change the height in pixels for your uploaded images. All images will have the same maximum height and their width will be resized proportionally. The default value is set to 100 pixels.';
 // ...Footnote.

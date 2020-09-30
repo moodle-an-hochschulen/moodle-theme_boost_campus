@@ -6,6 +6,7 @@ Changes
 
 ### Unreleased
 
+* 2020-09-30 - Adjusted settings.php due to upstream changes in theme Boost settings.
 * 2020-09-28 - Added setting to be able to enable the initial Boost Campus back to top button instead of the new Boost Go to top button.
 * 2020-09-25 - Fixed Bug that content bank view page cog icon showed course context menu entries.
                NOTE: This is just a kind of hacky interim solution until MDL-69793 is done. 

@@ -4,7 +4,7 @@ moodle-theme_boost_campus
 Changes
 -------
 
-### Unreleased
+### Release v3.9-r1
 
 * 2020-09-30 - Adjusted settings.php due to upstream changes in theme Boost settings.
 * 2020-09-28 - Added setting to be able to enable the initial Boost Campus back to top button instead of the new Boost Go to top button.

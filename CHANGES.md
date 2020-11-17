@@ -4,6 +4,10 @@ moodle-theme_boost_campus
 Changes
 -------
 
+### Unreleased
+
+* 2020-11-17 - Bugfix: Dashboard columns did not collapse correctly when blockcolumnwidthdashboard != blockcolumnwidth.
+
 ### Release v3.9-r1
 
 * 2020-09-30 - Adjusted settings.php due to upstream changes in theme Boost settings.

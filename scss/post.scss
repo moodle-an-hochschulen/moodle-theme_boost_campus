@@ -19,24 +19,57 @@
                 display: block;
             }
         }
-    }
-}
-[data-region="blocks-column"] {
-    width: $blocks-column-width;
-    @include media-breakpoint-down(md) {
-        width: 100%;
+        [data-region="blocks-column"] {
+            width: $blocks-column-width;
+            @include media-breakpoint-down(md) {
+                width: 100%;
+            }
+        }
     }
 }
 
-/* Change the block column width if setting 'blockcolumnwidthdashboard' is different from setting 'blockcolumnwidth'. */
+/* Change the block column width on the Dashboard if setting 'blockcolumnwidthdashboard' is different from setting 'blockcolumnwidth'. */
 @if variable-exists(blockcolumnwidthdashboard) and variable-exists(blockcolumnwidth) {
     @if $blockcolumnwidthdashboard != $blockcolumnwidth {
-        #page-my-index [data-region="blocks-column"] {
-            width: $blocks-column-width-dashboard;
+        /* Distinguish again if setting 'breakpoint' is active.
+           This if-construction has duplicated code by purpose for the sake of readability. */
+        @if variable-exists(breakpoint) and $breakpoint == 'yes' {
+            #page-my-index #region-main-settings-menu.has-blocks,
+            #page-my-index #region-main.has-blocks {
+                display: inline-block;
+                width: calc(100% - #{$blocks-plus-gutter-dashboard});
+                @include media-breakpoint-down(md) {
+                    width: 100%;
+                    /* MDL-63102 - Remove extra space at bottom.
+                    If modifying make sure block-region is horizontally stacked when in full screen */
+                    display: block;
+                }
+            }
+            #page-my-index [data-region="blocks-column"] {
+                width: $blocks-column-width-dashboard;
+                @include media-breakpoint-down(md) {
+                    width: 100%;
+                }
+            }
         }
-        #page-my-index #region-main-settings-menu.has-blocks,
-        #page-my-index #region-main.has-blocks {
-            width: calc(100% - #{$blocks-plus-gutter-dashboard});
+        @else {
+            #page-my-index #region-main-settings-menu.has-blocks,
+            #page-my-index #region-main.has-blocks {
+                display: inline-block;
+                width: calc(100% - #{$blocks-plus-gutter-dashboard});
+                @include media-breakpoint-down(lg) {
+                    width: 100%;
+                    /* MDL-63102 - Remove extra space at bottom.
+                    If modifying make sure block-region is horizontally stacked when in full screen */
+                    display: block;
+                }
+            }
+            #page-my-index [data-region="blocks-column"] {
+                width: $blocks-column-width-dashboard;
+                @include media-breakpoint-down(lg) {
+                    width: 100%;
+                }
+            }
         }
     }
 }

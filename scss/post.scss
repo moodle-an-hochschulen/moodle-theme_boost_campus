@@ -507,7 +507,7 @@ body.loginbackgroundimage #page {
         }
         /* Add border to description text for restricted activities and show it also to students.
            This is needed because the classes for teachers and students differ. */
-        .section li:not(.label) .contentwithoutlink {
+        .section li:not(.label) .contentwithoutlink:not(:empty) {
             border-left: 2px solid $gray-light;
             padding-left: 10px;
             font-size: .9rem;

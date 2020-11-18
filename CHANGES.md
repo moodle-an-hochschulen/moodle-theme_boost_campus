@@ -4,6 +4,10 @@ moodle-theme_boost_campus
 Changes
 -------
 
+### Unreleased
+
+* 2020-11-18 - Bugfix: Fixed another regression when showing description border for restricted activities.
+
 ### Release v3.9-r2
 
 * 2020-11-17 - Bugfix: Dashboard columns did not collapse correctly when blockcolumnwidthdashboard != blockcolumnwidth.

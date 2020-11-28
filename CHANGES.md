@@ -6,6 +6,7 @@ Changes
 
 ### Unreleased
 
+* 2020-11-28 - Adjusted occurrences of the .row-fluid grid class to .row after the BS4Alpha compatibility layer has been removed in theme Boost core.
 * 2020-11-28 - Adjusted SCSS brand color and gray color variables after the BS4Alpha compatibility layer has been removed in theme Boost core.
                PLEASE NOTE: If you have used $brand-* or $gray-* variables in your RAW SCSS as we did in Boost Campus up to now, you might have to adapt your SCSS code now as well.
                See https://github.com/moodle/moodle/blob/MOODLE_38_STABLE/theme/boost/scss/moodle/bs4alphacompat.scss#L29-L43 for the compatibility variable assignments which have vanished.

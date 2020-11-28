@@ -830,7 +830,7 @@ blockquote::before {
     /* We need a top border only if there are footer block columns. */
     @if variable-exists(footerblocks) {
         @if $footerblocks != '0columns' {
-            .container-fluid:nth-of-type(2) > .row-fluid {
+            .container-fluid:nth-of-type(2) > .row {
                 border-top: 1px solid #fff;
                 padding-top: 1rem;
             }
@@ -840,7 +840,7 @@ blockquote::before {
     /* If all Moodle links are hidden in the footer, we don't need a top line for the performance info.*/
     @if variable-exists(footerhidehelplink) and variable-exists(footerhidelogininfo) and variable-exists(footerhidehomelink) {
         @if $footerhidehelplink == 'yes' and $footerhidelogininfo == 'yes' and $footerhidehomelink == 'yes' {
-            .container-fluid:nth-of-type(2) > .row-fluid {
+            .container-fluid:nth-of-type(2) > .row {
                 border-top: none;
             }
         }

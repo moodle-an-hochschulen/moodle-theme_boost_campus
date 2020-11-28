@@ -271,7 +271,7 @@ body.loginbackgroundimage #page {
             .usertext:hover,
             .dropdown-toggle:hover,
             .site-name:hover {
-                color: $brand-primary;
+                color: $primary;
             }
             .navbar-brand:not(.has-logo) .site-name:hover {
                 color: #fff;
@@ -451,10 +451,10 @@ body.loginbackgroundimage #page {
     ul.topics,
     ul.weeks,
     ul.periods {
-        /* Set section dividing border-color to brand-primary. */
+        /* Set section dividing border-color to primary brand color. */
         li.section.main {
             border: none;
-            border-bottom: 1px solid $brand-primary;
+            border-bottom: 1px solid $primary;
             padding-top: 3rem;
             padding-bottom: 2rem;
             margin: 0;
@@ -474,9 +474,9 @@ body.loginbackgroundimage #page {
         }
         /* Change style of highlighted section to highlight more. */
         li.section.main.current {
-            border-bottom: $brand-primary 4px solid;
-            border-top: $brand-primary 3px solid; /*1px less because of section dividing border. */
-            background: $gray-lightest;
+            border-bottom: $primary 4px solid;
+            border-top: $primary 3px solid; /*1px less because of section dividing border. */
+            background: $gray-100;
         }
         /* Remove highlighting from Theme Boost. */
         li.section.main.current::before {
@@ -501,14 +501,14 @@ body.loginbackgroundimage #page {
         }
         /* Add border to description text to differ it from module content. */
         .section .contentafterlink {
-            border-left: 2px solid $gray-light;
+            border-left: 2px solid $gray-600;
             padding-left: 10px;
             font-size: .9rem;
         }
         /* Add border to description text for restricted activities and show it also to students.
            This is needed because the classes for teachers and students differ. */
         .section li:not(.label) .contentwithoutlink:not(:empty) {
-            border-left: 2px solid $gray-light;
+            border-left: 2px solid $gray-600;
             padding-left: 10px;
             font-size: .9rem;
             display: block;
@@ -541,7 +541,7 @@ body.loginbackgroundimage #page {
         }
         .section-navigation .mdl-left:not(:empty),
         .section-navigation .mdl-right:not(:empty) {
-            background-color: $brand-primary;
+            background-color: $primary;
             padding: 2px 8px;
             border-radius: 2px;
             a {
@@ -558,7 +558,7 @@ body.loginbackgroundimage #page {
     ul.periods {
         /* Add bottom border to last section in editing mode. */
         li.section.main:last-child {
-            border-bottom: 1px solid $brand-primary;
+            border-bottom: 1px solid $primary;
         }
         /* Special rule for hidden sections in editing mode as indents are different in this view. */
         li.section.main.hidden {
@@ -580,9 +580,9 @@ body.loginbackgroundimage #page {
  */
 /* Add a decent background to intro text */
 #intro {
-    background-color: $gray-lightest;
+    background-color: $gray-100;
     margin-bottom: 1em;
-    border-left: 3px solid $brand-primary;
+    border-left: 3px solid $primary;
     padding-left: 15px;
     padding-right: 15px;
 }
@@ -593,7 +593,7 @@ body.loginbackgroundimage #page {
 /* Adjust the activity navigation buttons to suit to the topics navigation buttons. */
 #next-activity-link,
 #prev-activity-link {
-    background-color: $brand-primary;
+    background-color: $primary;
     padding: 4px 8px;
     border-radius: 2px;
     color: #fff;
@@ -756,11 +756,11 @@ blockquote::before {
 
     /* Set footer blocks text color from white to dark gray. */
     .block {
-        color: $gray-dark;
+        color: $gray-900;
         /* Set link and icon color from white to gray. */
         a,
         .icon {
-            color: $gray-dark;
+            color: $gray-900;
         }
         /* Remove the underline decoration from footer blocks context menu items.*/
         .dropdown-item.menu-action {
@@ -854,7 +854,7 @@ blockquote::before {
 
 /* Mark broken links with red color. */
 a[href*="/brokenfile.php"] {
-    color: $brand-danger;
+    color: $danger;
 }
 
 /* Add Font Awesome "broken chain" icon in front of broken link. */
@@ -939,7 +939,7 @@ a[href^="mailto"]::before {
     right: 0.5em;
     line-height: 1.7rem;
     color: #fff;
-    background-color: $brand-primary;
+    background-color: $primary;
     border-radius: 100px;
     cursor: pointer;
     box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.3);
@@ -992,7 +992,7 @@ a[href^="mailto"]::before {
             }
             /* We have to add a border for the users who do not have a switch role menu item due to their capabilities. */
             .dropdown-menu.dropdown-menu-right a:last-child {
-                border-bottom: 1px solid $gray-lighter;
+                border-bottom: 1px solid $gray-300;
             }
             .dropdown-menu-right div:last-of-type {
                 margin-bottom: 0;
@@ -1103,31 +1103,31 @@ a[href^="mailto"]::before {
 }
 .video-js {
     .vjs-big-play-button {
-        background-color: $brand-primary;
+        background-color: $primary;
         border-radius: 2px;
     }
     &:hover .vjs-big-play-button {
-        background-color: $brand-primary;
+        background-color: $primary;
     }
     .vjs-big-play-button {
         &:focus,
         &:active {
-            background-color: $gray-dark;
+            background-color: $gray-900;
         }
     }
     .vjs-loading-spinner {
-        border-color: $brand-primary;
+        border-color: $primary;
     }
     .vjs-control-bar2 {
         background-color: transparent;
     }
     .vjs-control-bar {
-        background-color: $gray-dark !important;
+        background-color: $gray-900 !important;
         color: #fff;
     }
     .vjs-play-progress,
     .vjs-volume-level {
-        background-color: $brand-primary;
+        background-color: $primary;
     }
     .vjs-big-play-button {
         border-width: 2px;

@@ -96,7 +96,7 @@ if ($ADMIN->fulltree) {
     $setting = new admin_setting_heading($name, $title, null);
     $page->add($setting);
 
-    // Variable $brand-color.
+    // Variable $primary.
     // We use an empty default value because the default colour should come from the preset.
     $name = 'theme_boost_campus/brandcolor';
     $title = get_string('brandcolor', 'theme_boost', null, true);
@@ -105,7 +105,7 @@ if ($ADMIN->fulltree) {
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
-    // Variable $brand-succes-color.
+    // Variable $success.
     $name = 'theme_boost_campus/brandsuccesscolor';
     $title = get_string('brandsuccesscolorsetting', 'theme_boost_campus', null, true);
     $description = get_string('brandsuccesscolorsetting_desc', 'theme_boost_campus', null, true);
@@ -113,7 +113,7 @@ if ($ADMIN->fulltree) {
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
-    // Variable $brand-info-color.
+    // Variable $info.
     $name = 'theme_boost_campus/brandinfocolor';
     $title = get_string('brandinfocolorsetting', 'theme_boost_campus', null, true);
     $description = get_string('brandinfocolorsetting_desc', 'theme_boost_campus', null, true);
@@ -121,7 +121,7 @@ if ($ADMIN->fulltree) {
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
-    // Variable $brand-warning-color.
+    // Variable $warning.
     $name = 'theme_boost_campus/brandwarningcolor';
     $title = get_string('brandwarningcolorsetting', 'theme_boost_campus', null, true);
     $description = get_string('brandwarningcolorsetting_desc', 'theme_boost_campus', null, true);
@@ -129,7 +129,7 @@ if ($ADMIN->fulltree) {
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
-    // Variable $brand-warning-color.
+    // Variable $danger.
     $name = 'theme_boost_campus/branddangercolor';
     $title = get_string('branddangercolorsetting', 'theme_boost_campus', null, true);
     $description = get_string('branddangercolorsetting_desc', 'theme_boost_campus', null, true);

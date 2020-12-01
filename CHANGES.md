@@ -6,6 +6,7 @@ Changes
 
 ### Unreleased
 
+* 2020-11-28 - Prepare compatibility for Moodle 3.10.
 * 2020-11-18 - Change in Moodle release support:
                For the time being, this plugin is maintained for the most recent LTS release of Moodle as well as the most recent major release of Moodle.
                Bugfixes are backported to the LTS release. However, new features and improvements are not necessarily backported to the LTS release.

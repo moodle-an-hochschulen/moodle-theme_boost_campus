@@ -4,7 +4,7 @@ moodle-theme_boost_campus
 Changes
 -------
 
-### Unreleased
+### Release v3.10-r1
 
 * 2020-11-28 - Adjusted occurrences of the .row-fluid grid class to .row after the BS4Alpha compatibility layer has been removed in theme Boost core.
 * 2020-11-28 - Adjusted SCSS brand color and gray color variables after the BS4Alpha compatibility layer has been removed in theme Boost core.

@@ -28,5 +28,6 @@ $plugin->component = 'theme_boost_campus';
 $plugin->version = 2020112300;
 $plugin->release = 'v3.9-r3';
 $plugin->requires = 2020061502;
+$plugin->supported = [39, 39];
 $plugin->maturity = MATURITY_STABLE;
 $plugin->dependencies = array('theme_boost' => 2020061500);

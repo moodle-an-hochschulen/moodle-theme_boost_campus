@@ -4,6 +4,10 @@ moodle-theme_boost_campus
 Changes
 -------
 
+### Unreleased
+
+* 2020-11-18 - Improvement: Declare which major stable version of Moodle this plugin supports (see MDL-59562 for details).
+
 ### Release v3.9-r3
 
 * 2020-11-18 - Bugfix: Fixed another regression when showing description border for restricted activities.

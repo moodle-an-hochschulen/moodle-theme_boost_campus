@@ -4,6 +4,11 @@ moodle-theme_boost_campus
 Changes
 -------
 
+
+### Unreleased
+
+* 2021-01-14 - Bugfix: The infobanner should not clean the entered HTML code too strictly.
+
 ### Release v3.9-r4
 
 * 2020-11-18 - Change in Moodle release support:

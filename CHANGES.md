@@ -4,7 +4,7 @@ moodle-theme_boost_campus
 Changes
 -------
 
-### Unreleased
+### Release v3.10-r2
 
 * 2021-01-14 - Improvement: Add option to output the information banner without any particular Bootstrap color.
 * 2021-01-14 - Bugfix: The infobanner should not clean the entered HTML code too strictly.

@@ -4,6 +4,10 @@ moodle-theme_boost_campus
 Changes
 -------
 
+### Unreleased
+
+* 2021-01-14 - Bugfix: The infobanner should not clean the entered HTML code too strictly.
+
 ### Release v3.10-r1
 
 * 2020-11-28 - Adjusted occurrences of the .row-fluid grid class to .row after the BS4Alpha compatibility layer has been removed in theme Boost core.

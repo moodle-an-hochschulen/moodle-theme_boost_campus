@@ -111,7 +111,8 @@ $templatecontext = [
 $perpibenable = get_config('theme_boost_campus', 'perpibenable');
 
 if ($perpibenable) {
-    $perpibcontent = format_text(get_config('theme_boost_campus', 'perpibcontent'), FORMAT_HTML);
+    $formatoptions = array('noclean' => true, 'newlines' => false);
+    $perpibcontent = format_text(get_config('theme_boost_campus', 'perpibcontent'), FORMAT_HTML, $formatoptions);
     // Result of multiselect is a string divided by a comma, so exploding into an array.
     $perpibshowonpages = explode(",", get_config('theme_boost_campus', 'perpibshowonpages'));
     $perpibcss = get_config('theme_boost_campus', 'perpibcss');
@@ -135,7 +136,8 @@ if ($perpibenable) {
 $timedibenable = get_config('theme_boost_campus', 'timedibenable');
 
 if ($timedibenable) {
-    $timedibcontent = format_text(get_config('theme_boost_campus', 'timedibcontent'), FORMAT_HTML);
+    $formatoptions = array('noclean' => true, 'newlines' => false);
+    $timedibcontent = format_text(get_config('theme_boost_campus', 'timedibcontent'), FORMAT_HTML, $formatoptions);
     // Result of multiselect is a string divided by a comma, so exploding into an array.
     $timedibshowonpages = explode(",", get_config('theme_boost_campus', 'timedibshowonpages'));
     $timedibcss = get_config('theme_boost_campus', 'timedibcss');

@@ -59,7 +59,9 @@ if ($perpibenable) {
 
     // Add the variables to the templatecontext array.
     $templatecontext['perpibcontent'] = $perpibcontent;
-    $templatecontext['perpibcss'] = $perpibcss;
+    if ($perpibcss != 'none') {
+        $templatecontext['perpibcss'] = $perpibcss;
+    }
     $templatecontext['perpinfobannershowonselectedpage'] = $perpinfobannershowonselectedpage;
 }
 // MODIFICATION END.
@@ -72,7 +74,9 @@ if ($timedibenable) {
     $timedibcontent = format_text(get_config('theme_boost_campus', 'timedibcontent'), FORMAT_HTML, $formatoptions);
     // Result of multiselect is a string divided by a comma, so exploding into an array.
     $timedibshowonpages = explode(",", get_config('theme_boost_campus', 'timedibshowonpages'));
-    $timedibcss = get_config('theme_boost_campus', 'timedibcss');
+    if ($perpibcss != 'none') {
+        $timedibcss = get_config('theme_boost_campus', 'timedibcss');
+    }
     $timedibstartsetting = get_config('theme_boost_campus', 'timedibstart');
     $timedibendsetting = get_config('theme_boost_campus', 'timedibend');
     // Get the current server time.

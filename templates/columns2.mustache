@@ -94,13 +94,13 @@
     <div id="page" class="container-fluid d-print-block">
 
         {{#timedinfobannershowonselectedpage}}
-        <div id="themeboostcampusitimedinfobanner" class="alert alert-{{{ timedibcss }}} mt-3" role="alert">
+        <div id="themeboostcampusitimedinfobanner" class="alert {{#timedibcss}}alert-{{{ timedibcss }}}{{/timedibcss}} mt-3" role="alert">
           {{{ timedibcontent }}}
         </div>
         {{/timedinfobannershowonselectedpage}}
 
         {{#perpinfobannershowonselectedpage}}
-        <div id="themeboostcampusperpinfobanner" class="alert alert-{{{ perpibcss }}} {{#perpibdismiss}}alert-dismissible fade show{{/perpibdismiss}} mt-3" role="alert">
+        <div id="themeboostcampusperpinfobanner" class="alert {{#perpibcss}}alert-{{{ perpibcss }}}{{/perpibcss}} {{#perpibdismiss}}alert-dismissible fade show{{/perpibdismiss}} mt-3" role="alert">
           {{{ perpibcontent }}}
           {{#perpibdismiss}}
           <button type="button" id="themeboostcampusperpinfobannerclosebutton" class="close" data-dismiss="alert" aria-label="{{#str}}close, theme_boost_campus{{/str}}">

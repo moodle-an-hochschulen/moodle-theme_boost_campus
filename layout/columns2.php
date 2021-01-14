@@ -125,7 +125,9 @@ if ($perpibenable) {
 
     // Add the variables to the templatecontext array.
     $templatecontext['perpibcontent'] = $perpibcontent;
-    $templatecontext['perpibcss'] = $perpibcss;
+    if ($perpibcss != 'none') {
+        $templatecontext['perpibcss'] = $perpibcss;
+    }
     $templatecontext['perpibdismiss'] = $perpibdismiss;
     $templatecontext['perpinfobannershowonselectedpage'] = $perpinfobannershowonselectedpage;
     $templatecontext['perbibconfirmdialogue'] = $perbibconfirmdialogue;
@@ -151,7 +153,9 @@ if ($timedibenable) {
 
     // Add the variables to the templatecontext array.
     $templatecontext['timedibcontent'] = $timedibcontent;
-    $templatecontext['timedibcss'] = $timedibcss;
+    if ($timedibcss != 'none') {
+        $templatecontext['timedibcss'] = $timedibcss;
+    }
     $templatecontext['timedinfobannershowonselectedpage'] = $timedinfobannershowonselectedpage;
 }
 // MODIFICATION END.

@@ -285,6 +285,9 @@ $string['timedibendsetting_desc'] = 'With this setting you can define when the t
 <br/>Please enter a valid date in this format: YYYY-MM-DD HH:MM:SS. For example: "2020-01-07 08:00:00. The time zone will be the time zone you have defined in the setting "Default timezone".
 <br/>If you leave this setting empty but entered a date in the for the start, the banner won\'t hide after the starting time has been reached.';
 
+// ...General information banner.
+$string['ibcsssetting_nobootstrap'] = 'If you choose the \'{$a->bootstrapnone}\' option, the information banner will be output without any particular Bootstrap color.';
+
 // ADDITIONAL STRINGS (IN ALPHABETICAL ORDER).
 $string['backtotop'] = 'Back to top';
 $string['bootstrapprimarycolor'] = 'Primary color';
@@ -295,6 +298,7 @@ $string['bootstrapwarningcolor'] = 'Warning color';
 $string['bootstrapinfocolor'] = 'Info color';
 $string['bootstraplightcolor'] = 'Light color';
 $string['bootstrapdarkcolor'] = 'Dark color';
+$string['bootstrapnone'] = 'No Bootstrap color';
 $string['cachedef_imagearea'] = 'Cache for imagearea items';
 $string['close'] = 'Close';
 $string['confirmation'] = 'Confirmation';

@@ -730,7 +730,9 @@ if ($ADMIN->fulltree) {
     // Select the bootstrap class that should be used for the perpetual info banner.
     $name = 'theme_boost_campus/perpibcss';
     $title = get_string('perpibcsssetting', 'theme_boost_campus', null, true);
-    $description = get_string('perpibcsssetting_desc', 'theme_boost_campus', null, true);
+    $description = get_string('perpibcsssetting_desc', 'theme_boost_campus', null, true).'<br />'.
+            get_string('ibcsssetting_nobootstrap', 'theme_boost_campus',
+                   array('bootstrapnone' => get_string('bootstrapnone', 'theme_boost_campus')));
     $perpibcssoptions = [
             // Don't use string lazy loading (= false) because the string will be directly used and would produce a
             // PHP warning otherwise.
@@ -741,7 +743,8 @@ if ($ADMIN->fulltree) {
             'warning' => get_string('bootstrapwarningcolor', 'theme_boost_campus', null, false),
             'info' => get_string('bootstrapinfocolor', 'theme_boost_campus', null, false),
             'light' => get_string('bootstraplightcolor', 'theme_boost_campus', null, false),
-            'dark' => get_string('bootstrapdarkcolor', 'theme_boost_campus', null, false)
+            'dark' => get_string('bootstrapdarkcolor', 'theme_boost_campus', null, false),
+            'none' => get_string('bootstrapnone', 'theme_boost_campus', null, false)
     ];
     $setting = new admin_setting_configselect($name, $title, $description, $perpibcssoptions['primary'],
             $perpibcssoptions);
@@ -824,7 +827,9 @@ if ($ADMIN->fulltree) {
     // Select the bootstrap class that should be used for the perpetual info banner.
     $name = 'theme_boost_campus/timedibcss';
     $title = get_string('timedibcsssetting', 'theme_boost_campus', null, true);
-    $description = get_string('timedibcsssetting_desc', 'theme_boost_campus', null, true);
+    $description = get_string('timedibcsssetting_desc', 'theme_boost_campus', null, true).'<br />'.
+            get_string('ibcsssetting_nobootstrap', 'theme_boost_campus',
+                    array('bootstrapnone' => get_string('bootstrapnone', 'theme_boost_campus')));
     $timedibcssoptions = [
         // Don't use string lazy loading (= false) because the string will be directly used and would produce a
         // PHP warning otherwise.
@@ -835,7 +840,8 @@ if ($ADMIN->fulltree) {
             'warning' => get_string('bootstrapwarningcolor', 'theme_boost_campus', null, false),
             'info' => get_string('bootstrapinfocolor', 'theme_boost_campus', null, false),
             'light' => get_string('bootstraplightcolor', 'theme_boost_campus', null, false),
-            'dark' => get_string('bootstrapdarkcolor', 'theme_boost_campus', null, false)
+            'dark' => get_string('bootstrapdarkcolor', 'theme_boost_campus', null, false),
+            'none' => get_string('bootstrapnone', 'theme_boost_campus', null, false)
     ];
     $setting = new admin_setting_configselect($name, $title, $description, $timedibcssoptions['primary'],
             $timedibcssoptions);

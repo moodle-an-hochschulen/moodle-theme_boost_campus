@@ -4,6 +4,10 @@ moodle-theme_boost_campus
 Changes
 -------
 
+### Unreleased
+
+* 2021-02-05 - Move Moodle Plugin CI from Travis CI to Github actions
+
 ### Release v3.10-r2
 
 * 2021-01-14 - Improvement: Add option to output the information banner without any particular Bootstrap color.

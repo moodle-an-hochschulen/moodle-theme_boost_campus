@@ -1,7 +1,7 @@
 moodle-theme_boost_campus
 =========================
 
-[![Build Status](https://travis-ci.com/moodleuulm/moodle-theme_boost_campus.svg?branch=master)](https://travis-ci.com/moodleuulm/moodle-theme_boost_campus)
+[![Moodle Plugin CI](https://github.com/moodleuulm/moodle-theme_boost_campus/workflows/Moodle%20Plugin%20CI/badge.svg?branch=master)](https://github.com/moodleuulm/moodle-theme_boost_campus/actions?query=workflow%3A%22Moodle+Plugin+CI%22+branch%3Amaster)
 
 Moodle Boost child theme which is intended to meet the needs of university campuses and adds several features and improvements
 

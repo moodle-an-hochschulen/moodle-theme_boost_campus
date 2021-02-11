@@ -849,7 +849,7 @@ if ($ADMIN->fulltree) {
     $settings->hide_if('theme_boost_campus/timedibcss',
             'theme_boost_campus/timedibenable', 'notchecked');
 
-    // This will check for the desired date time format YYYY-MM-DD HH:MM:SS
+    // This will check for the desired date time format YYYY-MM-DD HH:MM:SS.
     $timeregex = '/(20[0-9]{2}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])\s([0-1][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9])|^$/';
 
     // Start time for controlled information banner.

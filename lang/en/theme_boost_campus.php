@@ -161,9 +161,7 @@ $string['imageareaitemsattributessetting_desc'] = 'With this optional setting yo
 </ul>
 Each line consists of the file identifier (the file name) the link URL and the alt-text, separated by pipe characters. Each link declaration needs to be written in a new line. <br/>
 For example:<br/>
-```
-moodle.jpg|https://moodle.org|Moodle logo
-```<br/><br/>
+<code>moodle.jpg|https://moodle.org|Moodle logo</code><br/><br/>
 You can declare the additional attributes for an arbitrary amount of your uploaded images. The attributes will be added only to those images that match their filename with the identifier declared in this setting.';
 $string['imageareaitemsmaxheightsetting'] = 'Image area items maximal height';
 $string['imageareaitemsmaxheightsetting_desc'] = 'With this setting you can change the height in pixels for your uploaded images. All images will have the same maximum height and their width will be resized proportionally. The default value is set to 100 pixels.';

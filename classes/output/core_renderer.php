@@ -109,9 +109,11 @@ class core_renderer extends \core_renderer {
             return $this->image_url('favicon', 'theme');
         }
         // MODIFICATION END.
+        // @codingStandardsIgnoreStart
         /* ORIGINAL START.
         return $this->image_url('favicon', 'theme');
         ORIGINAL END. */
+        // @codingStandardsIgnoreEnd
     }
 
 
@@ -150,9 +152,11 @@ class core_renderer extends \core_renderer {
             $header->settingsmenu = $this->context_header_settings_menu();
         }
         // MODIFICATION END.
+        // @codingStandardsIgnoreStart
         /* ORIGINAL START
         $header->settingsmenu = $this->context_header_settings_menu();
         ORIGINAL END. */
+        // @codingStandardsIgnoreEnd
         $header->contextheader = $this->context_header();
         $header->hasnavbar = empty($this->page->layout_options['nonavbar']);
         $header->navbar = $this->navbar();
@@ -180,9 +184,11 @@ class core_renderer extends \core_renderer {
             }
         }
         // MODIFICATION END.
+        // @codingStandardsIgnoreStart
         /* ORIGINAL START
         $header->pageheadingbutton = $this->page_heading_button();
         ORIGINAL END. */
+        // @codingStandardsIgnoreEnd
         $header->courseheader = $this->course_header();
         $header->headeractions = $this->page->get_header_actions();
         // MODIFICATION START:
@@ -194,9 +200,11 @@ class core_renderer extends \core_renderer {
             $html = $this->render_from_template('theme_boost_campus/full_header', $header);
         }
         // MODIFICATION END.
+        // @codingStandardsIgnoreStart
         /* ORIGINAL START
         return $this->render_from_template('core/full_header', $header);
         ORIGINAL END. */
+        // @codingStandardsIgnoreEnd
 
         // MODIFICATION START:
         // If the setting showhintcoursehidden is set, the visibility of the course is hidden and
@@ -266,7 +274,8 @@ class core_renderer extends \core_renderer {
                     $html .= html_writer::tag('i', null, array('class' => 'fa fa-sign-in fa-3x fa-pull-left'));
                     $html .= get_string('showhintcourseselfenrol', 'theme_boost_campus',
                             array('name' => $selfenrolinstancename));
-                    // Only show the link to edit the specific self enrolment if the user has the capability to config self enrolments.
+                    // Only show the link to edit the specific self enrolment if the user has the capability
+                    // to config self enrolments.
                     if (has_capability('enrol/self:config', \context_course::instance($COURSE->id))) {
                         $url = new moodle_url('/enrol/editinstance.php', array('courseid' => $COURSE->id,
                                                                                'id' => $selfenrolinstanceid, 'type' => 'self'));
@@ -465,9 +474,11 @@ class core_renderer extends \core_renderer {
             return $this->render_from_template('core/loginform', $context);
         }
         // MODIFICATION END.
+        // @codingStandardsIgnoreStart
         /* ORIGINAL START.
         return $this->render_from_template('core/loginform', $context);
         ORIGINAL END. */
+        // @codingStandardsIgnoreEnd
     }
 
     /**
@@ -491,9 +502,11 @@ class core_renderer extends \core_renderer {
             return $this->render_from_template('core/help_icon', $context);
         }
         // MODIFICATION END.
+        // @codingStandardsIgnoreStart
         /* ORIGINAL START.
         $context = $helpicon->export_for_template($this);
         return $this->render_from_template('core/help_icon', $context);
         ORIGINAL END. */
+        // @codingStandardsIgnoreEnd
     }
 }

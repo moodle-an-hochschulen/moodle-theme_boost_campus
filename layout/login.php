@@ -103,6 +103,8 @@ require_once(__DIR__ . '/includes/footnote.php');
 // Render own template.
 echo $OUTPUT->render_from_template('theme_boost_campus/login', $templatecontext);
 // MODIFICATION END.
+// @codingStandardsIgnoreStart
 /* ORIGINAL START.
 echo $OUTPUT->render_from_template('theme_boost/login', $templatecontext);
 ORIGINAL END. */
+// @codingStandardsIgnoreEnd

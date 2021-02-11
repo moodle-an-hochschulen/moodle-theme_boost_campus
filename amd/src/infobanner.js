@@ -27,6 +27,8 @@ define(['jquery', 'core/str', 'core/modal_factory', 'core/modal_events', 'core/n
 
     /**
      * Initialising.
+     *
+     * @param {string} showconfirmationdialogue
      */
     function initInfoBanner(showconfirmationdialogue) {
 
@@ -37,7 +39,7 @@ define(['jquery', 'core/str', 'core/modal_factory', 'core/modal_events', 'core/n
             }, {
                 key: 'closingperpetualinfobanner',
                 component: 'theme_boost_campus'
-            } , {
+            }, {
                 key: 'yes_close',
                 component: 'theme_boost_campus'
             }
@@ -53,12 +55,12 @@ define(['jquery', 'core/str', 'core/modal_factory', 'core/modal_events', 'core/n
             event.stopPropagation();
 
             if (showconfirmationdialogue == '1') {
-                $.when(stringsPromise, modalPromise).then(function (strings, modal) {
+                $.when(stringsPromise, modalPromise).then(function(strings, modal) {
                     modal.setTitle(strings[0]);
                     modal.setBody(strings[1]);
                     modal.setSaveButtonText(strings[2]);
                     // Saved clicked - the dismissing of the info banner is confirmed.
-                    modal.getRoot().on(ModalEvents.save, function () {
+                    modal.getRoot().on(ModalEvents.save, function() {
                         M.util.set_user_preference('theme_boost_campus_infobanner_dismissed', true);
                         // Now close the alert.
                         $('#themeboostcampusperpinfobanner').alert('close');

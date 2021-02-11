@@ -174,9 +174,11 @@ if (get_config('theme_boost_campus', 'showsettingsincourse') == 'yes' && $PAGE->
     $templatecontext['activitynode'] = theme_boost_campus_get_incourse_activity_settings();
 }
 // MODIFICATION END.
+// @codingStandardsIgnoreStart
 /* ORIGINAL START.
 $templatecontext['flatnavigation'] = $nav;
 ORIGINAL END. */
+// @codingStandardsIgnoreEnd
 
 $templatecontext['firstcollectionlabel'] = $nav->get_collectionlabel();
 
@@ -191,6 +193,8 @@ require_once(__DIR__ . '/includes/footnote.php');
 // Render columns2.mustache from boost_campus.
 echo $OUTPUT->render_from_template('theme_boost_campus/columns2', $templatecontext);
 // MODIFICATION END.
+// @codingStandardsIgnoreStart
 /* ORIGINAL START.
 echo $OUTPUT->render_from_template('theme_boost/columns2', $templatecontext);
 ORIGINAL END. */
+// @codingStandardsIgnoreEnd

@@ -21,7 +21,7 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-define(['jquery', 'core/str'], function($, str) {
+define(['jquery', 'core/str', 'core/notification'], function($, str, Notification) {
     "use strict";
 
     /**
@@ -29,7 +29,10 @@ define(['jquery', 'core/str'], function($, str) {
      */
     function initBackToTop() {
         // Get the string backtotop from language file.
-        str.get_string('backtotop', 'theme_boost_campus').then(function(string) {
+        var stringsPromise = str.get_string('backtotop', 'theme_boost_campus');
+
+        // Add backtotop button to DOM and add scroll and click handlers.
+        $.when(stringsPromise).then(function(string) {
             // Add a fontawesome icon after the footer as the back to top button.
             $('#page-footer').after('<i class="fa fa-chevron-up fa-2x d-print-none"' +
                 'id="back-to-top" aria-label="' + string + '"></i>');
@@ -49,7 +52,9 @@ define(['jquery', 'core/str'], function($, str) {
                 event.preventDefault();
                 $('html, body').animate({scrollTop: 0}, 500);
             });
-        });
+
+            return true;
+        }).fail(Notification.exception);
     }
 
     return {

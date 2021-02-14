@@ -24,11 +24,13 @@
         "activitynode": {
             "text": "Root of menu",
             "key": "test0",
+            "action": "https://mymoodle.org/action",
             "display": true,
             "children": [
                 {
                     "text": "Child of menu",
                     "key": "test1",
+                    "action": "https://mymoodle.org/action",
                     "display": true,
                     "children": []
                 }
@@ -43,8 +45,7 @@
     * Removed check for !is_short_branch to display all children of the course settings within an own tab.
 }}
 
-<div id="boost-campus-activity-settings" class="card" >
-    <h2>{{incourse_activitynode_heading}}</h2>
+<div id="boost-campus-activity-settings" class="card">
     <div class="mx-2 pt-2">
         <ul class="nav nav-tabs" role="tablist">
         <!-- First the top most activitynode and immediate children -->

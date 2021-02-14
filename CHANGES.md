@@ -6,6 +6,7 @@ Changes
 
 ### Unreleased
 
+* 2021-02-05 - Bugfix: Moodle core Back-to-top button was not clickable over Boost Campus footer
 * 2021-02-05 - Move Moodle Plugin CI from Travis CI to Github actions
 
 ### Release v3.10-r2

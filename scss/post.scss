@@ -930,7 +930,14 @@ a[href^="mailto"]::before {
   Additional Elements
   -------------------------------------*/
 
-/* Back to top button */
+/* Moodle Core Back to top button */
+body.scrolled #goto-top-link {
+    /* For unknown reasons, the Moodle Core Back to top button is made unclickable by the Boost Campus footer.
+       We fix this by simply raising the z-index of the button. */
+    z-index: $zindex-tooltip;
+}
+
+/* Boost Campus Back to top button */
 #back-to-top {
     display: none;
     position: fixed;

@@ -4,6 +4,9 @@ moodle-theme_boost_campus
 Changes
 -------
 
+### Unreleased
+
+* 2021-02-05 - Move Moodle Plugin CI from Travis CI to Github actions
 
 ### Release v3.9-r5
 

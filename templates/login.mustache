@@ -19,33 +19,36 @@
 
     Login page template
 
+    Context variables required for this template:
+    * pagebottomelements - HTML for all additional layout elements: the footnote.
+    * timedinfobannershowonselectedpage - true if the time controlled info banner should be displayed.
+    * timedetualinfobannercontent - The content that should be shown in the time controled information banner.
+    * timedetualinfobannercssclass - The Bootstrap class that is used for the time controlled info banner.
+    * perpinfobannershowonselectedpage - true if the info banner should be displayed.
+    * perpibcontent - The content that should be shown in the information banner.
+    * perpibcss - The Bootstrap class that is used for the info banner.
+
     Example context (json):
     {
         "output": {
             "doctype": "<!DOCTYPE html>",
             "page_title": "Login page",
             "favicon": "favicon.ico",
-            "main_content": "<h1>Headers keep HTML validators happy</h1>",
-            "timedinfobannershowonselectedpage":true,
-            "timedibcontent": "This is a test content for perpetual info banner.",
-            "timedibcss": danger,
-            "perpinfobannershowonselectedpage": true,
-            "perpibcontent": "This is a test content.",
-            "perpibcss": primary,
-            "perpibdismiss": true
-        }
-        * pagebottomelements - HTML for all additional layout elements: the footnote.
-        * timedinfobannershowonselectedpage - true if the time controlled info banner should be displayed.
-        * timedetualinfobannercontent - The content that should be shown in the time controled information banner.
-        * timedetualinfobannercssclass - The Bootstrap class that is used for the time controlled info banner.
-        * perpinfobannershowonselectedpage - true if the info banner should be displayed.
-        * perpibcontent - The content that should be shown in the information banner.
-        * perpibcss - The Bootstrap class that is used for the info banner.
+            "main_content": "<h1>Headers keep HTML validators happy</h1>"
+        },
+        "timedinfobannershowonselectedpage": true,
+        "timedibcontent": "This is a test content for timed info banner.",
+        "timedibcss": "danger",
+        "perpinfobannershowonselectedpage": true,
+        "perpibcontent": "This is a test content for perpetual info banner.",
+        "perpibcss": "primary",
+        "perpibdismiss": true
     }
 }}
 {{! MODIFICATION:
     * Add own additional layout elements: the footnote.
     * Added the possibility to show information banners.
+    * Added the login background image text elements.
 }}
 {{> theme_boost/head }}
 
@@ -102,7 +105,6 @@
     </footer>
     {{> theme_boost_campus/footnote }}
 </div>
-
 
 </body>
 </html>

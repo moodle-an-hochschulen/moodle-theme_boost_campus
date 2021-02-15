@@ -10,12 +10,12 @@ Changes
 * 2021-02-05 - Bugfix: Moodle core Back-to-top button was not clickable over Boost Campus footer
 * 2021-02-05 - Move Moodle Plugin CI from Travis CI to Github actions
 
-### Release v3.10-r2
+### v3.10-r2
 
 * 2021-01-14 - Improvement: Add option to output the information banner without any particular Bootstrap color.
 * 2021-01-14 - Bugfix: The infobanner should not clean the entered HTML code too strictly.
 
-### Release v3.10-r1
+### v3.10-r1
 
 * 2020-11-28 - Adjusted occurrences of the .row-fluid grid class to .row after the BS4Alpha compatibility layer has been removed in theme Boost core.
 * 2020-11-28 - Adjusted SCSS brand color and gray color variables after the BS4Alpha compatibility layer has been removed in theme Boost core.
@@ -28,15 +28,15 @@ Changes
                Bugfixes are backported to the LTS release. However, new features and improvements are not necessarily backported to the LTS release.
 * 2020-11-18 - Improvement: Declare which major stable version of Moodle this plugin supports (see MDL-59562 for details).
 
-### Release v3.9-r3
+### v3.9-r3
 
 * 2020-11-18 - Bugfix: Fixed another regression when showing description border for restricted activities.
 
-### Release v3.9-r2
+### v3.9-r2
 
 * 2020-11-17 - Bugfix: Dashboard columns did not collapse correctly when blockcolumnwidthdashboard != blockcolumnwidth.
 
-### Release v3.9-r1
+### v3.9-r1
 
 * 2020-09-30 - Adjusted settings.php due to upstream changes in theme Boost settings.
 * 2020-09-28 - Added setting to be able to enable the initial Boost Campus back to top button instead of the new Boost Go to top button.
@@ -52,16 +52,16 @@ Changes
                Many thanks to @christianwolters for providing this fix.
 * 2020-09-02 - Prepare compatibility for Moodle 3.9.
 
-### Release v3.8-r5
+### v3.8-r5
 
 * 2020-09-01 - Fixed bug that multiple imagearea rows are displayed dependent on the amount of uploaded images.
 
-### Release v3.8-r4
+### v3.8-r4
 
 * 2020-08-27 - Fixed bug in image area feature if link attribute was left empty.
 * 2020-08-27 - Fixed regression for commit Added rule to show description border for all users for restricted activities.
 
-### Release v3.8-r3
+### v3.8-r3
 
 * 2020-08-26 - Removed nasty hack in Behat tests as it is not needed anymore.
 * 2020-08-25 - Changed calling of footer and footnote layouts to fix behat issues.
@@ -76,7 +76,7 @@ Changes
 * 2020-08-05 - Added settings to be able to show a banner with information on selected pages.
                PLEASE NOTE: For all scenarios to pass, the Moodle version 3.8.4+ (Build: 2019111804) is needed.
 
-### Release v3.8-r2
+### v3.8-r2
 
 * 2020-06-22 - Improved SCSS settings to be used with admin_setting_scsscode that validates the code before saving.
 * 2020-06-08 - Adjusted post.scss due to upstream changes in theme Boost.
@@ -85,7 +85,7 @@ Changes
 * 2020-06-04 - Adjusted columns2.mustache template due to upstream changes in theme Boost.
 * 2020-06-04 - Making Travis happy again.
 
-### Release v3.8-r1
+### v3.8-r1
 
 * 2020-03-24 - Changed setting imageareaitemslink to imageareaitemsattributes to be able to add alt text to the images.
 * 2020-03-10 - Fixed accessibility issues with in-course settings.
@@ -96,7 +96,7 @@ Changes
 * 2020-03-05 - Adjusted columns2.mustache template due to upstream changes in theme Boost.
 * 2020-03-05 - Prepare compatibility for Moodle 3.8.
 
-### Release v3.7-r4
+### v3.7-r4
 
 * 2020-02-11 - Re-ordered in course course settings to be displayed within the course header.
 * 2020-02-07 - Added missing information to README.md for the changes to the activity navigation links.
@@ -108,7 +108,7 @@ Changes
 * 2019-12-17 - Fixed bug for the selection of block regions when 2 block columns in footer are enabled.
 * 2019-11-29 - Moved the variable output.standard_end_of_body_html from footer.mustache to solve Javascript issues with behat tests.
 
-### Release v3.7-r3
+### v3.7-r3
 
 * 2019-11-13 - Improved Video JS Skin for hiding big play button in audio players and removed centered placement of this button in SCSS.
                IMPORTANT NOTE for ADMINS: If you want the button to be centered again, please add the class "vjs-big-play-centered"
@@ -122,12 +122,12 @@ Changes
 * 2019-10-28 - Adjusted function favicon() in core_renderer.php due to upstream changes in Moodle core.
 * 2019-10-28 - Removed CSS rule for maintenance warning due to upstream changes.
 
-### Release v3.7-r2
+### v3.7-r2
 
 * 2019-06-21 - Removed SCSS fix because MDL-61319 has now been fixed and integrated.
 * 2019-06-11 - Added hide_if function to suitable admin setting incoursesettingsswitchtoroleposition and corrected README.md.
 
-### Release v3.7-r1
+### v3.7-r1
 
 * 2019-06-04 - Further formal changes to the course_renderer to be constistent with Moodle core.
 * 2019-06-04 - Adjusted function coursecat_coursebox() in course_renderer.php due to upstream changes in theme Boost.
@@ -144,7 +144,7 @@ Changes
 * 2019-05-31 - Fixed referencing of renderers due to upstream changes in theme Boost.
 * 2019-05-31 - Prepare compatibility for Moodle 3.7.
 
-### Release v3.6-r5
+### v3.6-r5
 
 * 2019-05-29 - Check existence of property blockcolumnwidth before accessing it.
 * 2019-05-29 - Login background image did not fill the page completely when browser window was really low but really wide.
@@ -153,13 +153,13 @@ Changes
 * 2019-05-03 - Added a setting to be able to add texts to your uploaded background images for the login page.
 * 2019-05-02 - Added setting to be able to add additional resources to the theme.
 
-### Release v3.6-r4
+### v3.6-r4
 
 * 2019-04-26 - Fixed some fixable prechecker warnings.
 * 2019-04-26 - Updated README.md, because a change was removed due tu upstream changes.
 * 2019-04-25 - Fixed bug in the change to increase the number of uploadable login background images.
 
-### Release v3.6-r3
+### v3.6-r3
 
 * 2019-04-16 - Add the possibility to set the block column width on the Dashboard and all other pages.
 * 2019-04-16 - Fixed template paths in mustache templates.
@@ -170,12 +170,12 @@ Changes
 * 2019-04-15 - Adjusted function context_header_settings_menu() due to upstream changes in theme Boost.
 * 2019-04-15 - Added source information to all overridden renderers.
 
-### Release v3.6-r2
+### v3.6-r2
 
 * 2019-02-13 - Added source information to renderers that are overridden from core directly.
 * 2019-02-07 - Adjusted function coursecat_coursebox to upstream changes in Moodle core.
 
-### Release v3.6-r1
+### v3.6-r1
 
 * 2019-01-31 - Deleted now non matching rule in post.scss.
 * 2019-01-31 - Adjusted styles due to upstream SCSS changes in Boost.
@@ -189,7 +189,7 @@ Changes
 * 2019-01-24 - Adjusted function render_login due to upstream changes in theme Boost.
 * 2018-01-24 - Check compatibility for Moodle 3.6, no functionality change.
 
-### Release v3.5-r5
+### v3.5-r5
 
 * 2018-01-23 - Remove unnecessary double border and padding around blocks in main column on Dashboard.
 * 2018-01-23 - Improved whitespaces on small screens to show more of the course content.
@@ -199,7 +199,7 @@ Changes
 * 2018-12-18 - Adding 'both' option for 'Switch to role…' menu fixes - Many thanks to Luca Bösch (lucaboesch) for his proposal and main work on this!
 * 2018-12-17 - Setting to change the breakpoint for smaller screens.
 
-### Release v3.5-r4
+### v3.5-r4
 
 * 2018-12-12 - Bugfix: Improved font size for all modal help text dialogues.
 * 2018-12-12 - Adjusted navbar.mustache template due to upstream changes in MDL-62145.
@@ -207,11 +207,11 @@ Changes
 * 2018-12-04 - Bugfix: body and html tags were closed before additional layout elements were added.
 * 2018-12-04 - Changed travis.yml due to upstream changes.
 
-### Release v3.5-r3
+### v3.5-r3
 
 * 2018-11-26 - Fixed broken login functionality caused by Moodle security patch (see MDL-63183).
 
-### Release v3.5-r2
+### v3.5-r2
 
 * 2018-07-31 - Fixed bug in function theme_boost_campus_process_flatnav.
 * 2018-07-31 - Removed deprecated.txt file because it is unnecessary.
@@ -223,7 +223,7 @@ Changes
 * 2018-06-15 - Minor fix to the user menu displaying if switch role is moved to course menu.
 * 2018-06-12 - Added Video JS skin that fits to the brand color.
 
-### Release v3.5-r1
+### v3.5-r1
 
 * 2018-05-23 - Improved footer blocks feature to only use the chosen columns as the region in the config.
 * 2018-05-17 - Fixed section0title setting.
@@ -241,26 +241,26 @@ Changes
 * 2018-05-14 - Changed used SCSS variable name due to renaming of variables by Moodle.
 * 2018-05-14 - Check compatibility for Moodle 3.5, no functionality change.
 
-### Release v3.4-r5
+### v3.4-r5
 
 * 2018-05-17 - Add missing PHPDoc to make codechecker happier.
 * 2018-05-16 - Implement Privacy API.
 * 2018-04-25 - Removed build_action_menu_from_navigation in core_renderer as MDL-58174 is integrated.
 * 2018-04-25 - Fixed bug with accessing courses with guest login. Thanks to Benedikt Schneider for reporting and pointing to the solution.
 
-### Release v3.4-r4
+### v3.4-r4
 
 * 2018-03-02 - Removed introduced get_extra_scss callbak again due to doubled CSS code.
 * 2018-03-02 - Removed border-radius for all nav-drawer items.
 * 2018-03-01 - Re-added (empty) pre.scss due to problems with child themes.
 * 2018-03-01 - Further fixes to footer SCSS due to changes in Moodle core.
 
-### Release v3.4-r3
+### v3.4-r3
 
 * 2018-02-27 - Fixed bug in improved flat_navigation.mustache.
 * 2018-02-27 - Fixed small bug in boostnavigation SCSS code.
 
-### Release v3.4-r2
+### v3.4-r2
 
 * 2018-02-27 - Correction to README.md due to the changes for the nav drawer design changes.
 * 2018-02-25 - Simplify the borders between the nav drawer nodes, all borders are now simply solid again. Thanks for understanding.
@@ -272,7 +272,7 @@ Changes
 * 2018-02-21 - Further improvement of nav drawer SCSS section.
 * 2018-02-21 - Implemented get_extra_scss function.
 
-### Release v3.4-r1
+### v3.4-r1
 
 * 2018-02-19 - Setting to show a hint when a user is guest accessing a course.
 * 2018-02-14 - Improved icon positions in the course category tree.
@@ -291,19 +291,19 @@ Changes
 * 2018-02-08 - Necessary changes because of renaming core/login.mustache to core/loginform.mustache.
 * 2018-02-08 - Prepare compatibility for Moodle 3.4, no functionality change.
 
-### Release v3.3-r3
+### v3.3-r3
 
 * 2018-02-07 - Fixed structure of image area to prevent applying the link hover style.
 * 2018-02-05 - Improvements to feature 'Show hint in hidden courses'.
 * 2018-02-05 - Improvement site name color in dark navbar style with uploaded logo.
 
-### Release v3.3-r2
+### v3.3-r2
 
 * 2018-01-31 - Improved design of "Switched role to" infobox.
 * 2018-01-30 - Added CSS rules for .fa-pull-left/right because of a core bug (MDL-61319)
 * 2018-01-29 - Setting to show a hint in hidden courses.
 
-### Release v3.3-r1
+### v3.3-r1
 
 * 2017-12-05 - Deleted availability improvements because Boost uses labels now.
 * 2017-12-05 - Changed SCSS rules due to changed navbar icon structure.
@@ -314,7 +314,7 @@ Changes
 * 2017-12-05 - Improved design of in course settings slightly.
 * 2018-01-16 - Prepare compatibility for Moodle 3.3, no functionality change.
 
-### Release v3.2-r7
+### v3.2-r7
 
 * 2018-01-15 - Setting to be able to remove the footer on the login page.
 * 2018-01-15 - Fixed bug for setting incoursesettingsswitchedrole without showsettingsincourse enabled.
@@ -323,32 +323,32 @@ Changes
 * 2018-01-11 - Fixed bug in the hierarchical displaying of lists within the course.
 * 2017-12-05 - Added Workaround to travis.yml for fixing Behat tests with TravisCI.
 
-### Release v3.2-r6
+### v3.2-r6
 
 * 2017-11-17 - Extended the behaviour of the setting "showsettingsincourse" to respect activities and resources menus, too. Please check this setting due to the new scope.
 * 2017-11-09 - Replaced the settings icon with a edit profile button on the profile page.
 * 2017-11-07 - Updated travis.yml to use newer node version for fixing TravisCI error.
 * 2017-10-17 - Minor change in SCSS to fit the borders of the current section in the periods format into the section.
 
-### Release v3.2-r5
+### v3.2-r5
 
 * 2017-10-16 - Improved catching shortcuts feature again to prevent catching when editable content is focused.
 
-### Release v3.2-r4
+### v3.2-r4
 
 * 2017-09-25 - Improved catching shortcuts feature to prevent the catching when form elements are focused.
 * 2017-09-22 - Check if user is logged in before showing the switched role information box.
 
-### Release v3.2-r3
+### v3.2-r3
 
 * 2017-09-19 - Changed naming of the former badgearea setting to imagearea to prevent mixing up with Moodle badges.
 * 2017-09-15 - Improving displaying of calendar block events popup panel.
 
-### Release v3.2-r2
+### v3.2-r2
 
 * 2017-09-12 - Making code checkers happy.
 
-### Release v3.2-r1
+### v3.2-r1
 
 * 2017-09-01 - Setting to move the 'Switch role to...' menu item to the course settings.
 * 2017-08-28 - Expose navigation node properties in the boost flat navigation (Backport of MDL-59425).

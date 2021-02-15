@@ -4,7 +4,7 @@ moodle-theme_boost_campus
 Changes
 -------
 
-### Unreleased
+### v3.9-r6
 
 * 2021-02-05 - Improvement: Add missing catch branch in Back-to-top button JS
 * 2021-02-05 - Bugfix: Moodle core Back-to-top button was not clickable over Boost Campus footer

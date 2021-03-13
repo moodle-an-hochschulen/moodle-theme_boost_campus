@@ -6,6 +6,7 @@ Changes
 
 ### Unreleased
 
+* 2021-03-13 - Make Behat tests functional again on Github Actions.
 * 2021-03-13 - Bugfix: Unrestricted self enrolment hint did not respect existing but disabled enrolment instances.
 
 ### v3.10-r3

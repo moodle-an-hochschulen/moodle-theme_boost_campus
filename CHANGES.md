@@ -4,6 +4,10 @@ moodle-theme_boost_campus
 Changes
 -------
 
+### Unreleased
+
+* 2021-03-13 - Bugfix: Unrestricted self enrolment hint did not respect existing but disabled enrolment instances.
+
 ### v3.10-r3
 
 * 2021-02-05 - Improvement: Add missing catch branch in Back-to-top button JS

@@ -257,7 +257,11 @@ class core_renderer extends \core_renderer {
             // Get the active enrol instances for this course.
             $enrolinstances = enrol_get_instances($COURSE->id, true);
             foreach ($enrolinstances as $instance) {
-                if ($instance->enrol == 'self' && empty($instance->password) && empty($instance->enrolenddate)) {
+                // Check if unrestricted self enrolment is possible.
+                $now = (new \DateTime("now", \core_date::get_server_timezone_object()))->getTimestamp();
+                if ($instance->enrol == 'self' && empty($instance->password) && $instance->customint6 == 1 &&
+                        (empty($instance->enrolenddate) || $instance->enrolenddate > $now) &&
+                        (empty($instance->enrolstartdate) || $instance->enrolstartdate < $now)) {
                     if (empty($instance->name)) {
                         $selfenrolinstances[$instance->id] = get_string('pluginname', 'enrol_self') .
                                 " (" . get_string('defaultcoursestudent', 'core') . ")";

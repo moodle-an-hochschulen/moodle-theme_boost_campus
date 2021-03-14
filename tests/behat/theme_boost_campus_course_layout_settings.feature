@@ -197,76 +197,120 @@ Feature: Configuring the theme_boost_campus plugin for the "Course Layout settin
     And I set the following fields to these values:
       | id_enrolstartdate_enabled | 0             |
       | id_enrolenddate_enabled   | 1             |
-      | id_enrolenddate           | ##yesterday## |
+    # We can't use the ##yesterday## notation here.
+      | id_enrolenddate_day       | 1             |
+      | id_enrolenddate_month     | January       |
+      | id_enrolenddate_year      | 2019          |
+      | id_enrolenddate_hour      | 00            |
+      | id_enrolenddate_minute    | 00            |
     And I press "Save changes"
     And I am on "Course 1" course homepage
     Then I should not see "This course is currently visible and an unrestricted self enrolment is active: \"Self enrolment (Student)\""
     And ".course-selfenrol-infobox" "css_element" should not exist
-
     When I navigate to "Users > Enrolment methods" in current page administration
     And I click on "Edit" "link" in the "Self enrolment (Student)" "table_row"
     And I set the following fields to these values:
-      | id_enrolstartdate_enabled | 0            |
-      | id_enrolenddate_enabled   | 1            |
-      | id_enrolenddate           | ##tomorrow## |
+      | id_enrolstartdate_enabled | 0             |
+      | id_enrolenddate_enabled   | 1             |
+    # We can't use the ##tomorrow## notation here. This test will break in the year 2050.
+      | id_enrolenddate_day       | 1             |
+      | id_enrolenddate_month     | January       |
+      | id_enrolenddate_year      | 2050          |
+      | id_enrolenddate_hour      | 00            |
+      | id_enrolenddate_minute    | 00            |
     And I press "Save changes"
     And I am on "Course 1" course homepage
     Then I should see "This course is currently visible and an unrestricted self enrolment is active: \"Self enrolment (Student)\"."
     And ".course-selfenrol-infobox" "css_element" should exist
-
     When I navigate to "Users > Enrolment methods" in current page administration
     And I click on "Edit" "link" in the "Self enrolment (Student)" "table_row"
     And I set the following fields to these values:
       | id_enrolstartdate_enabled | 1             |
-      | id_enrolstartdate         | ##yesterday## |
+    # We can't use the ##yesterday## notation here.
+      | id_enrolstartdate_day     | 1             |
+      | id_enrolstartdate_month   | January       |
+      | id_enrolstartdate_year    | 2019          |
+      | id_enrolstartdate_hour    | 00            |
+      | id_enrolstartdate_minute  | 00            |
       | id_enrolenddate_enabled   | 0             |
     And I press "Save changes"
     And I am on "Course 1" course homepage
     Then I should see "This course is currently visible and an unrestricted self enrolment is active: \"Self enrolment (Student)\"."
     And ".course-selfenrol-infobox" "css_element" should exist
-
-    When I navigate to "Users > Enrolment methods" in current page administration
-    And I click on "Edit" "link" in the "Self enrolment (Student)" "table_row"
-    And I set the following fields to these values:
-      | id_enrolstartdate_enabled | 1            |
-      | id_enrolstartdate         | ##tomorrow## |
-      | id_enrolenddate_enabled   | 0            |
-    And I press "Save changes"
-    And I am on "Course 1" course homepage
-    Then I should not see "This course is currently visible and an unrestricted self enrolment is active: \"Self enrolment (Student)\"."
-    And ".course-selfenrol-infobox" "css_element" should not exist
-
-    When I navigate to "Users > Enrolment methods" in current page administration
-    And I click on "Edit" "link" in the "Self enrolment (Student)" "table_row"
-    And I set the following fields to these values:
-      | id_enrolstartdate_enabled | 1                     |
-      | id_enrolstartdate         | ##Monday next week##  |
-      | id_enrolenddate_enabled   | 1                     |
-      | id_enrolenddate           | ##Tuesday next week## |
-    And I press "Save changes"
-    And I am on "Course 1" course homepage
-    Then I should not see "This course is currently visible and an unrestricted self enrolment is active: \"Self enrolment (Student)\"."
-    And ".course-selfenrol-infobox" "css_element" should not exist
-
     When I navigate to "Users > Enrolment methods" in current page administration
     And I click on "Edit" "link" in the "Self enrolment (Student)" "table_row"
     And I set the following fields to these values:
       | id_enrolstartdate_enabled | 1             |
-      | id_enrolstartdate         | ##yesterday## |
+    # We can't use the ##tomorrow## notation here. This test will break in the year 2050.
+      | id_enrolstartdate_day     | 1             |
+      | id_enrolstartdate_month   | January       |
+      | id_enrolstartdate_year    | 2050          |
+      | id_enrolstartdate_hour    | 00            |
+      | id_enrolstartdate_minute  | 00            |
+      | id_enrolenddate_enabled   | 0             |
+    And I press "Save changes"
+    And I am on "Course 1" course homepage
+    Then I should not see "This course is currently visible and an unrestricted self enrolment is active: \"Self enrolment (Student)\"."
+    And ".course-selfenrol-infobox" "css_element" should not exist
+    When I navigate to "Users > Enrolment methods" in current page administration
+    And I click on "Edit" "link" in the "Self enrolment (Student)" "table_row"
+    And I set the following fields to these values:
+      | id_enrolstartdate_enabled | 1             |
+    # We can't use the ##Monday next week## notation here. This test will break in the year 2050.
+      | id_enrolstartdate_day     | 1             |
+      | id_enrolstartdate_month   | January       |
+      | id_enrolstartdate_year    | 2050          |
+      | id_enrolstartdate_hour    | 00            |
+      | id_enrolstartdate_minute  | 00            |
       | id_enrolenddate_enabled   | 1             |
-      | id_enrolenddate           | ##tomorrow##  |
+    # We can't use the ##Tuesday next week## notation here. This test will break in the year 2050.
+      | id_enrolenddate_day       | 2             |
+      | id_enrolenddate_month     | January       |
+      | id_enrolenddate_year      | 2050          |
+      | id_enrolenddate_hour      | 00            |
+      | id_enrolenddate_minute    | 00            |
+    And I press "Save changes"
+    And I am on "Course 1" course homepage
+    Then I should not see "This course is currently visible and an unrestricted self enrolment is active: \"Self enrolment (Student)\"."
+    And ".course-selfenrol-infobox" "css_element" should not exist
+    When I navigate to "Users > Enrolment methods" in current page administration
+    And I click on "Edit" "link" in the "Self enrolment (Student)" "table_row"
+    And I set the following fields to these values:
+      | id_enrolstartdate_enabled | 1             |
+    # We can't use the ##yesterday## notation here.
+      | id_enrolstartdate_day     | 1             |
+      | id_enrolstartdate_month   | January       |
+      | id_enrolstartdate_year    | 2019          |
+      | id_enrolstartdate_hour    | 00            |
+      | id_enrolstartdate_minute  | 00            |
+      | id_enrolenddate_enabled   | 1             |
+    # We can't use the ##tomorrow## notation here. This test will break in the year 2050.
+      | id_enrolenddate_day       | 1             |
+      | id_enrolenddate_month     | January       |
+      | id_enrolenddate_year      | 2050          |
+      | id_enrolenddate_hour      | 00            |
+      | id_enrolenddate_minute    | 00            |
     And I press "Save changes"
     And I am on "Course 1" course homepage
     Then I should see "This course is currently visible and an unrestricted self enrolment is active: \"Self enrolment (Student)\"."
     And ".course-selfenrol-infobox" "css_element" should exist
-
     When I navigate to "Users > Enrolment methods" in current page administration
     And I click on "Edit" "link" in the "Self enrolment (Student)" "table_row"
     And I set the following fields to these values:
-      | id_enrolstartdate_enabled | 1              |
-      | id_enrolstartdate         | ##3 days ago## |
-      | id_enrolenddate_enabled   | 1              |
-      | id_enrolenddate           | ##2 days ago## |
+      | id_enrolstartdate_enabled | 1             |
+    # We can't use the ##3 days ago## notation here.
+      | id_enrolstartdate_day     | 1             |
+      | id_enrolstartdate_month   | January       |
+      | id_enrolstartdate_year    | 2018          |
+      | id_enrolstartdate_hour    | 00            |
+      | id_enrolstartdate_minute  | 00            |
+      | id_enrolenddate_enabled   | 1             |
+    # We can't use the ##2 days ago## notation here.
+      | id_enrolenddate_day       | 1             |
+      | id_enrolenddate_month     | January       |
+      | id_enrolenddate_year      | 2019          |
+      | id_enrolenddate_hour      | 00            |
+      | id_enrolenddate_minute    | 00            |
     And I press "Save changes"
     And I am on "Course 1" course homepage
     Then I should not see "This course is currently visible and an unrestricted self enrolment is active: \"Self enrolment (Student)\"."

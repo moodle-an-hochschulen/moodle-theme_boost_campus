@@ -1044,6 +1044,12 @@ body.scrolled #goto-top-link {
 
 @if variable-exists(helptextmodal) {
     @if $helptextmodal == 'yes' {
+
+        th .boost-campus-modal-help-dialog .modal-body {
+            text-align: left;
+            font-weight: $font-weight-base;
+        }
+
         .modal {
             /* Set font-size to normal size as the modals inherit the font size from the element they are placed in.
              * This is not intended and so we force the font size to be the normal size. */

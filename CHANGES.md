@@ -6,6 +6,7 @@ Changes
 
 ### Unreleased
 
+* 2021-04-11 - Fix Behat test for random login background image
 * 2021-03-14 - Fix Behat test for unrestricted self enrolment hint
 
 ### v3.10-r4

@@ -26,7 +26,10 @@ Feature: Configuring the theme_boost_campus plugin for the "Design Settings" tab
     And I press "Save changes"
     And I log out
     And I click on "Log in" "link"
-    Then the "class" attribute of "body" "css_element" should contain "loginbackgroundimage1"
+    And I am on homepage
+    And I click on "Log in" "link" in the ".logininfo" "css_element"
+    Then the "class" attribute of "body" "css_element" should contain "path-login"
+    And the "class" attribute of "body" "css_element" should contain "loginbackgroundimage1"
 
   # Dependent on setting "Use Login page background images"
   @javascript @_file_upload
@@ -39,7 +42,10 @@ Feature: Configuring the theme_boost_campus plugin for the "Design Settings" tab
     And I press "Save changes"
     And I log out
     And I click on "Log in" "link"
-    Then I should see "Copyright by SplitShire on pexels.com" in the "#loginbackgroundimagetext" "css_element"
+    And I am on homepage
+    And I click on "Log in" "link" in the ".logininfo" "css_element"
+    Then the "class" attribute of "body" "css_element" should contain "path-login"
+    And I should see "Copyright by SplitShire on pexels.com" in the "#loginbackgroundimagetext" "css_element"
 
   # This is not testable with Behat
   # Scenario: Enable "Login form"

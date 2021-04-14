@@ -215,13 +215,19 @@ class core_renderer extends \core_renderer {
                 && $this->page->url->compare(new moodle_url('/course/view.php'), URL_MATCH_BASE)
                 && $COURSE->visible == false) {
             $html .= html_writer::start_tag('div', array('class' => 'course-hidden-infobox alert alert-warning'));
-            $html .= html_writer::tag('i', null, array('class' => 'fa fa-exclamation-circle fa-3x fa-pull-left'));
+            $html .= html_writer::start_tag('div', array('class' => 'media'));
+            $html .= html_writer::start_tag('div', array('class' => 'mr-3 icon-size-5'));
+            $html .= html_writer::tag('i', null, array('class' => 'fa fa-exclamation-circle fa-3x'));
+            $html .= html_writer::end_tag('div');
+            $html .= html_writer::start_tag('div', array('class' => 'media-body align-self-center'));
             $html .= get_string('showhintcoursehiddengeneral', 'theme_boost_campus', $COURSE->id);
             // If the user has the capability to change the course settings, an additional link to the course settings is shown.
             if (has_capability('moodle/course:update', context_course::instance($COURSE->id))) {
                 $html .= html_writer::tag('div', get_string('showhintcoursehiddensettingslink',
                     'theme_boost_campus', array('url' => $CFG->wwwroot.'/course/edit.php?id='. $COURSE->id)));
             }
+            $html .= html_writer::end_tag('div');
+            $html .= html_writer::end_tag('div');
             $html .= html_writer::end_tag('div');
         }
         // MODIFICATION END.
@@ -237,10 +243,16 @@ class core_renderer extends \core_renderer {
             && $this->page->url->compare(new moodle_url('/course/view.php'), URL_MATCH_BASE)
             && !is_role_switched($COURSE->id)) {
             $html .= html_writer::start_tag('div', array('class' => 'course-guestaccess-infobox alert alert-warning'));
-            $html .= html_writer::tag('i', null, array('class' => 'fa fa-exclamation-circle fa-3x fa-pull-left'));
+            $html .= html_writer::start_tag('div', array('class' => 'media'));
+            $html .= html_writer::start_tag('div', array('class' => 'mr-3 icon-size-5'));
+            $html .= html_writer::tag('i', null, array('class' => 'fa fa-exclamation-circle fa-3x'));
+            $html .= html_writer::end_tag('div');
+            $html .= html_writer::start_tag('div', array('class' => 'media-body align-self-center'));
             $html .= get_string('showhintcourseguestaccessgeneral', 'theme_boost_campus',
                 array('role' => role_get_name(get_guest_role())));
             $html .= theme_boost_campus_get_course_guest_access_hint($COURSE->id);
+            $html .= html_writer::end_tag('div');
+            $html .= html_writer::end_tag('div');
             $html .= html_writer::end_tag('div');
         }
         // MODIFICATION END.
@@ -330,7 +342,11 @@ class core_renderer extends \core_renderer {
                     ($selfenrolmentpossiblecurrently == true || $selfenrolmentpossiblefuture == true)) {
                 // Start hint box.
                 $html .= html_writer::start_tag('div', array('class' => 'course-selfenrol-infobox alert alert-info'));
-                $html .= html_writer::tag('i', null, array('class' => 'fa fa-sign-in fa-3x fa-pull-left'));
+                $html .= html_writer::start_tag('div', array('class' => 'media'));
+                $html .= html_writer::start_tag('div', array('class' => 'mr-3 icon-size-5'));
+                $html .= html_writer::tag('i', null, array('class' => 'fa fa-sign-in fa-3x'));
+                $html .= html_writer::end_tag('div');
+                $html .= html_writer::start_tag('div', array('class' => 'media-body align-self-center'));
 
                 // Show the start of the hint depending on the fact if enrolment is already possible currently or
                 // will be in the future.
@@ -390,6 +406,8 @@ class core_renderer extends \core_renderer {
 
                 // End hint box.
                 $html .= html_writer::end_tag('div');
+                $html .= html_writer::end_tag('div');
+                $html .= html_writer::end_tag('div');
             }
         }
         // MODIFICATION END.
@@ -409,7 +427,11 @@ class core_renderer extends \core_renderer {
                     array('id'        => $COURSE->id, 'sesskey' => sesskey(), 'switchrole' => 0,
                           'returnurl' => $this->page->url->out_as_local_url(false)));
                 $html .= html_writer::start_tag('div', array('class' => 'switched-role-infobox alert alert-info'));
-                $html .= html_writer::tag('i', null, array('class' => 'fa fa-user-circle fa-3x fa-pull-left'));
+                $html .= html_writer::start_tag('div', array('class' => 'media'));
+                $html .= html_writer::start_tag('div', array('class' => 'mr-3 icon-size-5'));
+                $html .= html_writer::tag('i', null, array('class' => 'fa fa-user-circle fa-3x'));
+                $html .= html_writer::end_tag('div');
+                $html .= html_writer::start_tag('div', array('class' => 'media-body align-self-center'));
                 $html .= html_writer::start_tag('div');
                 $html .= get_string('switchedroleto', 'theme_boost_campus');
                 // Give this a span to be able to address via CSS.
@@ -420,6 +442,8 @@ class core_renderer extends \core_renderer {
                 $html .= html_writer::tag('a', get_string('switchrolereturn', 'core'),
                     array('class' => 'switched-role-backlink', 'href' => $url));
                 $html .= html_writer::end_tag('div'); // Return to normal role link: end div.
+                $html .= html_writer::end_tag('div');
+                $html .= html_writer::end_tag('div');
                 $html .= html_writer::end_tag('div');
             }
         }

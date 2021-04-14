@@ -4,7 +4,7 @@ moodle-theme_boost_campus
 Changes
 -------
 
-### Unreleased
+### v3.9-r8
 
 * 2021-04-14 - Bugfix: Help Icon content in the modal dialog versions sometimes inherited unwanted CSS layout - Credits to @danowar2k
 * 2021-04-14 - Improvement: Improve floating icons in information / hint banners

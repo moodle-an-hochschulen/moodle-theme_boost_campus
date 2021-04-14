@@ -150,9 +150,9 @@ With this setting a hint will appear in the course header as long as the visibil
 
 With this setting a hint will appear in the course header when a user is accessing it with the guest access feature. If the course provides an active self enrolment, a link to that page is also presented to the user.
 
-##### Show hint for unrestricted self enrolment
+##### Show hint for self enrolment without enrolment key
 
-With this setting a hint will appear in the course header when the course is visible and a unrestricted (no enrolment key or end date is set) self enrolment is active.
+With this setting a hint will appear in the course header if the course is visible and an enrolment without enrolment key is currently possible.
 
 #### Course settings
 

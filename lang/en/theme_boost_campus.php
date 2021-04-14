@@ -102,8 +102,8 @@ $string['showhintcoursehiddensetting_desc'] = 'With this setting a hint will app
 $string['showhintcoursguestaccesssetting'] = 'Show hint for guest access';
 $string['showhintcourseguestaccesssetting_desc'] = 'With this setting a hint will appear in the course header when a user is accessing it with the guest access feature. If the course provides an active self enrolment, a link to that page is also presented to the user.';
 // ... Show hint for unrestricted self enrolment.
-$string['showhintcourseselfenrolsetting'] = 'Show hint for unrestricted self enrolment';
-$string['showhintcourseselfenrolsetting_desc'] = 'With this setting a hint will appear in the course header when the course is visible and a unrestricted (no enrolment key or end date is set) self enrolment is active.';
+$string['showhintcourseselfenrolsetting'] = 'Show hint for self enrolment without enrolment key';
+$string['showhintcourseselfenrolsetting_desc'] = 'With this setting a hint will appear in the course header if the course is visible and an enrolment without enrolment key is currently possible.';
 // ...Course settings.
 $string['coursesettingsheadingsetting'] = 'Course settings';
 // ...Show course settings within the course.
@@ -313,9 +313,15 @@ $string['showhintcourseguestaccessgeneral'] = 'You are currently viewing this co
 $string['showhintcourseguestaccesslink'] = 'To have full access to the course, you can <a href="{$a->url}">self enrol into this course</a>.';
 $string['showhintcoursehiddengeneral'] = 'This course is currently <strong>hidden</strong>. Only enrolled teachers can access this course when hidden.';
 $string['showhintcoursehiddensettingslink'] = 'You can change the visibility in the <a href="{$a->url}">course settings</a>.';
-$string['showhintcourseselfenrol'] = 'This course is currently visible and an <strong>unrestricted self enrolment</strong> is active: <strong>"{$a->name}"</strong>. <br/>
-This means, that neither an enrolment key nor a self enrolment end date is set.';
-$string['showhintcourseselfenrollink'] = 'If you don\'t want that any Moodle user can enrol into this course freely, please restrict the settings for this self enrolment instance in the <a href="{$a->url}">enrolment settings</a>.';
+$string['showhintcourseselfenrolstartcurrently'] = 'This course is currently visible and <strong>self enrolment without enrolment key</strong> is currently possible.';
+$string['showhintcourseselfenrolstartfuture'] = 'This course is currently visible and <strong>self enrolment without enrolment key</strong> is planned to become possible.';
+$string['showhintcourseselfenrolunlimited'] = 'The <strong>{$a->name}</strong> enrolment instance allows unrestricted self enrolment infinitely.';
+$string['showhintcourseselfenroluntil'] = 'The <strong>{$a->name}</strong> enrolment instance allows unrestricted self enrolment until {$a->until}.';
+$string['showhintcourseselfenrolfrom'] = 'The <strong>{$a->name}</strong> enrolment instance allows unrestricted self enrolment from {$a->from} on.';
+$string['showhintcourseselfenrolsince'] = 'The <strong>{$a->name}</strong> enrolment instance allows unrestricted self enrolment currently.';
+$string['showhintcourseselfenrolfromuntil'] = 'The <strong>{$a->name}</strong> enrolment instance allows unrestricted self enrolment from {$a->from} until {$a->until}.';
+$string['showhintcourseselfenrolsinceuntil'] = 'The <strong>{$a->name}</strong> enrolment instance allows unrestricted self enrolment until {$a->until}.';
+$string['showhintcourseselfenrolinstancecallforaction'] = 'If you don\'t want that any Moodle user can enrol into this course freely, please restrict the self enrolment settings.';
 $string['switchroleto'] = 'Switch role to';
 $string['yes_close'] = "Yes, close!";
 

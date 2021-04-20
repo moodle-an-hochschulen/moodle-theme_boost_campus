@@ -4,6 +4,10 @@ moodle-theme_boost_campus
 Changes
 -------
 
+### Unreleased
+
+* 2021-04-20 - Adjusted footer.mustache due to upstream changes in theme Boost core (MDL-70173).
+
 ### v3.9-r8
 
 * 2021-04-14 - Bugfix: Help Icon content in the modal dialog versions sometimes inherited unwanted CSS layout - Credits to @danowar2k

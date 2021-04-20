@@ -4,7 +4,7 @@ moodle-theme_boost_campus
 Changes
 -------
 
-### Unreleased
+### v3.10-r6
 
 * 2021-04-20 - Adjusted footer.mustache due to upstream changes in theme Boost core (MDL-70173).
 

@@ -25,6 +25,12 @@ use \context_system;
  */
 class BoostCampusSettings {
 
+    const THEME_NAME = "boost_campus";
+
+    const QUALIFIED_THEME_NAME = "theme_".self::THEME_NAME;
+
+    const RESET_CALLBACK = "theme_reset_all_caches";
+
     const SETTING_PRESET_HEADING = 'presetheading';
 
     const SETTING_PRESET = 'preset';
@@ -55,14 +61,19 @@ class BoostCampusSettings {
 
     const SETTING_BACK_TO_TOP_BUTTON = 'bcbttbutton';
 
+    public static function getQualifiedThemeName() {
+        return "theme_".static::THEME_NAME;
+    }
+
     public static function getPresetHeadingSetting() {
         $name = static::getSettingName(self::SETTING_PRESET_HEADING);
-        $title = get_string('presetheadingsetting', 'theme_boost_campus', null, true);
+        $title = get_string('presetheadingsetting', self::QUALIFIED_THEME_NAME, null, true);
         $setting = new admin_setting_heading($name, $title, null);
         return $setting;
     }
 
-    public static function getPresetSetting($themeName) {
+    public static function getPresetSetting() {
+        $fqThemeName = self::getQualifiedThemeName();
         $name = static::getSettingName(self::SETTING_PRESET);
         $title = get_string('preset', 'theme_boost', null, true);
         $description = get_string('preset_desc', 'theme_boost', null, true);
@@ -73,7 +84,7 @@ class BoostCampusSettings {
         $context = context_system::instance();
         $fs = get_file_storage();
 
-        $files = $fs->get_area_files($context->id, 'theme_'.$themeName, 'preset', 0, 'itemid, filepath, filename', false);
+        $files = $fs->get_area_files($context->id, $fqThemeName, 'preset', 0, 'itemid, filepath, filename', false);
 
         $choices = [];
         foreach ($files as $file) {
@@ -83,8 +94,8 @@ class BoostCampusSettings {
         $choices['default.scss'] = 'default.scss';
         $choices['plain.scss'] = 'plain.scss';
 
-        $setting = new admin_setting_configthemepreset($name, $title, $description, $default, $choices, $themeName);
-        $setting->set_updatedcallback('theme_reset_all_caches');
+        $setting = new admin_setting_configthemepreset($name, $title, $description, $default, $choices, $fqThemeName);
+        $setting->set_updatedcallback(self::RESET_CALLBACK);
         return $setting;
     }
 
@@ -100,7 +111,7 @@ class BoostCampusSettings {
 
     public static function getBrandColorHeadingSetting() {
         $name = static::getSettingName(self::SETTING_BRAND_COLOR_HEADING);
-        $title = get_string('brandcolorheadingsetting', 'theme_boost_campus', null, true);
+        $title = get_string('brandcolorheadingsetting', self::QUALIFIED_THEME_NAME, null, true);
         $setting = new admin_setting_heading($name, $title, null);
         return $setting;
     }
@@ -110,7 +121,7 @@ class BoostCampusSettings {
         $title = get_string('brandcolor', 'theme_boost', null, true);
         $description = get_string('brandcolor_desc', 'theme_boost', null, true);
         $setting = new admin_setting_configcolourpicker($name, $title, $description, '');
-        $setting->set_updatedcallback('theme_reset_all_caches');
+        $setting->set_updatedcallback(self::RESET_CALLBACK);
         return $setting;
     }
 
@@ -119,7 +130,7 @@ class BoostCampusSettings {
         $title = get_string('brandsuccesscolorsetting', 'theme_boost_campus', null, true);
         $description = get_string('brandsuccesscolorsetting_desc', 'theme_boost_campus', null, true);
         $setting = new admin_setting_configcolourpicker($name, $title, $description, '');
-        $setting->set_updatedcallback('theme_reset_all_caches');
+        $setting->set_updatedcallback(self::RESET_CALLBACK);
         return $setting;
     }
 
@@ -128,7 +139,7 @@ class BoostCampusSettings {
         $title = get_string('brandinfocolorsetting', 'theme_boost_campus', null, true);
         $description = get_string('brandinfocolorsetting_desc', 'theme_boost_campus', null, true);
         $setting = new admin_setting_configcolourpicker($name, $title, $description, '');
-        $setting->set_updatedcallback('theme_reset_all_caches');
+        $setting->set_updatedcallback(self::RESET_CALLBACK);
         return $setting;
     }
 
@@ -137,7 +148,7 @@ class BoostCampusSettings {
         $title = get_string('brandwarningcolorsetting', 'theme_boost_campus', null, true);
         $description = get_string('brandwarningcolorsetting_desc', 'theme_boost_campus', null, true);
         $setting = new admin_setting_configcolourpicker($name, $title, $description, '');
-        $setting->set_updatedcallback('theme_reset_all_caches');
+        $setting->set_updatedcallback(self::RESET_CALLBACK);
         return $setting;
     }
 
@@ -146,7 +157,7 @@ class BoostCampusSettings {
         $title = get_string('branddangercolorsetting', 'theme_boost_campus', null, true);
         $description = get_string('branddangercolorsetting_desc', 'theme_boost_campus', null, true);
         $setting = new admin_setting_configcolourpicker($name, $title, $description, '');
-        $setting->set_updatedcallback('theme_reset_all_caches');
+        $setting->set_updatedcallback(self::RESET_CALLBACK);
         return $setting;
     }
 
@@ -155,7 +166,7 @@ class BoostCampusSettings {
         $title = get_string('rawscsspre', 'theme_boost', null, true);
         $description = get_string('rawscsspre_desc', 'theme_boost', null, true);
         $setting = new admin_setting_scsscode($name, $title, $description, '', PARAM_RAW);
-        $setting->set_updatedcallback('theme_reset_all_caches');
+        $setting->set_updatedcallback(self::RESET_CALLBACK);
         return $setting;
     }
 
@@ -164,7 +175,7 @@ class BoostCampusSettings {
         $title = get_string('rawscss', 'theme_boost', null, true);
         $description = get_string('rawscss_desc', 'theme_boost', null, true);
         $setting = new admin_setting_scsscode($name, $title, $description, '', PARAM_RAW);
-        $setting->set_updatedcallback('theme_reset_all_caches');
+        $setting->set_updatedcallback(self::RESET_CALLBACK);
         return $setting;
     }
 
@@ -187,7 +198,7 @@ class BoostCampusSettings {
         ];
         $setting = new admin_setting_configselect($name, $title, $description, $addablockpositionsetting['positionblockregion'],
             $addablockpositionsetting);
-        $setting->set_updatedcallback('theme_reset_all_caches');
+        $setting->set_updatedcallback(self::RESET_CALLBACK);
         return $setting;
     }
 
@@ -207,10 +218,10 @@ class BoostCampusSettings {
     }
 
     protected static function getSettingValue(string $settingName) {
-        return get_config('theme_boost_campus', $settingName);
+        return get_config(self::getQualifiedThemeName(), $settingName);
     }
 
     protected static function getSettingName(string $setting) {
-        return 'theme_boost_campus'.'/'.$setting;
+        return self::getQualifiedThemeName().'/'.$setting;
     }
 }

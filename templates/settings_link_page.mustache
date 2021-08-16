@@ -49,14 +49,14 @@
         <ul class="nav nav-tabs" role="tablist">
         <!-- First the top most node and immediate children -->
             <li class="nav-item">
-                <a class="nav-link active" href="#course-settings-{{node.key}}" data-toggle="tab" role="tab">{{node.text}}</a>
+                <a class="nav-link active" href="#course-settings-{{node.key}}" data-toggle="tab" role="tab" aria-selected="true">{{node.text}}</a>
             </li>
         <!-- Now the first level children with sub nodes -->
         {{#node.children}}
             {{#children.count}}
                 {{#display}}
                     <li class="nav-item">
-                        <a class="nav-link" href="#course-settings-{{key}}" data-toggle="tab" role="tab">{{text}}</a>
+                        <a class="nav-link" href="#course-settings-{{key}}" data-toggle="tab" role="tab" aria-selected="false" tabindex="-1">{{text}}</a>
                     </li>
                 {{/display}}
             {{/children.count}}

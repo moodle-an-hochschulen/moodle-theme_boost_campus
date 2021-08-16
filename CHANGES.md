@@ -6,6 +6,7 @@ Changes
 
 ### Unreleased
 
+* 2021-08-16 - Adjusted loginform.mustache template due to upstream changes in theme Boost.
 * 2021-08-16 - Bugfix: Remove overwritten template full_header.mustache. If the setting showsettingsincourse is enabled, this will place the cog icon _over_ instead of _near_ the edit button. This will fix a presentation issue with the in-course settings menu on smaller screens.  
 * 2021-08-16 - Improvement: Re-add the margin below the breadcrumb as this does not need to differ between theme_boost and theme_boost_campus anymore
 

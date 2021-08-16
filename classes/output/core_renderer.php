@@ -193,12 +193,7 @@ class core_renderer extends \core_renderer {
         $header->headeractions = $this->page->get_header_actions();
         // MODIFICATION START:
         // Change this to add the result in the html variable to be able to add further features below the header.
-        // Render from the own header template if we are not on the content bank view page (contentbank/view.php).
-        if ($this->page->bodyid == 'page-contentbank') {
-            $html = $this->render_from_template('core/full_header', $header);
-        } else {
-            $html = $this->render_from_template('theme_boost_campus/full_header', $header);
-        }
+        $html = $this->render_from_template('core/full_header', $header);
         // MODIFICATION END.
         // @codingStandardsIgnoreStart
         /* ORIGINAL START

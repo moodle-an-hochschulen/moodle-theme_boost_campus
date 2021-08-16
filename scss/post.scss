@@ -390,14 +390,6 @@ body.loginbackgroundimage #page {
   Course header
   -------------------------------------*/
 
-/* Remove margin from the pageheadingbuttons in the course header. */
-#page-header {
-    .breadcrumb,
-    .singlebutton form {
-        margin: 0;
-    }
-}
-
 /*
  * If set in showswitchedroleincourse, the switched role information will be displayed
  * in the course header instead of next to the user name.

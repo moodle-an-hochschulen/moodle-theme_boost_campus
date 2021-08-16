@@ -4,6 +4,10 @@ moodle-theme_boost_campus
 Changes
 -------
 
+### Unreleased
+
+* 2021-08-16 - Improvement: Re-add the margin below the breadcrumb as this does not need to differ between theme_boost and theme_boost_campus anymore
+
 ### v3.9-r9
 
 * 2021-04-20 - Adjusted footer.mustache due to upstream changes in theme Boost core (MDL-70173).

@@ -160,6 +160,13 @@ if ($timedibenable) {
 }
 // MODIFICATION END.
 
+// MODIFICATION START: Get and use the course page information banners HTML code, if any course page hints are configured.
+$coursepageinformationbannershtml = theme_boost_campus_get_course_information_banners();
+if ($coursepageinformationbannershtml) {
+    $templatecontext['coursepageinformationbanners'] = $coursepageinformationbannershtml;
+}
+// MODIFICATION END.
+
 $nav = $PAGE->flatnav;
 // MODIDFICATION START.
 // Use the returned value from theme_boost_campus_get_modified_flatnav_defaulthomepageontop as the template context.

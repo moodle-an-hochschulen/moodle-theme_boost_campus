@@ -6,6 +6,7 @@ Changes
 
 ### Unreleased
 
+* 2021-08-16 - Bugfix: In-course settings have been shown below course information banners instead of above them.
 * 2021-08-16 - Improvement: Add in-course settings only to HTML tree of the setting is enabled.
 * 2021-08-16 - Adjust activity_settings_incourse.mustache template based on changes in settings_link_page.mustache
 * 2021-08-16 - Improvement: Adjusted tab appearance for in-course settings.

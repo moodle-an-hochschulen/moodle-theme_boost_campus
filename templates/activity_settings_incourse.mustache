@@ -50,14 +50,14 @@
         <ul class="nav nav-tabs" role="tablist">
         <!-- First the top most activitynode and immediate children -->
             <li class="nav-item">
-                <a class="nav-link active" href="#activity-settings-{{key}}" data-toggle="tab" role="tab">{{activitynode.text}}</a>
+                <a class="nav-link active" href="#activity-settings-{{key}}" data-toggle="tab" role="tab" aria-selected="true">{{activitynode.text}}</a>
             </li>
         <!-- Now the first level children with sub activitynodes -->
         {{#activitynode.children}}
             {{#children.count}}
                 {{#display}}
                     <li class="nav-item">
-                        <a class="nav-link" href="#activity-settings-{{key}}" data-toggle="tab" role="tab">{{text}}</a>
+                        <a class="nav-link" href="#activity-settings-{{key}}" data-toggle="tab" role="tab" aria-selected="false" tabindex="-1">{{text}}</a>
                     </li>
                 {{/display}}
             {{/children.count}}

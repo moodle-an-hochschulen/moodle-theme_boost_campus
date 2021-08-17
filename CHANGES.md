@@ -6,6 +6,7 @@ Changes
 
 ### Unreleased
 
+* 2021-08-16 - Adjust activity_settings_incourse.mustache template based on changes in settings_link_page.mustache
 * 2021-08-16 - Improvement: Adjusted tab appearance for in-course settings.
 * 2021-08-16 - Adjusted settings_link_page.mustache template due to upstream changes in theme Boost.
 * 2021-08-16 - Adjusted loginform.mustache template due to upstream changes in theme Boost.

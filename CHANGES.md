@@ -4,7 +4,7 @@ moodle-theme_boost_campus
 Changes
 -------
 
-### Unreleased
+### v3.9-r10
 
 * 2021-08-16 - Bugfix: Fix Behat test which checks the 'Hide link to the Moodle docs' feature which broke since the last release.
 * 2021-08-16 - Bugfix: In-course settings have been shown below course information banners instead of above them.

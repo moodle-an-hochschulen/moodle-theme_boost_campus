@@ -129,7 +129,7 @@ Feature: Configuring the theme_boost_campus plugin for the "Footer Layout Settin
   #  Given the following config values are set as admin:
   #    | config             | value | plugin             |
   #    | footerhidehelplink | 1     | theme_boost_campus |
-  Scenario: Enable Hide link to the Moodle docs"
+  Scenario: Enable "Hide link to the Moodle docs"
     When I log in as "admin"
     And I navigate to "Appearance > Boost Campus" in site administration
     And I click on "Footer Layout Settings" "link"
@@ -138,7 +138,7 @@ Feature: Configuring the theme_boost_campus plugin for the "Footer Layout Settin
     And I log out
     When I log in as "teacher1"
     And I am on "Course 1" course homepage
-    Then I should not see "Moodle Docs for this page" in the "page-footer" "region"
+    Then "#page-footer p.helplink a[href^=\"https://docs.moodle.org/\"]" "css_element" should not be visible
 
   # This scenario needs full browser support only for this Behat test to pass, otherwise javascript would not be needed.
   @javascript
@@ -155,7 +155,7 @@ Feature: Configuring the theme_boost_campus plugin for the "Footer Layout Settin
     And I log out
     When I log in as "teacher1"
     And I am on "Course 1" course homepage
-    Then I should see "Moodle Docs for this page" in the "page-footer" "region"
+    Then "#page-footer p.helplink a[href^=\"https://docs.moodle.org/\"]" "css_element" should be visible
 
   # This scenario needs full browser support only for this Behat test to pass, otherwise javascript would not be needed.
   @javascript

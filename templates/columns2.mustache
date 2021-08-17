@@ -114,9 +114,11 @@
 
         <div id="page-content" class="row pb-3 d-print-block">
             <div id="region-main-box" class="col-12">
-                {{#node}}
-                    {{> theme_boost_campus/settings_link_page }}
-                {{/node}}
+                {{#incoursesettings}}
+                    {{#node}}
+                        {{> theme_boost_campus/settings_link_page }}
+                    {{/node}}
+                {{/incoursesettings}}
                 {{#hasregionmainsettingsmenu}}
                 <div id="region-main-settings-menu" class="d-print-none {{#hasblocks}}has-blocks{{/hasblocks}}">
                     <div> {{{ output.region_main_settings_menu }}} </div>
@@ -128,9 +130,11 @@
                         <div class="region_main_settings_menu_proxy"></div>
                     {{/hasregionmainsettingsmenu}}
                     {{{ output.course_content_header }}}
-                    {{#activitynode}}
-                        {{> theme_boost_campus/activity_settings_incourse }}
-                    {{/activitynode}}
+                    {{#incoursesettings}}
+                        {{#activitynode}}
+                            {{> theme_boost_campus/activity_settings_incourse }}
+                        {{/activitynode}}
+                    {{/incoursesettings}}
                     {{{ output.main_content }}}
                     {{{ output.activity_navigation }}}
                     {{{ output.course_content_footer }}}

@@ -4,6 +4,10 @@ moodle-theme_boost_campus
 Changes
 -------
 
+### Unreleased
+
+* 2021-08-17 - Bugfix: The timed info banner had a wrong CSS ID - Credits to Tim Schroeder.
+
 ### v3.9-r10
 
 * 2021-08-16 - Bugfix: Fix Behat test which checks the 'Hide link to the Moodle docs' feature which broke since the last release.

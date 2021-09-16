@@ -542,6 +542,9 @@ function theme_boost_campus_show_timed_banner_on_selected_page($now, $timedibsho
 function theme_boost_campus_get_course_information_banners() {
     global $CFG, $COURSE, $PAGE, $USER;
 
+    // Require user library.
+    require_once($CFG->dirroot.'/user/lib.php');
+
     // Initialize HTML code.
     $html = '';
 

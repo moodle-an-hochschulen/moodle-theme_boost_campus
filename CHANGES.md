@@ -4,6 +4,10 @@ moodle-theme_boost_campus
 Changes
 -------
 
+### Unreleased
+
+* 2021-09-16 - Regression: The switch role functionality caused a fatal error with some theme configurations - Thanks to Klaus Steitz.
+
 ### v3.10-r8
 
 * 2021-08-17 - Bugfix: The timed info banner had a wrong CSS ID - Credits to Tim Schroeder.

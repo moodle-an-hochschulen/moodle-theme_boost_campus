@@ -4,7 +4,7 @@ moodle-theme_boost_campus
 Changes
 -------
 
-### Unreleased
+### v3.10-r9
 
 * 2021-09-16 - Regression: The switch role functionality caused a fatal error with some theme configurations - Thanks to Klaus Steitz.
 

@@ -718,6 +718,7 @@ if ($ADMIN->fulltree) {
             // Don't use string lazy loading (= false) because the string will be directly used and would produce a
             // PHP warning otherwise.
             'mydashboard' => get_string('myhome', 'core', null, false),
+            'frontpage' => get_string('sitehome', 'core', null, false),
             'course' => get_string('course', 'core', null, false),
             'login' => get_string('login_page', 'theme_boost_campus', null, false)
     ];
@@ -815,6 +816,7 @@ if ($ADMIN->fulltree) {
         // Don't use string lazy loading (= false) because the string will be directly used and would produce a
         // PHP warning otherwise.
             'mydashboard' => get_string('myhome', 'core', null, false),
+            'frontpage' => get_string('sitehome', 'core', null, false),
             'course' => get_string('course', 'core', null, false),
             'login' => get_string('login_page', 'theme_boost_campus', null, false)
     ];

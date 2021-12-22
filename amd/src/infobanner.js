@@ -16,7 +16,7 @@
 /**
  * Theme Boost Campus - JS code for feature information banner
  *
- * @package    theme_boost_campus
+ * @module     theme_boost_campus/infobanner
  * @copyright  2020 Kathrin Osswald, Ulm University <kathrin.osswald@uni-ulm.de>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */

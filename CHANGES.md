@@ -4,7 +4,7 @@ moodle-theme_boost_campus
 Changes
 -------
 
-### Unreleased
+### v3.11-r1
 
 * 2021-12-28 - Adjust loginform.mustache and help_icon.mustache templates after upstream changes in MDL-70721.
 * 2021-12-08 - Prepare compatibility for Moodle 3.11.

@@ -4,6 +4,10 @@ moodle-theme_boost_campus
 Changes
 -------
 
+### Unreleased
+
+* 2022-01-06 - Improvement: Profile button with "editadvanced" link for users with capability 'moodle/user:update' - Thanks to Melanie Treitinger.
+
 ### v3.10-r9
 
 * 2021-09-16 - Regression: The switch role functionality caused a fatal error with some theme configurations - Thanks to Klaus Steitz.

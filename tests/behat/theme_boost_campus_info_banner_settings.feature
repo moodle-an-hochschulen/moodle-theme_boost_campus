@@ -17,11 +17,13 @@ Feature: Configuring the theme_boost_campus plugin for the "Info banner Settings
 
   Scenario: Display perpetual info banner on all available pages
     Given the following config values are set as admin:
-      | config            | value                    | plugin             |
-      | perpibenable      | 1                        | theme_boost_campus |
-      | perpibcontent     | "This is a test content" | theme_boost_campus |
-      | perpibshowonpages | mydashboard,course,login | theme_boost_campus |
+      | config            | value                              | plugin             |
+      | perpibenable      | 1                                  | theme_boost_campus |
+      | perpibcontent     | "This is a test content"           | theme_boost_campus |
+      | perpibshowonpages | mydashboard,frontpage,course,login | theme_boost_campus |
     When I log in as "teacher1"
+    And I am on site homepage
+    Then I should see "This is a test content" in the "#themeboostcampusperpinfobanner" "css_element"
     And I follow "Dashboard" in the user menu
     Then I should see "This is a test content" in the "#themeboostcampusperpinfobanner" "css_element"
     When I am on "Course 1" course homepage

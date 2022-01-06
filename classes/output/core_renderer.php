@@ -168,7 +168,7 @@ class core_renderer extends \core_renderer {
             $userid = optional_param('id', $USER->id, PARAM_INT);
             // Check if the shown and the operating user are identical.
             $currentuser = $USER->id == $userid;
-            if (($currentuser || is_siteadmin($USER)) &&
+            if (($currentuser || is_siteadmin($USER) || !is_siteadmin($userid)) &&
                 has_capability('moodle/user:update', \context_system::instance())) {
                 $url = new moodle_url('/user/editadvanced.php', array('id'       => $userid, 'course' => $COURSE->id,
                                                                       'returnto' => 'profile'));

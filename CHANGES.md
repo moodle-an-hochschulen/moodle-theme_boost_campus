@@ -4,6 +4,10 @@ moodle-theme_boost_campus
 Changes
 -------
 
+### Unreleased
+
+* 2022-01-06 - Improvement: Profile button with "editadvanced" link for users with capability 'moodle/user:update' - Thanks to Melanie Treitinger.
+
 ### v3.11-r1
 
 * 2021-12-28 - Adjust loginform.mustache and help_icon.mustache templates after upstream changes in MDL-70721.

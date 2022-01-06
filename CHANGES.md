@@ -6,6 +6,7 @@ Changes
 
 ### Unreleased
 
+* 2022-01-06 - Improvement: Add frontpage support for infobanner - Thanks to Melanie Treitinger.
 * 2022-01-06 - Improvement: Profile button with "editadvanced" link for users with capability 'moodle/user:update' - Thanks to Melanie Treitinger.
 
 ### v3.11-r1

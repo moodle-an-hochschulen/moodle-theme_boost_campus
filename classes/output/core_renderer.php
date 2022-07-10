@@ -47,9 +47,6 @@ use url_select;
 use context_course;
 use pix_icon;
 
-defined('MOODLE_INTERNAL') || die;
-
-
 /**
  * Extending the core_renderer interface.
  *

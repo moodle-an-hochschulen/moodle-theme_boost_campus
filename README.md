@@ -1,7 +1,7 @@
 moodle-theme_boost_campus
 =========================
 
-[![Moodle Plugin CI](https://github.com/moodleuulm/moodle-theme_boost_campus/workflows/Moodle%20Plugin%20CI/badge.svg?branch=MOODLE_39_STABLE)](https://github.com/moodleuulm/moodle-theme_boost_campus/actions?query=workflow%3A%22Moodle+Plugin+CI%22+branch%3AMOODLE_39_STABLE)
+[![Moodle Plugin CI](https://github.com/moodle-an-hochschulen/moodle-theme_boost_campus/workflows/Moodle%20Plugin%20CI/badge.svg?branch=MOODLE_39_STABLE)](https://github.com/moodle-an-hochschulen/moodle-theme_boost_campus/actions?query=workflow%3A%22Moodle+Plugin+CI%22+branch%3AMOODLE_39_STABLE)
 
 Moodle Boost child theme which is intended to meet the needs of university campuses and adds several features and improvements
 
@@ -16,7 +16,6 @@ Motivation for this theme
 -------------------------
 
 Moodle installations on university campuses have certain constraints which are not completely covered by the Boost theme in Moodle core. We implemented this Boost child theme to accommodate these needs as much as possible while keeping the functionality from Boost from Moodle core as much as possible as well.
-
 
 
 Installation
@@ -384,7 +383,7 @@ With this setting you can select the Bootstrap style with which the perpetual in
 
 ##### Perpetual info banner dismissible (dependent on setting "Enable perpetual info banner")
 
-With this checkbox you can make the banner dismissible permanently. If the user clicks on the x-button a confirmation dialogue will appear and only after the user confirmed this dialogue the banner will be hidden for this user permanently. 
+With this checkbox you can make the banner dismissible permanently. If the user clicks on the x-button a confirmation dialogue will appear and only after the user confirmed this dialogue the banner will be hidden for this user permanently.
 
 Please note:
 
@@ -392,7 +391,7 @@ This setting has no effect for the banners shown on the login page. Because bann
 
 ##### Confirmation dialogue (dependent on setting "Perpetual info banner dismissible")
 
-When you enable this setting you can show a confirmation dialogue to a user when he is dismissing the info banner. 
+When you enable this setting you can show a confirmation dialogue to a user when he is dismissing the info banner.
 
 The text is saved in the string with the name "closingperpetualinfobanner":
 ```
@@ -404,7 +403,7 @@ You can override this within your language customization if you need some other 
 
 By enabling this checkbox, the visibility of the individually dismissed perpetual info banners will be set to visible again. You can use this setting if you made important content changes and want to show the info to all users again.
 
-Please note: 
+Please note:
 After saving this option, the database operations for resetting the visibility will be triggered and this checkbox will be unticked again. The next enabling and saving of this feature will trigger the database operations for resetting the visibility again.
 
 #### Time controlled information banner
@@ -419,7 +418,7 @@ Enter your information which should be shown within the time controlled banner h
 
 ##### Page layouts to display the info banner on (dependent on setting "Enable time controlled info banner")
 
-With this setting you can select the pages on which the time controlled information banner should be displayed. 
+With this setting you can select the pages on which the time controlled information banner should be displayed.
 If both info banners are active on a selected layout, the time controlled info banner will always appear above the perpetual info banner!
 
 ##### Bootstrap css class for the time controlled info banner (dependent on setting "Enable time controlled info banner")
@@ -428,14 +427,14 @@ With this setting you can select the Bootstrap style with which the time control
 
 ##### Start time for the time controlled info banner (dependent on setting "Enable time controlled info banner")
 
-With this setting you can define when the time controlled information banner should be displayed on the selected pages. 
-Please enter a valid in this format: YYYY-MM-DD HH:MM:SS. For example: "2020-01-01 08:00:00". The time zone will be the time zone you have defined in the setting "Default timezone". 
+With this setting you can define when the time controlled information banner should be displayed on the selected pages.
+Please enter a valid in this format: YYYY-MM-DD HH:MM:SS. For example: "2020-01-01 08:00:00". The time zone will be the time zone you have defined in the setting "Default timezone".
 If you leave this setting empty but entered a date in the for the end, it is the same as if you entered a date far in the past.
 
 ##### End time for the time controlled info banner (dependent on setting "Enable time controlled info banner")
 
-With this setting you can define when the time controlled information banner should be hidden on the selected pages. 
-Please enter a valid date in this format: YYYY-MM-DD HH:MM:SS. For example: "2020-01-07 08:00:00. The time zone will be the time zone you have defined in the setting "Default timezone". 
+With this setting you can define when the time controlled information banner should be hidden on the selected pages.
+Please enter a valid date in this format: YYYY-MM-DD HH:MM:SS. For example: "2020-01-07 08:00:00. The time zone will be the time zone you have defined in the setting "Default timezone".
 If you leave this setting empty but entered a date in the for the start, the banner won't hide after the starting time has been reached.
 
 
@@ -498,7 +497,7 @@ This plugin is published and regularly updated in the Moodle plugins repository:
 http://moodle.org/plugins/view/theme_boost_campus
 
 The latest development version can be found on Github:
-https://github.com/moodleuulm/moodle-theme_boost_campus
+https://github.com/moodle-an-hochschulen/moodle-theme_boost_campus
 
 
 Bug and problem reports / Support requests
@@ -507,7 +506,7 @@ Bug and problem reports / Support requests
 This plugin is carefully developed and thoroughly tested, but bugs and problems can always appear.
 
 Please report bugs and problems on Github:
-https://github.com/moodleuulm/moodle-theme_boost_campus/issues
+https://github.com/moodle-an-hochschulen/moodle-theme_boost_campus/issues
 
 We will do our best to solve your problems, but please note that due to limited resources we can't always provide per-case support.
 
@@ -518,10 +517,10 @@ Feature proposals
 Due to limited resources, the functionality of this plugin is primarily implemented for our own local needs and published as-is to the community. We are aware that members of the community will have other needs and would love to see them solved by this plugin.
 
 Please issue feature proposals on Github:
-https://github.com/moodleuulm/moodle-theme_boost_campus/issues
+https://github.com/moodle-an-hochschulen/moodle-theme_boost_campus/issues
 
 Please create pull requests on Github:
-https://github.com/moodleuulm/moodle-theme_boost_campus/pulls
+https://github.com/moodle-an-hochschulen/moodle-theme_boost_campus/pulls
 
 We are always interested to read about your feature proposals or even get a pull request from you, but please accept that we can handle your issues only as feature _proposals_ and not as feature _requests_.
 
@@ -553,24 +552,28 @@ This plugin has not been tested with Moodle's support for right-to-left (RTL) la
 If you want to use this plugin with a RTL language and it doesn't work as-is, you are free to send us a pull request on Github with modifications.
 
 
-PHP7 Support
-------------
-
-Since Moodle 3.4 core, PHP7 is mandatory. We are developing and testing this plugin for PHP7 only.
-
-
 Maintainers
 -----------
 
-Ulm University\
-Communication and Information Centre (kiz)\
-Alexander Bias
+The plugin is maintained by\
+Moodle an Hochschulen e.V.
 
 
 Copyright
 ---------
 
+The copyright of this plugin is held by\
+Moodle an Hochschulen e.V.
+
+Individual copyrights of individual developers are tracked in PHPDoc comments and Git commits.
+
+
+Initial copyright
+-----------------
+
+This plugin was initially built, maintained and published by\
 Ulm University\
 Communication and Information Centre (kiz)\
 Kathrin Osswald
 
+It was contributed to the Moodle an Hochschulen e.V. plugin catalogue in 2022.

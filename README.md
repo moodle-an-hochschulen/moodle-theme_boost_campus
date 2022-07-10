@@ -484,6 +484,20 @@ Improved font sizes and weights on category overview page for better readability
 * Reduced paddings on small screens (max. 768px) to be able to show a little bit more content and less whitespace.
 
 
+Capabilities
+------------
+
+This theme also introduces these additional capabilities:
+
+### theme/boost_campus:viewhintcourseselfenrol
+
+This capability controls who is able to see a hint for unrestricted self enrolment in a visible course.
+
+### theme/boost_campus:viewhintinhiddencourse
+
+This capability controls who is  able to see a hint in a hidden course.
+
+
 How this theme works
 -------------------
 

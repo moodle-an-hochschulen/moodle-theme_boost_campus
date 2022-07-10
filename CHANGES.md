@@ -4,6 +4,10 @@ moodle-theme_boost_campus
 Changes
 -------
 
+### Unreleased
+
+* 2022-06-26 - Update maintainers and copyrights in README.md.
+
 ### v3.11-r2
 
 * 2022-01-06 - Improvement: Add frontpage support for infobanner - Thanks to Melanie Treitinger.

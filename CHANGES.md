@@ -4,7 +4,7 @@ moodle-theme_boost_campus
 Changes
 -------
 
-### Unreleased
+### v3.10-r11
 
 * 2022-06-26 - Make codechecker happy again
 * 2022-06-26 - Updated Moodle Plugin CI to latest upstream recommendations

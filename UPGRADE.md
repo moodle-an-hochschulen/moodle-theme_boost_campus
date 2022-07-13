@@ -14,6 +14,7 @@ Upstream changes
 ----------------
 
 * This theme is built on top of theme_boost from Moodle core. It inherits the codebase from theme_boost and overwrites and extends several behaviours and functions. Doing this, code duplication couldn't be avoided. If there are any upstream changes in theme_boost, you should check if they should be adopted to this theme as well.
+* In addition to that, you should check any upstream changes which happen in /lib/templates and /lib/outputrenderers.php as some of these templates and renderers are overwritten in this theme as well.
 
 
 Automated tests

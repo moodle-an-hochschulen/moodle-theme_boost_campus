@@ -46,6 +46,7 @@ use paging_bar;
 use url_select;
 use context_course;
 use pix_icon;
+use context_system;
 
 /**
  * Extending the core_renderer interface.
@@ -97,14 +98,21 @@ class core_renderer extends \core_renderer {
      *
      * @since Moodle 2.5.1 2.6
      * @return moodle_url The moodle_url for the favicon
+     * @throws \moodle_exception
      */
     public function favicon() {
         // MODIFICATION START.
-        if (!empty($this->page->theme->settings->favicon)) {
-            return $this->page->theme->setting_file_url('favicon', 'favicon');
-        } else {
+        $logo = null;
+        if (!during_initial_install()) {
+            $logo = get_config('theme_boost_campus', 'favicon');
+        }
+        if (empty($logo)) {
             return $this->image_url('favicon', 'theme');
         }
+
+        // Use $CFG->themerev to prevent browser caching when the file changes.
+        return moodle_url::make_pluginfile_url(context_system::instance()->id, 'theme_boost_campus', 'favicon', '',
+                theme_get_revision(), $logo);
         // MODIFICATION END.
         // @codingStandardsIgnoreStart
         /* ORIGINAL START.

@@ -6,6 +6,7 @@ Changes
 
 ### Unreleased
 
+* 2022-11-03 - Bugfix: Return Boost Campus favicon as moodle_url instead of string, solves #120.
 * 2022-07-10 - Add Capabilities section to README.md
 
 ### v3.10-r11

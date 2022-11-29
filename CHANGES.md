@@ -4,6 +4,10 @@ moodle-theme_boost_campus
 Changes
 -------
 
+### Unreleased
+
+* 2022-11-28 - Updated Moodle Plugin CI to latest upstream recommendations
+
 ### v3.9-r15
 
 * 2022-11-03 - Bugfix: Return Boost Campus favicon as moodle_url instead of string, solves #120.

@@ -6,6 +6,14 @@ moodle-theme_boost_campus
 Moodle Boost child theme which is intended to meet the needs of university campuses and adds several features and improvements
 
 
+:warning: End of life
+---------------------
+
+**This theme has reached end of life.**
+
+This theme will not be upgraded for Moodle 4.x. Please consider using our successor theme_boost_union.
+
+
 Requirements
 ------------
 
